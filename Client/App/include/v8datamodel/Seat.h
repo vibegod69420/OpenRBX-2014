@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	int someMethod();
 	// AUTO-GENERATED METHODS
 };
 

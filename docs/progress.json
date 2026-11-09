@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09 21:09:48 UTC",
+  "updated_at": "2026-11-09 21:25:42 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21388,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7602,
-  "matchable_coverage_pct": 8.0643,
-  "implemented_total": 761,
-  "function_annotations": 761,
+  "matchable_coverage_pct": 8.1283,
+  "implemented_total": 767,
+  "function_annotations": 767,
   "stub_annotations": 0,
-  "perfect_100_count": 757,
+  "perfect_100_count": 763,
   "average_match_pct": 99.53,
-  "overall_function_coverage_pct": 1.8762,
-  "overall_byte_coverage_pct": 0.1875,
+  "overall_function_coverage_pct": 1.891,
+  "overall_byte_coverage_pct": 0.188,
   "functions": [
     {
       "address": "0x00402eb0",
@@ -1607,6 +1607,16 @@
       "file": "Client/App/v8kernel/btHashedSimplePairCache.cpp",
       "orig_size": 34,
       "recomp_size": 34,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005dce80",
+      "kind": "FUNCTION",
+      "name": "RBX::CSGMeshSgCore::someMethod",
+      "mangled": "?someMethod@CSGMeshSgCore@RBX@@QAE_NXZ",
+      "file": "Client/App/v8datamodel/CSGMeshSgCore.cpp",
+      "orig_size": 9,
+      "recomp_size": 9,
       "match_pct": 100.0
     },
     {
@@ -4460,6 +4470,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0082e370",
+      "kind": "FUNCTION",
+      "name": "RBX::SetDragGridToOff::getValue",
+      "mangled": "?getValue@SetDragGridToOff@RBX@@QBEHXZ",
+      "file": "Client/App/v8datamodel/SetDragGridToOff.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0082ef60",
       "kind": "FUNCTION",
       "name": "RBX::SetManualJointToStrong::getFlag_ef60",
@@ -4860,6 +4880,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00892590",
+      "kind": "FUNCTION",
+      "name": "RBX::PathInterpolatedCFrame::getField48",
+      "mangled": "?getField48@PathInterpolatedCFrame@RBX@@QBENXZ",
+      "file": "Client/App/util/PathInterpolatedCFrame.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00892dc0",
       "kind": "FUNCTION",
       "name": "RBX::PathInterpolatedCFrame::getFlag40",
@@ -5110,6 +5140,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0090fff0",
+      "kind": "FUNCTION",
+      "name": "RBX::Seat::someMethod",
+      "mangled": "?someMethod@Seat@RBX@@QAEHXZ",
+      "file": "Client/App/v8datamodel/Seat.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00913610",
       "kind": "FUNCTION",
       "name": "RBX::DynamicRotateJoint::scalarDeletingDestructor",
@@ -5247,6 +5287,16 @@
       "file": "Client/App/v8datamodel/shared_state_base.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00953980",
+      "kind": "FUNCTION",
+      "name": "boost::unknown_exception::add_ref",
+      "mangled": "?add_ref@unknown_exception@boost@@QBEXXZ",
+      "file": "Client/App/v8datamodel/unknown_exception.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     },
     {
@@ -5467,6 +5517,16 @@
       "file": "Client/App/v8world/GlueJoint.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0099d2f0",
+      "kind": "FUNCTION",
+      "name": "RBX::Ball::getDensity",
+      "mangled": "?getDensity@Ball@RBX@@QBEMXZ",
+      "file": "Client/App/v8world/Ball.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     },
     {

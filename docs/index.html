@@ -91,7 +91,7 @@
         <div class="sub">
           Target: <code>RobloxStudioBeta.exe (0.164.0.50577 — Aug 20, 2014)</code> &bull;
           Compiler: <code>MSVC 11.0 (VS2012 x86)</code> &bull;
-          Auto-refreshes every 30s &bull; Last Updated: <strong>2026-11-09 21:09:48 UTC</strong>
+          Auto-refreshes every 30s &bull; Last Updated: <strong>2026-11-09 21:25:42 UTC</strong>
         </div>
       </div>
       <div>
@@ -102,8 +102,8 @@
     <div class="grid">
       <div class="card">
         <div class="label">100% Byte-Matched Functions</div>
-        <div class="val">757</div>
-        <div class="hint">761 total decompiled functions</div>
+        <div class="val">763</div>
+        <div class="hint">767 total decompiled functions</div>
       </div>
       <div class="card">
         <div class="label">Active Function Accuracy</div>
@@ -112,14 +112,14 @@
       </div>
       <div class="card">
         <div class="label">Matchable Function Index</div>
-        <div class="val">757 / 9,387</div>
-        <div class="hint">8.06% of addressable functions &bull;
+        <div class="val">763 / 9,387</div>
+        <div class="hint">8.13% of addressable functions &bull;
           21,388 fragments + 2,184 thunks + 7,602 SEH frames excluded</div>
       </div>
       <div class="card">
         <div class="label">Agent Harness Status</div>
         <div class="val" style="color: var(--green);">RUNNING 24/7</div>
-        <div class="hint">AWS EC2 + Qwen3.8-35B-A3B MoE (Max Reasoning)</div>
+        <div class="hint">AWS EC2 &bull; deterministic pattern synthesis (no external GPU)</div>
       </div>
     </div>
 
@@ -1648,6 +1648,13 @@
               <td>4 B</td>
               <td><span class="badge" style="background:#2ea043">100.00%</span></td>
             </tr><tr>
+              <td><code>0x0099d2f0</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>RBX::Ball::getDensity</strong><br><small style="color:#8b949e">?getDensity@Ball@RBX@@QBEMXZ</small></td>
+              <td><a href="https://github.com/vibegod69420/OpenRBX-2014/blob/main/Client/App/v8world/Ball.cpp" target="_blank" style="color:var(--accent);text-decoration:none"><code>Client/App/v8world/Ball.cpp</code></a></td>
+              <td>4 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
               <td><code>0x0099ce10</code></td>
               <td><span class="tag">FUNCTION</span></td>
               <td><strong>RBX::GlueJoint::getConst9</strong><br><small style="color:#8b949e">?getConst9@GlueJoint@RBX@@QBEHXZ</small></td>
@@ -1802,6 +1809,13 @@
               <td>26 B</td>
               <td><span class="badge" style="background:#2ea043">100.00%</span></td>
             </tr><tr>
+              <td><code>0x00953980</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>boost::unknown_exception::add_ref</strong><br><small style="color:#8b949e">?add_ref@unknown_exception@boost@@QBEXXZ</small></td>
+              <td><a href="https://github.com/vibegod69420/OpenRBX-2014/blob/main/Client/App/v8datamodel/unknown_exception.cpp" target="_blank" style="color:var(--accent);text-decoration:none"><code>Client/App/v8datamodel/unknown_exception.cpp</code></a></td>
+              <td>4 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
               <td><code>0x009538c0</code></td>
               <td><span class="tag">FUNCTION</span></td>
               <td><strong>boost::detail::shared_state_base::scalarDeletingDestructor</strong><br><small style="color:#8b949e">?scalarDeletingDestructor@shared_state_base@detail@boost@@QAEPAXI@Z</small></td>
@@ -1898,6 +1912,13 @@
               <td><strong>RBX::DynamicRotateJoint::scalarDeletingDestructor</strong><br><small style="color:#8b949e">?scalarDeletingDestructor@DynamicRotateJoint@RBX@@QAEPAXI@Z</small></td>
               <td><a href="https://github.com/vibegod69420/OpenRBX-2014/blob/main/Client/App/v8world/DynamicRotateJoint.cpp" target="_blank" style="color:var(--accent);text-decoration:none"><code>Client/App/v8world/DynamicRotateJoint.cpp</code></a></td>
               <td>33 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x0090fff0</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>RBX::Seat::someMethod</strong><br><small style="color:#8b949e">?someMethod@Seat@RBX@@QAEHXZ</small></td>
+              <td><a href="https://github.com/vibegod69420/OpenRBX-2014/blob/main/Client/App/v8datamodel/Seat.cpp" target="_blank" style="color:var(--accent);text-decoration:none"><code>Client/App/v8datamodel/Seat.cpp</code></a></td>
+              <td>13 B</td>
               <td><span class="badge" style="background:#2ea043">100.00%</span></td>
             </tr><tr>
               <td><code>0x0090b590</code></td>
@@ -2071,6 +2092,13 @@
               <td><code>0x00892dc0</code></td>
               <td><span class="tag">FUNCTION</span></td>
               <td><strong>RBX::PathInterpolatedCFrame::getFlag40</strong><br><small style="color:#8b949e">?getFlag40@PathInterpolatedCFrame@RBX@@QBE_NXZ</small></td>
+              <td><a href="https://github.com/vibegod69420/OpenRBX-2014/blob/main/Client/App/util/PathInterpolatedCFrame.cpp" target="_blank" style="color:var(--accent);text-decoration:none"><code>Client/App/util/PathInterpolatedCFrame.cpp</code></a></td>
+              <td>4 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x00892590</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>RBX::PathInterpolatedCFrame::getField48</strong><br><small style="color:#8b949e">?getField48@PathInterpolatedCFrame@RBX@@QBENXZ</small></td>
               <td><a href="https://github.com/vibegod69420/OpenRBX-2014/blob/main/Client/App/util/PathInterpolatedCFrame.cpp" target="_blank" style="color:var(--accent);text-decoration:none"><code>Client/App/util/PathInterpolatedCFrame.cpp</code></a></td>
               <td>4 B</td>
               <td><span class="badge" style="background:#2ea043">100.00%</span></td>
@@ -2353,6 +2381,13 @@
               <td><strong>RBX::SetManualJointToStrong::getFlag_ef60</strong><br><small style="color:#8b949e">?getFlag_ef60@SetManualJointToStrong@RBX@@QBE_NXZ</small></td>
               <td><a href="https://github.com/vibegod69420/OpenRBX-2014/blob/main/Client/App/v8world/SetManualJointToStrong.cpp" target="_blank" style="color:var(--accent);text-decoration:none"><code>Client/App/v8world/SetManualJointToStrong.cpp</code></a></td>
               <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x0082e370</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>RBX::SetDragGridToOff::getValue</strong><br><small style="color:#8b949e">?getValue@SetDragGridToOff@RBX@@QBEHXZ</small></td>
+              <td><a href="https://github.com/vibegod69420/OpenRBX-2014/blob/main/Client/App/v8datamodel/SetDragGridToOff.cpp" target="_blank" style="color:var(--accent);text-decoration:none"><code>Client/App/v8datamodel/SetDragGridToOff.cpp</code></a></td>
+              <td>13 B</td>
               <td><span class="badge" style="background:#2ea043">100.00%</span></td>
             </tr><tr>
               <td><code>0x00829ea0</code></td>
@@ -4348,6 +4383,13 @@
               <td><strong>RBX::Graphics::DeviceContextD3D9::setField10</strong><br><small style="color:#8b949e">?setField10@DeviceContextD3D9@Graphics@RBX@@QAEXH@Z</small></td>
               <td><a href="https://github.com/vibegod69420/OpenRBX-2014/blob/main/Client/Rendering/GfxCore/D3D9/DeviceContextD3D9.cpp" target="_blank" style="color:var(--accent);text-decoration:none"><code>Client/Rendering/GfxCore/D3D9/DeviceContextD3D9.cpp</code></a></td>
               <td>13 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x005dce80</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>RBX::CSGMeshSgCore::someMethod</strong><br><small style="color:#8b949e">?someMethod@CSGMeshSgCore@RBX@@QAE_NXZ</small></td>
+              <td><a href="https://github.com/vibegod69420/OpenRBX-2014/blob/main/Client/App/v8datamodel/CSGMeshSgCore.cpp" target="_blank" style="color:var(--accent);text-decoration:none"><code>Client/App/v8datamodel/CSGMeshSgCore.cpp</code></a></td>
+              <td>9 B</td>
               <td><span class="badge" style="background:#2ea043">100.00%</span></td>
             </tr><tr>
               <td><code>0x005ce4e0</code></td>

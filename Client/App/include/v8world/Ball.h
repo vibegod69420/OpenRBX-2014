@@ -21,6 +21,7 @@ public:
 	int identity(int a) const;
 	void onDestroy();
 	void* scalarDeletingDestructor(unsigned int flags);
+	float getDensity() const;
 	// AUTO-GENERATED METHODS
 };
 

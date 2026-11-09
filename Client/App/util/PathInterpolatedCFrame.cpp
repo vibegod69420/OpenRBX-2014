@@ -52,6 +52,12 @@ void* PathInterpolatedCFrame::scalarDeletingDestructor_f310(unsigned int flags)
 	return this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00892590
+double PathInterpolatedCFrame::getField48() const
+{
+	return *reinterpret_cast<const double*>(reinterpret_cast<const char*>(this) + 0x48);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

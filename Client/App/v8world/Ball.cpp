@@ -25,6 +25,12 @@ void* Ball::scalarDeletingDestructor(unsigned int flags)
 	return this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0099d2f0
+float Ball::getDensity() const
+{
+	return *reinterpret_cast<const float*>(reinterpret_cast<const char*>(this) + 0x14);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -28,6 +28,7 @@ public:
 	void onDestroy();
 	void* scalarDeletingDestructor(unsigned int flags);
 	void* scalarDeletingDestructor_f310(unsigned int flags);
+	double getField48() const;
 	// AUTO-GENERATED METHODS
 };
 
