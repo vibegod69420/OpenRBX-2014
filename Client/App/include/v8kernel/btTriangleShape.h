@@ -18,6 +18,7 @@ public:
 	};
 
 	int getConst52() const;
+	float getFloatFromOffset(int offset) const;
 	// AUTO-GENERATED METHODS
 };
 

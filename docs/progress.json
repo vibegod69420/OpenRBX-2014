@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09 20:37:25 UTC",
+  "updated_at": "2026-11-09 20:51:35 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -9,14 +9,14 @@
   "matchable_functions": 16989,
   "fragment_entries": 21388,
   "compiler_thunk_entries": 2184,
-  "matchable_coverage_pct": 4.4264,
-  "implemented_total": 753,
-  "function_annotations": 753,
+  "matchable_coverage_pct": 4.4323,
+  "implemented_total": 755,
+  "function_annotations": 755,
   "stub_annotations": 0,
-  "perfect_100_count": 752,
-  "average_match_pct": 99.89,
-  "overall_function_coverage_pct": 1.8565,
-  "overall_byte_coverage_pct": 0.1875,
+  "perfect_100_count": 753,
+  "average_match_pct": 99.74,
+  "overall_function_coverage_pct": 1.8614,
+  "overall_byte_coverage_pct": 0.1877,
   "functions": [
     {
       "address": "0x00402eb0",
@@ -1009,16 +1009,6 @@
       "match_pct": 100.0
     },
     {
-      "address": "0x00526730",
-      "kind": "FUNCTION",
-      "name": "RobloxWebDoc::onDestroy",
-      "mangled": "?onDestroy@RobloxWebDoc@@QAEXXZ",
-      "file": "Client/RobloxStudio/RobloxWebDoc.cpp",
-      "orig_size": 5,
-      "recomp_size": 5,
-      "match_pct": 100.0
-    },
-    {
       "address": "0x00527080",
       "kind": "FUNCTION",
       "name": "InsertAdvancedObjectViewVerb::scalarDeletingDestructorImp",
@@ -1079,6 +1069,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x005378c0",
+      "kind": "FUNCTION",
+      "name": "RobloxTreeWidgetItem::someMethod",
+      "mangled": "?someMethod@RobloxTreeWidgetItem@@QAEHXZ",
+      "file": "Client/RobloxStudio/RobloxTreeWidgetItem.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00538be0",
       "kind": "FUNCTION",
       "name": "RobloxTreeWidget::scalarDeletingDestructorImp",
@@ -1125,8 +1125,8 @@
       "mangled": "?scalarDeletingDestructorImp@RobloxWebDoc@@QAEPAXI@Z",
       "file": "Client/RobloxStudio/RobloxWebDoc.cpp",
       "orig_size": 34,
-      "recomp_size": 33,
-      "match_pct": 20.59
+      "recomp_size": 34,
+      "match_pct": 100.0
     },
     {
       "address": "0x00548d80",
@@ -1289,14 +1289,24 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00590280",
+      "kind": "FUNCTION",
+      "name": "btTriangleShape::getFloatFromOffset",
+      "mangled": "btTriangleShape::getFloatFromOffset",
+      "file": "Client/App/v8kernel/btTriangleShape.cpp",
+      "orig_size": 4,
+      "recomp_size": 0,
+      "match_pct": 0.0
+    },
+    {
       "address": "0x00590290",
       "kind": "FUNCTION",
       "name": "btTriangleShape::getConst52",
-      "mangled": "?getConst52@btTriangleShape@@QBEHXZ",
+      "mangled": "btTriangleShape::getConst52",
       "file": "Client/App/v8kernel/btTriangleShape.cpp",
       "orig_size": 6,
-      "recomp_size": 6,
-      "match_pct": 100.0
+      "recomp_size": 0,
+      "match_pct": 0.0
     },
     {
       "address": "0x00590a80",
@@ -1366,6 +1376,16 @@
       "file": "Client/App/v8datamodel/StarterPackService.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00595de0",
+      "kind": "FUNCTION",
+      "name": "btConcaveShape::someFunction",
+      "mangled": "?someFunction@btConcaveShape@@QBEMXZ",
+      "file": "Client/App/v8kernel/btConcaveShape.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     },
     {
