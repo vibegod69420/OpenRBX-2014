@@ -166,17 +166,26 @@ def extract_referenced_strings_and_floats(pe_bytes: bytes, sections: dict, code:
     return sorted(set(strings_found))[:35], sorted(set(floats_found))[:20], sorted(set(callees_found))
 
 
+_OPENRBX_FILES_CACHE = None
+_RMETA_XML_CACHE = None
+
+
 def find_2007_openrbx_sources(class_names: list[str], max_chars: int = 24000) -> list[tuple[str, str]]:
+    global _OPENRBX_FILES_CACHE
     if not OPENRBX_2007_DIR.exists() or not class_names:
         return []
+    if _OPENRBX_FILES_CACHE is None:
+        _OPENRBX_FILES_CACHE = sorted(
+            p for p in OPENRBX_2007_DIR.rglob("*") if p.suffix in (".h", ".hpp", ".inl", ".cpp")
+        )
     matched_files = []
     seen = set()
     for cls in class_names:
-        short = cls.split("::")[-1]
+        short = cls.split("::")[-1].lower()
         if len(short) < 3 or "?" in short:
             continue
-        for p in sorted(OPENRBX_2007_DIR.rglob(f"*{short}*")):
-            if p.suffix in (".h", ".hpp", ".inl", ".cpp") and p not in seen:
+        for p in _OPENRBX_FILES_CACHE:
+            if short in p.name.lower() and p not in seen:
                 seen.add(p)
                 matched_files.append(p)
 
@@ -194,9 +203,12 @@ def find_2007_openrbx_sources(class_names: list[str], max_chars: int = 24000) ->
 
 
 def find_reflection_metadata(class_names: list[str]) -> str:
+    global _RMETA_XML_CACHE
     if not RMETA_PATH.exists() or not class_names:
         return ""
-    xml = RMETA_PATH.read_text(encoding="utf-8", errors="ignore")
+    if _RMETA_XML_CACHE is None:
+        _RMETA_XML_CACHE = RMETA_PATH.read_text(encoding="utf-8", errors="ignore")
+    xml = _RMETA_XML_CACHE
     out = []
     for cls in class_names:
         short = cls.split("::")[-1]

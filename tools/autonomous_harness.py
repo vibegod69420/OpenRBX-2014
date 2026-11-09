@@ -252,10 +252,7 @@ def get_rtti_fn_prefix(addr: int) -> str:
 def synthesize_deterministic_msvc_cpp(addr: int, orig: bytes) -> str:
     """
     Exact MSVC 11.0 x86 instruction pattern synthesizer for leaf/vtable methods,
-    supporting `mov eax, imm32; ret`, `mov eax, imm32; ret N`, `xor eax, eax; ret`,
-    `xor al, al; ret`, `mov al, 1; ret`, `mov al, [global]; ret`, `mov eax, [global]; ret`,
-    `mov eax, [ecx+off]; ret`, `mov al, [ecx+off]; ret`, `lea eax, [ecx+off]; ret`,
-    `mov byte ptr [ecx+off], imm8; ret`, `mov dword ptr [ecx+off], imm32; ret`, etc.
+    verified byte-for-byte via `cl.exe /c /O2 /Ob2 /Oi /Ot /Oy-` in `verify_tu.py`.
     """
     fn_name = get_rtti_fn_prefix(addr)
 
@@ -304,11 +301,32 @@ def synthesize_deterministic_msvc_cpp(addr: int, orig: bytes) -> str:
             return f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\nbool __cdecl {fn_name}()\n{{\n    return {lit};\n}}"
         return f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\nunsigned char __cdecl {fn_name}()\n{{\n    return {val};\n}}"
 
-    # 8. C3 -> ret (1 byte)
+    # 8. 33 C0 C2 <imm16> -> xor eax, eax; ret N (5 bytes)
+    if len(orig) == 5 and orig[:3] == b"\x33\xc0\xc2":
+        stack_bytes = struct.unpack_from("<H", orig, 3)[0]
+        args = ", ".join(f"int a{i}" for i in range(stack_bytes // 4))
+        return f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\nint __stdcall {fn_name}({args})\n{{\n    return 0;\n}}"
+
+    # 9. 32 C0 C2 <imm16> -> xor al, al; ret N (5 bytes)
+    if len(orig) == 5 and orig[:3] == b"\x32\xc0\xc2":
+        stack_bytes = struct.unpack_from("<H", orig, 3)[0]
+        args = ", ".join(f"int a{i}" for i in range(stack_bytes // 4))
+        return f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\nbool __stdcall {fn_name}({args})\n{{\n    return false;\n}}"
+
+    # 10. B0 <imm8> C2 <imm16> -> mov al, imm8; ret N (5 bytes)
+    if len(orig) == 5 and orig[0] == 0xB0 and orig[2] == 0xC2:
+        val = orig[1]
+        stack_bytes = struct.unpack_from("<H", orig, 3)[0]
+        args = ", ".join(f"int a{i}" for i in range(stack_bytes // 4))
+        if val in (0, 1):
+            lit = "true" if val == 1 else "false"
+            return f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\nbool __stdcall {fn_name}({args})\n{{\n    return {lit};\n}}"
+
+    # 11. C3 -> ret (1 byte)
     if orig == b"\xc3":
         return f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\nvoid __cdecl {fn_name}()\n{{\n}}"
 
-    # 9. 8B 41 <off8> C3 -> mov eax, [ecx+off8]; ret (4 bytes)
+    # 12. 8B 41 <off8> C3 -> mov eax, [ecx+off8]; ret (4 bytes)
     if len(orig) == 4 and orig[0] == 0x8B and orig[1] == 0x41 and orig[3] == 0xC3:
         off8 = orig[2]
         return (
@@ -317,7 +335,7 @@ def synthesize_deterministic_msvc_cpp(addr: int, orig: bytes) -> str:
             f"int __fastcall {fn_name}(const Struct_{addr:08x}* self)\n{{\n    return self->val;\n}}"
         )
 
-    # 10. 8A 41 <off8> C3 -> mov al, [ecx+off8]; ret (4 bytes)
+    # 13. 8A 41 <off8> C3 -> mov al, [ecx+off8]; ret (4 bytes)
     if len(orig) == 4 and orig[0] == 0x8A and orig[1] == 0x41 and orig[3] == 0xC3:
         off8 = orig[2]
         return (
@@ -326,7 +344,7 @@ def synthesize_deterministic_msvc_cpp(addr: int, orig: bytes) -> str:
             f"bool __fastcall {fn_name}(const Struct_{addr:08x}* self)\n{{\n    return self->val;\n}}"
         )
 
-    # 11. 8B 81 <off32> C3 -> mov eax, [ecx+off32]; ret (7 bytes)
+    # 14. 8B 81 <off32> C3 -> mov eax, [ecx+off32]; ret (7 bytes)
     if len(orig) == 7 and orig[0] == 0x8B and orig[1] == 0x81 and orig[6] == 0xC3:
         off32 = struct.unpack_from("<I", orig, 2)[0]
         return (
@@ -335,7 +353,7 @@ def synthesize_deterministic_msvc_cpp(addr: int, orig: bytes) -> str:
             f"int __fastcall {fn_name}(const Struct_{addr:08x}* self)\n{{\n    return self->val;\n}}"
         )
 
-    # 12. 8A 81 <off32> C3 -> mov al, [ecx+off32]; ret (7 bytes)
+    # 15. 8A 81 <off32> C3 -> mov al, [ecx+off32]; ret (7 bytes)
     if len(orig) == 7 and orig[0] == 0x8A and orig[1] == 0x81 and orig[6] == 0xC3:
         off32 = struct.unpack_from("<I", orig, 2)[0]
         return (
@@ -344,7 +362,7 @@ def synthesize_deterministic_msvc_cpp(addr: int, orig: bytes) -> str:
             f"bool __fastcall {fn_name}(const Struct_{addr:08x}* self)\n{{\n    return self->val;\n}}"
         )
 
-    # 13. 8D 41 <off8> C3 -> lea eax, [ecx+off8]; ret (4 bytes)
+    # 16. 8D 41 <off8> C3 -> lea eax, [ecx+off8]; ret (4 bytes)
     if len(orig) == 4 and orig[0] == 0x8D and orig[1] == 0x41 and orig[3] == 0xC3:
         off8 = orig[2]
         return (
@@ -353,7 +371,7 @@ def synthesize_deterministic_msvc_cpp(addr: int, orig: bytes) -> str:
             f"const int* __fastcall {fn_name}(const Struct_{addr:08x}* self)\n{{\n    return &self->member;\n}}"
         )
 
-    # 14. 8D 81 <off32> C3 -> lea eax, [ecx+off32]; ret (7 bytes)
+    # 17. 8D 81 <off32> C3 -> lea eax, [ecx+off32]; ret (7 bytes)
     if len(orig) == 7 and orig[0] == 0x8D and orig[1] == 0x81 and orig[6] == 0xC3:
         off32 = struct.unpack_from("<I", orig, 2)[0]
         return (
@@ -362,11 +380,136 @@ def synthesize_deterministic_msvc_cpp(addr: int, orig: bytes) -> str:
             f"const int* __fastcall {fn_name}(const Struct_{addr:08x}* self)\n{{\n    return &self->member;\n}}"
         )
 
-    # 15. 8B C1 C3 -> mov eax, ecx; ret (3 bytes)
+    # 18. 8B C1 C3 -> mov eax, ecx; ret (3 bytes)
     if orig == b"\x8b\xc1\xc3":
         return f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\nvoid* __fastcall {fn_name}(void* self)\n{{\n    return self;\n}}"
 
-    return f"// STUB: ROBLOXSTUDIO 0x{addr:08x}\nvoid __cdecl {fn_name}()\n{{\n    UNK_STUB(0x{addr:08x});\n}}"
+    # 19. 8B 41 <off1> 83 C0 <add8> C3 -> mov eax, [ecx+off1]; add eax, add8; ret (7 bytes)
+    if len(orig) == 7 and orig[0] == 0x8B and orig[1] == 0x41 and orig[3] == 0x83 and orig[4] == 0xC0 and orig[6] == 0xC3:
+        off1, add8 = orig[2], orig[5]
+        return (
+            f"struct Struct_{addr:08x} {{ char pad[{max(1, off1)}]; char* ptr; }};\n"
+            f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\n"
+            f"char* __fastcall {fn_name}(const Struct_{addr:08x}* self)\n{{\n    return self->ptr + {add8};\n}}"
+        )
+
+    # 20. 8B 41 <off1> 8B 40 <off2> C3 -> mov eax, [ecx+off1]; mov eax, [eax+off2]; ret (7 bytes)
+    if len(orig) == 7 and orig[0] == 0x8B and orig[1] == 0x41 and orig[3] == 0x8B and orig[4] == 0x40 and orig[6] == 0xC3:
+        off1, off2 = orig[2], orig[5]
+        return (
+            f"struct Sub_{addr:08x} {{ char pad[{max(1, off2)}]; int val; }};\n"
+            f"struct Struct_{addr:08x} {{ char pad[{max(1, off1)}]; Sub_{addr:08x}* sub; }};\n"
+            f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\n"
+            f"int __fastcall {fn_name}(const Struct_{addr:08x}* self)\n{{\n    return self->sub->val;\n}}"
+        )
+
+    # 21. 8B 41 <off1> 8B 80 <off32> C3 -> mov eax, [ecx+off1]; mov eax, [eax+off32]; ret (10 bytes)
+    if len(orig) == 10 and orig[0] == 0x8B and orig[1] == 0x41 and orig[3] == 0x8B and orig[4] == 0x80 and orig[9] == 0xC3:
+        off1 = orig[2]
+        off2 = struct.unpack_from("<I", orig, 5)[0]
+        return (
+            f"struct Sub_{addr:08x} {{ char pad[{max(1, off2)}]; int val; }};\n"
+            f"struct Struct_{addr:08x} {{ char pad[{max(1, off1)}]; Sub_{addr:08x}* sub; }};\n"
+            f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\n"
+            f"int __fastcall {fn_name}(const Struct_{addr:08x}* self)\n{{\n    return self->sub->val;\n}}"
+        )
+
+    # 22. 8B 81 <off1_32> 8B 80 <off2_32> C3 -> mov eax, [ecx+off1_32]; mov eax, [eax+off2_32]; ret (13 bytes)
+    if len(orig) == 13 and orig[0] == 0x8B and orig[1] == 0x81 and orig[6] == 0x8B and orig[7] == 0x80 and orig[12] == 0xC3:
+        off1 = struct.unpack_from("<I", orig, 2)[0]
+        off2 = struct.unpack_from("<I", orig, 8)[0]
+        return (
+            f"struct Sub_{addr:08x} {{ char pad[{max(1, off2)}]; int val; }};\n"
+            f"struct Struct_{addr:08x} {{ char pad[{max(1, off1)}]; Sub_{addr:08x}* sub; }};\n"
+            f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\n"
+            f"int __fastcall {fn_name}(const Struct_{addr:08x}* self)\n{{\n    return self->sub->val;\n}}"
+        )
+
+    # 23. 8B 81 <off1_32> 8A 80 <off2_32> C3 -> mov eax, [ecx+off1_32]; mov al, [eax+off2_32]; ret (13 bytes)
+    if len(orig) == 13 and orig[0] == 0x8B and orig[1] == 0x81 and orig[6] == 0x8A and orig[7] == 0x80 and orig[12] == 0xC3:
+        off1 = struct.unpack_from("<I", orig, 2)[0]
+        off2 = struct.unpack_from("<I", orig, 8)[0]
+        return (
+            f"struct Sub_{addr:08x} {{ char pad[{max(1, off2)}]; bool val; }};\n"
+            f"struct Struct_{addr:08x} {{ char pad[{max(1, off1)}]; Sub_{addr:08x}* sub; }};\n"
+            f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\n"
+            f"bool __fastcall {fn_name}(const Struct_{addr:08x}* self)\n{{\n    return self->sub->val;\n}}"
+        )
+
+    # 24. 55 8B EC 8B 45 08 8B 00 5D C3 -> int __cdecl fn(const int* p) { return *p; } (10 bytes)
+    if orig == b"\x55\x8b\xec\x8b\x45\x08\x8b\x00\x5d\xc3":
+        return f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\nint __cdecl {fn_name}(const int* p)\n{{\n    return *p;\n}}"
+
+    # 25. 55 8B EC 8B 45 08 5D C2 04 00 -> int __stdcall fn(int a) { return a; } (10 bytes)
+    if orig == b"\x55\x8b\xec\x8b\x45\x08\x5d\xc2\x04\x00":
+        return f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\nint __stdcall {fn_name}(int a)\n{{\n    return a;\n}}"
+
+    # 26. 55 8B EC 8B 45 08 89 41 <off8> 5D C2 04 00 -> __thiscall int setter (13 bytes)
+    if len(orig) == 13 and orig[:8] == b"\x55\x8b\xec\x8b\x45\x08\x89\x41" and orig[9:] == b"\x5d\xc2\x04\x00":
+        off8 = orig[8]
+        return (
+            f"struct Struct_{addr:08x} {{ char pad[{max(1, off8)}]; int val; void {fn_name}(int v); }};\n"
+            f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\n"
+            f"void Struct_{addr:08x}::{fn_name}(int v)\n{{\n    this->val = v;\n}}"
+        )
+
+    # 27. 55 8B EC 8B 45 08 89 81 <off32> 5D C2 04 00 -> __thiscall int setter off32 (16 bytes)
+    if len(orig) == 16 and orig[:8] == b"\x55\x8b\xec\x8b\x45\x08\x89\x81" and orig[12:] == b"\x5d\xc2\x04\x00":
+        off32 = struct.unpack_from("<I", orig, 8)[0]
+        return (
+            f"struct Struct_{addr:08x} {{ char pad[{max(1, off32)}]; int val; void {fn_name}(int v); }};\n"
+            f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\n"
+            f"void Struct_{addr:08x}::{fn_name}(int v)\n{{\n    this->val = v;\n}}"
+        )
+
+    # 28. 55 8B EC 8A 45 08 88 41 <off8> 5D C2 04 00 -> __thiscall bool setter (13 bytes)
+    if len(orig) == 13 and orig[:8] == b"\x55\x8b\xec\x8a\x45\x08\x88\x41" and orig[9:] == b"\x5d\xc2\x04\x00":
+        off8 = orig[8]
+        return (
+            f"struct Struct_{addr:08x} {{ char pad[{max(1, off8)}]; bool val; void {fn_name}(bool v); }};\n"
+            f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\n"
+            f"void Struct_{addr:08x}::{fn_name}(bool v)\n{{\n    this->val = v;\n}}"
+        )
+
+    # 29. 55 8B EC 8A 45 08 88 81 <off32> 5D C2 04 00 -> __thiscall bool setter off32 (16 bytes)
+    if len(orig) == 16 and orig[:8] == b"\x55\x8b\xec\x8a\x45\x08\x88\x81" and orig[12:] == b"\x5d\xc2\x04\x00":
+        off32 = struct.unpack_from("<I", orig, 8)[0]
+        return (
+            f"struct Struct_{addr:08x} {{ char pad[{max(1, off32)}]; bool val; void {fn_name}(bool v); }};\n"
+            f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\n"
+            f"void Struct_{addr:08x}::{fn_name}(bool v)\n{{\n    this->val = v;\n}}"
+        )
+
+    # 30. 55 8B EC 8B 45 08 A3 <addr32> 5D C2 04 00 -> __stdcall global int setter (15 bytes)
+    if len(orig) == 15 and orig[:7] == b"\x55\x8b\xec\x8b\x45\x08\xa3" and orig[11:] == b"\x5d\xc2\x04\x00":
+        return (
+            f"extern int g_val_{addr:08x};\n"
+            f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\n"
+            f"void __stdcall {fn_name}(int v)\n{{\n    g_val_{addr:08x} = v;\n}}"
+        )
+
+    # 31. 55 8B EC 8B 4D 08 8B 45 0C 01 01 5D C3 -> void __cdecl fn(int* p, int v) { *p += v; } (13 bytes)
+    if orig == b"\x55\x8b\xec\x8b\x4d\x08\x8b\x45\x0c\x01\x01\x5d\xc3":
+        return f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\nvoid __cdecl {fn_name}(int* p, int v)\n{{\n    *p += v;\n}}"
+
+    # 32. 55 8B EC 8B 55 08 8B 01 89 02 89 11 5D C2 04 00 -> intrusive list push (16 bytes)
+    if orig == b"\x55\x8b\xec\x8b\x55\x08\x8b\x01\x89\x02\x89\x11\x5d\xc2\x04\x00":
+        return (
+            f"struct Node_{addr:08x} {{ int head; void {fn_name}(int* p); }};\n"
+            f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\n"
+            f"void Node_{addr:08x}::{fn_name}(int* p)\n{{\n    *p = this->head;\n    this->head = (int)p;\n}}"
+        )
+
+    # 33. 55 8B EC 8B 45 08 8B 55 0C 89 10 89 48 04 5D C2 08 00 -> __thiscall pair init (18 bytes)
+    if orig == b"\x55\x8b\xec\x8b\x45\x08\x8b\x55\x0c\x89\x10\x89\x48\x04\x5d\xc2\x08\x00":
+        return (
+            f"struct Pair_{addr:08x} {{ int a; int b; }};\n"
+            f"struct Struct_{addr:08x} {{ Pair_{addr:08x}* {fn_name}(Pair_{addr:08x}* out, int x); }};\n"
+            f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\n"
+            f"Pair_{addr:08x}* Struct_{addr:08x}::{fn_name}(Pair_{addr:08x}* out, int x)\n{{\n    out->a = x;\n    out->b = (int)this;\n    return out;\n}}"
+        )
+
+    return ""
 
 
 def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bool, float, str]:
@@ -374,8 +517,6 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
     Runs the full decompile -> compile -> COFF byte-diff -> repair loop (up to 6 iterations)
     for function `0x<addr:08x>` with maximum 256K context and 32K+ output token allowance.
     """
-    card = func_context.build_rich_context_card(addr)
-    claude_md = (ROOT / "CLAUDE.md").read_text(encoding="utf-8")
     target_cpp = ROOT / "Client" / "App" / "V8World" / "DecompBatch.cpp"
     target_cpp.parent.mkdir(parents=True, exist_ok=True)
     if not target_cpp.exists():
@@ -384,14 +525,14 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
             encoding="utf-8",
         )
 
-    original_file_content = target_cpp.read_text(encoding="utf-8")
     sizes = verify_tu.load_function_sizes()
     fn_size = sizes.get(addr, 16)
     orig_bytes = verify_tu.get_original_function_bytes(addr, fn_size)
 
-    # First check if deterministic synthesis immediately achieves 100.00% byte accuracy
+    # Fast-path: check deterministic synthesis BEFORE building the heavy 256K LLM context card
     det_snippet = synthesize_deterministic_msvc_cpp(addr, orig_bytes)
-    if det_snippet.startswith("// FUNCTION:") or "struct Struct_" in det_snippet:
+    if det_snippet:
+        original_file_content = target_cpp.read_text(encoding="utf-8")
         test_content = original_file_content.rstrip() + "\n\n" + det_snippet + "\n"
         target_cpp.write_text(test_content, encoding="utf-8")
         ok, obj_path, _ = verify_tu.compile_cpp_to_coff(target_cpp)
@@ -402,12 +543,16 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
                 if fn_hint in sym_name:
                     pct, _ = verify_tu.compare_with_relocations(orig_bytes, recomp_bytes, rel_offsets)
                     if pct >= 99.99:
-                        log(f"  [0x{addr:08x}] Exact 100.00% match ({fn_hint}, {fn_size}B)")
+                        log(f"  [0x{addr:08x}] Exact 100.00% match ({fn_hint}, {len(orig_bytes)}B)")
                         return True, pct, fn_hint
         target_cpp.write_text(original_file_content, encoding="utf-8")
 
     if not base_url:
         return False, 0.0, ""
+
+    card = func_context.build_rich_context_card(addr)
+    claude_md = (ROOT / "CLAUDE.md").read_text(encoding="utf-8")
+    original_file_content = target_cpp.read_text(encoding="utf-8")
 
     # Full untruncated system prompt with complete CLAUDE.md
     system_prompt = (
@@ -526,6 +671,8 @@ def run_forever():
     log("Starting OpenRBX-2014 Immortal 24/7 Autonomous Decompilation Supervisor (256K Context / 32K-64K Output)...")
     sizes = verify_tu.load_function_sizes()
     vt_map = func_context.load_vtable_membership()
+    skipped_without_llm: set[int] = set()
+    attempted_with_llm: set[int] = set()
 
     while True:
         try:
@@ -536,8 +683,12 @@ def run_forever():
                 log("Kaggle Dual-T4 kernel still downloading/initializing model; running deterministic MSVC pass meanwhile...")
 
             done = next_target.get_implemented_addresses()
-            remaining = [addr for addr in sizes if addr not in done and sizes[addr] >= 3]
+            exclude = attempted_with_llm if base_url else skipped_without_llm
+            remaining = [addr for addr in sizes if addr not in done and addr not in exclude and sizes[addr] >= 3]
             if not remaining:
+                if exclude:
+                    exclude.clear()
+                    continue
                 log("100% OF ALL 40,561 FUNCTIONS IMPLEMENTED! Mission accomplished.")
                 break
 
@@ -551,7 +702,12 @@ def run_forever():
                 ok, pct, fn_name = decompile_function_with_retries(addr, base_url)
                 if ok and pct >= 99.99:
                     matched_in_cycle.append(f"0x{addr:08x}")
-                if len(matched_in_cycle) >= 12 or scanned >= (12 if base_url else 40):
+                else:
+                    if base_url:
+                        attempted_with_llm.add(addr)
+                    else:
+                        skipped_without_llm.add(addr)
+                if len(matched_in_cycle) >= 12 or (base_url and scanned >= 10) or (not base_url and scanned >= 400):
                     break
 
             if matched_in_cycle:
@@ -583,7 +739,7 @@ if __name__ == "__main__":
         )
         url = discover_kaggle_tunnel_url()
         matched = []
-        for a in rem[:25]:
+        for a in rem[:300]:
             ok, pct, _ = decompile_function_with_retries(a, url)
             if ok and pct >= 99.99:
                 matched.append(f"0x{a:08x}")

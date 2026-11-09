@@ -8,3 +8,6 @@ __pycache__/
 *.ilk
 *.exp
 *.lib
+
+harness.log
+run_daemon.cmd

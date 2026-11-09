@@ -110,3 +110,5 @@ Never guess blindly. Follow this exact 6-step loop for every function:
   - 2014 Roblox uses macros `FASTFLAG(Name)`, `FASTFLAGVARIABLE(Name, defaultVal)`, `FASTINT(Name)`, `FASTINTVARIABLE(Name, defaultVal)` in namespace `FFlag` / `FInt`.
 - **2014 `RBX::Reflection` & `RBX::Creatable<Instance>`**:
   - Classes deriving from `RBX::DescribedCreatable<T, Base, sClassName>` register `RBX::Reflection::PropDescriptor`, `FuncDescriptor`, `EventDescriptor`, and `SignalDescriptor` singletons. Use `ReflectionMetadata.xml` and `data/rtti_vtables_2014.json` for exact class hierarchies and property names.
+- **`BOOL` (`int`) vs `bool` Return Type (`xor eax, eax` before `cmp ...; setcc al; ret`)**:
+  - When original assembly begins with `xor eax, eax` (`33 c0`) followed by `cmp ...; sete al; ret` (or `setne al`), the C++ return type is `int` (`BOOL`), **NOT** `bool`. Returning `bool` causes MSVC to omit `xor eax, eax`. Always use `int` return type when `xor eax, eax` precedes `setcc al`.

@@ -26,31 +26,50 @@ EXE_PATH = ROOT / "robloxbin" / "RobloxStudioBeta.exe"
 CSV_PATH = ROOT / "ROBLOXSTUDIO-function-size.csv"
 BUILD_OBJ_DIR = ROOT / "build" / "tu_cache"
 
+_SIZES_CACHE = None
+_PE_CACHE = None
+
 
 def load_function_sizes() -> dict[int, int]:
-    sizes = {}
-    if CSV_PATH.exists():
-        with open(CSV_PATH, "r", encoding="utf-8") as f:
-            for row in csv.DictReader(f):
-                sizes[int(row["address"], 16)] = int(row["size"])
-    return sizes
+    global _SIZES_CACHE
+    if _SIZES_CACHE is None:
+        _SIZES_CACHE = {}
+        if CSV_PATH.exists():
+            with open(CSV_PATH, "r", encoding="utf-8") as f:
+                for row in csv.DictReader(f):
+                    _SIZES_CACHE[int(row["address"], 16)] = int(row["size"])
+    return _SIZES_CACHE
+
+
+def _get_pe_cache():
+    global _PE_CACHE
+    if _PE_CACHE is None:
+        pe_bytes = EXE_PATH.read_bytes()
+        pe_off = struct.unpack("<I", pe_bytes[0x3C:0x40])[0]
+        nsec = struct.unpack("<H", pe_bytes[pe_off + 6 : pe_off + 8])[0]
+        img_base = struct.unpack("<I", pe_bytes[pe_off + 52 : pe_off + 56])[0]
+        opt_sz = struct.unpack("<H", pe_bytes[pe_off + 20 : pe_off + 22])[0]
+        sec_off = pe_off + 24 + opt_sz
+        secs = []
+        for i in range(nsec):
+            s = pe_bytes[sec_off + i * 40 : sec_off + (i + 1) * 40]
+            vsz, va, rawsz, rawptr = struct.unpack("<IIII", s[8:24])
+            secs.append((img_base + va, rawsz, rawptr))
+        _PE_CACHE = (pe_bytes, secs)
+    return _PE_CACHE
 
 
 def get_original_function_bytes(addr: int, size: int) -> bytes:
-    pe_bytes = EXE_PATH.read_bytes()
-    pe_off = struct.unpack("<I", pe_bytes[0x3C:0x40])[0]
-    nsec = struct.unpack("<H", pe_bytes[pe_off + 6 : pe_off + 8])[0]
-    img_base = struct.unpack("<I", pe_bytes[pe_off + 52 : pe_off + 56])[0]
-    opt_sz = struct.unpack("<H", pe_bytes[pe_off + 20 : pe_off + 22])[0]
-    sec_off = pe_off + 24 + opt_sz
-
-    for i in range(nsec):
-        s = pe_bytes[sec_off + i * 40 : sec_off + (i + 1) * 40]
-        vsz, va, rawsz, rawptr = struct.unpack("<IIII", s[8:24])
-        sec_va = img_base + va
+    pe_bytes, secs = _get_pe_cache()
+    for sec_va, rawsz, rawptr in secs:
         if sec_va <= addr < sec_va + rawsz:
             off = rawptr + (addr - sec_va)
-            return pe_bytes[off : off + size]
+            raw = pe_bytes[off : off + size]
+            # Handle 16-byte aligned leaf functions that had no trailing 0xCC padding before the next function
+            if len(raw) > 16 and raw.startswith(b"\x55\x8b\xec"):
+                if raw[15] == 0xC3 or (raw[13] == 0xC2 and raw[15] == 0x00):
+                    return raw[:16]
+            return raw
     return b""
 
 
