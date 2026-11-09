@@ -657,3 +657,89 @@ int __fastcall AVbtGImpactCompoundShape_vslot21_0059aeb0(const Struct_0059aeb0* 
 {
     return self->val;
 }
+
+struct Struct_005b87e0 { char pad[48]; char* ptr; };
+// FUNCTION: ROBLOXSTUDIO 0x005b87e0
+char* __fastcall AVbtBvhTriangleMeshShape_vslot6_005b87e0(const Struct_005b87e0* self)
+{
+    return self->ptr + 16;
+}
+
+struct Sub_005e5de0 { char pad[52]; int val; };
+struct Struct_005e5de0 { char pad[40]; Sub_005e5de0* sub; };
+// FUNCTION: ROBLOXSTUDIO 0x005e5de0
+int __fastcall RBX_Graphics_ShaderProgramD3D9_vslot4_005e5de0(const Struct_005e5de0* self)
+{
+    return self->sub->val;
+}
+
+struct Sub_005e5df0 { char pad[44]; int val; };
+struct Struct_005e5df0 { char pad[48]; Sub_005e5df0* sub; };
+// FUNCTION: ROBLOXSTUDIO 0x005e5df0
+int __fastcall RBX_Graphics_ShaderProgramD3D9_vslot5_005e5df0(const Struct_005e5df0* self)
+{
+    return self->sub->val;
+}
+
+struct Struct_0067e190 { char pad[272]; int val; };
+// FUNCTION: ROBLOXSTUDIO 0x0067e190
+int __fastcall RBX_FormFactorPart_vslot50_0067e190(const Struct_0067e190* self)
+{
+    return self->val;
+}
+
+struct Struct_00857ca0 { char pad[2920]; bool val; };
+// FUNCTION: ROBLOXSTUDIO 0x00857ca0
+bool __fastcall RBX_DataModel_vslot1_00857ca0(const Struct_00857ca0* self)
+{
+    return self->val;
+}
+
+struct Struct_00872a50 { char pad[632]; bool val; };
+// FUNCTION: ROBLOXSTUDIO 0x00872a50
+bool __fastcall RBX_GuiObject_vslot29_00872a50(const Struct_00872a50* self)
+{
+    return self->val;
+}
+
+struct Struct_008a8740 { char pad[164]; int val; };
+// FUNCTION: ROBLOXSTUDIO 0x008a8740
+int __fastcall AV_NonFactoryProduct_VGuiBase2d_RBX_E_sGuiOb_vslot32_008a8740(const Struct_008a8740* self)
+{
+    return self->val;
+}
+
+struct Struct_00928940 { char pad[400]; bool val; };
+// FUNCTION: ROBLOXSTUDIO 0x00928940
+bool __fastcall RBX_HopperBin_vslot42_00928940(const Struct_00928940* self)
+{
+    return self->val;
+}
+
+struct Struct_0092ac60 { char pad[184]; bool val; };
+// FUNCTION: ROBLOXSTUDIO 0x0092ac60
+bool __fastcall RBX_TextDisplay_vslot34_0092ac60(const Struct_0092ac60* self)
+{
+    return self->val;
+}
+
+struct Struct_0098e060 { char pad[160]; int val; };
+// FUNCTION: ROBLOXSTUDIO 0x0098e060
+int __fastcall AV_NonFactoryProduct_VGuiBase2d_RBX_E_sGuiOb_vslot31_0098e060(const Struct_0098e060* self)
+{
+    return self->val;
+}
+
+struct Struct_00bd7630 { char pad[212]; int val; };
+// FUNCTION: ROBLOXSTUDIO 0x00bd7630
+int __fastcall RBX_BulletShapeContact_vslot10_00bd7630(const Struct_00bd7630* self)
+{
+    return self->val;
+}
+
+struct Struct_00bd86c0 { char pad[740]; int val; };
+// FUNCTION: ROBLOXSTUDIO 0x00bd86c0
+int __fastcall RBX_BulletShapeCellContact_vslot10_00bd86c0(const Struct_00bd86c0* self)
+{
+    return self->val;
+}
