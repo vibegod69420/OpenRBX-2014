@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void vtable_thunk_0x00cc2d30();
 	// AUTO-GENERATED METHODS
 };
 
