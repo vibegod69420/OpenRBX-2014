@@ -35,7 +35,7 @@ def evaluate_all_client_files():
 
     # The address table is not all real functions: it also indexes mid-instruction fragments and
     # compiler-generated thunks. Reporting against the matchable subset keeps the denominator honest.
-    kind_counts = {"real": 0, "fragment": 0, "thunk": 0}
+    kind_counts = {"real": 0, "fragment": 0, "thunk": 0, "seh": 0}
     for addr, sz in sizes.items():
         if sz < 3:
             continue
@@ -113,6 +113,7 @@ def evaluate_all_client_files():
         "matchable_functions": kind_counts["real"],
         "fragment_entries": kind_counts["fragment"],
         "compiler_thunk_entries": kind_counts["thunk"],
+        "seh_scaffold_entries": kind_counts["seh"],
         "matchable_coverage_pct": round(perfect_count * 100.0 / max(1, kind_counts["real"]), 4),
         "implemented_total": len(records),
         "function_annotations": func_count,
@@ -283,7 +284,7 @@ def write_dashboard_html(summary: dict):
         <div class="label">Matchable Function Index</div>
         <div class="val">{summary['perfect_100_count']} / {summary['matchable_functions']:,}</div>
         <div class="hint">{summary['matchable_coverage_pct']:.2f}% of addressable functions &bull;
-          {summary['fragment_entries']:,} fragments + {summary['compiler_thunk_entries']:,} thunks excluded</div>
+          {summary['fragment_entries']:,} fragments + {summary['compiler_thunk_entries']:,} thunks + {summary['seh_scaffold_entries']:,} SEH frames excluded</div>
       </div>
       <div class="card">
         <div class="label">Agent Harness Status</div>
@@ -329,7 +330,7 @@ def main():
         f"100% Exact: {summary['perfect_100_count']} | "
         f"Avg Match: {summary['average_match_pct']:.2f}% | "
         f"Matchable: {summary['matchable_functions']} ({summary['fragment_entries']} fragments, "
-        f"{summary['compiler_thunk_entries']} thunks excluded)"
+        f"{summary['compiler_thunk_entries']} thunks, {summary['seh_scaffold_entries']} SEH excluded)"
     )
 
     if args.commit:

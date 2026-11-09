@@ -301,6 +301,8 @@ def classify_target(orig: bytes) -> str:
         return "thunk"
     if orig[:3] == b"\x2b\x49\xfc" and orig[3:4] == b"\xe9":
         return "thunk"
+    if bytes.fromhex("64a100000000") in orig[:40] and bytes.fromhex("64892500000000") in orig[:56]:
+        return "seh"
     if orig[-1] not in (0xC3, 0xC2) or orig[-1:] == b"\xe9":
         return "fragment"
     return "real"
@@ -1166,7 +1168,7 @@ def run_forever():
     # Classify the address table once: the LLM must never spend a token on a target that is
     # impossible by construction (mid-instruction fragments, compiler-generated thunks).
     real_targets: set[int] = set()
-    kind_counts = {"real": 0, "fragment": 0, "thunk": 0}
+    kind_counts = {"real": 0, "fragment": 0, "thunk": 0, "seh": 0}
     for _a, _sz in sizes.items():
         if _sz < 3:
             continue
@@ -1177,7 +1179,7 @@ def run_forever():
     log(
         f"Target classification: {kind_counts['real']} matchable functions | "
         f"{kind_counts['fragment']} fragments (bytes never terminate a routine) | "
-        f"{kind_counts['thunk']} compiler-generated thunks -> both excluded from matching"
+        f"{kind_counts['thunk']} thunks | {kind_counts['seh']} SEH-scaffolded frames "f"-> excluded from matching"
     )
 
     while True:
