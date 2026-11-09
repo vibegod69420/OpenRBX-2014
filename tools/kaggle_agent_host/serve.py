@@ -541,8 +541,8 @@ def main():
     print_banner("INITIALIZING FRONTIER QWEN3.8 35B-A3B ABLITERATED ON KAGGLE DUAL T4")
     clean_environment()
     cf_proc = start_cloudflare_tunnel()
-            if TUNNEL_URL:
-                display_dashboard(TUNNEL_URL)
+    if TUNNEL_URL:
+        display_dashboard(TUNNEL_URL)
     install_and_setup_engine()
     download_model_high_speed()
     launch_inference_server()
