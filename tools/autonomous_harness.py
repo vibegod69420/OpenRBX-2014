@@ -527,7 +527,7 @@ def ensure_kaggle_kernel_alive():
         return
     _LAST_KAGGLE_CHECK_TS = now
 
-    kernel_dirs = [Path(r"C:\kaggle_agent_host"), Path(r"D:\Work\KaggleAIhosting\kaggle_agent_host")]
+    kernel_dirs = [ROOT / "tools" / "kaggle_agent_host", Path(r"C:\kaggle_agent_host"), Path(r"D:\Work\KaggleAIhosting\kaggle_agent_host")]
     host_dir = next((d for d in kernel_dirs if (d / "kernel-metadata.json").exists()), None)
     if not host_dir:
         return
