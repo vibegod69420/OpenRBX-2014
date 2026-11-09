@@ -32,6 +32,7 @@ public:
 	void* scalarDeletingDestructor(unsigned int flags);
 	void* scalarDeletingDestructor_slot0(unsigned int flags);
 	void* scalarDeletingDestructor_9d00(unsigned int flags);
+	void* scalarDeletingDestructor_59e0(unsigned int flags);
 	// AUTO-GENERATED METHODS
 };
 

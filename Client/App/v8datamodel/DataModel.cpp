@@ -67,6 +67,15 @@ void* DataModel::scalarDeletingDestructor_9d00(unsigned int flags)
 	return this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x007c59e0
+void* DataModel::scalarDeletingDestructor_59e0(unsigned int flags)
+{
+	onDestroy();
+	if (flags & 1)
+		rbx_free_mem(this);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

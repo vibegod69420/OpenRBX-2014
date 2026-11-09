@@ -10,6 +10,15 @@ int sp_counted_impl_pd::getField148() const
 	return field_0148;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x007c5940
+void* sp_counted_impl_pd::scalarDeletingDestructor(unsigned int flags)
+{
+	onDestroy();
+	if (flags & 1)
+		rbx_free_mem(this);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

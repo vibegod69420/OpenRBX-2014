@@ -865,6 +865,15 @@ void* EnumDesc::scalarDeletingDestructorImp_05d0(unsigned int flags)
 	return this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0080d040
+void* EnumDesc::scalarDeletingDestructor_d040(unsigned int flags)
+{
+	onDestroy();
+	if (flags & 1)
+		rbx_free_mem(this);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

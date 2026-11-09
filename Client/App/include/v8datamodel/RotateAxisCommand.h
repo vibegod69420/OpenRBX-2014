@@ -1,0 +1,25 @@
+#ifndef CLIENT_APP_INCLUDE_V8DATAMODEL_ROTATEAXISCOMMAND_H
+#define CLIENT_APP_INCLUDE_V8DATAMODEL_ROTATEAXISCOMMAND_H
+
+#include "decomp.h"
+
+namespace RBX {
+
+// AUTO-GENERATED HELPERS
+
+// VTABLE: ROBLOXSTUDIO 0x00e5c45c
+class RotateAxisCommand
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+} // namespace RBX
+
+#endif // CLIENT_APP_INCLUDE_V8DATAMODEL_ROTATEAXISCOMMAND_H

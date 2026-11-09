@@ -115,6 +115,7 @@ public:
 	void* scalarDeletingDestructorImp_0570(unsigned int flags);
 	void* scalarDeletingDestructorImp_05a0(unsigned int flags);
 	void* scalarDeletingDestructorImp_05d0(unsigned int flags);
+	void* scalarDeletingDestructor_d040(unsigned int flags);
 	// AUTO-GENERATED METHODS
 };
 

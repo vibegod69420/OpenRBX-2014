@@ -19,6 +19,9 @@ public:
 	};
 
 	void setField1C4(int value);
+	void onDestroy();
+	void* scalarDeletingDestructor(unsigned int flags);
+	void* scalarDeletingDestructor_91f0(unsigned int flags);
 	// AUTO-GENERATED METHODS
 };
 

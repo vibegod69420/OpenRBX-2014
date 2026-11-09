@@ -17,6 +17,15 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void onDestroy();
+	void* scalarDeletingDestructor(unsigned int flags);
+	void* scalarDeletingDestructor_e4c0(unsigned int flags);
+	void* scalarDeletingDestructor_e4f0(unsigned int flags);
+	void* scalarDeletingDestructor_e520(unsigned int flags);
+	void* scalarDeletingDestructor_e550(unsigned int flags);
+	void* scalarDeletingDestructor_e580(unsigned int flags);
+	void* scalarDeletingDestructor_e5b0(unsigned int flags);
+	void* scalarDeletingDestructor_e5e0(unsigned int flags);
 	// AUTO-GENERATED METHODS
 };
 
