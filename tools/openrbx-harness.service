@@ -11,6 +11,8 @@ Environment=MSVC_ROOT=/opt/msvc110
 Environment=WINEPREFIX=/opt/msvc110/wineprefix
 Environment=WINEDEBUG=-all
 Environment=PYTHONUNBUFFERED=1
+# systemd does not set HOME; git's credential store and global config live there.
+Environment=HOME=/root
 ExecStartPre=/bin/mkdir -p /var/log/openrbx
 ExecStart=/usr/bin/python3 /opt/openrbx/OpenRBX-2014/tools/autonomous_harness.py
 Restart=always
