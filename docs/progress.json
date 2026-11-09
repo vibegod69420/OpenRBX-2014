@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-09 15:34:46 UTC",
+  "updated_at": "2026-11-09 15:34:53 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "MSVC 11.0 (Visual Studio 2012 x86)",
   "total_binary_functions": 40561,
   "total_binary_bytes": 9574526,
-  "implemented_total": 79,
-  "function_annotations": 79,
+  "implemented_total": 91,
+  "function_annotations": 91,
   "stub_annotations": 0,
-  "perfect_100_count": 79,
+  "perfect_100_count": 91,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.1948,
-  "overall_byte_coverage_pct": 0.0043,
+  "overall_function_coverage_pct": 0.2244,
+  "overall_byte_coverage_pct": 0.005,
   "functions": [
     {
       "address": "0x00403b30",
@@ -723,6 +723,66 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a2da10",
+      "kind": "FUNCTION",
+      "name": "AV_indirect_streambuf_V_basic_gzip_compresso_vslot20_00a2da10",
+      "mangled": "?AV_indirect_streambuf_V_basic_gzip_compresso_vslot20_00a2da10@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2da20",
+      "kind": "FUNCTION",
+      "name": "AV_indirect_streambuf_V_basic_gzip_decompres_vslot20_00a2da20",
+      "mangled": "?AV_indirect_streambuf_V_basic_gzip_decompres_vslot20_00a2da20@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2da30",
+      "kind": "FUNCTION",
+      "name": "AV_stream_buffer_V_basic_null_device_DUinput_vslot20_00a2da30",
+      "mangled": "?AV_stream_buffer_V_basic_null_device_DUinput_vslot20_00a2da30@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2da40",
+      "kind": "FUNCTION",
+      "name": "AV_stream_buffer_V_basic_null_device_DUoutpu_vslot20_00a2da40",
+      "mangled": "?AV_stream_buffer_V_basic_null_device_DUoutpu_vslot20_00a2da40@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2da50",
+      "kind": "FUNCTION",
+      "name": "AV_stream_buffer_VWiniInetRequest_source_U_c_vslot20_00a2da50",
+      "mangled": "?AV_stream_buffer_VWiniInetRequest_source_U_c_vslot20_00a2da50@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a320c0",
+      "kind": "FUNCTION",
+      "name": "AV_stream_buffer_VWinHttpRequest_source_U_ch_vslot20_00a320c0",
+      "mangled": "?AV_stream_buffer_VWinHttpRequest_source_U_ch_vslot20_00a320c0@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a9d6d0",
       "kind": "FUNCTION",
       "name": "AV_FactoryProduct_VHandles_RBX_VHandlesBase__vslot1_00a9d6d0",
@@ -730,6 +790,16 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aa2d10",
+      "kind": "FUNCTION",
+      "name": "RBX_WedgePoly_vslot2_00aa2d10",
+      "mangled": "?RBX_WedgePoly_vslot2_00aa2d10@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
       "match_pct": 100.0
     },
     {
@@ -753,6 +823,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00ba2b30",
+      "kind": "FUNCTION",
+      "name": "RBX_PrismPoly_vslot2_00ba2b30",
+      "mangled": "?RBX_PrismPoly_vslot2_00ba2b30@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ba4120",
+      "kind": "FUNCTION",
+      "name": "RBX_MegaClusterInstance_vslot34_00ba4120",
+      "mangled": "?RBX_MegaClusterInstance_vslot34_00ba4120@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00bda810",
       "kind": "FUNCTION",
       "name": "RBX_BuoyancyContact_vslot10_00bda810",
@@ -760,6 +850,36 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00be9a10",
+      "kind": "FUNCTION",
+      "name": "RBX_DataStore_vslot30_00be9a10",
+      "mangled": "?RBX_DataStore_vslot30_00be9a10@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00be9a20",
+      "kind": "FUNCTION",
+      "name": "RBX_OrderedDataStore_vslot30_00be9a20",
+      "mangled": "?RBX_OrderedDataStore_vslot30_00be9a20@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c0bbd0",
+      "kind": "FUNCTION",
+      "name": "RBX_AdvMoveToolBase_vslot24_00c0bbd0",
+      "mangled": "?RBX_AdvMoveToolBase_vslot24_00c0bbd0@@YA_NXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
       "match_pct": 100.0
     },
     {
