@@ -304,7 +304,10 @@ def main():
         subprocess.run(["git", "add", "-A"], cwd=ROOT, check=False)
         subprocess.run(["git", "commit", "-m", args.commit], cwd=ROOT, check=False)
     if args.push:
-        subprocess.run(["git", "push", "origin", "main"], cwd=ROOT, check=False)
+        r = subprocess.run(["git", "push", "origin", "main"], cwd=ROOT, check=False)
+        if r.returncode != 0:
+            subprocess.run(["git", "pull", "--rebase", "-X", "theirs", "origin", "main"], cwd=ROOT, check=False)
+            subprocess.run(["git", "push", "origin", "main"], cwd=ROOT, check=False)
 
 
 if __name__ == "__main__":

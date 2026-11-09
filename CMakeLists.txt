@@ -1,25 +1,22 @@
-cmake_minimum_required(VERSION 3.20)
-project(OpenRBX2014 LANGUAGES C CXX)
+cmake_minimum_required(VERSION 3.15)
+project(OpenRBX2014 LANGUAGES CXX C)
 
 set(CMAKE_CXX_STANDARD 11)
 
 if(MSVC)
-    # Match Roblox 2014 MSVC 11.0 Release/RelWithDebInfo codegen flags:
-    # /O2 /Ob2 /Oi /Ot /Oy- /GS /EHsc /GR /fp:precise /Zc:wchar_t /Zc:forScope
-    add_compile_options(/O2 /Ob2 /Oi /Ot /Oy- /GS /EHsc /GR /fp:precise /Zc:wchar_t /Zc:forScope /W3)
-    add_link_options(/DEBUG /OPT:REF /OPT:ICF /BASE:0x00400000 /DYNAMICBASE:NO)
+    # Match August 20, 2014 RobloxStudioBeta.exe (0.164.0.50577) Release x86 flags
+    add_compile_options(/O2 /Ob2 /Oi /Ot /Oy- /GS /EHsc /GR /fp:precise /W0 /bigobj)
+    add_link_options(/OPT:REF /OPT:ICF /SUBSYSTEM:WINDOWS /MACHINE:X86)
 endif()
 
 include_directories(
-    ${CMAKE_SOURCE_DIR}/util
-    ${CMAKE_SOURCE_DIR}/Client/Base/include
-    ${CMAKE_SOURCE_DIR}/Client/App/include
-    ${CMAKE_SOURCE_DIR}/Client/Rendering/G3D/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/util
+    ${CMAKE_CURRENT_SOURCE_DIR}/Client
 )
 
 file(GLOB_RECURSE CLIENT_SOURCES
-    "${CMAKE_SOURCE_DIR}/Client/*.cpp"
-    "${CMAKE_SOURCE_DIR}/Client/*.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/Client/*.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/Client/*.c"
 )
 
 add_executable(RobloxStudioBeta ${CLIENT_SOURCES})
