@@ -189,7 +189,7 @@ def call_llm_chat(base_url: str, system_prompt: str, user_prompt: str, max_token
         "reasoning_effort": "high",
         "thinking": {"type": "enabled", "budget_tokens": max_tokens},
         "chat_template_kwargs": {"enable_thinking": True},
-        "stream": False,
+        "stream": True,
     }
     body = json.dumps(payload).encode("utf-8")
     req = urllib.request.Request(
@@ -202,11 +202,30 @@ def call_llm_chat(base_url: str, system_prompt: str, user_prompt: str, max_token
         },
         method="POST",
     )
+    # Stream the reply. A full reasoning chain routinely runs past the Cloudflare
+    # quick-tunnel origin timeout, which answers HTTP 524 and throws the whole
+    # completion away; streaming keeps bytes flowing so the tunnel stays open.
+    content_parts: list[str] = []
+    reasoning_parts: list[str] = []
     with urllib.request.urlopen(req, timeout=600) as resp:
-        data = json.loads(resp.read().decode("utf-8"))
-        msg = data["choices"][0]["message"]
-        reasoning = msg.get("reasoning_content") or ""
-        content = msg.get("content") or ""
+        for raw_line in resp:
+            line = raw_line.decode("utf-8", "ignore").strip()
+            if not line.startswith("data:"):
+                continue
+            data_str = line[len("data:"):].strip()
+            if data_str == "[DONE]":
+                break
+            try:
+                chunk = json.loads(data_str)
+            except json.JSONDecodeError:
+                continue
+            delta = (chunk.get("choices") or [{}])[0].get("delta") or {}
+            if delta.get("content"):
+                content_parts.append(delta["content"])
+            if delta.get("reasoning_content"):
+                reasoning_parts.append(delta["reasoning_content"])
+    content = "".join(content_parts)
+    reasoning = "".join(reasoning_parts)
         if reasoning:
             log(f"    [MoE-REASONING] Model generated {len(reasoning)} chars of deep thinking chain (budget={max_tokens})")
         content = re.sub(r"<think>.*?</think>", "", content, flags=re.DOTALL).strip()
