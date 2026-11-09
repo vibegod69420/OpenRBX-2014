@@ -97,6 +97,8 @@ def get_msvc_env() -> dict[str, str]:
         r"D:\VS2022\VC\Auxiliary\Build\vcvars32.bat",
         r"C:\VS2022\VC\Auxiliary\Build\vcvars32.bat",
         r"C:\BuildTools\VC\Auxiliary\Build\vcvars32.bat",
+        r"C:\msvc\Common7\Tools\vsvars32.bat",
+        str(ROOT / "msvc800sp1" / "Common7" / "Tools" / "vsvars32.bat"),
         r"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars32.bat",
         r"C:\Program Files\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvars32.bat",
         r"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvars32.bat",
