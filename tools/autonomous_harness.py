@@ -36,7 +36,7 @@ import verify_tu        # noqa: E402
 KERNEL_REF = os.environ.get("KAGGLE_KERNEL_REF", "supahblob/kaggle-qwen-coder-api-server")
 MODEL_NAME = os.environ.get("DECOMP_MODEL", "qwen3.8:35b-a3b-abliterated")
 HARNESS_MODE = os.environ.get("DECOMP_HARNESS", "auto")  # "claude", "pi", "direct", or "auto"
-MAX_OUTPUT_TOKENS = int(os.environ.get("DECOMP_MAX_TOKENS", "32768"))
+MAX_OUTPUT_TOKENS = int(os.environ.get("DECOMP_MAX_TOKENS", "65536"))
 CONTEXT_WINDOW = 262144
 TUNNEL_CACHE_FILE = ROOT / "data" / "active_tunnel_url.txt"
 
@@ -133,7 +133,7 @@ def update_pi_and_claude_configs(api_v1_url: str):
             {
                 "defaultProvider": "kaggle-ollama",
                 "defaultModel": MODEL_NAME,
-                "defaultThinkingLevel": "high",
+                "defaultThinkingLevel": "max",
             },
             indent=2,
         ),

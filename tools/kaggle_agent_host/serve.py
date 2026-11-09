@@ -271,7 +271,7 @@ def launch_inference_server():
                 SERVER_BIN, "-m", LOCAL_GGUF, "--host", "0.0.0.0", "--port", str(SERVER_PORT),
                 "-ngl", "99", "-sm", "layer", "-c", "262144", "-n", "-1", "-np", "1", "-fa", "on",
                 "-ctk", "q4_0", "-ctv", "q4_0", "-b", "2048", "-ub", "512", "-t", "4",
-                "--jinja", "--reasoning-format", "deepseek",
+                "--jinja", "--reasoning-format", "deepseek", "--reasoning-budget", "-1",
                 "-a", all_aliases_str, "--temp", "0.6", "--top-p", "0.95", "--top-k", "20"
             ],
             # Candidate 2: 128K context (131,072 tokens) with unlimited output (-n -1)
@@ -279,7 +279,7 @@ def launch_inference_server():
                 SERVER_BIN, "-m", LOCAL_GGUF, "--host", "0.0.0.0", "--port", str(SERVER_PORT),
                 "-ngl", "99", "-sm", "layer", "-c", "131072", "-n", "-1", "-np", "1", "-fa", "on",
                 "-ctk", "q4_0", "-ctv", "q4_0", "-b", "2048", "-ub", "512", "-t", "4",
-                "--jinja", "--reasoning-format", "deepseek",
+                "--jinja", "--reasoning-format", "deepseek", "--reasoning-budget", "-1",
                 "-a", all_aliases_str, "--temp", "0.6", "--top-p", "0.95", "--top-k", "20"
             ],
             # Candidate 3: 96K context (98,304 tokens) with unlimited output (-n -1)
@@ -287,7 +287,7 @@ def launch_inference_server():
                 SERVER_BIN, "-m", LOCAL_GGUF, "--host", "0.0.0.0", "--port", str(SERVER_PORT),
                 "-ngl", "99", "-sm", "layer", "-c", "98304", "-n", "-1", "-np", "1", "-fa", "on",
                 "-ctk", "q4_0", "-ctv", "q4_0", "-b", "2048", "-ub", "512", "-t", "4",
-                "--jinja", "--reasoning-format", "deepseek",
+                "--jinja", "--reasoning-format", "deepseek", "--reasoning-budget", "-1",
                 "-a", all_aliases_str, "--temp", "0.6", "--top-p", "0.95", "--top-k", "20"
             ],
             # Candidate 4: 64K context (65,536 tokens) with unlimited output (-n -1)
@@ -295,7 +295,7 @@ def launch_inference_server():
                 SERVER_BIN, "-m", LOCAL_GGUF, "--host", "0.0.0.0", "--port", str(SERVER_PORT),
                 "-ngl", "99", "-sm", "layer", "-c", "65536", "-n", "-1", "-np", "1", "-fa", "on",
                 "-ctk", "q4_0", "-ctv", "q4_0", "-b", "2048", "-ub", "512", "-t", "4",
-                "--jinja", "--reasoning-format", "deepseek",
+                "--jinja", "--reasoning-format", "deepseek", "--reasoning-budget", "-1",
                 "-a", all_aliases_str, "--temp", "0.6", "--top-p", "0.95", "--top-k", "20"
             ]
         ]
@@ -525,6 +525,8 @@ def keep_alive_loop(cf_proc):
         if cf_proc.poll() is not None:
             print("[WARN] Cloudflare tunnel exited; restarting...", file=sys.stderr, flush=True)
             cf_proc = start_cloudflare_tunnel()
+            if TUNNEL_URL:
+                display_dashboard(TUNNEL_URL)
 
         try:
             req = urllib.request.urlopen(f"http://127.0.0.1:{SERVER_PORT}/v1/models", timeout=5)
@@ -539,6 +541,8 @@ def main():
     print_banner("INITIALIZING FRONTIER QWEN3.8 35B-A3B ABLITERATED ON KAGGLE DUAL T4")
     clean_environment()
     cf_proc = start_cloudflare_tunnel()
+            if TUNNEL_URL:
+                display_dashboard(TUNNEL_URL)
     install_and_setup_engine()
     download_model_high_speed()
     launch_inference_server()
