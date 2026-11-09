@@ -27,6 +27,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 import func_context     # noqa: E402
 import next_target      # noqa: E402
+import opencode_backend  # noqa: E402
 import source_router    # noqa: E402
 import update_progress  # noqa: E402
 import verify_tu        # noqa: E402
@@ -36,6 +37,7 @@ MODEL_NAME = os.environ.get("DECOMP_MODEL", "anthropic/claude-sonnet-5@default")
 HARNESS_MODE = os.environ.get("DECOMP_HARNESS", "auto")
 MAX_OUTPUT_TOKENS = int(os.environ.get("DECOMP_MAX_TOKENS", "65536"))
 BACKEND = os.environ.get("DECOMP_BACKEND", "deterministic")
+OPENCODE_SENTINEL = "opencode://cli"
 LOCAL_LLM_URL = os.environ.get("DECOMP_LOCAL_URL", "http://127.0.0.1:8080/v1")
 LEDGER_PATH = ROOT / "data" / "work_ledger.jsonl"
 CONTEXT_WINDOW = 262144
@@ -218,6 +220,8 @@ def discover_kaggle_tunnel_url() -> str | None:
 
 
 def call_llm_chat(base_url: str, system_prompt: str, user_prompt: str, max_tokens: int = MAX_OUTPUT_TOKENS) -> str:
+    if base_url.startswith(OPENCODE_SENTINEL):
+        return opencode_backend.ask(system_prompt, user_prompt, max_tokens=max_tokens)
     kb_url, kb_key = load_kbench_credentials()
     use_proxy = bool(kb_url) and base_url.rstrip("/") in (kb_url.rstrip("/"), kb_url.rstrip("/") + "/v1")
     url = (kb_url.rstrip("/") + "/openapi" if use_proxy else base_url.rstrip("/")) + "/chat/completions"
@@ -1120,6 +1124,8 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
         try:
             resp_text = call_llm_chat(base_url, system_prompt, prompt, max_tokens=budget_tokens)
             candidate_cpp_snippet = extract_cpp_code_block(resp_text)
+        except opencode_backend.QuotaExhausted:
+            raise
         except Exception as e:
             log(f"  [0x{addr:08x} Attempt {attempt}] LLM request warning: {e}")
             continue
@@ -1214,6 +1220,44 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
     return False, 0.0, ""
 
 
+_OPENCODE_READY: bool | None = None
+
+
+def opencode_ready() -> bool:
+    """One-time readiness check for the logged-out free tier. Never raises."""
+    global _OPENCODE_READY
+    if _OPENCODE_READY is None:
+        try:
+            report = opencode_backend.preflight()
+            log(
+                f"OpenCode free tier ready: v{report['version']} | "
+                f"{report['model']} | logged out"
+            )
+            _OPENCODE_READY = True
+        except Exception as exc:
+            log(f"OpenCode backend unavailable ({exc}); deterministic synthesis only")
+            _OPENCODE_READY = False
+    return _OPENCODE_READY
+
+
+def rotate_after_quota(reason: str) -> bool:
+    """
+    Stops this instance so the next start hands out a new public IP (tools/quota_rotate.py).
+    Declines when the rolling 24h cap is spent, so a limit that is not IP-keyed cannot turn
+    into an endless stop/start loop.
+    """
+    try:
+        import quota_rotate
+    except Exception as exc:
+        log(f"Rotation controller unavailable: {exc}")
+        return False
+    try:
+        return quota_rotate.on_quota(reason)
+    except Exception as exc:
+        log(f"Rotation failed: {exc}")
+        return False
+
+
 def run_forever():
     log("Starting OpenRBX-2014 Immortal 24/7 Autonomous Decompilation Supervisor (Clean Subsystem Layout + MoE Max Reasoning)...")
     sizes = verify_tu.load_function_sizes()
@@ -1240,7 +1284,9 @@ def run_forever():
 
     while True:
         try:
-            if BACKEND == "kaggle":
+            if BACKEND == "opencode":
+                base_url = OPENCODE_SENTINEL if opencode_ready() else None
+            elif BACKEND == "kaggle":
                 base_url = discover_kaggle_tunnel_url()
             elif BACKEND == "kbench":
                 kb_url, kb_key = load_kbench_credentials()
@@ -1250,7 +1296,8 @@ def run_forever():
             else:
                 base_url = None
             if base_url:
-                log(f"Generation backend: {base_url} | Model: {MODEL_NAME}")
+                shown_model = opencode_backend.MODEL if base_url == OPENCODE_SENTINEL else MODEL_NAME
+                log(f"Generation backend: {base_url} | Model: {shown_model}")
             elif BACKEND == "local":
                 log("No local llama-server reachable; running deterministic synthesis only")
             elif BACKEND == "kaggle":
@@ -1304,6 +1351,14 @@ def run_forever():
                 )
 
             time.sleep(2)
+        except opencode_backend.QuotaExhausted as exc:
+            log(f"OpenCode free-tier quota reached: {exc}")
+            if rotate_after_quota(str(exc)):
+                log("Instance stop requested; quota_rotate.py --start (or the EventBridge schedule) restarts it on a new public IP")
+                break
+            log("Rotation not performed (24h cap reached or AWS refused); parking 1h before retrying")
+            time.sleep(3600)
+            continue
         except KeyboardInterrupt:
             log("Supervisor interrupted by user.")
             break

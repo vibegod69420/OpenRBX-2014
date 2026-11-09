@@ -20,6 +20,7 @@ public:
 	};
 
 	void setField14(int value);
+	int getField14();
 	// AUTO-GENERATED METHODS
 };
 
