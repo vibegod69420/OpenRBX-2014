@@ -32,9 +32,12 @@ import update_progress  # noqa: E402
 import verify_tu        # noqa: E402
 
 KERNEL_REF = os.environ.get("KAGGLE_KERNEL_REF", "supahblob/kaggle-qwen-coder-api-server")
-MODEL_NAME = os.environ.get("DECOMP_MODEL", "qwen2.5-coder-14b")
+MODEL_NAME = os.environ.get("DECOMP_MODEL", "claude-sonnet-5-5-default")
 HARNESS_MODE = os.environ.get("DECOMP_HARNESS", "auto")
 MAX_OUTPUT_TOKENS = int(os.environ.get("DECOMP_MAX_TOKENS", "65536"))
+BACKEND = os.environ.get("DECOMP_BACKEND", "deterministic")
+LOCAL_LLM_URL = os.environ.get("DECOMP_LOCAL_URL", "http://127.0.0.1:8080/v1")
+LEDGER_PATH = ROOT / "data" / "work_ledger.jsonl"
 CONTEXT_WINDOW = 262144
 TUNNEL_CACHE_FILE = ROOT / "data" / "active_tunnel_url.txt"
 
@@ -42,6 +45,47 @@ TUNNEL_CACHE_FILE = ROOT / "data" / "active_tunnel_url.txt"
 def log(msg: str):
     ts = time.strftime("%Y-%m-%d %H:%M:%S")
     print(f"[{ts}] {msg}", flush=True)
+
+
+def record_work(addr: int, ok: bool, pct: float, name: str):
+    """Append-only ledger: every attempt survives restarts and can be audited afterwards."""
+    try:
+        LEDGER_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with open(LEDGER_PATH, "a", encoding="utf-8") as fh:
+            fh.write(json.dumps({
+                "ts": time.strftime("%Y-%m-%dT%H:%M:%S"),
+                "address": f"0x{addr:08x}",
+                "matched": bool(ok and pct >= 99.99),
+                "best_pct": round(pct, 2),
+                "name": name,
+                "backend": BACKEND,
+            }) + chr(10))
+    except Exception:
+        pass
+
+
+KBENCH_ENV = os.environ.get("DECOMP_KBENCH_ENV", "/etc/openrbx/kbench.env")
+
+
+def load_kbench_credentials() -> tuple[str, str]:
+    """
+    Kaggle's benchmark proxy mints an API key that expires after one hour, so the
+    credentials are re-read on every call instead of being cached at import time.
+    """
+    url = os.environ.get("MODEL_PROXY_URL", "")
+    key = os.environ.get("MODEL_PROXY_API_KEY", "")
+    try:
+        with open(KBENCH_ENV, encoding="utf-8") as fh:
+            for line in fh:
+                name, _, value = line.strip().partition("=")
+                value = value.strip().strip('"').strip("'")
+                if name == "MODEL_PROXY_URL" and value:
+                    url = value
+                elif name == "MODEL_PROXY_API_KEY" and value:
+                    key = value
+    except OSError:
+        pass
+    return url, key
 
 
 def check_endpoint_alive(base_url: str) -> bool:
@@ -174,7 +218,9 @@ def discover_kaggle_tunnel_url() -> str | None:
 
 
 def call_llm_chat(base_url: str, system_prompt: str, user_prompt: str, max_tokens: int = MAX_OUTPUT_TOKENS) -> str:
-    url = base_url.rstrip("/") + "/chat/completions"
+    kb_url, kb_key = load_kbench_credentials()
+    use_proxy = bool(kb_url) and base_url.rstrip("/") in (kb_url.rstrip("/"), kb_url.rstrip("/") + "/v1")
+    url = (kb_url.rstrip("/") if use_proxy else base_url.rstrip("/")) + "/chat/completions"
     payload = {
         "model": MODEL_NAME,
         "messages": [
@@ -197,7 +243,7 @@ def call_llm_chat(base_url: str, system_prompt: str, user_prompt: str, max_token
         data=body,
         headers={
             "Content-Type": "application/json",
-            "Authorization": "Bearer ollama",
+            "Authorization": (f"Bearer {kb_key}" if use_proxy else "Bearer ollama"),
             "User-Agent": "OpenRBX-Harness/3.0",
         },
         method="POST",
@@ -834,6 +880,8 @@ _LAST_KAGGLE_CHECK_TS = 0.0
 
 
 def ensure_kaggle_kernel_alive():
+    if BACKEND != "kaggle":
+        return
     """
     If the 12-hour Kaggle Dual-T4 GPU session expires (`COMPLETE` / `ERROR` / `CANCELLED`),
     automatically deletes any stale kernel versions and pushes a fresh `NvidiaTeslaT4` session.
@@ -1184,12 +1232,24 @@ def run_forever():
 
     while True:
         try:
-            base_url = discover_kaggle_tunnel_url()
-            if base_url:
-                log(f"Active 256K MoE Endpoint: {base_url} | Model: {MODEL_NAME} | Max Output: {MAX_OUTPUT_TOKENS} tokens")
+            if BACKEND == "kaggle":
+                base_url = discover_kaggle_tunnel_url()
+            elif BACKEND == "kbench":
+                kb_url, kb_key = load_kbench_credentials()
+                base_url = kb_url if (kb_url and kb_key) else None
+            elif BACKEND == "local":
+                base_url = LOCAL_LLM_URL if check_endpoint_alive(LOCAL_LLM_URL) else None
             else:
+                base_url = None
+            if base_url:
+                log(f"Generation backend: {base_url} | Model: {MODEL_NAME}")
+            elif BACKEND == "local":
+                log("No local llama-server reachable; running deterministic synthesis only")
+            elif BACKEND == "kaggle":
                 ensure_kaggle_kernel_alive()
-                log("Kaggle Dual-T4 MoE kernel initializing; running fast deterministic C++ class synthesis pass...")
+                log("Kaggle endpoint unavailable; running deterministic synthesis only")
+            else:
+                log("Deterministic synthesis only (no external GPU dependency)")
 
             done = next_target.get_implemented_addresses()
             exclude = attempted_with_llm if base_url else skipped_without_llm
@@ -1215,6 +1275,7 @@ def run_forever():
             for addr in remaining:
                 scanned += 1
                 ok, pct, fn_name = decompile_function_with_retries(addr, base_url)
+                record_work(addr, ok, pct, fn_name)
                 if ok and pct >= 99.99:
                     matched_in_cycle.append(f"0x{addr:08x}")
                 else:

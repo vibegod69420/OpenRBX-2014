@@ -289,7 +289,7 @@ def write_dashboard_html(summary: dict):
       <div class="card">
         <div class="label">Agent Harness Status</div>
         <div class="val" style="color: var(--green);">RUNNING 24/7</div>
-        <div class="hint">AWS EC2 + Qwen3.8-35B-A3B MoE (Max Reasoning)</div>
+        <div class="hint">AWS EC2 &bull; deterministic pattern synthesis (no external GPU)</div>
       </div>
     </div>
 
