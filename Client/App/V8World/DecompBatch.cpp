@@ -1313,3 +1313,77 @@ int __cdecl rbx_func_00678910(const int* p)
 {
     return *p;
 }
+
+// FUNCTION: ROBLOXSTUDIO 0x006801d0
+int __cdecl rbx_func_006801d0(const int* p)
+{
+    return *p;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x006801e0
+int __cdecl rbx_func_006801e0(const int* p)
+{
+    return *p;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00686b50
+int __cdecl rbx_func_00686b50(const int* p)
+{
+    return *p;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00686b60
+int __cdecl rbx_func_00686b60(const int* p)
+{
+    return *p;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00693720
+int __cdecl rbx_func_00693720(const int* p)
+{
+    return *p;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00693730
+int __cdecl rbx_func_00693730(const int* p)
+{
+    return *p;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00696790
+int __cdecl rbx_func_00696790(const int* p)
+{
+    return *p;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x006967a0
+int __cdecl rbx_func_006967a0(const int* p)
+{
+    return *p;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x006ad930
+int __cdecl rbx_func_006ad930(const int* p)
+{
+    return *p;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x006ad940
+int __cdecl rbx_func_006ad940(const int* p)
+{
+    return *p;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x008e9f30
+int __cdecl rbx_func_008e9f30(const int* p)
+{
+    return *p;
+}
+
+struct Sub_00b53520 { char pad[164]; int val; };
+struct Struct_00b53520 { char pad[36]; Sub_00b53520* sub; };
+// FUNCTION: ROBLOXSTUDIO 0x00b53520
+int __fastcall rbx_func_00b53520(const Struct_00b53520* self)
+{
+    return self->sub->val;
+}
