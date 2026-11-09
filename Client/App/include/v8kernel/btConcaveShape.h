@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	float someFunction() const;
 	// AUTO-GENERATED METHODS
 };
 
