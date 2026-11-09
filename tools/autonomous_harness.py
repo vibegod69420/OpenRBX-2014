@@ -930,6 +930,32 @@ def run_deterministic_batch_pass(candidate_addrs: list[int], max_matches: int = 
     return verified_hex
 
 
+def _declaration_from_llm_snippet(snippet: str, cls: str) -> str | None:
+    """
+    Turns a generated definition (`void Class::name(int a) const`) into the member
+    declaration the header needs. Without it every LLM body fails with C2039
+    'name is not a member of Class', which silently burned whole attempt budgets.
+    """
+    for line in snippet.splitlines():
+        text = line.strip()
+        if f"{cls}::" not in text or "(" not in text or text.startswith("//"):
+            continue
+        head, _, rest = text.partition(f"{cls}::")
+        name, _, tail = rest.partition("(")
+        params, _, after = tail.partition(")")
+        if not name.strip().isidentifier():
+            continue
+        ret = head.strip()
+        for kw in ("virtual ", "static ", "inline ", "__thiscall ", "explicit "):
+            while ret.startswith(kw):
+                ret = ret[len(kw):].strip()
+        if not ret:
+            continue
+        const = " const" if after.strip().startswith("const") else ""
+        return f"{ret} {name.strip()}({params}){const};"
+    return None
+
+
 def _mentions_address(text: str, addr: int) -> bool:
     """Models echo the marker either padded (`0x004028a0`) or unpadded (`0x4028a0`)."""
     low = text.lower()
@@ -995,6 +1021,10 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
         "You may define a static/member method or free function preceded by "
         f"`// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}` inside a ```cpp code block.\n"
         "Do NOT include `main()` or non-existent external headers.\n\n"
+        "Write plain C++ only: no `__asm`/inline assembly, no absolute-address calls, and "
+        f"the body must be a member of `{route['class_name']}` with an ordinary signature.
+
+"
         + claude_md
     )
 
@@ -1032,6 +1062,14 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
                 f"{resp_text[:160]!r}"
             )
             continue
+
+        if re.search(r"__asm", candidate_cpp_snippet):
+            log(f"  [0x{addr:08x} Attempt {attempt}] rejected inline-assembly snippet (not verifiable C++)")
+            continue
+
+        member_decl = _declaration_from_llm_snippet(candidate_cpp_snippet, route["class_name"])
+        if member_decl:
+            source_router.ensure_class_header_and_cpp(route, method_decl=member_decl)
 
         source_router.append_method_to_cpp(cpp_path, candidate_cpp_snippet)
         ok, obj_path, compiler_out = verify_tu.compile_cpp_to_coff(cpp_path, use_cache=False)
