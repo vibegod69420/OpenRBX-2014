@@ -19,6 +19,8 @@ public:
 	};
 
 	int getField0C() const;
+	void onDestroy();
+	void* scalarDeletingDestructorImp(unsigned int flags);
 	// AUTO-GENERATED METHODS
 };
 

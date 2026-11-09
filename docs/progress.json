@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-09 17:09:33 UTC",
+  "updated_at": "2026-11-09 17:19:27 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "MSVC 11.0 (Visual Studio 2012 x86)",
   "total_binary_functions": 40561,
   "total_binary_bytes": 9574526,
-  "implemented_total": 717,
-  "function_annotations": 717,
+  "implemented_total": 724,
+  "function_annotations": 724,
   "stub_annotations": 0,
-  "perfect_100_count": 717,
-  "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 1.7677,
-  "overall_byte_coverage_pct": 0.1743,
+  "perfect_100_count": 705,
+  "average_match_pct": 98.75,
+  "overall_function_coverage_pct": 1.785,
+  "overall_byte_coverage_pct": 0.1752,
   "functions": [
     {
       "address": "0x00402eb0",
@@ -189,8 +189,8 @@
       "mangled": "?deleteObjectStatic@bad_placement_any_cast@rbx@@SAXPAURbxVDelBase@@@Z",
       "file": "Client/App/v8datamodel/bad_placement_any_cast.cpp",
       "orig_size": 18,
-      "recomp_size": 18,
-      "match_pct": 100.0
+      "recomp_size": 20,
+      "match_pct": 55.0
     },
     {
       "address": "0x00414990",
@@ -199,8 +199,8 @@
       "mangled": "?dispatchWithFlag0@QSpacerItem@@QAEXH@Z",
       "file": "Client/RobloxStudio/QSpacerItem.cpp",
       "orig_size": 17,
-      "recomp_size": 17,
-      "match_pct": 100.0
+      "recomp_size": 18,
+      "match_pct": 38.89
     },
     {
       "address": "0x00416b50",
@@ -239,8 +239,8 @@
       "mangled": "?initWithArg@islot@signals@rbx@@QAEPAV123@H@Z",
       "file": "Client/App/v8datamodel/islot.cpp",
       "orig_size": 21,
-      "recomp_size": 21,
-      "match_pct": 100.0
+      "recomp_size": 22,
+      "match_pct": 31.82
     },
     {
       "address": "0x004254f0",
@@ -509,8 +509,8 @@
       "mangled": "?deleteObject@Instance@RBX@@QAEXPAURbxVDelBase@@@Z",
       "file": "Client/App/v8tree/Instance.cpp",
       "orig_size": 26,
-      "recomp_size": 26,
-      "match_pct": 100.0
+      "recomp_size": 22,
+      "match_pct": 46.15
     },
     {
       "address": "0x00460e40",
@@ -630,7 +630,7 @@
       "file": "Client/App/v8datamodel/FlyweightService.cpp",
       "orig_size": 16,
       "recomp_size": 16,
-      "match_pct": 100.0
+      "match_pct": 62.5
     },
     {
       "address": "0x0048b5e0",
@@ -640,7 +640,7 @@
       "file": "Client/App/v8datamodel/FlyweightService.cpp",
       "orig_size": 13,
       "recomp_size": 13,
-      "match_pct": 100.0
+      "match_pct": 76.92
     },
     {
       "address": "0x00490510",
@@ -1243,6 +1243,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0058f090",
+      "kind": "FUNCTION",
+      "name": "btDefaultCollisionConfiguration::scalarDeletingDestructorImp",
+      "mangled": "?scalarDeletingDestructorImp@btDefaultCollisionConfiguration@@QAEPAXI@Z",
+      "file": "Client/App/v8kernel/btDefaultCollisionConfiguration.cpp",
+      "orig_size": 34,
+      "recomp_size": 34,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0058f6b0",
       "kind": "FUNCTION",
       "name": "RBX::PathInterpolatedCFrame::getField44",
@@ -1250,6 +1260,16 @@
       "file": "Client/App/util/PathInterpolatedCFrame.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0058f7c0",
+      "kind": "FUNCTION",
+      "name": "btCollisionDispatcher::scalarDeletingDestructorImp",
+      "mangled": "?scalarDeletingDestructorImp@btCollisionDispatcher@@QAEPAXI@Z",
+      "file": "Client/App/v8kernel/btCollisionDispatcher.cpp",
+      "orig_size": 34,
+      "recomp_size": 34,
       "match_pct": 100.0
     },
     {
@@ -1280,6 +1300,16 @@
       "file": "Client/App/v8kernel/btTetrahedronShapeEx.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00591730",
+      "kind": "FUNCTION",
+      "name": "btGImpactCollisionAlgorithm::scalarDeletingDestructorImp",
+      "mangled": "?scalarDeletingDestructorImp@btGImpactCollisionAlgorithm@@QAEPAXI@Z",
+      "file": "Client/App/v8kernel/btGImpactCollisionAlgorithm.cpp",
+      "orig_size": 34,
+      "recomp_size": 34,
       "match_pct": 100.0
     },
     {
@@ -1423,6 +1453,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0059c5a0",
+      "kind": "FUNCTION",
+      "name": "ConvexBuilder::scalarDeletingDestructorImp",
+      "mangled": "?scalarDeletingDestructorImp@ConvexBuilder@@QAEPAXI@Z",
+      "file": "Client/RobloxStudio/ConvexBuilder.cpp",
+      "orig_size": 34,
+      "recomp_size": 34,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0059f920",
       "kind": "FUNCTION",
       "name": "RBX::HUMAN::Flying::getConst6",
@@ -1453,6 +1493,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x005a6780",
+      "kind": "FUNCTION",
+      "name": "btCompoundCompoundCollisionAlgorithm::scalarDeletingDestructorImp",
+      "mangled": "?scalarDeletingDestructorImp@btCompoundCompoundCollisionAlgorithm@@QAEPAXI@Z",
+      "file": "Client/App/v8kernel/btCompoundCompoundCollisionAlgorithm.cpp",
+      "orig_size": 34,
+      "recomp_size": 34,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005aa6b0",
+      "kind": "FUNCTION",
+      "name": "btCompoundCollisionAlgorithm::scalarDeletingDestructorImp",
+      "mangled": "?scalarDeletingDestructorImp@btCompoundCollisionAlgorithm@@QAEPAXI@Z",
+      "file": "Client/App/v8kernel/btCompoundCollisionAlgorithm.cpp",
+      "orig_size": 34,
+      "recomp_size": 34,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x005b2f00",
       "kind": "FUNCTION",
       "name": "btOptimizedBvh::getConst84",
@@ -1480,6 +1540,16 @@
       "file": "Client/App/v8kernel/btBvhTriangleMeshShape.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005ce4e0",
+      "kind": "FUNCTION",
+      "name": "btHashedSimplePairCache::scalarDeletingDestructorImp",
+      "mangled": "?scalarDeletingDestructorImp@btHashedSimplePairCache@@QAEPAXI@Z",
+      "file": "Client/App/v8kernel/btHashedSimplePairCache.cpp",
+      "orig_size": 34,
+      "recomp_size": 34,
       "match_pct": 100.0
     },
     {
@@ -2589,8 +2659,8 @@
       "mangled": "?dispatchWithFlag1@RenderView@Graphics@RBX@@QAEXH@Z",
       "file": "Client/Rendering/GfxRender/RenderView.cpp",
       "orig_size": 17,
-      "recomp_size": 17,
-      "match_pct": 100.0
+      "recomp_size": 18,
+      "match_pct": 38.89
     },
     {
       "address": "0x006766d0",
@@ -2800,7 +2870,7 @@
       "file": "Client/Rendering/GfxRender/SSAO.cpp",
       "orig_size": 36,
       "recomp_size": 36,
-      "match_pct": 100.0
+      "match_pct": 88.89
     },
     {
       "address": "0x0069d470",
@@ -2839,8 +2909,8 @@
       "mangled": "?initWithArg@TypesetterBitmap@Graphics@RBX@@QAEPAV123@H@Z",
       "file": "Client/Rendering/GfxRender/TypesetterBitmap.cpp",
       "orig_size": 21,
-      "recomp_size": 21,
-      "match_pct": 100.0
+      "recomp_size": 22,
+      "match_pct": 31.82
     },
     {
       "address": "0x006ad930",
@@ -4569,8 +4639,8 @@
       "mangled": "?freeMember0C@ScriptStats@RBX@@QAEXXZ",
       "file": "Client/App/script/ScriptStats.cpp",
       "orig_size": 10,
-      "recomp_size": 10,
-      "match_pct": 100.0
+      "recomp_size": 11,
+      "match_pct": 45.45
     },
     {
       "address": "0x008e1fa0",
@@ -4580,7 +4650,7 @@
       "file": "Client/App/script/ScriptContext.cpp",
       "orig_size": 36,
       "recomp_size": 36,
-      "match_pct": 100.0
+      "match_pct": 88.89
     },
     {
       "address": "0x008e9f30",
@@ -4669,8 +4739,8 @@
       "mangled": "?dispatchWithFlag0@TextXmlWriter@@QAEXH@Z",
       "file": "Client/RobloxStudio/TextXmlWriter.cpp",
       "orig_size": 17,
-      "recomp_size": 17,
-      "match_pct": 100.0
+      "recomp_size": 18,
+      "match_pct": 38.89
     },
     {
       "address": "0x009062f0",
@@ -4990,7 +5060,7 @@
       "file": "Client/App/v8datamodel/SoundId.cpp",
       "orig_size": 36,
       "recomp_size": 36,
-      "match_pct": 100.0
+      "match_pct": 88.89
     },
     {
       "address": "0x009977c0",
@@ -5179,8 +5249,8 @@
       "mangled": "?dispatchWithFlag1@Humanoid@RBX@@QAEXH@Z",
       "file": "Client/App/humanoid/Humanoid.cpp",
       "orig_size": 17,
-      "recomp_size": 17,
-      "match_pct": 100.0
+      "recomp_size": 18,
+      "match_pct": 38.89
     },
     {
       "address": "0x009ddf00",
@@ -5189,8 +5259,8 @@
       "mangled": "?dispatchWithFlag1_df00@Humanoid@RBX@@QAEXH@Z",
       "file": "Client/App/humanoid/Humanoid.cpp",
       "orig_size": 17,
-      "recomp_size": 17,
-      "match_pct": 100.0
+      "recomp_size": 18,
+      "match_pct": 38.89
     },
     {
       "address": "0x009fe0f0",
@@ -6739,8 +6809,8 @@
       "mangled": "?freeMember0C@Instance@RBX@@QAEXXZ",
       "file": "Client/App/v8tree/Instance.cpp",
       "orig_size": 10,
-      "recomp_size": 10,
-      "match_pct": 100.0
+      "recomp_size": 11,
+      "match_pct": 45.45
     },
     {
       "address": "0x00c67970",
@@ -6869,8 +6939,8 @@
       "mangled": "?freeMember0C@SharedStringDictionary@Network@RBX@@QAEXXZ",
       "file": "Client/Network/SharedStringDictionary.cpp",
       "orig_size": 10,
-      "recomp_size": 10,
-      "match_pct": 100.0
+      "recomp_size": 11,
+      "match_pct": 45.45
     },
     {
       "address": "0x00c84740",
@@ -6999,8 +7069,8 @@
       "mangled": "?freeMember0C@sp_counted_impl_p@RBX@@QAEXXZ",
       "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
       "orig_size": 10,
-      "recomp_size": 10,
-      "match_pct": 100.0
+      "recomp_size": 11,
+      "match_pct": 45.45
     },
     {
       "address": "0x00ca6050",
@@ -7009,8 +7079,8 @@
       "mangled": "?freeMember0C_slot1@sp_counted_impl_p@RBX@@QAEXXZ",
       "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
       "orig_size": 10,
-      "recomp_size": 10,
-      "match_pct": 100.0
+      "recomp_size": 11,
+      "match_pct": 45.45
     },
     {
       "address": "0x00cae2b0",
