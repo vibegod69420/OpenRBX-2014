@@ -930,6 +930,19 @@ def run_deterministic_batch_pass(candidate_addrs: list[int], max_matches: int = 
     return verified_hex
 
 
+def _strip_enclosing_namespaces(snippet: str, namespaces: list[str]) -> str:
+    """
+    The .cpp already sits inside its namespace, so a generated `RBX::Class::method`
+    definition is a C2888 error ('symbol cannot be defined within namespace').
+    Removes the enclosing prefix, longest first, to leave `Class::method`.
+    """
+    nss = [n for n in namespaces if n]
+    for depth in range(len(nss), 0, -1):
+        prefix = "::".join(nss[:depth]) + "::"
+        snippet = re.sub(r"(?<![\w:])" + re.escape(prefix), "", snippet)
+    return snippet
+
+
 def _declaration_from_llm_snippet(snippet: str, cls: str) -> str | None:
     """
     Turns a generated definition (`void Class::name(int a) const`) into the member
@@ -1060,6 +1073,11 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
                 f"{resp_text[:160]!r}"
             )
             continue
+
+        stripped = _strip_enclosing_namespaces(candidate_cpp_snippet, route["namespaces"])
+        if stripped != candidate_cpp_snippet:
+            log(f"  [0x{addr:08x} Attempt {attempt}] dropped redundant namespace qualification from the definition")
+            candidate_cpp_snippet = stripped
 
         if re.search(r"_+asm", candidate_cpp_snippet, re.IGNORECASE):
             log(f"  [0x{addr:08x} Attempt {attempt}] rejected inline-assembly snippet (not verifiable C++)")
