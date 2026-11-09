@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="30">
+  <title>OpenRBX-2014 — Live Autonomous Decompilation Dashboard</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --panel: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --green: #2ea043;
+    }
+    body {
+      margin: 0;
+      padding: 32px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    h1 { margin: 0; font-size: 24px; color: #fff; }
+    .sub { color: var(--muted); font-size: 14px; margin-top: 6px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px;
+    }
+    .card .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .card .val { font-size: 28px; font-weight: 700; color: #fff; margin-top: 6px; }
+    .card .hint { color: var(--accent); font-size: 12px; margin-top: 4px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 12px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+    }
+    th { background: #21262d; color: #fff; font-weight: 600; }
+    code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; color: var(--accent); }
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 12px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 12px;
+    }
+    .tag {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: #21262d;
+      border: 1px solid var(--border);
+      font-family: monospace;
+      font-size: 11px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1>OpenRBX-2014 — Autonomous Byte-Accurate Decompilation</h1>
+        <div class="sub">
+          Target: <code>RobloxStudioBeta.exe (0.164.0.50577 — Aug 20, 2014)</code> &bull;
+          Compiler: <code>MSVC 11.0 (VS2012 x86)</code> &bull;
+          Auto-refreshes every 30s &bull; Last Updated: <strong>2026-11-09 14:54:55 UTC</strong>
+        </div>
+      </div>
+      <div>
+        <img src="ROBLOXSTUDIOPROGRESS.SVG" alt="Progress SVG" height="72">
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="label">100% Byte-Matched Functions</div>
+        <div class="val">20</div>
+        <div class="hint">20 total decompiled functions</div>
+      </div>
+      <div class="card">
+        <div class="label">Active Function Accuracy</div>
+        <div class="val">100.00%</div>
+        <div class="hint">Relocation-invariant COFF/reccmp match</div>
+      </div>
+      <div class="card">
+        <div class="label">Binary Function Index</div>
+        <div class="val">20 / 40,561</div>
+        <div class="hint">9,004 RTTI VTables &bull; 589 Source Paths</div>
+      </div>
+      <div class="card">
+        <div class="label">Agent Harness Status</div>
+        <div class="val" style="color: var(--green);">RUNNING 24/7</div>
+        <div class="hint">AWS EC2 Worker + Qwen3.8 Base Model</div>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Address</th>
+          <th>Status</th>
+          <th>Symbol / Method</th>
+          <th>Source File</th>
+          <th>Size</th>
+          <th>Byte Accuracy</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+              <td><code>0x0059b590</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>rbx_func_0059b590</strong><br><small style="color:#8b949e">?rbx_func_0059b590@@YAHXZ</small></td>
+              <td><code>Client/App/V8World/DecompBatch.cpp</code></td>
+              <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x0059ab00</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>rbx_func_0059ab00</strong><br><small style="color:#8b949e">?rbx_func_0059ab00@@YAHXZ</small></td>
+              <td><code>Client/App/V8World/DecompBatch.cpp</code></td>
+              <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x00596500</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>rbx_func_00596500</strong><br><small style="color:#8b949e">?rbx_func_00596500@@YAHXZ</small></td>
+              <td><code>Client/App/V8World/DecompBatch.cpp</code></td>
+              <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x00595e70</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>rbx_func_00595e70</strong><br><small style="color:#8b949e">?rbx_func_00595e70@@YAHXZ</small></td>
+              <td><code>Client/App/V8World/DecompBatch.cpp</code></td>
+              <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x00595dd0</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>rbx_func_00595dd0</strong><br><small style="color:#8b949e">?rbx_func_00595dd0@@YAHXZ</small></td>
+              <td><code>Client/App/V8World/DecompBatch.cpp</code></td>
+              <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x00594f30</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>rbx_func_00594f30</strong><br><small style="color:#8b949e">?rbx_func_00594f30@@YAHXZ</small></td>
+              <td><code>Client/App/V8World/DecompBatch.cpp</code></td>
+              <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x00594f20</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>rbx_func_00594f20</strong><br><small style="color:#8b949e">?rbx_func_00594f20@@YAHXZ</small></td>
+              <td><code>Client/App/V8World/DecompBatch.cpp</code></td>
+              <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x00594b20</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>rbx_func_00594b20</strong><br><small style="color:#8b949e">?rbx_func_00594b20@@YAHXZ</small></td>
+              <td><code>Client/App/V8World/DecompBatch.cpp</code></td>
+              <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x00590ce0</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>rbx_func_00590ce0</strong><br><small style="color:#8b949e">?rbx_func_00590ce0@@YAHXZ</small></td>
+              <td><code>Client/App/V8World/DecompBatch.cpp</code></td>
+              <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x00590a80</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>rbx_func_00590a80</strong><br><small style="color:#8b949e">?rbx_func_00590a80@@YAHXZ</small></td>
+              <td><code>Client/App/V8World/DecompBatch.cpp</code></td>
+              <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x00590290</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>rbx_func_00590290</strong><br><small style="color:#8b949e">?rbx_func_00590290@@YAHXZ</small></td>
+              <td><code>Client/App/V8World/DecompBatch.cpp</code></td>
+              <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x005559c0</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>rbx_func_005559c0</strong><br><small style="color:#8b949e">?rbx_func_005559c0@@YAHXZ</small></td>
+              <td><code>Client/App/V8World/DecompBatch.cpp</code></td>
+              <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x00524420</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>rbx_func_00524420</strong><br><small style="color:#8b949e">?rbx_func_00524420@@YA_NXZ</small></td>
+              <td><code>Client/App/V8World/DecompBatch.cpp</code></td>
+              <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x00500320</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>rbx_func_00500320</strong><br><small style="color:#8b949e">?rbx_func_00500320@@YAHXZ</small></td>
+              <td><code>Client/App/V8World/DecompBatch.cpp</code></td>
+              <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x004f6050</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>rbx_func_004f6050</strong><br><small style="color:#8b949e">?rbx_func_004f6050@@YAHXZ</small></td>
+              <td><code>Client/App/V8World/DecompBatch.cpp</code></td>
+              <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x004f6040</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>rbx_func_004f6040</strong><br><small style="color:#8b949e">?rbx_func_004f6040@@YAHXZ</small></td>
+              <td><code>Client/App/V8World/DecompBatch.cpp</code></td>
+              <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x0045da00</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>rbx_func_0045da00</strong><br><small style="color:#8b949e">?rbx_func_0045da00@@YAHXZ</small></td>
+              <td><code>Client/App/V8World/DecompBatch.cpp</code></td>
+              <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x00427550</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>rbx_func_00427550</strong><br><small style="color:#8b949e">?rbx_func_00427550@@YAHXZ</small></td>
+              <td><code>Client/App/V8World/DecompBatch.cpp</code></td>
+              <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x00427540</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>rbx_func_00427540</strong><br><small style="color:#8b949e">?rbx_func_00427540@@YAHXZ</small></td>
+              <td><code>Client/App/V8World/DecompBatch.cpp</code></td>
+              <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr><tr>
+              <td><code>0x00421de0</code></td>
+              <td><span class="tag">FUNCTION</span></td>
+              <td><strong>rbx_func_00421de0</strong><br><small style="color:#8b949e">?rbx_func_00421de0@@YAHXZ</small></td>
+              <td><code>Client/App/V8World/DecompBatch.cpp</code></td>
+              <td>6 B</td>
+              <td><span class="badge" style="background:#2ea043">100.00%</span></td>
+            </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

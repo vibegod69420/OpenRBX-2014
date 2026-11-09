@@ -1,0 +1,10 @@
+build/
+robloxbin/*.exe
+robloxbin/*.zip
+__pycache__/
+*.pyc
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib

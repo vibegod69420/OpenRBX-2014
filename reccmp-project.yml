@@ -1,0 +1,5 @@
+targets:
+  ROBLOXSTUDIO:
+    filename: RobloxStudioBeta.exe
+    sha256: 49c3c60717be968a14792d827a57ab517e47d61982b83619b38a82163c5b2703
+    function_size: ROBLOXSTUDIO-function-size.csv
