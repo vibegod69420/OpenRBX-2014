@@ -145,8 +145,8 @@ def discover_kaggle_tunnel_url() -> str | None:
     """
     Discovers the active Cloudflare Quick Tunnel URL via:
     1. Cached URL in `data/active_tunnel_url.txt` or `OPENAI_BASE_URL`
-    2. `~/.pi/agent/models.json`
-    3. Live `kaggle` API `kernels_logs_stream(KERNEL_REF)`
+    2. Live `ntfy.sh` discovery channel (`https://ntfy.sh/openrbx2014_tunnel_vibegod69420/raw?poll=1&since=12h`)
+    3. `~/.pi/agent/models.json`
     """
     for candidate in [
         os.environ.get("OPENAI_BASE_URL", ""),
@@ -154,6 +154,24 @@ def discover_kaggle_tunnel_url() -> str | None:
     ]:
         if candidate and check_endpoint_alive(candidate):
             return candidate
+
+    try:
+        req = urllib.request.Request(
+            "https://ntfy.sh/openrbx2014_tunnel_vibegod69420/raw?poll=1&since=12h",
+            headers={"User-Agent": "OpenRBX-Harness/2.0"},
+        )
+        with urllib.request.urlopen(req, timeout=6) as resp:
+            lines = [l.strip() for l in resp.read().decode("utf-8", "ignore").splitlines() if "trycloudflare.com" in l]
+            if lines:
+                candidate = lines[-1]
+                if not candidate.endswith("/v1"):
+                    candidate = candidate.rstrip("/") + "/v1"
+                if check_endpoint_alive(candidate):
+                    log(f"Discovered live Kaggle 256K endpoint via ntfy channel: {candidate}")
+                    update_pi_and_claude_configs(candidate)
+                    return candidate
+    except Exception:
+        pass
 
     pi_models = Path.home() / ".pi" / "agent" / "models.json"
     if pi_models.exists():
@@ -165,41 +183,6 @@ def discover_kaggle_tunnel_url() -> str | None:
                 return u
         except Exception:
             pass
-
-    # Use Kaggle Python API `kernels_logs_stream` to read live running kernel logs
-    try:
-        import kaggle
-        api = kaggle.KaggleApi()
-        api.authenticate()
-        status = api.kernels_status(KERNEL_REF)
-        log(f"Kaggle kernel `{KERNEL_REF}` status: {status.status}")
-
-        pattern = re.compile(r"https://[a-zA-Z0-9-]+\.trycloudflare\.com")
-        found_urls = []
-        start_t = time.time()
-        for event in api.kernels_logs_stream(KERNEL_REF):
-            chunk = event.get("data", "")
-            if chunk:
-                for m in pattern.findall(chunk):
-                    if m not in found_urls:
-                        found_urls.append(m)
-                # Check if server initialization finished or test latest tunnel URL
-                if found_urls and ("SERVER INITIALIZATION COMPLETE" in chunk or "initialized and serving" in chunk or time.time() - start_t > 8):
-                    candidate = f"{found_urls[-1]}/v1"
-                    if check_endpoint_alive(candidate):
-                        log(f"Verified live Kaggle 256K endpoint: {candidate}")
-                        update_pi_and_claude_configs(candidate)
-                        return candidate
-            if time.time() - start_t > 15:
-                break
-        if found_urls:
-            candidate = f"{found_urls[-1]}/v1"
-            if check_endpoint_alive(candidate):
-                log(f"Verified live Kaggle 256K endpoint: {candidate}")
-                update_pi_and_claude_configs(candidate)
-                return candidate
-    except Exception as e:
-        log(f"Kaggle stream discovery note: {e}")
 
     return None
 
