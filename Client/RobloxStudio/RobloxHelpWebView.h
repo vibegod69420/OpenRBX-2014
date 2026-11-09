@@ -1,0 +1,25 @@
+#ifndef CLIENT_ROBLOXSTUDIO_ROBLOXHELPWEBVIEW_H
+#define CLIENT_ROBLOXSTUDIO_ROBLOXHELPWEBVIEW_H
+
+#include "decomp.h"
+
+
+
+// AUTO-GENERATED HELPERS
+
+// VTABLE: ROBLOXSTUDIO 0x01014eb4
+class RobloxHelpWebView
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+
+
+#endif // CLIENT_ROBLOXSTUDIO_ROBLOXHELPWEBVIEW_H

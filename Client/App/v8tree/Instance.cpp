@@ -406,6 +406,12 @@ void* Instance::scalarDeletingDestructor_e8f0(unsigned int flags)
 	return this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c90a00
+void Instance::setField80(int value)
+{
+	field_0080 = value;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

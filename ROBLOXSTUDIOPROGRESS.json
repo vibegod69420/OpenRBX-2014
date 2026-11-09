@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-09 17:19:43 UTC",
+  "updated_at": "2026-11-09 17:20:05 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "MSVC 11.0 (Visual Studio 2012 x86)",
   "total_binary_functions": 40561,
   "total_binary_bytes": 9574526,
-  "implemented_total": 725,
-  "function_annotations": 725,
+  "implemented_total": 726,
+  "function_annotations": 726,
   "stub_annotations": 0,
-  "perfect_100_count": 706,
+  "perfect_100_count": 707,
   "average_match_pct": 98.75,
-  "overall_function_coverage_pct": 1.7874,
-  "overall_byte_coverage_pct": 0.1757,
+  "overall_function_coverage_pct": 1.7899,
+  "overall_byte_coverage_pct": 0.1772,
   "functions": [
     {
       "address": "0x00402eb0",
@@ -6970,6 +6970,16 @@
       "file": "Client/App/v8tree/Instance.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c90a00",
+      "kind": "FUNCTION",
+      "name": "RBX::Instance::setField80",
+      "mangled": "?setField80@Instance@RBX@@QAEXH@Z",
+      "file": "Client/App/v8tree/Instance.cpp",
+      "orig_size": 141,
+      "recomp_size": 16,
       "match_pct": 100.0
     },
     {

@@ -28,6 +28,7 @@ public:
 		struct { char _pad_ptr_000c[0xc]; Instance* ptr_000c; };
 		struct { char _pad_field_2198[0x2198]; int field_2198; };
 		struct { char _pad_field_0190[0x190]; int field_0190; };
+		struct { char _pad_field_0080[0x80]; int field_0080; };
 		// AUTO-GENERATED FIELDS
 	};
 
@@ -86,6 +87,7 @@ public:
 	void* scalarDeletingDestructor_e890(unsigned int flags);
 	void* scalarDeletingDestructor_e8c0(unsigned int flags);
 	void* scalarDeletingDestructor_e8f0(unsigned int flags);
+	void setField80(int value);
 	// AUTO-GENERATED METHODS
 };
 
