@@ -301,10 +301,10 @@ def classify_target(orig: bytes) -> str:
         return "thunk"
     if orig[:3] == b"\x2b\x49\xfc" and orig[3:4] == b"\xe9":
         return "thunk"
-    if bytes.fromhex("64a100000000") in orig[:40] and bytes.fromhex("64892500000000") in orig[:56]:
-        return "seh"
     if orig[-1] not in (0xC3, 0xC2) or orig[-1:] == b"\xe9":
         return "fragment"
+    if bytes.fromhex("64a100000000") in orig[:40] and bytes.fromhex("64892500000000") in orig[:56]:
+        return "seh"
     return "real"
 
 
