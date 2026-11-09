@@ -199,10 +199,14 @@ def call_llm_chat(base_url: str, system_prompt: str, user_prompt: str, max_token
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
         ],
-        "temperature": 0.2,
+        "temperature": 0.6,
         "top_p": 0.95,
+        "top_k": 20,
         "max_tokens": max_tokens,
         "max_completion_tokens": max_tokens,
+        "reasoning_effort": "high",
+        "thinking": {"type": "enabled", "budget_tokens": max_tokens},
+        "chat_template_kwargs": {"enable_thinking": True},
         "stream": False,
     }
     body = json.dumps(payload).encode("utf-8")
@@ -219,8 +223,13 @@ def call_llm_chat(base_url: str, system_prompt: str, user_prompt: str, max_token
     with urllib.request.urlopen(req, timeout=600) as resp:
         data = json.loads(resp.read().decode("utf-8"))
         msg = data["choices"][0]["message"]
+        reasoning = msg.get("reasoning_content") or ""
         content = msg.get("content") or ""
+        if reasoning:
+            log(f"    [MAX-REASONING] Model generated {len(reasoning)} chars of deep thinking chain")
         content = re.sub(r"<think>.*?</think>", "", content, flags=re.DOTALL).strip()
+        if not content and "`" in reasoning:
+            content = reasoning
         return content
 
 
