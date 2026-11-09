@@ -101,6 +101,60 @@ def load_vtable_membership():
     return mem
 
 
+def find_kuna_exe() -> str | None:
+    import shutil
+    for cand in [
+        r"C:\rea-tools\kuna\kuna-v1.833-windows-x86_64\kuna.exe",
+        r"D:\rea-tools\kuna\kuna-v1.833-windows-x86_64\kuna.exe",
+        shutil.which("kuna"),
+    ]:
+        if cand and Path(cand).exists():
+            return str(cand)
+    return None
+
+
+def run_kuna_decompile(code: bytes, base_va: int) -> str:
+    """
+    Uses REA-tools `kuna.exe decompile --raw-image --target x86:LE:32:default`
+    to produce SLEIGH/Ghidra C pseudocode in ~200ms per function slice.
+    """
+    import subprocess
+    kuna_bin = find_kuna_exe()
+    if not kuna_bin or not code:
+        return ""
+    tmp_dir = ROOT / "build" / "kuna_slices"
+    tmp_dir.mkdir(parents=True, exist_ok=True)
+    slice_path = tmp_dir / f"slice_{base_va:08x}.bin"
+    try:
+        slice_path.write_bytes(code)
+        res = subprocess.run(
+            [
+                kuna_bin,
+                "decompile",
+                str(slice_path),
+                f"0x{base_va:08x}",
+                "--raw-image",
+                "--target",
+                "x86:LE:32:default",
+                "--base",
+                f"0x{base_va:08x}",
+            ],
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+        if res.returncode == 0 and res.stdout.strip():
+            return res.stdout.strip()
+    except Exception:
+        pass
+    finally:
+        try:
+            slice_path.unlink(missing_ok=True)
+        except Exception:
+            pass
+    return ""
+
+
 def disassemble_x86(code: bytes, base_va: int) -> list[str]:
     try:
         from capstone import Cs, CS_ARCH_X86, CS_MODE_32
@@ -267,6 +321,13 @@ def build_rich_context_card(addr: int) -> str:
 
     out.append("\nTarget x86 Assembly (MSVC 11.0 / Visual Studio 2012):")
     out.extend(disassemble_x86(code, addr))
+
+    kuna_c = run_kuna_decompile(code, addr)
+    if kuna_c:
+        out.append("\nREA-Tools Kuna SLEIGH/Ghidra C Decompilation Pseudocode:")
+        out.append("```c")
+        out.append(kuna_c)
+        out.append("```")
 
     # Include neighboring vtable slots disassembly for class field layout context
     if membership:

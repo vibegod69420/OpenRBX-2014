@@ -509,6 +509,14 @@ def synthesize_deterministic_msvc_cpp(addr: int, orig: bytes) -> str:
             f"Pair_{addr:08x}* Struct_{addr:08x}::{fn_name}(Pair_{addr:08x}* out, int x)\n{{\n    out->a = x;\n    out->b = (int)this;\n    return out;\n}}"
         )
 
+    # 34. 55 8B EC 8B 4D 08 85 C9 74 06 8B 01 6A 01 FF 10 5D C3 -> virtual delete p (18 bytes)
+    if orig == b"\x55\x8b\xec\x8b\x4d\x08\x85\xc9\x74\x06\x8b\x01\x6a\x01\xff\x10\x5d\xc3":
+        return (
+            f"struct VDel_{addr:08x} {{ virtual ~VDel_{addr:08x}(); }};\n"
+            f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\n"
+            f"void __cdecl {fn_name}(VDel_{addr:08x}* p)\n{{\n    delete p;\n}}"
+        )
+
     return ""
 
 
