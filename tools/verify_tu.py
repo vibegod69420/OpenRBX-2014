@@ -116,6 +116,8 @@ def parse_annotations_in_cpp(cpp_path: Path) -> list[tuple[int, str, str]]:
 
 
 TARGET_CL_VERSION = "17.00.50727"  # MSVC 11.0, VS2012 x86 (target: 0.164.0.50577)
+# Windows names the binary `cl.exe`; under Wine (Linux worker) the wrapper is `cl`.
+CL_BIN = "cl.exe" if os.name == "nt" else "cl"
 _CL_VERSION_CACHE = None
 
 
@@ -129,7 +131,7 @@ def get_compiler_version() -> str:
     if _CL_VERSION_CACHE is None:
         try:
             res = subprocess.run(
-                "cl.exe", shell=True, capture_output=True, text=True, env=get_msvc_env()
+                CL_BIN, shell=True, capture_output=True, text=True, env=get_msvc_env()
             )
             m = re.search(
                 r"Version (\d+\.\d+\.\d+(?:\.\d+)?)", (res.stdout or "") + (res.stderr or "")
@@ -150,6 +152,18 @@ _MSVC_ENV_CACHE = None
 def get_msvc_env() -> dict[str, str]:
     global _MSVC_ENV_CACHE
     if _MSVC_ENV_CACHE is not None:
+        return _MSVC_ENV_CACHE
+
+    if os.name != "nt":
+        # Linux worker: MSVC 11 runs under Wine through a wrapper that sets INCLUDE/LIB itself
+        # (see tools/provision_linux.sh). `MSVC_BIN_DIR` overrides the search.
+        for cand in (os.environ.get("MSVC_BIN_DIR"), "/opt/msvc110/bin", "/opt/msvc/bin/x86"):
+            if cand and os.path.exists(os.path.join(cand, CL_BIN)):
+                env = os.environ.copy()
+                env["PATH"] = cand + os.pathsep + env.get("PATH", "")
+                _MSVC_ENV_CACHE = env
+                return _MSVC_ENV_CACHE
+        _MSVC_ENV_CACHE = os.environ.copy()
         return _MSVC_ENV_CACHE
 
     if subprocess.run("where cl.exe", shell=True, capture_output=True).returncode == 0:
@@ -222,7 +236,7 @@ def compile_cpp_to_coff(cpp_path: Path, use_cache: bool = False) -> tuple[bool, 
         f'/I"{cpp_path.parent}"',
     ]
     flags = "/nologo /c /O2 /Ob2 /Oi /Ot /Oy- /GS /EHsc /GR /Gy /fp:precise /Zc:wchar_t /Zc:forScope"
-    cmd_str = f'cl.exe {flags} {" ".join(includes)} "{cpp_path}" /Fo"{obj_path}"'
+    cmd_str = f'{CL_BIN} {flags} {" ".join(includes)} "{cpp_path}" /Fo"{obj_path}"'
 
     res = subprocess.run(cmd_str, shell=True, capture_output=True, text=True, env=get_msvc_env())
     out = (res.stdout + "\n" + res.stderr).strip()

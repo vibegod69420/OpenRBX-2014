@@ -1,0 +1,22 @@
+[Unit]
+Description=OpenRBX-2014 autonomous decompilation harness (MSVC 11 under Wine)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/openrbx/OpenRBX-2014
+Environment=MSVC_BIN_DIR=/opt/msvc110/bin
+Environment=MSVC_ROOT=/opt/msvc110
+Environment=WINEPREFIX=/opt/msvc110/wineprefix
+Environment=WINEDEBUG=-all
+Environment=PYTHONUNBUFFERED=1
+ExecStartPre=/bin/mkdir -p /var/log/openrbx
+ExecStart=/usr/bin/python3 /opt/openrbx/OpenRBX-2014/tools/autonomous_harness.py
+Restart=always
+RestartSec=15
+StandardOutput=append:/var/log/openrbx/harness.log
+StandardError=append:/var/log/openrbx/harness.log
+
+[Install]
+WantedBy=multi-user.target

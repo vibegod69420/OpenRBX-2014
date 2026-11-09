@@ -59,6 +59,12 @@ Never guess blindly. Follow this exact 6-step loop for every function:
    can ever reach 100% under them. `tools/verify_tu.py` and `tools/update_progress.py` both
    report the version they used, and the progress JSON carries `compiler_matches_target`.
 
+   The build worker runs Linux: MSVC 11 has no Linux build, so it executes under Wine via the
+   `tools/msvc110-cl` launcher (`tools/provision_linux.sh` rebuilds the whole toolchain from the
+   VS2012 RTD media). `verify_tu.py` picks that launcher up from `MSVC_BIN_DIR` (default
+   `/opt/msvc110/bin`) and invokes `cl` rather than `cl.exe`; the version check above still has
+   to report `17.00.50727`.
+
    Then update the live dashboard:
    ```bash
    python tools/update_progress.py --push

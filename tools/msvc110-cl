@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+"""Run MSVC 11.0 (VS2012 x86) cl.exe under Wine on Linux.
+
+Byte-accurate matching needs the exact compiler the 2014 binary was built with
+(`cl` 17.00.50727). Microsoft only shipped it for Windows, so it runs under Wine.
+This launcher makes `cl` behave like a native compiler for the Python tooling:
+
+  * strips the quotes `verify_tu.py` puts around paths (argv is passed directly,
+    so the quote characters would otherwise become part of the filename), and
+  * rewrites POSIX paths into Wine's `Z:` drive form, because an absolute POSIX
+    path otherwise parses as MSVC's deprecated `/o` option.
+
+Set MSVC_ROOT to the toolchain root (default /opt/msvc110); `tools/provision_linux.sh`
+builds that directory from the VS2012 RTD media.
+"""
+
+import os
+import subprocess
+import sys
+
+ROOT = os.environ.get("MSVC_ROOT", "/opt/msvc110")
+WINE_PREFIX = os.environ.get("MSVC_WINEPREFIX", os.path.join(ROOT, "wineprefix"))
+
+PATH_FLAGS = ("/I", "/Fo", "/Fe", "/Fd", "/Fa", "/Fi", "/FR", "/Yc", "/Yu")
+SOURCE_EXTS = (".cpp", ".c", ".cc", ".cxx", ".obj", ".lib", ".asm", ".h", ".hpp")
+
+
+def to_win(path: str) -> str:
+    if path.startswith("/"):
+        return "Z:" + path.replace("/", "\\")
+    return path
+
+
+def rewrite(raw: str) -> str:
+    arg = raw.strip('"')
+    for flag in PATH_FLAGS:
+        if arg.startswith(flag) and len(arg) > len(flag):
+            rest = arg[len(flag):].strip('"')
+            if rest.startswith("/") or rest.startswith("\\"):
+                return flag + to_win(rest)
+            return arg
+    if arg.startswith("-"):
+        return arg
+    if arg.startswith("/"):
+        # A POSIX absolute path and an MSVC switch both start with '/'; only the
+        # former exists on disk or names a source/object file.
+        if os.path.exists(arg) or arg.lower().endswith(SOURCE_EXTS):
+            return to_win(arg)
+        return arg
+    return to_win(arg)
+
+
+def main() -> int:
+    env = os.environ.copy()
+    env["WINEPREFIX"] = WINE_PREFIX
+    env.setdefault("WINEDEBUG", "-all")
+    env["INCLUDE"] = "Z:" + os.path.join(ROOT, "include").replace("/", "\\")
+    env["LIB"] = "Z:" + os.path.join(ROOT, "lib").replace("/", "\\")
+    cmd = ["wine", os.path.join(ROOT, "bin", "cl.exe")] + [rewrite(a) for a in sys.argv[1:]]
+    return subprocess.call(cmd, env=env)
+
+
+if __name__ == "__main__":
+    sys.exit(main())
