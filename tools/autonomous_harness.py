@@ -1071,6 +1071,11 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
             already = bool(
                 name_match and re.search(r"" + re.escape(name_match.group(1)) + r"\s*\(", h_path.read_text(encoding="utf-8"))
             )
+            if already and name_match and re.search(
+                re.escape(name_match.group(1)) + r"\s*\([^;{]*\{", h_path.read_text(encoding="utf-8")
+            ):
+                log(f"  [0x{addr:08x} Attempt {attempt}] member already defined inline in header; skipping target")
+                continue
             if not already:
                 source_router.ensure_class_header_and_cpp(route, method_decl=member_decl)
 
