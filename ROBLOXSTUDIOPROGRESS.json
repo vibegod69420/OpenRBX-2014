@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-09 15:34:53 UTC",
+  "updated_at": "2026-11-09 15:35:00 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "MSVC 11.0 (Visual Studio 2012 x86)",
   "total_binary_functions": 40561,
   "total_binary_bytes": 9574526,
-  "implemented_total": 91,
-  "function_annotations": 91,
+  "implemented_total": 103,
+  "function_annotations": 103,
   "stub_annotations": 0,
-  "perfect_100_count": 91,
+  "perfect_100_count": 103,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.2244,
-  "overall_byte_coverage_pct": 0.005,
+  "overall_function_coverage_pct": 0.2539,
+  "overall_byte_coverage_pct": 0.0058,
   "functions": [
     {
       "address": "0x00403b30",
@@ -93,6 +93,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0042f280",
+      "kind": "FUNCTION",
+      "name": "RBX_Graphics_RenderView_vslot16_0042f280",
+      "mangled": "?RBX_Graphics_RenderView_vslot16_0042f280@@YIHPBUStruct_0042f280@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0042f340",
       "kind": "FUNCTION",
       "name": "RBX_StringValue_vslot19_0042f340",
@@ -143,6 +153,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00490c00",
+      "kind": "FUNCTION",
+      "name": "RBX_ScreenGui_vslot0_00490c00",
+      "mangled": "?RBX_ScreenGui_vslot0_00490c00@@YI_NPBUStruct_00490c00@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00495630",
       "kind": "FUNCTION",
       "name": "AVRobloxObjectBrowserDoc_vslot7_00495630",
@@ -180,6 +200,16 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 5,
       "recomp_size": 5,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x004bb180",
+      "kind": "FUNCTION",
+      "name": "AVRobloxIDEDoc_vslot7_004bb180",
+      "mangled": "?AVRobloxIDEDoc_vslot7_004bb180@@YIHPBUStruct_004bb180@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
       "match_pct": 100.0
     },
     {
@@ -230,6 +260,16 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00575a80",
+      "kind": "FUNCTION",
+      "name": "RBX_TextDisplay_vslot33_00575a80",
+      "mangled": "?RBX_TextDisplay_vslot33_00575a80@@YIHPBUStruct_00575a80@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
       "match_pct": 100.0
     },
     {
@@ -360,6 +400,26 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0059aea0",
+      "kind": "FUNCTION",
+      "name": "AVbtGImpactCompoundShape_vslot20_0059aea0",
+      "mangled": "?AVbtGImpactCompoundShape_vslot20_0059aea0@@YIPBHPBUStruct_0059aea0@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0059aeb0",
+      "kind": "FUNCTION",
+      "name": "AVbtGImpactCompoundShape_vslot21_0059aeb0",
+      "mangled": "?AVbtGImpactCompoundShape_vslot21_0059aeb0@@YIHPBUStruct_0059aeb0@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
       "match_pct": 100.0
     },
     {
@@ -883,6 +943,46 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c0e210",
+      "kind": "FUNCTION",
+      "name": "RBX_AdvRotateTool_vslot24_00c0e210",
+      "mangled": "?RBX_AdvRotateTool_vslot24_00c0e210@@YA_NXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c15080",
+      "kind": "FUNCTION",
+      "name": "RBX_HUMAN_Physics_vslot13_00c15080",
+      "mangled": "?RBX_HUMAN_Physics_vslot13_00c15080@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c169f0",
+      "kind": "FUNCTION",
+      "name": "RBX_SimulateStage_vslot1_00c169f0",
+      "mangled": "?RBX_SimulateStage_vslot1_00c169f0@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c16a00",
+      "kind": "FUNCTION",
+      "name": "RBX_SleepStage_vslot1_00c16a00",
+      "mangled": "?RBX_SleepStage_vslot1_00c16a00@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c53720",
       "kind": "FUNCTION",
       "name": "RBX_Ball_vslot19_00c53720",
@@ -910,6 +1010,26 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c81bb0",
+      "kind": "FUNCTION",
+      "name": "AV_stream_buffer_U_basic_array_source_D_iost_vslot20_00c81bb0",
+      "mangled": "?AV_stream_buffer_U_basic_array_source_D_iost_vslot20_00c81bb0@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c81bc0",
+      "kind": "FUNCTION",
+      "name": "AV_stream_buffer_V_mode_adapter_Uinput_iostr_vslot20_00c81bc0",
+      "mangled": "?AV_stream_buffer_V_mode_adapter_Uinput_iostr_vslot20_00c81bc0@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
       "match_pct": 100.0
     },
     {

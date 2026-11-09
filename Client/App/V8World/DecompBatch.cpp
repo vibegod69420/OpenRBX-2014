@@ -578,3 +578,82 @@ bool __cdecl RBX_AdvMoveToolBase_vslot24_00c0bbd0()
 {
     return g_flag_00c0bbd0;
 }
+
+extern bool g_flag_00c0e210;
+// FUNCTION: ROBLOXSTUDIO 0x00c0e210
+bool __cdecl RBX_AdvRotateTool_vslot24_00c0e210()
+{
+    return g_flag_00c0e210;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00c15080
+int __cdecl RBX_HUMAN_Physics_vslot13_00c15080()
+{
+    return 16;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00c169f0
+int __cdecl RBX_SimulateStage_vslot1_00c169f0()
+{
+    return 14;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00c16a00
+int __cdecl RBX_SleepStage_vslot1_00c16a00()
+{
+    return 13;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00c81bb0
+int __cdecl AV_stream_buffer_U_basic_array_source_D_iost_vslot20_00c81bb0()
+{
+    return 19553048;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00c81bc0
+int __cdecl AV_stream_buffer_V_mode_adapter_Uinput_iostr_vslot20_00c81bc0()
+{
+    return 19554176;
+}
+
+struct Struct_0042f280 { char pad[140]; int val; };
+// FUNCTION: ROBLOXSTUDIO 0x0042f280
+int __fastcall RBX_Graphics_RenderView_vslot16_0042f280(const Struct_0042f280* self)
+{
+    return self->val;
+}
+
+struct Struct_00490c00 { char pad[141]; bool val; };
+// FUNCTION: ROBLOXSTUDIO 0x00490c00
+bool __fastcall RBX_ScreenGui_vslot0_00490c00(const Struct_00490c00* self)
+{
+    return self->val;
+}
+
+struct Struct_004bb180 { char pad[128]; int val; };
+// FUNCTION: ROBLOXSTUDIO 0x004bb180
+int __fastcall AVRobloxIDEDoc_vslot7_004bb180(const Struct_004bb180* self)
+{
+    return self->val;
+}
+
+struct Struct_00575a80 { char pad[144]; int val; };
+// FUNCTION: ROBLOXSTUDIO 0x00575a80
+int __fastcall RBX_TextDisplay_vslot33_00575a80(const Struct_00575a80* self)
+{
+    return self->val;
+}
+
+struct Struct_0059aea0 { char pad[176]; int member; };
+// FUNCTION: ROBLOXSTUDIO 0x0059aea0
+const int* __fastcall AVbtGImpactCompoundShape_vslot20_0059aea0(const Struct_0059aea0* self)
+{
+    return &self->member;
+}
+
+struct Struct_0059aeb0 { char pad[208]; int val; };
+// FUNCTION: ROBLOXSTUDIO 0x0059aeb0
+int __fastcall AVbtGImpactCompoundShape_vslot21_0059aeb0(const Struct_0059aeb0* self)
+{
+    return self->val;
+}
