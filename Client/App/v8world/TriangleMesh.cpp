@@ -13,6 +13,12 @@ void* TriangleMesh::scalarDeletingDestructor(unsigned int flags)
 	return this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0099d310
+float TriangleMesh::someFloatGetter()
+{
+    return *reinterpret_cast<float*>(reinterpret_cast<char*>(this) + 0x2c);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

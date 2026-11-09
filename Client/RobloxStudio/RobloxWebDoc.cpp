@@ -13,6 +13,14 @@ void* RobloxWebDoc::scalarDeletingDestructorImp(unsigned int flags)
 	return this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00526730
+void RobloxWebDoc::onDestroy()
+{
+    // The assembly sets the byte at [ecx + 0xc] to 0 and then returns.
+    // This is likely a cleanup or reset operation.
+    *((char*)((char*)this + 0xc)) = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

@@ -18,6 +18,7 @@ public:
 	};
 
 	int getConst25() const;
+	void setFlag();
 	// AUTO-GENERATED METHODS
 };
 

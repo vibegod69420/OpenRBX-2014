@@ -19,6 +19,7 @@ public:
 
 	void onDestroy();
 	void* scalarDeletingDestructor(unsigned int flags);
+	float someFloatGetter();
 	// AUTO-GENERATED METHODS
 };
 
