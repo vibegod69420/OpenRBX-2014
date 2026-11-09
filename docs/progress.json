@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09 21:05:15 UTC",
+  "updated_at": "2026-11-09 21:09:48 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21388,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7602,
-  "matchable_coverage_pct": 8.0537,
-  "implemented_total": 759,
-  "function_annotations": 759,
+  "matchable_coverage_pct": 8.0643,
+  "implemented_total": 761,
+  "function_annotations": 761,
   "stub_annotations": 0,
-  "perfect_100_count": 756,
-  "average_match_pct": 99.63,
-  "overall_function_coverage_pct": 1.8713,
-  "overall_byte_coverage_pct": 0.1876,
+  "perfect_100_count": 757,
+  "average_match_pct": 99.53,
+  "overall_function_coverage_pct": 1.8762,
+  "overall_byte_coverage_pct": 0.1875,
   "functions": [
     {
       "address": "0x00402eb0",
@@ -2500,14 +2500,24 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0061f640",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::EnvMap::onDestroy",
+      "mangled": "?onDestroy@EnvMap@Graphics@RBX@@QAEXXZ",
+      "file": "Client/Rendering/GfxRender/EnvMap.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0061fba0",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::EnvMap::scalarDeletingDestructor",
       "mangled": "?scalarDeletingDestructor@EnvMap@Graphics@RBX@@QAEPAXI@Z",
       "file": "Client/Rendering/GfxRender/EnvMap.cpp",
       "orig_size": 33,
-      "recomp_size": 33,
-      "match_pct": 100.0
+      "recomp_size": 35,
+      "match_pct": 20.0
     },
     {
       "address": "0x00622460",
@@ -6557,6 +6567,16 @@
       "file": "Client/App/util/IndexedMesh.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00bb94a0",
+      "kind": "FUNCTION",
+      "name": "RBX::HUMAN::RunningBase::someMethod",
+      "mangled": "?someMethod@RunningBase@HUMAN@RBX@@QBEMXZ",
+      "file": "Client/App/humanoid/RunningBase.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
       "match_pct": 100.0
     },
     {

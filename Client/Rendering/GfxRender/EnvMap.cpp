@@ -14,6 +14,11 @@ void* EnvMap::scalarDeletingDestructor(unsigned int flags)
 	return this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0061f640
+void EnvMap::onDestroy() {
+	*(reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x68)) = 3;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
