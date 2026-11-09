@@ -1,17 +1,37 @@
 {
-  "updated_at": "2026-11-09 14:54:55 UTC",
+  "updated_at": "2026-11-09 15:02:38 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "MSVC 11.0 (Visual Studio 2012 x86)",
   "total_binary_functions": 40561,
   "total_binary_bytes": 9574526,
-  "implemented_total": 20,
-  "function_annotations": 20,
+  "implemented_total": 35,
+  "function_annotations": 35,
   "stub_annotations": 0,
-  "perfect_100_count": 20,
+  "perfect_100_count": 35,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.0493,
-  "overall_byte_coverage_pct": 0.0013,
+  "overall_function_coverage_pct": 0.0863,
+  "overall_byte_coverage_pct": 0.0019,
   "functions": [
+    {
+      "address": "0x00403b30",
+      "kind": "FUNCTION",
+      "name": "RBX_PartInstance_vslot6_00403b30",
+      "mangled": "?RBX_PartInstance_vslot6_00403b30@@YIHPBUStruct_00403b30@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0040dfd0",
+      "kind": "FUNCTION",
+      "name": "AV_sp_counted_impl_pd_PAVCamera_RBX_VDeleter_vslot4_0040dfd0",
+      "mangled": "?AV_sp_counted_impl_pd_PAVCamera_RBX_VDeleter_vslot4_0040dfd0@@YIPBHPBUStruct_0040dfd0@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
     {
       "address": "0x00421de0",
       "kind": "FUNCTION",
@@ -43,6 +63,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00427a10",
+      "kind": "FUNCTION",
+      "name": "RBX_DSVideoCaptureEngine_vslot7_00427a10",
+      "mangled": "?RBX_DSVideoCaptureEngine_vslot7_00427a10@@YIPBHPBUStruct_00427a10@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0045da00",
       "kind": "FUNCTION",
       "name": "rbx_func_0045da00",
@@ -50,6 +80,36 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00495630",
+      "kind": "FUNCTION",
+      "name": "AVRobloxObjectBrowserDoc_vslot7_00495630",
+      "mangled": "?AVRobloxObjectBrowserDoc_vslot7_00495630@@YIHPBUStruct_00495630@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x004956b0",
+      "kind": "FUNCTION",
+      "name": "AVbtDefaultCollisionConfiguration_vslot2_004956b0",
+      "mangled": "?AVbtDefaultCollisionConfiguration_vslot2_004956b0@@YIHPBUStruct_004956b0@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x004956c0",
+      "kind": "FUNCTION",
+      "name": "AVProgramMemoryCheckerImpl_vslot2_004956c0",
+      "mangled": "?AVProgramMemoryCheckerImpl_vslot2_004956c0@@YIHPBUStruct_004956c0@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     },
     {
@@ -100,6 +160,16 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0058f6b0",
+      "kind": "FUNCTION",
+      "name": "RBX_PathInterpolatedCFrame_vslot8_0058f6b0",
+      "mangled": "?RBX_PathInterpolatedCFrame_vslot8_0058f6b0@@YIHPBUStruct_0058f6b0@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     },
     {
@@ -183,6 +253,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00595fa0",
+      "kind": "FUNCTION",
+      "name": "AVbtTriangleIndexVertexArray_vslot6_00595fa0",
+      "mangled": "?AVbtTriangleIndexVertexArray_vslot6_00595fa0@@YIHPBUStruct_00595fa0@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00596500",
       "kind": "FUNCTION",
       "name": "rbx_func_00596500",
@@ -203,6 +283,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0059ab40",
+      "kind": "FUNCTION",
+      "name": "AV_indirect_streambuf_V_basic_gzip_decompres_vslot21_0059ab40",
+      "mangled": "?AV_indirect_streambuf_V_basic_gzip_decompres_vslot21_0059ab40@@YIPBHPBUStruct_0059ab40@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0059b590",
       "kind": "FUNCTION",
       "name": "rbx_func_0059b590",
@@ -210,6 +300,66 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005e1160",
+      "kind": "FUNCTION",
+      "name": "RBX_Graphics_DeviceD3D9_vslot4_005e1160",
+      "mangled": "?RBX_Graphics_DeviceD3D9_vslot4_005e1160@@YIHPBUStruct_005e1160@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005e3a80",
+      "kind": "FUNCTION",
+      "name": "RBX_Graphics_DeviceD3D9_vslot19_005e3a80",
+      "mangled": "?RBX_Graphics_DeviceD3D9_vslot19_005e3a80@@YIPBHPBUStruct_005e3a80@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006077e0",
+      "kind": "FUNCTION",
+      "name": "RBX_Graphics_DeviceGL_vslot4_006077e0",
+      "mangled": "?RBX_Graphics_DeviceGL_vslot4_006077e0@@YIHPBUStruct_006077e0@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00609580",
+      "kind": "FUNCTION",
+      "name": "RBX_Graphics_DeviceGL_vslot19_00609580",
+      "mangled": "?RBX_Graphics_DeviceGL_vslot19_00609580@@YIPBHPBUStruct_00609580@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0060bbb0",
+      "kind": "FUNCTION",
+      "name": "RBX_Graphics_ShaderProgramGL_vslot4_0060bbb0",
+      "mangled": "?RBX_Graphics_ShaderProgramGL_vslot4_0060bbb0@@YIHPBUStruct_0060bbb0@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0060bbc0",
+      "kind": "FUNCTION",
+      "name": "RBX_Graphics_ShaderProgramGL_vslot5_0060bbc0",
+      "mangled": "?RBX_Graphics_ShaderProgramGL_vslot5_0060bbc0@@YIHPBUStruct_0060bbc0@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     }
   ]
