@@ -19,7 +19,7 @@
 | **Indexed Functions** | `40,561` functions in `.text` (`0x00401000`–`0x00e0f3a3`) |
 | **Recovered MSVC RTTI Classes** | `7,087` `TypeDescriptor` records & `9,004` exact virtual function tables (`data/rtti_vtables_2014.json`) |
 | **Embedded Source Paths** | `589` original `D:\BuildAgent\work\Trunk2012\Client\...` source paths (`data/source_tree_2014.txt`) |
-| **Matching Symbol Donor** | `0.164.0.50577` macOS x86 `RobloxPlayer` (`38,505` unstripped C++ symbols in `LC_SYMTAB`) |
+| **Matching Symbol Donor** | `0.164.0.50577` macOS x86 `RobloxPlayer` (`38,505` unstripped C++ symbols in `LC_SYMTAB`) — **not extracted yet**: `setup_2014_binaries.py` defines the URL but does not fetch or parse it, so names are currently synthesised from templates and struct offsets |
 
 ---
 

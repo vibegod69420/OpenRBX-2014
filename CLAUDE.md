@@ -45,16 +45,27 @@ Never guess blindly. Follow this exact 6-step loop for every function:
      // VTABLE: ROBLOXSTUDIO 0x00e12340
      ```
 
-4. **Compile & Run `reccmp` Diff**:
+4. **Compile & Verify the Translation Unit**:
    ```bash
-   cmake --build build
-   reccmp-reccmp --target ROBLOXSTUDIO --verbose 0x<ADDRESS>
+   python tools/verify_tu.py Client/<subsystem>/<File>.cpp 0x<ADDRESS>
    ```
-   Also run:
+   Check which compiler is actually doing the verifying before trusting a match:
    ```bash
-   python tools/check_folded.py --target ROBLOXSTUDIO
+   python -c "import sys; sys.path.insert(0,'tools'); import verify_tu; print(verify_tu.get_compiler_version())"
+   ```
+   This must print `17.00.50727...` (MSVC 11.0 / VS2012 x86, the toolchain the target was built
+   with). `14.00.50727` is MSVC 8 from the portable `MSVC800-SP1` tree, and `19.x` is VS2015+;
+   either one emits different codegen, so only trivial boilerplate (dtors, one-line accessors)
+   can ever reach 100% under them. `tools/verify_tu.py` and `tools/update_progress.py` both
+   report the version they used, and the progress JSON carries `compiler_matches_target`.
+
+   Then update the live dashboard:
+   ```bash
    python tools/update_progress.py --push
    ```
+   `reccmp` is not installed on the worker and is not part of this pipeline: every accuracy
+   number in `ROBLOXSTUDIOPROGRESS.json` comes from `tools/verify_tu.py`, a single-TU COFF
+   comparator that masks 4-byte relocation spans, not from `reccmp-reccmp`.
 
 5. **Diagnose & Repair Every Assembly Diff Using the MSVC Codegen Playbook**:
    - **Compare Frame Size First**: In `reccmp --verbose`, check `sub esp, N` between Original and Recompiled. A constant `[esp+K]` offset shift across the body is a secondary effect of a single missing/extra 4-byte local or spilled temporary.
@@ -103,6 +114,21 @@ Never guess blindly. Follow this exact 6-step loop for every function:
   - Never leave multiple `// STUB:` functions with identical trivial bodies; give unimplemented stubs a unique address-seeded dummy side effect (`UNK_STUB(0x00401230);` from `util/decomp.h`) so `/OPT:ICF` never folds them together!
 
 ### 4. Class Layout, VTables, SEH & 2014 Roblox Idioms
+### 5. Marker Honesty
+- A generated body is `// STUB:` until it is byte-verified; `tools/autonomous_harness.py` flips it
+  to `// FUNCTION:` with `promote_marker()` only after a verified 100%. Never hand-write
+  `// FUNCTION:` for a body that has not been measured.
+- A `// VTABLE:` marker asserts a class layout, so it is added only once the class declares the
+  virtual functions its slots name. The scaffold deliberately emits none: a marker on a class
+  with no virtuals cannot resolve.
+
+### 6. Class Names and Source Routing
+- `tools/source_router.py` resolves the owning class from the MSVC RTTI descriptor. The type-code
+  letter `V`/`U` in a mangled name must be matched at a token boundary, never inside an
+  identifier (`...sIntValue@RBX` is `Value`, not `alue`).
+- A class or file name that is a truncated word of a real one (`alue.cpp`, `ehicleSeat.cpp`) means
+  the demangler matched mid-identifier; fix the extractor, do not rename the file.
+
 - **SEH Exception Frames (`push -1; push __ehhandler$...; mov eax, fs:[0]`)**:
   - The `[ebp-4]` state variable (`__$EHRec$`) increments `0, 1, 2...` for each constructed local object with a non-trivial destructor (`std::string`, `boost::shared_ptr<T>`, `RBX::shared_ptr<T>`, `G3D::Array<T>`).
   - If a function has no SEH frame in the original binary, it **cannot** construct any non-trivial C++ object by value on that path.

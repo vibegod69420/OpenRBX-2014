@@ -215,6 +215,23 @@ def call_llm_chat(base_url: str, system_prompt: str, user_prompt: str, max_token
         return content
 
 
+def promote_marker(cpp_path: Path, addr: int) -> bool:
+    """
+    Flips `// STUB: ROBLOXSTUDIO 0x...` to `// FUNCTION: ...` once the body is byte-verified.
+    Generated code is a stub until proven: `// FUNCTION:` asserts a 100% match.
+    """
+    stub = f"// STUB: ROBLOXSTUDIO 0x{addr:08x}"
+    fn = f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}"
+    try:
+        text = cpp_path.read_text(encoding="utf-8")
+    except Exception:
+        return False
+    if stub not in text:
+        return False
+    cpp_path.write_text(text.replace(stub, fn, 1), encoding="utf-8")
+    return True
+
+
 def extract_cpp_code_block(text: str) -> str:
     m = re.search(r"```(?:cpp|c\+\+|c)\s*\n(.*?)```", text, flags=re.DOTALL | re.IGNORECASE)
     if m:
@@ -270,7 +287,7 @@ def synthesize_class_method_cpp(addr: int, orig: bytes, route: dict, existing_h_
         decl = f"{static_kw}{ret_type} {m_name}({args_sig}){const_kw};"
         body = "\n".join(f"\t{line}" for line in body_lines)
         impl = (
-            f"// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}\n"
+            f"// STUB: ROBLOXSTUDIO 0x{addr:08x}\n"
             f"{ret_type} {cls}::{m_name}({args_sig}){const_kw}\n"
             f"{{\n"
             f"{body}\n"
@@ -859,6 +876,7 @@ def run_deterministic_batch_pass(candidate_addrs: list[int], max_matches: int = 
                 if f"?{short_name}@" in sym_name or short_name in sym_name:
                     pct, _ = verify_tu.compare_with_relocations(orig_bytes, recomp_bytes, rel_offsets)
                     if pct >= 99.99:
+                        promote_marker(cpp_path, addr)
                         log(f"  [0x{addr:08x}] 100.00% byte-exact match -> {q_name} in {cpp_path.relative_to(ROOT)} ({len(orig_bytes)}B)")
                         verified_hex.append(f"0x{addr:08x}")
                         matched_sym = True
@@ -904,6 +922,7 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
                 if f"?{short_name}@" in sym_name or short_name in sym_name:
                     pct, _ = verify_tu.compare_with_relocations(orig_bytes, recomp_bytes, rel_offsets)
                     if pct >= 99.99:
+                        promote_marker(cpp_path, addr)
                         log(f"  [0x{addr:08x}] Exact 100.00% match -> {synth['qualified_name']} in {route['cpp_rel']} ({len(orig_bytes)}B)")
                         return True, pct, synth["qualified_name"]
         h_path.write_text(prev_h, encoding="utf-8")
@@ -988,6 +1007,7 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
             best_code = candidate_cpp_snippet
 
         if cur_pct >= 99.99:
+            promote_marker(cpp_path, addr)
             return True, cur_pct, fn_hint
 
         diff_text = "\n".join(cur_diff[:60])

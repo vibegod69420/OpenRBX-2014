@@ -115,6 +115,35 @@ def parse_annotations_in_cpp(cpp_path: Path) -> list[tuple[int, str, str]]:
     return results
 
 
+TARGET_CL_VERSION = "17.00.50727"  # MSVC 11.0, VS2012 x86 (target: 0.164.0.50577)
+_CL_VERSION_CACHE = None
+
+
+def get_compiler_version() -> str:
+    """
+    Returns the version of the `cl.exe` this verifier is actually using.
+    A body matched by cl 14.x (MSVC 8) or 19.x (VS2015+) is not evidence about the 2014
+    binary: only MSVC 11.0 emits the code the original was built with.
+    """
+    global _CL_VERSION_CACHE
+    if _CL_VERSION_CACHE is None:
+        try:
+            res = subprocess.run(
+                "cl.exe", shell=True, capture_output=True, text=True, env=get_msvc_env()
+            )
+            m = re.search(
+                r"Version (\d+\.\d+\.\d+(?:\.\d+)?)", (res.stdout or "") + (res.stderr or "")
+            )
+            _CL_VERSION_CACHE = m.group(1) if m else "unknown"
+        except Exception:
+            _CL_VERSION_CACHE = "unknown"
+    return _CL_VERSION_CACHE
+
+
+def compiler_matches_target() -> bool:
+    return get_compiler_version().startswith(TARGET_CL_VERSION)
+
+
 _MSVC_ENV_CACHE = None
 
 
@@ -140,6 +169,15 @@ def get_msvc_env() -> dict[str, str]:
         r"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\vcvars32.bat",
         r"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\vcvars32.bat",
     ]
+    # MSVC 11.0 (VS2012) must win over any newer or older toolchain: the 2014 binary was built
+    # with cl 17.00.50727 and codegen differs from both 14.x and 19.x.
+    vcvars_candidates = [
+        r"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\vcvars32.bat",
+        r"C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\vcvars32.bat",
+        r"C:\VS2012\VC\bin\vcvars32.bat",
+        r"C:\msvc11\VC\bin\vcvars32.bat",
+    ] + vcvars_candidates
+
     for vc in vcvars_candidates:
         if os.path.exists(vc):
             res = subprocess.run(f'call "{vc}" >nul 2>&1 && set', shell=True, capture_output=True, text=True)

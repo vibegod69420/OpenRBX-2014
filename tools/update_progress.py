@@ -84,10 +84,21 @@ def evaluate_all_client_files():
         sum(r["match_pct"] for r in records) / len(records) if records else 0.0
     )
 
+    cl_version = verify_tu.get_compiler_version()
+    compiler_ok = cl_version.startswith(verify_tu.TARGET_CL_VERSION)
+    if not compiler_ok:
+        print(
+            f"[WARN] Verifying with cl {cl_version}, but the target was built with MSVC 11.0 "
+            f"({verify_tu.TARGET_CL_VERSION}). Matches above the trivial boilerplate are not "
+            f"evidence until the v110 toolset is the one compiling."
+        )
+
     summary = {
         "updated_at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
         "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
-        "compiler": "MSVC 11.0 (Visual Studio 2012 x86)",
+        "compiler": f"cl {cl_version}" + (" (MSVC 11.0 / VS2012)" if compiler_ok else " (NOT the target toolchain)"),
+        "compiler_version": cl_version,
+        "compiler_matches_target": compiler_ok,
         "total_binary_functions": total_funcs,
         "total_binary_bytes": total_binary_bytes,
         "implemented_total": len(records),

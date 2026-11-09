@@ -52,6 +52,14 @@ def extract_clean_class(mangled: str) -> tuple[list[str], str]:
     """
     s = re.sub(r"^\.\?A[UV]", "", mangled).rstrip("@")
 
+    # 0. Plain class directly in a root namespace: `Value@RBX`, `VehicleSeat@RBX`, `Verb@RBX`.
+    #    This has to run before the template heuristics below, because those match a type-code
+    #    `V`/`U` that may equally sit inside an identifier: `...sIntValue@RBX` matched at the
+    #    `V` of `Value` and yielded the class `alue`, which created `alue.cpp`/`ehicleSeat.cpp`.
+    m_root = re.match(r"^([A-Za-z_][A-Za-z0-9_]*)@(RBX|G3D|rbx)$", s)
+    if m_root and m_root.group(1) not in GENERIC_BASE_CLASSES:
+        return ([m_root.group(2)], m_root.group(1))
+
     # 1. Direct non-template class: e.g. Ball@RBX@@ or ProfiledRakPeer@Network@RBX@@
     if "?" not in s:
         parts = [p for p in s.split("@") if p and not p.startswith("?A0x")]
@@ -70,30 +78,30 @@ def extract_clean_class(mangled: str) -> tuple[list[str], str]:
         return (ns, cls_name)
 
     # 2. Template-wrapped RBX class with sub-namespace: V<Class>@<Sub>@RBX@@
-    for m in re.finditer(r"[VU]([A-Za-z_][A-Za-z0-9_]*)@([A-Za-z_][A-Za-z0-9_]*)@RBX@@", mangled):
+    for m in re.finditer(r"(?<![A-Za-z0-9_$])[VU]([A-Za-z_][A-Za-z0-9_]*)@([A-Za-z_][A-Za-z0-9_]*)@RBX@@", mangled):
         cls_name, sub_ns = m.group(1), m.group(2)
-        if cls_name not in GENERIC_BASE_CLASSES and sub_ns not in GENERIC_BASE_CLASSES:
+        if len(cls_name) >= 3 and cls_name not in GENERIC_BASE_CLASSES and sub_ns not in GENERIC_BASE_CLASSES:
             return (["RBX", sub_ns], cls_name)
 
     # 3. Template-wrapped RBX class: V<Class>@RBX@@
-    for m in re.finditer(r"[VU]([A-Za-z_][A-Za-z0-9_]*)@RBX@@", mangled):
+    for m in re.finditer(r"(?<![A-Za-z0-9_$])[VU]([A-Za-z_][A-Za-z0-9_]*)@RBX@@", mangled):
         cls_name = m.group(1)
-        if cls_name not in GENERIC_BASE_CLASSES:
+        if len(cls_name) >= 3 and cls_name not in GENERIC_BASE_CLASSES:
             return (["RBX"], cls_name)
 
     # 4. Back-referenced RBX namespace inside template: V<Class>@<Sub>@2@ or V<Class>@2@
-    for m in re.finditer(r"[VU]([A-Za-z_][A-Za-z0-9_]*)@([A-Za-z_][A-Za-z0-9_]*)@[123]@", mangled):
+    for m in re.finditer(r"(?<![A-Za-z0-9_$])[VU]([A-Za-z_][A-Za-z0-9_]*)@([A-Za-z_][A-Za-z0-9_]*)@[123]@", mangled):
         cls_name, sub_ns = m.group(1), m.group(2)
         if cls_name not in GENERIC_BASE_CLASSES and "RBX" in mangled:
             return (["RBX", sub_ns], cls_name)
 
-    for m in re.finditer(r"[VU]([A-Za-z_][A-Za-z0-9_]*)@[123]@", mangled):
+    for m in re.finditer(r"(?<![A-Za-z0-9_$])[VU]([A-Za-z_][A-Za-z0-9_]*)@[123]@", mangled):
         cls_name = m.group(1)
         if cls_name not in GENERIC_BASE_CLASSES and "RBX" in mangled:
             return (["RBX"], cls_name)
 
     # 5. Template-wrapped G3D class
-    for m in re.finditer(r"[VU]([A-Za-z_][A-Za-z0-9_]*)@G3D@@", mangled):
+    for m in re.finditer(r"(?<![A-Za-z0-9_$])[VU]([A-Za-z_][A-Za-z0-9_]*)@G3D@@", mangled):
         return (["G3D"], m.group(1))
 
     # 6. Outer template name fallback
@@ -106,6 +114,12 @@ def extract_clean_class(mangled: str) -> tuple[list[str], str]:
             return (["G3D"], cls_name)
         if "rbx" in mangled:
             return (["RBX"], cls_name)
+        # std/boost template instances keep their real name instead of collapsing to `Instance`.
+        # Their vtables are boilerplate-filtered out of routing, so this only affects naming.
+        if "@std@@" in mangled:
+            return (["std"], cls_name)
+        if "@boost@@" in mangled:
+            return (["boost"], cls_name)
 
     return (["RBX"], "Instance")
 
@@ -488,7 +502,9 @@ def ensure_class_header_and_cpp(
 
     if not h_path.exists():
         guard = re.sub(r"[^A-Za-z0-9_]", "_", route["h_rel"]).upper()
-        vt_comment = f"// VTABLE: ROBLOXSTUDIO {vt_va}\n" if vt_va and vt_va != "0x00000000" else ""
+        # No vtable marker at scaffold time: a `// VTABLE:` marker asserts a layout, and the
+        # scaffold declares no virtual functions yet, so the claim could never resolve.
+        vt_comment = ""
         h_content = (
             f"#ifndef {guard}\n"
             f"#define {guard}\n\n"
