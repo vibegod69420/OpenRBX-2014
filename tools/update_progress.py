@@ -19,6 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 import verify_tu  # noqa: E402
+import autonomous_harness as harness  # noqa: E402
 
 CLIENT_DIR = ROOT / "Client"
 DOCS_DIR = ROOT / "docs"
@@ -31,6 +32,14 @@ def evaluate_all_client_files():
     sizes = verify_tu.load_function_sizes()
     total_funcs = len(sizes)
     total_binary_bytes = sum(sizes.values())
+
+    # The address table is not all real functions: it also indexes mid-instruction fragments and
+    # compiler-generated thunks. Reporting against the matchable subset keeps the denominator honest.
+    kind_counts = {"real": 0, "fragment": 0, "thunk": 0}
+    for addr, sz in sizes.items():
+        if sz < 3:
+            continue
+        kind_counts[harness.classify_target(verify_tu.get_original_function_bytes(addr, sz))] += 1
 
     records = []
     if CLIENT_DIR.exists():
@@ -101,6 +110,10 @@ def evaluate_all_client_files():
         "compiler_matches_target": compiler_ok,
         "total_binary_functions": total_funcs,
         "total_binary_bytes": total_binary_bytes,
+        "matchable_functions": kind_counts["real"],
+        "fragment_entries": kind_counts["fragment"],
+        "compiler_thunk_entries": kind_counts["thunk"],
+        "matchable_coverage_pct": round(perfect_count * 100.0 / max(1, kind_counts["real"]), 4),
         "implemented_total": len(records),
         "function_annotations": func_count,
         "stub_annotations": stub_count,
@@ -267,9 +280,10 @@ def write_dashboard_html(summary: dict):
         <div class="hint">Relocation-invariant COFF/reccmp match</div>
       </div>
       <div class="card">
-        <div class="label">Binary Function Index</div>
-        <div class="val">{summary['implemented_total']} / {summary['total_binary_functions']:,}</div>
-        <div class="hint">9,004 RTTI VTables &bull; 589 Source Paths</div>
+        <div class="label">Matchable Function Index</div>
+        <div class="val">{summary['perfect_100_count']} / {summary['matchable_functions']:,}</div>
+        <div class="hint">{summary['matchable_coverage_pct']:.2f}% of addressable functions &bull;
+          {summary['fragment_entries']:,} fragments + {summary['compiler_thunk_entries']:,} thunks excluded</div>
       </div>
       <div class="card">
         <div class="label">Agent Harness Status</div>
@@ -313,7 +327,9 @@ def main():
     print(
         f"[PROGRESS] Annotated: {summary['implemented_total']} | "
         f"100% Exact: {summary['perfect_100_count']} | "
-        f"Avg Match: {summary['average_match_pct']:.2f}%"
+        f"Avg Match: {summary['average_match_pct']:.2f}% | "
+        f"Matchable: {summary['matchable_functions']} ({summary['fragment_entries']} fragments, "
+        f"{summary['compiler_thunk_entries']} thunks excluded)"
     )
 
     if args.commit:
