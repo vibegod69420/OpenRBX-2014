@@ -1082,6 +1082,12 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
         source_router.append_method_to_cpp(cpp_path, candidate_cpp_snippet)
         ok, obj_path, compiler_out = verify_tu.compile_cpp_to_coff(cpp_path, use_cache=False)
         if not ok:
+            if "previous definition" in compiler_out or "C2011" in compiler_out:
+                log(
+                    f"  [0x{addr:08x} Attempt {attempt}] member already defined elsewhere in the "
+                    f"header; skipping target instead of retrying a guaranteed failure"
+                )
+                break
             log(
                 f"  [0x{addr:08x} Attempt {attempt}] COMPILE FAILED on {route['cpp_rel']}: "
                 f"{(compiler_out.strip().splitlines() or ['<no output>'])[-1][:180]}"
