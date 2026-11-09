@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-09 15:34:30 UTC",
+  "updated_at": "2026-11-09 15:34:36 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "MSVC 11.0 (Visual Studio 2012 x86)",
   "total_binary_functions": 40561,
   "total_binary_bytes": 9574526,
-  "implemented_total": 59,
-  "function_annotations": 59,
+  "implemented_total": 67,
+  "function_annotations": 67,
   "stub_annotations": 0,
-  "perfect_100_count": 59,
+  "perfect_100_count": 67,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.1455,
-  "overall_byte_coverage_pct": 0.003,
+  "overall_function_coverage_pct": 0.1652,
+  "overall_byte_coverage_pct": 0.0035,
   "functions": [
     {
       "address": "0x00403b30",
@@ -373,6 +373,76 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0059b8a0",
+      "kind": "FUNCTION",
+      "name": "AVbtBvhTriangleMeshShape_vslot8_0059b8a0",
+      "mangled": "?AVbtBvhTriangleMeshShape_vslot8_0059b8a0@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0059b8b0",
+      "kind": "FUNCTION",
+      "name": "AVbtBvhTriangleMeshShape_vslot12_0059b8b0",
+      "mangled": "?AVbtBvhTriangleMeshShape_vslot12_0059b8b0@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0059f920",
+      "kind": "FUNCTION",
+      "name": "RBX_DynamicRotateJoint_vslot6_0059f920",
+      "mangled": "?RBX_DynamicRotateJoint_vslot6_0059f920@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0059f930",
+      "kind": "FUNCTION",
+      "name": "RBX_RotateVJoint_vslot6_0059f930",
+      "mangled": "?RBX_RotateVJoint_vslot6_0059f930@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0059fd00",
+      "kind": "FUNCTION",
+      "name": "AVbtBoxShape_vslot8_0059fd00",
+      "mangled": "?AVbtBoxShape_vslot8_0059fd00@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005b2f00",
+      "kind": "FUNCTION",
+      "name": "AVbtOptimizedBvh_vslot3_005b2f00",
+      "mangled": "?AVbtOptimizedBvh_vslot3_005b2f00@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005b8210",
+      "kind": "FUNCTION",
+      "name": "AVbtTriangleMeshShape_vslot8_005b8210",
+      "mangled": "?AVbtTriangleMeshShape_vslot8_005b8210@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x005e1160",
       "kind": "FUNCTION",
       "name": "RBX_Graphics_DeviceD3D9_vslot4_005e1160",
@@ -390,6 +460,16 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005e6910",
+      "kind": "FUNCTION",
+      "name": "RBX_Graphics_ShaderProgramFFPD3D9_vslot4_005e6910",
+      "mangled": "?RBX_Graphics_ShaderProgramFFPD3D9_vslot4_005e6910@@YAHXZ",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
       "match_pct": 100.0
     },
     {

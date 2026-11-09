@@ -384,3 +384,51 @@ bool __stdcall RBX_Network_ProfiledRakPeer_vslot52_00ce9230(int a0, int a1, int 
 {
     return false;
 }
+
+// FUNCTION: ROBLOXSTUDIO 0x0059b8a0
+int __cdecl AVbtBvhTriangleMeshShape_vslot8_0059b8a0()
+{
+    return 17002256;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x0059b8b0
+int __cdecl AVbtBvhTriangleMeshShape_vslot12_0059b8b0()
+{
+    return 60;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x0059f920
+int __cdecl RBX_DynamicRotateJoint_vslot6_0059f920()
+{
+    return 6;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x0059f930
+int __cdecl RBX_RotateVJoint_vslot6_0059f930()
+{
+    return 8;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x0059fd00
+int __cdecl AVbtBoxShape_vslot8_0059fd00()
+{
+    return 17002324;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x005b2f00
+int __cdecl AVbtOptimizedBvh_vslot3_005b2f00()
+{
+    return 84;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x005b8210
+int __cdecl AVbtTriangleMeshShape_vslot8_005b8210()
+{
+    return 17003484;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x005e6910
+int __cdecl RBX_Graphics_ShaderProgramFFPD3D9_vslot4_005e6910()
+{
+    return 1;
+}
