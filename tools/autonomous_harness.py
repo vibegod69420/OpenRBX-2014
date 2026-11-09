@@ -1036,6 +1036,10 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
         source_router.append_method_to_cpp(cpp_path, candidate_cpp_snippet)
         ok, obj_path, compiler_out = verify_tu.compile_cpp_to_coff(cpp_path, use_cache=False)
         if not ok:
+            log(
+                f"  [0x{addr:08x} Attempt {attempt}] COMPILE FAILED on {route['cpp_rel']}: "
+                f"{(compiler_out.strip().splitlines() or ['<no output>'])[-1][:180]}"
+            )
             feedback_history = (
                 f"### Attempt {attempt} Compiler Error (`cl.exe /O2` on `{route['cpp_rel']}`):\n"
                 f"```text\n{compiler_out[-3000:]}\n```\n"
