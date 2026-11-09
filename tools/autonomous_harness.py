@@ -282,6 +282,30 @@ def _make_field_union_entry(off: int, c_type: str, field_name: str) -> str:
     return f"struct {{ char _pad_{field_name}[0x{off:x}]; {c_type} {field_name}; }};"
 
 
+def classify_target(orig: bytes) -> str:
+    """
+    Separates the address table into what C++ can actually reproduce byte-for-byte:
+
+      - `fragment`: the bytes never terminate a routine (no `ret`), i.e. the size table
+        holds mid-instruction starts. No C++ source can ever match these.
+      - `thunk`: compiler-generated redirect emitted for multiple-inheritance adjustors
+        (`sub ecx,N; jmp`), imported functions (`jmp [__imp_x]`) or tail calls (`jmp rel32`).
+        There is no high-level body to write for them.
+      - `real`: a complete routine worth synthesizing or handing to the LLM.
+    """
+    if not orig:
+        return "fragment"
+    if orig[0] == 0xE9 or orig[:2] == b"\xff\x25":
+        return "thunk"
+    if orig[:2] == b"\x83\xe9" and len(orig) >= 7 and orig[3] == 0xE9:
+        return "thunk"
+    if orig[:3] == b"\x2b\x49\xfc" and orig[3:4] == b"\xe9":
+        return "thunk"
+    if orig[-1] not in (0xC3, 0xC2) or orig[-1:] == b"\xe9":
+        return "fragment"
+    return "real"
+
+
 def synthesize_class_method_cpp(addr: int, orig: bytes, route: dict, existing_h_text: str) -> dict | None:
     """
     Synthesizes a clean C++ class member method on `route['class_name']` inside `route['namespaces']`
@@ -919,6 +943,8 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
     sizes = verify_tu.load_function_sizes()
     fn_size = sizes.get(addr, 16)
     orig_bytes = verify_tu.get_original_function_bytes(addr, fn_size)
+    if classify_target(orig_bytes) != "real":
+        return False, 0.0, ""
 
     # Fast-path deterministic check first
     existing_h = h_path.read_text(encoding="utf-8")
@@ -969,9 +995,10 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
     feedback_history = ""
     best_code = None
     best_pct = -1.0
-    max_attempts = 6
-    # Adaptive MoE Reasoning Escalation: fast 8K pass first, then 24K with compiler/diff feedback, then 64K deep thinking
-    token_schedule = [8192, 24576, 24576, 49152, 65536, 65536]
+    max_attempts = 4
+    # Adaptive MoE Reasoning Escalation, trimmed to 4 passes: a measured run converted nothing
+    # across 6 escalating attempts (best 50%), so the two most expensive passes were dropped.
+    token_schedule = [8192, 24576, 49152, 65536]
 
     for attempt in range(1, max_attempts + 1):
         budget_tokens = min(MAX_OUTPUT_TOKENS, token_schedule[attempt - 1])
@@ -1051,6 +1078,23 @@ def run_forever():
     skipped_without_llm: set[int] = set()
     attempted_with_llm: set[int] = set()
 
+    # Classify the address table once: the LLM must never spend a token on a target that is
+    # impossible by construction (mid-instruction fragments, compiler-generated thunks).
+    real_targets: set[int] = set()
+    kind_counts = {"real": 0, "fragment": 0, "thunk": 0}
+    for _a, _sz in sizes.items():
+        if _sz < 3:
+            continue
+        _kind = classify_target(verify_tu.get_original_function_bytes(_a, _sz))
+        kind_counts[_kind] += 1
+        if _kind == "real":
+            real_targets.add(_a)
+    log(
+        f"Target classification: {kind_counts['real']} matchable functions | "
+        f"{kind_counts['fragment']} fragments (bytes never terminate a routine) | "
+        f"{kind_counts['thunk']} compiler-generated thunks -> both excluded from matching"
+    )
+
     while True:
         try:
             base_url = discover_kaggle_tunnel_url()
@@ -1062,7 +1106,7 @@ def run_forever():
 
             done = next_target.get_implemented_addresses()
             exclude = attempted_with_llm if base_url else skipped_without_llm
-            remaining = [addr for addr in sizes if addr not in done and addr not in exclude and sizes[addr] >= 3]
+            remaining = [addr for addr in real_targets if addr not in done and addr not in exclude]
             if not remaining:
                 if exclude:
                     exclude.clear()
