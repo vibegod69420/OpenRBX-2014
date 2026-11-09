@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-09 15:35:07 UTC",
+  "updated_at": "2026-11-09 15:35:15 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "MSVC 11.0 (Visual Studio 2012 x86)",
   "total_binary_functions": 40561,
   "total_binary_bytes": 9574526,
-  "implemented_total": 115,
-  "function_annotations": 115,
+  "implemented_total": 127,
+  "function_annotations": 127,
   "stub_annotations": 0,
-  "perfect_100_count": 115,
+  "perfect_100_count": 127,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.2835,
-  "overall_byte_coverage_pct": 0.0067,
+  "overall_function_coverage_pct": 0.3131,
+  "overall_byte_coverage_pct": 0.0077,
   "functions": [
     {
       "address": "0x00403b30",
@@ -30,6 +30,16 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0040e1b0",
+      "kind": "FUNCTION",
+      "name": "AV_TypedPropertyDescriptor_H_Reflection_RBX_vslot7_0040e1b0",
+      "mangled": "?AV_TypedPropertyDescriptor_H_Reflection_RBX_vslot7_0040e1b0@@YGHH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
       "match_pct": 100.0
     },
     {
@@ -80,6 +90,26 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00427aa0",
+      "kind": "FUNCTION",
+      "name": "AVCSourceStream_vslot13_00427aa0",
+      "mangled": "?AVCSourceStream_vslot13_00427aa0@@YGHHHH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00427ab0",
+      "kind": "FUNCTION",
+      "name": "AVCSourceStream_vslot14_00427ab0",
+      "mangled": "?AVCSourceStream_vslot14_00427ab0@@YGHH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
       "match_pct": 100.0
     },
     {
@@ -210,6 +240,16 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x004d3cb0",
+      "kind": "FUNCTION",
+      "name": "AVShortcutsModel_vslot14_004d3cb0",
+      "mangled": "?AVShortcutsModel_vslot14_004d3cb0@@YGHH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
       "match_pct": 100.0
     },
     {
@@ -623,6 +663,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x006b0820",
+      "kind": "FUNCTION",
+      "name": "AVCSource_vslot14_006b0820",
+      "mangled": "?AVCSource_vslot14_006b0820@@YGHHH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x006b1400",
       "kind": "FUNCTION",
       "name": "AVCSourceStream_vslot4_006b1400",
@@ -630,6 +680,16 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006b1440",
+      "kind": "FUNCTION",
+      "name": "AVCSourceStream_vslot3_006b1440",
+      "mangled": "?AVCSourceStream_vslot3_006b1440@@YGHHHHHHHHH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
       "match_pct": 100.0
     },
     {
@@ -680,6 +740,46 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007d6e90",
+      "kind": "FUNCTION",
+      "name": "AV_TypedPropertyDescriptor_VColor3_G3D_Refle_vslot7_007d6e90",
+      "mangled": "?AV_TypedPropertyDescriptor_VColor3_G3D_Refle_vslot7_007d6e90@@YGHH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007d6ea0",
+      "kind": "FUNCTION",
+      "name": "AV_TypedPropertyDescriptor_VRbxRay_RBX_Refle_vslot7_007d6ea0",
+      "mangled": "?AV_TypedPropertyDescriptor_VRbxRay_RBX_Refle_vslot7_007d6ea0@@YGHH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007d6eb0",
+      "kind": "FUNCTION",
+      "name": "AV_TypedPropertyDescriptor_VUDim2_RBX_Reflec_vslot7_007d6eb0",
+      "mangled": "?AV_TypedPropertyDescriptor_VUDim2_RBX_Reflec_vslot7_007d6eb0@@YGHH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007d6ec0",
+      "kind": "FUNCTION",
+      "name": "AV_TypedPropertyDescriptor_VVector2_G3D_Refl_vslot7_007d6ec0",
+      "mangled": "?AV_TypedPropertyDescriptor_VVector2_G3D_Refl_vslot7_007d6ec0@@YGHH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
       "match_pct": 100.0
     },
     {
@@ -1113,6 +1213,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c53ce0",
+      "kind": "FUNCTION",
+      "name": "RBX_Network_ServerReplicator_vslot36_00c53ce0",
+      "mangled": "?RBX_Network_ServerReplicator_vslot36_00c53ce0@@YIHPBUStruct_00c53ce0@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c81470",
       "kind": "FUNCTION",
       "name": "AV_stream_buffer_U_basic_array_source_D_iost_vslot17_00c81470",
@@ -1160,6 +1270,16 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 5,
       "recomp_size": 5,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cea7a0",
+      "kind": "FUNCTION",
+      "name": "RBX_Network_ProfiledRakPeer_vslot62_00cea7a0",
+      "mangled": "?RBX_Network_ProfiledRakPeer_vslot62_00cea7a0@@YIHPBUStruct_00cea7a0@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
       "match_pct": 100.0
     }
   ]

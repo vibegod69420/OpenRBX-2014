@@ -743,3 +743,77 @@ int __fastcall RBX_BulletShapeCellContact_vslot10_00bd86c0(const Struct_00bd86c0
 {
     return self->val;
 }
+
+struct Struct_00c53ce0 { char pad[18092]; int val; };
+// FUNCTION: ROBLOXSTUDIO 0x00c53ce0
+int __fastcall RBX_Network_ServerReplicator_vslot36_00c53ce0(const Struct_00c53ce0* self)
+{
+    return self->val;
+}
+
+struct Struct_00cea7a0 { char pad[1156]; int val; };
+// FUNCTION: ROBLOXSTUDIO 0x00cea7a0
+int __fastcall RBX_Network_ProfiledRakPeer_vslot62_00cea7a0(const Struct_00cea7a0* self)
+{
+    return self->val;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x0040e1b0
+int __stdcall AV_TypedPropertyDescriptor_H_Reflection_RBX_vslot7_0040e1b0(int a0)
+{
+    return 4;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00427aa0
+int __stdcall AVCSourceStream_vslot13_00427aa0(int a0, int a1, int a2)
+{
+    return -2147467263;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00427ab0
+int __stdcall AVCSourceStream_vslot14_00427ab0(int a0)
+{
+    return -2147418113;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x004d3cb0
+int __stdcall AVShortcutsModel_vslot14_004d3cb0(int a0)
+{
+    return 3;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x006b0820
+int __stdcall AVCSource_vslot14_006b0820(int a0, int a1)
+{
+    return -2147467263;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x006b1440
+int __stdcall AVCSourceStream_vslot3_006b1440(int a0, int a1, int a2, int a3, int a4, int a5, int a6, int a7)
+{
+    return -2147467263;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x007d6e90
+int __stdcall AV_TypedPropertyDescriptor_VColor3_G3D_Refle_vslot7_007d6e90(int a0)
+{
+    return 12;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x007d6ea0
+int __stdcall AV_TypedPropertyDescriptor_VRbxRay_RBX_Refle_vslot7_007d6ea0(int a0)
+{
+    return 28;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x007d6eb0
+int __stdcall AV_TypedPropertyDescriptor_VUDim2_RBX_Reflec_vslot7_007d6eb0(int a0)
+{
+    return 16;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x007d6ec0
+int __stdcall AV_TypedPropertyDescriptor_VVector2_G3D_Refl_vslot7_007d6ec0(int a0)
+{
+    return 8;
+}
