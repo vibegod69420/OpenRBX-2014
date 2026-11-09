@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-09 17:19:27 UTC",
+  "updated_at": "2026-11-09 17:19:43 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "MSVC 11.0 (Visual Studio 2012 x86)",
   "total_binary_functions": 40561,
   "total_binary_bytes": 9574526,
-  "implemented_total": 724,
-  "function_annotations": 724,
+  "implemented_total": 725,
+  "function_annotations": 725,
   "stub_annotations": 0,
-  "perfect_100_count": 705,
+  "perfect_100_count": 706,
   "average_match_pct": 98.75,
-  "overall_function_coverage_pct": 1.785,
-  "overall_byte_coverage_pct": 0.1752,
+  "overall_function_coverage_pct": 1.7874,
+  "overall_byte_coverage_pct": 0.1757,
   "functions": [
     {
       "address": "0x00402eb0",
@@ -7200,6 +7200,16 @@
       "file": "Client/Network/GCJob.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ce7930",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::ProfiledRakPeer::setFlag46C",
+      "mangled": "?setFlag46C@ProfiledRakPeer@Network@RBX@@QAEX_N@Z",
+      "file": "Client/Network/ProfiledRakPeer.cpp",
+      "orig_size": 45,
+      "recomp_size": 16,
       "match_pct": 100.0
     },
     {

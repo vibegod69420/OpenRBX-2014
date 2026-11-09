@@ -19,6 +19,7 @@ public:
 		struct { char _pad_flag_000c[0xc]; bool flag_000c; };
 		struct { char _pad_flag_0570[0x570]; bool flag_0570; };
 		struct { char _pad_field_0468[0x468]; int field_0468; };
+		struct { char _pad_flag_046c[0x46c]; bool flag_046c; };
 		// AUTO-GENERATED FIELDS
 	};
 
@@ -30,6 +31,7 @@ public:
 	void setField468(int value);
 	void onDestroy();
 	void* scalarDeletingDestructor(unsigned int flags);
+	void setFlag46C(bool value);
 	// AUTO-GENERATED METHODS
 };
 

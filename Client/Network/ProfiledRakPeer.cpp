@@ -50,6 +50,12 @@ void* ProfiledRakPeer::scalarDeletingDestructor(unsigned int flags)
 	return this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00ce7930
+void ProfiledRakPeer::setFlag46C(bool value)
+{
+	flag_046c = value;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network
