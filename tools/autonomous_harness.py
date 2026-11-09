@@ -930,6 +930,12 @@ def run_deterministic_batch_pass(candidate_addrs: list[int], max_matches: int = 
     return verified_hex
 
 
+def _mentions_address(text: str, addr: int) -> bool:
+    """Models echo the marker either padded (`0x004028a0`) or unpadded (`0x4028a0`)."""
+    low = text.lower()
+    return f"0x{addr:08x}" in low or f"0x{addr:x}" in low
+
+
 def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bool, float, str]:
     """
     Runs the full decompile -> compile -> COFF byte-diff -> repair loop (up to 6 iterations)
@@ -1019,7 +1025,12 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
             log(f"  [0x{addr:08x} Attempt {attempt}] LLM request warning: {e}")
             continue
 
-        if not candidate_cpp_snippet or f"0x{addr:08x}" not in candidate_cpp_snippet.lower():
+        if not candidate_cpp_snippet or not _mentions_address(candidate_cpp_snippet, addr):
+            log(
+                f"  [0x{addr:08x} Attempt {attempt}] reply unusable "
+                f"(code_block={bool(candidate_cpp_snippet)}, {len(resp_text)} chars): "
+                f"{resp_text[:160]!r}"
+            )
             continue
 
         source_router.append_method_to_cpp(cpp_path, candidate_cpp_snippet)
