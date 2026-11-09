@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-09 15:38:06 UTC",
+  "updated_at": "2026-11-09 15:38:18 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "MSVC 11.0 (Visual Studio 2012 x86)",
   "total_binary_functions": 40561,
   "total_binary_bytes": 9574526,
-  "implemented_total": 247,
-  "function_annotations": 247,
+  "implemented_total": 248,
+  "function_annotations": 248,
   "stub_annotations": 0,
-  "perfect_100_count": 247,
+  "perfect_100_count": 248,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.609,
-  "overall_byte_coverage_pct": 0.023,
+  "overall_function_coverage_pct": 0.6114,
+  "overall_byte_coverage_pct": 0.0232,
   "functions": [
     {
       "address": "0x00402eb0",
@@ -840,6 +840,16 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 10,
       "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00647070",
+      "kind": "FUNCTION",
+      "name": "rbx_func_00647070",
+      "mangled": "?rbx_func_00647070@Struct_00647070@@QAEX_N@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 23,
+      "recomp_size": 16,
       "match_pct": 100.0
     },
     {
