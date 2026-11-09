@@ -32,7 +32,7 @@ import update_progress  # noqa: E402
 import verify_tu        # noqa: E402
 
 KERNEL_REF = os.environ.get("KAGGLE_KERNEL_REF", "supahblob/kaggle-qwen-coder-api-server")
-MODEL_NAME = os.environ.get("DECOMP_MODEL", "qwen3.8:35b-a3b-abliterated")
+MODEL_NAME = os.environ.get("DECOMP_MODEL", "qwen2.5-coder-14b")
 HARNESS_MODE = os.environ.get("DECOMP_HARNESS", "auto")
 MAX_OUTPUT_TOKENS = int(os.environ.get("DECOMP_MAX_TOKENS", "65536"))
 CONTEXT_WINDOW = 262144

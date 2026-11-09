@@ -2,8 +2,8 @@
 """
 High-Performance Kaggle AI Model Hosting Server
 Optimized for Frontier Vibe Coding & Agentic Tool Execution
-Model: Qwen3.8-35B-A3B-Distill-Abliterated (IsValorum APEX-I Quantization)
-Base: empero-ai/Qwen3.8-35B-A3B-Distill (Uncensored / Abliterated)
+Model: Qwen2.5-Coder-14B-Instruct (Q4_K_M, code-specialised)
+Base: Qwen2.5-Coder-14B-Instruct (Apache-2.0)
 Architecture: Hybrid Gated DeltaNet MoE (35B total / 3B active per token, 40 layers)
 Inference Engine: llama-server (CUDA 12.8) with Jinja Chat & DeepSeek Reasoning Format
 Hardware: Dual Tesla T4s (30.72 GB VRAM) | Flash Attention | 4-bit KV Cache | Up to 256K Context
@@ -26,12 +26,12 @@ sys.stderr.reconfigure(line_buffering=True)
 os.environ["PATH"] = f"/usr/local/bin:/usr/bin:{os.environ.get('PATH', '')}"
 
 # Model Specification: Single Dedicated Abliterated Frontier MoE
-MODEL_REPO = "IsValorum/Qwen3.8-35B-A3B-Distill-MTP-APEX-I-MiniPlus-V2.1-Abliterated-GGUF"
-MODEL_FILE = "Qwen3.8-35B-A3B-Distill.APEX-I-MiniPlus-V2.1-Abliterated.gguf"
+MODEL_REPO = "bartowski/Qwen2.5-Coder-14B-Instruct-GGUF"
+MODEL_FILE = "Qwen2.5-Coder-14B-Instruct-Q4_K_M.gguf"
 
 DOWNLOAD_URL = f"https://huggingface.co/{MODEL_REPO}/resolve/main/{MODEL_FILE}"
 
-PRIMARY_ALIAS = "qwen3.8:35b-a3b-abliterated"
+PRIMARY_ALIAS = "qwen2.5-coder-14b"
 ALIASES = [
     "qwen3.8:35b-a3b",
     "qwen3.8-35b-a3b-abliterated",
@@ -220,7 +220,7 @@ def install_and_setup_engine():
 def download_model_high_speed():
     print_banner("PHASE 4: MULTI-THREADED GIGABIT MODEL DOWNLOAD (SINGLE MODEL)")
     print(f"[SOURCE] {DOWNLOAD_URL}", flush=True)
-    print(f"[TARGET] {LOCAL_GGUF} (~13.65 GB)", flush=True)
+    print(f"[TARGET] {LOCAL_GGUF} (~8.99 GB)", flush=True)
 
     token = os.environ.get("HF_TOKEN", "")
     header_arg = f'--header="Authorization: Bearer {token}"' if token else ""
@@ -471,7 +471,7 @@ def display_dashboard(cf_url):
 
   Active Dedicated Model (Strict Single-Model Mode):
   --> {PRIMARY_ALIAS}
-      Base: empero-ai/Qwen3.8-35B-A3B-Distill (IsValorum Abliterated Release)
+      Base: Qwen2.5-Coder-14B-Instruct (Apache-2.0)
       Architecture: 35B MoE (3B active/token, 40 layers) + DeltaNet Hybrid
       Context Window: Maximum VRAM allocation (up to 256K / 128K context)
       Reasoning: Full DeepSeek-style native reasoning (<think> tokens)
