@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-09 15:35:32 UTC",
+  "updated_at": "2026-11-09 15:35:41 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "MSVC 11.0 (Visual Studio 2012 x86)",
   "total_binary_functions": 40561,
   "total_binary_bytes": 9574526,
-  "implemented_total": 133,
-  "function_annotations": 133,
+  "implemented_total": 145,
+  "function_annotations": 145,
   "stub_annotations": 0,
-  "perfect_100_count": 133,
+  "perfect_100_count": 145,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.3279,
-  "overall_byte_coverage_pct": 0.0083,
+  "overall_function_coverage_pct": 0.3575,
+  "overall_byte_coverage_pct": 0.0099,
   "functions": [
     {
       "address": "0x00402eb0",
@@ -323,6 +323,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x005765c0",
+      "kind": "FUNCTION",
+      "name": "AVRobloxPluginHost_vslot0_005765c0",
+      "mangled": "?AVRobloxPluginHost_vslot0_005765c0@Struct_005765c0@@QAEXH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0058f6b0",
       "kind": "FUNCTION",
       "name": "RBX_PathInterpolatedCFrame_vslot8_0058f6b0",
@@ -563,6 +573,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x005df4f0",
+      "kind": "FUNCTION",
+      "name": "RBX_Graphics_DeviceContextD3D9_vslot1_005df4f0",
+      "mangled": "?RBX_Graphics_DeviceContextD3D9_vslot1_005df4f0@Struct_005df4f0@@QAEXH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x005e1160",
       "kind": "FUNCTION",
       "name": "RBX_Graphics_DeviceD3D9_vslot4_005e1160",
@@ -610,6 +630,16 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006066d0",
+      "kind": "FUNCTION",
+      "name": "RBX_Graphics_DeviceContextGL_vslot1_006066d0",
+      "mangled": "?RBX_Graphics_DeviceContextGL_vslot1_006066d0@Struct_006066d0@@QAEXH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
       "match_pct": 100.0
     },
     {
@@ -663,6 +693,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x006766d0",
+      "kind": "FUNCTION",
+      "name": "RBX_Graphics_RenderView_vslot14_006766d0",
+      "mangled": "?RBX_Graphics_RenderView_vslot14_006766d0@@YIHPBUStruct_006766d0@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x006766e0",
       "kind": "FUNCTION",
       "name": "RBX_Graphics_RenderView_vslot15_006766e0",
@@ -680,6 +720,16 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 10,
       "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00676930",
+      "kind": "FUNCTION",
+      "name": "RBX_Graphics_RenderView_vslot1_00676930",
+      "mangled": "?RBX_Graphics_RenderView_vslot1_00676930@Struct_00676930@@QAEX_N@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
       "match_pct": 100.0
     },
     {
@@ -963,6 +1013,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00898360",
+      "kind": "FUNCTION",
+      "name": "RBX_PathInterpolatedCFrame_vslot5_00898360",
+      "mangled": "?RBX_PathInterpolatedCFrame_vslot5_00898360@Struct_00898360@@QAEX_N@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008a8740",
       "kind": "FUNCTION",
       "name": "AV_NonFactoryProduct_VGuiBase2d_RBX_E_sGuiOb_vslot32_008a8740",
@@ -970,6 +1030,16 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00915270",
+      "kind": "FUNCTION",
+      "name": "RBX_IAnimatableJoint_vslot3_00915270",
+      "mangled": "?RBX_IAnimatableJoint_vslot3_00915270@Struct_00915270@@QAEX_N@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
       "match_pct": 100.0
     },
     {
@@ -1090,6 +1160,36 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a30b90",
+      "kind": "FUNCTION",
+      "name": "RBX_PathInterpolatedCFrame_vslot7_00a30b90",
+      "mangled": "?RBX_PathInterpolatedCFrame_vslot7_00a30b90@Struct_00a30b90@@QAEXH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a30bb0",
+      "kind": "FUNCTION",
+      "name": "AV_stream_buffer_V_basic_null_device_DUoutpu_vslot15_00a30bb0",
+      "mangled": "?AV_stream_buffer_V_basic_null_device_DUoutpu_vslot15_00a30bb0@Struct_00a30bb0@@QAEXH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a30bc0",
+      "kind": "FUNCTION",
+      "name": "AV_stream_buffer_VWiniInetRequest_source_U_c_vslot15_00a30bc0",
+      "mangled": "?AV_stream_buffer_VWiniInetRequest_source_U_c_vslot15_00a30bc0@Struct_00a30bc0@@QAEXH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
       "match_pct": 100.0
     },
     {
@@ -1323,6 +1423,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c909f0",
+      "kind": "FUNCTION",
+      "name": "AV_stream_buffer_U_basic_array_source_D_iost_vslot18_00c909f0",
+      "mangled": "?AV_stream_buffer_U_basic_array_source_D_iost_vslot18_00c909f0@Struct_00c909f0@@QAEX_N@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00ce9230",
       "kind": "FUNCTION",
       "name": "RBX_Network_ProfiledRakPeer_vslot52_00ce9230",
@@ -1340,6 +1450,16 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cf2180",
+      "kind": "FUNCTION",
+      "name": "RBX_Network_ProfiledRakPeer_vslot43_00cf2180",
+      "mangled": "?RBX_Network_ProfiledRakPeer_vslot43_00cf2180@Struct_00cf2180@@QAEX_N@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
       "match_pct": 100.0
     }
   ]

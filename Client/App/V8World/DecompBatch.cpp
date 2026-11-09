@@ -857,3 +857,88 @@ int __fastcall RBX_Graphics_RenderView_vslot17_006766f0(const Struct_006766f0* s
 {
     return self->sub->val;
 }
+
+struct Struct_005765c0 { char pad[4]; int val; void AVRobloxPluginHost_vslot0_005765c0(int v); };
+// FUNCTION: ROBLOXSTUDIO 0x005765c0
+void Struct_005765c0::AVRobloxPluginHost_vslot0_005765c0(int v)
+{
+    this->val = v;
+}
+
+struct Struct_005df4f0 { char pad[16]; int val; void RBX_Graphics_DeviceContextD3D9_vslot1_005df4f0(int v); };
+// FUNCTION: ROBLOXSTUDIO 0x005df4f0
+void Struct_005df4f0::RBX_Graphics_DeviceContextD3D9_vslot1_005df4f0(int v)
+{
+    this->val = v;
+}
+
+struct Struct_006066d0 { char pad[20]; int val; void RBX_Graphics_DeviceContextGL_vslot1_006066d0(int v); };
+// FUNCTION: ROBLOXSTUDIO 0x006066d0
+void Struct_006066d0::RBX_Graphics_DeviceContextGL_vslot1_006066d0(int v)
+{
+    this->val = v;
+}
+
+struct Sub_006766d0 { char pad[2976]; int val; };
+struct Struct_006766d0 { char pad[140]; Sub_006766d0* sub; };
+// FUNCTION: ROBLOXSTUDIO 0x006766d0
+int __fastcall RBX_Graphics_RenderView_vslot14_006766d0(const Struct_006766d0* self)
+{
+    return self->sub->val;
+}
+
+struct Struct_00898360 { char pad[64]; bool val; void RBX_PathInterpolatedCFrame_vslot5_00898360(bool v); };
+// FUNCTION: ROBLOXSTUDIO 0x00898360
+void Struct_00898360::RBX_PathInterpolatedCFrame_vslot5_00898360(bool v)
+{
+    this->val = v;
+}
+
+struct Struct_00915270 { char pad[4]; bool val; void RBX_IAnimatableJoint_vslot3_00915270(bool v); };
+// FUNCTION: ROBLOXSTUDIO 0x00915270
+void Struct_00915270::RBX_IAnimatableJoint_vslot3_00915270(bool v)
+{
+    this->val = v;
+}
+
+struct Struct_00a30b90 { char pad[68]; int val; void RBX_PathInterpolatedCFrame_vslot7_00a30b90(int v); };
+// FUNCTION: ROBLOXSTUDIO 0x00a30b90
+void Struct_00a30b90::RBX_PathInterpolatedCFrame_vslot7_00a30b90(int v)
+{
+    this->val = v;
+}
+
+struct Struct_00a30bb0 { char pad[64]; int val; void AV_stream_buffer_V_basic_null_device_DUoutpu_vslot15_00a30bb0(int v); };
+// FUNCTION: ROBLOXSTUDIO 0x00a30bb0
+void Struct_00a30bb0::AV_stream_buffer_V_basic_null_device_DUoutpu_vslot15_00a30bb0(int v)
+{
+    this->val = v;
+}
+
+struct Struct_00a30bc0 { char pad[72]; int val; void AV_stream_buffer_VWiniInetRequest_source_U_c_vslot15_00a30bc0(int v); };
+// FUNCTION: ROBLOXSTUDIO 0x00a30bc0
+void Struct_00a30bc0::AV_stream_buffer_VWiniInetRequest_source_U_c_vslot15_00a30bc0(int v)
+{
+    this->val = v;
+}
+
+struct Struct_00c909f0 { char pad[88]; bool val; void AV_stream_buffer_U_basic_array_source_D_iost_vslot18_00c909f0(bool v); };
+// FUNCTION: ROBLOXSTUDIO 0x00c909f0
+void Struct_00c909f0::AV_stream_buffer_U_basic_array_source_D_iost_vslot18_00c909f0(bool v)
+{
+    this->val = v;
+}
+
+struct Struct_00cf2180 { char pad[12]; bool val; void RBX_Network_ProfiledRakPeer_vslot43_00cf2180(bool v); };
+// FUNCTION: ROBLOXSTUDIO 0x00cf2180
+void Struct_00cf2180::RBX_Network_ProfiledRakPeer_vslot43_00cf2180(bool v)
+{
+    this->val = v;
+}
+
+struct Struct_00676930 { char pad[157]; bool val; void RBX_Graphics_RenderView_vslot1_00676930(bool v); };
+// FUNCTION: ROBLOXSTUDIO 0x00676930
+void Struct_00676930::RBX_Graphics_RenderView_vslot1_00676930(bool v)
+{
+    this->val = v;
+}
