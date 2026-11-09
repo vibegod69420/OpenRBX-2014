@@ -942,3 +942,34 @@ void Struct_00676930::RBX_Graphics_RenderView_vslot1_00676930(bool v)
 {
     this->val = v;
 }
+
+struct Struct_0085f5d0 { char pad[2920]; bool val; void RBX_DataModel_vslot0_0085f5d0(bool v); };
+// FUNCTION: ROBLOXSTUDIO 0x0085f5d0
+void Struct_0085f5d0::RBX_DataModel_vslot0_0085f5d0(bool v)
+{
+    this->val = v;
+}
+
+struct Struct_00a30ba0 { char pad[208]; int val; void AV_indirect_streambuf_V_basic_gzip_decompres_vslot15_00a30ba0(int v); };
+// FUNCTION: ROBLOXSTUDIO 0x00a30ba0
+void Struct_00a30ba0::AV_indirect_streambuf_V_basic_gzip_decompres_vslot15_00a30ba0(int v)
+{
+    this->val = v;
+}
+
+struct Struct_00cf2110 { char pad[1392]; bool val; void RBX_Network_ProfiledRakPeer_vslot37_00cf2110(bool v); };
+// FUNCTION: ROBLOXSTUDIO 0x00cf2110
+void Struct_00cf2110::RBX_Network_ProfiledRakPeer_vslot37_00cf2110(bool v)
+{
+    this->val = v;
+}
+
+struct Pair_00427650 { int a; int b; };
+struct Struct_00427650 { Pair_00427650* std_error_category_vslot3_00427650(Pair_00427650* out, int x); };
+// FUNCTION: ROBLOXSTUDIO 0x00427650
+Pair_00427650* Struct_00427650::std_error_category_vslot3_00427650(Pair_00427650* out, int x)
+{
+    out->a = x;
+    out->b = (int)this;
+    return out;
+}

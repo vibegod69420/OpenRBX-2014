@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-09 15:35:41 UTC",
+  "updated_at": "2026-11-09 15:35:48 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "MSVC 11.0 (Visual Studio 2012 x86)",
   "total_binary_functions": 40561,
   "total_binary_bytes": 9574526,
-  "implemented_total": 145,
-  "function_annotations": 145,
+  "implemented_total": 149,
+  "function_annotations": 149,
   "stub_annotations": 0,
-  "perfect_100_count": 145,
+  "perfect_100_count": 149,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.3575,
-  "overall_byte_coverage_pct": 0.0099,
+  "overall_function_coverage_pct": 0.3673,
+  "overall_byte_coverage_pct": 0.0106,
   "functions": [
     {
       "address": "0x00402eb0",
@@ -90,6 +90,16 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00427650",
+      "kind": "FUNCTION",
+      "name": "std_error_category_vslot3_00427650",
+      "mangled": "?std_error_category_vslot3_00427650@Struct_00427650@@QAEPAUPair_00427650@@PAU2@H@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 18,
+      "recomp_size": 18,
       "match_pct": 100.0
     },
     {
@@ -923,6 +933,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0085f5d0",
+      "kind": "FUNCTION",
+      "name": "RBX_DataModel_vslot0_0085f5d0",
+      "mangled": "?RBX_DataModel_vslot0_0085f5d0@Struct_0085f5d0@@QAEX_N@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00860c10",
       "kind": "FUNCTION",
       "name": "boost_io_bad_format_string_vslot1_00860c10",
@@ -1170,6 +1190,16 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a30ba0",
+      "kind": "FUNCTION",
+      "name": "AV_indirect_streambuf_V_basic_gzip_decompres_vslot15_00a30ba0",
+      "mangled": "?AV_indirect_streambuf_V_basic_gzip_decompres_vslot15_00a30ba0@Struct_00a30ba0@@QAEXH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
       "match_pct": 100.0
     },
     {
@@ -1450,6 +1480,16 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cf2110",
+      "kind": "FUNCTION",
+      "name": "RBX_Network_ProfiledRakPeer_vslot37_00cf2110",
+      "mangled": "?RBX_Network_ProfiledRakPeer_vslot37_00cf2110@Struct_00cf2110@@QAEX_N@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
       "match_pct": 100.0
     },
     {
