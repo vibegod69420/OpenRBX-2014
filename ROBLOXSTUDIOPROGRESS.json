@@ -1,16 +1,22 @@
 {
-  "updated_at": "2026-11-09 17:20:44 UTC",
+  "updated_at": "2026-11-09 20:11:30 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
-  "compiler": "MSVC 11.0 (Visual Studio 2012 x86)",
+  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
+  "compiler_version": "17.00.50727.1",
+  "compiler_matches_target": true,
   "total_binary_functions": 40561,
   "total_binary_bytes": 9574526,
-  "implemented_total": 766,
-  "function_annotations": 766,
+  "matchable_functions": 16989,
+  "fragment_entries": 21388,
+  "compiler_thunk_entries": 2184,
+  "matchable_coverage_pct": 4.4264,
+  "implemented_total": 752,
+  "function_annotations": 752,
   "stub_annotations": 0,
-  "perfect_100_count": 747,
-  "average_match_pct": 98.82,
-  "overall_function_coverage_pct": 1.8885,
-  "overall_byte_coverage_pct": 0.191,
+  "perfect_100_count": 752,
+  "average_match_pct": 100.0,
+  "overall_function_coverage_pct": 1.854,
+  "overall_byte_coverage_pct": 0.1877,
   "functions": [
     {
       "address": "0x00402eb0",
@@ -189,8 +195,8 @@
       "mangled": "?deleteObjectStatic@bad_placement_any_cast@rbx@@SAXPAURbxVDelBase@@@Z",
       "file": "Client/App/v8datamodel/bad_placement_any_cast.cpp",
       "orig_size": 18,
-      "recomp_size": 20,
-      "match_pct": 55.0
+      "recomp_size": 18,
+      "match_pct": 100.0
     },
     {
       "address": "0x00414990",
@@ -199,8 +205,8 @@
       "mangled": "?dispatchWithFlag0@QSpacerItem@@QAEXH@Z",
       "file": "Client/RobloxStudio/QSpacerItem.cpp",
       "orig_size": 17,
-      "recomp_size": 18,
-      "match_pct": 38.89
+      "recomp_size": 17,
+      "match_pct": 100.0
     },
     {
       "address": "0x00416b50",
@@ -239,8 +245,8 @@
       "mangled": "?initWithArg@islot@signals@rbx@@QAEPAV123@H@Z",
       "file": "Client/App/v8datamodel/islot.cpp",
       "orig_size": 21,
-      "recomp_size": 22,
-      "match_pct": 31.82
+      "recomp_size": 21,
+      "match_pct": 100.0
     },
     {
       "address": "0x004254f0",
@@ -509,8 +515,8 @@
       "mangled": "?deleteObject@Instance@RBX@@QAEXPAURbxVDelBase@@@Z",
       "file": "Client/App/v8tree/Instance.cpp",
       "orig_size": 26,
-      "recomp_size": 22,
-      "match_pct": 46.15
+      "recomp_size": 26,
+      "match_pct": 100.0
     },
     {
       "address": "0x00460e40",
@@ -630,7 +636,7 @@
       "file": "Client/App/v8datamodel/FlyweightService.cpp",
       "orig_size": 16,
       "recomp_size": 16,
-      "match_pct": 62.5
+      "match_pct": 100.0
     },
     {
       "address": "0x0048b5e0",
@@ -640,7 +646,7 @@
       "file": "Client/App/v8datamodel/FlyweightService.cpp",
       "orig_size": 13,
       "recomp_size": 13,
-      "match_pct": 76.92
+      "match_pct": 100.0
     },
     {
       "address": "0x00490510",
@@ -2659,8 +2665,8 @@
       "mangled": "?dispatchWithFlag1@RenderView@Graphics@RBX@@QAEXH@Z",
       "file": "Client/Rendering/GfxRender/RenderView.cpp",
       "orig_size": 17,
-      "recomp_size": 18,
-      "match_pct": 38.89
+      "recomp_size": 17,
+      "match_pct": 100.0
     },
     {
       "address": "0x006766d0",
@@ -2870,7 +2876,7 @@
       "file": "Client/Rendering/GfxRender/SSAO.cpp",
       "orig_size": 36,
       "recomp_size": 36,
-      "match_pct": 88.89
+      "match_pct": 100.0
     },
     {
       "address": "0x0069d470",
@@ -2909,8 +2915,8 @@
       "mangled": "?initWithArg@TypesetterBitmap@Graphics@RBX@@QAEPAV123@H@Z",
       "file": "Client/Rendering/GfxRender/TypesetterBitmap.cpp",
       "orig_size": 21,
-      "recomp_size": 22,
-      "match_pct": 31.82
+      "recomp_size": 21,
+      "match_pct": 100.0
     },
     {
       "address": "0x006ad930",
@@ -4343,136 +4349,6 @@
       "match_pct": 100.0
     },
     {
-      "address": "0x0080e490",
-      "kind": "FUNCTION",
-      "name": "RBX::alue::scalarDeletingDestructor",
-      "mangled": "?scalarDeletingDestructor@alue@RBX@@QAEPAXI@Z",
-      "file": "Client/App/v8datamodel/alue.cpp",
-      "orig_size": 33,
-      "recomp_size": 33,
-      "match_pct": 100.0
-    },
-    {
-      "address": "0x0080e4c0",
-      "kind": "FUNCTION",
-      "name": "RBX::alue::scalarDeletingDestructor_e4c0",
-      "mangled": "?scalarDeletingDestructor_e4c0@alue@RBX@@QAEPAXI@Z",
-      "file": "Client/App/v8datamodel/alue.cpp",
-      "orig_size": 33,
-      "recomp_size": 33,
-      "match_pct": 100.0
-    },
-    {
-      "address": "0x0080e4f0",
-      "kind": "FUNCTION",
-      "name": "RBX::alue::scalarDeletingDestructor_e4f0",
-      "mangled": "?scalarDeletingDestructor_e4f0@alue@RBX@@QAEPAXI@Z",
-      "file": "Client/App/v8datamodel/alue.cpp",
-      "orig_size": 33,
-      "recomp_size": 33,
-      "match_pct": 100.0
-    },
-    {
-      "address": "0x0080e520",
-      "kind": "FUNCTION",
-      "name": "RBX::alue::scalarDeletingDestructor_e520",
-      "mangled": "?scalarDeletingDestructor_e520@alue@RBX@@QAEPAXI@Z",
-      "file": "Client/App/v8datamodel/alue.cpp",
-      "orig_size": 33,
-      "recomp_size": 33,
-      "match_pct": 100.0
-    },
-    {
-      "address": "0x0080e550",
-      "kind": "FUNCTION",
-      "name": "RBX::alue::scalarDeletingDestructor_e550",
-      "mangled": "?scalarDeletingDestructor_e550@alue@RBX@@QAEPAXI@Z",
-      "file": "Client/App/v8datamodel/alue.cpp",
-      "orig_size": 33,
-      "recomp_size": 33,
-      "match_pct": 100.0
-    },
-    {
-      "address": "0x0080e580",
-      "kind": "FUNCTION",
-      "name": "RBX::alue::scalarDeletingDestructor_e580",
-      "mangled": "?scalarDeletingDestructor_e580@alue@RBX@@QAEPAXI@Z",
-      "file": "Client/App/v8datamodel/alue.cpp",
-      "orig_size": 33,
-      "recomp_size": 33,
-      "match_pct": 100.0
-    },
-    {
-      "address": "0x0080e5b0",
-      "kind": "FUNCTION",
-      "name": "RBX::alue::scalarDeletingDestructor_e5b0",
-      "mangled": "?scalarDeletingDestructor_e5b0@alue@RBX@@QAEPAXI@Z",
-      "file": "Client/App/v8datamodel/alue.cpp",
-      "orig_size": 33,
-      "recomp_size": 33,
-      "match_pct": 100.0
-    },
-    {
-      "address": "0x0080e5e0",
-      "kind": "FUNCTION",
-      "name": "RBX::alue::scalarDeletingDestructor_e5e0",
-      "mangled": "?scalarDeletingDestructor_e5e0@alue@RBX@@QAEPAXI@Z",
-      "file": "Client/App/v8datamodel/alue.cpp",
-      "orig_size": 33,
-      "recomp_size": 33,
-      "match_pct": 100.0
-    },
-    {
-      "address": "0x0080e610",
-      "kind": "FUNCTION",
-      "name": "RBX::alue::scalarDeletingDestructor_e610",
-      "mangled": "?scalarDeletingDestructor_e610@alue@RBX@@QAEPAXI@Z",
-      "file": "Client/App/v8datamodel/alue.cpp",
-      "orig_size": 33,
-      "recomp_size": 33,
-      "match_pct": 100.0
-    },
-    {
-      "address": "0x0080e640",
-      "kind": "FUNCTION",
-      "name": "RBX::alue::scalarDeletingDestructor_e640",
-      "mangled": "?scalarDeletingDestructor_e640@alue@RBX@@QAEPAXI@Z",
-      "file": "Client/App/v8datamodel/alue.cpp",
-      "orig_size": 33,
-      "recomp_size": 33,
-      "match_pct": 100.0
-    },
-    {
-      "address": "0x0080e670",
-      "kind": "FUNCTION",
-      "name": "RBX::alue::scalarDeletingDestructor_e670",
-      "mangled": "?scalarDeletingDestructor_e670@alue@RBX@@QAEPAXI@Z",
-      "file": "Client/App/v8datamodel/alue.cpp",
-      "orig_size": 33,
-      "recomp_size": 33,
-      "match_pct": 100.0
-    },
-    {
-      "address": "0x0080e6a0",
-      "kind": "FUNCTION",
-      "name": "RBX::alue::scalarDeletingDestructor_e6a0",
-      "mangled": "?scalarDeletingDestructor_e6a0@alue@RBX@@QAEPAXI@Z",
-      "file": "Client/App/v8datamodel/alue.cpp",
-      "orig_size": 33,
-      "recomp_size": 33,
-      "match_pct": 100.0
-    },
-    {
-      "address": "0x0080e6d0",
-      "kind": "FUNCTION",
-      "name": "RBX::alue::scalarDeletingDestructor_e6d0",
-      "mangled": "?scalarDeletingDestructor_e6d0@alue@RBX@@QAEPAXI@Z",
-      "file": "Client/App/v8datamodel/alue.cpp",
-      "orig_size": 33,
-      "recomp_size": 33,
-      "match_pct": 100.0
-    },
-    {
       "address": "0x00825850",
       "kind": "FUNCTION",
       "name": "RBX::ContextActionService::getGlobal_5850",
@@ -5039,8 +4915,8 @@
       "mangled": "?freeMember0C@ScriptStats@RBX@@QAEXXZ",
       "file": "Client/App/script/ScriptStats.cpp",
       "orig_size": 10,
-      "recomp_size": 11,
-      "match_pct": 45.45
+      "recomp_size": 10,
+      "match_pct": 100.0
     },
     {
       "address": "0x008e1fa0",
@@ -5050,7 +4926,7 @@
       "file": "Client/App/script/ScriptContext.cpp",
       "orig_size": 36,
       "recomp_size": 36,
-      "match_pct": 88.89
+      "match_pct": 100.0
     },
     {
       "address": "0x008e9f30",
@@ -5139,8 +5015,8 @@
       "mangled": "?dispatchWithFlag0@TextXmlWriter@@QAEXH@Z",
       "file": "Client/RobloxStudio/TextXmlWriter.cpp",
       "orig_size": 17,
-      "recomp_size": 18,
-      "match_pct": 38.89
+      "recomp_size": 17,
+      "match_pct": 100.0
     },
     {
       "address": "0x009062f0",
@@ -5460,7 +5336,7 @@
       "file": "Client/App/v8datamodel/SoundId.cpp",
       "orig_size": 36,
       "recomp_size": 36,
-      "match_pct": 88.89
+      "match_pct": 100.0
     },
     {
       "address": "0x009977c0",
@@ -5649,8 +5525,8 @@
       "mangled": "?dispatchWithFlag1@Humanoid@RBX@@QAEXH@Z",
       "file": "Client/App/humanoid/Humanoid.cpp",
       "orig_size": 17,
-      "recomp_size": 18,
-      "match_pct": 38.89
+      "recomp_size": 17,
+      "match_pct": 100.0
     },
     {
       "address": "0x009ddf00",
@@ -5659,8 +5535,8 @@
       "mangled": "?dispatchWithFlag1_df00@Humanoid@RBX@@QAEXH@Z",
       "file": "Client/App/humanoid/Humanoid.cpp",
       "orig_size": 17,
-      "recomp_size": 18,
-      "match_pct": 38.89
+      "recomp_size": 17,
+      "match_pct": 100.0
     },
     {
       "address": "0x009fe0f0",
@@ -6513,16 +6389,6 @@
       "match_pct": 100.0
     },
     {
-      "address": "0x00b97210",
-      "kind": "FUNCTION",
-      "name": "RBX::VAxisRotateTool::erb::scalarDeletingDestructor",
-      "mangled": "?scalarDeletingDestructor@erb@VAxisRotateTool@RBX@@QAEPAXI@Z",
-      "file": "Client/App/v8datamodel/erb.cpp",
-      "orig_size": 33,
-      "recomp_size": 33,
-      "match_pct": 100.0
-    },
-    {
       "address": "0x00ba1900",
       "kind": "FUNCTION",
       "name": "RBX::Joint::scalarDeletingDestructor",
@@ -7209,8 +7075,8 @@
       "mangled": "?freeMember0C@Instance@RBX@@QAEXXZ",
       "file": "Client/App/v8tree/Instance.cpp",
       "orig_size": 10,
-      "recomp_size": 11,
-      "match_pct": 45.45
+      "recomp_size": 10,
+      "match_pct": 100.0
     },
     {
       "address": "0x00c67970",
@@ -7339,8 +7205,8 @@
       "mangled": "?freeMember0C@SharedStringDictionary@Network@RBX@@QAEXXZ",
       "file": "Client/Network/SharedStringDictionary.cpp",
       "orig_size": 10,
-      "recomp_size": 11,
-      "match_pct": 45.45
+      "recomp_size": 10,
+      "match_pct": 100.0
     },
     {
       "address": "0x00c84740",
@@ -7479,8 +7345,8 @@
       "mangled": "?freeMember0C@sp_counted_impl_p@RBX@@QAEXXZ",
       "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
       "orig_size": 10,
-      "recomp_size": 11,
-      "match_pct": 45.45
+      "recomp_size": 10,
+      "match_pct": 100.0
     },
     {
       "address": "0x00ca6050",
@@ -7489,8 +7355,8 @@
       "mangled": "?freeMember0C_slot1@sp_counted_impl_p@RBX@@QAEXXZ",
       "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
       "orig_size": 10,
-      "recomp_size": 11,
-      "match_pct": 45.45
+      "recomp_size": 10,
+      "match_pct": 100.0
     },
     {
       "address": "0x00cae2b0",
