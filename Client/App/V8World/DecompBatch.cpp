@@ -973,3 +973,10 @@ Pair_00427650* Struct_00427650::std_error_category_vslot3_00427650(Pair_00427650
     out->b = (int)this;
     return out;
 }
+
+struct Struct_00ce7930 { char pad[1132]; bool val; void RBX_Network_ProfiledRakPeer_vslot59_00ce7930(bool v); };
+// FUNCTION: ROBLOXSTUDIO 0x00ce7930
+void Struct_00ce7930::RBX_Network_ProfiledRakPeer_vslot59_00ce7930(bool v)
+{
+    this->val = v;
+}

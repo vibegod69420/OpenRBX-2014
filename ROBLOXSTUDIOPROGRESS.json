@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-09 15:35:48 UTC",
+  "updated_at": "2026-11-09 15:36:05 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "MSVC 11.0 (Visual Studio 2012 x86)",
   "total_binary_functions": 40561,
   "total_binary_bytes": 9574526,
-  "implemented_total": 149,
-  "function_annotations": 149,
+  "implemented_total": 150,
+  "function_annotations": 150,
   "stub_annotations": 0,
-  "perfect_100_count": 149,
+  "perfect_100_count": 150,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.3673,
-  "overall_byte_coverage_pct": 0.0106,
+  "overall_function_coverage_pct": 0.3698,
+  "overall_byte_coverage_pct": 0.0111,
   "functions": [
     {
       "address": "0x00402eb0",
@@ -1460,6 +1460,16 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ce7930",
+      "kind": "FUNCTION",
+      "name": "RBX_Network_ProfiledRakPeer_vslot59_00ce7930",
+      "mangled": "?RBX_Network_ProfiledRakPeer_vslot59_00ce7930@Struct_00ce7930@@QAEX_N@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 45,
+      "recomp_size": 16,
       "match_pct": 100.0
     },
     {
