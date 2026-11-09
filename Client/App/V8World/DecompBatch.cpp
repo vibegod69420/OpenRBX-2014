@@ -1559,3 +1559,87 @@ void Struct_008bc080::rbx_func_008bc080(bool v)
 {
     this->val = v;
 }
+
+struct Struct_00926020 { char pad[501]; bool val; void rbx_func_00926020(bool v); };
+// FUNCTION: ROBLOXSTUDIO 0x00926020
+void Struct_00926020::rbx_func_00926020(bool v)
+{
+    this->val = v;
+}
+
+struct Struct_0096c930 { char pad[552]; bool val; void rbx_func_0096c930(bool v); };
+// FUNCTION: ROBLOXSTUDIO 0x0096c930
+void Struct_0096c930::rbx_func_0096c930(bool v)
+{
+    this->val = v;
+}
+
+struct Struct_009dd4a0 { char pad[612]; bool val; void rbx_func_009dd4a0(bool v); };
+// FUNCTION: ROBLOXSTUDIO 0x009dd4a0
+void Struct_009dd4a0::rbx_func_009dd4a0(bool v)
+{
+    this->val = v;
+}
+
+struct Struct_00a5d6e0 { char pad[204]; int val; void rbx_func_00a5d6e0(int v); };
+// FUNCTION: ROBLOXSTUDIO 0x00a5d6e0
+void Struct_00a5d6e0::rbx_func_00a5d6e0(int v)
+{
+    this->val = v;
+}
+
+struct Struct_00bba7c0 { char pad[169]; bool val; void rbx_func_00bba7c0(bool v); };
+// FUNCTION: ROBLOXSTUDIO 0x00bba7c0
+void Struct_00bba7c0::rbx_func_00bba7c0(bool v)
+{
+    this->val = v;
+}
+
+struct Struct_00bba8d0 { char pad[170]; bool val; void rbx_func_00bba8d0(bool v); };
+// FUNCTION: ROBLOXSTUDIO 0x00bba8d0
+void Struct_00bba8d0::rbx_func_00bba8d0(bool v)
+{
+    this->val = v;
+}
+
+struct Struct_00bba9b0 { char pad[168]; bool val; void rbx_func_00bba9b0(bool v); };
+// FUNCTION: ROBLOXSTUDIO 0x00bba9b0
+void Struct_00bba9b0::rbx_func_00bba9b0(bool v)
+{
+    this->val = v;
+}
+
+struct Struct_00bbe180 { char pad[612]; int val; void rbx_func_00bbe180(int v); };
+// FUNCTION: ROBLOXSTUDIO 0x00bbe180
+void Struct_00bbe180::rbx_func_00bbe180(int v)
+{
+    this->val = v;
+}
+
+struct Struct_00c364c0 { char pad[400]; int val; void rbx_func_00c364c0(int v); };
+// FUNCTION: ROBLOXSTUDIO 0x00c364c0
+void Struct_00c364c0::rbx_func_00c364c0(int v)
+{
+    this->val = v;
+}
+
+struct Struct_00cc0c40 { char pad[2240]; int val; void rbx_func_00cc0c40(int v); };
+// FUNCTION: ROBLOXSTUDIO 0x00cc0c40
+void Struct_00cc0c40::rbx_func_00cc0c40(int v)
+{
+    this->val = v;
+}
+
+struct Struct_00cf21e0 { char pad[1128]; int val; void rbx_func_00cf21e0(int v); };
+// FUNCTION: ROBLOXSTUDIO 0x00cf21e0
+void Struct_00cf21e0::rbx_func_00cf21e0(int v)
+{
+    this->val = v;
+}
+
+struct Struct_00405360 { char pad[344]; bool val; void rbx_func_00405360(bool v); };
+// FUNCTION: ROBLOXSTUDIO 0x00405360
+void Struct_00405360::rbx_func_00405360(bool v)
+{
+    this->val = v;
+}
