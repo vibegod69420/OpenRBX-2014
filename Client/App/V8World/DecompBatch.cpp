@@ -1149,3 +1149,95 @@ int __fastcall rbx_func_009d8ac0(const Struct_009d8ac0* self)
 {
     return self->val;
 }
+
+struct Struct_009d8ad0 { char pad[648]; int val; };
+// FUNCTION: ROBLOXSTUDIO 0x009d8ad0
+int __fastcall rbx_func_009d8ad0(const Struct_009d8ad0* self)
+{
+    return self->val;
+}
+
+struct Struct_009d8ef0 { char pad[616]; int val; };
+// FUNCTION: ROBLOXSTUDIO 0x009d8ef0
+int __fastcall rbx_func_009d8ef0(const Struct_009d8ef0* self)
+{
+    return self->val;
+}
+
+struct Sub_00b53510 { char pad[52]; int val; };
+struct Struct_00b53510 { char pad[36]; Sub_00b53510* sub; };
+// FUNCTION: ROBLOXSTUDIO 0x00b53510
+int __fastcall rbx_func_00b53510(const Struct_00b53510* self)
+{
+    return self->sub->val;
+}
+
+struct Sub_00b53530 { char pad[4]; int val; };
+struct Struct_00b53530 { char pad[36]; Sub_00b53530* sub; };
+// FUNCTION: ROBLOXSTUDIO 0x00b53530
+int __fastcall rbx_func_00b53530(const Struct_00b53530* self)
+{
+    return self->sub->val;
+}
+
+struct Sub_00b53540 { char pad[100]; int val; };
+struct Struct_00b53540 { char pad[36]; Sub_00b53540* sub; };
+// FUNCTION: ROBLOXSTUDIO 0x00b53540
+int __fastcall rbx_func_00b53540(const Struct_00b53540* self)
+{
+    return self->sub->val;
+}
+
+struct Sub_00b53550 { char pad[36]; int val; };
+struct Struct_00b53550 { char pad[36]; Sub_00b53550* sub; };
+// FUNCTION: ROBLOXSTUDIO 0x00b53550
+int __fastcall rbx_func_00b53550(const Struct_00b53550* self)
+{
+    return self->sub->val;
+}
+
+struct Sub_00b53570 { char pad[68]; int val; };
+struct Struct_00b53570 { char pad[36]; Sub_00b53570* sub; };
+// FUNCTION: ROBLOXSTUDIO 0x00b53570
+int __fastcall rbx_func_00b53570(const Struct_00b53570* self)
+{
+    return self->sub->val;
+}
+
+struct Sub_00b53580 { char pad[84]; int val; };
+struct Struct_00b53580 { char pad[36]; Sub_00b53580* sub; };
+// FUNCTION: ROBLOXSTUDIO 0x00b53580
+int __fastcall rbx_func_00b53580(const Struct_00b53580* self)
+{
+    return self->sub->val;
+}
+
+struct Sub_00b53590 { char pad[20]; int val; };
+struct Struct_00b53590 { char pad[36]; Sub_00b53590* sub; };
+// FUNCTION: ROBLOXSTUDIO 0x00b53590
+int __fastcall rbx_func_00b53590(const Struct_00b53590* self)
+{
+    return self->sub->val;
+}
+
+struct Sub_00b535b0 { char pad[116]; int val; };
+struct Struct_00b535b0 { char pad[36]; Sub_00b535b0* sub; };
+// FUNCTION: ROBLOXSTUDIO 0x00b535b0
+int __fastcall rbx_func_00b535b0(const Struct_00b535b0* self)
+{
+    return self->sub->val;
+}
+
+struct Struct_00c862e0 { char pad[8600]; int val; };
+// FUNCTION: ROBLOXSTUDIO 0x00c862e0
+int __fastcall rbx_func_00c862e0(const Struct_00c862e0* self)
+{
+    return self->val;
+}
+
+struct Struct_00cbd6b0 { char pad[2240]; int val; };
+// FUNCTION: ROBLOXSTUDIO 0x00cbd6b0
+int __fastcall rbx_func_00cbd6b0(const Struct_00cbd6b0* self)
+{
+    return self->val;
+}
