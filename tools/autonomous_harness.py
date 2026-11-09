@@ -559,7 +559,7 @@ def ensure_kaggle_kernel_alive():
         out = (res.stdout or "") + (res.stderr or "")
         if res.returncode == 0 and any(s in out for s in ("KernelWorkerStatus.COMPLETE", "KernelWorkerStatus.ERROR", "KernelWorkerStatus.CANCELLED")):
             log(f"Kaggle kernel status is '{out.strip()}'. Automatically re-pushing {KERNEL_REF} for a fresh 12h Dual-T4 session...")
-            subprocess.run(["kaggle", "kernels", "push", "-p", str(host_dir)], check=False, timeout=30)
+            subprocess.run(["kaggle", "kernels", "push", "-p", str(host_dir), "--accelerator", "NvidiaTeslaT4"], check=False, timeout=30)
     except Exception as e:
         log(f"Kaggle status check warning: {e}")
 
