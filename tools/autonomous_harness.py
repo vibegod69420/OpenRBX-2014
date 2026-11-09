@@ -32,7 +32,7 @@ import update_progress  # noqa: E402
 import verify_tu        # noqa: E402
 
 KERNEL_REF = os.environ.get("KAGGLE_KERNEL_REF", "supahblob/kaggle-qwen-coder-api-server")
-MODEL_NAME = os.environ.get("DECOMP_MODEL", "claude-sonnet-5-5-default")
+MODEL_NAME = os.environ.get("DECOMP_MODEL", "anthropic/claude-sonnet-5@default")
 HARNESS_MODE = os.environ.get("DECOMP_HARNESS", "auto")
 MAX_OUTPUT_TOKENS = int(os.environ.get("DECOMP_MAX_TOKENS", "65536"))
 BACKEND = os.environ.get("DECOMP_BACKEND", "deterministic")
@@ -220,7 +220,7 @@ def discover_kaggle_tunnel_url() -> str | None:
 def call_llm_chat(base_url: str, system_prompt: str, user_prompt: str, max_tokens: int = MAX_OUTPUT_TOKENS) -> str:
     kb_url, kb_key = load_kbench_credentials()
     use_proxy = bool(kb_url) and base_url.rstrip("/") in (kb_url.rstrip("/"), kb_url.rstrip("/") + "/v1")
-    url = (kb_url.rstrip("/") if use_proxy else base_url.rstrip("/")) + "/chat/completions"
+    url = (kb_url.rstrip("/") + "/openapi" if use_proxy else base_url.rstrip("/")) + "/chat/completions"
     payload = {
         "model": MODEL_NAME,
         "messages": [
@@ -237,6 +237,14 @@ def call_llm_chat(base_url: str, system_prompt: str, user_prompt: str, max_token
         "chat_template_kwargs": {"enable_thinking": True},
         "stream": True,
     }
+    if use_proxy:
+        # The Kaggle proxy rejects llama.cpp-only knobs and temperature entirely.
+        payload = {
+            "model": MODEL_NAME,
+            "messages": payload["messages"],
+            "max_tokens": max_tokens,
+            "stream": True,
+        }
     body = json.dumps(payload).encode("utf-8")
     req = urllib.request.Request(
         url,
