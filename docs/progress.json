@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09 20:11:30 UTC",
+  "updated_at": "2026-11-09 20:37:25 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,13 +10,13 @@
   "fragment_entries": 21388,
   "compiler_thunk_entries": 2184,
   "matchable_coverage_pct": 4.4264,
-  "implemented_total": 752,
-  "function_annotations": 752,
+  "implemented_total": 753,
+  "function_annotations": 753,
   "stub_annotations": 0,
   "perfect_100_count": 752,
-  "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 1.854,
-  "overall_byte_coverage_pct": 0.1877,
+  "average_match_pct": 99.89,
+  "overall_function_coverage_pct": 1.8565,
+  "overall_byte_coverage_pct": 0.1875,
   "functions": [
     {
       "address": "0x00402eb0",
@@ -1009,6 +1009,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00526730",
+      "kind": "FUNCTION",
+      "name": "RobloxWebDoc::onDestroy",
+      "mangled": "?onDestroy@RobloxWebDoc@@QAEXXZ",
+      "file": "Client/RobloxStudio/RobloxWebDoc.cpp",
+      "orig_size": 5,
+      "recomp_size": 5,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00527080",
       "kind": "FUNCTION",
       "name": "InsertAdvancedObjectViewVerb::scalarDeletingDestructorImp",
@@ -1115,8 +1125,8 @@
       "mangled": "?scalarDeletingDestructorImp@RobloxWebDoc@@QAEPAXI@Z",
       "file": "Client/RobloxStudio/RobloxWebDoc.cpp",
       "orig_size": 34,
-      "recomp_size": 34,
-      "match_pct": 100.0
+      "recomp_size": 33,
+      "match_pct": 20.59
     },
     {
       "address": "0x00548d80",
