@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09 21:00:53 UTC",
+  "updated_at": "2026-11-09 21:05:15 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,13 +10,13 @@
   "fragment_entries": 21388,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7602,
-  "matchable_coverage_pct": 8.043,
-  "implemented_total": 758,
-  "function_annotations": 758,
+  "matchable_coverage_pct": 8.0537,
+  "implemented_total": 759,
+  "function_annotations": 759,
   "stub_annotations": 0,
-  "perfect_100_count": 755,
+  "perfect_100_count": 756,
   "average_match_pct": 99.63,
-  "overall_function_coverage_pct": 1.8688,
+  "overall_function_coverage_pct": 1.8713,
   "overall_byte_coverage_pct": 0.1876,
   "functions": [
     {
@@ -6312,11 +6312,21 @@
     {
       "address": "0x00b5b3d0",
       "kind": "FUNCTION",
-      "name": "RBX::Assembly::scalarDeletingDestructor",
+      "name": "RBX::RBX::Assembly::scalarDeletingDestructor",
       "mangled": "?scalarDeletingDestructor@Assembly@RBX@@QAEPAXI@Z",
       "file": "Client/App/v8world/Assembly.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b5c020",
+      "kind": "FUNCTION",
+      "name": "onDestroy",
+      "mangled": "?onDestroy@Assembly@RBX@2@QAEXXZ",
+      "file": "Client/App/v8world/Assembly.cpp",
+      "orig_size": 5,
+      "recomp_size": 5,
       "match_pct": 100.0
     },
     {
