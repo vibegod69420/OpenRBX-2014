@@ -980,3 +980,10 @@ void Struct_00ce7930::RBX_Network_ProfiledRakPeer_vslot59_00ce7930(bool v)
 {
     this->val = v;
 }
+
+struct Struct_00c90a00 { char pad[128]; int val; void AV_indirect_streambuf_V_basic_gzip_compresso_vslot15_00c90a00(int v); };
+// FUNCTION: ROBLOXSTUDIO 0x00c90a00
+void Struct_00c90a00::AV_indirect_streambuf_V_basic_gzip_compresso_vslot15_00c90a00(int v)
+{
+    this->val = v;
+}
