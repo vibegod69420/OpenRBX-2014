@@ -228,3 +228,87 @@ int __fastcall RBX_Graphics_ShaderProgramGL_vslot5_0060bbc0(const Struct_0060bbc
 {
     return self->val;
 }
+
+struct Struct_00613570 { char pad[36]; int member; };
+// FUNCTION: ROBLOXSTUDIO 0x00613570
+const int* __fastcall RBX_Graphics_AdornRender_vslot3_00613570(const Struct_00613570* self)
+{
+    return &self->member;
+}
+
+struct Struct_006b1400 { char pad[48]; int val; };
+// FUNCTION: ROBLOXSTUDIO 0x006b1400
+int __fastcall AVCSourceStream_vslot4_006b1400(const Struct_006b1400* self)
+{
+    return self->val;
+}
+
+struct Struct_00851020 { char pad[12]; bool val; };
+// FUNCTION: ROBLOXSTUDIO 0x00851020
+bool __fastcall AV_numpunct_D_std_vslot3_00851020(const Struct_00851020* self)
+{
+    return self->val;
+}
+
+struct Struct_008510f0 { char pad[13]; bool val; };
+// FUNCTION: ROBLOXSTUDIO 0x008510f0
+bool __fastcall AV_numpunct_D_std_vslot4_008510f0(const Struct_008510f0* self)
+{
+    return self->val;
+}
+
+struct Struct_0087bad0 { char pad[65]; bool val; };
+// FUNCTION: ROBLOXSTUDIO 0x0087bad0
+bool __fastcall RBX_PathInterpolatedCFrame_vslot15_0087bad0(const Struct_0087bad0* self)
+{
+    return self->val;
+}
+
+struct Struct_00892dc0 { char pad[64]; bool val; };
+// FUNCTION: ROBLOXSTUDIO 0x00892dc0
+bool __fastcall RBX_PathInterpolatedCFrame_vslot6_00892dc0(const Struct_00892dc0* self)
+{
+    return self->val;
+}
+
+struct Struct_00a9d6d0 { char pad[32]; bool val; };
+// FUNCTION: ROBLOXSTUDIO 0x00a9d6d0
+bool __fastcall AV_FactoryProduct_VHandles_RBX_VHandlesBase__vslot1_00a9d6d0(const Struct_00a9d6d0* self)
+{
+    return self->val;
+}
+
+struct Struct_00b61fa0 { char pad[4]; int member; };
+// FUNCTION: ROBLOXSTUDIO 0x00b61fa0
+const int* __fastcall RBX_MegaClusterPoly_vslot31_00b61fa0(const Struct_00b61fa0* self)
+{
+    return &self->member;
+}
+
+struct Struct_00b8daf0 { char pad[40]; bool val; };
+// FUNCTION: ROBLOXSTUDIO 0x00b8daf0
+bool __fastcall RBX_PointToPointBreakConnector_vslot5_00b8daf0(const Struct_00b8daf0* self)
+{
+    return self->val;
+}
+
+struct Struct_00bda810 { char pad[76]; int val; };
+// FUNCTION: ROBLOXSTUDIO 0x00bda810
+int __fastcall RBX_BuoyancyContact_vslot10_00bda810(const Struct_00bda810* self)
+{
+    return self->val;
+}
+
+struct Struct_00c81470 { char pad[88]; bool val; };
+// FUNCTION: ROBLOXSTUDIO 0x00c81470
+bool __fastcall AV_stream_buffer_U_basic_array_source_D_iost_vslot17_00c81470(const Struct_00c81470* self)
+{
+    return self->val;
+}
+
+struct Struct_00c81ba0 { char pad[60]; int member; };
+// FUNCTION: ROBLOXSTUDIO 0x00c81ba0
+const int* __fastcall AV_indirect_streambuf_V_basic_gzip_compresso_vslot21_00c81ba0(const Struct_00c81ba0* self)
+{
+    return &self->member;
+}
