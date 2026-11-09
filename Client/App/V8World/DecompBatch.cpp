@@ -312,3 +312,75 @@ const int* __fastcall AV_indirect_streambuf_V_basic_gzip_compresso_vslot21_00c81
 {
     return &self->member;
 }
+
+// FUNCTION: ROBLOXSTUDIO 0x004254f0
+int __stdcall AV_sp_counted_impl_p_Udir_itr_imp_detail_fil_vslot3_004254f0(int a0)
+{
+    return 0;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00428200
+int __stdcall RBX_DS_CAudioStream_vslot3_00428200(int a0, int a1, int a2, int a3, int a4, int a5, int a6, int a7)
+{
+    return 0;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x0042f340
+bool __stdcall RBX_StringValue_vslot19_0042f340(int a0)
+{
+    return true;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00441ef0
+int __stdcall AVNoEditDelegate_vslot13_00441ef0(int a0, int a1, int a2)
+{
+    return 0;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00470510
+int __stdcall AVCSourceStream_vslot7_00470510(int a0, int a1)
+{
+    return 0;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00470520
+bool __stdcall AV_FactoryProduct_VBlockMesh_RBX_VBevelMesh__vslot16_00470520(int a0)
+{
+    return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x0049b840
+bool __stdcall RBX_CSGMeshSgCore_vslot10_0049b840(int a0, int a1)
+{
+    return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x006b5cd0
+int __stdcall AVwindows_file_codecvt_vslot8_006b5cd0(int a0, int a1, int a2, int a3)
+{
+    return 0;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00889850
+bool __stdcall RBX_RootInstance_vslot8_00889850(int a0, int a1, int a2, int a3)
+{
+    return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x0099d780
+bool __stdcall RBX_Geometry_vslot27_0099d780(int a0, int a1, int a2)
+{
+    return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00c53720
+bool __stdcall RBX_Ball_vslot19_00c53720(int a0, int a1, int a2, int a3, int a4)
+{
+    return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00ce9230
+bool __stdcall RBX_Network_ProfiledRakPeer_vslot52_00ce9230(int a0, int a1, int a2, int a3, int a4, int a5)
+{
+    return false;
+}
