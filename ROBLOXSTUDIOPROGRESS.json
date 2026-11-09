@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09 21:25:42 UTC",
+  "updated_at": "2026-11-09 21:27:36 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21388,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7602,
-  "matchable_coverage_pct": 8.1283,
-  "implemented_total": 767,
-  "function_annotations": 767,
+  "matchable_coverage_pct": 8.1389,
+  "implemented_total": 768,
+  "function_annotations": 768,
   "stub_annotations": 0,
-  "perfect_100_count": 763,
+  "perfect_100_count": 764,
   "average_match_pct": 99.53,
-  "overall_function_coverage_pct": 1.891,
-  "overall_byte_coverage_pct": 0.188,
+  "overall_function_coverage_pct": 1.8934,
+  "overall_byte_coverage_pct": 0.1882,
   "functions": [
     {
       "address": "0x00402eb0",
@@ -6077,6 +6077,16 @@
       "file": "Client/App/v8datamodel/OcclusionRequest.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a8d9a0",
+      "kind": "FUNCTION",
+      "name": "RBX::Motor6D::slotLoadFloat_00a8d9a0",
+      "mangled": "?slotLoadFloat_00a8d9a0@Motor6D@RBX@@QAEMXZ",
+      "file": "Client/App/v8world/Motor6D.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
       "match_pct": 100.0
     },
     {

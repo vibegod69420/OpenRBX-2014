@@ -52,3 +52,13 @@
 {"ts": "2026-11-09T21:24:46", "address": "0x00856210", "matched": false, "best_pct": 0.0, "name": "", "backend": "kbench"}
 {"ts": "2026-11-09T21:25:00", "address": "0x008e3c90", "matched": false, "best_pct": 0.0, "name": "", "backend": "kbench"}
 {"ts": "2026-11-09T21:25:05", "address": "0x0090fff0", "matched": true, "best_pct": 100.0, "name": "RBX::Seat::someMethod", "backend": "kbench"}
+{"ts": "2026-11-09T21:25:57", "address": "0x00913d00", "matched": false, "best_pct": 0.0, "name": "", "backend": "kbench"}
+{"ts": "2026-11-09T21:26:09", "address": "0x00913e00", "matched": false, "best_pct": 0.0, "name": "", "backend": "kbench"}
+{"ts": "2026-11-09T21:26:19", "address": "0x00913e10", "matched": false, "best_pct": 0.0, "name": "", "backend": "kbench"}
+{"ts": "2026-11-09T21:26:32", "address": "0x0091a6d0", "matched": false, "best_pct": 0.0, "name": "", "backend": "kbench"}
+{"ts": "2026-11-09T21:26:35", "address": "0x00924110", "matched": false, "best_pct": 0.0, "name": "", "backend": "kbench"}
+{"ts": "2026-11-09T21:26:45", "address": "0x00a2d1f0", "matched": false, "best_pct": 0.0, "name": "", "backend": "kbench"}
+{"ts": "2026-11-09T21:26:56", "address": "0x00a2d200", "matched": false, "best_pct": 0.0, "name": "", "backend": "kbench"}
+{"ts": "2026-11-09T21:27:10", "address": "0x00a2f020", "matched": false, "best_pct": 0.0, "name": "", "backend": "kbench"}
+{"ts": "2026-11-09T21:27:23", "address": "0x00a33490", "matched": false, "best_pct": 0.0, "name": "", "backend": "kbench"}
+{"ts": "2026-11-09T21:27:30", "address": "0x00a8d9a0", "matched": true, "best_pct": 100.0, "name": "RBX::Motor6D::slotLoadFloat_00a8d9a0", "backend": "kbench"}

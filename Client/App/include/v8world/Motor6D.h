@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	float slotLoadFloat_00a8d9a0();
 	// AUTO-GENERATED METHODS
 };
 
