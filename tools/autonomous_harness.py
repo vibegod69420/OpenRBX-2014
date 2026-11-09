@@ -380,7 +380,7 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
     target_cpp.parent.mkdir(parents=True, exist_ok=True)
     if not target_cpp.exists():
         target_cpp.write_text(
-            '#include "decomp.h"\n#include <stdint.h>\n\nextern "C" volatile uint32_t g_rbx_stub_sink = 0;\n',
+            '#include "decomp.h"\n\nextern "C" volatile uint32_t g_rbx_stub_sink = 0;\n',
             encoding="utf-8",
         )
 

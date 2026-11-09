@@ -1,5 +1,17 @@
 #pragma once
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1600
 #include <stdint.h>
+#else
+typedef signed char int8_t;
+typedef unsigned char uint8_t;
+typedef short int16_t;
+typedef unsigned short uint16_t;
+typedef int int32_t;
+typedef unsigned int uint32_t;
+typedef __int64 int64_t;
+typedef unsigned __int64 uint64_t;
+#endif
 
 #if defined(_MSC_VER)
 #define RBX_NOINLINE __declspec(noinline)
@@ -12,5 +24,3 @@
 // Prevents MSVC /OPT:ICF from folding unimplemented stubs into the same address
 extern "C" volatile uint32_t g_rbx_stub_sink;
 #define UNK_STUB(addr) do { g_rbx_stub_sink = (uint32_t)(addr); } while (0)
-
-#define STATIC_ASSERT_SIZE(type, size) static_assert(sizeof(type) == (size), "Size mismatch for " #type)
