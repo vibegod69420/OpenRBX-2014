@@ -1061,13 +1061,18 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
             )
             continue
 
-        if re.search(r"__asm", candidate_cpp_snippet):
+        if re.search(r"_+asm", candidate_cpp_snippet, re.IGNORECASE):
             log(f"  [0x{addr:08x} Attempt {attempt}] rejected inline-assembly snippet (not verifiable C++)")
             continue
 
         member_decl = _declaration_from_llm_snippet(candidate_cpp_snippet, route["class_name"])
         if member_decl:
-            source_router.ensure_class_header_and_cpp(route, method_decl=member_decl)
+            name_match = re.search(r"(\w+)\s*\(", member_decl)
+            already = bool(
+                name_match and re.search(r"" + re.escape(name_match.group(1)) + r"\s*\(", h_path.read_text(encoding="utf-8"))
+            )
+            if not already:
+                source_router.ensure_class_header_and_cpp(route, method_decl=member_decl)
 
         source_router.append_method_to_cpp(cpp_path, candidate_cpp_snippet)
         ok, obj_path, compiler_out = verify_tu.compile_cpp_to_coff(cpp_path, use_cache=False)
