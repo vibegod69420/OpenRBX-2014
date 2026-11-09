@@ -27,6 +27,7 @@ public:
 	void setField44(int value);
 	void onDestroy();
 	void* scalarDeletingDestructor(unsigned int flags);
+	void* scalarDeletingDestructor_f310(unsigned int flags);
 	// AUTO-GENERATED METHODS
 };
 

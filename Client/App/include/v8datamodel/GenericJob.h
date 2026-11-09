@@ -20,6 +20,8 @@ public:
 
 	void onDestroy();
 	void* scalarDeletingDestructor(unsigned int flags);
+	void* scalarDeletingDestructor_a0b0(unsigned int flags);
+	void* scalarDeletingDestructor_a110(unsigned int flags);
 	// AUTO-GENERATED METHODS
 };
 

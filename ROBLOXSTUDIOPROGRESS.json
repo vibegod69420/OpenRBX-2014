@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-09 17:20:33 UTC",
+  "updated_at": "2026-11-09 17:20:44 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "MSVC 11.0 (Visual Studio 2012 x86)",
   "total_binary_functions": 40561,
   "total_binary_bytes": 9574526,
-  "implemented_total": 746,
-  "function_annotations": 746,
+  "implemented_total": 766,
+  "function_annotations": 766,
   "stub_annotations": 0,
-  "perfect_100_count": 727,
-  "average_match_pct": 98.78,
-  "overall_function_coverage_pct": 1.8392,
-  "overall_byte_coverage_pct": 0.1841,
+  "perfect_100_count": 747,
+  "average_match_pct": 98.82,
+  "overall_function_coverage_pct": 1.8885,
+  "overall_byte_coverage_pct": 0.191,
   "functions": [
     {
       "address": "0x00402eb0",
@@ -4423,6 +4423,56 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0080e610",
+      "kind": "FUNCTION",
+      "name": "RBX::alue::scalarDeletingDestructor_e610",
+      "mangled": "?scalarDeletingDestructor_e610@alue@RBX@@QAEPAXI@Z",
+      "file": "Client/App/v8datamodel/alue.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080e640",
+      "kind": "FUNCTION",
+      "name": "RBX::alue::scalarDeletingDestructor_e640",
+      "mangled": "?scalarDeletingDestructor_e640@alue@RBX@@QAEPAXI@Z",
+      "file": "Client/App/v8datamodel/alue.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080e670",
+      "kind": "FUNCTION",
+      "name": "RBX::alue::scalarDeletingDestructor_e670",
+      "mangled": "?scalarDeletingDestructor_e670@alue@RBX@@QAEPAXI@Z",
+      "file": "Client/App/v8datamodel/alue.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080e6a0",
+      "kind": "FUNCTION",
+      "name": "RBX::alue::scalarDeletingDestructor_e6a0",
+      "mangled": "?scalarDeletingDestructor_e6a0@alue@RBX@@QAEPAXI@Z",
+      "file": "Client/App/v8datamodel/alue.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080e6d0",
+      "kind": "FUNCTION",
+      "name": "RBX::alue::scalarDeletingDestructor_e6d0",
+      "mangled": "?scalarDeletingDestructor_e6d0@alue@RBX@@QAEPAXI@Z",
+      "file": "Client/App/v8datamodel/alue.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00825850",
       "kind": "FUNCTION",
       "name": "RBX::ContextActionService::getGlobal_5850",
@@ -4430,6 +4480,26 @@
       "file": "Client/App/v8datamodel/ContextActionService.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00825fb0",
+      "kind": "FUNCTION",
+      "name": "RBX::ModuleScript::scalarDeletingDestructor",
+      "mangled": "?scalarDeletingDestructor@ModuleScript@RBX@@QAEPAXI@Z",
+      "file": "Client/App/script/ModuleScript.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00829e40",
+      "kind": "FUNCTION",
+      "name": "RBX::PVInstance::scalarDeletingDestructor",
+      "mangled": "?scalarDeletingDestructor@PVInstance@RBX@@QAEPAXI@Z",
+      "file": "Client/App/v8datamodel/PVInstance.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -4493,10 +4563,30 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0084a0b0",
+      "kind": "FUNCTION",
+      "name": "RBX::DataModel::GenericJob::scalarDeletingDestructor_a0b0",
+      "mangled": "?scalarDeletingDestructor_a0b0@GenericJob@DataModel@RBX@@QAEPAXI@Z",
+      "file": "Client/App/v8datamodel/GenericJob.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0084a0e0",
       "kind": "FUNCTION",
       "name": "RBX::DataModel::GenericJob::scalarDeletingDestructor",
       "mangled": "?scalarDeletingDestructor@GenericJob@DataModel@RBX@@QAEPAXI@Z",
+      "file": "Client/App/v8datamodel/GenericJob.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0084a110",
+      "kind": "FUNCTION",
+      "name": "RBX::DataModel::GenericJob::scalarDeletingDestructor_a110",
+      "mangled": "?scalarDeletingDestructor_a110@GenericJob@DataModel@RBX@@QAEPAXI@Z",
       "file": "Client/App/v8datamodel/GenericJob.cpp",
       "orig_size": 33,
       "recomp_size": 33,
@@ -4633,6 +4723,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0086c470",
+      "kind": "FUNCTION",
+      "name": "RBX::Lua::WeakFunctionRef::scalarDeletingDestructor_c470",
+      "mangled": "?scalarDeletingDestructor_c470@WeakFunctionRef@Lua@RBX@@QAEPAXI@Z",
+      "file": "Client/App/script/WeakFunctionRef.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0086c4a0",
+      "kind": "FUNCTION",
+      "name": "RBX::Lua::WeakFunctionRef::scalarDeletingDestructor_c4a0",
+      "mangled": "?scalarDeletingDestructor_c4a0@WeakFunctionRef@Lua@RBX@@QAEPAXI@Z",
+      "file": "Client/App/script/WeakFunctionRef.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0086c4d0",
       "kind": "FUNCTION",
       "name": "RBX::Lua::WeakFunctionRef::scalarDeletingDestructor",
@@ -4653,6 +4763,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0087b670",
+      "kind": "FUNCTION",
+      "name": "RBX::TextLabel::scalarDeletingDestructor",
+      "mangled": "?scalarDeletingDestructor@TextLabel@RBX@@QAEPAXI@Z",
+      "file": "Client/App/v8datamodel/TextLabel.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0087bad0",
       "kind": "FUNCTION",
       "name": "RBX::PathInterpolatedCFrame::getFlag41",
@@ -4660,6 +4780,46 @@
       "file": "Client/App/util/PathInterpolatedCFrame.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0087dc70",
+      "kind": "FUNCTION",
+      "name": "RBX::GuiTextButton::scalarDeletingDestructor",
+      "mangled": "?scalarDeletingDestructor@GuiTextButton@RBX@@QAEPAXI@Z",
+      "file": "Client/App/v8datamodel/GuiTextButton.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008807a0",
+      "kind": "FUNCTION",
+      "name": "RBX::TextBox::scalarDeletingDestructor",
+      "mangled": "?scalarDeletingDestructor@TextBox@RBX@@QAEPAXI@Z",
+      "file": "Client/App/v8datamodel/TextBox.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00884680",
+      "kind": "FUNCTION",
+      "name": "RBX::GuiImageButton::scalarDeletingDestructor",
+      "mangled": "?scalarDeletingDestructor@GuiImageButton@RBX@@QAEPAXI@Z",
+      "file": "Client/App/v8datamodel/GuiImageButton.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008857a0",
+      "kind": "FUNCTION",
+      "name": "RBX::ImageLabel::scalarDeletingDestructor",
+      "mangled": "?scalarDeletingDestructor@ImageLabel@RBX@@QAEPAXI@Z",
+      "file": "Client/App/v8datamodel/ImageLabel.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -4683,11 +4843,31 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0088f160",
+      "kind": "FUNCTION",
+      "name": "RBX::FWPartInstance::scalarDeletingDestructor",
+      "mangled": "?scalarDeletingDestructor@FWPartInstance@RBX@@QAEPAXI@Z",
+      "file": "Client/App/v8datamodel/FWPartInstance.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0088f2e0",
       "kind": "FUNCTION",
       "name": "RBX::PartInstance::OnDemandPartInstance::scalarDeletingDestructor",
       "mangled": "?scalarDeletingDestructor@OnDemandPartInstance@PartInstance@RBX@@QAEPAXI@Z",
       "file": "Client/App/v8datamodel/OnDemandPartInstance.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0088f310",
+      "kind": "FUNCTION",
+      "name": "RBX::PathInterpolatedCFrame::scalarDeletingDestructor_f310",
+      "mangled": "?scalarDeletingDestructor_f310@PathInterpolatedCFrame@RBX@@QAEPAXI@Z",
+      "file": "Client/App/util/PathInterpolatedCFrame.cpp",
       "orig_size": 33,
       "recomp_size": 33,
       "match_pct": 100.0
@@ -4763,10 +4943,30 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0089a340",
+      "kind": "FUNCTION",
+      "name": "RBX::Selection::scalarDeletingDestructor",
+      "mangled": "?scalarDeletingDestructor@Selection@RBX@@QAEPAXI@Z",
+      "file": "Client/App/v8datamodel/Selection.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008a1010",
       "kind": "FUNCTION",
       "name": "RBX::MegaClusterInstance::scalarDeletingDestructor",
       "mangled": "?scalarDeletingDestructor@MegaClusterInstance@RBX@@QAEPAXI@Z",
+      "file": "Client/App/v8datamodel/MegaClusterInstance.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008a1100",
+      "kind": "FUNCTION",
+      "name": "RBX::MegaClusterInstance::scalarDeletingDestructor_1100",
+      "mangled": "?scalarDeletingDestructor_1100@MegaClusterInstance@RBX@@QAEPAXI@Z",
       "file": "Client/App/v8datamodel/MegaClusterInstance.cpp",
       "orig_size": 33,
       "recomp_size": 33,

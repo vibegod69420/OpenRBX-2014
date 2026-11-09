@@ -76,6 +76,51 @@ void* alue::scalarDeletingDestructor_e5e0(unsigned int flags)
 	return this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0080e610
+void* alue::scalarDeletingDestructor_e610(unsigned int flags)
+{
+	onDestroy();
+	if (flags & 1)
+		rbx_free_mem(this);
+	return this;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x0080e640
+void* alue::scalarDeletingDestructor_e640(unsigned int flags)
+{
+	onDestroy();
+	if (flags & 1)
+		rbx_free_mem(this);
+	return this;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x0080e670
+void* alue::scalarDeletingDestructor_e670(unsigned int flags)
+{
+	onDestroy();
+	if (flags & 1)
+		rbx_free_mem(this);
+	return this;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x0080e6a0
+void* alue::scalarDeletingDestructor_e6a0(unsigned int flags)
+{
+	onDestroy();
+	if (flags & 1)
+		rbx_free_mem(this);
+	return this;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x0080e6d0
+void* alue::scalarDeletingDestructor_e6d0(unsigned int flags)
+{
+	onDestroy();
+	if (flags & 1)
+		rbx_free_mem(this);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
