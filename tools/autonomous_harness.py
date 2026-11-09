@@ -226,12 +226,12 @@ def call_llm_chat(base_url: str, system_prompt: str, user_prompt: str, max_token
                 reasoning_parts.append(delta["reasoning_content"])
     content = "".join(content_parts)
     reasoning = "".join(reasoning_parts)
-        if reasoning:
-            log(f"    [MoE-REASONING] Model generated {len(reasoning)} chars of deep thinking chain (budget={max_tokens})")
-        content = re.sub(r"<think>.*?</think>", "", content, flags=re.DOTALL).strip()
-        if not content and "`" in reasoning:
-            content = reasoning
-        return content
+    if reasoning:
+        log(f"    [MoE-REASONING] Model generated {len(reasoning)} chars of deep thinking chain (budget={max_tokens})")
+    content = re.sub(r"<think>.*?</think>", "", content, flags=re.DOTALL).strip()
+    if not content and "`" in reasoning:
+        content = reasoning
+    return content
 
 
 def promote_marker(cpp_path: Path, addr: int) -> bool:
