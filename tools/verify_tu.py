@@ -82,6 +82,14 @@ def parse_annotations_in_cpp(cpp_path: Path) -> list[tuple[int, str, str]]:
     results = []
     ann_re = re.compile(r"//\s*(FUNCTION|STUB):\s*ROBLOXSTUDIO\s+0x([0-9a-fA-F]+)")
     sig_re = re.compile(r"([A-Za-z_~][A-Za-z0-9_:~<>]*)\s*\(")
+    ns_re = re.compile(r"^\s*namespace\s+([A-Za-z_][A-Za-z0-9_]*)\s*\{")
+
+    active_ns = []
+    for line in lines:
+        nm = ns_re.match(line)
+        if nm:
+            active_ns.append(nm.group(1))
+    ns_prefix = "::".join(active_ns)
 
     for i, line in enumerate(lines):
         m = ann_re.search(line)
@@ -90,11 +98,18 @@ def parse_annotations_in_cpp(cpp_path: Path) -> list[tuple[int, str, str]]:
             addr = int(m.group(2), 16)
             fn_hint = ""
             for j in range(i + 1, min(i + 8, len(lines))):
-                if lines[j].strip().startswith("//"):
+                sline = lines[j].strip()
+                if sline.startswith("//") or not sline:
                     continue
-                sm = sig_re.search(lines[j])
-                if sm:
-                    fn_hint = sm.group(1).split("::")[-1]
+                for m_cand in sig_re.finditer(sline):
+                    cand = m_cand.group(1)
+                    if cand not in ("if", "while", "for", "switch", "return", "sizeof", "alignof", "__declspec"):
+                        if ns_prefix and "::" in cand and not cand.startswith(ns_prefix):
+                            fn_hint = f"{ns_prefix}::{cand}"
+                        else:
+                            fn_hint = cand
+                        break
+                if fn_hint:
                     break
             results.append((addr, kind, fn_hint))
     return results
@@ -141,9 +156,21 @@ def get_msvc_env() -> dict[str, str]:
     return _MSVC_ENV_CACHE
 
 
-def compile_cpp_to_coff(cpp_path: Path) -> tuple[bool, Path, str]:
+def compile_cpp_to_coff(cpp_path: Path, use_cache: bool = False) -> tuple[bool, Path, str]:
     BUILD_OBJ_DIR.mkdir(parents=True, exist_ok=True)
-    obj_path = BUILD_OBJ_DIR / (cpp_path.stem + ".obj")
+    try:
+        rel_slug = "_".join(cpp_path.resolve().relative_to(ROOT.resolve()).parts)[:-4]
+    except Exception:
+        rel_slug = cpp_path.stem
+    obj_path = BUILD_OBJ_DIR / f"{rel_slug}.obj"
+
+    if use_cache and obj_path.exists():
+        try:
+            if obj_path.stat().st_mtime >= cpp_path.stat().st_mtime:
+                return True, obj_path, ""
+        except Exception:
+            pass
+
     if obj_path.exists():
         obj_path.unlink()
 
@@ -151,7 +178,10 @@ def compile_cpp_to_coff(cpp_path: Path) -> tuple[bool, Path, str]:
         f'/I"{ROOT / "util"}"',
         f'/I"{ROOT / "Client" / "Base" / "include"}"',
         f'/I"{ROOT / "Client" / "App" / "include"}"',
+        f'/I"{ROOT / "Client" / "Network" / "include"}"',
         f'/I"{ROOT / "Client" / "Rendering" / "G3D" / "include"}"',
+        f'/I"{ROOT / "Client" / "Rendering" / "g3d" / "include"}"',
+        f'/I"{cpp_path.parent}"',
     ]
     flags = "/nologo /c /O2 /Ob2 /Oi /Ot /Oy- /GS /EHsc /GR /Gy /fp:precise /Zc:wchar_t /Zc:forScope"
     cmd_str = f'cl.exe {flags} {" ".join(includes)} "{cpp_path}" /Fo"{obj_path}"'
@@ -288,9 +318,10 @@ def main():
         best_diff = []
         best_recomp_len = 0
 
+        short_hint = fn_hint.split("::")[-1] if fn_hint else ""
         for sym_name, (recomp_bytes, rel_offsets) in coff_funcs.items():
             pct, diff = compare_with_relocations(orig_bytes, recomp_bytes, rel_offsets)
-            bonus = 10.0 if (fn_hint and fn_hint in sym_name) else 0.0
+            bonus = 10.0 if (short_hint and short_hint in sym_name) else 0.0
             if pct + bonus > best_pct:
                 best_pct = pct + bonus
                 actual_pct = pct

@@ -1,0 +1,25 @@
+#ifndef CLIENT_APP_INCLUDE_V8DATAMODEL_ECTOR3VALUE_H
+#define CLIENT_APP_INCLUDE_V8DATAMODEL_ECTOR3VALUE_H
+
+#include "decomp.h"
+
+namespace RBX {
+
+// AUTO-GENERATED HELPERS
+
+// VTABLE: ROBLOXSTUDIO 0x00e5a564
+class ector3Value
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+} // namespace RBX
+
+#endif // CLIENT_APP_INCLUDE_V8DATAMODEL_ECTOR3VALUE_H

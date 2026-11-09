@@ -1,0 +1,25 @@
+#ifndef CLIENT_APP_INCLUDE_V8DATAMODEL_VECTOR3_2INTS_H
+#define CLIENT_APP_INCLUDE_V8DATAMODEL_VECTOR3_2INTS_H
+
+#include "decomp.h"
+
+namespace RBX {
+
+// AUTO-GENERATED HELPERS
+
+// VTABLE: ROBLOXSTUDIO 0x00edec00
+class Vector3_2Ints
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+} // namespace RBX
+
+#endif // CLIENT_APP_INCLUDE_V8DATAMODEL_VECTOR3_2INTS_H

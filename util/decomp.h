@@ -21,6 +21,22 @@ typedef unsigned __int64 uint64_t;
 #define RBX_FORCEINLINE inline __attribute__((always_inline))
 #endif
 
+#define DECOMP_SIZE_ASSERT(T, sz) typedef char _decomp_size_assert_##T[(sizeof(T) == (sz)) ? 1 : -1]
+
 // Prevents MSVC /OPT:ICF from folding unimplemented stubs into the same address
 extern "C" volatile uint32_t g_rbx_stub_sink;
+extern "C" void __cdecl rbx_free_mem(void* p);
+extern "C" __declspec(dllimport) void __cdecl rbx_free_mem_imp(void* p);
+
 #define UNK_STUB(addr) do { g_rbx_stub_sink = (uint32_t)(addr); } while (0)
+
+struct RbxVDelBase
+{
+	virtual ~RbxVDelBase();
+};
+
+struct RbxPairInt
+{
+	int first;
+	int second;
+};

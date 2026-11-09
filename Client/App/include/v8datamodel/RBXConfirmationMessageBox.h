@@ -1,0 +1,25 @@
+#ifndef CLIENT_APP_INCLUDE_V8DATAMODEL_RBXCONFIRMATIONMESSAGEBOX_H
+#define CLIENT_APP_INCLUDE_V8DATAMODEL_RBXCONFIRMATIONMESSAGEBOX_H
+
+#include "decomp.h"
+
+namespace QtUtilities {
+
+// AUTO-GENERATED HELPERS
+
+// VTABLE: ROBLOXSTUDIO 0x01011970
+class RBXConfirmationMessageBox
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+} // namespace QtUtilities
+
+#endif // CLIENT_APP_INCLUDE_V8DATAMODEL_RBXCONFIRMATIONMESSAGEBOX_H

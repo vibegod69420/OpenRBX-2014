@@ -1,0 +1,25 @@
+#ifndef CLIENT_APP_INCLUDE_V8DATAMODEL_SCRIPTMOUSECOMMAND_H
+#define CLIENT_APP_INCLUDE_V8DATAMODEL_SCRIPTMOUSECOMMAND_H
+
+#include "decomp.h"
+
+namespace RBX {
+
+// AUTO-GENERATED HELPERS
+
+// VTABLE: ROBLOXSTUDIO 0x00ed57c4
+class ScriptMouseCommand
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+} // namespace RBX
+
+#endif // CLIENT_APP_INCLUDE_V8DATAMODEL_SCRIPTMOUSECOMMAND_H

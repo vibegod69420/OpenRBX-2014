@@ -1,0 +1,27 @@
+#ifndef CLIENT_APP_INCLUDE_V8KERNEL_BTCONVEXHULLSHAPE_H
+#define CLIENT_APP_INCLUDE_V8KERNEL_BTCONVEXHULLSHAPE_H
+
+#include "decomp.h"
+
+
+
+// AUTO-GENERATED HELPERS
+
+// VTABLE: ROBLOXSTUDIO 0x01036c9c
+class btConvexHullShape
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	int getConst17001568() const;
+	int getConst68() const;
+	// AUTO-GENERATED METHODS
+};
+
+
+
+#endif // CLIENT_APP_INCLUDE_V8KERNEL_BTCONVEXHULLSHAPE_H

@@ -10,7 +10,6 @@ Usage:
 """
 
 import argparse
-import csv
 import datetime
 import json
 import subprocess
@@ -39,13 +38,14 @@ def evaluate_all_client_files():
             anns = verify_tu.parse_annotations_in_cpp(cpp_path)
             if not anns:
                 continue
-            ok, obj_path, compiler_out = verify_tu.compile_cpp_to_coff(cpp_path)
+            ok, obj_path, compiler_out = verify_tu.compile_cpp_to_coff(cpp_path, use_cache=True)
             coff_funcs = verify_tu.parse_coff_functions(obj_path) if ok else {}
             rel_file = str(cpp_path.relative_to(ROOT)).replace("\\", "/")
 
             for addr, kind, fn_hint in anns:
                 sz = sizes.get(addr, 16)
                 orig_bytes = verify_tu.get_original_function_bytes(addr, sz)
+                short_hint = fn_hint.split("::")[-1] if fn_hint else ""
                 best_sym = fn_hint or f"func_0x{addr:08x}"
                 actual_pct = 0.0
                 recomp_len = 0
@@ -54,7 +54,11 @@ def evaluate_all_client_files():
                     best_score = -1.0
                     for sym_name, (recomp_bytes, rel_offsets) in coff_funcs.items():
                         pct, _ = verify_tu.compare_with_relocations(orig_bytes, recomp_bytes, rel_offsets)
-                        bonus = 20.0 if (fn_hint and fn_hint in sym_name) else 0.0
+                        bonus = (
+                            20.0
+                            if (short_hint and f"?{short_hint}@" in sym_name)
+                            else (10.0 if (short_hint and short_hint in sym_name) else 0.0)
+                        )
                         if pct + bonus > best_score:
                             best_score = pct + bonus
                             actual_pct = pct
@@ -127,12 +131,13 @@ def write_dashboard_html(summary: dict):
     rows_html = []
     for fn in reversed(summary["functions"]):
         badge_color = "#2ea043" if fn["match_pct"] >= 99.99 else ("#d29922" if fn["match_pct"] >= 75.0 else "#f85149")
+        gh_url = f"https://github.com/vibegod69420/OpenRBX-2014/blob/main/{fn['file']}"
         rows_html.append(
             f"""<tr>
               <td><code>{fn['address']}</code></td>
               <td><span class="tag">{fn['kind']}</span></td>
               <td><strong>{fn['name']}</strong><br><small style="color:#8b949e">{fn['mangled']}</small></td>
-              <td><code>{fn['file']}</code></td>
+              <td><a href="{gh_url}" target="_blank" style="color:var(--accent);text-decoration:none"><code>{fn['file']}</code></a></td>
               <td>{fn['orig_size']} B</td>
               <td><span class="badge" style="background:{badge_color}">{fn['match_pct']:.2f}%</span></td>
             </tr>"""
@@ -258,7 +263,7 @@ def write_dashboard_html(summary: dict):
       <div class="card">
         <div class="label">Agent Harness Status</div>
         <div class="val" style="color: var(--green);">RUNNING 24/7</div>
-        <div class="hint">AWS EC2 Worker + Qwen3.8 Base Model</div>
+        <div class="hint">AWS EC2 + Qwen3.8-35B-A3B MoE (Max Reasoning)</div>
       </div>
     </div>
 

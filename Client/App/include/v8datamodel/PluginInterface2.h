@@ -1,0 +1,25 @@
+#ifndef CLIENT_APP_INCLUDE_V8DATAMODEL_PLUGININTERFACE2_H
+#define CLIENT_APP_INCLUDE_V8DATAMODEL_PLUGININTERFACE2_H
+
+#include "decomp.h"
+
+namespace RakNet {
+
+// AUTO-GENERATED HELPERS
+
+// VTABLE: ROBLOXSTUDIO 0x00f0023c
+class PluginInterface2
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+} // namespace RakNet
+
+#endif // CLIENT_APP_INCLUDE_V8DATAMODEL_PLUGININTERFACE2_H

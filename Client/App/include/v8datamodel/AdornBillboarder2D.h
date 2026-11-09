@@ -1,0 +1,25 @@
+#ifndef CLIENT_APP_INCLUDE_V8DATAMODEL_ADORNBILLBOARDER2D_H
+#define CLIENT_APP_INCLUDE_V8DATAMODEL_ADORNBILLBOARDER2D_H
+
+#include "decomp.h"
+
+namespace RBX {
+
+// AUTO-GENERATED HELPERS
+
+// VTABLE: ROBLOXSTUDIO 0x00f12184
+class AdornBillboarder2D
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+} // namespace RBX
+
+#endif // CLIENT_APP_INCLUDE_V8DATAMODEL_ADORNBILLBOARDER2D_H

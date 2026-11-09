@@ -1,0 +1,26 @@
+#ifndef CLIENT_APP_INCLUDE_V8KERNEL_BTTRIANGLESHAPE_H
+#define CLIENT_APP_INCLUDE_V8KERNEL_BTTRIANGLESHAPE_H
+
+#include "decomp.h"
+
+
+
+// AUTO-GENERATED HELPERS
+
+// VTABLE: ROBLOXSTUDIO 0x01036ae4
+class btTriangleShape
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	int getConst52() const;
+	// AUTO-GENERATED METHODS
+};
+
+
+
+#endif // CLIENT_APP_INCLUDE_V8KERNEL_BTTRIANGLESHAPE_H

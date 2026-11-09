@@ -1,0 +1,27 @@
+#ifndef CLIENT_APP_INCLUDE_V8DATAMODEL_PARAMETRICPARTINSTANCE_H
+#define CLIENT_APP_INCLUDE_V8DATAMODEL_PARAMETRICPARTINSTANCE_H
+
+#include "decomp.h"
+
+namespace RBX {
+namespace PART {
+
+// AUTO-GENERATED HELPERS
+
+// VTABLE: ROBLOXSTUDIO 0x00eb65a4
+class ParametricPartInstance
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+} // namespace PART
+} // namespace RBX
+
+#endif // CLIENT_APP_INCLUDE_V8DATAMODEL_PARAMETRICPARTINSTANCE_H

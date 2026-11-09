@@ -1,0 +1,25 @@
+#ifndef CLIENT_NETWORK_INCLUDE_NETWORK_PLAYERMOUSE_H
+#define CLIENT_NETWORK_INCLUDE_NETWORK_PLAYERMOUSE_H
+
+#include "decomp.h"
+
+namespace RBX {
+
+// AUTO-GENERATED HELPERS
+
+// VTABLE: ROBLOXSTUDIO 0x00ec562c
+class PlayerMouse
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+} // namespace RBX
+
+#endif // CLIENT_NETWORK_INCLUDE_NETWORK_PLAYERMOUSE_H

@@ -1,0 +1,25 @@
+#ifndef CLIENT_APP_INCLUDE_V8KERNEL_BTDISPATCHER_H
+#define CLIENT_APP_INCLUDE_V8KERNEL_BTDISPATCHER_H
+
+#include "decomp.h"
+
+
+
+// AUTO-GENERATED HELPERS
+
+// VTABLE: ROBLOXSTUDIO 0x010369b4
+class btDispatcher
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+
+
+#endif // CLIENT_APP_INCLUDE_V8KERNEL_BTDISPATCHER_H

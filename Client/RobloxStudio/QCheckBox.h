@@ -1,0 +1,25 @@
+#ifndef CLIENT_ROBLOXSTUDIO_QCHECKBOX_H
+#define CLIENT_ROBLOXSTUDIO_QCHECKBOX_H
+
+#include "decomp.h"
+
+
+
+// AUTO-GENERATED HELPERS
+
+// VTABLE: ROBLOXSTUDIO 0x0100470c
+class QCheckBox
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+
+
+#endif // CLIENT_ROBLOXSTUDIO_QCHECKBOX_H

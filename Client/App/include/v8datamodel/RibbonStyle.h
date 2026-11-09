@@ -1,0 +1,25 @@
+#ifndef CLIENT_APP_INCLUDE_V8DATAMODEL_RIBBONSTYLE_H
+#define CLIENT_APP_INCLUDE_V8DATAMODEL_RIBBONSTYLE_H
+
+#include "decomp.h"
+
+namespace Qtitan {
+
+// AUTO-GENERATED HELPERS
+
+// VTABLE: ROBLOXSTUDIO 0x01027154
+class RibbonStyle
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+} // namespace Qtitan
+
+#endif // CLIENT_APP_INCLUDE_V8DATAMODEL_RIBBONSTYLE_H

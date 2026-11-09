@@ -1,0 +1,25 @@
+#ifndef CLIENT_ROBLOXSTUDIO_QMENUBAR_H
+#define CLIENT_ROBLOXSTUDIO_QMENUBAR_H
+
+#include "decomp.h"
+
+
+
+// AUTO-GENERATED HELPERS
+
+// VTABLE: ROBLOXSTUDIO 0x0101b37c
+class QMenuBar
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+
+
+#endif // CLIENT_ROBLOXSTUDIO_QMENUBAR_H

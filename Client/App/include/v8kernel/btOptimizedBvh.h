@@ -1,0 +1,26 @@
+#ifndef CLIENT_APP_INCLUDE_V8KERNEL_BTOPTIMIZEDBVH_H
+#define CLIENT_APP_INCLUDE_V8KERNEL_BTOPTIMIZEDBVH_H
+
+#include "decomp.h"
+
+
+
+// AUTO-GENERATED HELPERS
+
+// VTABLE: ROBLOXSTUDIO 0x0103732c
+class btOptimizedBvh
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	int getConst84() const;
+	// AUTO-GENERATED METHODS
+};
+
+
+
+#endif // CLIENT_APP_INCLUDE_V8KERNEL_BTOPTIMIZEDBVH_H

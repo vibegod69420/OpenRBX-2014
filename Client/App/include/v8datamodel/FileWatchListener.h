@@ -1,0 +1,25 @@
+#ifndef CLIENT_APP_INCLUDE_V8DATAMODEL_FILEWATCHLISTENER_H
+#define CLIENT_APP_INCLUDE_V8DATAMODEL_FILEWATCHLISTENER_H
+
+#include "decomp.h"
+
+namespace FW {
+
+// AUTO-GENERATED HELPERS
+
+// VTABLE: ROBLOXSTUDIO 0x01019df8
+class FileWatchListener
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+} // namespace FW
+
+#endif // CLIENT_APP_INCLUDE_V8DATAMODEL_FILEWATCHLISTENER_H
