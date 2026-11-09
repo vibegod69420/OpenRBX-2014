@@ -817,3 +817,21 @@ int __stdcall AV_TypedPropertyDescriptor_VVector2_G3D_Refl_vslot7_007d6ec0(int a
 {
     return 8;
 }
+
+// FUNCTION: ROBLOXSTUDIO 0x007d6ed0
+int __stdcall AV_TypedPropertyDescriptor_VVector3int16_G3D_vslot7_007d6ed0(int a0)
+{
+    return 6;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x007d6ee0
+int __stdcall AV_TypedPropertyDescriptor_N_Reflection_RBX_vslot7_007d6ee0(int a0)
+{
+    return 1;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00892450
+int __stdcall AV_TypedPropertyDescriptor_VCoordinateFrame__vslot7_00892450(int a0)
+{
+    return 48;
+}

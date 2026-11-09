@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-09 15:35:15 UTC",
+  "updated_at": "2026-11-09 15:35:22 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "MSVC 11.0 (Visual Studio 2012 x86)",
   "total_binary_functions": 40561,
   "total_binary_bytes": 9574526,
-  "implemented_total": 127,
-  "function_annotations": 127,
+  "implemented_total": 130,
+  "function_annotations": 130,
   "stub_annotations": 0,
-  "perfect_100_count": 127,
+  "perfect_100_count": 130,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.3131,
-  "overall_byte_coverage_pct": 0.0077,
+  "overall_function_coverage_pct": 0.3205,
+  "overall_byte_coverage_pct": 0.0079,
   "functions": [
     {
       "address": "0x00403b30",
@@ -783,6 +783,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x007d6ed0",
+      "kind": "FUNCTION",
+      "name": "AV_TypedPropertyDescriptor_VVector3int16_G3D_vslot7_007d6ed0",
+      "mangled": "?AV_TypedPropertyDescriptor_VVector3int16_G3D_vslot7_007d6ed0@@YGHH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007d6ee0",
+      "kind": "FUNCTION",
+      "name": "AV_TypedPropertyDescriptor_N_Reflection_RBX_vslot7_007d6ee0",
+      "mangled": "?AV_TypedPropertyDescriptor_N_Reflection_RBX_vslot7_007d6ee0@@YGHH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0082ef60",
       "kind": "FUNCTION",
       "name": "RBX_SetManualJointToStrong_vslot2_0082ef60",
@@ -890,6 +910,16 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 5,
       "recomp_size": 5,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00892450",
+      "kind": "FUNCTION",
+      "name": "AV_TypedPropertyDescriptor_VCoordinateFrame__vslot7_00892450",
+      "mangled": "?AV_TypedPropertyDescriptor_VCoordinateFrame__vslot7_00892450@@YGHH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
       "match_pct": 100.0
     },
     {
