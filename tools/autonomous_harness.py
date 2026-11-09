@@ -1022,9 +1022,7 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
         f"`// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}` inside a ```cpp code block.\n"
         "Do NOT include `main()` or non-existent external headers.\n\n"
         "Write plain C++ only: no `__asm`/inline assembly, no absolute-address calls, and "
-        f"the body must be a member of `{route['class_name']}` with an ordinary signature.
-
-"
+        f"the body must be a member of `{route['class_name']}` with an ordinary signature.\n\n"
         + claude_md
     )
 
