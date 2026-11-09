@@ -1079,7 +1079,7 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
             log(f"  [0x{addr:08x} Attempt {attempt}] dropped redundant namespace qualification from the definition")
             candidate_cpp_snippet = stripped
 
-        if re.search(r"_+asm", candidate_cpp_snippet, re.IGNORECASE):
+        if re.search(r"_*asm", candidate_cpp_snippet, re.IGNORECASE):
             log(f"  [0x{addr:08x} Attempt {attempt}] rejected inline-assembly snippet (not verifiable C++)")
             continue
 
