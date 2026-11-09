@@ -835,3 +835,25 @@ int __stdcall AV_TypedPropertyDescriptor_VCoordinateFrame__vslot7_00892450(int a
 {
     return 48;
 }
+
+// FUNCTION: ROBLOXSTUDIO 0x00402eb0
+int __stdcall RBX_Geometry_vslot17_00402eb0(int a)
+{
+    return a;
+}
+
+struct Sub_006766e0 { char pad[456]; int val; };
+struct Struct_006766e0 { char pad[12]; Sub_006766e0* sub; };
+// FUNCTION: ROBLOXSTUDIO 0x006766e0
+int __fastcall RBX_Graphics_RenderView_vslot15_006766e0(const Struct_006766e0* self)
+{
+    return self->sub->val;
+}
+
+struct Sub_006766f0 { char pad[432]; int val; };
+struct Struct_006766f0 { char pad[12]; Sub_006766f0* sub; };
+// FUNCTION: ROBLOXSTUDIO 0x006766f0
+int __fastcall RBX_Graphics_RenderView_vslot17_006766f0(const Struct_006766f0* self)
+{
+    return self->sub->val;
+}

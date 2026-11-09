@@ -1,17 +1,27 @@
 {
-  "updated_at": "2026-11-09 15:35:22 UTC",
+  "updated_at": "2026-11-09 15:35:32 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "MSVC 11.0 (Visual Studio 2012 x86)",
   "total_binary_functions": 40561,
   "total_binary_bytes": 9574526,
-  "implemented_total": 130,
-  "function_annotations": 130,
+  "implemented_total": 133,
+  "function_annotations": 133,
   "stub_annotations": 0,
-  "perfect_100_count": 130,
+  "perfect_100_count": 133,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.3205,
-  "overall_byte_coverage_pct": 0.0079,
+  "overall_function_coverage_pct": 0.3279,
+  "overall_byte_coverage_pct": 0.0083,
   "functions": [
+    {
+      "address": "0x00402eb0",
+      "kind": "FUNCTION",
+      "name": "RBX_Geometry_vslot17_00402eb0",
+      "mangled": "?RBX_Geometry_vslot17_00402eb0@@YGHH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
     {
       "address": "0x00403b30",
       "kind": "FUNCTION",
@@ -650,6 +660,26 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006766e0",
+      "kind": "FUNCTION",
+      "name": "RBX_Graphics_RenderView_vslot15_006766e0",
+      "mangled": "?RBX_Graphics_RenderView_vslot15_006766e0@@YIHPBUStruct_006766e0@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006766f0",
+      "kind": "FUNCTION",
+      "name": "RBX_Graphics_RenderView_vslot17_006766f0",
+      "mangled": "?RBX_Graphics_RenderView_vslot17_006766f0@@YIHPBUStruct_006766f0@@@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
       "match_pct": 100.0
     },
     {
