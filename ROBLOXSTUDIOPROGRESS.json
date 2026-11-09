@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-09 15:37:11 UTC",
+  "updated_at": "2026-11-09 15:37:21 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "MSVC 11.0 (Visual Studio 2012 x86)",
   "total_binary_functions": 40561,
   "total_binary_bytes": 9574526,
-  "implemented_total": 187,
-  "function_annotations": 187,
+  "implemented_total": 199,
+  "function_annotations": 199,
   "stub_annotations": 0,
-  "perfect_100_count": 187,
+  "perfect_100_count": 199,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.461,
-  "overall_byte_coverage_pct": 0.0149,
+  "overall_function_coverage_pct": 0.4906,
+  "overall_byte_coverage_pct": 0.0161,
   "functions": [
     {
       "address": "0x00402eb0",
@@ -743,6 +743,106 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00613950",
+      "kind": "FUNCTION",
+      "name": "rbx_func_00613950",
+      "mangled": "?rbx_func_00613950@@YAHPBH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00613960",
+      "kind": "FUNCTION",
+      "name": "rbx_func_00613960",
+      "mangled": "?rbx_func_00613960@@YAHPBH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00619b70",
+      "kind": "FUNCTION",
+      "name": "rbx_func_00619b70",
+      "mangled": "?rbx_func_00619b70@@YAHPBH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00619b80",
+      "kind": "FUNCTION",
+      "name": "rbx_func_00619b80",
+      "mangled": "?rbx_func_00619b80@@YAHPBH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0061ba90",
+      "kind": "FUNCTION",
+      "name": "rbx_func_0061ba90",
+      "mangled": "?rbx_func_0061ba90@@YAHPBH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0061baa0",
+      "kind": "FUNCTION",
+      "name": "rbx_func_0061baa0",
+      "mangled": "?rbx_func_0061baa0@@YAHPBH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00622460",
+      "kind": "FUNCTION",
+      "name": "rbx_func_00622460",
+      "mangled": "?rbx_func_00622460@@YAHPBH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00622470",
+      "kind": "FUNCTION",
+      "name": "rbx_func_00622470",
+      "mangled": "?rbx_func_00622470@@YAHPBH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00674290",
+      "kind": "FUNCTION",
+      "name": "rbx_func_00674290",
+      "mangled": "?rbx_func_00674290@@YAHPBH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006742a0",
+      "kind": "FUNCTION",
+      "name": "rbx_func_006742a0",
+      "mangled": "?rbx_func_006742a0@@YAHPBH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x006766d0",
       "kind": "FUNCTION",
       "name": "RBX_Graphics_RenderView_vslot14_006766d0",
@@ -780,6 +880,26 @@
       "file": "Client/App/V8World/DecompBatch.cpp",
       "orig_size": 16,
       "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00678900",
+      "kind": "FUNCTION",
+      "name": "rbx_func_00678900",
+      "mangled": "?rbx_func_00678900@@YAHPBH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00678910",
+      "kind": "FUNCTION",
+      "name": "rbx_func_00678910",
+      "mangled": "?rbx_func_00678910@@YAHPBH@Z",
+      "file": "Client/App/V8World/DecompBatch.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
       "match_pct": 100.0
     },
     {
