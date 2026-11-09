@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09 21:29:30 UTC",
+  "updated_at": "2026-11-09 21:33:24 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21388,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7602,
-  "matchable_coverage_pct": 8.1496,
-  "implemented_total": 769,
-  "function_annotations": 769,
+  "matchable_coverage_pct": 8.1602,
+  "implemented_total": 770,
+  "function_annotations": 770,
   "stub_annotations": 0,
-  "perfect_100_count": 765,
+  "perfect_100_count": 766,
   "average_match_pct": 99.53,
-  "overall_function_coverage_pct": 1.8959,
-  "overall_byte_coverage_pct": 0.1883,
+  "overall_function_coverage_pct": 1.8984,
+  "overall_byte_coverage_pct": 0.1885,
   "functions": [
     {
       "address": "0x00402eb0",
@@ -4477,6 +4477,16 @@
       "file": "Client/App/v8datamodel/SetDragGridToOff.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0082e3a0",
+      "kind": "FUNCTION",
+      "name": "RBX::SetGridSizeToFour::setGridSizeToFour",
+      "mangled": "?setGridSizeToFour@SetGridSizeToFour@RBX@@QAEHXZ",
+      "file": "Client/App/v8datamodel/SetGridSizeToFour.cpp",
+      "orig_size": 17,
+      "recomp_size": 17,
       "match_pct": 100.0
     },
     {

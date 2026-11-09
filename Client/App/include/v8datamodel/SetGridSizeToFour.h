@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	int setGridSizeToFour();
 	// AUTO-GENERATED METHODS
 };
 
