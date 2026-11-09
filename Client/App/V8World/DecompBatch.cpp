@@ -432,3 +432,76 @@ int __cdecl RBX_Graphics_ShaderProgramFFPD3D9_vslot4_005e6910()
 {
     return 1;
 }
+
+// FUNCTION: ROBLOXSTUDIO 0x006b89b0
+int __cdecl AVcodecvt_error_cat_A0x933b13ec_vslot1_006b89b0()
+{
+    return 14956404;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00787f90
+int __cdecl AV_holder_CBV_basic_string_DU_char_traits_D__vslot1_00787f90()
+{
+    return 19652792;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00788400
+int __cdecl AU_parser_error_V_basic_string_DU_char_trait_vslot1_00788400()
+{
+    return 15005704;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x007ca780
+int __cdecl RBX_BaseScript_vslot32_007ca780()
+{
+    return 18804796;
+}
+
+extern bool g_flag_0082ef60;
+// FUNCTION: ROBLOXSTUDIO 0x0082ef60
+bool __cdecl RBX_SetManualJointToStrong_vslot2_0082ef60()
+{
+    return g_flag_0082ef60;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00860c10
+int __cdecl boost_io_bad_format_string_vslot1_00860c10()
+{
+    return 15063484;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00860c20
+int __cdecl boost_bad_lexical_cast_vslot1_00860c20()
+{
+    return 15061952;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00860c30
+int __cdecl boost_io_format_error_vslot1_00860c30()
+{
+    return 15063428;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00860c40
+int __cdecl boost_io_too_few_args_vslot1_00860c40()
+{
+    return 15063552;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x0099ce10
+int __cdecl RBX_CornerWedgePoly_vslot2_0099ce10()
+{
+    return 9;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00a026a0
+int __cdecl RBX_ExtrudedPartInstance_vslot35_00a026a0()
+{
+    return 19178964;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00a2da00
+int __cdecl AV_stream_buffer_UString_sink_U_char_traits__vslot20_00a2da00()
+{
+    return 19190364;
+}
