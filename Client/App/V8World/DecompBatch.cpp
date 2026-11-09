@@ -1657,3 +1657,10 @@ void Struct_00490ba0::rbx_func_00490ba0(int v)
 {
     this->val = v;
 }
+
+struct Struct_00490c10 { char pad[141]; bool val; void rbx_func_00490c10(bool v); };
+// FUNCTION: ROBLOXSTUDIO 0x00490c10
+void Struct_00490c10::rbx_func_00490c10(bool v)
+{
+    this->val = v;
+}
