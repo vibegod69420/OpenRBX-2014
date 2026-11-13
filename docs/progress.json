@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 19:55:09 UTC",
+  "updated_at": "2026-11-13 19:59:10 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 34.1591,
-  "implemented_total": 3199,
-  "function_annotations": 3199,
+  "matchable_coverage_pct": 34.6289,
+  "implemented_total": 3243,
+  "function_annotations": 3243,
   "stub_annotations": 0,
-  "perfect_100_count": 3199,
+  "perfect_100_count": 3243,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 7.8869,
-  "overall_byte_coverage_pct": 0.5526,
+  "overall_function_coverage_pct": 7.9954,
+  "overall_byte_coverage_pct": 0.5581,
   "functions": [
     {
       "address": "0x004022c0",
@@ -1857,6 +1857,16 @@
       "file": "Client/Base/msvc/deleting_destructors.cpp",
       "orig_size": 34,
       "recomp_size": 34,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00490bf0",
+      "kind": "FUNCTION",
+      "name": "CGlobSet_00490bf0::set",
+      "mangled": "?set@CGlobSet_00490bf0@@QAEXD@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
       "match_pct": 100.0
     },
     {
@@ -5600,6 +5610,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x006106b0",
+      "kind": "FUNCTION",
+      "name": "getTable_006106b0",
+      "mangled": "?getTable_006106b0@@YADH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006106c0",
+      "kind": "FUNCTION",
+      "name": "getTable_006106c0",
+      "mangled": "?getTable_006106c0@@YADH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x006109f0",
       "kind": "FUNCTION",
       "name": "CVs_006109f0::destroy",
@@ -5630,6 +5660,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00613950",
+      "kind": "FUNCTION",
+      "name": "getDeref_00613950",
+      "mangled": "?getDeref_00613950@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00613960",
+      "kind": "FUNCTION",
+      "name": "getDeref_00613960",
+      "mangled": "?getDeref_00613960@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00618ef0",
       "kind": "FUNCTION",
       "name": "CCleanup_00618ef0::destroy",
@@ -5650,6 +5700,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00619b70",
+      "kind": "FUNCTION",
+      "name": "getDeref_00619b70",
+      "mangled": "?getDeref_00619b70@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00619b80",
+      "kind": "FUNCTION",
+      "name": "getDeref_00619b80",
+      "mangled": "?getDeref_00619b80@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00619dc0",
       "kind": "FUNCTION",
       "name": "CCleanup_00619dc0::destroy",
@@ -5657,6 +5727,26 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0061ba90",
+      "kind": "FUNCTION",
+      "name": "getDeref_0061ba90",
+      "mangled": "?getDeref_0061ba90@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0061baa0",
+      "kind": "FUNCTION",
+      "name": "getDeref_0061baa0",
+      "mangled": "?getDeref_0061baa0@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
       "match_pct": 100.0
     },
     {
@@ -5687,6 +5777,26 @@
       "file": "Client/Rendering/GfxRender/FastCluster.cpp",
       "orig_size": 16,
       "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00622460",
+      "kind": "FUNCTION",
+      "name": "getDeref_00622460",
+      "mangled": "?getDeref_00622460@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00622470",
+      "kind": "FUNCTION",
+      "name": "getDeref_00622470",
+      "mangled": "?getDeref_00622470@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
       "match_pct": 100.0
     },
     {
@@ -5850,6 +5960,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00674290",
+      "kind": "FUNCTION",
+      "name": "getDeref_00674290",
+      "mangled": "?getDeref_00674290@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006742a0",
+      "kind": "FUNCTION",
+      "name": "getDeref_006742a0",
+      "mangled": "?getDeref_006742a0@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00674300",
       "kind": "FUNCTION",
       "name": "CCleanup_00674300::destroy",
@@ -5917,6 +6047,26 @@
       "file": "Client/Rendering/GfxRender/RenderView.cpp",
       "orig_size": 16,
       "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00678900",
+      "kind": "FUNCTION",
+      "name": "getDeref_00678900",
+      "mangled": "?getDeref_00678900@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00678910",
+      "kind": "FUNCTION",
+      "name": "getDeref_00678910",
+      "mangled": "?getDeref_00678910@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
       "match_pct": 100.0
     },
     {
@@ -6150,6 +6300,46 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x006801d0",
+      "kind": "FUNCTION",
+      "name": "getDeref_006801d0",
+      "mangled": "?getDeref_006801d0@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006801e0",
+      "kind": "FUNCTION",
+      "name": "getDeref_006801e0",
+      "mangled": "?getDeref_006801e0@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00686b50",
+      "kind": "FUNCTION",
+      "name": "getDeref_00686b50",
+      "mangled": "?getDeref_00686b50@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00686b60",
+      "kind": "FUNCTION",
+      "name": "getDeref_00686b60",
+      "mangled": "?getDeref_00686b60@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00692ebc",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00692ebc",
@@ -6180,6 +6370,46 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00693720",
+      "kind": "FUNCTION",
+      "name": "getDeref_00693720",
+      "mangled": "?getDeref_00693720@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00693730",
+      "kind": "FUNCTION",
+      "name": "getDeref_00693730",
+      "mangled": "?getDeref_00693730@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00696790",
+      "kind": "FUNCTION",
+      "name": "getDeref_00696790",
+      "mangled": "?getDeref_00696790@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006967a0",
+      "kind": "FUNCTION",
+      "name": "getDeref_006967a0",
+      "mangled": "?getDeref_006967a0@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00698460",
       "kind": "FUNCTION",
       "name": "CCleanup_00698460::destroy",
@@ -6197,6 +6427,26 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006ad930",
+      "kind": "FUNCTION",
+      "name": "getDeref_006ad930",
+      "mangled": "?getDeref_006ad930@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006ad940",
+      "kind": "FUNCTION",
+      "name": "getDeref_006ad940",
+      "mangled": "?getDeref_006ad940@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
       "match_pct": 100.0
     },
     {
@@ -15710,6 +15960,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x007bef50",
+      "kind": "FUNCTION",
+      "name": "CArgSet_007bef50::set",
+      "mangled": "?set@CArgSet_007bef50@@QAEXH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x007c23dd",
       "kind": "FUNCTION",
       "name": "adjustorThunk_007c23dd",
@@ -18290,6 +18550,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0085f900",
+      "kind": "FUNCTION",
+      "name": "CArgSet_0085f900::set",
+      "mangled": "?set@CArgSet_0085f900@@QAEXH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00860c10",
       "kind": "FUNCTION",
       "name": "boost::io::bad_format_string::what",
@@ -19470,6 +19740,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008e9f30",
+      "kind": "FUNCTION",
+      "name": "getDeref_008e9f30",
+      "mangled": "?getDeref_008e9f30@@YAHPAH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008edefb",
       "kind": "FUNCTION",
       "name": "adjustorThunk_008edefb",
@@ -19667,6 +19947,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00900010",
+      "kind": "FUNCTION",
+      "name": "CGlobSet_00900010::set",
+      "mangled": "?set@CGlobSet_00490bf0@@QAEXD@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
       "match_pct": 100.0
     },
     {
@@ -22167,6 +22457,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00960cb0",
+      "kind": "FUNCTION",
+      "name": "CArgSet_00960cb0::set",
+      "mangled": "?set@CArgSet_00960cb0@@QAEXH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
       "match_pct": 100.0
     },
     {
@@ -25110,6 +25410,46 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a30b90",
+      "kind": "FUNCTION",
+      "name": "CArgSet_00a30b90::set",
+      "mangled": "?set@CArgSet_00a30b90@@QAEXH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a30ba0",
+      "kind": "FUNCTION",
+      "name": "CArgSet_00a30ba0::set",
+      "mangled": "?set@CArgSet_00a30ba0@@QAEXH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a30bb0",
+      "kind": "FUNCTION",
+      "name": "CArgSet_00a30bb0::set",
+      "mangled": "?set@CArgSet_00a30bb0@@QAEXH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a30bc0",
+      "kind": "FUNCTION",
+      "name": "CArgSet_00a30bc0::set",
+      "mangled": "?set@CArgSet_00a30bc0@@QAEXH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a32090",
       "kind": "FUNCTION",
       "name": "CCleanup_00a32090::destroy",
@@ -25427,6 +25767,16 @@
       "file": "Client/Base/msvc/import_forwarders.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a5d6e0",
+      "kind": "FUNCTION",
+      "name": "CArgSet_00a5d6e0::set",
+      "mangled": "?set@CArgSet_00a5d6e0@@QAEXH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
       "match_pct": 100.0
     },
     {
@@ -30060,6 +30410,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00bba8c0",
+      "kind": "FUNCTION",
+      "name": "CArgSet_00bba8c0::set",
+      "mangled": "?set@CArgSet_00bba8c0@@QAEXH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00bbd920",
       "kind": "FUNCTION",
       "name": "CCleanup_00bbd920::destroy",
@@ -30067,6 +30427,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00bbe180",
+      "kind": "FUNCTION",
+      "name": "CArgSet_00bbe180::set",
+      "mangled": "?set@CArgSet_00bbe180@@QAEXH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
       "match_pct": 100.0
     },
     {
@@ -30387,6 +30757,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c04c70",
+      "kind": "FUNCTION",
+      "name": "CArgSet_00c04c70::set",
+      "mangled": "?set@CArgSet_00c04c70@@QAEXH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
       "match_pct": 100.0
     },
     {
@@ -30780,6 +31160,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c364c0",
+      "kind": "FUNCTION",
+      "name": "CArgSet_00c364c0::set",
+      "mangled": "?set@CArgSet_00c364c0@@QAEXH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c43d76",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00c43d76",
@@ -31137,6 +31527,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c6cab0",
+      "kind": "FUNCTION",
+      "name": "CArgSet_00c6cab0::set",
+      "mangled": "?set@CArgSet_00c6cab0@@QAEXH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
       "match_pct": 100.0
     },
     {
@@ -31650,6 +32050,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00cae2b0",
+      "kind": "FUNCTION",
+      "name": "CArgSet_00cae2b0::set",
+      "mangled": "?set@CArgSet_00cae2b0@@QAEXH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00cb1e8e",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00cb1e8e",
@@ -31747,6 +32157,26 @@
       "file": "Client/Base/msvc/tiny_accessors.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cc0c30",
+      "kind": "FUNCTION",
+      "name": "CArgSet_00cc0c30::set",
+      "mangled": "?set@CArgSet_00cc0c30@@QAEXH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cc0c40",
+      "kind": "FUNCTION",
+      "name": "CArgSet_00cc0c40::set",
+      "mangled": "?set@CArgSet_00cc0c40@@QAEXH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
       "match_pct": 100.0
     },
     {
@@ -31867,6 +32297,16 @@
       "file": "Client/Base/msvc/tiny_accessors.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cf21e0",
+      "kind": "FUNCTION",
+      "name": "CArgSet_00cf21e0::set",
+      "mangled": "?set@CArgSet_00cf21e0@@QAEXH@Z",
+      "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
       "match_pct": 100.0
     },
     {
