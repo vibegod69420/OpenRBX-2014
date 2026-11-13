@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 20:03:56 UTC",
+  "updated_at": "2026-11-13 20:05:13 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 37.3732,
-  "implemented_total": 3500,
-  "function_annotations": 3500,
+  "matchable_coverage_pct": 38.1741,
+  "implemented_total": 3575,
+  "function_annotations": 3575,
   "stub_annotations": 0,
-  "perfect_100_count": 3500,
+  "perfect_100_count": 3575,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 8.629,
-  "overall_byte_coverage_pct": 0.5833,
+  "overall_function_coverage_pct": 8.8139,
+  "overall_byte_coverage_pct": 0.592,
   "functions": [
     {
       "address": "0x004022c0",
@@ -340,6 +340,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0040e9e1",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_0040e9e1",
+      "mangled": "_vtordispAdd_0040e9e1",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0040ea80",
       "kind": "FUNCTION",
       "name": "DeletingDtor_0040ea80::destroy",
@@ -387,6 +397,16 @@
       "file": "Client/Base/msvc/misc_thunks2.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0040f341",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_0040f341",
+      "mangled": "_vtordispAdd_0040f341",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -447,6 +467,16 @@
       "file": "Client/Base/msvc/deleting_destructors_vptr.cpp",
       "orig_size": 41,
       "recomp_size": 41,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00410339",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00410339",
+      "mangled": "_vtordispAdd_00410339",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -527,6 +557,16 @@
       "file": "Client/Base/msvc/deleting_destructors_vptr.cpp",
       "orig_size": 41,
       "recomp_size": 41,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00411f89",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00411f89",
+      "mangled": "_vtordispAdd_00411f89",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -820,6 +860,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00421b89",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00421b89",
+      "mangled": "_vtordispAdd_00421b89",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00421c80",
       "kind": "FUNCTION",
       "name": "DeletingDtorRef_00421c80::destroy",
@@ -1057,6 +1107,26 @@
       "file": "Client/Base/msvc/deleting_destructors.cpp",
       "orig_size": 34,
       "recomp_size": 34,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00436ad0",
+      "kind": "FUNCTION",
+      "name": "callMovThunk_00436ad0",
+      "mangled": "_callMovThunk_00436ad0",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00437100",
+      "kind": "FUNCTION",
+      "name": "callMovThunk_00437100",
+      "mangled": "_callMovThunk_00437100",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
       "match_pct": 100.0
     },
     {
@@ -1647,6 +1717,16 @@
       "file": "Client/Base/msvc/deleting_destructors_vptr.cpp",
       "orig_size": 41,
       "recomp_size": 41,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0045fc59",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_0045fc59",
+      "mangled": "_vtordispAdd_0045fc59",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -2530,6 +2610,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x004b5da3",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_004b5da3",
+      "mangled": "_vtordispAdd_004b5da3",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x004b5dae",
       "kind": "FUNCTION",
       "name": "adjustorThunk_004b5dae",
@@ -2607,6 +2697,16 @@
       "file": "Client/Base/msvc/deleting_destructors_vptr.cpp",
       "orig_size": 41,
       "recomp_size": 41,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x004b62b9",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_004b62b9",
+      "mangled": "_vtordispAdd_004b62b9",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -3860,6 +3960,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00557980",
+      "kind": "FUNCTION",
+      "name": "callMovThunk_00557980",
+      "mangled": "_callMovThunk_00557980",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00557aa0",
+      "kind": "FUNCTION",
+      "name": "callMovThunk_00557aa0",
+      "mangled": "_callMovThunk_00557aa0",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00557cf0",
       "kind": "FUNCTION",
       "name": "callJumpThunk_00557cf0",
@@ -4090,6 +4210,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00565ae9",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00565ae9",
+      "mangled": "_vtordispAdd_00565ae9",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00565af4",
       "kind": "FUNCTION",
       "name": "vtordispThunk_00565af4",
@@ -4217,6 +4347,16 @@
       "file": "Client/Base/msvc/misc_thunks2.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00565b5c",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00565b5c",
+      "mangled": "_vtordispAdd_00565b5c",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -5220,6 +5360,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x005e1e30",
+      "kind": "FUNCTION",
+      "name": "frameAddTail_005e1e30",
+      "mangled": "_frameAddTail_005e1e30",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x005e39b0",
       "kind": "FUNCTION",
       "name": "CCleanup_005e39b0::destroy",
@@ -5257,6 +5407,26 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005e5070",
+      "kind": "FUNCTION",
+      "name": "vcallPush_005e5070",
+      "mangled": "_vcallPush_005e5070",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005e52e0",
+      "kind": "FUNCTION",
+      "name": "vcallPush_005e52e0",
+      "mangled": "_vcallPush_005e52e0",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
       "match_pct": 100.0
     },
     {
@@ -6570,6 +6740,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0067d2d9",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_0067d2d9",
+      "mangled": "_vtordispAdd_0067d2d9",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0067d2e4",
       "kind": "FUNCTION",
       "name": "adjustorThunk_0067d2e4",
@@ -6577,6 +6757,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0067d2ec",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_0067d2ec",
+      "mangled": "_vtordispAdd_0067d2ec",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -6590,6 +6780,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0067d2ff",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_0067d2ff",
+      "mangled": "_vtordispAdd_0067d2ff",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0067d30a",
       "kind": "FUNCTION",
       "name": "adjustorThunk_0067d30a",
@@ -6600,6 +6800,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0067d312",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_0067d312",
+      "mangled": "_vtordispAdd_0067d312",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0067d31d",
       "kind": "FUNCTION",
       "name": "adjustorThunk_0067d31d",
@@ -6607,6 +6817,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0067d325",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_0067d325",
+      "mangled": "_vtordispAdd_0067d325",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -16140,6 +16360,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x007851c1",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_007851c1",
+      "mangled": "_vtordispAdd_007851c1",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x007851cc",
       "kind": "FUNCTION",
       "name": "adjustorThunk_007851cc",
@@ -16150,6 +16380,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x007851d4",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_007851d4",
+      "mangled": "_vtordispAdd_007851d4",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x007851df",
       "kind": "FUNCTION",
       "name": "adjustorThunk_007851df",
@@ -16157,6 +16397,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007851e7",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_007851e7",
+      "mangled": "_vtordispAdd_007851e7",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -19000,6 +19250,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00849bd9",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00849bd9",
+      "mangled": "_vtordispAdd_00849bd9",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00849be4",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00849be4",
@@ -19007,6 +19267,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00849bec",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00849bec",
+      "mangled": "_vtordispAdd_00849bec",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -19020,6 +19290,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00849bff",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00849bff",
+      "mangled": "_vtordispAdd_00849bff",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00849c0a",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00849c0a",
@@ -19027,6 +19307,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00849c12",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00849c12",
+      "mangled": "_vtordispAdd_00849c12",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -19860,6 +20150,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008882ec",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_008882ec",
+      "mangled": "_vtordispAdd_008882ec",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00888300",
       "kind": "FUNCTION",
       "name": "callAdd_00888300",
@@ -19950,6 +20250,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00892440",
+      "kind": "FUNCTION",
+      "name": "getTail_00892440",
+      "mangled": "_getTail_00892440",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00892450",
       "kind": "FUNCTION",
       "name": "CImm4_00892450::get",
@@ -19987,6 +20297,16 @@
       "file": "Client/Base/msvc/tiny_accessors.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00892db0",
+      "kind": "FUNCTION",
+      "name": "getTail_00892db0",
+      "mangled": "_getTail_00892db0",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -20130,6 +20450,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008a38e7",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_008a38e7",
+      "mangled": "_vtordispAdd_008a38e7",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008a73b6",
       "kind": "FUNCTION",
       "name": "adjustorThunk_008a73b6",
@@ -20217,6 +20547,16 @@
       "file": "Client/Base/msvc/tiny_accessors.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008a8d40",
+      "kind": "FUNCTION",
+      "name": "frameAddTail_008a8d40",
+      "mangled": "_frameAddTail_008a8d40",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
       "match_pct": 100.0
     },
     {
@@ -20447,6 +20787,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008ac617",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_008ac617",
+      "mangled": "_vtordispAdd_008ac617",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -20787,6 +21137,26 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008f7ec0",
+      "kind": "FUNCTION",
+      "name": "getTail_008f7ec0",
+      "mangled": "_getTail_008f7ec0",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008f8500",
+      "kind": "FUNCTION",
+      "name": "getTail_008f8500",
+      "mangled": "_getTail_008f8500",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -21470,6 +21840,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0090ff77",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_0090ff77",
+      "mangled": "_vtordispAdd_0090ff77",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0090ff82",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_0090ff82",
+      "mangled": "_vtordispAdd_0090ff82",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009131e0",
       "kind": "FUNCTION",
       "name": "adjustorThunk_009131e0",
@@ -21850,6 +22240,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00913cf0",
+      "kind": "FUNCTION",
+      "name": "getTail_00913cf0",
+      "mangled": "_getTail_00913cf0",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00914e60",
       "kind": "FUNCTION",
       "name": "frameTail_00914e60",
@@ -22007,6 +22407,26 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009175e7",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_009175e7",
+      "mangled": "_vtordispAdd_009175e7",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009175f2",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_009175f2",
+      "mangled": "_vtordispAdd_009175f2",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -22890,6 +23310,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00952ce1",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00952ce1",
+      "mangled": "_vtordispAdd_00952ce1",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00952cec",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00952cec",
@@ -22897,6 +23327,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00952cf4",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00952cf4",
+      "mangled": "_vtordispAdd_00952cf4",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -22910,6 +23350,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00952d07",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00952d07",
+      "mangled": "_vtordispAdd_00952d07",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00952d12",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00952d12",
@@ -22917,6 +23367,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00952d1a",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00952d1a",
+      "mangled": "_vtordispAdd_00952d1a",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -22930,6 +23390,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00952d2d",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00952d2d",
+      "mangled": "_vtordispAdd_00952d2d",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00952d38",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00952d38",
@@ -22937,6 +23407,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00952d40",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00952d40",
+      "mangled": "_vtordispAdd_00952d40",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -22950,6 +23430,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00952d53",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00952d53",
+      "mangled": "_vtordispAdd_00952d53",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00952d5e",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00952d5e",
@@ -22957,6 +23447,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00952d66",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00952d66",
+      "mangled": "_vtordispAdd_00952d66",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -22970,6 +23470,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00952d79",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00952d79",
+      "mangled": "_vtordispAdd_00952d79",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00952d84",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00952d84",
@@ -22977,6 +23487,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00952d8c",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00952d8c",
+      "mangled": "_vtordispAdd_00952d8c",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -22990,6 +23510,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00952d9f",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00952d9f",
+      "mangled": "_vtordispAdd_00952d9f",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00952daa",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00952daa",
@@ -22997,6 +23527,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00952db2",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00952db2",
+      "mangled": "_vtordispAdd_00952db2",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -23010,6 +23550,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00952dc5",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00952dc5",
+      "mangled": "_vtordispAdd_00952dc5",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00952dd0",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00952dd0",
@@ -23017,6 +23567,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00952dd8",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00952dd8",
+      "mangled": "_vtordispAdd_00952dd8",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -23030,6 +23590,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00952deb",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00952deb",
+      "mangled": "_vtordispAdd_00952deb",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00952df6",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00952df6",
@@ -23037,6 +23607,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00952dfe",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00952dfe",
+      "mangled": "_vtordispAdd_00952dfe",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -23050,6 +23630,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00952e11",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00952e11",
+      "mangled": "_vtordispAdd_00952e11",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00952e1c",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00952e1c",
@@ -23057,6 +23647,36 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00952e24",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00952e24",
+      "mangled": "_vtordispAdd_00952e24",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00952e2f",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00952e2f",
+      "mangled": "_vtordispAdd_00952e2f",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00952e3a",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00952e3a",
+      "mangled": "_vtordispAdd_00952e3a",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -24240,6 +24860,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00969b70",
+      "kind": "FUNCTION",
+      "name": "getTail_00969b70",
+      "mangled": "_getTail_00969b70",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0096fb2a",
       "kind": "FUNCTION",
       "name": "adjustorThunk_0096fb2a",
@@ -24900,6 +25530,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009994b0",
+      "kind": "FUNCTION",
+      "name": "frameAddTail_009994b0",
+      "mangled": "_frameAddTail_009994b0",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0099a720",
       "kind": "FUNCTION",
       "name": "frameTail_0099a720",
@@ -25397,6 +26037,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 67,
       "recomp_size": 67,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009b6730",
+      "kind": "FUNCTION",
+      "name": "frameAddTail_009b6730",
+      "mangled": "_frameAddTail_009b6730",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
       "match_pct": 100.0
     },
     {
@@ -27010,6 +27660,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a1c370",
+      "kind": "FUNCTION",
+      "name": "frameAddTail_00a1c370",
+      "mangled": "_frameAddTail_00a1c370",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2cc42",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00a2cc42",
+      "mangled": "_vtordispAdd_00a2cc42",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a2cc4d",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a2cc4d",
@@ -27020,6 +27690,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a2cc55",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00a2cc55",
+      "mangled": "_vtordispAdd_00a2cc55",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a2cc60",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a2cc60",
@@ -27027,6 +27707,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2cc68",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00a2cc68",
+      "mangled": "_vtordispAdd_00a2cc68",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -27067,6 +27757,46 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2cc93",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00a2cc93",
+      "mangled": "_vtordispAdd_00a2cc93",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2cc9e",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00a2cc9e",
+      "mangled": "_vtordispAdd_00a2cc9e",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2cca9",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00a2cca9",
+      "mangled": "_vtordispAdd_00a2cca9",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2ccb4",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00a2ccb4",
+      "mangled": "_vtordispAdd_00a2ccb4",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -30197,6 +30927,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aaf250",
+      "kind": "FUNCTION",
+      "name": "frameAddTail_00aaf250",
+      "mangled": "_frameAddTail_00aaf250",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
       "match_pct": 100.0
     },
     {
@@ -34967,6 +35707,16 @@
       "file": "Client/Base/msvc/import_forwarders.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00d02441",
+      "kind": "FUNCTION",
+      "name": "vtordispAdd_00d02441",
+      "mangled": "_vtordispAdd_00d02441",
+      "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
