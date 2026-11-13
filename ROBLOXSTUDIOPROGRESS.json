@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 18:15:42 UTC",
+  "updated_at": "2026-11-13 18:17:34 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21388,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7602,
-  "matchable_coverage_pct": 0.0533,
-  "implemented_total": 5,
-  "function_annotations": 5,
+  "matchable_coverage_pct": 0.1065,
+  "implemented_total": 10,
+  "function_annotations": 10,
   "stub_annotations": 0,
-  "perfect_100_count": 5,
+  "perfect_100_count": 10,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.0123,
-  "overall_byte_coverage_pct": 0.0003,
+  "overall_function_coverage_pct": 0.0247,
+  "overall_byte_coverage_pct": 0.0006,
   "functions": [
     {
       "address": "0x004f6040",
@@ -35,6 +35,16 @@
       "name": "RBX::SnapJoint::getJointType",
       "mangled": "?getJointType@SnapJoint@RBX@@UBEHXZ",
       "file": "Client/App/v8kernel/SnapJoint.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00500320",
+      "kind": "FUNCTION",
+      "name": "RBX::WeldJoint::getJointType",
+      "mangled": "?getJointType@WeldJoint@RBX@@UBEHXZ",
+      "file": "Client/App/v8kernel/WeldJoint.cpp",
       "orig_size": 6,
       "recomp_size": 6,
       "match_pct": 100.0
@@ -65,6 +75,46 @@
       "name": "RBX::RotateVJoint::getJointType",
       "mangled": "?getJointType@RotateVJoint@RBX@@UBEHXZ",
       "file": "Client/App/v8kernel/RotateVJoint.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0099ce10",
+      "kind": "FUNCTION",
+      "name": "RBX::GlueJoint::getJointType",
+      "mangled": "?getJointType@GlueJoint@RBX@@UBEHXZ",
+      "file": "Client/App/v8kernel/GlueJoint.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aa2d10",
+      "kind": "FUNCTION",
+      "name": "RBX::MotorJoint::getJointType",
+      "mangled": "?getJointType@MotorJoint@RBX@@UBEHXZ",
+      "file": "Client/App/v8kernel/MotorJoint.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ba2b30",
+      "kind": "FUNCTION",
+      "name": "RBX::Motor6DJoint::getJointType",
+      "mangled": "?getJointType@Motor6DJoint@RBX@@UBEHXZ",
+      "file": "Client/App/v8kernel/Motor6DJoint.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ba4120",
+      "kind": "FUNCTION",
+      "name": "RBX::ManualGlueJoint::getJointType",
+      "mangled": "?getJointType@ManualGlueJoint@RBX@@UBEHXZ",
+      "file": "Client/App/v8kernel/ManualGlueJoint.cpp",
       "orig_size": 6,
       "recomp_size": 6,
       "match_pct": 100.0
