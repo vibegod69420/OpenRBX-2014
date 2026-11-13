@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 19:29:15 UTC",
+  "updated_at": "2026-11-13 19:30:04 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 5.008,
-  "implemented_total": 469,
-  "function_annotations": 469,
+  "matchable_coverage_pct": 5.0507,
+  "implemented_total": 473,
+  "function_annotations": 473,
   "stub_annotations": 0,
-  "perfect_100_count": 469,
+  "perfect_100_count": 473,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 1.1563,
-  "overall_byte_coverage_pct": 0.1911,
+  "overall_function_coverage_pct": 1.1661,
+  "overall_byte_coverage_pct": 0.1931,
   "functions": [
     {
       "address": "0x004022c0",
@@ -527,6 +527,16 @@
       "file": "Client/Base/msvc/deleting_destructors.cpp",
       "orig_size": 34,
       "recomp_size": 34,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00442a10",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorPair_00442a10::destroy",
+      "mangled": "?destroy@DeletingDtorPair_00442a10@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_pair.cpp",
+      "orig_size": 48,
+      "recomp_size": 48,
       "match_pct": 100.0
     },
     {
@@ -1160,6 +1170,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0049ff10",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorPair_0049ff10::destroy",
+      "mangled": "?destroy@DeletingDtorPair_00442a10@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_pair.cpp",
+      "orig_size": 48,
+      "recomp_size": 48,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x004a1880",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorPair_004a1880::destroy",
+      "mangled": "?destroy@DeletingDtorPair_00442a10@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_pair.cpp",
+      "orig_size": 48,
+      "recomp_size": 48,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x004a2700",
       "kind": "FUNCTION",
       "name": "DeletingDtorImport_004a2700::destroy",
@@ -1287,6 +1317,16 @@
       "file": "Client/Base/msvc/deleting_destructors.cpp",
       "orig_size": 34,
       "recomp_size": 34,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x004d2ce0",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorPair_004d2ce0::destroy",
+      "mangled": "?destroy@DeletingDtorPair_00442a10@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_pair.cpp",
+      "orig_size": 48,
+      "recomp_size": 48,
       "match_pct": 100.0
     },
     {
