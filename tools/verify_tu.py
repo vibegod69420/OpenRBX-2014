@@ -240,6 +240,24 @@ def get_msvc_env() -> dict[str, str]:
     return _MSVC_ENV_CACHE
 
 
+_NEWEST_HEADER_MTIME = None
+
+
+def _newest_header_mtime() -> float:
+    """Newest header mtime in the source tree, used to invalidate cached objects."""
+    global _NEWEST_HEADER_MTIME
+    if _NEWEST_HEADER_MTIME is None:
+        newest = 0.0
+        for pattern in ("Client/**/*.h", "Client/**/*.hpp", "util/**/*.h"):
+            for header in ROOT.glob(pattern):
+                try:
+                    newest = max(newest, header.stat().st_mtime)
+                except OSError:
+                    pass
+        _NEWEST_HEADER_MTIME = newest
+    return _NEWEST_HEADER_MTIME
+
+
 def compile_cpp_to_coff(cpp_path: Path, use_cache: bool = False) -> tuple[bool, Path, str]:
     BUILD_OBJ_DIR.mkdir(parents=True, exist_ok=True)
     try:
@@ -250,7 +268,8 @@ def compile_cpp_to_coff(cpp_path: Path, use_cache: bool = False) -> tuple[bool, 
 
     if use_cache and obj_path.exists():
         try:
-            if obj_path.stat().st_mtime >= cpp_path.stat().st_mtime:
+            newest = max(cpp_path.stat().st_mtime, _newest_header_mtime())
+            if obj_path.stat().st_mtime >= newest:
                 return True, obj_path, ""
         except Exception:
             pass

@@ -13,7 +13,8 @@ public:
 private:
 	char _pad[0x0c];
 	int field0C;
-	char _pad10[0x34];
-	int field44;
+	char _pad10[0x04];
 	btPersistentManifold** m_manifoldsPtr;
+	char _pad18[0x44 - 0x18];
+	int field44;
 };
