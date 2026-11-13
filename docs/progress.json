@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 19:49:20 UTC",
+  "updated_at": "2026-11-13 19:49:47 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 27.6348,
-  "implemented_total": 2588,
-  "function_annotations": 2588,
+  "matchable_coverage_pct": 27.7523,
+  "implemented_total": 2599,
+  "function_annotations": 2599,
   "stub_annotations": 0,
-  "perfect_100_count": 2588,
+  "perfect_100_count": 2599,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 6.3805,
-  "overall_byte_coverage_pct": 0.348,
+  "overall_function_coverage_pct": 6.4076,
+  "overall_byte_coverage_pct": 0.349,
   "functions": [
     {
       "address": "0x004022c0",
@@ -225,6 +225,16 @@
       "name": "adjustorThunk_0040e1a1",
       "mangled": "_adjustorThunk_0040e1a1",
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0040e1b0",
+      "kind": "FUNCTION",
+      "name": "CImm4_0040e1b0::get",
+      "mangled": "?get@CImm4_0040e1b0@@QAEHH@Z",
+      "file": "Client/Base/msvc/small_returns2.cpp",
       "orig_size": 8,
       "recomp_size": 8,
       "match_pct": 100.0
@@ -4557,6 +4567,16 @@
       "file": "Client/Rendering/GfxRender/AdornRender.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0061f640",
+      "kind": "FUNCTION",
+      "name": "CSet_0061f640::set",
+      "mangled": "?set@CSet_0061f640@@QAEXXZ",
+      "file": "Client/Base/msvc/small_returns2.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
       "match_pct": 100.0
     },
     {
@@ -13080,6 +13100,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x006b0820",
+      "kind": "FUNCTION",
+      "name": "CImm8_006b0820::get",
+      "mangled": "?get@CImm8_006b0820@@QAEHHH@Z",
+      "file": "Client/Base/msvc/small_returns2.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x006b1400",
       "kind": "FUNCTION",
       "name": "RBX::DS::CAudioStream::getField30",
@@ -14497,6 +14527,66 @@
       "file": "Client/Base/msvc/tiny_accessors.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007d6e90",
+      "kind": "FUNCTION",
+      "name": "CImm4_007d6e90::get",
+      "mangled": "?get@CImm4_0040e1b0@@QAEHH@Z",
+      "file": "Client/Base/msvc/small_returns2.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007d6ea0",
+      "kind": "FUNCTION",
+      "name": "CImm4_007d6ea0::get",
+      "mangled": "?get@CImm4_0040e1b0@@QAEHH@Z",
+      "file": "Client/Base/msvc/small_returns2.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007d6eb0",
+      "kind": "FUNCTION",
+      "name": "CImm4_007d6eb0::get",
+      "mangled": "?get@CImm4_0040e1b0@@QAEHH@Z",
+      "file": "Client/Base/msvc/small_returns2.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007d6ec0",
+      "kind": "FUNCTION",
+      "name": "CImm4_007d6ec0::get",
+      "mangled": "?get@CImm4_0040e1b0@@QAEHH@Z",
+      "file": "Client/Base/msvc/small_returns2.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007d6ed0",
+      "kind": "FUNCTION",
+      "name": "CImm4_007d6ed0::get",
+      "mangled": "?get@CImm4_0040e1b0@@QAEHH@Z",
+      "file": "Client/Base/msvc/small_returns2.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007d6ee0",
+      "kind": "FUNCTION",
+      "name": "CImm4_007d6ee0::get",
+      "mangled": "?get@CImm4_0040e1b0@@QAEHH@Z",
+      "file": "Client/Base/msvc/small_returns2.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
       "match_pct": 100.0
     },
     {
@@ -15997,6 +16087,16 @@
       "file": "Client/Base/msvc/tiny_accessors.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00892450",
+      "kind": "FUNCTION",
+      "name": "CImm4_00892450::get",
+      "mangled": "?get@CImm4_0040e1b0@@QAEHH@Z",
+      "file": "Client/Base/msvc/small_returns2.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
       "match_pct": 100.0
     },
     {
@@ -17697,6 +17797,16 @@
       "file": "Client/Base/msvc/import_forwarders.cpp",
       "orig_size": 5,
       "recomp_size": 5,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00925b30",
+      "kind": "FUNCTION",
+      "name": "CSet_00925b30::set",
+      "mangled": "?set@CSet_00925b30@@QAEXXZ",
+      "file": "Client/Base/msvc/small_returns2.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
       "match_pct": 100.0
     },
     {
