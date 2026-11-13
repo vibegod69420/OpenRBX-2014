@@ -366,7 +366,7 @@ def parse_coff_functions(obj_path: Path) -> dict[str, tuple[bytes, set[int]]]:
     return functions
 
 
-def compare_with_relocations(orig: bytes, recomp: bytes, rel_offsets: set[int]) -> tuple[float, list[str]]:
+def compare_with_relocations(orig: bytes, recomp: bytes, rel_offsets: set[int], want_diff: bool = False) -> tuple[float, list[str]]:
     """
     Computes byte-accuracy match percentage (ignoring 4-byte COFF relocation target addresses,
     identical to `reccmp` relocation masking) and returns a diagnostic diff.
@@ -387,6 +387,8 @@ def compare_with_relocations(orig: bytes, recomp: bytes, rel_offsets: set[int]) 
     pct = (matched * 100.0) / max_len
 
     diff_lines = []
+    if pct >= 100.0 or not want_diff:
+        return pct, diff_lines
     try:
         from capstone import Cs, CS_ARCH_X86, CS_MODE_32
         md = Cs(CS_ARCH_X86, CS_MODE_32)
@@ -454,6 +456,8 @@ def main():
                 best_sym = sym_name
                 best_diff = diff
                 best_recomp_len = len(recomp_bytes)
+                best_recomp_bytes = recomp_bytes
+                best_rel_offsets = rel_offsets
 
         if best_sym is None:
             print(f"  [!] 0x{addr:08x} ({fn_hint}): No matching symbol emitted in .obj")
@@ -461,6 +465,8 @@ def main():
 
         print(f"  [{kind}] 0x{addr:08x} -> {best_sym} | Match: {actual_pct:.2f}% (Orig: {len(orig_bytes)}B, Recomp: {best_recomp_len}B)")
         if actual_pct < 100.0 or filter_addr is not None:
+            if not best_diff:
+                _, best_diff = compare_with_relocations(orig_bytes, best_recomp_bytes, best_rel_offsets, want_diff=True)
             for dl in best_diff[:30]:
                 print(dl)
 
