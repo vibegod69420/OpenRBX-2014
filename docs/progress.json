@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 19:30:04 UTC",
+  "updated_at": "2026-11-13 19:32:19 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 5.0507,
-  "implemented_total": 473,
-  "function_annotations": 473,
+  "matchable_coverage_pct": 5.5953,
+  "implemented_total": 524,
+  "function_annotations": 524,
   "stub_annotations": 0,
-  "perfect_100_count": 473,
+  "perfect_100_count": 524,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 1.1661,
-  "overall_byte_coverage_pct": 0.1931,
+  "overall_function_coverage_pct": 1.2919,
+  "overall_byte_coverage_pct": 0.1965,
   "functions": [
     {
       "address": "0x004022c0",
@@ -1730,6 +1730,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00524420",
+      "kind": "FUNCTION",
+      "name": "getByte_00524420",
+      "mangled": "?getByte_00524420@@YA_NXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x005249c0",
       "kind": "FUNCTION",
       "name": "DeletingDtor_005249c0::destroy",
@@ -2540,6 +2550,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0059b590",
+      "kind": "FUNCTION",
+      "name": "getConst_0059b590",
+      "mangled": "?getConst_0059b590@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0059b8a0",
       "kind": "FUNCTION",
       "name": "btBvhTriangleMeshShape::getName",
@@ -2707,6 +2727,16 @@
       "file": "Client/Rendering/GfxCore/D3D9/DeviceD3D9.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005e6910",
+      "kind": "FUNCTION",
+      "name": "getConst_005e6910",
+      "mangled": "?getConst_005e6910@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
       "match_pct": 100.0
     },
     {
@@ -2970,6 +3000,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0067e190",
+      "kind": "FUNCTION",
+      "name": "CInt_0067e190::get",
+      "mangled": "?get@CInt_0067e190@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0067e450",
+      "kind": "FUNCTION",
+      "name": "CInt_0067e450::get",
+      "mangled": "?get@CInt_0067e450@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00692ed0",
       "kind": "FUNCTION",
       "name": "DeletingDtorMultiVptr_00692ed0::destroy",
@@ -3007,6 +3057,36 @@
       "file": "Client/Base/boost/set_int_pair.cpp",
       "orig_size": 22,
       "recomp_size": 22,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00775320",
+      "kind": "FUNCTION",
+      "name": "getConst_00775320",
+      "mangled": "?getConst_00775320@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00787f90",
+      "kind": "FUNCTION",
+      "name": "getConst_00787f90",
+      "mangled": "?getConst_00787f90@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00788400",
+      "kind": "FUNCTION",
+      "name": "getConst_00788400",
+      "mangled": "?getConst_00788400@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
       "match_pct": 100.0
     },
     {
@@ -3077,6 +3157,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007ca780",
+      "kind": "FUNCTION",
+      "name": "getConst_007ca780",
+      "mangled": "?getConst_007ca780@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
       "match_pct": 100.0
     },
     {
@@ -3260,6 +3350,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0082ef60",
+      "kind": "FUNCTION",
+      "name": "getByte_0082ef60",
+      "mangled": "?getByte_0082ef60@@YA_NXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00851020",
       "kind": "FUNCTION",
       "name": "RBX::Detail::NumpunctChar::doDecimalPoint",
@@ -3277,6 +3377,16 @@
       "file": "Client/Base/msvc/locale_facets.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00857ca0",
+      "kind": "FUNCTION",
+      "name": "CByte_00857ca0::get",
+      "mangled": "?get@CByte_00857ca0@@QAE_NXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
       "match_pct": 100.0
     },
     {
@@ -3327,6 +3437,16 @@
       "file": "Client/Base/boost/io/too_many_args.cpp",
       "orig_size": 27,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00872a50",
+      "kind": "FUNCTION",
+      "name": "CByte_00872a50::get",
+      "mangled": "?get@CByte_00872a50@@QAE_NXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
       "match_pct": 100.0
     },
     {
@@ -3390,6 +3510,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008869b0",
+      "kind": "FUNCTION",
+      "name": "getConst_008869b0",
+      "mangled": "?getConst_008869b0@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00891b60",
+      "kind": "FUNCTION",
+      "name": "CInt_00891b60::get",
+      "mangled": "?get@CInt_00891b60@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008928b0",
+      "kind": "FUNCTION",
+      "name": "getFloat_008928b0",
+      "mangled": "?getFloat_008928b0@@YAMXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00892dc0",
       "kind": "FUNCTION",
       "name": "PathInterpolatedCFrame::getField40",
@@ -3410,6 +3560,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008a8740",
+      "kind": "FUNCTION",
+      "name": "CInt_008a8740::get",
+      "mangled": "?get@CInt_008a8740@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008a9ca0",
       "kind": "FUNCTION",
       "name": "DeletingDtorMultiVptr_008a9ca0::destroy",
@@ -3417,6 +3577,26 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008ac630",
+      "kind": "FUNCTION",
+      "name": "getConst_008ac630",
+      "mangled": "?getConst_008ac630@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008ac640",
+      "kind": "FUNCTION",
+      "name": "getConst_008ac640",
+      "mangled": "?getConst_008ac640@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
       "match_pct": 100.0
     },
     {
@@ -3447,6 +3627,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008ee2b0",
+      "kind": "FUNCTION",
+      "name": "getConst_008ee2b0",
+      "mangled": "?getConst_008ee2b0@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
       "match_pct": 100.0
     },
     {
@@ -3647,6 +3837,26 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00928940",
+      "kind": "FUNCTION",
+      "name": "CByte_00928940::get",
+      "mangled": "?get@CByte_00928940@@QAE_NXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0092ac60",
+      "kind": "FUNCTION",
+      "name": "CByte_0092ac60::get",
+      "mangled": "?get@CByte_0092ac60@@QAE_NXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
       "match_pct": 100.0
     },
     {
@@ -3940,6 +4150,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00968e70",
+      "kind": "FUNCTION",
+      "name": "CInt_00968e70::get",
+      "mangled": "?get@CInt_00968e70@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0096fb50",
       "kind": "FUNCTION",
       "name": "DeletingDtorMultiVptr_0096fb50::destroy",
@@ -4017,6 +4237,26 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0098e060",
+      "kind": "FUNCTION",
+      "name": "CInt_0098e060::get",
+      "mangled": "?get@CInt_0098e060@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009977c0",
+      "kind": "FUNCTION",
+      "name": "CInt_009977c0::get",
+      "mangled": "?get@CInt_009977c0@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
       "match_pct": 100.0
     },
     {
@@ -4107,6 +4347,66 @@
       "file": "Client/App/v8kernel/BoostCountedImpl.cpp",
       "orig_size": 19,
       "recomp_size": 19,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009d86b0",
+      "kind": "FUNCTION",
+      "name": "CInt_009d86b0::get",
+      "mangled": "?get@CInt_009d86b0@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009d8730",
+      "kind": "FUNCTION",
+      "name": "CInt_009d8730::get",
+      "mangled": "?get@CInt_009d8730@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009d8740",
+      "kind": "FUNCTION",
+      "name": "CInt_009d8740::get",
+      "mangled": "?get@CInt_009d8740@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009d8ac0",
+      "kind": "FUNCTION",
+      "name": "CInt_009d8ac0::get",
+      "mangled": "?get@CInt_009d8ac0@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009d8ad0",
+      "kind": "FUNCTION",
+      "name": "CInt_009d8ad0::get",
+      "mangled": "?get@CInt_009d8ad0@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009d8ef0",
+      "kind": "FUNCTION",
+      "name": "CInt_009d8ef0::get",
+      "mangled": "?get@CInt_009d8ef0@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
       "match_pct": 100.0
     },
     {
@@ -4220,6 +4520,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a026a0",
+      "kind": "FUNCTION",
+      "name": "getConst_00a026a0",
+      "mangled": "?getConst_00a026a0@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a0b050",
       "kind": "FUNCTION",
       "name": "DeletingDtorMultiVptr_00a0b050::destroy",
@@ -4277,6 +4587,76 @@
       "file": "Client/Base/msvc/deleting_destructors_refcount.cpp",
       "orig_size": 74,
       "recomp_size": 74,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2da00",
+      "kind": "FUNCTION",
+      "name": "getConst_00a2da00",
+      "mangled": "?getConst_00a2da00@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2da10",
+      "kind": "FUNCTION",
+      "name": "getConst_00a2da10",
+      "mangled": "?getConst_00a2da10@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2da20",
+      "kind": "FUNCTION",
+      "name": "getConst_00a2da20",
+      "mangled": "?getConst_00a2da20@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2da30",
+      "kind": "FUNCTION",
+      "name": "getConst_00a2da30",
+      "mangled": "?getConst_00a2da30@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2da40",
+      "kind": "FUNCTION",
+      "name": "getConst_00a2da40",
+      "mangled": "?getConst_00a2da40@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2da50",
+      "kind": "FUNCTION",
+      "name": "getConst_00a2da50",
+      "mangled": "?getConst_00a2da50@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a320c0",
+      "kind": "FUNCTION",
+      "name": "getConst_00a320c0",
+      "mangled": "?getConst_00a320c0@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
       "match_pct": 100.0
     },
     {
@@ -4620,6 +5000,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00b4ebf0",
+      "kind": "FUNCTION",
+      "name": "getConst_00b4ebf0",
+      "mangled": "?getConst_00b4ebf0@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00b530d0",
       "kind": "FUNCTION",
       "name": "RBX::HUMAN::Dead::getStateType",
@@ -4680,6 +5070,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00bd7630",
+      "kind": "FUNCTION",
+      "name": "CInt_00bd7630::get",
+      "mangled": "?get@CInt_00bd7630@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00bd86c0",
+      "kind": "FUNCTION",
+      "name": "CInt_00bd86c0::get",
+      "mangled": "?get@CInt_00bd86c0@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00bda810",
       "kind": "FUNCTION",
       "name": "RBX::BuoyancyBallContact::getField4C",
@@ -4687,6 +5097,46 @@
       "file": "Client/App/v8kernel/BuoyancyContact.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00be9a10",
+      "kind": "FUNCTION",
+      "name": "getConst_00be9a10",
+      "mangled": "?getConst_00be9a10@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00be9a20",
+      "kind": "FUNCTION",
+      "name": "getConst_00be9a20",
+      "mangled": "?getConst_00be9a20@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c0bbd0",
+      "kind": "FUNCTION",
+      "name": "getByte_00c0bbd0",
+      "mangled": "?getByte_00c0bbd0@@YA_NXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c0e210",
+      "kind": "FUNCTION",
+      "name": "getByte_00c0e210",
+      "mangled": "?getByte_00c0e210@@YA_NXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
       "match_pct": 100.0
     },
     {
@@ -4730,6 +5180,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c53ce0",
+      "kind": "FUNCTION",
+      "name": "CInt_00c53ce0::get",
+      "mangled": "?get@CInt_00c53ce0@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c570f0",
       "kind": "FUNCTION",
       "name": "DeletingDtorMultiVptr_00c570f0::destroy",
@@ -4740,6 +5200,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c81bb0",
+      "kind": "FUNCTION",
+      "name": "getConst_00c81bb0",
+      "mangled": "?getConst_00c81bb0@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c81bc0",
+      "kind": "FUNCTION",
+      "name": "getConst_00c81bc0",
+      "mangled": "?getConst_00c81bc0@@YAHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c862e0",
+      "kind": "FUNCTION",
+      "name": "CInt_00c862e0::get",
+      "mangled": "?get@CInt_00c862e0@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c959c0",
       "kind": "FUNCTION",
       "name": "DeletingDtorFiveVptr_00c959c0::destroy",
@@ -4747,6 +5237,26 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 67,
       "recomp_size": 67,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cbd6b0",
+      "kind": "FUNCTION",
+      "name": "CInt_00cbd6b0::get",
+      "mangled": "?get@CInt_00cbd6b0@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cea7a0",
+      "kind": "FUNCTION",
+      "name": "CInt_00cea7a0::get",
+      "mangled": "?get@CInt_00cea7a0@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
       "match_pct": 100.0
     }
   ]
