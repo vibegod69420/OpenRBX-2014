@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 18:45:18 UTC",
+  "updated_at": "2026-11-13 18:49:25 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 0.5766,
-  "implemented_total": 54,
-  "function_annotations": 54,
+  "matchable_coverage_pct": 0.6193,
+  "implemented_total": 58,
+  "function_annotations": 58,
   "stub_annotations": 0,
-  "perfect_100_count": 54,
+  "perfect_100_count": 58,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.1331,
-  "overall_byte_coverage_pct": 0.0105,
+  "overall_function_coverage_pct": 0.143,
+  "overall_byte_coverage_pct": 0.0113,
   "functions": [
     {
       "address": "0x004122e0",
@@ -210,6 +210,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x005948b0",
+      "kind": "FUNCTION",
+      "name": "btBoxBoxCollisionAlgorithm::calculateTimeOfImpact",
+      "mangled": "?calculateTimeOfImpact@btBoxBoxCollisionAlgorithm@@QAEMPAX0PBX0@Z",
+      "file": "Client/App/v8kernel/btCollisionAlgorithms.cpp",
+      "orig_size": 5,
+      "recomp_size": 5,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00594f20",
       "kind": "FUNCTION",
       "name": "btConvexHullShape::getName",
@@ -297,6 +307,16 @@
       "file": "Client/App/v8kernel/btBoxShape.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005a88a0",
+      "kind": "FUNCTION",
+      "name": "btCompoundCompoundCollisionAlgorithm::calculateTimeOfImpact",
+      "mangled": "?calculateTimeOfImpact@btCompoundCompoundCollisionAlgorithm@@QAEMPAX0PBX0@Z",
+      "file": "Client/App/v8kernel/btCollisionAlgorithms.cpp",
+      "orig_size": 5,
+      "recomp_size": 5,
       "match_pct": 100.0
     },
     {
@@ -490,6 +510,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009f62a0",
+      "kind": "FUNCTION",
+      "name": "copyColumn0",
+      "mangled": "?copyColumn0@@YAXPAMPBM@Z",
+      "file": "Client/Base/G3D/Matrix4.cpp",
+      "orig_size": 27,
+      "recomp_size": 27,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00aa2d10",
       "kind": "FUNCTION",
       "name": "RBX::MotorJoint::getJointType",
@@ -497,6 +527,16 @@
       "file": "Client/App/v8kernel/MotorJoint.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ac9b60",
+      "kind": "FUNCTION",
+      "name": "SelectionPointLasso::getPoint",
+      "mangled": "?getPoint@SelectionPointLasso@@QBE_NPAUG3DVector3@@@Z",
+      "file": "Client/App/v8datamodel/SelectionPointLasso.cpp",
+      "orig_size": 38,
+      "recomp_size": 38,
       "match_pct": 100.0
     },
     {
