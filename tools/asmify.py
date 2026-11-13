@@ -39,7 +39,7 @@ def translate(a, b):
         for n in nums:
             globals_.add(int(n, 16))
         op = re.sub(r'\[0x([0-9a-f]+)\]', lambda m: f'[g_{int(m.group(1), 16):08x}]', op)
-        if mn in ('jmp', 'call'):
+        if mn == 'jmp' or mn == 'call' or (mn.startswith('j') and mn != 'jmp'):
             m = re.fullmatch(r'0x([0-9a-f]+)', op)
             if m:
                 t = int(m.group(1), 16)
@@ -104,7 +104,7 @@ print('candidates', len(cands))
 kept = []
 for i in range(0, len(cands), 150):
     chunk = cands[i:i + 150]
-    path = f'Client/Base/msvc/auto_asm_b{i // 150 + 1}.cpp'
+    path = f'Client/Base/msvc/auto_asm_c{i // 150 + 1}.cpp'
     n = build(chunk, path)
     r = subprocess.run([sys.executable, 'tools/verify_tu.py', path], capture_output=True, text=True)
     txt = r.stdout + r.stderr
