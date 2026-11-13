@@ -5,4 +5,5 @@ class RobloxTreeWidget
 {
 public:
 	void* getFieldECPtr() const;
+	bool isBaseNonZero() const;
 };

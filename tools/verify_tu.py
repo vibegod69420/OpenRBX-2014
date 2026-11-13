@@ -440,9 +440,14 @@ def main():
         best_recomp_len = 0
 
         short_hint = fn_hint.split("::")[-1] if fn_hint else ""
+        class_hint = fn_hint.split("::")[0] if fn_hint and "::" in fn_hint else ""
         for sym_name, (recomp_bytes, rel_offsets) in coff_funcs.items():
             pct, diff = compare_with_relocations(orig_bytes, recomp_bytes, rel_offsets)
             bonus = 10.0 if (short_hint and short_hint in sym_name) else 0.0
+            # Folded bodies are byte-identical across classes; the qualifier breaks
+            # the tie so the recorded symbol belongs to the annotated class.
+            if class_hint and class_hint in sym_name:
+                bonus += 5.0
             if pct + bonus > best_pct:
                 best_pct = pct + bonus
                 actual_pct = pct
