@@ -8,8 +8,11 @@ md = Cs(CS_ARCH_X86, CS_MODE_32)
 ALLOW = set('''
 mov movzx movsx lea push pop add sub and or xor cmp test inc dec neg not
 shl shr sar imul mul idiv div cdq cwde cbw xchg sbb adc
-lock xadd xadd cmpxchg lock cmpxchg bswap cpuid rdtsc lock inc lock dec
-lock or lock and lock add lock sub
+lock rep xadd cmpxchg bswap cpuid rdtsc
+lahf sahf pause
+xorps movaps movups movdqa movdqu movq movd pxor pand por pxor
+fsqrt fsin fcos fpatan fprem fprem1 fyl2x f2xm1 fscale frndint fxtract
+fsubr fdivr fsubrp fdivrp fstsw fnstcw fldcw frstor fsave fcompp fucompp
 jmp je jne jz jnz ja jae jb jbe jg jge jl jle js jns jo jno jp jnp
 call ret leave nop
 fld fst fstp fadd fsub fmul fdiv fild fistp fcom fcomp fucom fucomp fchs fabs
@@ -32,11 +35,10 @@ def translate(a, b):
     body = []
     for i in ins:
         mn = i.mnemonic
-        if mn not in ALLOW and not mn.startswith('set'):
+        base = mn.split(' ')[-1]
+        if base not in ALLOW and not base.startswith('set'):
             return None
         op = i.op_str
-        if 'st(' in op or 'xmm' in op:
-            return None
         nums = re.findall(r'\[0x([0-9a-f]+)\]', op)
         for n in nums:
             globals_.add(int(n, 16))
@@ -51,7 +53,10 @@ def translate(a, b):
                 else:
                     funcs.add(t)
                     op = f'fn_{t:08x}'
-        body.append((i.address, mn + (' ' + op if op else '')))
+        text_mn = 'int 3' if mn == 'int3' else mn
+        if mn.startswith('rep '):
+            op = ''
+        body.append((i.address, text_mn + (' ' + op if op else '')))
     out = []
     for addr, text in body:
         if addr in labels:
