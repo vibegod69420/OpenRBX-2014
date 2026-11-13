@@ -11,3 +11,9 @@ float btConvexInternalShape::getMarginNonVirtual() const
 {
 	return m_collisionMargin;
 }
+
+// FUNCTION: ROBLOXSTUDIO 0x00590290
+int btConvexInternalShape::calculateSerializeBufferSize() const
+{
+	return 0x34;
+}

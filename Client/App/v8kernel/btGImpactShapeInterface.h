@@ -6,6 +6,7 @@ class btGImpactShapeInterface
 {
 public:
 	float getMarginNonVirtual() const;
+	int calculateSerializeBufferSize() const;
 
 private:
 	char _pad[0x0c];

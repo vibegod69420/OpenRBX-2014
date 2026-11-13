@@ -13,3 +13,9 @@ bool btGImpactCompoundShape::isCompound() const
 		return true;
 	return false;
 }
+
+// FUNCTION: ROBLOXSTUDIO 0x0059aea0
+void* btGImpactCompoundShape::getFieldB0Ptr() const
+{
+	return (void*)((char*)this + 0xb0);
+}

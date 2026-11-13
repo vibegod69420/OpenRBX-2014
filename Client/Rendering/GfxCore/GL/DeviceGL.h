@@ -7,6 +7,7 @@ class DeviceGL
 {
 public:
 	int getField34() const;
+	void* getField0CPtr() const;
 
 private:
 	char _pad[0x34];

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 18:56:52 UTC",
+  "updated_at": "2026-11-13 18:58:57 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 0.8542,
-  "implemented_total": 80,
-  "function_annotations": 80,
+  "matchable_coverage_pct": 0.961,
+  "implemented_total": 90,
+  "function_annotations": 90,
   "stub_annotations": 0,
-  "perfect_100_count": 80,
+  "perfect_100_count": 90,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.1972,
-  "overall_byte_coverage_pct": 0.0134,
+  "overall_function_coverage_pct": 0.2219,
+  "overall_byte_coverage_pct": 0.014,
   "functions": [
     {
       "address": "0x00411990",
@@ -240,6 +240,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00590290",
+      "kind": "FUNCTION",
+      "name": "btConvexInternalShape::calculateSerializeBufferSize",
+      "mangled": "?calculateSerializeBufferSize@btConvexInternalShape@@QBEHXZ",
+      "file": "Client/App/v8kernel/btConvexInternalShape.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00590a80",
       "kind": "FUNCTION",
       "name": "btTriangleShape::getName",
@@ -270,10 +280,30 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00594b20",
+      "kind": "FUNCTION",
+      "name": "btCollisionObject::calculateSerializeBufferSize",
+      "mangled": "?calculateSerializeBufferSize@btCollisionObject@@QBEHXZ",
+      "file": "Client/App/v8kernel/btCollisionObject.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00594f20",
       "kind": "FUNCTION",
       "name": "btConvexHullShape::getName",
       "mangled": "?getName@btConvexHullShape@@UBEPBDXZ",
+      "file": "Client/App/v8kernel/btConvexHullShape.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00594f30",
+      "kind": "FUNCTION",
+      "name": "btConvexHullShape::calculateSerializeBufferSize",
+      "mangled": "?calculateSerializeBufferSize@btConvexHullShape@@QBEHXZ",
       "file": "Client/App/v8kernel/btConvexHullShape.cpp",
       "orig_size": 6,
       "recomp_size": 6,
@@ -297,6 +327,16 @@
       "file": "Client/App/v8kernel/btGImpactShapeInterface.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00595e70",
+      "kind": "FUNCTION",
+      "name": "btTriangleIndexVertexArray::calculateSerializeBufferSize",
+      "mangled": "?calculateSerializeBufferSize@btTriangleIndexVertexArray@@QBEHXZ",
+      "file": "Client/App/v8kernel/btTriangleIndexVertexArray.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
       "match_pct": 100.0
     },
     {
@@ -330,6 +370,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0059ab00",
+      "kind": "FUNCTION",
+      "name": "btGImpactShapeInterface::calculateSerializeBufferSize",
+      "mangled": "?calculateSerializeBufferSize@btGImpactShapeInterface@@QBEHXZ",
+      "file": "Client/App/v8kernel/btGImpactShapeInterface.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0059ae90",
       "kind": "FUNCTION",
       "name": "btGImpactCompoundShape::isCompound",
@@ -337,6 +387,16 @@
       "file": "Client/App/v8kernel/btGImpactCompoundShape.cpp",
       "orig_size": 11,
       "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0059aea0",
+      "kind": "FUNCTION",
+      "name": "btGImpactCompoundShape::getFieldB0Ptr",
+      "mangled": "?getFieldB0Ptr@btGImpactCompoundShape@@QBEPAXXZ",
+      "file": "Client/App/v8kernel/btGImpactCompoundShape.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
       "match_pct": 100.0
     },
     {
@@ -354,6 +414,16 @@
       "kind": "FUNCTION",
       "name": "btBvhTriangleMeshShape::getName",
       "mangled": "?getName@btBvhTriangleMeshShape@@UBEPBDXZ",
+      "file": "Client/App/v8kernel/btBvhTriangleMeshShape.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0059b8b0",
+      "kind": "FUNCTION",
+      "name": "btBvhTriangleMeshShape::calculateSerializeBufferSize",
+      "mangled": "?calculateSerializeBufferSize@btBvhTriangleMeshShape@@QBEHXZ",
       "file": "Client/App/v8kernel/btBvhTriangleMeshShape.cpp",
       "orig_size": 6,
       "recomp_size": 6,
@@ -430,6 +500,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x005e3a80",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::DeviceD3D9::getField1CPtr",
+      "mangled": "?getField1CPtr@DeviceD3D9@Graphics@RBX@@QBEPAXXZ",
+      "file": "Client/Rendering/GfxCore/D3D9/DeviceD3D9.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x006066d0",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::DeviceContextGL::setField14",
@@ -444,6 +524,16 @@
       "kind": "FUNCTION",
       "name": "RBX::Graphics::DeviceGL::getField34",
       "mangled": "?getField34@DeviceGL@Graphics@RBX@@QBEHXZ",
+      "file": "Client/Rendering/GfxCore/GL/DeviceGL.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00609580",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::DeviceGL::getField0CPtr",
+      "mangled": "?getField0CPtr@DeviceGL@Graphics@RBX@@QBEPAXXZ",
       "file": "Client/Rendering/GfxCore/GL/DeviceGL.cpp",
       "orig_size": 4,
       "recomp_size": 4,
@@ -487,6 +577,16 @@
       "file": "Client/Rendering/GfxRender/AdornRender.cpp",
       "orig_size": 17,
       "recomp_size": 17,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00613570",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::AdornRender::getField24Ptr",
+      "mangled": "?getField24Ptr@AdornRender@Graphics@RBX@@QBEPAXXZ",
+      "file": "Client/Rendering/GfxRender/AdornRender.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     },
     {

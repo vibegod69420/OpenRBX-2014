@@ -9,6 +9,7 @@ class AdornRender
 {
 public:
 	void updateField28();
+	void* getField24Ptr() const;
 
 private:
 	char _pad1C[0x1C];

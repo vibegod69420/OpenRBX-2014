@@ -7,6 +7,7 @@ class btConvexInternalShape
 public:
 	void setMargin(float margin);
 	float getMarginNonVirtual() const;
+	int calculateSerializeBufferSize() const;
 
 private:
 	char _pad[0x30];

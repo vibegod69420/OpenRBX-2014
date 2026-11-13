@@ -11,3 +11,9 @@ bool btTriangleIndexVertexArray::isIndexedMesh() const
 {
 	return field3C == 1;
 }
+
+// FUNCTION: ROBLOXSTUDIO 0x00595e70
+int btTriangleIndexVertexArray::calculateSerializeBufferSize() const
+{
+	return 0x1c;
+}

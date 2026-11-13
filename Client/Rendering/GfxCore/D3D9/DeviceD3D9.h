@@ -7,6 +7,7 @@ class DeviceD3D9
 {
 public:
 	int getField40() const;
+	void* getField1CPtr() const;
 
 private:
 	char _pad[0x40];

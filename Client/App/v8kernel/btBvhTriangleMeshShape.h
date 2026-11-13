@@ -6,4 +6,5 @@ class btBvhTriangleMeshShape : public btCollisionShape
 {
 public:
 	const char* getName() const;
+	int calculateSerializeBufferSize() const;
 };
