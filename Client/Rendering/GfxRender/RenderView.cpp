@@ -30,6 +30,12 @@ void* RenderView::getField0C_1C8() const
 }
 
 // FUNCTION: ROBLOXSTUDIO 0x006766f0
+// FUNCTION: ROBLOXSTUDIO 0x0042f280
+void* RenderView::getField8CRaw() const
+{
+	return field8C;
+}
+
 void* RenderView::getField0C_1B0() const
 {
 	return *(void**)((char*)field0C + 0x1b0);

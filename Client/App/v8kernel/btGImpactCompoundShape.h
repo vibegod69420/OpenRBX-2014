@@ -10,6 +10,7 @@ public:
 	btGImpactShapeInterface* getChildShape(int index) const;
 	bool isCompound() const;
 	void* getFieldB0Ptr() const;
+	int getFieldD0() const;
 
 private:
 	char _padBC[0xBC];

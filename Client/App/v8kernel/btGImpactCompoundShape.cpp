@@ -19,3 +19,9 @@ void* btGImpactCompoundShape::getFieldB0Ptr() const
 {
 	return (void*)((char*)this + 0xb0);
 }
+
+// FUNCTION: ROBLOXSTUDIO 0x0059aeb0
+int btGImpactCompoundShape::getFieldD0() const
+{
+	return *(const int*)((const char*)this + 0xd0);
+}

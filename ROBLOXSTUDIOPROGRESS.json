@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 18:59:54 UTC",
+  "updated_at": "2026-11-13 19:01:50 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,15 +10,25 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 1.0251,
-  "implemented_total": 96,
-  "function_annotations": 96,
+  "matchable_coverage_pct": 1.1532,
+  "implemented_total": 108,
+  "function_annotations": 108,
   "stub_annotations": 0,
-  "perfect_100_count": 96,
+  "perfect_100_count": 108,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.2367,
-  "overall_byte_coverage_pct": 0.0143,
+  "overall_function_coverage_pct": 0.2663,
+  "overall_byte_coverage_pct": 0.0152,
   "functions": [
+    {
+      "address": "0x00403b30",
+      "kind": "FUNCTION",
+      "name": "RBX::PartInstance::getField70",
+      "mangled": "?getField70@PartInstance@RBX@@QBEHXZ",
+      "file": "Client/App/v8datamodel/PartInstance.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
     {
       "address": "0x00411990",
       "kind": "FUNCTION",
@@ -90,6 +100,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0042f280",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::RenderView::getField8CRaw",
+      "mangled": "?getField8CRaw@RenderView@Graphics@RBX@@QBEPAXXZ",
+      "file": "Client/Rendering/GfxRender/RenderView.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0048b5d0",
       "kind": "FUNCTION",
       "name": "RBX::FlyweightService::pushFrontNode",
@@ -107,6 +127,16 @@
       "file": "Client/App/v8datamodel/FlyweightService.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00495630",
+      "kind": "FUNCTION",
+      "name": "RobloxObjectBrowserDoc::getField1C",
+      "mangled": "?getField1C@RobloxObjectBrowserDoc@@QBEHXZ",
+      "file": "Client/RobloxStudio/RobloxObjectBrowserDoc.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     },
     {
@@ -130,6 +160,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x004bb180",
+      "kind": "FUNCTION",
+      "name": "RobloxIDEDoc::getField80",
+      "mangled": "?getField80@RobloxIDEDoc@@QBEHXZ",
+      "file": "Client/RobloxStudio/RobloxIDEDoc.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x004d3ca0",
+      "kind": "FUNCTION",
+      "name": "ShortcutsModel::getCount",
+      "mangled": "?getCount@ShortcutsModel@@QBEHH@Z",
+      "file": "Client/RobloxStudio/ShortcutsModel.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x004d3cb0",
+      "kind": "FUNCTION",
+      "name": "ShortcutsModel::getRowSize",
+      "mangled": "?getRowSize@ShortcutsModel@@QBEHH@Z",
+      "file": "Client/RobloxStudio/ShortcutsModel.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x004f6040",
       "kind": "FUNCTION",
       "name": "RBX::ManualWeldJoint::getJointType",
@@ -150,6 +210,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x004f6cd0",
+      "kind": "FUNCTION",
+      "name": "RobloxObjectBrowserDoc::clearField0C",
+      "mangled": "?clearField0C@RobloxObjectBrowserDoc@@QAEXXZ",
+      "file": "Client/RobloxStudio/RobloxObjectBrowserDoc.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00500320",
       "kind": "FUNCTION",
       "name": "RBX::WeldJoint::getJointType",
@@ -157,6 +227,16 @@
       "file": "Client/App/v8kernel/WeldJoint.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00526730",
+      "kind": "FUNCTION",
+      "name": "RobloxWebDoc::clearField0C",
+      "mangled": "?clearField0C@RobloxWebDoc@@QAEXXZ",
+      "file": "Client/RobloxStudio/RobloxWebDoc.cpp",
+      "orig_size": 5,
+      "recomp_size": 5,
       "match_pct": 100.0
     },
     {
@@ -187,6 +267,16 @@
       "file": "Client/Base/msvc/_System_error_category.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00575a80",
+      "kind": "FUNCTION",
+      "name": "RBX::TextDisplay::getField90",
+      "mangled": "?getField90@TextDisplay@RBX@@QBEHXZ",
+      "file": "Client/App/v8datamodel/TextDisplay.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
       "match_pct": 100.0
     },
     {
@@ -227,6 +317,16 @@
       "file": "Client/App/v8kernel/btManifoldResult.cpp",
       "orig_size": 19,
       "recomp_size": 19,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0058f690",
+      "kind": "FUNCTION",
+      "name": "btCollisionDispatcher::getManifoldsIfAny",
+      "mangled": "?getManifoldsIfAny@btCollisionDispatcher@@QBEPAXXZ",
+      "file": "Client/App/v8kernel/btCollisionDispatcher.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
       "match_pct": 100.0
     },
     {
@@ -400,6 +500,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0059aaf0",
+      "kind": "FUNCTION",
+      "name": "btGImpactShapeInterface::setField30",
+      "mangled": "?setField30@btGImpactShapeInterface@@QAEXXZ",
+      "file": "Client/App/v8kernel/btGImpactShapeInterface.cpp",
+      "orig_size": 5,
+      "recomp_size": 5,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0059ab00",
       "kind": "FUNCTION",
       "name": "btGImpactShapeInterface::calculateSerializeBufferSize",
@@ -424,6 +534,16 @@
       "kind": "FUNCTION",
       "name": "btGImpactCompoundShape::getFieldB0Ptr",
       "mangled": "?getFieldB0Ptr@btGImpactCompoundShape@@QBEPAXXZ",
+      "file": "Client/App/v8kernel/btGImpactCompoundShape.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0059aeb0",
+      "kind": "FUNCTION",
+      "name": "btGImpactCompoundShape::getFieldD0",
+      "mangled": "?getFieldD0@btGImpactCompoundShape@@QBEHXZ",
       "file": "Client/App/v8kernel/btGImpactCompoundShape.cpp",
       "orig_size": 7,
       "recomp_size": 7,
@@ -672,7 +792,7 @@
     {
       "address": "0x006766f0",
       "kind": "FUNCTION",
-      "name": "RBX::Graphics::RenderView::getField0C_1B0",
+      "name": "RBX::Graphics::RenderView::getField8CRaw",
       "mangled": "?getField0C_1B0@RenderView@Graphics@RBX@@QBEPAXXZ",
       "file": "Client/Rendering/GfxRender/RenderView.cpp",
       "orig_size": 10,

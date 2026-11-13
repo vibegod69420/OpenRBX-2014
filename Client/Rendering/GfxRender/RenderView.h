@@ -13,6 +13,7 @@ public:
 	void* getField8C_BA0() const;
 	void* getField0C_1C8() const;
 	void* getField0C_1B0() const;
+	void* getField8CRaw() const;
 
 private:
 	char _pad0C[0x0C];

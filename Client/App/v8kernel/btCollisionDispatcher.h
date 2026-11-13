@@ -9,6 +9,7 @@ public:
 	btPersistentManifold* getManifoldByIndexInternal(int index) const;
 	int getField0C() const;
 	int getField44() const;
+	void* getManifoldsIfAny() const;
 
 private:
 	char _pad[0x0c];

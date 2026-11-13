@@ -17,3 +17,11 @@ int btCollisionDispatcher::getField44() const
 {
 	return field44;
 }
+
+// FUNCTION: ROBLOXSTUDIO 0x0058f690
+void* btCollisionDispatcher::getManifoldsIfAny() const
+{
+	if (field0C)
+		return m_manifoldsPtr;
+	return 0;
+}
