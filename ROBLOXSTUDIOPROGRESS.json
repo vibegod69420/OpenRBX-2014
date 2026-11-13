@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 19:10:40 UTC",
+  "updated_at": "2026-11-13 19:13:00 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 1.3881,
-  "implemented_total": 130,
-  "function_annotations": 130,
+  "matchable_coverage_pct": 1.4415,
+  "implemented_total": 135,
+  "function_annotations": 135,
   "stub_annotations": 0,
-  "perfect_100_count": 130,
+  "perfect_100_count": 135,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.3205,
-  "overall_byte_coverage_pct": 0.02,
+  "overall_function_coverage_pct": 0.3328,
+  "overall_byte_coverage_pct": 0.0207,
   "functions": [
     {
       "address": "0x00403b30",
@@ -387,6 +387,16 @@
       "file": "Client/App/v8tree/Sequence.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00545f00",
+      "kind": "FUNCTION",
+      "name": "RBX::CountedImplViewBase::dispose",
+      "mangled": "?dispose@CountedImplViewBase@RBX@@QAEXXZ",
+      "file": "Client/App/v8kernel/BoostCountedImpl.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
       "match_pct": 100.0
     },
     {
@@ -1200,6 +1210,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009d6ff0",
+      "kind": "FUNCTION",
+      "name": "RBX::CountedImplHumanoidState::dispose",
+      "mangled": "?dispose@CountedImplHumanoidState@RBX@@QAEXXZ",
+      "file": "Client/App/v8kernel/BoostCountedImpl.cpp",
+      "orig_size": 19,
+      "recomp_size": 19,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009f62a0",
       "kind": "FUNCTION",
       "name": "copyColumn0",
@@ -1207,6 +1227,26 @@
       "file": "Client/Base/G3D/Matrix4.cpp",
       "orig_size": 27,
       "recomp_size": 27,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009fd3c0",
+      "kind": "FUNCTION",
+      "name": "CharacterMesh::invoke",
+      "mangled": "?invoke@CharacterMesh@@QBEXH@Z",
+      "file": "Client/RobloxStudio/Forwarders.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a541c0",
+      "kind": "FUNCTION",
+      "name": "RBX::CountedImplBoxSelectCommand::dispose",
+      "mangled": "?dispose@CountedImplBoxSelectCommand@RBX@@QAEXXZ",
+      "file": "Client/App/v8kernel/BoostCountedImpl.cpp",
+      "orig_size": 18,
+      "recomp_size": 18,
       "match_pct": 100.0
     },
     {
@@ -1277,6 +1317,16 @@
       "file": "Client/App/v8kernel/ManualGlueJoint.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ba9880",
+      "kind": "FUNCTION",
+      "name": "Body::invoke",
+      "mangled": "?invoke@CharacterMesh@@QBEXH@Z",
+      "file": "Client/RobloxStudio/Forwarders.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
       "match_pct": 100.0
     },
     {
