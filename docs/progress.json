@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 19:48:26 UTC",
+  "updated_at": "2026-11-13 19:49:20 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 27.6135,
-  "implemented_total": 2586,
-  "function_annotations": 2586,
+  "matchable_coverage_pct": 27.6348,
+  "implemented_total": 2588,
+  "function_annotations": 2588,
   "stub_annotations": 0,
-  "perfect_100_count": 2586,
+  "perfect_100_count": 2588,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 6.3756,
-  "overall_byte_coverage_pct": 0.3479,
+  "overall_function_coverage_pct": 6.3805,
+  "overall_byte_coverage_pct": 0.348,
   "functions": [
     {
       "address": "0x004022c0",
@@ -17600,6 +17600,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009208b0",
+      "kind": "FUNCTION",
+      "name": "CSetZ_009208b0::set",
+      "mangled": "?set@CSetZ_009208b0@@QAEXH@Z",
+      "file": "Client/Base/msvc/small_returns.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0092351c",
       "kind": "FUNCTION",
       "name": "adjustorThunk_0092351c",
@@ -24317,6 +24327,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b61e80",
+      "kind": "FUNCTION",
+      "name": "CNeg_00b61e80::get",
+      "mangled": "?get@CNeg_00b61e80@@QAEHH@Z",
+      "file": "Client/Base/msvc/small_returns.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
       "match_pct": 100.0
     },
     {
