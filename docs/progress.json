@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 18:39:45 UTC",
+  "updated_at": "2026-11-13 18:41:14 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -17,7 +17,7 @@
   "perfect_100_count": 50,
   "average_match_pct": 100.0,
   "overall_function_coverage_pct": 0.1233,
-  "overall_byte_coverage_pct": 0.0099,
+  "overall_byte_coverage_pct": 0.0101,
   "functions": [
     {
       "address": "0x004122e0",
@@ -220,13 +220,13 @@
       "match_pct": 100.0
     },
     {
-      "address": "0x0059b590",
+      "address": "0x0059b130",
       "kind": "FUNCTION",
-      "name": "btGImpactCompoundShape::getName",
-      "mangled": "?getName@btGImpactCompoundShape@@UBEPBDXZ",
+      "name": "btGImpactCompoundShape::getChildShape",
+      "mangled": "?getChildShape@btGImpactCompoundShape@@QBEPAVbtGImpactShapeInterface@@H@Z",
       "file": "Client/App/v8kernel/btGImpactCompoundShape.cpp",
-      "orig_size": 6,
-      "recomp_size": 6,
+      "orig_size": 19,
+      "recomp_size": 19,
       "match_pct": 100.0
     },
     {

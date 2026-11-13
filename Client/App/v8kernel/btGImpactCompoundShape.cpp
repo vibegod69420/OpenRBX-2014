@@ -1,7 +1,7 @@
 #include "btGImpactCompoundShape.h"
 
-// FUNCTION: ROBLOXSTUDIO 0x0059b590
-const char* btGImpactCompoundShape::getName() const
+// FUNCTION: ROBLOXSTUDIO 0x0059b130
+btGImpactShapeInterface* btGImpactCompoundShape::getChildShape(int index) const
 {
-	return "GImpactCompound";
+	return m_childShapes[index];
 }
