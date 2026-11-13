@@ -9,11 +9,12 @@ ALLOW = set('''
 mov movzx movsx lea push pop add sub and or xor cmp test inc dec neg not
 shl shr sar imul mul idiv div cdq cwde cbw xchg sbb adc
 lock rep xadd cmpxchg bswap cpuid rdtsc
-lahf sahf pause int3 bts stosd movsd stosb
+lahf sahf pause int3 bts stosd stosb movsw
+int addps subps mulps divps cvtps2pd cvtpd2ps cvtdq2ps unpckhpd punpcklwd fiadd fimul fptan
 mulps shufps andps orps xorps cvtdq2ps sqrtss movlpd movhpd movapd
 shld shrd rol ror rcl rcr bt btc btr bsf bsr
 xorps movaps movups movdqa movdqu movq movd pxor pand por pxor
-fsqrt fsin fcos fpatan fprem fprem1 fyl2x f2xm1 fscale frndint fxtract fcomi fcomip fucomi fucomip
+fsqrt fsin fcos fpatan fprem fprem1 fyl2x f2xm1 fscale frndint fxtract fcomi fcomip fcompi fucomi fucomip fucompi
 fsubr fdivr fsubrp fdivrp fstsw fnstcw fldcw frstor fsave fcompp fucompp
 jmp je jne jz jnz ja jae jb jbe jg jge jl jle js jns jo jno jp jnp
 call ret leave nop
