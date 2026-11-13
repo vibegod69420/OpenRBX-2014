@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 18:52:48 UTC",
+  "updated_at": "2026-11-13 18:56:52 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,15 +10,25 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 0.7795,
-  "implemented_total": 73,
-  "function_annotations": 73,
+  "matchable_coverage_pct": 0.8542,
+  "implemented_total": 80,
+  "function_annotations": 80,
   "stub_annotations": 0,
-  "perfect_100_count": 73,
+  "perfect_100_count": 80,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.18,
-  "overall_byte_coverage_pct": 0.0119,
+  "overall_function_coverage_pct": 0.1972,
+  "overall_byte_coverage_pct": 0.0134,
   "functions": [
+    {
+      "address": "0x00411990",
+      "kind": "FUNCTION",
+      "name": "field14Equals",
+      "mangled": "?field14Equals@@YA_NPBX0@Z",
+      "file": "Client/Base/boost/intrusive_helpers.cpp",
+      "orig_size": 19,
+      "recomp_size": 19,
+      "match_pct": 100.0
+    },
     {
       "address": "0x004122e0",
       "kind": "FUNCTION",
@@ -147,6 +157,16 @@
       "file": "Client/Base/msvc/_System_error_category.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00575fc0",
+      "kind": "FUNCTION",
+      "name": "UploadDialog::getPair",
+      "mangled": "?getPair@UploadDialog@@QBE?AUUploadDialogPair@@XZ",
+      "file": "Client/RobloxStudio/UploadDialog.cpp",
+      "orig_size": 21,
+      "recomp_size": 21,
       "match_pct": 100.0
     },
     {
@@ -290,6 +310,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x005961a0",
+      "kind": "FUNCTION",
+      "name": "btTriangleIndexVertexArray::isIndexedMesh",
+      "mangled": "?isIndexedMesh@btTriangleIndexVertexArray@@QBE_NXZ",
+      "file": "Client/App/v8kernel/btTriangleIndexVertexArray.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00596500",
       "kind": "FUNCTION",
       "name": "btSphereShape::getName",
@@ -297,6 +327,16 @@
       "file": "Client/App/v8kernel/btSphereShape.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0059ae90",
+      "kind": "FUNCTION",
+      "name": "btGImpactCompoundShape::isCompound",
+      "mangled": "?isCompound@btGImpactCompoundShape@@QBE_NXZ",
+      "file": "Client/App/v8kernel/btGImpactCompoundShape.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -430,6 +470,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0060ee20",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::TextureGL::zeroTriple",
+      "mangled": "?zeroTriple@TextureGL@Graphics@RBX@@QBEXPAHHHH@Z",
+      "file": "Client/Rendering/GfxCore/TextureGL.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00611750",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::AdornRender::updateField28",
@@ -517,6 +567,26 @@
       "file": "Client/Base/msvc/codecvt_error_cat.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0072a2c0",
+      "kind": "FUNCTION",
+      "name": "setIntPairIfNonNull",
+      "mangled": "?setIntPairIfNonNull@@YAXPAHHH@Z",
+      "file": "Client/Base/boost/set_int_pair.cpp",
+      "orig_size": 22,
+      "recomp_size": 22,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007c3de0",
+      "kind": "FUNCTION",
+      "name": "BoxSelectCommand::zeroTriple",
+      "mangled": "?zeroTriple@BoxSelectCommand@@QBEXPAH@Z",
+      "file": "Client/RobloxStudio/BoxSelectCommand.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
       "match_pct": 100.0
     },
     {

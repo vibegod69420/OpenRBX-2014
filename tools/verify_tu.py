@@ -293,6 +293,18 @@ def compile_cpp_to_coff(cpp_path: Path, use_cache: bool = False) -> tuple[bool, 
         "/nologo /c /O2 /Ob2 /Oi /Ot /Oy- /GS /EHsc /GR /Gy /fp:precise "
         "/arch:SSE /Zc:wchar_t /Zc:forScope"
     )
+    # A `// FLAGS:` line pins the exact flag set for a TU whose original was built
+    # with different options (third-party libraries here use frame-pointer omission).
+    try:
+        head = cpp_path.read_text(errors="ignore")[:4000]
+    except OSError:
+        head = ""
+    for line in head.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("// FLAGS:"):
+            flags = stripped.split(":", 1)[1].strip()
+            break
+
     cmd_str = f'{CL_BIN} {flags} {" ".join(includes)} "{cpp_path}" /Fo"{obj_path}"'
 
     res = subprocess.run(cmd_str, shell=True, capture_output=True, text=True, env=get_msvc_env())

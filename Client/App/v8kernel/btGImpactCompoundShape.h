@@ -8,8 +8,11 @@ class btGImpactCompoundShape
 {
 public:
 	btGImpactShapeInterface* getChildShape(int index) const;
+	bool isCompound() const;
 
 private:
-	char _padD8[0xD8];
+	char _padBC[0xBC];
+	int fieldBC;
+	char _padC0[0xD8 - 0xC0];
 	btGImpactShapeInterface** m_childShapes;
 };
