@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 19:22:10 UTC",
+  "updated_at": "2026-11-13 19:24:28 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 4.4741,
-  "implemented_total": 419,
-  "function_annotations": 419,
+  "matchable_coverage_pct": 4.7838,
+  "implemented_total": 448,
+  "function_annotations": 448,
   "stub_annotations": 0,
-  "perfect_100_count": 419,
+  "perfect_100_count": 448,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 1.033,
-  "overall_byte_coverage_pct": 0.1542,
+  "overall_function_coverage_pct": 1.1045,
+  "overall_byte_coverage_pct": 0.1748,
   "functions": [
     {
       "address": "0x004022c0",
@@ -97,6 +97,26 @@
       "file": "Client/Base/msvc/deleting_destructors.cpp",
       "orig_size": 34,
       "recomp_size": 34,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00407d30",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorGlobal_00407d30::destroy",
+      "mangled": "?destroy@DeletingDtorGlobal_00407d30@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 71,
+      "recomp_size": 71,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00407d80",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorImport_00407d80::destroy",
+      "mangled": "?destroy@DeletingDtorImport_00407d80@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
       "match_pct": 100.0
     },
     {
@@ -407,6 +427,26 @@
       "file": "Client/Base/msvc/deleting_destructors.cpp",
       "orig_size": 34,
       "recomp_size": 34,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00437a50",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorImport_00437a50::destroy",
+      "mangled": "?destroy@DeletingDtorImport_00407d80@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00437a90",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorImport_00437a90::destroy",
+      "mangled": "?destroy@DeletingDtorImport_00407d80@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
       "match_pct": 100.0
     },
     {
@@ -930,6 +970,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0048c650",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorImport_0048c650::destroy",
+      "mangled": "?destroy@DeletingDtorImport_00407d80@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00490510",
       "kind": "FUNCTION",
       "name": "DeletingDtor_00490510::destroy",
@@ -987,6 +1037,26 @@
       "file": "Client/App/v8datamodel/ScreenGui.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00492eb0",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorGlobal_00492eb0::destroy",
+      "mangled": "?destroy@DeletingDtorGlobal_00407d30@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 71,
+      "recomp_size": 71,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00492f00",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorImport_00492f00::destroy",
+      "mangled": "?destroy@DeletingDtorImport_00407d80@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
       "match_pct": 100.0
     },
     {
@@ -1857,6 +1927,86 @@
       "file": "Client/Base/msvc/_System_error_category.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00556040",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorImport_00556040::destroy",
+      "mangled": "?destroy@DeletingDtorImport_00407d80@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00556220",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorImport_00556220::destroy",
+      "mangled": "?destroy@DeletingDtorImport_00407d80@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00556260",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorImport_00556260::destroy",
+      "mangled": "?destroy@DeletingDtorImport_00407d80@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00558760",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorImport_00558760::destroy",
+      "mangled": "?destroy@DeletingDtorImport_00407d80@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005587a0",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorImport_005587a0::destroy",
+      "mangled": "?destroy@DeletingDtorImport_00407d80@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00558850",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorImport_00558850::destroy",
+      "mangled": "?destroy@DeletingDtorImport_00407d80@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00558890",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorImport_00558890::destroy",
+      "mangled": "?destroy@DeletingDtorImport_00407d80@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005588d0",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorImport_005588d0::destroy",
+      "mangled": "?destroy@DeletingDtorImport_00407d80@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
       "match_pct": 100.0
     },
     {
@@ -3050,6 +3200,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0087b620",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorSixVptr_0087b620::destroy",
+      "mangled": "?destroy@DeletingDtorSixVptr_0087b620@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 74,
+      "recomp_size": 74,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0087bad0",
       "kind": "FUNCTION",
       "name": "PathInterpolatedCFrame::getField41",
@@ -3057,6 +3217,46 @@
       "file": "Client/App/v8datamodel/PathInterpolatedCFrame.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0087dc20",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorSixVptr_0087dc20::destroy",
+      "mangled": "?destroy@DeletingDtorSixVptr_0087b620@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 74,
+      "recomp_size": 74,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00880750",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorSixVptr_00880750::destroy",
+      "mangled": "?destroy@DeletingDtorSixVptr_0087b620@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 74,
+      "recomp_size": 74,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00884630",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorSixVptr_00884630::destroy",
+      "mangled": "?destroy@DeletingDtorSixVptr_0087b620@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 74,
+      "recomp_size": 74,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00885750",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorSixVptr_00885750::destroy",
+      "mangled": "?destroy@DeletingDtorSixVptr_0087b620@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 74,
+      "recomp_size": 74,
       "match_pct": 100.0
     },
     {
@@ -3177,6 +3377,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0090a690",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorSixVptr_0090a690::destroy",
+      "mangled": "?destroy@DeletingDtorSixVptr_0087b620@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 74,
+      "recomp_size": 74,
       "match_pct": 100.0
     },
     {
@@ -3317,6 +3527,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0093b010",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorSixVptr_0093b010::destroy",
+      "mangled": "?destroy@DeletingDtorSixVptr_0087b620@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 74,
+      "recomp_size": 74,
       "match_pct": 100.0
     },
     {
@@ -3507,6 +3727,26 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 67,
       "recomp_size": 67,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00981a40",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorSixVptr_00981a40::destroy",
+      "mangled": "?destroy@DeletingDtorSixVptr_0087b620@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 74,
+      "recomp_size": 74,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00983330",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorSixVptr_00983330::destroy",
+      "mangled": "?destroy@DeletingDtorSixVptr_0087b620@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 74,
+      "recomp_size": 74,
       "match_pct": 100.0
     },
     {
@@ -3800,6 +4040,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a572b0",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorSixVptr_00a572b0::destroy",
+      "mangled": "?destroy@DeletingDtorSixVptr_0087b620@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 74,
+      "recomp_size": 74,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a586e0",
       "kind": "FUNCTION",
       "name": "DeletingDtorFiveVptr_00a586e0::destroy",
@@ -3950,6 +4200,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a9b4a0",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorSixVptr_00a9b4a0::destroy",
+      "mangled": "?destroy@DeletingDtorSixVptr_0087b620@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 74,
+      "recomp_size": 74,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a9f850",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorSixVptr_00a9f850::destroy",
+      "mangled": "?destroy@DeletingDtorSixVptr_0087b620@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 74,
+      "recomp_size": 74,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00aa2d10",
       "kind": "FUNCTION",
       "name": "RBX::MotorJoint::getJointType",
@@ -4000,6 +4270,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00ac8060",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorSixVptr_00ac8060::destroy",
+      "mangled": "?destroy@DeletingDtorSixVptr_0087b620@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 74,
+      "recomp_size": 74,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00ac9b60",
       "kind": "FUNCTION",
       "name": "SelectionPointLasso::getPoint",
@@ -4037,6 +4317,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ae41c0",
+      "kind": "FUNCTION",
+      "name": "DeletingDtorSixVptr_00ae41c0::destroy",
+      "mangled": "?destroy@DeletingDtorSixVptr_0087b620@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
+      "orig_size": 74,
+      "recomp_size": 74,
       "match_pct": 100.0
     },
     {
