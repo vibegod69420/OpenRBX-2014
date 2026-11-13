@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 18:41:14 UTC",
+  "updated_at": "2026-11-13 18:45:18 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 0.5339,
-  "implemented_total": 50,
-  "function_annotations": 50,
+  "matchable_coverage_pct": 0.5766,
+  "implemented_total": 54,
+  "function_annotations": 54,
   "stub_annotations": 0,
-  "perfect_100_count": 50,
+  "perfect_100_count": 54,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.1233,
-  "overall_byte_coverage_pct": 0.0101,
+  "overall_function_coverage_pct": 0.1331,
+  "overall_byte_coverage_pct": 0.0105,
   "functions": [
     {
       "address": "0x004122e0",
@@ -170,6 +170,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00590260",
+      "kind": "FUNCTION",
+      "name": "btConvexInternalShape::setMargin",
+      "mangled": "?setMargin@btConvexInternalShape@@QAEXM@Z",
+      "file": "Client/App/v8kernel/btConvexInternalShape.cpp",
+      "orig_size": 17,
+      "recomp_size": 17,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00590280",
+      "kind": "FUNCTION",
+      "name": "btConvexInternalShape::getMarginNonVirtual",
+      "mangled": "?getMarginNonVirtual@btConvexInternalShape@@QBEMXZ",
+      "file": "Client/App/v8kernel/btConvexInternalShape.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00590a80",
       "kind": "FUNCTION",
       "name": "btTriangleShape::getName",
@@ -207,6 +227,16 @@
       "file": "Client/App/v8kernel/KernelJoint.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00595de0",
+      "kind": "FUNCTION",
+      "name": "btGImpactShapeInterface::getMarginNonVirtual",
+      "mangled": "?getMarginNonVirtual@btGImpactShapeInterface@@QBEMXZ",
+      "file": "Client/App/v8kernel/btGImpactShapeInterface.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     },
     {
@@ -297,6 +327,16 @@
       "file": "Client/Rendering/GfxCore/GL/DeviceContextGL.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00611750",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::AdornRender::updateField28",
+      "mangled": "?updateField28@AdornRender@Graphics@RBX@@QAEXXZ",
+      "file": "Client/Rendering/GfxRender/AdornRender.cpp",
+      "orig_size": 17,
+      "recomp_size": 17,
       "match_pct": 100.0
     },
     {

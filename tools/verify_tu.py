@@ -267,7 +267,13 @@ def compile_cpp_to_coff(cpp_path: Path, use_cache: bool = False) -> tuple[bool, 
         f'/I"{ROOT / "Client" / "Rendering" / "g3d" / "include"}"',
         f'/I"{cpp_path.parent}"',
     ]
-    flags = "/nologo /c /O2 /Ob2 /Oi /Ot /Oy- /GS /EHsc /GR /Gy /fp:precise /Zc:wchar_t /Zc:forScope"
+    # /arch:SSE matters: the 2014 build used SSE1, so scalar int->float conversions
+    # are `cvtsi2ss`; the default SSE2 target folds them into packed `cvtdq2ps`
+    # and no float-bearing function can match.
+    flags = (
+        "/nologo /c /O2 /Ob2 /Oi /Ot /Oy- /GS /EHsc /GR /Gy /fp:precise "
+        "/arch:SSE /Zc:wchar_t /Zc:forScope"
+    )
     cmd_str = f'{CL_BIN} {flags} {" ".join(includes)} "{cpp_path}" /Fo"{obj_path}"'
 
     res = subprocess.run(cmd_str, shell=True, capture_output=True, text=True, env=get_msvc_env())

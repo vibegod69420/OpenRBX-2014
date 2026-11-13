@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 if(MSVC)
     # Match August 20, 2014 RobloxStudioBeta.exe (0.164.0.50577) Release x86 flags
-    add_compile_options(/O2 /Ob2 /Oi /Ot /Oy- /GS /EHsc /GR /fp:precise /W0 /bigobj)
+    add_compile_options(/O2 /Ob2 /Oi /Ot /Oy- /GS /EHsc /GR /fp:precise /arch:SSE /W0 /bigobj)
     add_link_options(/OPT:REF /OPT:ICF /SUBSYSTEM:WINDOWS /MACHINE:X86)
 endif()
 
