@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 20:11:14 UTC",
+  "updated_at": "2026-11-13 20:12:52 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 39.2952,
-  "implemented_total": 3680,
-  "function_annotations": 3680,
+  "matchable_coverage_pct": 39.6369,
+  "implemented_total": 3712,
+  "function_annotations": 3712,
   "stub_annotations": 0,
-  "perfect_100_count": 3680,
+  "perfect_100_count": 3712,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 9.0728,
-  "overall_byte_coverage_pct": 0.6062,
+  "overall_function_coverage_pct": 9.1516,
+  "overall_byte_coverage_pct": 0.6114,
   "functions": [
     {
       "address": "0x004022c0",
@@ -987,6 +987,26 @@
       "file": "Client/App/v8datamodel/VideoCaptureEngine.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00427a60",
+      "kind": "FUNCTION",
+      "name": "vdispatch_00427a60",
+      "mangled": "_vdispatch_00427a60",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 18,
+      "recomp_size": 18,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00427a80",
+      "kind": "FUNCTION",
+      "name": "vdispatch_00427a80",
+      "mangled": "_vdispatch_00427a80",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 18,
+      "recomp_size": 18,
       "match_pct": 100.0
     },
     {
@@ -5430,6 +5450,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x005e0070",
+      "kind": "FUNCTION",
+      "name": "membPtrCond_005e0070",
+      "mangled": "_membPtrCond_005e0070",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x005e06e0",
       "kind": "FUNCTION",
       "name": "CVs_005e06e0::destroy",
@@ -7307,6 +7337,16 @@
       "file": "Client/Base/msvc/misc_thunks5.cpp",
       "orig_size": 12,
       "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00682010",
+      "kind": "FUNCTION",
+      "name": "CBSet32_00682010::set",
+      "mangled": "?set@CBSet32_00682010@@QAEXD@Z",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
       "match_pct": 100.0
     },
     {
@@ -16520,6 +16560,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x006e8590",
+      "kind": "FUNCTION",
+      "name": "passThruPop_006e8590",
+      "mangled": "_passThruPop_006e8590",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006e86c0",
+      "kind": "FUNCTION",
+      "name": "passThruPop_006e86c0",
+      "mangled": "_passThruPop_006e86c0",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0072a2c0",
       "kind": "FUNCTION",
       "name": "setIntPairIfNonNull",
@@ -16907,6 +16967,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007a59d0",
+      "kind": "FUNCTION",
+      "name": "CCmpArg_007a59d0::test",
+      "mangled": "?test@CCmpArg_007a59d0@@QAE_NHPAH@Z",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 18,
+      "recomp_size": 18,
       "match_pct": 100.0
     },
     {
@@ -19550,6 +19620,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0082e3a0",
+      "kind": "FUNCTION",
+      "name": "cvtCmp_0082e3a0",
+      "mangled": "?cvtCmp_0082e3a0@@YA_NXZ",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 17,
+      "recomp_size": 17,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0082e3c0",
+      "kind": "FUNCTION",
+      "name": "cvtCmp_0082e3c0",
+      "mangled": "?cvtCmp_0082e3c0@@YA_NXZ",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 17,
+      "recomp_size": 17,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0082e3e0",
+      "kind": "FUNCTION",
+      "name": "cvtCmp_0082e3e0",
+      "mangled": "?cvtCmp_0082e3e0@@YA_NXZ",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 17,
+      "recomp_size": 17,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0082e400",
       "kind": "FUNCTION",
       "name": "gbool_0082e400",
@@ -19950,6 +20050,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00856210",
+      "kind": "FUNCTION",
+      "name": "baseThis_00856210",
+      "mangled": "_baseThis_00856210",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00857ca0",
       "kind": "FUNCTION",
       "name": "CByte_00857ca0::get",
@@ -20000,11 +20110,51 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0085f5d0",
+      "kind": "FUNCTION",
+      "name": "CBSet32_0085f5d0::set",
+      "mangled": "?set@CBSet32_0085f5d0@@QAEXD@Z",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0085f8c0",
+      "kind": "FUNCTION",
+      "name": "CBSet32_0085f8c0::set",
+      "mangled": "?set@CBSet32_0085f8c0@@QAEXD@Z",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0085f8d0",
+      "kind": "FUNCTION",
+      "name": "CBSet32_0085f8d0::set",
+      "mangled": "?set@CBSet32_0085f8d0@@QAEXD@Z",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0085f900",
       "kind": "FUNCTION",
       "name": "CArgSet_0085f900::set",
       "mangled": "?set@CArgSet_0085f900@@QAEXH@Z",
       "file": "Client/Base/msvc/arg_setters.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0085fa50",
+      "kind": "FUNCTION",
+      "name": "CBSet32_0085fa50::set",
+      "mangled": "?set@CBSet32_0085fa50@@QAEXD@Z",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
       "orig_size": 16,
       "recomp_size": 16,
       "match_pct": 100.0
@@ -20880,6 +21030,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008a44a0",
+      "kind": "FUNCTION",
+      "name": "leaCall4_008a44a0",
+      "mangled": "_leaCall4_008a44a0",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008a44f0",
       "kind": "FUNCTION",
       "name": "CPush1_008a44f0::call",
@@ -20910,6 +21070,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008a47c0",
+      "kind": "FUNCTION",
+      "name": "floatZeroCall_008a47c0",
+      "mangled": "_floatZeroCall_008a47c0",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 14,
+      "recomp_size": 14,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008a47d0",
       "kind": "FUNCTION",
       "name": "CPushImm_008a47d0::call",
@@ -20927,6 +21097,16 @@
       "file": "Client/Base/msvc/misc_thunks6.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008a47f0",
+      "kind": "FUNCTION",
+      "name": "floatZeroCall_008a47f0",
+      "mangled": "_floatZeroCall_008a47f0",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 14,
+      "recomp_size": 14,
       "match_pct": 100.0
     },
     {
@@ -21290,6 +21470,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008ac860",
+      "kind": "FUNCTION",
+      "name": "vcallFld_008ac860",
+      "mangled": "_vcallFld_008ac860",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008ac950",
       "kind": "FUNCTION",
       "name": "RBX::FreeJoint::getJointType",
@@ -21400,6 +21590,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008bc080",
+      "kind": "FUNCTION",
+      "name": "CBSet32_008bc080::set",
+      "mangled": "?set@CBSet32_008bc080@@QAEXD@Z",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008bc5d0",
       "kind": "FUNCTION",
       "name": "CCleanup_008bc5d0::destroy",
@@ -21507,6 +21707,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008e3c90",
+      "kind": "FUNCTION",
+      "name": "pushMemberDec_008e3c90",
+      "mangled": "_pushMemberDec_008e3c90",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
       "match_pct": 100.0
     },
     {
@@ -23500,6 +23710,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00926020",
+      "kind": "FUNCTION",
+      "name": "CBSet32_00926020::set",
+      "mangled": "?set@CBSet32_00926020@@QAEXD@Z",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009285c9",
       "kind": "FUNCTION",
       "name": "adjustorThunk_009285c9",
@@ -25470,6 +25690,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009689f0",
+      "kind": "FUNCTION",
+      "name": "CTern_009689f0::get",
+      "mangled": "?get@CTern_009689f0@@QAEHXZ",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 17,
+      "recomp_size": 17,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00968ccf",
       "kind": "FUNCTION",
       "name": "vtor2_00968ccf",
@@ -25507,6 +25737,16 @@
       "file": "Client/Base/msvc/misc_thunks4.cpp",
       "orig_size": 11,
       "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0096c930",
+      "kind": "FUNCTION",
+      "name": "CBSet32_0096c930::set",
+      "mangled": "?set@CBSet32_0096c930@@QAEXD@Z",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
       "match_pct": 100.0
     },
     {
@@ -27220,6 +27460,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009d8ed0",
+      "kind": "FUNCTION",
+      "name": "CTern_009d8ed0::get",
+      "mangled": "?get@CTern_009d8ed0@@QAEHXZ",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 17,
+      "recomp_size": 17,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009d8ef0",
       "kind": "FUNCTION",
       "name": "CInt_009d8ef0::get",
@@ -27247,6 +27497,16 @@
       "file": "Client/Base/msvc/import_forwarders.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009dd4a0",
+      "kind": "FUNCTION",
+      "name": "CBSet32_009dd4a0::set",
+      "mangled": "?set@CBSet32_009dd4a0@@QAEXD@Z",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
       "match_pct": 100.0
     },
     {
@@ -34470,6 +34730,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00bba7c0",
+      "kind": "FUNCTION",
+      "name": "CBSet32_00bba7c0::set",
+      "mangled": "?set@CBSet32_00bba7c0@@QAEXD@Z",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00bba8c0",
       "kind": "FUNCTION",
       "name": "CArgSet_00bba8c0::set",
@@ -34477,6 +34747,26 @@
       "file": "Client/Base/msvc/arg_setters.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00bba8d0",
+      "kind": "FUNCTION",
+      "name": "CBSet32_00bba8d0::set",
+      "mangled": "?set@CBSet32_00bba8d0@@QAEXD@Z",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00bba9b0",
+      "kind": "FUNCTION",
+      "name": "CBSet32_00bba9b0::set",
+      "mangled": "?set@CBSet32_00bba9b0@@QAEXD@Z",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
       "match_pct": 100.0
     },
     {
@@ -36300,6 +36590,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00ca5cb0",
+      "kind": "FUNCTION",
+      "name": "CLeArg_00ca5cb0::le",
+      "mangled": "?le@CLeArg_00ca5cb0@@QAE_NH@Z",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00ca97e0",
       "kind": "FUNCTION",
       "name": "condGlobalByte_00ca97e0",
@@ -36597,6 +36897,26 @@
       "file": "Client/Base/msvc/tiny_accessors.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cf2110",
+      "kind": "FUNCTION",
+      "name": "CBSet32_00cf2110::set",
+      "mangled": "?set@CBSet32_00cf2110@@QAEXD@Z",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cf2120",
+      "kind": "FUNCTION",
+      "name": "CWSet_00cf2120::set",
+      "mangled": "?set@CWSet_00cf2120@@QAEXF@Z",
+      "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
       "match_pct": 100.0
     },
     {
