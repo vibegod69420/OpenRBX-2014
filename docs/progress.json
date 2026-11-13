@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 20:21:31 UTC",
+  "updated_at": "2026-11-13 20:24:42 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 54.1057,
-  "implemented_total": 5067,
-  "function_annotations": 5067,
+  "matchable_coverage_pct": 54.6823,
+  "implemented_total": 5121,
+  "function_annotations": 5121,
   "stub_annotations": 0,
-  "perfect_100_count": 5067,
+  "perfect_100_count": 5121,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 12.4923,
-  "overall_byte_coverage_pct": 0.9772,
+  "overall_function_coverage_pct": 12.6254,
+  "overall_byte_coverage_pct": 0.9931,
   "functions": [
     {
       "address": "0x004022c0",
@@ -9560,6 +9560,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0061deb0",
+      "kind": "FUNCTION",
+      "name": "releaseFree_0061deb0",
+      "mangled": "?releaseFree_0061deb0@@YAXPAUCInnerF_0061deb0@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0061e300",
       "kind": "FUNCTION",
       "name": "asm_0061e300",
@@ -9567,6 +9577,16 @@
       "file": "Client/Base/msvc/auto_asm_b2.cpp",
       "orig_size": 31,
       "recomp_size": 31,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0061e6e0",
+      "kind": "FUNCTION",
+      "name": "COuterM_0061e6e0::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
       "match_pct": 100.0
     },
     {
@@ -9740,6 +9760,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0063b460",
+      "kind": "FUNCTION",
+      "name": "releaseFree_0063b460",
+      "mangled": "?releaseFree_0063b460@@YAXPAUCInnerF_0063b460@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0063f6b0",
+      "kind": "FUNCTION",
+      "name": "COuterM_0063f6b0::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00641d50",
       "kind": "FUNCTION",
       "name": "frameTail_00641d50",
@@ -9860,6 +9900,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0065f0a0",
+      "kind": "FUNCTION",
+      "name": "releaseFree_0065f0a0",
+      "mangled": "?releaseFree_0065f0a0@@YAXPAUCInnerF_0065f0a0@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006600f0",
+      "kind": "FUNCTION",
+      "name": "COuterM_006600f0::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00660dc0",
       "kind": "FUNCTION",
       "name": "CBSet_00660dc0::set",
@@ -9927,6 +9987,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00670840",
+      "kind": "FUNCTION",
+      "name": "releaseFree_00670840",
+      "mangled": "?releaseFree_00670840@@YAXPAUCInnerF_00670840@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
       "match_pct": 100.0
     },
     {
@@ -10940,6 +11010,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0069d470",
+      "kind": "FUNCTION",
+      "name": "releaseFree_0069d470",
+      "mangled": "?releaseFree_0069d470@@YAXPAUCInnerF_0069d470@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0069e5c0",
       "kind": "FUNCTION",
       "name": "CCleanup_0069e5c0::destroy",
@@ -10947,6 +11027,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0069ec60",
+      "kind": "FUNCTION",
+      "name": "COuterM_0069ec60::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
       "match_pct": 100.0
     },
     {
@@ -20290,6 +20380,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x006b6fa0",
+      "kind": "FUNCTION",
+      "name": "releaseFree_006b6fa0",
+      "mangled": "?releaseFree_006b6fa0@@YAXPAUCInnerF_006b6fa0@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x006b7340",
       "kind": "FUNCTION",
       "name": "CCleanup_006b7340::destroy",
@@ -20297,6 +20397,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006b7c50",
+      "kind": "FUNCTION",
+      "name": "COuterM_006b7c50::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
       "match_pct": 100.0
     },
     {
@@ -20420,6 +20530,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x006bda90",
+      "kind": "FUNCTION",
+      "name": "releaseFree_006bda90",
+      "mangled": "?releaseFree_006bda90@@YAXPAUCInnerF_006bda90@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006befa0",
+      "kind": "FUNCTION",
+      "name": "COuterM_006befa0::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x006c0200",
       "kind": "FUNCTION",
       "name": "asm_006c0200",
@@ -20437,6 +20567,26 @@
       "file": "Client/Base/msvc/auto_asm3.cpp",
       "orig_size": 30,
       "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006c1f30",
+      "kind": "FUNCTION",
+      "name": "releaseFree_006c1f30",
+      "mangled": "?releaseFree_006c1f30@@YAXPAUCInnerF_006c1f30@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006c2660",
+      "kind": "FUNCTION",
+      "name": "COuterM_006c2660::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
       "match_pct": 100.0
     },
     {
@@ -21070,6 +21220,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00772de0",
+      "kind": "FUNCTION",
+      "name": "releaseFree_00772de0",
+      "mangled": "?releaseFree_00772de0@@YAXPAUCInnerF_00772de0@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00773390",
+      "kind": "FUNCTION",
+      "name": "COuterM_00773390::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00775320",
       "kind": "FUNCTION",
       "name": "getConst_00775320",
@@ -21637,6 +21807,16 @@
       "file": "Client/Base/msvc/auto_asm4.cpp",
       "orig_size": 25,
       "recomp_size": 25,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0078a110",
+      "kind": "FUNCTION",
+      "name": "releaseFree_0078a110",
+      "mangled": "?releaseFree_0078a110@@YAXPAUCInnerF_0078a110@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
       "match_pct": 100.0
     },
     {
@@ -29170,6 +29350,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00908e40",
+      "kind": "FUNCTION",
+      "name": "releaseFree_00908e40",
+      "mangled": "?releaseFree_00908e40@@YAXPAUCInnerF_00908e40@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0090a64a",
       "kind": "FUNCTION",
       "name": "adjustorThunk_0090a64a",
@@ -29297,6 +29487,16 @@
       "file": "Client/Base/msvc/misc_thunks5.cpp",
       "orig_size": 12,
       "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0090b590",
+      "kind": "FUNCTION",
+      "name": "COuterM_0090b590::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
       "match_pct": 100.0
     },
     {
@@ -31060,6 +31260,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009349c0",
+      "kind": "FUNCTION",
+      "name": "releaseFree_009349c0",
+      "mangled": "?releaseFree_009349c0@@YAXPAUCInnerF_009349c0@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009349e0",
+      "kind": "FUNCTION",
+      "name": "releaseFree_009349e0",
+      "mangled": "?releaseFree_009349e0@@YAXPAUCInnerF_009349e0@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00935440",
       "kind": "FUNCTION",
       "name": "CCleanup_00935440::destroy",
@@ -31077,6 +31297,26 @@
       "file": "Client/Base/msvc/auto_asm5.cpp",
       "orig_size": 29,
       "recomp_size": 29,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009358e0",
+      "kind": "FUNCTION",
+      "name": "COuterM_009358e0::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00935900",
+      "kind": "FUNCTION",
+      "name": "COuterM_00935900::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
       "match_pct": 100.0
     },
     {
@@ -31397,6 +31637,16 @@
       "file": "Client/Base/msvc/auto_asm5.cpp",
       "orig_size": 32,
       "recomp_size": 32,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009498c0",
+      "kind": "FUNCTION",
+      "name": "releaseFree_009498c0",
+      "mangled": "?releaseFree_009498c0@@YAXPAUCInnerF_009498c0@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
       "match_pct": 100.0
     },
     {
@@ -32687,6 +32937,16 @@
       "file": "Client/Base/msvc/misc_thunks2.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00955080",
+      "kind": "FUNCTION",
+      "name": "COuterM_00955080::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
       "match_pct": 100.0
     },
     {
@@ -36550,6 +36810,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009fe0f0",
+      "kind": "FUNCTION",
+      "name": "releaseFree_009fe0f0",
+      "mangled": "?releaseFree_009fe0f0@@YAXPAUCInnerF_009fe0f0@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009ff1a0",
       "kind": "FUNCTION",
       "name": "frameTail_009ff1a0",
@@ -36557,6 +36827,16 @@
       "file": "Client/Base/msvc/misc_thunks2.cpp",
       "orig_size": 9,
       "recomp_size": 9,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009ff6f0",
+      "kind": "FUNCTION",
+      "name": "COuterM_009ff6f0::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
       "match_pct": 100.0
     },
     {
@@ -37360,6 +37640,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a26f70",
+      "kind": "FUNCTION",
+      "name": "releaseFree_00a26f70",
+      "mangled": "?releaseFree_00a26f70@@YAXPAUCInnerF_00a26f70@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a26f90",
+      "kind": "FUNCTION",
+      "name": "releaseFree_00a26f90",
+      "mangled": "?releaseFree_00a26f90@@YAXPAUCInnerF_00a26f90@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a27ad0",
       "kind": "FUNCTION",
       "name": "asm_00a27ad0",
@@ -37807,6 +38107,26 @@
       "file": "Client/Base/msvc/tiny_accessors.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2da60",
+      "kind": "FUNCTION",
+      "name": "COuterM_00a2da60::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2da80",
+      "kind": "FUNCTION",
+      "name": "COuterM_00a2da80::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
       "match_pct": 100.0
     },
     {
@@ -38497,6 +38817,26 @@
       "file": "Client/Base/msvc/auto_asm6.cpp",
       "orig_size": 23,
       "recomp_size": 23,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a45db0",
+      "kind": "FUNCTION",
+      "name": "releaseFree_00a45db0",
+      "mangled": "?releaseFree_00a45db0@@YAXPAUCInnerF_00a45db0@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a46260",
+      "kind": "FUNCTION",
+      "name": "COuterM_00a46260::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
       "match_pct": 100.0
     },
     {
@@ -44690,6 +45030,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00b740c0",
+      "kind": "FUNCTION",
+      "name": "releaseFree_00b740c0",
+      "mangled": "?releaseFree_00b740c0@@YAXPAUCInnerF_00b740c0@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b771a0",
+      "kind": "FUNCTION",
+      "name": "COuterM_00b771a0::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00b77530",
       "kind": "FUNCTION",
       "name": "asm_00b77530",
@@ -45087,6 +45447,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b8a2f0",
+      "kind": "FUNCTION",
+      "name": "COuterM_00b8a2f0::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
       "match_pct": 100.0
     },
     {
@@ -46630,6 +47000,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00bf8370",
+      "kind": "FUNCTION",
+      "name": "releaseFree_00bf8370",
+      "mangled": "?releaseFree_00bf8370@@YAXPAUCInnerF_00bf8370@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00bf8390",
       "kind": "FUNCTION",
       "name": "asm_00bf8390",
@@ -47400,6 +47780,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c22d30",
+      "kind": "FUNCTION",
+      "name": "releaseFree_00c22d30",
+      "mangled": "?releaseFree_00c22d30@@YAXPAUCInnerF_00c22d30@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c22d50",
+      "kind": "FUNCTION",
+      "name": "releaseFree_00c22d50",
+      "mangled": "?releaseFree_00c22d50@@YAXPAUCInnerF_00c22d50@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c24910",
       "kind": "FUNCTION",
       "name": "asm_00c24910",
@@ -47487,6 +47887,26 @@
       "file": "Client/Base/msvc/misc_thunks2.cpp",
       "orig_size": 9,
       "recomp_size": 9,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c2f620",
+      "kind": "FUNCTION",
+      "name": "COuterM_00c2f620::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c2f640",
+      "kind": "FUNCTION",
+      "name": "COuterM_00c2f640::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
       "match_pct": 100.0
     },
     {
@@ -47960,6 +48380,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c59530",
+      "kind": "FUNCTION",
+      "name": "releaseFree_00c59530",
+      "mangled": "?releaseFree_00c59530@@YAXPAUCInnerF_00c59530@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c5aaac",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00c5aaac",
@@ -48030,6 +48460,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c5ae90",
+      "kind": "FUNCTION",
+      "name": "COuterM_00c5ae90::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c5dc60",
       "kind": "FUNCTION",
       "name": "CCleanup_00c5dc60::destroy",
@@ -48050,6 +48490,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c5fbd0",
+      "kind": "FUNCTION",
+      "name": "releaseFree_00c5fbd0",
+      "mangled": "?releaseFree_00c5fbd0@@YAXPAUCInnerF_00c5fbd0@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c615e0",
       "kind": "FUNCTION",
       "name": "CCleanup_00c615e0::destroy",
@@ -48065,6 +48515,16 @@
       "name": "asm_00c619f0",
       "mangled": "_asm_00c619f0",
       "file": "Client/Base/msvc/auto_asm8.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c63780",
+      "kind": "FUNCTION",
+      "name": "COuterM_00c63780::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
       "orig_size": 26,
       "recomp_size": 26,
       "match_pct": 100.0
@@ -48420,6 +48880,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c75250",
+      "kind": "FUNCTION",
+      "name": "releaseFree_00c75250",
+      "mangled": "?releaseFree_00c75250@@YAXPAUCInnerF_00c75250@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c79280",
       "kind": "FUNCTION",
       "name": "asm_00c79280",
@@ -48720,6 +49190,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c84740",
+      "kind": "FUNCTION",
+      "name": "COuterM_00c84740::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c84da0",
       "kind": "FUNCTION",
       "name": "asm_00c84da0",
@@ -48830,6 +49310,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c93a10",
+      "kind": "FUNCTION",
+      "name": "releaseFree_00c93a10",
+      "mangled": "?releaseFree_00c93a10@@YAXPAUCInnerF_00c93a10@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c93cad",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00c93cad",
@@ -48857,6 +49347,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c93d90",
+      "kind": "FUNCTION",
+      "name": "COuterM_00c93d90::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
       "match_pct": 100.0
     },
     {
@@ -49060,6 +49560,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c9ea80",
+      "kind": "FUNCTION",
+      "name": "releaseFree_00c9ea80",
+      "mangled": "?releaseFree_00c9ea80@@YAXPAUCInnerF_00c9ea80@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c9f35f",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00c9f35f",
@@ -49120,6 +49630,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c9f600",
+      "kind": "FUNCTION",
+      "name": "COuterM_00c9f600::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c9f6f0",
       "kind": "FUNCTION",
       "name": "asm_00c9f6f0",
@@ -49127,6 +49647,16 @@
       "file": "Client/Base/msvc/auto_asm_b9.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ca0f40",
+      "kind": "FUNCTION",
+      "name": "releaseFree_00ca0f40",
+      "mangled": "?releaseFree_00ca0f40@@YAXPAUCInnerF_00ca0f40@@@Z",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
       "match_pct": 100.0
     },
     {
@@ -49247,6 +49777,16 @@
       "file": "Client/Base/msvc/misc_thunks8.cpp",
       "orig_size": 16,
       "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ca5fe0",
+      "kind": "FUNCTION",
+      "name": "COuterM_00ca5fe0::release",
+      "mangled": "?release@COuterM_0061e6e0@@QAEXXZ",
+      "file": "Client/Base/msvc/cleanup_helpers.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
       "match_pct": 100.0
     },
     {
