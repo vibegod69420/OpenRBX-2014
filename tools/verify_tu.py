@@ -66,12 +66,16 @@ def _trim_at_padding(raw: bytes) -> bytes:
     MSVC pads between functions with int3, which never appears three times in a row
     inside a real body: a terminator followed by that padding is the function's end.
     """
-    for i, byte in enumerate(raw[: -4]):
+    for i, byte in enumerate(raw):
         if byte == 0xC3:
-            if raw[i + 1 : i + 4] == b"\xcc\xcc\xcc":
-                return raw[: i + 1]
-        elif byte == 0xC2 and i >= 1 and raw[i + 1 : i + 4] == b"\xcc\xcc\xcc":
-            return raw[: i + 3]
+            end = i + 1
+        elif byte == 0xC2:
+            end = i + 3
+        else:
+            continue
+        tail = raw[end:]
+        if tail and (tail.startswith(b"\xcc\xcc\xcc") or set(tail) == {0xCC}):
+            return raw[:end]
     return raw
 
 

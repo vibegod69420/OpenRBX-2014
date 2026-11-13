@@ -8,7 +8,7 @@ namespace HUMAN {
 class Seated : public HumanoidState
 {
 public:
-	int getStateId() const;
+	int getStateType() const;
 };
 
 } // namespace HUMAN

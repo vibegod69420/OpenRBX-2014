@@ -4,7 +4,7 @@ namespace RBX {
 namespace HUMAN {
 
 // FUNCTION: ROBLOXSTUDIO 0x00c15080
-int Physics::getStateId() const
+int Physics::getStateType() const
 {
 	return 16;
 }

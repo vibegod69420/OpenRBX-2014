@@ -8,7 +8,7 @@ namespace HUMAN {
 class Physics : public HumanoidState
 {
 public:
-	int getStateId() const;
+	int getStateType() const;
 };
 
 } // namespace HUMAN

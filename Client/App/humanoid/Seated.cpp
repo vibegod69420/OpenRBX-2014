@@ -4,7 +4,7 @@ namespace RBX {
 namespace HUMAN {
 
 // FUNCTION: ROBLOXSTUDIO 0x00c16a00
-int Seated::getStateId() const
+int Seated::getStateType() const
 {
 	return 13;
 }

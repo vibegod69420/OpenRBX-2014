@@ -9,7 +9,7 @@ class HumanoidState
 {
 public:
 	virtual ~HumanoidState();
-	virtual int getStateId() const = 0;
+	virtual int getStateType() const = 0;
 };
 
 } // namespace HUMAN
