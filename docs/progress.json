@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 20:35:25 UTC",
+  "updated_at": "2026-11-13 20:35:46 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -11,13 +11,13 @@
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
   "matchable_coverage_pct": 116.0705,
-  "implemented_total": 10872,
-  "function_annotations": 10872,
+  "implemented_total": 10870,
+  "function_annotations": 10870,
   "stub_annotations": 0,
   "perfect_100_count": 10870,
-  "average_match_pct": 99.99,
-  "overall_function_coverage_pct": 26.8041,
-  "overall_byte_coverage_pct": 4.9047,
+  "average_match_pct": 100.0,
+  "overall_function_coverage_pct": 26.7991,
+  "overall_byte_coverage_pct": 4.9045,
   "functions": [
     {
       "address": "0x004022c0",
@@ -2188,16 +2188,6 @@
       "orig_size": 43,
       "recomp_size": 43,
       "match_pct": 100.0
-    },
-    {
-      "address": "0x00420cb0",
-      "kind": "FUNCTION",
-      "name": "moveLoop10",
-      "mangled": "?moveLoop10@@YAPAUP2@@PAU1@00@Z",
-      "file": "Client/Base/msvc/probe10.cpp",
-      "orig_size": 65,
-      "recomp_size": 65,
-      "match_pct": 29.23
     },
     {
       "address": "0x00420d00",
@@ -15358,16 +15348,6 @@
       "orig_size": 45,
       "recomp_size": 45,
       "match_pct": 100.0
-    },
-    {
-      "address": "0x005ebef0",
-      "kind": "FUNCTION",
-      "name": "copyLoop10",
-      "mangled": "?copyLoop10@@YAXPAUS5@@00@Z",
-      "file": "Client/Base/msvc/probe10.cpp",
-      "orig_size": 65,
-      "recomp_size": 58,
-      "match_pct": 9.23
     },
     {
       "address": "0x005ec090",
