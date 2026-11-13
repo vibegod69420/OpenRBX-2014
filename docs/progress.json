@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 18:58:57 UTC",
+  "updated_at": "2026-11-13 18:59:54 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 0.961,
-  "implemented_total": 90,
-  "function_annotations": 90,
+  "matchable_coverage_pct": 1.0251,
+  "implemented_total": 96,
+  "function_annotations": 96,
   "stub_annotations": 0,
-  "perfect_100_count": 90,
+  "perfect_100_count": 96,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.2219,
-  "overall_byte_coverage_pct": 0.014,
+  "overall_function_coverage_pct": 0.2367,
+  "overall_byte_coverage_pct": 0.0143,
   "functions": [
     {
       "address": "0x00411990",
@@ -77,6 +77,16 @@
       "file": "Client/App/v8tree/Instance.cpp",
       "orig_size": 18,
       "recomp_size": 18,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00427a10",
+      "kind": "FUNCTION",
+      "name": "RBX::DSVideoCaptureEngine::getField44Ptr",
+      "mangled": "?getField44Ptr@DSVideoCaptureEngine@RBX@@QBEPAXXZ",
+      "file": "Client/App/v8datamodel/VideoCaptureEngine.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     },
     {
@@ -147,6 +157,26 @@
       "file": "Client/App/v8kernel/WeldJoint.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005378c0",
+      "kind": "FUNCTION",
+      "name": "RobloxTreeWidgetItem::getBasePtr",
+      "mangled": "?getBasePtr@RobloxTreeWidgetItem@@QBEPAXXZ",
+      "file": "Client/RobloxStudio/RobloxTreeWidgetItem.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00539120",
+      "kind": "FUNCTION",
+      "name": "RobloxTreeWidget::getFieldECPtr",
+      "mangled": "?getFieldECPtr@RobloxTreeWidget@@QBEPAXXZ",
+      "file": "Client/RobloxStudio/RobloxTreeWidget.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     },
     {
@@ -470,6 +500,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x005b2f00",
+      "kind": "FUNCTION",
+      "name": "btQuantizedBvh::calculateSerializeBufferSize",
+      "mangled": "?calculateSerializeBufferSize@btQuantizedBvh@@QBEHXZ",
+      "file": "Client/App/v8kernel/btQuantizedBvh.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x005b8210",
       "kind": "FUNCTION",
       "name": "btTriangleMeshShape::getName",
@@ -790,6 +830,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009688c0",
+      "kind": "FUNCTION",
+      "name": "RBX::Workspace::getBasePtr",
+      "mangled": "?getBasePtr@Workspace@RBX@@QBEPAXXZ",
+      "file": "Client/App/v8datamodel/Workspace.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0099ce10",
       "kind": "FUNCTION",
       "name": "RBX::GlueJoint::getJointType",
@@ -847,6 +897,16 @@
       "file": "Client/App/humanoid/Dead.cpp",
       "orig_size": 285,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b61fa0",
+      "kind": "FUNCTION",
+      "name": "RBX::MegaClusterPoly::getField04Ptr",
+      "mangled": "?getField04Ptr@MegaClusterPoly@RBX@@QBEPAXXZ",
+      "file": "Client/App/v8datamodel/MegaClusterPoly.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     },
     {
