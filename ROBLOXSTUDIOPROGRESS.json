@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 19:51:40 UTC",
+  "updated_at": "2026-11-13 19:52:22 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 27.7523,
-  "implemented_total": 2599,
-  "function_annotations": 2599,
+  "matchable_coverage_pct": 28.3075,
+  "implemented_total": 2651,
+  "function_annotations": 2651,
   "stub_annotations": 0,
-  "perfect_100_count": 2599,
+  "perfect_100_count": 2651,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 6.4076,
-  "overall_byte_coverage_pct": 0.349,
+  "overall_function_coverage_pct": 6.5358,
+  "overall_byte_coverage_pct": 0.3619,
   "functions": [
     {
       "address": "0x004022c0",
@@ -4490,6 +4490,496 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00605980",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605980",
+      "mangled": "?assignSlot_00605980@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006059a0",
+      "kind": "FUNCTION",
+      "name": "assignSlot_006059a0",
+      "mangled": "?assignSlot_006059a0@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006059c0",
+      "kind": "FUNCTION",
+      "name": "assignSlot_006059c0",
+      "mangled": "?assignSlot_006059c0@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006059e0",
+      "kind": "FUNCTION",
+      "name": "assignSlot_006059e0",
+      "mangled": "?assignSlot_006059e0@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605a00",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605a00",
+      "mangled": "?assignSlot_00605a00@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605a20",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605a20",
+      "mangled": "?assignSlot_00605a20@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605a40",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605a40",
+      "mangled": "?assignSlot_00605a40@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605a60",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605a60",
+      "mangled": "?assignSlot_00605a60@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605a80",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605a80",
+      "mangled": "?assignSlot_00605a80@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605aa0",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605aa0",
+      "mangled": "?assignSlot_00605aa0@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605ac0",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605ac0",
+      "mangled": "?assignSlot_00605ac0@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605ae0",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605ae0",
+      "mangled": "?assignSlot_00605ae0@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605b00",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605b00",
+      "mangled": "?assignSlot_00605b00@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605b20",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605b20",
+      "mangled": "?assignSlot_00605b20@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605b40",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605b40",
+      "mangled": "?assignSlot_00605b40@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605b60",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605b60",
+      "mangled": "?assignSlot_00605b60@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605b80",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605b80",
+      "mangled": "?assignSlot_00605b80@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605ba0",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605ba0",
+      "mangled": "?assignSlot_00605ba0@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605bc0",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605bc0",
+      "mangled": "?assignSlot_00605bc0@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605be0",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605be0",
+      "mangled": "?assignSlot_00605be0@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605c00",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605c00",
+      "mangled": "?assignSlot_00605c00@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605c20",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605c20",
+      "mangled": "?assignSlot_00605c20@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605c40",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605c40",
+      "mangled": "?assignSlot_00605c40@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605c60",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605c60",
+      "mangled": "?assignSlot_00605c60@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605c80",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605c80",
+      "mangled": "?assignSlot_00605c80@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605ca0",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605ca0",
+      "mangled": "?assignSlot_00605ca0@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605cc0",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605cc0",
+      "mangled": "?assignSlot_00605cc0@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605ce0",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605ce0",
+      "mangled": "?assignSlot_00605ce0@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605d00",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605d00",
+      "mangled": "?assignSlot_00605d00@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605d20",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605d20",
+      "mangled": "?assignSlot_00605d20@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605d40",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605d40",
+      "mangled": "?assignSlot_00605d40@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605d60",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605d60",
+      "mangled": "?assignSlot_00605d60@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605d80",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605d80",
+      "mangled": "?assignSlot_00605d80@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605da0",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605da0",
+      "mangled": "?assignSlot_00605da0@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605dc0",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605dc0",
+      "mangled": "?assignSlot_00605dc0@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605de0",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605de0",
+      "mangled": "?assignSlot_00605de0@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605e00",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605e00",
+      "mangled": "?assignSlot_00605e00@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605e20",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605e20",
+      "mangled": "?assignSlot_00605e20@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605e40",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605e40",
+      "mangled": "?assignSlot_00605e40@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605e60",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605e60",
+      "mangled": "?assignSlot_00605e60@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605e80",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605e80",
+      "mangled": "?assignSlot_00605e80@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605ea0",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605ea0",
+      "mangled": "?assignSlot_00605ea0@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605ec0",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605ec0",
+      "mangled": "?assignSlot_00605ec0@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605ee0",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605ee0",
+      "mangled": "?assignSlot_00605ee0@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605f00",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605f00",
+      "mangled": "?assignSlot_00605f00@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605f20",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605f20",
+      "mangled": "?assignSlot_00605f20@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605f40",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605f40",
+      "mangled": "?assignSlot_00605f40@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605f60",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605f60",
+      "mangled": "?assignSlot_00605f60@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00605f80",
+      "kind": "FUNCTION",
+      "name": "assignSlot_00605f80",
+      "mangled": "?assignSlot_00605f80@@YAXPAPAX0@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x006066d0",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::DeviceContextGL::setField14",
@@ -4647,6 +5137,26 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006573f0",
+      "kind": "FUNCTION",
+      "name": "CCopy2_006573f0::set",
+      "mangled": "?set@CCopy2_006573f0@@QAEXPAUCCopy2Src_006573f0@@@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 21,
+      "recomp_size": 21,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00657430",
+      "kind": "FUNCTION",
+      "name": "CCopy2_00657430::set",
+      "mangled": "?set@CCopy2_00657430@@QAEXPAUCCopy2Src_00657430@@@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 21,
+      "recomp_size": 21,
       "match_pct": 100.0
     },
     {
@@ -21027,6 +21537,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a0fda0",
+      "kind": "FUNCTION",
+      "name": "CCopy2_00a0fda0::set",
+      "mangled": "?set@CCopy2_00657430@@QAEXPAUCCopy2Src_00657430@@@Z",
+      "file": "Client/Base/msvc/assign_helpers.cpp",
+      "orig_size": 21,
+      "recomp_size": 21,
       "match_pct": 100.0
     },
     {
