@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 19:01:50 UTC",
+  "updated_at": "2026-11-13 19:07:58 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 1.1532,
-  "implemented_total": 108,
-  "function_annotations": 108,
+  "matchable_coverage_pct": 1.3134,
+  "implemented_total": 123,
+  "function_annotations": 123,
   "stub_annotations": 0,
-  "perfect_100_count": 108,
+  "perfect_100_count": 123,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.2663,
-  "overall_byte_coverage_pct": 0.0152,
+  "overall_function_coverage_pct": 0.3032,
+  "overall_byte_coverage_pct": 0.019,
   "functions": [
     {
       "address": "0x00403b30",
@@ -100,6 +100,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00427aa0",
+      "kind": "FUNCTION",
+      "name": "RBX::DS::CAudioStream::notImplemented3",
+      "mangled": "?notImplemented3@CAudioStream@DS@RBX@@QBEHHHH@Z",
+      "file": "Client/App/v8sound/CAudioStream.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00427ab0",
+      "kind": "FUNCTION",
+      "name": "RBX::DS::CAudioStream::unimplemented1",
+      "mangled": "?unimplemented1@CAudioStream@DS@RBX@@QBEHH@Z",
+      "file": "Client/App/v8sound/CAudioStream.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0042f280",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::RenderView::getField8CRaw",
@@ -107,6 +127,36 @@
       "file": "Client/Rendering/GfxRender/RenderView.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0042f340",
+      "kind": "FUNCTION",
+      "name": "RBX::StringValue::alwaysTrue",
+      "mangled": "?alwaysTrue@StringValue@RBX@@QBE_NH@Z",
+      "file": "Client/App/v8datamodel/StringValue.cpp",
+      "orig_size": 5,
+      "recomp_size": 5,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00441ef0",
+      "kind": "FUNCTION",
+      "name": "NoEditDelegate::zeroResult",
+      "mangled": "?zeroResult@NoEditDelegate@@QBEHHHH@Z",
+      "file": "Client/RobloxStudio/NoEditDelegate.cpp",
+      "orig_size": 5,
+      "recomp_size": 5,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00470520",
+      "kind": "FUNCTION",
+      "name": "RBX::FactoryProduct::alwaysFalse",
+      "mangled": "?alwaysFalse@FactoryProduct@RBX@@QBE_NH@Z",
+      "file": "Client/App/v8datamodel/FactoryProduct.cpp",
+      "orig_size": 5,
+      "recomp_size": 5,
       "match_pct": 100.0
     },
     {
@@ -127,6 +177,16 @@
       "file": "Client/App/v8datamodel/FlyweightService.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00490c00",
+      "kind": "FUNCTION",
+      "name": "RBX::ScreenGui::getField8D",
+      "mangled": "?getField8D@ScreenGui@RBX@@QBE_NXZ",
+      "file": "Client/App/v8datamodel/ScreenGui.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
       "match_pct": 100.0
     },
     {
@@ -350,6 +410,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00590230",
+      "kind": "FUNCTION",
+      "name": "btGImpactShapeInterface::writeUnitScale",
+      "mangled": "?writeUnitScale@btGImpactShapeInterface@@QBEXPAM@Z",
+      "file": "Client/App/v8kernel/btGImpactShapeInterface.cpp",
+      "orig_size": 37,
+      "recomp_size": 37,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00590260",
       "kind": "FUNCTION",
       "name": "btConvexInternalShape::setMargin",
@@ -380,6 +450,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00590750",
+      "kind": "FUNCTION",
+      "name": "btTriangleShape::zeroQuad",
+      "mangled": "?zeroQuad@btTriangleShape@@QBEXHPAH@Z",
+      "file": "Client/App/v8kernel/btTriangleShape.cpp",
+      "orig_size": 37,
+      "recomp_size": 37,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00590a80",
       "kind": "FUNCTION",
       "name": "btTriangleShape::getName",
@@ -407,6 +487,16 @@
       "file": "Client/App/v8kernel/btCollisionAlgorithms.cpp",
       "orig_size": 5,
       "recomp_size": 5,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00594b00",
+      "kind": "FUNCTION",
+      "name": "btCollisionObject::assignTwoFieldsAndBump",
+      "mangled": "?assignTwoFieldsAndBump@btCollisionObject@@QAEXPAX@Z",
+      "file": "Client/App/v8kernel/btCollisionObject.cpp",
+      "orig_size": 28,
+      "recomp_size": 28,
       "match_pct": 100.0
     },
     {
@@ -480,6 +570,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00596150",
+      "kind": "FUNCTION",
+      "name": "btTriangleIndexVertexArray::getSubPart",
+      "mangled": "?getSubPart@btTriangleIndexVertexArray@@QBEXPAH0000000H@Z",
+      "file": "Client/App/v8kernel/btTriangleIndexVertexArray.cpp",
+      "orig_size": 79,
+      "recomp_size": 79,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x005961a0",
       "kind": "FUNCTION",
       "name": "btTriangleIndexVertexArray::isIndexedMesh",
@@ -487,6 +587,26 @@
       "file": "Client/App/v8kernel/btTriangleIndexVertexArray.cpp",
       "orig_size": 10,
       "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005961b0",
+      "kind": "FUNCTION",
+      "name": "btTriangleIndexVertexArray::setMeshData",
+      "mangled": "?setMeshData@btTriangleIndexVertexArray@@QAEXPBX0@Z",
+      "file": "Client/App/v8kernel/btTriangleIndexVertexArray.cpp",
+      "orig_size": 58,
+      "recomp_size": 58,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005964a0",
+      "kind": "FUNCTION",
+      "name": "btCollisionWorld::RayResultCallback::needsCollision",
+      "mangled": "?needsCollision@RayResultCallback@btCollisionWorld@@QBE_NPBUbtBroadphaseProxy@@@Z",
+      "file": "Client/App/v8kernel/btCollisionWorld.cpp",
+      "orig_size": 38,
+      "recomp_size": 38,
       "match_pct": 100.0
     },
     {
@@ -610,6 +730,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x005a01c0",
+      "kind": "FUNCTION",
+      "name": "RBX::GuiObject::zeroQuad",
+      "mangled": "?zeroQuad@GuiObject@RBX@@QBEXPAHH@Z",
+      "file": "Client/App/v8datamodel/GuiObject.cpp",
+      "orig_size": 37,
+      "recomp_size": 37,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x005a88a0",
       "kind": "FUNCTION",
       "name": "btCompoundCompoundCollisionAlgorithm::calculateTimeOfImpact",
@@ -637,6 +767,16 @@
       "file": "Client/App/v8kernel/btTriangleMeshShape.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005b87e0",
+      "kind": "FUNCTION",
+      "name": "btBvhTriangleMeshShape::getField30Plus10",
+      "mangled": "?getField30Plus10@btBvhTriangleMeshShape@@QBEPAXXZ",
+      "file": "Client/App/v8kernel/btBvhTriangleMeshShape.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
       "match_pct": 100.0
     },
     {
@@ -837,6 +977,16 @@
       "file": "Client/Base/boost/set_int_pair.cpp",
       "orig_size": 22,
       "recomp_size": 22,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007c3c90",
+      "kind": "FUNCTION",
+      "name": "BoxSelectCommand::clearField28",
+      "mangled": "?clearField28@BoxSelectCommand@@QAEXXZ",
+      "file": "Client/RobloxStudio/BoxSelectCommand.cpp",
+      "orig_size": 5,
+      "recomp_size": 5,
       "match_pct": 100.0
     },
     {

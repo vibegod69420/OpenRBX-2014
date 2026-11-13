@@ -5,4 +5,5 @@ class BoxSelectCommand
 {
 public:
 	void zeroTriple(int* out) const;
+	void clearField28();
 };

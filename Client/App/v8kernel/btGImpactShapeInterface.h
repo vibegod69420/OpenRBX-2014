@@ -8,6 +8,7 @@ public:
 	float getMarginNonVirtual() const;
 	int calculateSerializeBufferSize() const;
 	void setField30();
+	void writeUnitScale(float* out) const;
 
 private:
 	char _pad[0x0c];

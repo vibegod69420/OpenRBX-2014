@@ -9,6 +9,8 @@ class CAudioStream
 {
 public:
 	int getField30() const;
+	int notImplemented3(int, int, int) const;
+	int unimplemented1(int) const;
 
 private:
 	char _pad[0x30];

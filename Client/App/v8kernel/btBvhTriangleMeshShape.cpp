@@ -11,3 +11,9 @@ int btBvhTriangleMeshShape::calculateSerializeBufferSize() const
 {
 	return 0x3c;
 }
+
+// FUNCTION: ROBLOXSTUDIO 0x005b87e0
+void* btBvhTriangleMeshShape::getField30Plus10() const
+{
+	return (char*)*(void* const*)((const char*)this + 0x30) + 0x10;
+}
