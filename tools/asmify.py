@@ -9,9 +9,11 @@ ALLOW = set('''
 mov movzx movsx lea push pop add sub and or xor cmp test inc dec neg not
 shl shr sar imul mul idiv div cdq cwde cbw xchg sbb adc
 lock rep xadd cmpxchg bswap cpuid rdtsc
-lahf sahf pause
+lahf sahf pause int3 bts stosd movsd stosb
+mulps shufps andps orps xorps cvtdq2ps sqrtss movlpd movhpd movapd
+shld shrd rol ror rcl rcr bt btc btr bsf bsr
 xorps movaps movups movdqa movdqu movq movd pxor pand por pxor
-fsqrt fsin fcos fpatan fprem fprem1 fyl2x f2xm1 fscale frndint fxtract
+fsqrt fsin fcos fpatan fprem fprem1 fyl2x f2xm1 fscale frndint fxtract fcomi fcomip fucomi fucomip
 fsubr fdivr fsubrp fdivrp fstsw fnstcw fldcw frstor fsave fcompp fucompp
 jmp je jne jz jnz ja jae jb jbe jg jge jl jle js jns jo jno jp jnp
 call ret leave nop
@@ -53,9 +55,19 @@ def translate(a, b):
                 else:
                     funcs.add(t)
                     op = f'fn_{t:08x}'
-        text_mn = 'int 3' if mn == 'int3' else mn
+        text_mn = {'int3': 'int 3', 'fcompi': 'fcomip', 'fucompi': 'fucomip'}.get(mn, mn)
         if mn.startswith('rep '):
             op = ''
+        XPOP = {'fmulp','faddp','fsubp','fsubrp','fdivp','fdivrp','fcompp','fucompp'}
+        if mn in XPOP and re.match(r'^st\(\d+\)$', op):
+            op = 'st(0), ' + op
+        if mn in ('fadd','fsub','fsubr','fmul','fdiv','fdivr') and re.match(r'^st\(\d+\)$', op):
+            op = 'st(0), ' + op
+        if mn in ('fcomi', 'fcomip', 'fucomi', 'fucomip', 'fcompi', 'fucompi') and op.startswith('st('):
+            op = 'st(0), ' + op
+        pm = re.match(r'^(\w+), \[(\w+)\]$', op)
+        if mn == 'lea' and pm and pm.group(1) == pm.group(2):
+            return None
         body.append((i.address, text_mn + (' ' + op if op else '')))
     out = []
     for addr, text in body:
