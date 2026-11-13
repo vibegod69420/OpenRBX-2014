@@ -11,3 +11,9 @@ int btCollisionDispatcher::getField0C() const
 {
 	return field0C;
 }
+
+// FUNCTION: ROBLOXSTUDIO 0x0058f6b0
+int btCollisionDispatcher::getField44() const
+{
+	return field44;
+}

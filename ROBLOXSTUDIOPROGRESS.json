@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 18:50:50 UTC",
+  "updated_at": "2026-11-13 18:51:47 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 0.7048,
-  "implemented_total": 66,
-  "function_annotations": 66,
+  "matchable_coverage_pct": 0.7688,
+  "implemented_total": 73,
+  "function_annotations": 73,
   "stub_annotations": 0,
-  "perfect_100_count": 66,
-  "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.1627,
-  "overall_byte_coverage_pct": 0.0116,
+  "perfect_100_count": 72,
+  "average_match_pct": 99.91,
+  "overall_function_coverage_pct": 0.18,
+  "overall_byte_coverage_pct": 0.0119,
   "functions": [
     {
       "address": "0x004122e0",
@@ -87,6 +87,16 @@
       "file": "Client/App/v8datamodel/FlyweightService.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x004956b0",
+      "kind": "FUNCTION",
+      "name": "btHashedSimplePairCache::getField10",
+      "mangled": "?getField10@btHashedSimplePairCache@@QBEHXZ",
+      "file": "Client/App/v8kernel/btHashedSimplePairCache.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     },
     {
@@ -177,6 +187,16 @@
       "file": "Client/App/v8kernel/btCollisionDispatcher.cpp",
       "orig_size": 16,
       "recomp_size": 16,
+      "match_pct": 93.75
+    },
+    {
+      "address": "0x0058f6b0",
+      "kind": "FUNCTION",
+      "name": "btCollisionDispatcher::getField44",
+      "mangled": "?getField44@btCollisionDispatcher@@QBEHXZ",
+      "file": "Client/App/v8kernel/btCollisionDispatcher.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     },
     {
@@ -480,6 +500,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x006b1400",
+      "kind": "FUNCTION",
+      "name": "RBX::DS::CAudioStream::getField30",
+      "mangled": "?getField30@CAudioStream@DS@RBX@@QBEHXZ",
+      "file": "Client/App/v8sound/CAudioStream.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x006b89b0",
       "kind": "FUNCTION",
       "name": "name",
@@ -487,6 +517,26 @@
       "file": "Client/Base/msvc/codecvt_error_cat.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00851020",
+      "kind": "FUNCTION",
+      "name": "RBX::Detail::NumpunctChar::doDecimalPoint",
+      "mangled": "?doDecimalPoint@NumpunctChar@Detail@RBX@@QBEDXZ",
+      "file": "Client/Base/msvc/locale_facets.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008510f0",
+      "kind": "FUNCTION",
+      "name": "RBX::Detail::NumpunctChar::doThousandsSep",
+      "mangled": "?doThousandsSep@NumpunctChar@Detail@RBX@@QBEDXZ",
+      "file": "Client/Base/msvc/locale_facets.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     },
     {
@@ -630,6 +680,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00b8daf0",
+      "kind": "FUNCTION",
+      "name": "RBX::NormalBreakConnector::getField28",
+      "mangled": "?getField28@NormalBreakConnector@RBX@@QBE_NXZ",
+      "file": "Client/App/v8kernel/BreakConnector.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00ba2b30",
       "kind": "FUNCTION",
       "name": "RBX::Motor6DJoint::getJointType",
@@ -647,6 +707,16 @@
       "file": "Client/App/v8kernel/ManualGlueJoint.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00bda810",
+      "kind": "FUNCTION",
+      "name": "RBX::BuoyancyBallContact::getField4C",
+      "mangled": "?getField4C@BuoyancyBallContact@RBX@@QBEHXZ",
+      "file": "Client/App/v8kernel/BuoyancyContact.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     },
     {
