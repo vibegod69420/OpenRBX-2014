@@ -48,6 +48,13 @@ Two flag facts are load-bearing and were measured against the binary:
   default flag string for that TU only; `Client/Base/boost/set_int_pair.cpp` is
 the example that proved the difference.
 
+MSVC's scalar deleting destructor shape recurs across the binary. Two source
+shapes reproduce it byte-for-byte and are generated once per target address in
+`Client/Base/msvc/deleting_destructors.cpp` (destructor called directly, 34 B)
+and `deleting_destructors_import.cpp` (destructor reached through an import
+slot, 35 B). Each generated class keeps the destructor undefined: the callee
+body lives at the annotated address and is not part of that TU.
+
 ## Tooling & Autonomous 24/7 Harness
 
 - **[`CLAUDE.md`](CLAUDE.md) & [`AGENTS.md`](AGENTS.md)**: Complete MSVC 11.0 x86 byte-matching playbook adapted from `Asphaltian/OpenRBX` for the 2014 engine.
