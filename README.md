@@ -38,6 +38,16 @@ python tools/update_progress.py --commit "Match ..." --push
 `tools/verify_tu.py` prefers the project-local `toolchain/msvc11` and reports the
 compiler it used; only `17.00.50727` is evidence for the 2014 binary.
 
+Two flag facts are load-bearing and were measured against the binary:
+
+- `/arch:SSE`, not the default SSE2: the 2014 build converts scalar ints to float
+  with `cvtsi2ss`, while SSE2 folds them into packed `cvtdq2ps` and no
+  float-bearing body can match. `verify_tu.py` and `CMakeLists.txt` both pin it.
+- Some third-party translation units (Boost/STL support code) were built with
+  frame-pointer omission. A `// FLAGS:` line at the top of a `.cpp` replaces the
+  default flag string for that TU only; `Client/Base/boost/set_int_pair.cpp` is
+the example that proved the difference.
+
 ## Tooling & Autonomous 24/7 Harness
 
 - **[`CLAUDE.md`](CLAUDE.md) & [`AGENTS.md`](AGENTS.md)**: Complete MSVC 11.0 x86 byte-matching playbook adapted from `Asphaltian/OpenRBX` for the 2014 engine.
