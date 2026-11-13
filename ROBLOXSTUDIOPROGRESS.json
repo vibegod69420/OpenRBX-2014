@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 19:53:36 UTC",
+  "updated_at": "2026-11-13 19:54:18 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 33.8174,
-  "implemented_total": 3167,
-  "function_annotations": 3167,
+  "matchable_coverage_pct": 33.8601,
+  "implemented_total": 3171,
+  "function_annotations": 3171,
   "stub_annotations": 0,
-  "perfect_100_count": 3167,
+  "perfect_100_count": 3171,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 7.808,
-  "overall_byte_coverage_pct": 0.5403,
+  "overall_function_coverage_pct": 7.8179,
+  "overall_byte_coverage_pct": 0.5409,
   "functions": [
     {
       "address": "0x004022c0",
@@ -127,6 +127,16 @@
       "file": "Client/Base/msvc/deleting_destructors.cpp",
       "orig_size": 34,
       "recomp_size": 34,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00405150",
+      "kind": "FUNCTION",
+      "name": "CGlobalSet_00405150::set",
+      "mangled": "?set@CGlobalSet_00405150@@QAEXH@Z",
+      "file": "Client/Base/msvc/global_setters.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
       "match_pct": 100.0
     },
     {
@@ -19517,6 +19527,36 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00900040",
+      "kind": "FUNCTION",
+      "name": "CGlobalSet_00900040::set",
+      "mangled": "?set@CGlobalSet_00405150@@QAEXH@Z",
+      "file": "Client/Base/msvc/global_setters.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00900070",
+      "kind": "FUNCTION",
+      "name": "CGlobalSet_00900070::set",
+      "mangled": "?set@CGlobalSet_00405150@@QAEXH@Z",
+      "file": "Client/Base/msvc/global_setters.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009000f0",
+      "kind": "FUNCTION",
+      "name": "CGlobalSet_009000f0::set",
+      "mangled": "?set@CGlobalSet_00405150@@QAEXH@Z",
+      "file": "Client/Base/msvc/global_setters.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
       "match_pct": 100.0
     },
     {
