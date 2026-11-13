@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 18:32:47 UTC",
+  "updated_at": "2026-11-13 18:38:30 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 0.3737,
-  "implemented_total": 35,
-  "function_annotations": 35,
+  "matchable_coverage_pct": 0.4378,
+  "implemented_total": 41,
+  "function_annotations": 41,
   "stub_annotations": 0,
-  "perfect_100_count": 35,
+  "perfect_100_count": 41,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.0863,
-  "overall_byte_coverage_pct": 0.0076,
+  "overall_function_coverage_pct": 0.1011,
+  "overall_byte_coverage_pct": 0.0087,
   "functions": [
     {
       "address": "0x004122e0",
@@ -60,6 +60,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00427650",
+      "kind": "FUNCTION",
+      "name": "RBX::Instance::makePair",
+      "mangled": "?makePair@Instance@RBX@@QBEPAURbxPairInt@2@PAU32@H@Z",
+      "file": "Client/App/v8tree/Instance.cpp",
+      "orig_size": 18,
+      "recomp_size": 18,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0048b5d0",
+      "kind": "FUNCTION",
+      "name": "RBX::FlyweightService::pushFrontNode",
+      "mangled": "?pushFrontNode@FlyweightService@RBX@@QAEXPAUFlyweightNode@2@@Z",
+      "file": "Client/App/v8datamodel/FlyweightService.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0048b5e0",
+      "kind": "FUNCTION",
+      "name": "RBX::FlyweightService::addAssign",
+      "mangled": "?addAssign@FlyweightService@RBX@@SAXPAHH@Z",
+      "file": "Client/App/v8datamodel/FlyweightService.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x004f6040",
       "kind": "FUNCTION",
       "name": "RBX::ManualWeldJoint::getJointType",
@@ -97,6 +127,36 @@
       "file": "Client/Base/msvc/_System_error_category.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0058f650",
+      "kind": "FUNCTION",
+      "name": "btManifoldResult::setShapeIdentifiersA",
+      "mangled": "?setShapeIdentifiersA@btManifoldResult@@QAEXHH@Z",
+      "file": "Client/App/v8kernel/btManifoldResult.cpp",
+      "orig_size": 19,
+      "recomp_size": 19,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0058f670",
+      "kind": "FUNCTION",
+      "name": "btManifoldResult::setShapeIdentifiersB",
+      "mangled": "?setShapeIdentifiersB@btManifoldResult@@QAEXHH@Z",
+      "file": "Client/App/v8kernel/btManifoldResult.cpp",
+      "orig_size": 19,
+      "recomp_size": 19,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0058f6a0",
+      "kind": "FUNCTION",
+      "name": "btCollisionDispatcher::getManifoldByIndexInternal",
+      "mangled": "?getManifoldByIndexInternal@btCollisionDispatcher@@QBEPAVbtPersistentManifold@@H@Z",
+      "file": "Client/App/v8kernel/btCollisionDispatcher.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
       "match_pct": 100.0
     },
     {
