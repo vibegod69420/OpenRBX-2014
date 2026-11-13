@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 18:38:30 UTC",
+  "updated_at": "2026-11-13 18:39:45 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 0.4378,
-  "implemented_total": 41,
-  "function_annotations": 41,
+  "matchable_coverage_pct": 0.5339,
+  "implemented_total": 50,
+  "function_annotations": 50,
   "stub_annotations": 0,
-  "perfect_100_count": 41,
+  "perfect_100_count": 50,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.1011,
-  "overall_byte_coverage_pct": 0.0087,
+  "overall_function_coverage_pct": 0.1233,
+  "overall_byte_coverage_pct": 0.0099,
   "functions": [
     {
       "address": "0x004122e0",
@@ -127,6 +127,16 @@
       "file": "Client/Base/msvc/_System_error_category.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005765c0",
+      "kind": "FUNCTION",
+      "name": "RobloxPluginHost::setField04",
+      "mangled": "?setField04@RobloxPluginHost@@QAEXH@Z",
+      "file": "Client/RobloxStudio/RobloxPluginHost.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
       "match_pct": 100.0
     },
     {
@@ -267,6 +277,86 @@
       "file": "Client/App/v8kernel/btTriangleMeshShape.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005df4f0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::DeviceContextD3D9::setField10",
+      "mangled": "?setField10@DeviceContextD3D9@Graphics@RBX@@QAEXH@Z",
+      "file": "Client/Rendering/GfxCore/D3D9/DeviceContextD3D9.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006066d0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::DeviceContextGL::setField14",
+      "mangled": "?setField14@DeviceContextGL@Graphics@RBX@@QAEXH@Z",
+      "file": "Client/Rendering/GfxCore/GL/DeviceContextGL.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00621790",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::FastCluster::getCount",
+      "mangled": "?getCount@FastCluster@Graphics@RBX@@QBEHXZ",
+      "file": "Client/Rendering/GfxRender/FastCluster.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00676640",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::RenderView::consumeFlagA0",
+      "mangled": "?consumeFlagA0@RenderView@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxRender/RenderView.cpp",
+      "orig_size": 14,
+      "recomp_size": 14,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006766d0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::RenderView::getField8C_BA0",
+      "mangled": "?getField8C_BA0@RenderView@Graphics@RBX@@QBEPAXXZ",
+      "file": "Client/Rendering/GfxRender/RenderView.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006766e0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::RenderView::getField0C_1C8",
+      "mangled": "?getField0C_1C8@RenderView@Graphics@RBX@@QBEPAXXZ",
+      "file": "Client/Rendering/GfxRender/RenderView.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006766f0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::RenderView::getField0C_1B0",
+      "mangled": "?getField0C_1B0@RenderView@Graphics@RBX@@QBEPAXXZ",
+      "file": "Client/Rendering/GfxRender/RenderView.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00676930",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::RenderView::setFlag9D",
+      "mangled": "?setFlag9D@RenderView@Graphics@RBX@@QAEX_N@Z",
+      "file": "Client/Rendering/GfxRender/RenderView.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
       "match_pct": 100.0
     },
     {
