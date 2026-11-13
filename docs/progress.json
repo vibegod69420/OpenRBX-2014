@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 18:17:34 UTC",
+  "updated_at": "2026-11-13 18:21:19 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21388,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7602,
-  "matchable_coverage_pct": 0.1065,
-  "implemented_total": 10,
-  "function_annotations": 10,
+  "matchable_coverage_pct": 0.1385,
+  "implemented_total": 13,
+  "function_annotations": 13,
   "stub_annotations": 0,
-  "perfect_100_count": 10,
+  "perfect_100_count": 13,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.0247,
-  "overall_byte_coverage_pct": 0.0006,
+  "overall_function_coverage_pct": 0.0321,
+  "overall_byte_coverage_pct": 0.0008,
   "functions": [
     {
       "address": "0x004f6040",
@@ -115,6 +115,36 @@
       "name": "RBX::ManualGlueJoint::getJointType",
       "mangled": "?getJointType@ManualGlueJoint@RBX@@UBEHXZ",
       "file": "Client/App/v8kernel/ManualGlueJoint.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c15080",
+      "kind": "FUNCTION",
+      "name": "RBX::HUMAN::Physics::getStateId",
+      "mangled": "?getStateId@Physics@HUMAN@RBX@@UBEHXZ",
+      "file": "Client/App/humanoid/Physics.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c169f0",
+      "kind": "FUNCTION",
+      "name": "RBX::HUMAN::PlatformStanding::getStateId",
+      "mangled": "?getStateId@PlatformStanding@HUMAN@RBX@@UBEHXZ",
+      "file": "Client/App/humanoid/PlatformStanding.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c16a00",
+      "kind": "FUNCTION",
+      "name": "RBX::HUMAN::Seated::getStateId",
+      "mangled": "?getStateId@Seated@HUMAN@RBX@@UBEHXZ",
+      "file": "Client/App/humanoid/Seated.cpp",
       "orig_size": 6,
       "recomp_size": 6,
       "match_pct": 100.0
