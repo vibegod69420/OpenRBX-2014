@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 19:45:47 UTC",
+  "updated_at": "2026-11-13 19:46:49 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 17.1917,
-  "implemented_total": 1610,
-  "function_annotations": 1610,
+  "matchable_coverage_pct": 17.4052,
+  "implemented_total": 1630,
+  "function_annotations": 1630,
   "stub_annotations": 0,
-  "perfect_100_count": 1610,
+  "perfect_100_count": 1630,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 3.9693,
-  "overall_byte_coverage_pct": 0.2873,
+  "overall_function_coverage_pct": 4.0186,
+  "overall_byte_coverage_pct": 0.2885,
   "functions": [
     {
       "address": "0x004022c0",
@@ -30,11 +30,31 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00403ad0",
+      "kind": "FUNCTION",
+      "name": "CGet_00403ad0::get",
+      "mangled": "?get@CGet_00403ad0@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors2.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00403b30",
       "kind": "FUNCTION",
       "name": "RBX::PartInstance::getField70",
       "mangled": "?getField70@PartInstance@RBX@@QBEHXZ",
       "file": "Client/App/v8datamodel/PartInstance.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00403b40",
+      "kind": "FUNCTION",
+      "name": "CGet_00403b40::get",
+      "mangled": "?get@CGet_00403b40@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors2.cpp",
       "orig_size": 4,
       "recomp_size": 4,
       "match_pct": 100.0
@@ -1785,6 +1805,16 @@
       "name": "btCollisionDispatcher::getField0C",
       "mangled": "?getField0C@btCollisionDispatcher@@QBEHXZ",
       "file": "Client/App/v8kernel/btCollisionDispatcher.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x004956d0",
+      "kind": "FUNCTION",
+      "name": "CGet_004956d0::get",
+      "mangled": "?get@CGet_004956d0@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors2.cpp",
       "orig_size": 4,
       "recomp_size": 4,
       "match_pct": 100.0
@@ -3830,6 +3860,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0058a950",
+      "kind": "FUNCTION",
+      "name": "CGet_0058a950::get",
+      "mangled": "?get@CGet_0058a950@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors2.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0058f090",
       "kind": "FUNCTION",
       "name": "DeletingDtor_0058f090::destroy",
@@ -4357,6 +4397,26 @@
       "file": "Client/Rendering/GfxCore/D3D9/DeviceD3D9.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005e5de0",
+      "kind": "FUNCTION",
+      "name": "CChain_005e5de0::get",
+      "mangled": "?get@CChain_005e5de0@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors2.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005e5df0",
+      "kind": "FUNCTION",
+      "name": "CChain_005e5df0::get",
+      "mangled": "?get@CChain_005e5df0@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors2.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
       "match_pct": 100.0
     },
     {
@@ -5067,6 +5127,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007b4990",
+      "kind": "FUNCTION",
+      "name": "CGet_007b4990::get",
+      "mangled": "?get@CGet_007b4990@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors2.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     },
     {
@@ -10160,6 +10230,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0099d2f0",
+      "kind": "FUNCTION",
+      "name": "CFloat8_0099d2f0::get",
+      "mangled": "?get@CFloat8_0099d2f0@@QAEMXZ",
+      "file": "Client/Base/msvc/tiny_accessors2.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0099d310",
+      "kind": "FUNCTION",
+      "name": "CFloat8_0099d310::get",
+      "mangled": "?get@CFloat8_0099d310@@QAEMXZ",
+      "file": "Client/Base/msvc/tiny_accessors2.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0099f9cf",
       "kind": "FUNCTION",
       "name": "adjustorThunk_0099f9cf",
@@ -14930,6 +15020,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00b4ba90",
+      "kind": "FUNCTION",
+      "name": "CGet4_00b4ba90::get",
+      "mangled": "?get@CGet4_00b4ba90@@QAEHH@Z",
+      "file": "Client/Base/msvc/tiny_accessors2.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00b4ebf0",
       "kind": "FUNCTION",
       "name": "getConst_00b4ebf0",
@@ -14947,6 +15047,86 @@
       "file": "Client/App/humanoid/Dead.cpp",
       "orig_size": 285,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b53510",
+      "kind": "FUNCTION",
+      "name": "CChain_00b53510::get",
+      "mangled": "?get@CChain_00b53510@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors2.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b53530",
+      "kind": "FUNCTION",
+      "name": "CChain_00b53530::get",
+      "mangled": "?get@CChain_00b53530@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors2.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b53540",
+      "kind": "FUNCTION",
+      "name": "CChain_00b53540::get",
+      "mangled": "?get@CChain_00b53540@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors2.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b53550",
+      "kind": "FUNCTION",
+      "name": "CChain_00b53550::get",
+      "mangled": "?get@CChain_00b53550@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors2.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b53570",
+      "kind": "FUNCTION",
+      "name": "CChain_00b53570::get",
+      "mangled": "?get@CChain_00b53570@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors2.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b53580",
+      "kind": "FUNCTION",
+      "name": "CChain_00b53580::get",
+      "mangled": "?get@CChain_00b53580@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors2.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b53590",
+      "kind": "FUNCTION",
+      "name": "CChain_00b53590::get",
+      "mangled": "?get@CChain_00b53590@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors2.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b535b0",
+      "kind": "FUNCTION",
+      "name": "CChain_00b535b0::get",
+      "mangled": "?get@CChain_00b535b0@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors2.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
       "match_pct": 100.0
     },
     {
@@ -15147,6 +15327,26 @@
       "file": "Client/RobloxStudio/Forwarders.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00bb94a0",
+      "kind": "FUNCTION",
+      "name": "CFloat_00bb94a0::get",
+      "mangled": "?get@CFloat_00bb94a0@@QAEMXZ",
+      "file": "Client/Base/msvc/tiny_accessors2.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00bd4ad0",
+      "kind": "FUNCTION",
+      "name": "CGet_00bd4ad0::get",
+      "mangled": "?get@CGet_00bd4ad0@@QAEHXZ",
+      "file": "Client/Base/msvc/tiny_accessors2.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     },
     {
