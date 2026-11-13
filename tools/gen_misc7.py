@@ -22,8 +22,8 @@ for a, sz in sorted(sizes.items()):
         continue
     if sz == 14 and b[:5] == b'\x2b\x49\xfc\x81\xe9' and b[9] == 0xe9:
         F['vtor2'].append((a, int.from_bytes(b[5:9], 'little')))
-    elif sz == 15 and b[:6] == b'\x55\x8b\xec\x8b\x89' and b[10] == 0x5d and b[11] == 0xe9:
-        F['frameget32'].append((a, int.from_bytes(b[6:10], 'little')))
+    elif sz == 15 and b[:5] == b'\x55\x8b\xec\x8b\x89' and b[9] == 0x5d and b[10] == 0xe9:
+        F['frameget32'].append((a, int.from_bytes(b[5:9], 'little')))
     elif sz == 15 and b[:5] == b'\x55\x8b\xec\x81\xc1' and b[9] == 0x5d and b[10] == 0xe9:
         F['frameadd32'].append((a, int.from_bytes(b[5:9], 'little')))
     elif sz == 14 and b[:5] == b'\x55\x8b\xec\x8b\x49' and b[6:8] == b'\x8b\x01' and b[8:10] == b'\x8b\x40' and b[11] == 0x5d:
@@ -36,8 +36,8 @@ for a, sz in sorted(sizes.items()):
         F['addcall'].append((a, int.from_bytes(b[2:6], 'little')))
     elif sz == 15 and b[0] == 0xc6 and b[1] == 0x05 and b[6] == 0x01 and b[7] == 0xe8:
         F['globalbytecall'].append(a)
-    elif sz == 15 and b[:5] == b'\x55\x8b\xec\x8b\x01' and b[5:7] == b'\xff\x75' and b[7:9] == b'\xff\x50' and b[10] == 0x5d:
-        F['vcallarg'].append((a, b[6], b[9]))
+    elif sz == 15 and b[:5] == b'\x55\x8b\xec\x8b\x01' and b[5:7] == b'\xff\x75' and b[8:10] == b'\xff\x50' and b[11] == 0x5d:
+        F['vcallarg'].append((a, b[7], b[10]))
     elif sz == 14 and b[:2] == b'\xff\x71' and b[3] == 0xe8 and b[8:11] == b'\x83\xc4\x04' and b[11:14] == b'\xc2\x04\x00':
         F['memberpush'].append((a, b[2]))
     elif sz == 14 and b[:6] == b'\x55\x8b\xec\x8b\x45\x08' and b[6] == 0x8a and b[7] == 0x44 and b[8] == 0x08 and b[10] == 0x5d:

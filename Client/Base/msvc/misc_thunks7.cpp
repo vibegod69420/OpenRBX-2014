@@ -19,6 +19,83 @@ extern "C" __declspec(naked) void vtor2_00aa879d()
 	__asm { jmp thunkTarget_00aa879d }
 }
 
+extern "C" void thunkTarget_00676460();
+// FUNCTION: ROBLOXSTUDIO 0x00676460
+extern "C" __declspec(naked) void frameGet32_00676460()
+{
+	__asm { push ebp }
+	__asm { mov ebp, esp }
+	__asm { mov ecx, dword ptr [ecx + 0x8c] }
+	__asm { pop ebp }
+	__asm { jmp thunkTarget_00676460 }
+}
+
+extern "C" void thunkTarget_00897dc0();
+// FUNCTION: ROBLOXSTUDIO 0x00897dc0
+extern "C" __declspec(naked) void frameGet32_00897dc0()
+{
+	__asm { push ebp }
+	__asm { mov ebp, esp }
+	__asm { mov ecx, dword ptr [ecx + 0xe0] }
+	__asm { pop ebp }
+	__asm { jmp thunkTarget_00897dc0 }
+}
+
+extern "C" void thunkTarget_008fa9b0();
+// FUNCTION: ROBLOXSTUDIO 0x008fa9b0
+extern "C" __declspec(naked) void frameGet32_008fa9b0()
+{
+	__asm { push ebp }
+	__asm { mov ebp, esp }
+	__asm { mov ecx, dword ptr [ecx + 0x80] }
+	__asm { pop ebp }
+	__asm { jmp thunkTarget_008fa9b0 }
+}
+
+extern "C" void thunkTarget_008fa9c0();
+// FUNCTION: ROBLOXSTUDIO 0x008fa9c0
+extern "C" __declspec(naked) void frameGet32_008fa9c0()
+{
+	__asm { push ebp }
+	__asm { mov ebp, esp }
+	__asm { mov ecx, dword ptr [ecx + 0x80] }
+	__asm { pop ebp }
+	__asm { jmp thunkTarget_008fa9c0 }
+}
+
+extern "C" void thunkTarget_009987e0();
+// FUNCTION: ROBLOXSTUDIO 0x009987e0
+extern "C" __declspec(naked) void frameGet32_009987e0()
+{
+	__asm { push ebp }
+	__asm { mov ebp, esp }
+	__asm { mov ecx, dword ptr [ecx + 0xbc] }
+	__asm { pop ebp }
+	__asm { jmp thunkTarget_009987e0 }
+}
+
+extern "C" void thunkTarget_009987f0();
+// FUNCTION: ROBLOXSTUDIO 0x009987f0
+extern "C" __declspec(naked) void frameGet32_009987f0()
+{
+	__asm { push ebp }
+	__asm { mov ebp, esp }
+	__asm { mov ecx, dword ptr [ecx + 0xbc] }
+	__asm { pop ebp }
+	__asm { jmp thunkTarget_009987f0 }
+}
+
+extern "C" void thunkTarget_00a01710();
+// FUNCTION: ROBLOXSTUDIO 0x00a01710
+extern "C" __declspec(naked) void frameGet32_00a01710()
+{
+	__asm { push ebp }
+	__asm { mov ebp, esp }
+	__asm { mov ecx, dword ptr [ecx + 0x80] }
+	__asm { pop ebp }
+	__asm { jmp thunkTarget_00a01710 }
+}
+
 extern "C" void thunkTarget_006470c0();
 // FUNCTION: ROBLOXSTUDIO 0x006470c0
 extern "C" __declspec(naked) void frameAdd32_006470c0()
@@ -161,6 +238,30 @@ extern "C" __declspec(naked) void addCall_00919bb0()
 	__asm { add ecx, 0xfffffe3c }
 	__asm { call callTarget_00919bb0 }
 	__asm { ret 4 }
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x007c3d80
+extern "C" __declspec(naked) void vcallArg_007c3d80()
+{
+	__asm { push ebp }
+	__asm { mov ebp, esp }
+	__asm { mov eax, dword ptr [ecx] }
+	__asm { push dword ptr [ebp + 0x8] }
+	__asm { call dword ptr [eax + 0x18] }
+	__asm { pop ebp }
+	__asm { ret 8 }
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x007c3e00
+extern "C" __declspec(naked) void vcallArg_007c3e00()
+{
+	__asm { push ebp }
+	__asm { mov ebp, esp }
+	__asm { mov eax, dword ptr [ecx] }
+	__asm { push dword ptr [ebp + 0x8] }
+	__asm { call dword ptr [eax + 0x10] }
+	__asm { pop ebp }
+	__asm { ret 8 }
 }
 
 extern "C" void memberPushTarget_00bd96c0(int);

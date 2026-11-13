@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 20:10:27 UTC",
+  "updated_at": "2026-11-13 20:11:14 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 39.1991,
-  "implemented_total": 3671,
-  "function_annotations": 3671,
+  "matchable_coverage_pct": 39.2952,
+  "implemented_total": 3680,
+  "function_annotations": 3680,
   "stub_annotations": 0,
-  "perfect_100_count": 3671,
+  "perfect_100_count": 3680,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 9.0506,
-  "overall_byte_coverage_pct": 0.6048,
+  "overall_function_coverage_pct": 9.0728,
+  "overall_byte_coverage_pct": 0.6062,
   "functions": [
     {
       "address": "0x004022c0",
@@ -6797,6 +6797,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00676460",
+      "kind": "FUNCTION",
+      "name": "frameGet32_00676460",
+      "mangled": "_frameGet32_00676460",
+      "file": "Client/Base/msvc/misc_thunks7.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
       "match_pct": 100.0
     },
     {
@@ -17140,6 +17150,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x007c3d80",
+      "kind": "FUNCTION",
+      "name": "vcallArg_007c3d80",
+      "mangled": "_vcallArg_007c3d80",
+      "file": "Client/Base/msvc/misc_thunks7.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x007c3de0",
       "kind": "FUNCTION",
       "name": "BoxSelectCommand::zeroTriple",
@@ -17147,6 +17167,16 @@
       "file": "Client/RobloxStudio/BoxSelectCommand.cpp",
       "orig_size": 30,
       "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007c3e00",
+      "kind": "FUNCTION",
+      "name": "vcallArg_007c3e00",
+      "mangled": "_vcallArg_007c3e00",
+      "file": "Client/Base/msvc/misc_thunks7.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
       "match_pct": 100.0
     },
     {
@@ -20680,6 +20710,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00897dc0",
+      "kind": "FUNCTION",
+      "name": "frameGet32_00897dc0",
+      "mangled": "_frameGet32_00897dc0",
+      "file": "Client/Base/msvc/misc_thunks7.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00898360",
       "kind": "FUNCTION",
       "name": "CBSet_00898360::set",
@@ -21607,6 +21647,26 @@
       "file": "Client/Base/msvc/misc_thunks5.cpp",
       "orig_size": 12,
       "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008fa9b0",
+      "kind": "FUNCTION",
+      "name": "frameGet32_008fa9b0",
+      "mangled": "_frameGet32_008fa9b0",
+      "file": "Client/Base/msvc/misc_thunks7.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008fa9c0",
+      "kind": "FUNCTION",
+      "name": "frameGet32_008fa9c0",
+      "mangled": "_frameGet32_008fa9c0",
+      "file": "Client/Base/msvc/misc_thunks7.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
       "match_pct": 100.0
     },
     {
@@ -26140,6 +26200,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009987e0",
+      "kind": "FUNCTION",
+      "name": "frameGet32_009987e0",
+      "mangled": "_frameGet32_009987e0",
+      "file": "Client/Base/msvc/misc_thunks7.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009987f0",
+      "kind": "FUNCTION",
+      "name": "frameGet32_009987f0",
+      "mangled": "_frameGet32_009987f0",
+      "file": "Client/Base/msvc/misc_thunks7.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009994b0",
       "kind": "FUNCTION",
       "name": "frameAddTail_009994b0",
@@ -27777,6 +27857,16 @@
       "file": "Client/Base/msvc/misc_thunks2.cpp",
       "orig_size": 9,
       "recomp_size": 9,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a01710",
+      "kind": "FUNCTION",
+      "name": "frameGet32_00a01710",
+      "mangled": "_frameGet32_00a01710",
+      "file": "Client/Base/msvc/misc_thunks7.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
       "match_pct": 100.0
     },
     {
