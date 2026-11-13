@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 20:05:13 UTC",
+  "updated_at": "2026-11-13 20:07:41 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 38.1741,
-  "implemented_total": 3575,
-  "function_annotations": 3575,
+  "matchable_coverage_pct": 38.5691,
+  "implemented_total": 3612,
+  "function_annotations": 3612,
   "stub_annotations": 0,
-  "perfect_100_count": 3575,
+  "perfect_100_count": 3612,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 8.8139,
-  "overall_byte_coverage_pct": 0.592,
+  "overall_function_coverage_pct": 8.9051,
+  "overall_byte_coverage_pct": 0.5965,
   "functions": [
     {
       "address": "0x004022c0",
@@ -157,6 +157,16 @@
       "file": "Client/Base/msvc/misc_thunks3.cpp",
       "orig_size": 10,
       "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00407930",
+      "kind": "FUNCTION",
+      "name": "vtailMemFrame_00407930",
+      "mangled": "_vtailMemFrame_00407930",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
       "match_pct": 100.0
     },
     {
@@ -1017,6 +1027,16 @@
       "file": "Client/Base/msvc/deleting_destructors.cpp",
       "orig_size": 34,
       "recomp_size": 34,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00428ac0",
+      "kind": "FUNCTION",
+      "name": "vtailMem_00428ac0",
+      "mangled": "_vtailMem_00428ac0",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -2827,6 +2847,16 @@
       "file": "Client/Base/msvc/deleting_destructors_import.cpp",
       "orig_size": 35,
       "recomp_size": 35,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x004d3610",
+      "kind": "FUNCTION",
+      "name": "vtailMemFrame_004d3610",
+      "mangled": "_vtailMemFrame_004d3610",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
       "match_pct": 100.0
     },
     {
@@ -5170,6 +5200,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0059cd90",
+      "kind": "FUNCTION",
+      "name": "vtailMemFrame_0059cd90",
+      "mangled": "_vtailMemFrame_0059cd90",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0059cda0",
+      "kind": "FUNCTION",
+      "name": "vtailMemFrame_0059cda0",
+      "mangled": "_vtailMemFrame_0059cda0",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0059cdd0",
+      "kind": "FUNCTION",
+      "name": "vtailMemFrame_0059cdd0",
+      "mangled": "_vtailMemFrame_0059cdd0",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0059f920",
       "kind": "FUNCTION",
       "name": "RBX::DynamicRotateJoint::getJointType",
@@ -5337,6 +5397,26 @@
       "file": "Client/Rendering/GfxCore/D3D9/DeviceContextD3D9.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005dfa80",
+      "kind": "FUNCTION",
+      "name": "frameGetTail_005dfa80",
+      "mangled": "_frameGetTail_005dfa80",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005dfa90",
+      "kind": "FUNCTION",
+      "name": "frameGetTail_005dfa90",
+      "mangled": "_frameGetTail_005dfa90",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
       "match_pct": 100.0
     },
     {
@@ -6057,6 +6137,26 @@
       "file": "Client/Rendering/GfxCore/GL/DeviceContextGL.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00606c30",
+      "kind": "FUNCTION",
+      "name": "frameGetTail_00606c30",
+      "mangled": "_frameGetTail_00606c30",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00606c40",
+      "kind": "FUNCTION",
+      "name": "frameGetTail_00606c40",
+      "mangled": "_frameGetTail_00606c40",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
       "match_pct": 100.0
     },
     {
@@ -7140,6 +7240,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00682000",
+      "kind": "FUNCTION",
+      "name": "CMemberBool_00682000::test",
+      "mangled": "?test@CMemberBool_00682000@@QAE_NXZ",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00686b50",
       "kind": "FUNCTION",
       "name": "getDeref_00686b50",
@@ -7207,6 +7317,16 @@
       "file": "Client/Base/msvc/arg_setters.cpp",
       "orig_size": 10,
       "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00693780",
+      "kind": "FUNCTION",
+      "name": "frameGetTail_00693780",
+      "mangled": "_frameGetTail_00693780",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
       "match_pct": 100.0
     },
     {
@@ -16940,6 +17060,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x007c2460",
+      "kind": "FUNCTION",
+      "name": "condVtail_007c2460",
+      "mangled": "_condVtail_007c2460",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x007c37d0",
       "kind": "FUNCTION",
       "name": "virtFrameTail_007c37d0",
@@ -19220,6 +19350,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0082e380",
+      "kind": "FUNCTION",
+      "name": "globalBool_0082e380",
+      "mangled": "?globalBool_0082e380@@YA_NXZ",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0082ef50",
       "kind": "FUNCTION",
       "name": "CNested_0082ef50::get",
@@ -20460,6 +20600,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008a4290",
+      "kind": "FUNCTION",
+      "name": "CPush1_008a4290::call",
+      "mangled": "?call@CPush1_008a4290@@QAEXH@Z",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008a42a0",
+      "kind": "FUNCTION",
+      "name": "CPush1_008a42a0::call",
+      "mangled": "?call@CPush1_008a4290@@QAEXH@Z",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008a44f0",
+      "kind": "FUNCTION",
+      "name": "CPush1_008a44f0::call",
+      "mangled": "?call@CPush1_008a4290@@QAEXH@Z",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008a73b6",
       "kind": "FUNCTION",
       "name": "adjustorThunk_008a73b6",
@@ -20830,6 +21000,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008aca00",
+      "kind": "FUNCTION",
+      "name": "CMemberBool_008aca00::test",
+      "mangled": "?test@CMemberBool_008aca00@@QAE_NXZ",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008ada22",
       "kind": "FUNCTION",
       "name": "adjustorThunk_008ada22",
@@ -21157,6 +21337,16 @@
       "file": "Client/Base/msvc/misc_thunks4.cpp",
       "orig_size": 11,
       "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008f8f80",
+      "kind": "FUNCTION",
+      "name": "frameGetTail_008f8f80",
+      "mangled": "_frameGetTail_008f8f80",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
       "match_pct": 100.0
     },
     {
@@ -21667,6 +21857,36 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0090a790",
+      "kind": "FUNCTION",
+      "name": "frameGetTail_0090a790",
+      "mangled": "_frameGetTail_0090a790",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0090c530",
+      "kind": "FUNCTION",
+      "name": "frameGetTail_0090c530",
+      "mangled": "_frameGetTail_0090c530",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0090c560",
+      "kind": "FUNCTION",
+      "name": "frameGetTail_0090c560",
+      "mangled": "_frameGetTail_0090c560",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
       "match_pct": 100.0
     },
     {
@@ -22245,6 +22465,16 @@
       "name": "getTail_00913cf0",
       "mangled": "_getTail_00913cf0",
       "file": "Client/Base/msvc/misc_thunks4.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00913da0",
+      "kind": "FUNCTION",
+      "name": "vtailMem_00913da0",
+      "mangled": "_vtailMem_00913da0",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
       "orig_size": 11,
       "recomp_size": 11,
       "match_pct": 100.0
@@ -25520,6 +25750,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00997700",
+      "kind": "FUNCTION",
+      "name": "vtailMem_00997700",
+      "mangled": "_vtailMem_00997700",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009977c0",
       "kind": "FUNCTION",
       "name": "CInt_009977c0::get",
@@ -26467,6 +26707,16 @@
       "file": "Client/Base/msvc/tiny_accessors.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009d91d0",
+      "kind": "FUNCTION",
+      "name": "CMemberBool_009d91d0::test",
+      "mangled": "?test@CMemberBool_009d91d0@@QAE_NXZ",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
       "match_pct": 100.0
     },
     {
@@ -28087,6 +28337,16 @@
       "file": "Client/Base/msvc/misc_thunks2.cpp",
       "orig_size": 9,
       "recomp_size": 9,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a50350",
+      "kind": "FUNCTION",
+      "name": "frameGetTail_00a50350",
+      "mangled": "_frameGetTail_00a50350",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
       "match_pct": 100.0
     },
     {
@@ -32920,6 +33180,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00b68f60",
+      "kind": "FUNCTION",
+      "name": "vtailMemFrame_00b68f60",
+      "mangled": "_vtailMemFrame_00b68f60",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b6a450",
+      "kind": "FUNCTION",
+      "name": "vtailMemFrame_00b6a450",
+      "mangled": "_vtailMemFrame_00b6a450",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b6a460",
+      "kind": "FUNCTION",
+      "name": "vtailMemFrame_00b6a460",
+      "mangled": "_vtailMemFrame_00b6a460",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00b83e40",
       "kind": "FUNCTION",
       "name": "CCleanup_00b83e40::destroy",
@@ -33067,6 +33357,16 @@
       "file": "Client/Base/msvc/import_forwarders.cpp",
       "orig_size": 5,
       "recomp_size": 5,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b92870",
+      "kind": "FUNCTION",
+      "name": "vtailMemFrame_00b92870",
+      "mangled": "_vtailMemFrame_00b92870",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
       "match_pct": 100.0
     },
     {
@@ -33510,6 +33810,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00babdd0",
+      "kind": "FUNCTION",
+      "name": "frameGetTail_00babdd0",
+      "mangled": "_frameGetTail_00babdd0",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00bb9120",
       "kind": "FUNCTION",
       "name": "tailThunk_00bb9120",
@@ -33637,6 +33947,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00bd6ee0",
+      "kind": "FUNCTION",
+      "name": "CLeaCall_00bd6ee0::call",
+      "mangled": "?call@CLeaCall_00bd6ee0@@QAEXXZ",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
       "match_pct": 100.0
     },
     {
@@ -34220,6 +34540,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c192e0",
+      "kind": "FUNCTION",
+      "name": "CLeaCall_00c192e0::call",
+      "mangled": "?call@CLeaCall_00c192e0@@QAEXXZ",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c1af60",
+      "kind": "FUNCTION",
+      "name": "CLeaCall_00c1af60::call",
+      "mangled": "?call@CLeaCall_00c1af60@@QAEXXZ",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c1c2dd",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00c1c2dd",
@@ -34767,6 +35107,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c72990",
+      "kind": "FUNCTION",
+      "name": "stringGet_00c72990",
+      "mangled": "_stringGet_00c72990",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
       "match_pct": 100.0
     },
     {
@@ -35767,6 +36117,26 @@
       "file": "Client/Base/msvc/misc_thunks2.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00d09460",
+      "kind": "FUNCTION",
+      "name": "vtailMemFrame_00d09460",
+      "mangled": "_vtailMemFrame_00d09460",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00d0c040",
+      "kind": "FUNCTION",
+      "name": "vtailMemFrame_00d0c040",
+      "mangled": "_vtailMemFrame_00d0c040",
+      "file": "Client/Base/msvc/misc_thunks5.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
       "match_pct": 100.0
     }
   ]
