@@ -13,3 +13,5 @@ __pycache__/
 harness.log
 run_daemon.cmd
 data/active_tunnel_url.txt
+
+data/work_ledger.jsonl
