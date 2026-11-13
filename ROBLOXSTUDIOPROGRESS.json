@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 20:02:09 UTC",
+  "updated_at": "2026-11-13 20:03:56 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 36.1986,
-  "implemented_total": 3390,
-  "function_annotations": 3390,
+  "matchable_coverage_pct": 37.3732,
+  "implemented_total": 3500,
+  "function_annotations": 3500,
   "stub_annotations": 0,
-  "perfect_100_count": 3390,
+  "perfect_100_count": 3500,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 8.3578,
-  "overall_byte_coverage_pct": 0.5708,
+  "overall_function_coverage_pct": 8.629,
+  "overall_byte_coverage_pct": 0.5833,
   "functions": [
     {
       "address": "0x004022c0",
@@ -37,6 +37,16 @@
       "file": "Client/Base/msvc/import_forwarders.cpp",
       "orig_size": 5,
       "recomp_size": 5,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00402eb0",
+      "kind": "FUNCTION",
+      "name": "CIdent_00402eb0::get",
+      "mangled": "?get@CIdent_00402eb0@@QAEHH@Z",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
       "match_pct": 100.0
     },
     {
@@ -137,6 +147,16 @@
       "file": "Client/Base/msvc/global_setters.cpp",
       "orig_size": 15,
       "recomp_size": 15,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x004058d0",
+      "kind": "FUNCTION",
+      "name": "callJumpThunk_004058d0",
+      "mangled": "_callJumpThunk_004058d0",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
       "match_pct": 100.0
     },
     {
@@ -947,6 +967,36 @@
       "file": "Client/Base/msvc/deleting_destructors.cpp",
       "orig_size": 34,
       "recomp_size": 34,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0042bbf3",
+      "kind": "FUNCTION",
+      "name": "stackAdjustThunk_0042bbf3",
+      "mangled": "_stackAdjustThunk_0042bbf3",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0042bbfd",
+      "kind": "FUNCTION",
+      "name": "stackAdjustThunk_0042bbfd",
+      "mangled": "_stackAdjustThunk_0042bbfd",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0042bc07",
+      "kind": "FUNCTION",
+      "name": "stackAdjustThunk_0042bc07",
+      "mangled": "_stackAdjustThunk_0042bc07",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
       "match_pct": 100.0
     },
     {
@@ -2067,6 +2117,16 @@
       "file": "Client/App/v8datamodel/ScreenGui.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00490f10",
+      "kind": "FUNCTION",
+      "name": "callJumpThunk_00490f10",
+      "mangled": "_callJumpThunk_00490f10",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
       "match_pct": 100.0
     },
     {
@@ -3797,6 +3857,86 @@
       "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
       "orig_size": 61,
       "recomp_size": 61,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00557cf0",
+      "kind": "FUNCTION",
+      "name": "callJumpThunk_00557cf0",
+      "mangled": "_callJumpThunk_00557cf0",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00557e90",
+      "kind": "FUNCTION",
+      "name": "callJumpThunk_00557e90",
+      "mangled": "_callJumpThunk_00557e90",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00557fd0",
+      "kind": "FUNCTION",
+      "name": "callJumpThunk_00557fd0",
+      "mangled": "_callJumpThunk_00557fd0",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00558110",
+      "kind": "FUNCTION",
+      "name": "callJumpThunk_00558110",
+      "mangled": "_callJumpThunk_00558110",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00558250",
+      "kind": "FUNCTION",
+      "name": "callJumpThunk_00558250",
+      "mangled": "_callJumpThunk_00558250",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00558390",
+      "kind": "FUNCTION",
+      "name": "callJumpThunk_00558390",
+      "mangled": "_callJumpThunk_00558390",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005584d0",
+      "kind": "FUNCTION",
+      "name": "callJumpThunk_005584d0",
+      "mangled": "_callJumpThunk_005584d0",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00558640",
+      "kind": "FUNCTION",
+      "name": "callJumpThunk_00558640",
+      "mangled": "_callJumpThunk_00558640",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
       "match_pct": 100.0
     },
     {
@@ -18830,6 +18970,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0082ef50",
+      "kind": "FUNCTION",
+      "name": "CNested_0082ef50::get",
+      "mangled": "?get@CNested_0082ef50@@QAEDXZ",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0082ef60",
       "kind": "FUNCTION",
       "name": "getByte_0082ef60",
@@ -18947,6 +19097,36 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00849c55",
+      "kind": "FUNCTION",
+      "name": "subThunk_00849c55",
+      "mangled": "_subThunk_00849c55",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00849c60",
+      "kind": "FUNCTION",
+      "name": "subThunk_00849c60",
+      "mangled": "_subThunk_00849c60",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00849c6b",
+      "kind": "FUNCTION",
+      "name": "subThunk_00849c6b",
+      "mangled": "_subThunk_00849c6b",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -19510,6 +19690,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0088073a",
+      "kind": "FUNCTION",
+      "name": "subThunk_0088073a",
+      "mangled": "_subThunk_0088073a",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00880750",
       "kind": "FUNCTION",
       "name": "DeletingDtorSixVptr_00880750::destroy",
@@ -19657,6 +19847,16 @@
       "file": "Client/Base/msvc/tiny_accessors.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008871a3",
+      "kind": "FUNCTION",
+      "name": "subThunk_008871a3",
+      "mangled": "_subThunk_008871a3",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -19840,6 +20040,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008a0eef",
+      "kind": "FUNCTION",
+      "name": "subThunk_008a0eef",
+      "mangled": "_subThunk_008a0eef",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008a0efa",
       "kind": "FUNCTION",
       "name": "adjustorThunk_008a0efa",
@@ -19877,6 +20087,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008a0f1a",
+      "kind": "FUNCTION",
+      "name": "subThunk_008a0f1a",
+      "mangled": "_subThunk_008a0f1a",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -19957,6 +20177,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008a73de",
+      "kind": "FUNCTION",
+      "name": "subThunk_008a73de",
+      "mangled": "_subThunk_008a73de",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -20090,6 +20320,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008abc0d",
+      "kind": "FUNCTION",
+      "name": "subThunk_008abc0d",
+      "mangled": "_subThunk_008abc0d",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008abc18",
       "kind": "FUNCTION",
       "name": "adjustorThunk_008abc18",
@@ -20097,6 +20337,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008abc20",
+      "kind": "FUNCTION",
+      "name": "subThunk_008abc20",
+      "mangled": "_subThunk_008abc20",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -20120,6 +20370,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008abc3b",
+      "kind": "FUNCTION",
+      "name": "subThunk_008abc3b",
+      "mangled": "_subThunk_008abc3b",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008abc46",
       "kind": "FUNCTION",
       "name": "adjustorThunk_008abc46",
@@ -20137,6 +20397,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008abc56",
+      "kind": "FUNCTION",
+      "name": "subThunk_008abc56",
+      "mangled": "_subThunk_008abc56",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -21070,6 +21340,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0090fd96",
+      "kind": "FUNCTION",
+      "name": "subThunk_0090fd96",
+      "mangled": "_subThunk_0090fd96",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0090fda1",
       "kind": "FUNCTION",
       "name": "adjustorThunk_0090fda1",
@@ -21087,6 +21367,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0090fdb1",
+      "kind": "FUNCTION",
+      "name": "subThunk_0090fdb1",
+      "mangled": "_subThunk_0090fdb1",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -21110,6 +21400,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0090fdcc",
+      "kind": "FUNCTION",
+      "name": "subThunk_0090fdcc",
+      "mangled": "_subThunk_0090fdcc",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0090fdd7",
       "kind": "FUNCTION",
       "name": "adjustorThunk_0090fdd7",
@@ -21127,6 +21427,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0090fde7",
+      "kind": "FUNCTION",
+      "name": "subThunk_0090fde7",
+      "mangled": "_subThunk_0090fde7",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -21570,6 +21880,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00916a25",
+      "kind": "FUNCTION",
+      "name": "subThunk_00916a25",
+      "mangled": "_subThunk_00916a25",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00916a30",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00916a30",
@@ -21577,6 +21897,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00916a38",
+      "kind": "FUNCTION",
+      "name": "subThunk_00916a38",
+      "mangled": "_subThunk_00916a38",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -21600,6 +21930,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00916a53",
+      "kind": "FUNCTION",
+      "name": "subThunk_00916a53",
+      "mangled": "_subThunk_00916a53",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00916a5e",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00916a5e",
@@ -21617,6 +21957,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00916a6e",
+      "kind": "FUNCTION",
+      "name": "subThunk_00916a6e",
+      "mangled": "_subThunk_00916a6e",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -21680,6 +22030,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009199a7",
+      "kind": "FUNCTION",
+      "name": "subThunk_009199a7",
+      "mangled": "_subThunk_009199a7",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009199b2",
       "kind": "FUNCTION",
       "name": "adjustorThunk_009199b2",
@@ -21687,6 +22047,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009199ba",
+      "kind": "FUNCTION",
+      "name": "subThunk_009199ba",
+      "mangled": "_subThunk_009199ba",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -21720,6 +22090,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009199dd",
+      "kind": "FUNCTION",
+      "name": "subThunk_009199dd",
+      "mangled": "_subThunk_009199dd",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009199e8",
       "kind": "FUNCTION",
       "name": "adjustorThunk_009199e8",
@@ -21727,6 +22107,36 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009199f0",
+      "kind": "FUNCTION",
+      "name": "subThunk_009199f0",
+      "mangled": "_subThunk_009199f0",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009199fb",
+      "kind": "FUNCTION",
+      "name": "subThunk_009199fb",
+      "mangled": "_subThunk_009199fb",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00919a06",
+      "kind": "FUNCTION",
+      "name": "subThunk_00919a06",
+      "mangled": "_subThunk_00919a06",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -21747,6 +22157,26 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00919a21",
+      "kind": "FUNCTION",
+      "name": "subThunk_00919a21",
+      "mangled": "_subThunk_00919a21",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00919a2c",
+      "kind": "FUNCTION",
+      "name": "subThunk_00919a2c",
+      "mangled": "_subThunk_00919a2c",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -21937,6 +22367,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00923544",
+      "kind": "FUNCTION",
+      "name": "subThunk_00923544",
+      "mangled": "_subThunk_00923544",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -23600,6 +24040,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00965784",
+      "kind": "FUNCTION",
+      "name": "subThunk_00965784",
+      "mangled": "_subThunk_00965784",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0096578f",
       "kind": "FUNCTION",
       "name": "adjustorThunk_0096578f",
@@ -23630,6 +24080,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009657a7",
+      "kind": "FUNCTION",
+      "name": "subThunk_009657a7",
+      "mangled": "_subThunk_009657a7",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009657b2",
+      "kind": "FUNCTION",
+      "name": "subThunk_009657b2",
+      "mangled": "_subThunk_009657b2",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009657bd",
+      "kind": "FUNCTION",
+      "name": "subThunk_009657bd",
+      "mangled": "_subThunk_009657bd",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009657c8",
       "kind": "FUNCTION",
       "name": "adjustorThunk_009657c8",
@@ -23647,6 +24127,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009657d8",
+      "kind": "FUNCTION",
+      "name": "subThunk_009657d8",
+      "mangled": "_subThunk_009657d8",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -24130,6 +24620,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0098331d",
+      "kind": "FUNCTION",
+      "name": "subThunk_0098331d",
+      "mangled": "_subThunk_0098331d",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00983330",
       "kind": "FUNCTION",
       "name": "DeletingDtorSixVptr_00983330::destroy",
@@ -24557,6 +25057,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0099f9ef",
+      "kind": "FUNCTION",
+      "name": "subThunk_0099f9ef",
+      "mangled": "_subThunk_0099f9ef",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -25030,6 +25540,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009cb9d4",
+      "kind": "FUNCTION",
+      "name": "subThunk_009cb9d4",
+      "mangled": "_subThunk_009cb9d4",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009cb9e0",
       "kind": "FUNCTION",
       "name": "CCleanup_009cb9e0::destroy",
@@ -25090,6 +25610,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009d3d7a",
+      "kind": "FUNCTION",
+      "name": "subThunk_009d3d7a",
+      "mangled": "_subThunk_009d3d7a",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009d3d85",
       "kind": "FUNCTION",
       "name": "adjustorThunk_009d3d85",
@@ -25097,6 +25627,26 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009d3d8d",
+      "kind": "FUNCTION",
+      "name": "subThunk_009d3d8d",
+      "mangled": "_subThunk_009d3d8d",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009d3d98",
+      "kind": "FUNCTION",
+      "name": "subThunk_009d3d98",
+      "mangled": "_subThunk_009d3d98",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -25117,6 +25667,26 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009d3db3",
+      "kind": "FUNCTION",
+      "name": "subThunk_009d3db3",
+      "mangled": "_subThunk_009d3db3",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009d3dbe",
+      "kind": "FUNCTION",
+      "name": "subThunk_009d3dbe",
+      "mangled": "_subThunk_009d3dbe",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -25487,6 +26057,26 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009f85cb",
+      "kind": "FUNCTION",
+      "name": "subThunk_009f85cb",
+      "mangled": "_subThunk_009f85cb",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009f85d6",
+      "kind": "FUNCTION",
+      "name": "subThunk_009f85d6",
+      "mangled": "_subThunk_009f85d6",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -25950,6 +26540,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a025ae",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a025ae",
+      "mangled": "_subThunk_00a025ae",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a025b9",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a025b9",
@@ -25967,6 +26567,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a025c9",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a025c9",
+      "mangled": "_subThunk_00a025c9",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -26910,6 +27520,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a572a1",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a572a1",
+      "mangled": "_subThunk_00a572a1",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a572b0",
       "kind": "FUNCTION",
       "name": "DeletingDtorSixVptr_00a572b0::destroy",
@@ -27850,6 +28470,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a8b6a6",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a8b6a6",
+      "mangled": "_subThunk_00a8b6a6",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a8b6b1",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a8b6b1",
@@ -27877,6 +28507,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a8b6c9",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a8b6c9",
+      "mangled": "_subThunk_00a8b6c9",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -27990,6 +28630,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a8eeba",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a8eeba",
+      "mangled": "_subThunk_00a8eeba",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a8eec5",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a8eec5",
@@ -28007,6 +28657,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a8eed5",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a8eed5",
+      "mangled": "_subThunk_00a8eed5",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -28050,6 +28710,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a902d9",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a902d9",
+      "mangled": "_subThunk_00a902d9",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a902e4",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a902e4",
@@ -28067,6 +28737,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a902f4",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a902f4",
+      "mangled": "_subThunk_00a902f4",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -28200,6 +28880,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a95481",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a95481",
+      "mangled": "_subThunk_00a95481",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a9548c",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a9548c",
@@ -28227,6 +28917,26 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a954a4",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a954a4",
+      "mangled": "_subThunk_00a954a4",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a954af",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a954af",
+      "mangled": "_subThunk_00a954af",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -28260,6 +28970,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a954d2",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a954d2",
+      "mangled": "_subThunk_00a954d2",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a954dd",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a954dd",
+      "mangled": "_subThunk_00a954dd",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a954e8",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a954e8",
@@ -28277,6 +29007,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a954f8",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a954f8",
+      "mangled": "_subThunk_00a954f8",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -28310,6 +29050,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a9551b",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a9551b",
+      "mangled": "_subThunk_00a9551b",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a95526",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a95526",
+      "mangled": "_subThunk_00a95526",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a95531",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a95531",
@@ -28340,6 +29100,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a95549",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a95549",
+      "mangled": "_subThunk_00a95549",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a95554",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a95554",
+      "mangled": "_subThunk_00a95554",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a9555f",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a9555f",
@@ -28350,6 +29130,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a95567",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a95567",
+      "mangled": "_subThunk_00a95567",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a95572",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a95572",
@@ -28357,6 +29147,26 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a9557a",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a9557a",
+      "mangled": "_subThunk_00a9557a",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a95585",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a95585",
+      "mangled": "_subThunk_00a95585",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -28410,6 +29220,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a955b8",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a955b8",
+      "mangled": "_subThunk_00a955b8",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a955c3",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a955c3",
+      "mangled": "_subThunk_00a955c3",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a955ce",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a955ce",
+      "mangled": "_subThunk_00a955ce",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a955d9",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a955d9",
@@ -28440,6 +29280,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a955f1",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a955f1",
+      "mangled": "_subThunk_00a955f1",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a955fc",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a955fc",
+      "mangled": "_subThunk_00a955fc",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a95607",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a95607",
@@ -28447,6 +29307,26 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a9560f",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a9560f",
+      "mangled": "_subThunk_00a9560f",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a9561a",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a9561a",
+      "mangled": "_subThunk_00a9561a",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -28477,6 +29357,26 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a9563d",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a9563d",
+      "mangled": "_subThunk_00a9563d",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a95648",
+      "kind": "FUNCTION",
+      "name": "subThunk_00a95648",
+      "mangled": "_subThunk_00a95648",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -28690,6 +29590,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00aa2bde",
+      "kind": "FUNCTION",
+      "name": "subThunk_00aa2bde",
+      "mangled": "_subThunk_00aa2bde",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00aa2be9",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00aa2be9",
@@ -28710,6 +29620,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00aa2bf9",
+      "kind": "FUNCTION",
+      "name": "subThunk_00aa2bf9",
+      "mangled": "_subThunk_00aa2bf9",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00aa2c04",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00aa2c04",
@@ -28727,6 +29647,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aa2c14",
+      "kind": "FUNCTION",
+      "name": "subThunk_00aa2c14",
+      "mangled": "_subThunk_00aa2c14",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -28820,6 +29750,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00aa5f4a",
+      "kind": "FUNCTION",
+      "name": "subThunk_00aa5f4a",
+      "mangled": "_subThunk_00aa5f4a",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00aa5f55",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00aa5f55",
@@ -28827,6 +29767,26 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aa5f5d",
+      "kind": "FUNCTION",
+      "name": "subThunk_00aa5f5d",
+      "mangled": "_subThunk_00aa5f5d",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aa5f68",
+      "kind": "FUNCTION",
+      "name": "subThunk_00aa5f68",
+      "mangled": "_subThunk_00aa5f68",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -28847,6 +29807,26 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aa5f83",
+      "kind": "FUNCTION",
+      "name": "subThunk_00aa5f83",
+      "mangled": "_subThunk_00aa5f83",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aa5f8e",
+      "kind": "FUNCTION",
+      "name": "subThunk_00aa5f8e",
+      "mangled": "_subThunk_00aa5f8e",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -28960,6 +29940,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00aac4d6",
+      "kind": "FUNCTION",
+      "name": "subThunk_00aac4d6",
+      "mangled": "_subThunk_00aac4d6",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00aac4e1",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00aac4e1",
@@ -28987,6 +29977,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aac4f9",
+      "kind": "FUNCTION",
+      "name": "subThunk_00aac4f9",
+      "mangled": "_subThunk_00aac4f9",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -29410,6 +30410,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00ac7fd2",
+      "kind": "FUNCTION",
+      "name": "subThunk_00ac7fd2",
+      "mangled": "_subThunk_00ac7fd2",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00ac7fdd",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00ac7fdd",
@@ -29427,6 +30437,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ac7fed",
+      "kind": "FUNCTION",
+      "name": "subThunk_00ac7fed",
+      "mangled": "_subThunk_00ac7fed",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -29967,6 +30987,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ae41a9",
+      "kind": "FUNCTION",
+      "name": "subThunk_00ae41a9",
+      "mangled": "_subThunk_00ae41a9",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -31637,6 +32667,16 @@
       "file": "Client/App/v8kernel/Motor6DJoint.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ba3be0",
+      "kind": "FUNCTION",
+      "name": "CPred_00ba3be0::call",
+      "mangled": "?call@CPred_00ba3be0@@QAE_NH@Z",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
       "match_pct": 100.0
     },
     {
@@ -33420,6 +34460,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00ca3c02",
+      "kind": "FUNCTION",
+      "name": "subThunk_00ca3c02",
+      "mangled": "_subThunk_00ca3c02",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00ca3c0d",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00ca3c0d",
@@ -33437,6 +34487,26 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ca3c1d",
+      "kind": "FUNCTION",
+      "name": "subThunk_00ca3c1d",
+      "mangled": "_subThunk_00ca3c1d",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ca3c28",
+      "kind": "FUNCTION",
+      "name": "subThunk_00ca3c28",
+      "mangled": "_subThunk_00ca3c28",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
@@ -33500,6 +34570,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00cb1e96",
+      "kind": "FUNCTION",
+      "name": "subThunk_00cb1e96",
+      "mangled": "_subThunk_00cb1e96",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00cb1ea1",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00cb1ea1",
@@ -33517,6 +34597,26 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cb1eb1",
+      "kind": "FUNCTION",
+      "name": "subThunk_00cb1eb1",
+      "mangled": "_subThunk_00cb1eb1",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cb1ebc",
+      "kind": "FUNCTION",
+      "name": "subThunk_00cb1ebc",
+      "mangled": "_subThunk_00cb1ebc",
+      "file": "Client/Base/msvc/misc_thunks3.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
       "match_pct": 100.0
     },
     {
