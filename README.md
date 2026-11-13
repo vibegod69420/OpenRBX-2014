@@ -23,6 +23,21 @@
 
 ---
 
+## Local Byte-Matching Setup
+
+Everything below runs on the local Windows machine; no worker, Wine or GPU is involved.
+
+```bash
+python tools/provision_local.py --keep-iso   # one-time: MSVC 11.0 (cl 17.00.50727) into toolchain/msvc11
+python tools/next_target.py 8                # pick the next unimplemented function
+python tools/func_context.py 0x004f6040      # disassembly, RTTI vtables, REA/kuna pseudocode
+python tools/verify_tu.py Client/App/v8kernel/ManualWeldJoint.cpp 0x004f6040
+python tools/update_progress.py --commit "Match ..." --push
+```
+
+`tools/verify_tu.py` prefers the project-local `toolchain/msvc11` and reports the
+compiler it used; only `17.00.50727` is evidence for the 2014 binary.
+
 ## Tooling & Autonomous 24/7 Harness
 
 - **[`CLAUDE.md`](CLAUDE.md) & [`AGENTS.md`](AGENTS.md)**: Complete MSVC 11.0 x86 byte-matching playbook adapted from `Asphaltian/OpenRBX` for the 2014 engine.
@@ -30,5 +45,6 @@
 - **[`tools/func_context.py`](tools/func_context.py)**: Generates a complete Pre-Flight Function Context Card (exact byte budget, x86 disassembly, RTTI vtable slots, referenced `.rdata` strings/floats, and 2007 `OpenRBX` reference hints).
 - **[`tools/verify_tu.py`](tools/verify_tu.py)**: Sub-second (`~0.4s`) single-translation-unit MSVC `cl.exe /c` COFF `.obj` relocation-invariant byte comparator against `RobloxStudioBeta.exe`.
 - **[`tools/update_progress.py`](tools/update_progress.py)**: Recomputes repo-wide accuracy metrics, updates `ROBLOXSTUDIOPROGRESS.SVG`, `ROBLOXSTUDIOPROGRESS.json`, and `docs/index.html`, and commits/pushes to GitHub Pages.
-- **[`tools/autonomous_harness.py`](tools/autonomous_harness.py)**: Immortal 24/7 supervisor daemon running on AWS EC2 (`i-023705d972a85fb82`, Ubuntu 24.04), wired to the `Qwen3.8` base model server on Dual Tesla T4 GPUs with automatic tunnel discovery, compiler-in-the-loop retries, and continuous GitHub Pages deployment.
-- **[`tools/provision_linux.sh`](tools/provision_linux.sh)**: Rebuilds the Linux worker from scratch: extracts MSVC 11.0 (`cl 17.00.50727`) from the VS2012 RTD media and runs it under Wine through [`tools/msvc110-cl`](tools/msvc110-cl). [`tools/openrbx-harness.service`](tools/openrbx-harness.service) supervises the daemon with systemd.
+- **[`tools/provision_local.py`](tools/provision_local.py)**: Extracts the VS2012 x86 compiler, headers and CRT libraries from the retail DVD image into `toolchain/msvc11` with `msiexec /a` (no install, no admin rights).
+- **[`tools/autonomous_harness.py`](tools/autonomous_harness.py)**: Optional unattended supervisor (originally run on an EC2 worker) that loops target selection, generation and verification. It is not needed for interactive work.
+- **[`tools/provision_linux.sh`](tools/provision_linux.sh)**: Legacy Linux worker rebuild: extracts the same VS2012 media and runs `cl.exe` under Wine through [`tools/msvc110-cl`](tools/msvc110-cl).

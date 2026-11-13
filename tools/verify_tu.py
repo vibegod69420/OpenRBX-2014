@@ -118,6 +118,8 @@ def parse_annotations_in_cpp(cpp_path: Path) -> list[tuple[int, str, str]]:
 TARGET_CL_VERSION = "17.00.50727"  # MSVC 11.0, VS2012 x86 (target: 0.164.0.50577)
 # Windows names the binary `cl.exe`; under Wine (Linux worker) the wrapper is `cl`.
 CL_BIN = "cl.exe" if os.name == "nt" else "cl"
+# Local checkout of the VS2012 x86 toolchain (see tools/provision_local.py).
+LOCAL_MSVC_DIR = ROOT / "toolchain" / "msvc11"
 _CL_VERSION_CACHE = None
 
 
@@ -164,6 +166,16 @@ def get_msvc_env() -> dict[str, str]:
                 _MSVC_ENV_CACHE = env
                 return _MSVC_ENV_CACHE
         _MSVC_ENV_CACHE = os.environ.copy()
+        return _MSVC_ENV_CACHE
+
+    # Project-local VS2012 toolchain wins: it is the exact compiler the target was built with.
+    local_cl = LOCAL_MSVC_DIR / "bin" / CL_BIN
+    if local_cl.exists():
+        env = os.environ.copy()
+        env["PATH"] = str(LOCAL_MSVC_DIR / "bin") + os.pathsep + env.get("PATH", "")
+        env["INCLUDE"] = str(LOCAL_MSVC_DIR / "include")
+        env["LIB"] = str(LOCAL_MSVC_DIR / "lib")
+        _MSVC_ENV_CACHE = env
         return _MSVC_ENV_CACHE
 
     if subprocess.run("where cl.exe", shell=True, capture_output=True).returncode == 0:

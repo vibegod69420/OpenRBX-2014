@@ -1,9 +1,0 @@
-#include "v8datamodel/BackpackItem.h"
-
-#include "decomp.h"
-
-namespace RBX {
-
-// AUTO-GENERATED IMPLEMENTATIONS
-
-} // namespace RBX

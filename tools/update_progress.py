@@ -287,9 +287,9 @@ def write_dashboard_html(summary: dict):
           {summary['fragment_entries']:,} fragments + {summary['compiler_thunk_entries']:,} thunks + {summary['seh_scaffold_entries']:,} SEH frames excluded</div>
       </div>
       <div class="card">
-        <div class="label">Agent Harness Status</div>
-        <div class="val" style="color: var(--green);">RUNNING 24/7</div>
-        <div class="hint">AWS EC2 &bull; deterministic pattern synthesis (no external GPU)</div>
+        <div class="label">Verification Toolchain</div>
+        <div class="val" style="color: var(--green);">{summary['compiler_version']}</div>
+        <div class="hint">{'MSVC 11.0 x86 (target toolchain)' if summary['compiler_matches_target'] else 'NOT the target toolchain &mdash; matches are not evidence'}</div>
       </div>
     </div>
 
