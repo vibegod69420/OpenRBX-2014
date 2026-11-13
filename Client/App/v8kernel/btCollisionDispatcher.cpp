@@ -5,3 +5,9 @@ btPersistentManifold* btCollisionDispatcher::getManifoldByIndexInternal(int inde
 {
 	return m_manifoldsPtr[index];
 }
+
+// FUNCTION: ROBLOXSTUDIO 0x004956c0
+int btCollisionDispatcher::getField0C() const
+{
+	return field0C;
+}

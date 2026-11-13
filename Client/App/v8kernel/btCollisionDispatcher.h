@@ -7,8 +7,11 @@ class btCollisionDispatcher
 {
 public:
 	btPersistentManifold* getManifoldByIndexInternal(int index) const;
+	int getField0C() const;
 
 private:
-	char _pad[0x14];
+	char _pad[0x0c];
+	int field0C;
+	char _pad10[0x04];
 	btPersistentManifold** m_manifoldsPtr;
 };

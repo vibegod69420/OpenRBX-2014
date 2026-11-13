@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 18:49:25 UTC",
+  "updated_at": "2026-11-13 18:50:50 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 0.6193,
-  "implemented_total": 58,
-  "function_annotations": 58,
+  "matchable_coverage_pct": 0.7048,
+  "implemented_total": 66,
+  "function_annotations": 66,
   "stub_annotations": 0,
-  "perfect_100_count": 58,
+  "perfect_100_count": 66,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.143,
-  "overall_byte_coverage_pct": 0.0113,
+  "overall_function_coverage_pct": 0.1627,
+  "overall_byte_coverage_pct": 0.0116,
   "functions": [
     {
       "address": "0x004122e0",
@@ -87,6 +87,16 @@
       "file": "Client/App/v8datamodel/FlyweightService.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x004956c0",
+      "kind": "FUNCTION",
+      "name": "btCollisionDispatcher::getField0C",
+      "mangled": "?getField0C@btCollisionDispatcher@@QBEHXZ",
+      "file": "Client/App/v8kernel/btCollisionDispatcher.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     },
     {
@@ -250,6 +260,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00595fa0",
+      "kind": "FUNCTION",
+      "name": "btTriangleIndexVertexArray::getField24",
+      "mangled": "?getField24@btTriangleIndexVertexArray@@QBEHXZ",
+      "file": "Client/App/v8kernel/btTriangleIndexVertexArray.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00596500",
       "kind": "FUNCTION",
       "name": "btSphereShape::getName",
@@ -340,6 +360,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x005e1160",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::DeviceD3D9::getField40",
+      "mangled": "?getField40@DeviceD3D9@Graphics@RBX@@QBEHXZ",
+      "file": "Client/Rendering/GfxCore/D3D9/DeviceD3D9.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x006066d0",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::DeviceContextGL::setField14",
@@ -347,6 +377,36 @@
       "file": "Client/Rendering/GfxCore/GL/DeviceContextGL.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006077e0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::DeviceGL::getField34",
+      "mangled": "?getField34@DeviceGL@Graphics@RBX@@QBEHXZ",
+      "file": "Client/Rendering/GfxCore/GL/DeviceGL.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0060bbb0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ShaderProgramGL::getField60",
+      "mangled": "?getField60@ShaderProgramGL@Graphics@RBX@@QBEHXZ",
+      "file": "Client/Rendering/GfxCore/GL/ShaderProgramGL.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0060bbc0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ShaderProgramGL::getField64",
+      "mangled": "?getField64@ShaderProgramGL@Graphics@RBX@@QBEHXZ",
+      "file": "Client/Rendering/GfxCore/GL/ShaderProgramGL.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     },
     {
@@ -477,6 +537,26 @@
       "file": "Client/Base/boost/io/too_many_args.cpp",
       "orig_size": 27,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0087bad0",
+      "kind": "FUNCTION",
+      "name": "PathInterpolatedCFrame::getField41",
+      "mangled": "?getField41@PathInterpolatedCFrame@@QBE_NXZ",
+      "file": "Client/App/v8datamodel/PathInterpolatedCFrame.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00892dc0",
+      "kind": "FUNCTION",
+      "name": "PathInterpolatedCFrame::getField40",
+      "mangled": "?getField40@PathInterpolatedCFrame@@QBE_NXZ",
+      "file": "Client/App/v8datamodel/PathInterpolatedCFrame.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0
     },
     {
