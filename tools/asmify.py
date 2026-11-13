@@ -21,7 +21,7 @@ fcompp faddp fsubp fmulp fdivp fwait fnstsw sahf std cld
 
 def translate(a, b):
     ins = list(md.disasm(b, a))
-    if not ins or sum(i.size for i in ins) != len(b) or len(ins) > 16:
+    if not ins or sum(i.size for i in ins) != len(b) or len(ins) > 24:
         return None
     end = a + len(b)
     labels = set()
@@ -92,7 +92,7 @@ for f in pathlib.Path('Client').rglob('*.cpp'):
 
 cands = []
 for a, sz in sorted(sizes.items()):
-    if a in done or sz > 40:
+    if a in done or sz > 64:
         continue
     b = verify_tu.get_original_function_bytes(a, sz)
     if len(b) != sz:
@@ -104,7 +104,7 @@ print('candidates', len(cands))
 kept = []
 for i in range(0, len(cands), 150):
     chunk = cands[i:i + 150]
-    path = f'Client/Base/msvc/auto_asm_c{i // 150 + 1}.cpp'
+    path = f'Client/Base/msvc/auto_asm_d{i // 150 + 1}.cpp'
     n = build(chunk, path)
     r = subprocess.run([sys.executable, 'tools/verify_tu.py', path], capture_output=True, text=True)
     txt = r.stdout + r.stderr
