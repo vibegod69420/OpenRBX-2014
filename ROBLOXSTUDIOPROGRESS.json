@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 18:29:59 UTC",
+  "updated_at": "2026-11-13 18:32:47 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,15 +10,55 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 0.2563,
-  "implemented_total": 24,
-  "function_annotations": 24,
+  "matchable_coverage_pct": 0.3737,
+  "implemented_total": 35,
+  "function_annotations": 35,
   "stub_annotations": 0,
-  "perfect_100_count": 24,
+  "perfect_100_count": 35,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.0592,
-  "overall_byte_coverage_pct": 0.0066,
+  "overall_function_coverage_pct": 0.0863,
+  "overall_byte_coverage_pct": 0.0076,
   "functions": [
+    {
+      "address": "0x004122e0",
+      "kind": "FUNCTION",
+      "name": "rbx::bad_placement_any_cast::what",
+      "mangled": "?what@bad_placement_any_cast@rbx@@UBEPBDXZ",
+      "file": "Client/Base/rbx/bad_placement_any_cast.cpp",
+      "orig_size": 22,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00421de0",
+      "kind": "FUNCTION",
+      "name": "boost::bad_weak_ptr::what",
+      "mangled": "?what@bad_weak_ptr@boost@@UBEPBDXZ",
+      "file": "Client/Base/boost/bad_weak_ptr.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00427540",
+      "kind": "FUNCTION",
+      "name": "std::_Generic_error_category::name",
+      "mangled": "?name@_Generic_error_category@std@@UBEPBDXZ",
+      "file": "Client/Base/msvc/_Generic_error_category.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00427550",
+      "kind": "FUNCTION",
+      "name": "std::_Iostream_error_category::name",
+      "mangled": "?name@_Iostream_error_category@std@@UBEPBDXZ",
+      "file": "Client/Base/msvc/_Iostream_error_category.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
     {
       "address": "0x004f6040",
       "kind": "FUNCTION",
@@ -45,6 +85,16 @@
       "name": "RBX::WeldJoint::getJointType",
       "mangled": "?getJointType@WeldJoint@RBX@@UBEHXZ",
       "file": "Client/App/v8kernel/WeldJoint.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005559c0",
+      "kind": "FUNCTION",
+      "name": "std::_System_error_category::name",
+      "mangled": "?name@_System_error_category@std@@UBEPBDXZ",
+      "file": "Client/Base/msvc/_System_error_category.cpp",
       "orig_size": 6,
       "recomp_size": 6,
       "match_pct": 100.0
@@ -156,6 +206,66 @@
       "mangled": "?getName@btTriangleMeshShape@@UBEPBDXZ",
       "file": "Client/App/v8kernel/btTriangleMeshShape.cpp",
       "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006b89b0",
+      "kind": "FUNCTION",
+      "name": "name",
+      "mangled": "?name@codecvt_error_cat@?A0x938a7265@@UBEPBDXZ",
+      "file": "Client/Base/msvc/codecvt_error_cat.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00860c10",
+      "kind": "FUNCTION",
+      "name": "boost::io::bad_format_string::what",
+      "mangled": "?what@bad_format_string@io@boost@@UBEPBDXZ",
+      "file": "Client/Base/boost/io/bad_format_string.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00860c20",
+      "kind": "FUNCTION",
+      "name": "boost::bad_lexical_cast::what",
+      "mangled": "?what@bad_lexical_cast@boost@@UBEPBDXZ",
+      "file": "Client/Base/boost/bad_lexical_cast.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00860c30",
+      "kind": "FUNCTION",
+      "name": "boost::io::format_error::what",
+      "mangled": "?what@format_error@io@boost@@UBEPBDXZ",
+      "file": "Client/Base/boost/io/format_error.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00860c40",
+      "kind": "FUNCTION",
+      "name": "boost::io::too_few_args::what",
+      "mangled": "?what@too_few_args@io@boost@@UBEPBDXZ",
+      "file": "Client/Base/boost/io/too_few_args.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00860c50",
+      "kind": "FUNCTION",
+      "name": "boost::io::too_many_args::what",
+      "mangled": "?what@too_many_args@io@boost@@UBEPBDXZ",
+      "file": "Client/Base/boost/io/too_many_args.cpp",
+      "orig_size": 27,
       "recomp_size": 6,
       "match_pct": 100.0
     },
