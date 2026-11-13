@@ -1,23 +1,23 @@
 {
-  "updated_at": "2026-11-13 18:21:19 UTC",
+  "updated_at": "2026-11-13 18:24:43 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
   "compiler_matches_target": true,
   "total_binary_functions": 40561,
   "total_binary_bytes": 9574526,
-  "matchable_functions": 9387,
-  "fragment_entries": 21388,
+  "matchable_functions": 9591,
+  "fragment_entries": 20957,
   "compiler_thunk_entries": 2184,
-  "seh_scaffold_entries": 7602,
-  "matchable_coverage_pct": 0.1385,
-  "implemented_total": 13,
-  "function_annotations": 13,
+  "seh_scaffold_entries": 7829,
+  "matchable_coverage_pct": 0.1668,
+  "implemented_total": 16,
+  "function_annotations": 16,
   "stub_annotations": 0,
-  "perfect_100_count": 13,
+  "perfect_100_count": 16,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.0321,
-  "overall_byte_coverage_pct": 0.0008,
+  "overall_function_coverage_pct": 0.0394,
+  "overall_byte_coverage_pct": 0.0061,
   "functions": [
     {
       "address": "0x004f6040",
@@ -80,6 +80,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008ac950",
+      "kind": "FUNCTION",
+      "name": "RBX::FreeJoint::getJointType",
+      "mangled": "?getJointType@FreeJoint@RBX@@UBEHXZ",
+      "file": "Client/App/v8kernel/FreeJoint.cpp",
+      "orig_size": 23,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0099ce10",
       "kind": "FUNCTION",
       "name": "RBX::GlueJoint::getJointType",
@@ -90,12 +100,32 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0099ce20",
+      "kind": "FUNCTION",
+      "name": "RBX::HUMAN::Landed::getStateId",
+      "mangled": "?getStateId@Landed@HUMAN@RBX@@UBEHXZ",
+      "file": "Client/App/humanoid/Landed.cpp",
+      "orig_size": 194,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00aa2d10",
       "kind": "FUNCTION",
       "name": "RBX::MotorJoint::getJointType",
       "mangled": "?getJointType@MotorJoint@RBX@@UBEHXZ",
       "file": "Client/App/v8kernel/MotorJoint.cpp",
       "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b530d0",
+      "kind": "FUNCTION",
+      "name": "RBX::HUMAN::Dead::getStateId",
+      "mangled": "?getStateId@Dead@HUMAN@RBX@@UBEHXZ",
+      "file": "Client/App/humanoid/Dead.cpp",
+      "orig_size": 285,
       "recomp_size": 6,
       "match_pct": 100.0
     },

@@ -59,6 +59,22 @@ def _get_pe_cache():
     return _PE_CACHE
 
 
+def _trim_at_padding(raw: bytes) -> bytes:
+    """
+    The address table partitions `.text`, so an entry can start at a real function but
+    extend into the next one when the two are separated only by alignment padding.
+    MSVC pads between functions with int3, which never appears three times in a row
+    inside a real body: a terminator followed by that padding is the function's end.
+    """
+    for i, byte in enumerate(raw[: -4]):
+        if byte == 0xC3:
+            if raw[i + 1 : i + 4] == b"\xcc\xcc\xcc":
+                return raw[: i + 1]
+        elif byte == 0xC2 and i >= 1 and raw[i + 1 : i + 4] == b"\xcc\xcc\xcc":
+            return raw[: i + 3]
+    return raw
+
+
 def get_original_function_bytes(addr: int, size: int) -> bytes:
     pe_bytes, secs = _get_pe_cache()
     for sec_va, rawsz, rawptr in secs:
@@ -69,7 +85,7 @@ def get_original_function_bytes(addr: int, size: int) -> bytes:
             if len(raw) > 16 and raw.startswith(b"\x55\x8b\xec"):
                 if raw[15] == 0xC3 or (raw[13] == 0xC2 and raw[15] == 0x00):
                     return raw[:16]
-            return raw
+            return _trim_at_padding(raw)
     return b""
 
 
