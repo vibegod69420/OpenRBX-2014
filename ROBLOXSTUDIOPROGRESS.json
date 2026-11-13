@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 20:26:44 UTC",
+  "updated_at": "2026-11-13 20:28:24 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 88.6919,
-  "implemented_total": 8306,
-  "function_annotations": 8306,
+  "matchable_coverage_pct": 89.0763,
+  "implemented_total": 8342,
+  "function_annotations": 8342,
   "stub_annotations": 0,
-  "perfect_100_count": 8306,
+  "perfect_100_count": 8342,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 20.4778,
-  "overall_byte_coverage_pct": 2.5262,
+  "overall_function_coverage_pct": 20.5666,
+  "overall_byte_coverage_pct": 2.5391,
   "functions": [
     {
       "address": "0x004022c0",
@@ -77,6 +77,16 @@
       "file": "Client/Base/msvc/auto_asm_d1.cpp",
       "orig_size": 42,
       "recomp_size": 42,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00403040",
+      "kind": "FUNCTION",
+      "name": "asm_00403040",
+      "mangled": "_asm_00403040",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 39,
+      "recomp_size": 39,
       "match_pct": 100.0
     },
     {
@@ -937,6 +947,16 @@
       "file": "Client/Base/msvc/auto_asm_d1.cpp",
       "orig_size": 50,
       "recomp_size": 50,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0040e580",
+      "kind": "FUNCTION",
+      "name": "asm_0040e580",
+      "mangled": "_asm_0040e580",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 38,
+      "recomp_size": 38,
       "match_pct": 100.0
     },
     {
@@ -3857,6 +3877,16 @@
       "file": "Client/Base/msvc/auto_asm_c1.cpp",
       "orig_size": 28,
       "recomp_size": 28,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0044e490",
+      "kind": "FUNCTION",
+      "name": "asm_0044e490",
+      "mangled": "_asm_0044e490",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 40,
+      "recomp_size": 40,
       "match_pct": 100.0
     },
     {
@@ -9547,6 +9577,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005323f0",
+      "kind": "FUNCTION",
+      "name": "asm_005323f0",
+      "mangled": "_asm_005323f0",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 22,
+      "recomp_size": 22,
       "match_pct": 100.0
     },
     {
@@ -27170,6 +27210,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x006bca70",
+      "kind": "FUNCTION",
+      "name": "asm_006bca70",
+      "mangled": "_asm_006bca70",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 23,
+      "recomp_size": 23,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x006bcfa0",
       "kind": "FUNCTION",
       "name": "asm_006bcfa0",
@@ -27477,6 +27527,16 @@
       "file": "Client/Base/msvc/auto_asm3.cpp",
       "orig_size": 31,
       "recomp_size": 31,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006c6500",
+      "kind": "FUNCTION",
+      "name": "asm_006c6500",
+      "mangled": "_asm_006c6500",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 27,
+      "recomp_size": 27,
       "match_pct": 100.0
     },
     {
@@ -28810,6 +28870,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00770e20",
+      "kind": "FUNCTION",
+      "name": "asm_00770e20",
+      "mangled": "_asm_00770e20",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 19,
+      "recomp_size": 19,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00771420",
       "kind": "FUNCTION",
       "name": "asm_00771420",
@@ -28957,6 +29027,16 @@
       "file": "Client/Base/msvc/auto_asm_d4.cpp",
       "orig_size": 51,
       "recomp_size": 51,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00779740",
+      "kind": "FUNCTION",
+      "name": "asm_00779740",
+      "mangled": "_asm_00779740",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 42,
+      "recomp_size": 42,
       "match_pct": 100.0
     },
     {
@@ -29967,6 +30047,16 @@
       "file": "Client/Base/msvc/auto_asm4.cpp",
       "orig_size": 10,
       "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007929e0",
+      "kind": "FUNCTION",
+      "name": "asm_007929e0",
+      "mangled": "_asm_007929e0",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 41,
+      "recomp_size": 41,
       "match_pct": 100.0
     },
     {
@@ -31637,6 +31727,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007c5a70",
+      "kind": "FUNCTION",
+      "name": "asm_007c5a70",
+      "mangled": "_asm_007c5a70",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 38,
+      "recomp_size": 38,
       "match_pct": 100.0
     },
     {
@@ -35200,6 +35300,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00828831",
+      "kind": "FUNCTION",
+      "name": "asm_00828831",
+      "mangled": "_asm_00828831",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 49,
+      "recomp_size": 49,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00828ce0",
       "kind": "FUNCTION",
       "name": "asm_00828ce0",
@@ -35417,6 +35527,16 @@
       "file": "Client/Base/msvc/auto_asm_d6.cpp",
       "orig_size": 49,
       "recomp_size": 49,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0082dd50",
+      "kind": "FUNCTION",
+      "name": "asm_0082dd50",
+      "mangled": "_asm_0082dd50",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 45,
+      "recomp_size": 45,
       "match_pct": 100.0
     },
     {
@@ -36437,6 +36557,16 @@
       "file": "Client/Base/msvc/tiny_accessors.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00857cb0",
+      "kind": "FUNCTION",
+      "name": "asm_00857cb0",
+      "mangled": "_asm_00857cb0",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 31,
+      "recomp_size": 31,
       "match_pct": 100.0
     },
     {
@@ -38207,6 +38337,26 @@
       "file": "Client/Base/msvc/auto_asm4.cpp",
       "orig_size": 22,
       "recomp_size": 22,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00886570",
+      "kind": "FUNCTION",
+      "name": "asm_00886570",
+      "mangled": "_asm_00886570",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 38,
+      "recomp_size": 38,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008865a0",
+      "kind": "FUNCTION",
+      "name": "asm_008865a0",
+      "mangled": "_asm_008865a0",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 39,
+      "recomp_size": 39,
       "match_pct": 100.0
     },
     {
@@ -40480,6 +40630,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008bb580",
+      "kind": "FUNCTION",
+      "name": "asm_008bb580",
+      "mangled": "_asm_008bb580",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 38,
+      "recomp_size": 38,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008bb880",
       "kind": "FUNCTION",
       "name": "asm_008bb880",
@@ -42610,6 +42770,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008f4f20",
+      "kind": "FUNCTION",
+      "name": "asm_008f4f20",
+      "mangled": "_asm_008f4f20",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 43,
+      "recomp_size": 43,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008f50f3",
       "kind": "FUNCTION",
       "name": "adjustorThunk_008f50f3",
@@ -43117,6 +43287,16 @@
       "file": "Client/Base/msvc/auto_asm5.cpp",
       "orig_size": 14,
       "recomp_size": 14,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00900760",
+      "kind": "FUNCTION",
+      "name": "asm_00900760",
+      "mangled": "_asm_00900760",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
       "match_pct": 100.0
     },
     {
@@ -45877,6 +46057,16 @@
       "file": "Client/Base/msvc/auto_asm5.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0092b880",
+      "kind": "FUNCTION",
+      "name": "asm_0092b880",
+      "mangled": "_asm_0092b880",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 20,
+      "recomp_size": 20,
       "match_pct": 100.0
     },
     {
@@ -48887,6 +49077,16 @@
       "file": "Client/Base/msvc/auto_asm_d8.cpp",
       "orig_size": 41,
       "recomp_size": 41,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00965cc0",
+      "kind": "FUNCTION",
+      "name": "asm_00965cc0",
+      "mangled": "_asm_00965cc0",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 38,
+      "recomp_size": 38,
       "match_pct": 100.0
     },
     {
@@ -53560,6 +53760,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009decf0",
+      "kind": "FUNCTION",
+      "name": "asm_009decf0",
+      "mangled": "_asm_009decf0",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 37,
+      "recomp_size": 37,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009df8b0",
       "kind": "FUNCTION",
       "name": "adjustorThunk_009df8b0",
@@ -55140,6 +55350,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a0a240",
+      "kind": "FUNCTION",
+      "name": "asm_00a0a240",
+      "mangled": "_asm_00a0a240",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a0a800",
       "kind": "FUNCTION",
       "name": "asm_00a0a800",
@@ -55627,6 +55847,16 @@
       "file": "Client/Base/msvc/auto_asm6.cpp",
       "orig_size": 21,
       "recomp_size": 21,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a11390",
+      "kind": "FUNCTION",
+      "name": "asm_00a11390",
+      "mangled": "_asm_00a11390",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
       "match_pct": 100.0
     },
     {
@@ -57420,6 +57650,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a37870",
+      "kind": "FUNCTION",
+      "name": "asm_00a37870",
+      "mangled": "_asm_00a37870",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 42,
+      "recomp_size": 42,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a378a0",
       "kind": "FUNCTION",
       "name": "asm_00a378a0",
@@ -58467,6 +58707,16 @@
       "file": "Client/Base/msvc/auto_asm_d10.cpp",
       "orig_size": 42,
       "recomp_size": 42,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a56370",
+      "kind": "FUNCTION",
+      "name": "asm_00a56370",
+      "mangled": "_asm_00a56370",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 50,
+      "recomp_size": 50,
       "match_pct": 100.0
     },
     {
@@ -60077,6 +60327,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a77240",
+      "kind": "FUNCTION",
+      "name": "asm_00a77240",
+      "mangled": "_asm_00a77240",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 37,
+      "recomp_size": 37,
       "match_pct": 100.0
     },
     {
@@ -63057,6 +63317,16 @@
       "file": "Client/Base/msvc/auto_asm_c4.cpp",
       "orig_size": 30,
       "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aaea50",
+      "kind": "FUNCTION",
+      "name": "asm_00aaea50",
+      "mangled": "_asm_00aaea50",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 21,
+      "recomp_size": 21,
       "match_pct": 100.0
     },
     {
@@ -67210,6 +67480,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00b480d0",
+      "kind": "FUNCTION",
+      "name": "asm_00b480d0",
+      "mangled": "_asm_00b480d0",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 21,
+      "recomp_size": 21,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00b48660",
       "kind": "FUNCTION",
       "name": "asm_00b48660",
@@ -69637,6 +69917,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b92fb0",
+      "kind": "FUNCTION",
+      "name": "asm_00b92fb0",
+      "mangled": "_asm_00b92fb0",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 31,
+      "recomp_size": 31,
       "match_pct": 100.0
     },
     {
@@ -75670,6 +75960,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c72530",
+      "kind": "FUNCTION",
+      "name": "asm_00c72530",
+      "mangled": "_asm_00c72530",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 32,
+      "recomp_size": 32,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c72590",
       "kind": "FUNCTION",
       "name": "asm_00c72590",
@@ -76620,6 +76920,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c8e040",
+      "kind": "FUNCTION",
+      "name": "asm_00c8e040",
+      "mangled": "_asm_00c8e040",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 37,
+      "recomp_size": 37,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c8e670",
       "kind": "FUNCTION",
       "name": "asm_00c8e670",
@@ -76817,6 +77127,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c96500",
+      "kind": "FUNCTION",
+      "name": "asm_00c96500",
+      "mangled": "_asm_00c96500",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 25,
+      "recomp_size": 25,
       "match_pct": 100.0
     },
     {
@@ -77767,6 +78087,16 @@
       "file": "Client/Base/msvc/auto_asm_c6.cpp",
       "orig_size": 37,
       "recomp_size": 37,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cb71a0",
+      "kind": "FUNCTION",
+      "name": "asm_00cb71a0",
+      "mangled": "_asm_00cb71a0",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 58,
+      "recomp_size": 58,
       "match_pct": 100.0
     },
     {
@@ -79240,6 +79570,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00cf6609",
+      "kind": "FUNCTION",
+      "name": "asm_00cf6609",
+      "mangled": "_asm_00cf6609",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 27,
+      "recomp_size": 27,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00cf666e",
       "kind": "FUNCTION",
       "name": "asm_00cf666e",
@@ -79260,6 +79600,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00cf6810",
+      "kind": "FUNCTION",
+      "name": "asm_00cf6810",
+      "mangled": "_asm_00cf6810",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 44,
+      "recomp_size": 44,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00cf6a20",
       "kind": "FUNCTION",
       "name": "asm_00cf6a20",
@@ -79267,6 +79617,16 @@
       "file": "Client/Base/msvc/auto_asm_d15.cpp",
       "orig_size": 52,
       "recomp_size": 52,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cf6a60",
+      "kind": "FUNCTION",
+      "name": "asm_00cf6a60",
+      "mangled": "_asm_00cf6a60",
+      "file": "Client/Base/msvc/auto_asm_e1.cpp",
+      "orig_size": 43,
+      "recomp_size": 43,
       "match_pct": 100.0
     },
     {

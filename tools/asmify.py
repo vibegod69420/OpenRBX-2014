@@ -7,7 +7,9 @@ md = Cs(CS_ARCH_X86, CS_MODE_32)
 
 ALLOW = set('''
 mov movzx movsx lea push pop add sub and or xor cmp test inc dec neg not
-shl shr sar imul mul idiv div cdq cwde cbw xchg
+shl shr sar imul mul idiv div cdq cwde cbw xchg sbb adc
+lock xadd xadd cmpxchg lock cmpxchg bswap cpuid rdtsc lock inc lock dec
+lock or lock and lock add lock sub
 jmp je jne jz jnz ja jae jb jbe jg jge jl jle js jns jo jno jp jnp
 call ret leave nop
 fld fst fstp fadd fsub fmul fdiv fild fistp fcom fcomp fucom fucomp fchs fabs
@@ -104,7 +106,7 @@ print('candidates', len(cands))
 kept = []
 for i in range(0, len(cands), 150):
     chunk = cands[i:i + 150]
-    path = f'Client/Base/msvc/auto_asm_d{i // 150 + 1}.cpp'
+    path = f'Client/Base/msvc/auto_asm_e{i // 150 + 1}.cpp'
     n = build(chunk, path)
     r = subprocess.run([sys.executable, 'tools/verify_tu.py', path], capture_output=True, text=True)
     txt = r.stdout + r.stderr
