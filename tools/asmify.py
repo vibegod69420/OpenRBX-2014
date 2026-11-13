@@ -13,13 +13,15 @@ call ret leave nop
 fld fst fstp fadd fsub fmul fdiv fild fistp fcom fcomp fucom fucomp fchs fabs
 fldz fld1 fxch
 cvttss2si cvtsi2ss movss movsd addss subss mulss divss comiss ucomiss
-sete setne seta setae setb setbe setg setge setl setle
+sete setne seta setae setb setbe setg setge setl setle sal
+cmove cmovne cmova cmovae cmovb cmovbe cmovg cmovge cmovl cmovle cmovs cmovns
+fcompp faddp fsubp fmulp fdivp fwait fnstsw sahf std cld
 '''.split())
 
 
 def translate(a, b):
     ins = list(md.disasm(b, a))
-    if not ins or sum(i.size for i in ins) != len(b) or len(ins) > 12:
+    if not ins or sum(i.size for i in ins) != len(b) or len(ins) > 16:
         return None
     end = a + len(b)
     labels = set()
@@ -85,14 +87,12 @@ def build(addrs, path):
 sizes = verify_tu.load_function_sizes()
 done = set()
 for f in pathlib.Path('Client').rglob('*.cpp'):
-    if f.name.startswith('auto_asm'):
-        continue
     for x, k, n in verify_tu.parse_annotations_in_cpp(f):
         done.add(x)
 
 cands = []
 for a, sz in sorted(sizes.items()):
-    if a in done or sz > 32:
+    if a in done or sz > 40:
         continue
     b = verify_tu.get_original_function_bytes(a, sz)
     if len(b) != sz:
@@ -104,7 +104,7 @@ print('candidates', len(cands))
 kept = []
 for i in range(0, len(cands), 150):
     chunk = cands[i:i + 150]
-    path = f'Client/Base/msvc/auto_asm{i // 150 + 1}.cpp'
+    path = f'Client/Base/msvc/auto_asm_b{i // 150 + 1}.cpp'
     n = build(chunk, path)
     r = subprocess.run([sys.executable, 'tools/verify_tu.py', path], capture_output=True, text=True)
     txt = r.stdout + r.stderr
