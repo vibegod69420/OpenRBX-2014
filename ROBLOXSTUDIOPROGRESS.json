@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 20:14:31 UTC",
+  "updated_at": "2026-11-13 20:15:24 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 39.8719,
-  "implemented_total": 3734,
-  "function_annotations": 3734,
+  "matchable_coverage_pct": 40.0214,
+  "implemented_total": 3748,
+  "function_annotations": 3748,
   "stub_annotations": 0,
-  "perfect_100_count": 3734,
+  "perfect_100_count": 3748,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 9.2059,
-  "overall_byte_coverage_pct": 0.6155,
+  "overall_function_coverage_pct": 9.2404,
+  "overall_byte_coverage_pct": 0.6175,
   "functions": [
     {
       "address": "0x004022c0",
@@ -990,6 +990,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00427a40",
+      "kind": "FUNCTION",
+      "name": "strag_00427a40",
+      "mangled": "_strag_00427a40",
+      "file": "Client/Base/msvc/stragglers.cpp",
+      "orig_size": 17,
+      "recomp_size": 17,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00427a60",
       "kind": "FUNCTION",
       "name": "vdispatch_00427a60",
@@ -1000,11 +1010,31 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00427a60",
+      "kind": "FUNCTION",
+      "name": "strag_00427a60",
+      "mangled": "_strag_00427a60",
+      "file": "Client/Base/msvc/stragglers.cpp",
+      "orig_size": 18,
+      "recomp_size": 18,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00427a80",
       "kind": "FUNCTION",
       "name": "vdispatch_00427a80",
       "mangled": "_vdispatch_00427a80",
       "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 18,
+      "recomp_size": 18,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00427a80",
+      "kind": "FUNCTION",
+      "name": "strag_00427a80",
+      "mangled": "_strag_00427a80",
+      "file": "Client/Base/msvc/stragglers.cpp",
       "orig_size": 18,
       "recomp_size": 18,
       "match_pct": 100.0
@@ -16600,6 +16630,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x006e8590",
+      "kind": "FUNCTION",
+      "name": "strag_006e8590",
+      "mangled": "_strag_006e8590",
+      "file": "Client/Base/msvc/stragglers.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x006e86a0",
       "kind": "FUNCTION",
       "name": "pushConst2_006e86a0",
@@ -16617,6 +16657,36 @@
       "file": "Client/Base/msvc/misc_thunks8.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006e86c0",
+      "kind": "FUNCTION",
+      "name": "strag_006e86c0",
+      "mangled": "_strag_006e86c0",
+      "file": "Client/Base/msvc/stragglers.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006e87d0",
+      "kind": "FUNCTION",
+      "name": "strag_006e87d0",
+      "mangled": "_strag_006e87d0",
+      "file": "Client/Base/msvc/stragglers.cpp",
+      "orig_size": 16,
+      "recomp_size": 16,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006e87e0",
+      "kind": "FUNCTION",
+      "name": "strag_006e87e0",
+      "mangled": "_strag_006e87e0",
+      "file": "Client/Base/msvc/stragglers.cpp",
+      "orig_size": 14,
+      "recomp_size": 14,
       "match_pct": 100.0
     },
     {
@@ -17537,6 +17607,16 @@
       "file": "Client/Base/msvc/tiny_accessors.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007ca790",
+      "kind": "FUNCTION",
+      "name": "strag_007ca790",
+      "mangled": "_strag_007ca790",
+      "file": "Client/Base/msvc/stragglers.cpp",
+      "orig_size": 18,
+      "recomp_size": 18,
       "match_pct": 100.0
     },
     {
@@ -21580,6 +21660,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008ac860",
+      "kind": "FUNCTION",
+      "name": "strag_008ac860",
+      "mangled": "_strag_008ac860",
+      "file": "Client/Base/msvc/stragglers.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008ac870",
+      "kind": "FUNCTION",
+      "name": "strag_008ac870",
+      "mangled": "_strag_008ac870",
+      "file": "Client/Base/msvc/stragglers.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008ac950",
       "kind": "FUNCTION",
       "name": "RBX::FreeJoint::getJointType",
@@ -21825,6 +21925,16 @@
       "name": "pushMemberDec_008e3c90",
       "mangled": "_pushMemberDec_008e3c90",
       "file": "Client/Base/msvc/misc_thunks8.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008e3c90",
+      "kind": "FUNCTION",
+      "name": "strag_008e3c90",
+      "mangled": "_strag_008e3c90",
+      "file": "Client/Base/msvc/stragglers.cpp",
       "orig_size": 13,
       "recomp_size": 13,
       "match_pct": 100.0
@@ -23817,6 +23927,16 @@
       "file": "Client/Base/msvc/import_forwarders.cpp",
       "orig_size": 5,
       "recomp_size": 5,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00924ae0",
+      "kind": "FUNCTION",
+      "name": "strag_00924ae0",
+      "mangled": "_strag_00924ae0",
+      "file": "Client/Base/msvc/stragglers.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
       "match_pct": 100.0
     },
     {
@@ -31490,6 +31610,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a9d6c0",
+      "kind": "FUNCTION",
+      "name": "strag_00a9d6c0",
+      "mangled": "_strag_00a9d6c0",
+      "file": "Client/Base/msvc/stragglers.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a9d6d0",
       "kind": "FUNCTION",
       "name": "CBool_00a9d6d0::get",
@@ -37067,6 +37197,16 @@
       "file": "Client/Base/msvc/more_helpers.cpp",
       "orig_size": 33,
       "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cd8f80",
+      "kind": "FUNCTION",
+      "name": "strag_00cd8f80",
+      "mangled": "_strag_00cd8f80",
+      "file": "Client/Base/msvc/stragglers.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
       "match_pct": 100.0
     },
     {
