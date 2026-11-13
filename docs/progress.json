@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 19:52:22 UTC",
+  "updated_at": "2026-11-13 19:53:36 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -10,14 +10,14 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 28.3075,
-  "implemented_total": 2651,
-  "function_annotations": 2651,
+  "matchable_coverage_pct": 33.8174,
+  "implemented_total": 3167,
+  "function_annotations": 3167,
   "stub_annotations": 0,
-  "perfect_100_count": 2651,
+  "perfect_100_count": 3167,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 6.5358,
-  "overall_byte_coverage_pct": 0.3619,
+  "overall_function_coverage_pct": 7.808,
+  "overall_byte_coverage_pct": 0.5403,
   "functions": [
     {
       "address": "0x004022c0",
@@ -150,6 +150,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00407dc0",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_00407dc0::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00408870",
       "kind": "FUNCTION",
       "name": "DeletingDtor_00408870::destroy",
@@ -167,6 +177,16 @@
       "file": "Client/Base/msvc/import_forwarders.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0040dfe0",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_0040dfe0::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
       "match_pct": 100.0
     },
     {
@@ -560,6 +580,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0041ea70",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0041ea70::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0042102a",
       "kind": "FUNCTION",
       "name": "adjustorThunk_0042102a",
@@ -670,6 +700,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00427510",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_00427510::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00427540",
       "kind": "FUNCTION",
       "name": "std::_Generic_error_category::name",
@@ -697,6 +737,16 @@
       "file": "Client/App/v8tree/Instance.cpp",
       "orig_size": 18,
       "recomp_size": 18,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x004279e0",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_004279e0::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
       "match_pct": 100.0
     },
     {
@@ -1170,6 +1220,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00450f40",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_00450f40::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x004511e0",
       "kind": "FUNCTION",
       "name": "DeletingDtor_004511e0::destroy",
@@ -1297,6 +1357,16 @@
       "file": "Client/Base/msvc/deleting_destructors.cpp",
       "orig_size": 34,
       "recomp_size": 34,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0045f370",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_0045f370::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
       "match_pct": 100.0
     },
     {
@@ -1940,6 +2010,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00496320",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_00496320::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0049ac30",
       "kind": "FUNCTION",
       "name": "DeletingDtorImport_0049ac30::destroy",
@@ -2207,6 +2287,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x004b6690",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_004b6690::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
       "match_pct": 100.0
     },
     {
@@ -3920,6 +4010,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0058e4b0",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_0058e4b0::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0058e4e0",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_0058e4e0::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0058ec00",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_0058ec00::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0058f090",
       "kind": "FUNCTION",
       "name": "DeletingDtor_0058f090::destroy",
@@ -3980,6 +4100,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0058f6c0",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_0058f6c0::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0058f7c0",
       "kind": "FUNCTION",
       "name": "DeletingDtor_0058f7c0::destroy",
@@ -3987,6 +4117,16 @@
       "file": "Client/Base/msvc/deleting_destructors.cpp",
       "orig_size": 34,
       "recomp_size": 34,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0058f7f0",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_0058f7f0::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
       "match_pct": 100.0
     },
     {
@@ -4060,6 +4200,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00591700",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_00591700::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00591730",
       "kind": "FUNCTION",
       "name": "DeletingDtor_00591730::destroy",
@@ -4067,6 +4217,16 @@
       "file": "Client/Base/msvc/deleting_destructors.cpp",
       "orig_size": 34,
       "recomp_size": 34,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005947b0",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_005947b0::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
       "match_pct": 100.0
     },
     {
@@ -4200,6 +4360,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x005964d0",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_005964d0::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00596500",
       "kind": "FUNCTION",
       "name": "btSphereShape::getName",
@@ -4207,6 +4377,36 @@
       "file": "Client/App/v8kernel/btSphereShape.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00596540",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_00596540::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00597740",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_00597740::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0059a680",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_0059a680::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
       "match_pct": 100.0
     },
     {
@@ -4290,6 +4490,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0059b680",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_0059b680::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0059b870",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_0059b870::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0059b8a0",
       "kind": "FUNCTION",
       "name": "btBvhTriangleMeshShape::getName",
@@ -4360,6 +4580,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x005a0530",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_005a0530::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005a1cc0",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_005a1cc0::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x005a6780",
       "kind": "FUNCTION",
       "name": "DeletingDtor_005a6780::destroy",
@@ -4387,6 +4627,16 @@
       "file": "Client/Base/msvc/deleting_destructors.cpp",
       "orig_size": 34,
       "recomp_size": 34,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005b16d0",
+      "kind": "FUNCTION",
+      "name": "CVptrDel_005b16d0::destroy",
+      "mangled": "?destroy@CVptrDel_00407dc0@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
       "match_pct": 100.0
     },
     {
@@ -4450,6 +4700,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x005e39b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_005e39b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x005e3a80",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::DeviceD3D9::getField1CPtr",
@@ -4457,6 +4717,26 @@
       "file": "Client/Rendering/GfxCore/D3D9/DeviceD3D9.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005e4af0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_005e4af0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005e4b20",
+      "kind": "FUNCTION",
+      "name": "CCleanup_005e4b20::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -4487,6 +4767,56 @@
       "file": "Client/Base/msvc/tiny_accessors.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005e8740",
+      "kind": "FUNCTION",
+      "name": "CCleanup_005e8740::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005e8810",
+      "kind": "FUNCTION",
+      "name": "CCleanup_005e8810::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005eaf50",
+      "kind": "FUNCTION",
+      "name": "CCleanup_005eaf50::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005eb7b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_005eb7b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x005ec090",
+      "kind": "FUNCTION",
+      "name": "CCleanup_005ec090::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -5000,6 +5330,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x006094e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_006094e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00609580",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::DeviceGL::getField0CPtr",
@@ -5007,6 +5347,46 @@
       "file": "Client/Rendering/GfxCore/GL/DeviceGL.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0060a060",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0060a060::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0060a090",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0060a090::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0060a990",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0060a990::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0060a9c0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0060a9c0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -5030,6 +5410,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0060dcf0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0060dcf0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0060dd20",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0060dd20::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0060ee20",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::TextureGL::zeroTriple",
@@ -5037,6 +5437,26 @@
       "file": "Client/Rendering/GfxCore/TextureGL.cpp",
       "orig_size": 30,
       "recomp_size": 30,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0060f2f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0060f2f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00610340",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00610340::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -5060,6 +5480,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00618ef0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00618ef0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00618f80",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00618f80::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00619dc0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00619dc0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0061f640",
       "kind": "FUNCTION",
       "name": "CSet_0061f640::set",
@@ -5067,6 +5517,16 @@
       "file": "Client/Base/msvc/small_returns2.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0061fba0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0061fba0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -5140,6 +5600,56 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00626900",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00626900::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00626930",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00626930::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00626960",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00626960::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00654850",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00654850::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006569e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_006569e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x006573f0",
       "kind": "FUNCTION",
       "name": "CCopy2_006573f0::set",
@@ -5157,6 +5667,56 @@
       "file": "Client/Base/msvc/assign_helpers.cpp",
       "orig_size": 21,
       "recomp_size": 21,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006656c0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_006656c0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0066d700",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0066d700::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00672330",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00672330::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00674300",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00674300::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00674330",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00674330::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -5410,6 +5970,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0067d670",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0067d670::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0067e190",
       "kind": "FUNCTION",
       "name": "CInt_0067e190::get",
@@ -5457,6 +6027,36 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00698460",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00698460::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0069e5c0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0069e5c0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006adea0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_006adea0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -14490,6 +15090,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x006b7340",
+      "kind": "FUNCTION",
+      "name": "CCleanup_006b7340::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x006b89b0",
       "kind": "FUNCTION",
       "name": "name",
@@ -14497,6 +15107,16 @@
       "file": "Client/Base/msvc/codecvt_error_cat.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x006b8d30",
+      "kind": "FUNCTION",
+      "name": "CCleanup_006b8d30::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -14580,6 +15200,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x007855b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007855b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007856a0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007856a0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007857b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007857b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00787f90",
       "kind": "FUNCTION",
       "name": "getConst_00787f90",
@@ -14650,6 +15300,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0078c3d0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0078c3d0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007943b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007943b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x007a0ba0",
       "kind": "FUNCTION",
       "name": "adjustorThunk_007a0ba0",
@@ -14710,6 +15380,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x007a0c20",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007a0c20::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x007a0c50",
       "kind": "FUNCTION",
       "name": "DeletingDtorMultiVptr_007a0c50::destroy",
@@ -14717,6 +15397,56 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007a0f10",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007a0f10::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007a0f40",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007a0f40::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007b0d80",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007b0d80::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007b0e60",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007b0e60::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007b0f10",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007b0f10::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -14780,6 +15510,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x007ba690",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007ba690::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007ba6c0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007ba6c0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007ba6f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007ba6f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x007ba720",
       "kind": "FUNCTION",
       "name": "DeletingDtorMultiVptr_007ba720::destroy",
@@ -14787,6 +15547,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007ba760",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007ba760::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -14817,6 +15587,26 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007c2400",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007c2400::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007c2430",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007c2430::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -14917,6 +15707,26 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007c5940",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007c5940::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007c59e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007c59e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -15030,6 +15840,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x007c91c0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007c91c0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007c91f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007c91f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x007ca780",
       "kind": "FUNCTION",
       "name": "getConst_007ca780",
@@ -15037,6 +15867,16 @@
       "file": "Client/Base/msvc/tiny_accessors.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x007d64c0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_007d64c0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -15740,6 +16580,886 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0080d010",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d010::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d040",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d040::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d070",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d070::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d0a0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d0a0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d0d0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d0d0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d100",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d100::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d130",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d130::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d160",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d160::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d190",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d190::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d1c0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d1c0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d1f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d1f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d220",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d220::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d250",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d250::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d280",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d280::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d2b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d2b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d2e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d2e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d310",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d310::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d340",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d340::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d370",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d370::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d3a0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d3a0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d3d0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d3d0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d400",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d400::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d430",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d430::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d460",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d460::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d490",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d490::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d4c0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d4c0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d4f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d4f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d520",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d520::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d550",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d550::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d580",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d580::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d5b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d5b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d5e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d5e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d610",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d610::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d640",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d640::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d670",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d670::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d6a0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d6a0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d6d0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d6d0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d700",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d700::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d730",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d730::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d760",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d760::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d790",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d790::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d7c0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d7c0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d7f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d7f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d820",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d820::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d850",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d850::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d880",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d880::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d8b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d8b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d8e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d8e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d910",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d910::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d940",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d940::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d970",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d970::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d9a0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d9a0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080d9d0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080d9d0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080da00",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080da00::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080da30",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080da30::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080da60",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080da60::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080da90",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080da90::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080dac0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080dac0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080daf0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080daf0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080db20",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080db20::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080db50",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080db50::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080db80",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080db80::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080dbb0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080dbb0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080dbe0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080dbe0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080dc10",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080dc10::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080dc40",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080dc40::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080dc70",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080dc70::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080dca0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080dca0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080dcd0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080dcd0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080dd00",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080dd00::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080dd30",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080dd30::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080dd60",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080dd60::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080dd90",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080dd90::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080ddc0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080ddc0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080ddf0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080ddf0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080de20",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080de20::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080de50",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080de50::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080de80",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080de80::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080deb0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080deb0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080dee0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080dee0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080df10",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080df10::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080df40",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080df40::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080df70",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080df70::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080dfa0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080dfa0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080dfd0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080dfd0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080e000",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080e000::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080e030",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080e030::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080e060",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080e060::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0080e090",
       "kind": "FUNCTION",
       "name": "DeletingDtorMultiVptr_0080e090::destroy",
@@ -15900,6 +17620,136 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0080e490",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080e490::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080e4c0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080e4c0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080e4f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080e4f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080e520",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080e520::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080e550",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080e550::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080e580",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080e580::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080e5b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080e5b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080e5e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080e5e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080e610",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080e610::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080e640",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080e640::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080e670",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080e670::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080e6a0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080e6a0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0080e6d0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0080e6d0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0080e700",
       "kind": "FUNCTION",
       "name": "DeletingDtorFiveVptr_0080e700::destroy",
@@ -15960,6 +17810,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00825fb0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00825fb0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00829e22",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00829e22",
@@ -15977,6 +17837,36 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00829e40",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00829e40::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00829e70",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00829e70::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00829ea0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00829ea0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -16140,6 +18030,66 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00849ca0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00849ca0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00849cd0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00849cd0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00849d00",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00849d00::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0084a0b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0084a0b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0084a0e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0084a0e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0084a110",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0084a110::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00851020",
       "kind": "FUNCTION",
       "name": "RBX::Detail::NumpunctChar::doDecimalPoint",
@@ -16280,6 +18230,46 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0086c3a0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0086c3a0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0086c470",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0086c470::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0086c4a0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0086c4a0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0086c4d0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0086c4d0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00872a50",
       "kind": "FUNCTION",
       "name": "CByte_00872a50::get",
@@ -16337,6 +18327,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
       "orig_size": 74,
       "recomp_size": 74,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0087b670",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0087b670::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -16400,6 +18400,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0087dc70",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0087dc70::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0088071a",
       "kind": "FUNCTION",
       "name": "adjustorThunk_0088071a",
@@ -16447,6 +18457,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
       "orig_size": 74,
       "recomp_size": 74,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008807a0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_008807a0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -16500,6 +18520,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00884680",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00884680::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00885726",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00885726",
@@ -16550,6 +18580,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008857a0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_008857a0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008869b0",
       "kind": "FUNCTION",
       "name": "getConst_008869b0",
@@ -16587,6 +18627,46 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0088f160",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0088f160::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0088f2e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0088f2e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0088f310",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0088f310::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0088f340",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0088f340::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -16660,6 +18740,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0089a340",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0089a340::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008a0efa",
       "kind": "FUNCTION",
       "name": "adjustorThunk_008a0efa",
@@ -16697,6 +18787,36 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008a1010",
+      "kind": "FUNCTION",
+      "name": "CCleanup_008a1010::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008a1100",
+      "kind": "FUNCTION",
+      "name": "CCleanup_008a1100::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008a1130",
+      "kind": "FUNCTION",
+      "name": "CCleanup_008a1130::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -16760,6 +18880,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008a7430",
+      "kind": "FUNCTION",
+      "name": "CCleanup_008a7430::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008a8740",
       "kind": "FUNCTION",
       "name": "CInt_008a8740::get",
@@ -16817,6 +18947,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008a9ce0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_008a9ce0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -16907,6 +19047,46 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008abc70",
+      "kind": "FUNCTION",
+      "name": "CCleanup_008abc70::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008abca0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_008abca0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008abcd0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_008abcd0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008abd00",
+      "kind": "FUNCTION",
+      "name": "CCleanup_008abd00::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -17020,6 +19200,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008bb510",
+      "kind": "FUNCTION",
+      "name": "CCleanup_008bb510::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008bc5d0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_008bc5d0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008c3f84",
       "kind": "FUNCTION",
       "name": "adjustorThunk_008c3f84",
@@ -17037,6 +19237,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008c40c0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_008c40c0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -17080,6 +19290,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x008d1ba0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_008d1ba0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x008d1bd0",
       "kind": "FUNCTION",
       "name": "DeletingDtorMultiVptr_008d1bd0::destroy",
@@ -17087,6 +19307,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008d1c90",
+      "kind": "FUNCTION",
+      "name": "CCleanup_008d1c90::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -17107,6 +19337,36 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008edf10",
+      "kind": "FUNCTION",
+      "name": "CCleanup_008edf10::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008edf40",
+      "kind": "FUNCTION",
+      "name": "CCleanup_008edf40::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008edfe0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_008edfe0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -17147,6 +19407,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x008f5230",
+      "kind": "FUNCTION",
+      "name": "CCleanup_008f5230::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -17300,6 +19570,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00901200",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00901200::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009021c1",
       "kind": "FUNCTION",
       "name": "adjustorThunk_009021c1",
@@ -17380,6 +19660,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00902280",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00902280::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00903380",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00903380",
@@ -17387,6 +19677,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009062f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009062f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -17457,6 +19757,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00908510",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00908510::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -17550,6 +19860,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0090a6e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0090a6e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0090a710",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0090a710::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0090a740",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0090a740::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0090d35d",
       "kind": "FUNCTION",
       "name": "adjustorThunk_0090d35d",
@@ -17567,6 +19907,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0090d400",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0090d400::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -17637,6 +19987,36 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0090fe00",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0090fe00::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0090fe30",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0090fe30::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0090fe60",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0090fe60::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -17960,6 +20340,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009134e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009134e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009135c0",
       "kind": "FUNCTION",
       "name": "DeletingDtorFiveVptr_009135c0::destroy",
@@ -17967,6 +20357,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 67,
       "recomp_size": 67,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00913610",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00913610::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -18047,6 +20447,46 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00916a80",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00916a80::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00916ab0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00916ab0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00916ae0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00916ae0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00916b10",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00916b10::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -18137,6 +20577,46 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00919a40",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00919a40::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00919a70",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00919a70::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00919aa0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00919aa0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00919b10",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00919b10::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -18290,6 +20770,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009235b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009235b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009235e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009235e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00924570",
       "kind": "FUNCTION",
       "name": "tailThunk_00924570",
@@ -18400,6 +20900,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00928660",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00928660::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00928690",
       "kind": "FUNCTION",
       "name": "DeletingDtorMultiVptr_00928690::destroy",
@@ -18480,6 +20990,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00933520",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00933520::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00935440",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00935440::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00937850",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00937850",
@@ -18497,6 +21027,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009378f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009378f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -18590,6 +21130,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0093b060",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0093b060::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00941263",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00941263",
@@ -18667,6 +21217,46 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00941320",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00941320::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00941350",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00941350::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00941380",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00941380::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009413b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009413b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -19280,6 +21870,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009538c0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009538c0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00953980",
       "kind": "FUNCTION",
       "name": "CInc_00953980::bump",
@@ -19337,6 +21937,36 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0095d480",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0095d480::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0095d540",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0095d540::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00960ad0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00960ad0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -19420,6 +22050,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009657f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009657f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00965820",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00965820::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00965850",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00965850::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00965880",
       "kind": "FUNCTION",
       "name": "DeletingDtorMultiVptr_00965880::destroy",
@@ -19427,6 +22087,36 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009658c0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009658c0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009658f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009658f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00965a40",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00965a40::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -19510,6 +22200,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0096fb90",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0096fb90::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0097644d",
       "kind": "FUNCTION",
       "name": "adjustorThunk_0097644d",
@@ -19560,6 +22260,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009764b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009764b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0097f79a",
       "kind": "FUNCTION",
       "name": "adjustorThunk_0097f79a",
@@ -19567,6 +22277,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0097f7b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0097f7b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -19627,6 +22347,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00981000",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00981000::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -19730,6 +22460,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00982620",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00982620::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00982650",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00982650::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009832fd",
       "kind": "FUNCTION",
       "name": "adjustorThunk_009832fd",
@@ -19780,6 +22530,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00983380",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00983380::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00983e70",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00983e70",
@@ -19807,6 +22567,36 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00984710",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00984710::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009872e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009872e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00987310",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00987310::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -19910,6 +22700,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x0098c1e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0098c1e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x0098c210",
       "kind": "FUNCTION",
       "name": "DeletingDtorMultiVptr_0098c210::destroy",
@@ -19927,6 +22727,26 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0098c290",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0098c290::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0098c2c0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0098c2c0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -19967,6 +22787,56 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0099bfe0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0099bfe0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0099c010",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0099c010::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0099c110",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0099c110::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0099c170",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0099c170::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0099c1a0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0099c1a0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -20047,6 +22917,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x0099fab0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_0099fab0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -20147,6 +23027,26 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009aa5f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009aa5f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009aa620",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009aa620::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -20290,6 +23190,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009b4ce0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009b4ce0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009b4d10",
       "kind": "FUNCTION",
       "name": "DeletingDtorFiveVptr_009b4d10::destroy",
@@ -20297,6 +23207,26 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 67,
       "recomp_size": 67,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009b4de0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009b4de0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009b4e10",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009b4e10::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -20360,6 +23290,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009b8250",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009b8250::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009bd3fe",
       "kind": "FUNCTION",
       "name": "adjustorThunk_009bd3fe",
@@ -20410,6 +23350,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009bd4f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009bd4f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009cb9c4",
       "kind": "FUNCTION",
       "name": "adjustorThunk_009cb9c4",
@@ -20427,6 +23377,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009cb9e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009cb9e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -20510,6 +23470,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009d3ed0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009d3ed0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009d3f70",
       "kind": "FUNCTION",
       "name": "DeletingDtorMultiVptr_009d3f70::destroy",
@@ -20517,6 +23487,26 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009d3fb0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009d3fb0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009d3fe0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009d3fe0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -20720,6 +23710,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009e8e90",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009e8e90::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009e8ec0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009e8ec0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009f62a0",
       "kind": "FUNCTION",
       "name": "copyColumn0",
@@ -20817,6 +23827,26 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009f8630",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009f8630::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x009f8660",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009f8660::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -21060,6 +24090,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x009fbee0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_009fbee0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x009fbf80",
       "kind": "FUNCTION",
       "name": "DeletingDtorFiveVptr_009fbf80::destroy",
@@ -21180,6 +24220,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a01a10",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a01a10::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a01a40",
       "kind": "FUNCTION",
       "name": "DeletingDtorFiveVptr_00a01a40::destroy",
@@ -21227,6 +24277,26 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a025e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a025e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a02610",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a02610::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -21300,6 +24370,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a0b090",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a0b090::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a0b9f7",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a0b9f7",
@@ -21357,6 +24437,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a0ba60",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a0ba60::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -21420,6 +24510,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a0c420",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a0c420::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a0caa3",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a0caa3",
@@ -21480,6 +24580,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a0cb10",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a0cb10::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a0ddf3",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a0ddf3",
@@ -21497,6 +24607,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a0de10",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a0de10::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -21547,6 +24667,36 @@
       "file": "Client/Base/msvc/assign_helpers.cpp",
       "orig_size": 21,
       "recomp_size": 21,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a1bc40",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a1bc40::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a1bcb0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a1bcb0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a1bce0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a1bce0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -21630,6 +24780,66 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a2d0c0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a2d0c0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2d0f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a2d0f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2d120",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a2d120::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2d150",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a2d150::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2d180",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a2d180::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a2d1b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a2d1b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a2da00",
       "kind": "FUNCTION",
       "name": "getConst_00a2da00",
@@ -21690,6 +24900,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a32090",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a32090::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a320c0",
       "kind": "FUNCTION",
       "name": "getConst_00a320c0",
@@ -21697,6 +24917,36 @@
       "file": "Client/Base/msvc/tiny_accessors.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a49f00",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a49f00::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a49f30",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a49f30::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a51710",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a51710::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -21750,6 +25000,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a54c80",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a54c80::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a57281",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a57281",
@@ -21797,6 +25057,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
       "orig_size": 74,
       "recomp_size": 74,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a57300",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a57300::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -21880,6 +25150,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a5b4f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a5b4f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a5c5b0",
       "kind": "FUNCTION",
       "name": "CBit_00a5c5b0::get",
@@ -21927,6 +25207,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a5ee70",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a5ee70::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -21990,6 +25280,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a60d30",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a60d30::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a6221c",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a6221c",
@@ -22007,6 +25307,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a62230",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a62230::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -22060,6 +25370,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a64280",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a64280::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a6930c",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a6930c",
@@ -22110,6 +25430,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a69400",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a69400::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a6eb8e",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a6eb8e",
@@ -22150,6 +25480,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a6ebb0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a6ebb0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a6ebe0",
       "kind": "FUNCTION",
       "name": "DeletingDtorMultiVptr_00a6ebe0::destroy",
@@ -22157,6 +25497,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a6ec20",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a6ec20::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -22207,6 +25557,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a6fc10",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a6fc10::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -22340,6 +25700,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a77010",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a77010::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a77040",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a77040::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a77070",
       "kind": "FUNCTION",
       "name": "DeletingDtorMultiVptr_00a77070::destroy",
@@ -22357,6 +25737,26 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a770f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a770f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a77120",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a77120::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -22407,6 +25807,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a7ffb0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a7ffb0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -22500,6 +25910,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a86810",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a86810::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a86840",
       "kind": "FUNCTION",
       "name": "DeletingDtorMultiVptr_00a86840::destroy",
@@ -22507,6 +25927,46 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a86880",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a86880::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a868b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a868b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a868e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a868e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a86960",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a86960::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -22547,6 +26007,26 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a8b6e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a8b6e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a8b710",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a8b710::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -22620,6 +26100,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a8d4a0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a8d4a0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a8eeb2",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a8eeb2",
@@ -22657,6 +26147,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a8ef60",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a8ef60::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -22727,6 +26227,36 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a90320",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a90320::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a90350",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a90350::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a90380",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a90380::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -23080,6 +26610,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a958a0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a958a0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a958d0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a958d0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a95960",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a95960::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00a9b47c",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00a9b47c",
@@ -23127,6 +26687,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi2.cpp",
       "orig_size": 74,
       "recomp_size": 74,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00a9b4f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a9b4f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -23190,6 +26760,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00a9f8a0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00a9f8a0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00aa1f3e",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00aa1f3e",
@@ -23207,6 +26787,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aa1f50",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00aa1f50::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -23270,6 +26860,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00aa2c20",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00aa2c20::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aa2c50",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00aa2c50::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aa2c80",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00aa2c80::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00aa2d10",
       "kind": "FUNCTION",
       "name": "RBX::MotorJoint::getJointType",
@@ -23297,6 +26917,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aa2ee0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00aa2ee0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -23350,6 +26980,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00aa5fa0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00aa5fa0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aa5fd0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00aa5fd0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00aaaac0",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00aaaac0",
@@ -23397,6 +27047,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aaab40",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00aaab40::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -23460,6 +27120,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00aac520",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00aac520::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aac550",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00aac550::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aac580",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00aac580::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00aad5d8",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00aad5d8",
@@ -23477,6 +27167,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aad5f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00aad5f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -23527,6 +27227,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aaded0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00aaded0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -23590,6 +27300,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00aaee90",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00aaee90::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00aaf683",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00aaf683",
@@ -23640,6 +27360,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00aaf6f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00aaf6f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00aba2f7",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00aba2f7",
@@ -23680,6 +27410,46 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00aba320",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00aba320::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aba350",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00aba350::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aba380",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00aba380::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aba3b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00aba3b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00aba3e0",
       "kind": "FUNCTION",
       "name": "DeletingDtorMultiVptr_00aba3e0::destroy",
@@ -23687,6 +27457,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00aba420",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00aba420::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -23770,6 +27550,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00ac80b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ac80b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00ac96f8",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00ac96f8",
@@ -23830,6 +27620,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00ac9730",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ac9730::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ac9760",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ac9760::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00ac9b60",
       "kind": "FUNCTION",
       "name": "SelectionPointLasso::getPoint",
@@ -23880,6 +27690,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00acac10",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00acac10::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00acbf58",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00acbf58",
@@ -23917,6 +27737,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00acc010",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00acc010::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -23980,6 +27810,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00acd500",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00acd500::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00ad122d",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00ad122d",
@@ -24040,6 +27880,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00ad12a0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ad12a0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00ad814f",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00ad814f",
@@ -24077,6 +27927,26 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ad8170",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ad8170::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ad8250",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ad8250::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -24127,6 +27997,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ad9bb0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ad9bb0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -24210,6 +28090,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00ae4210",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ae4210::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00ae9ab6",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00ae9ab6",
@@ -24257,6 +28147,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ae9b20",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ae9b20::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -24310,6 +28210,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00af2350",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00af2350::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00af3764",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00af3764",
@@ -24330,6 +28240,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00af3780",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00af3780::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00afa8f9",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00afa8f9",
@@ -24347,6 +28267,36 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00afa970",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00afa970::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00afa9a0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00afa9a0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00afaa30",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00afaa30::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -24380,6 +28330,46 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00b035b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b035b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b035e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b035e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b03610",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b03610::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b036d0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b036d0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00b0ae1f",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00b0ae1f",
@@ -24387,6 +28377,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b0ae30",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b0ae30::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -24430,6 +28430,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00b0dae0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b0dae0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00b0fb67",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00b0fb67",
@@ -24447,6 +28457,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b0fb80",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b0fb80::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -24470,6 +28490,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00b10880",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b10880::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b11570",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b11570::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00b1406c",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00b1406c",
@@ -24487,6 +28527,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b14080",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b14080::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -24560,6 +28610,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00b179d0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b179d0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00b1a905",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00b1a905",
@@ -24597,6 +28657,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b1a930",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b1a930::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -24720,6 +28790,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00b1d7f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b1d7f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00b20a05",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00b20a05",
@@ -24737,6 +28817,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b20a20",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b20a20::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -24800,6 +28890,46 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00b2ea30",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b2ea30::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b2ea60",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b2ea60::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b2ea90",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b2ea90::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b2eb50",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b2eb50::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00b36a89",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00b36a89",
@@ -24820,6 +28950,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00b36aa0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b36aa0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b36ad0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b36ad0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00b47f9f",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00b47f9f",
@@ -24827,6 +28977,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b47fb0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b47fb0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -24847,6 +29007,16 @@
       "file": "Client/Base/msvc/tiny_accessors.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b51510",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b51510::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -24950,6 +29120,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00b5b3d0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b5b3d0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00b5c89b",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00b5c89b",
@@ -24957,6 +29137,46 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b5c8b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b5c8b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b5cf80",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b5cf80::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b5f090",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b5f090::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b608b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b608b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -24980,6 +29200,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00b83e40",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b83e40::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b89220",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b89220::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00b8d242",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00b8d242",
@@ -24987,6 +29227,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b8d250",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b8d250::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -25040,6 +29290,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00b920f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b920f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00b927f1",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00b927f1",
@@ -25050,6 +29310,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00b92800",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b92800::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00b92860",
       "kind": "FUNCTION",
       "name": "tailThunk_00b92860",
@@ -25057,6 +29327,16 @@
       "file": "Client/Base/msvc/import_forwarders.cpp",
       "orig_size": 5,
       "recomp_size": 5,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b92dd0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b92dd0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -25107,6 +29387,56 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b97210",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b97210::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b97280",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b97280::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b972b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b972b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b972e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b972e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00b97310",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00b97310::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -25300,6 +29630,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00ba1900",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ba1900::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ba2630",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ba2630::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00ba2b30",
       "kind": "FUNCTION",
       "name": "RBX::Motor6DJoint::getJointType",
@@ -25307,6 +29657,26 @@
       "file": "Client/App/v8kernel/Motor6DJoint.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ba3cc0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ba3cc0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ba40f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ba40f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -25320,6 +29690,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00ba4620",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ba4620::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ba5390",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ba5390::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ba8ea0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ba8ea0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00ba9880",
       "kind": "FUNCTION",
       "name": "Body::invoke",
@@ -25327,6 +29727,16 @@
       "file": "Client/RobloxStudio/Forwarders.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00baa3b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00baa3b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -25350,6 +29760,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00bbd920",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00bbd920::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00bd01c0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00bd01c0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00bd0210",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00bd0210::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00bd0460",
       "kind": "FUNCTION",
       "name": "tailThunk_00bd0460",
@@ -25357,6 +29797,26 @@
       "file": "Client/Base/msvc/import_forwarders.cpp",
       "orig_size": 5,
       "recomp_size": 5,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00bd40b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00bd40b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00bd4110",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00bd4110::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -25370,6 +29830,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00bd6cf0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00bd6cf0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00bd7630",
       "kind": "FUNCTION",
       "name": "CInt_00bd7630::get",
@@ -25380,6 +29850,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00bd7d90",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00bd7d90::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00bd86c0",
       "kind": "FUNCTION",
       "name": "CInt_00bd86c0::get",
@@ -25387,6 +29867,16 @@
       "file": "Client/Base/msvc/tiny_accessors.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00bd8fd0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00bd8fd0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -25420,6 +29910,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00bdc630",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00bdc630::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00bdd01b",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00bdd01b",
@@ -25427,6 +29927,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00bdd030",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00bdd030::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -25457,6 +29967,36 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00be5a60",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00be5a60::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00be5a90",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00be5a90::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00be5ac0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00be5ac0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -25500,6 +30040,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00bf8c20",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00bf8c20::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00bfd9ae",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00bfd9ae",
@@ -25520,6 +30070,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00bfda50",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00bfda50::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00bfdb10",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00bfdb10::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c04db7",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00c04db7",
@@ -25527,6 +30097,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c04dc0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c04dc0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -25540,6 +30120,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c05300",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c05300::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c05907",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00c05907",
@@ -25550,6 +30140,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c05910",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c05910::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c05ea5",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00c05ea5",
@@ -25557,6 +30157,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c05eb0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c05eb0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -25610,6 +30220,46 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c0f330",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c0f330::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c10230",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c10230::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c12760",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c12760::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c12ff0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c12ff0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c14ec5",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00c14ec5",
@@ -25617,6 +30267,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c14ed0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c14ed0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -25650,6 +30310,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c15390",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c15390::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c156ee",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00c156ee",
@@ -25657,6 +30327,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c15700",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c15700::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -25710,6 +30390,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c1c2f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c1c2f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c29ea9",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00c29ea9",
@@ -25727,6 +30417,46 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c29ec0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c29ec0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c29ef0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c29ef0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c29f20",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c29f20::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c2a050",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c2a050::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -25770,6 +30500,36 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c43da0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c43da0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c43dd0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c43dd0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c43e00",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c43e00::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c43e30",
       "kind": "FUNCTION",
       "name": "DeletingDtorMultiVptr_00c43e30::destroy",
@@ -25777,6 +30537,66 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 60,
       "recomp_size": 60,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c43ff0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c43ff0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c535a0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c535a0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c535d0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c535d0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c53600",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c53600::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c53630",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c53630::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c53660",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c53660::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -25870,6 +30690,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c57180",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c57180::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c5aaac",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00c5aaac",
@@ -25910,6 +30740,86 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c5ab60",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c5ab60::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c5ab90",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c5ab90::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c5dc60",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c5dc60::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c5dc90",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c5dc90::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c615e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c615e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c67970",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c67970::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c6a630",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c6a630::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c6a660",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c6a660::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c70732",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00c70732",
@@ -25930,6 +30840,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c70750",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c70750::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c7e5de",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00c7e5de",
@@ -25947,6 +30867,46 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c7e790",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c7e790::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c7e890",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c7e890::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c7e8c0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c7e8c0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c7e8f0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c7e8f0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -26030,6 +30990,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c93cc0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c93cc0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c9595d",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00c9595d",
@@ -26090,6 +31060,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c95990",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c95990::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c959c0",
       "kind": "FUNCTION",
       "name": "DeletingDtorFiveVptr_00c959c0::destroy",
@@ -26097,6 +31077,16 @@
       "file": "Client/Base/msvc/deleting_destructors_multi.cpp",
       "orig_size": 67,
       "recomp_size": 67,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c95a10",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c95a10::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -26190,6 +31180,16 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c9be10",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c9be10::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00c9cee0",
       "kind": "FUNCTION",
       "name": "tailThunk_00c9cee0",
@@ -26240,6 +31240,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00c9f420",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c9f420::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00c9f4a0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00c9f4a0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00ca3bfa",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00ca3bfa",
@@ -26277,6 +31297,36 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ca3c70",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ca3c70::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ca3ca0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ca3ca0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ca3cd0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ca3cd0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -26320,6 +31370,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00cb1ed0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00cb1ed0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cb1f00",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00cb1f00::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00cbacbc",
       "kind": "FUNCTION",
       "name": "adjustorThunk_00cbacbc",
@@ -26337,6 +31407,16 @@
       "file": "Client/Base/msvc/adjustor_thunks.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cbacd0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00cbacd0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
@@ -26370,6 +31450,26 @@
       "match_pct": 100.0
     },
     {
+      "address": "0x00ccbb80",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ccbb80::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ccbbb0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ccbbb0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
       "address": "0x00ccd380",
       "kind": "FUNCTION",
       "name": "tailThunk_00ccd380",
@@ -26377,6 +31477,66 @@
       "file": "Client/Base/msvc/import_forwarders.cpp",
       "orig_size": 5,
       "recomp_size": 5,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cd3ef0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00cd3ef0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cd76b0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00cd76b0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cda1e0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00cda1e0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00cdd760",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00cdd760::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ce1130",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ce1130::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0
+    },
+    {
+      "address": "0x00ce42d0",
+      "kind": "FUNCTION",
+      "name": "CCleanup_00ce42d0::destroy",
+      "mangled": "?destroy@CCleanup_0041ea70@@QAEPAXH@Z",
+      "file": "Client/Base/msvc/more_helpers.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
       "match_pct": 100.0
     },
     {
