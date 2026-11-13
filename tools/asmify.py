@@ -60,7 +60,7 @@ def translate(a, b):
             op = ''
         XPOP = {'fmulp','faddp','fsubp','fsubrp','fdivp','fdivrp','fcompp','fucompp'}
         if mn in XPOP and re.match(r'^st\(\d+\)$', op):
-            op = 'st(0), ' + op
+            op += ', st(0)'
         if mn in ('fadd','fsub','fsubr','fmul','fdiv','fdivr') and re.match(r'^st\(\d+\)$', op):
             op = 'st(0), ' + op
         if mn in ('fcomi', 'fcomip', 'fucomi', 'fucomip', 'fcompi', 'fucompi') and op.startswith('st('):

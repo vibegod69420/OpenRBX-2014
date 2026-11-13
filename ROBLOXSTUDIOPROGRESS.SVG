@@ -4,10 +4,10 @@
     OpenRBX-2014 Live Decompilation Progress (0.164.0.50577)
   </text>
   <text x="20" y="58" fill="#c9d1d9" font-family="Consolas, monospace" font-size="13">
-    Matched Functions: 34756 (100% Byte-Exact) | Total Annotated: 34756 / 40561
+    Matched Functions: 35313 (100% Byte-Exact) | Total Annotated: 35313 / 40561
   </text>
   <text x="20" y="80" fill="#8b949e" font-family="Consolas, monospace" font-size="13">
-    Active Accuracy: 100.00% avg | Updated: 2026-11-13 22:07:54 UTC
+    Active Accuracy: 100.00% avg | Updated: 2026-11-13 22:23:50 UTC
   </text>
   <rect x="20" y="94" width="500" height="12" rx="6" fill="#21262d"/>
   <rect x="20" y="94" width="500" height="12" rx="6" fill="#2ea043"/>
