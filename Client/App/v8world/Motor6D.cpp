@@ -25,6 +25,13 @@ float Motor6D::getMaxVelocity()
 	return *(float*)(internalData + 0xD0);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00913e10
+float Motor6D::getAngle()
+{
+	char* internalData = *(char**)((char*)this + 0x8C);
+	return *(float*)(internalData + 0xA8);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
