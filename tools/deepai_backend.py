@@ -38,6 +38,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import threading
 import time
 import urllib.error
 import urllib.request
@@ -109,25 +110,84 @@ def _read_env_file(path: Path) -> dict[str, str]:
     return values
 
 
-def api_key() -> str:
-    key = os.environ.get("DEEPAI_API_KEY", "").strip()
-    if key:
-        return key
+KEYS_FILE = os.environ.get("DEEPAI_KEYS_FILE", "/opt/openrbx/deepai_keys.txt")
+_KEY_LOCK = threading.Lock()
+_KEY_CURSOR = 0
+_KEY_COOLDOWN: dict[str, float] = {}
+_KEY_CACHE: tuple[float, list[str]] = (0.0, [])
+
+
+def _pool_file_keys() -> list[str]:
+    """Extra keys from a root-only text file, one per line. Re-read when it changes."""
+    global _KEY_CACHE
+    try:
+        mtime = Path(KEYS_FILE).stat().st_mtime
+    except OSError:
+        return []
+    if _KEY_CACHE[0] != mtime:
+        found = []
+        try:
+            for line in Path(KEYS_FILE).read_text(encoding="utf-8", errors="ignore").splitlines():
+                line = line.strip()
+                if line and not line.startswith("#"):
+                    found.append(line)
+        except OSError:
+            return []
+        _KEY_CACHE = (mtime, found)
+    return _KEY_CACHE[1]
+
+
+def all_keys() -> list[str]:
+    keys: list[str] = []
+    env = os.environ.get("DEEPAI_API_KEY", "").strip()
+    if env:
+        keys.append(env)
     for path in _env_candidates():
-        values = _read_env_file(path)
-        if values.get("DEEPAI_API_KEY"):
-            return values["DEEPAI_API_KEY"]
-    raise BackendUnavailable(
-        "DEEPAI_API_KEY is not set. Export it, or write DEEPAI_API_KEY=... to "
-        "/etc/openrbx/deepai.env (the systemd unit reads that file)."
-    )
+        value = _read_env_file(path).get("DEEPAI_API_KEY")
+        if value:
+            keys.append(value)
+    keys.extend(_pool_file_keys())
+    seen: set[str] = set()
+    out: list[str] = []
+    for key in keys:
+        if key not in seen:
+            seen.add(key)
+            out.append(key)
+    return out
 
 
-def _headers() -> dict[str, str]:
+def api_key() -> str:
+    """Round-robins the key pool so concurrent subagents spend separate rate limits."""
+    global _KEY_CURSOR
+    keys = all_keys()
+    if not keys:
+        raise BackendUnavailable(
+            "DEEPAI_API_KEY is not set. Export it, or write DEEPAI_API_KEY=... to "
+            "/etc/openrbx/deepai.env (the systemd unit reads that file)."
+        )
+    now = time.time()
+    with _KEY_LOCK:
+        for _ in range(len(keys)):
+            key = keys[_KEY_CURSOR % len(keys)]
+            _KEY_CURSOR += 1
+            if _KEY_COOLDOWN.get(key, 0.0) <= now:
+                return key
+    return min(keys, key=lambda k: _KEY_COOLDOWN.get(k, 0.0))
+
+
+def retire_key(key: str, seconds: int = 3600) -> bool:
+    """Cools one key down. Returns False when it is the only key, so the caller can park."""
+    if len(all_keys()) <= 1:
+        return False
+    _KEY_COOLDOWN[key] = time.time() + seconds
+    return True
+
+
+def _headers(key: str | None = None) -> dict[str, str]:
     return {
         "Content-Type": "application/json",
         "Accept": "text/event-stream",
-        "Api-Key": api_key(),
+        "Api-Key": key or api_key(),
         "X-DeepAI-Code-Theos": THEOS,
         "X-DeepAI-Code-Instance": INSTANCE,
         "User-Agent": "OpenRBX-Harness/4.0",
@@ -138,11 +198,12 @@ def _clean(text: str) -> str:
     return _ANSI.sub("", text or "").strip()
 
 
-def _request(path: str, payload: dict | None = None, timeout: int | None = None):
+def _request(path: str, payload: dict | None = None, timeout: int | None = None, key: str | None = None):
     url = BASE_URL + path
     body = json.dumps(payload).encode("utf-8") if payload is not None else None
+
     req = urllib.request.Request(
-        url, data=body, headers=_headers(), method="POST" if body else "GET"
+        url, data=body, headers=_headers(key), method="POST" if body else "GET"
     )
     return urllib.request.urlopen(req, timeout=timeout or TIMEOUT)
 
@@ -232,8 +293,9 @@ def ask(
         content_parts: list[str] = []
         reasoning_parts: list[str] = []
         usage: dict = {}
+        key = api_key()
         try:
-            with _request("/chat/completions", payload) as resp:
+            with _request("/chat/completions", payload, key=key) as resp:
                 for raw_line in resp:
                     line = raw_line.decode("utf-8", "ignore").strip()
                     if not line.startswith("data:"):
@@ -257,8 +319,16 @@ def ask(
         except urllib.error.HTTPError as exc:
             body = _clean(exc.read().decode("utf-8", "ignore"))[:1200]
             if _is_quota(exc.code, body):
+                # One key hitting its allowance must not stop the pool: bench it and retry
+                # the same request on the next key.
+                if retire_key(key):
+                    last_error = f"key benched: {body[:200]}"
+                    continue
                 raise QuotaExhausted(f"HTTP {exc.code} from DeepAI: {body[:400]}")
             last_error = f"HTTP {exc.code}: {body[:400]}"
+            if exc.code in (401, 403) and retire_key(key):
+                last_error = f"key rejected (HTTP {exc.code}); benched"
+                continue
             if exc.code in (400, 401, 403, 404):
                 raise BackendUnavailable(last_error)
         except Exception as exc:
@@ -279,6 +349,7 @@ def ask(
                 "completion_tokens": (usage or {}).get("completion_tokens"),
                 "reasoning_tokens": details.get("reasoning_tokens"),
                 "content_chars": len(content),
+                "key_suffix": key[-4:],
             })
             return content
 
@@ -291,8 +362,9 @@ def ask(
                 "ok": True,
                 "latency_s": round(time.time() - started, 1),
                 "attempt": attempt,
-                "note": "answer recovered from reasoning stream",
-            })
+                                    "note": "answer recovered from reasoning stream",
+                    "key_suffix": key[-4:],
+                })
             return reasoning
 
         last_error = last_error or "empty reply"
