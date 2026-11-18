@@ -64,6 +64,12 @@ int stream_buffer::getConst19554176() const
 	return 19554176;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a2d210
+bool stream_buffer::getFlag60Bit2() const
+{
+	return ((*(const unsigned int*)((const char*)this + 0x60)) >> 2) & 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

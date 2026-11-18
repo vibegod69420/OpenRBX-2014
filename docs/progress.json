@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18 18:57:55 UTC",
+ "updated_at": "2026-11-18 19:00:00 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 1.4842,
- "implemented_total": 139,
- "function_annotations": 139,
+ "matchable_coverage_pct": 1.5056,
+ "implemented_total": 141,
+ "function_annotations": 141,
  "stub_annotations": 0,
- "perfect_100_count": 139,
- "matched_real_functions": 139,
+ "perfect_100_count": 141,
+ "matched_real_functions": 141,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.3427,
- "overall_byte_coverage_pct": 0.0086,
+ "overall_function_coverage_pct": 0.3476,
+ "overall_byte_coverage_pct": 0.0088,
  "usage": {
-  "calls_24h": 46,
+  "calls_24h": 49,
   "failures_24h": 0,
-  "completion_tokens_24h": 261445,
-  "reasoning_tokens_24h": 258047,
-  "avg_latency_s": 94.7
+  "completion_tokens_24h": 277289,
+  "reasoning_tokens_24h": 273505,
+  "avg_latency_s": 94.9
  },
- "functions_total": 139,
+ "functions_total": 141,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 52,
-   "functions": 52,
-   "bytes": 325
+   "matched": 53,
+   "functions": 53,
+   "bytes": 335
   },
   {
    "name": "App/v8kernel",
@@ -54,9 +54,9 @@
   },
   {
    "name": "Rendering/GfxCore",
-   "matched": 9,
-   "functions": 9,
-   "bytes": 44
+   "matched": 10,
+   "functions": 10,
+   "bytes": 54
   },
   {
    "name": "App/humanoid",
@@ -575,6 +575,17 @@
    "matchable": true
   },
   {
+   "address": "0x00a2d210",
+   "kind": "FUNCTION",
+   "name": "std::stream_buffer::getFlag60Bit2",
+   "mangled": "?getFlag60Bit2@stream_buffer@std@@QBE_NXZ",
+   "file": "Client/App/v8datamodel/stream_buffer.cpp",
+   "orig_size": 10,
+   "recomp_size": 10,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00a026a0",
    "kind": "FUNCTION",
    "name": "RBX::ExtrudedPartInstance::getConst19178964",
@@ -1088,6 +1099,17 @@
    "file": "Client/Rendering/GfxCore/D3D9/ShaderProgramD3D9.cpp",
    "orig_size": 7,
    "recomp_size": 7,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x005e52e0",
+   "kind": "FUNCTION",
+   "name": "RBX::Graphics::IndexBufferD3D9::unlock",
+   "mangled": "?unlock@IndexBufferD3D9@Graphics@RBX@@QAEXXZ",
+   "file": "Client/Rendering/GfxCore/D3D9/IndexBufferD3D9.cpp",
+   "orig_size": 10,
+   "recomp_size": 10,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1806,9 +1828,33 @@
    "matched": 139,
    "implemented": 139,
    "pct": 1.4842
+  },
+  {
+   "t": "2026-11-18 18:59:24 UTC",
+   "matched": 140,
+   "implemented": 140,
+   "pct": 1.4949
+  },
+  {
+   "t": "2026-11-18 19:00:00 UTC",
+   "matched": 141,
+   "implemented": 141,
+   "pct": 1.5056
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-18T18:59:26",
+   "address": "0x005e52e0",
+   "name": "RBX::Graphics::IndexBufferD3D9::unlock",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T18:58:51",
+   "address": "0x00a2d210",
+   "name": "std::stream_buffer::getFlag60Bit2",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-18T18:57:20",
    "address": "0x0082ef50",
@@ -2516,19 +2562,7 @@
    "address": "0x008510f0",
    "name": "std::numpunct::getFlag0D",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:11:07",
-   "address": "0x00851020",
-   "name": "std::numpunct::getFlag0C",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:11:05",
-   "address": "0x006b1400",
-   "name": "RBX::DS::CVideoStream::getField30",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 61.96
+ "match_rate_per_hour": 61.89
 }
