@@ -18,6 +18,7 @@ public:
 	};
 
 	int getField2E4() const;
+	void stepContact();
 	// AUTO-GENERATED METHODS
 };
 
