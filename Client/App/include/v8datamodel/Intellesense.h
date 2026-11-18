@@ -1,0 +1,24 @@
+#ifndef CLIENT_APP_INCLUDE_V8DATAMODEL_INTELLESENSE_H
+#define CLIENT_APP_INCLUDE_V8DATAMODEL_INTELLESENSE_H
+
+#include "decomp.h"
+
+namespace Studio {
+
+// AUTO-GENERATED HELPERS
+
+class Intellesense
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+} // namespace Studio
+
+#endif // CLIENT_APP_INCLUDE_V8DATAMODEL_INTELLESENSE_H

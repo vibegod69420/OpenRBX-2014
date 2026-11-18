@@ -1,0 +1,24 @@
+#ifndef CLIENT_APP_INCLUDE_SCRIPT_SCRIPTSYNTAXHIGHLIGHTER_H
+#define CLIENT_APP_INCLUDE_SCRIPT_SCRIPTSYNTAXHIGHLIGHTER_H
+
+#include "decomp.h"
+
+
+
+// AUTO-GENERATED HELPERS
+
+class ScriptSyntaxHighlighter
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+
+
+#endif // CLIENT_APP_INCLUDE_SCRIPT_SCRIPTSYNTAXHIGHLIGHTER_H
