@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void stepUi();
 	// AUTO-GENERATED METHODS
 };
 

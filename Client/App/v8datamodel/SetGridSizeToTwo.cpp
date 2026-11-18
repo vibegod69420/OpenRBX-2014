@@ -12,6 +12,14 @@ bool SetGridSizeToTwo::isEnabled() const
             reinterpret_cast<const char*>(this) + 0xc) + 0x1d8);
 }
 
+extern float g_GridSize;
+
+// FUNCTION: ROBLOXSTUDIO 0x0082e3e0
+int SetGridSizeToTwo::isGridSizeTwo() const
+{
+	return (int)g_GridSize == 2;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

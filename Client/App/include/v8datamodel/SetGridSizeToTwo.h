@@ -17,6 +17,7 @@ public:
 	};
 
 	bool isEnabled() const;
+	int isGridSizeTwo() const;
 	// AUTO-GENERATED METHODS
 };
 

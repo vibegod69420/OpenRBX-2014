@@ -13,10 +13,12 @@ public:
 	union
 	{
 		int _vtable_or_head;
+		struct { char _pad_flag_008c[0x8c]; bool flag_008c; };
 		// AUTO-GENERATED FIELDS
 	};
 
 	int getConst12() const;
+	bool getFlag8C() const;
 	// AUTO-GENERATED METHODS
 };
 

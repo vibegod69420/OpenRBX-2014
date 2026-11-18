@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18 19:51:48 UTC",
+ "updated_at": "2026-11-18 19:58:20 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,35 +16,35 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 2.0395,
- "implemented_total": 191,
- "function_annotations": 191,
+ "matchable_coverage_pct": 2.157,
+ "implemented_total": 202,
+ "function_annotations": 202,
  "stub_annotations": 0,
- "perfect_100_count": 191,
- "matched_real_functions": 191,
+ "perfect_100_count": 202,
+ "matched_real_functions": 202,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.4709,
- "overall_byte_coverage_pct": 0.0153,
+ "overall_function_coverage_pct": 0.498,
+ "overall_byte_coverage_pct": 0.0173,
  "usage": {
-  "calls_24h": 195,
+  "calls_24h": 216,
   "failures_24h": 0,
-  "completion_tokens_24h": 1206824,
-  "reasoning_tokens_24h": 1189962,
-  "avg_latency_s": 111.9
+  "completion_tokens_24h": 1343399,
+  "reasoning_tokens_24h": 1324550,
+  "avg_latency_s": 113.4
  },
- "functions_total": 191,
+ "functions_total": 202,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 76,
-   "functions": 76,
-   "bytes": 624
+   "matched": 82,
+   "functions": 82,
+   "bytes": 728
   },
   {
    "name": "App/v8world",
-   "matched": 24,
-   "functions": 24,
-   "bytes": 194
+   "matched": 25,
+   "functions": 25,
+   "bytes": 209
   },
   {
    "name": "App/v8kernel",
@@ -54,9 +54,9 @@
   },
   {
    "name": "Rendering/GfxRender",
-   "matched": 10,
-   "functions": 10,
-   "bytes": 102
+   "matched": 11,
+   "functions": 11,
+   "bytes": 119
   },
   {
    "name": "Rendering/GfxCore",
@@ -107,13 +107,31 @@
    "bytes": 17
   },
   {
+   "name": "RobloxStudio/Toggle3DGridVerb.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 17
+  },
+  {
    "name": "App/util",
    "matched": 4,
    "functions": 4,
    "bytes": 16
   },
   {
+   "name": "RobloxStudio/lua_exception.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 16
+  },
+  {
    "name": "Network/RoundRobinPhysicsSender.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 15
+  },
+  {
+   "name": "Rendering/GfxBase",
    "matched": 1,
    "functions": 1,
    "bytes": 15
@@ -522,6 +540,17 @@
    "matchable": true
   },
   {
+   "address": "0x00b8f1f0",
+   "kind": "FUNCTION",
+   "name": "RBX::RotatePJoint::stepUi",
+   "mangled": "?stepUi@RotatePJoint@RBX@@QAEXXZ",
+   "file": "Client/App/v8world/RotatePJoint.cpp",
+   "orig_size": 15,
+   "recomp_size": 15,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00b8daf0",
    "kind": "FUNCTION",
    "name": "RBX::NormalBreakConnector::getFlag28",
@@ -661,6 +690,17 @@
    "file": "Client/App/v8world/BallBallContact.cpp",
    "orig_size": 9,
    "recomp_size": 9,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00a37120",
+   "kind": "FUNCTION",
+   "name": "lua_exception::raise",
+   "mangled": "?raise@lua_exception@@QAEXXZ",
+   "file": "Client/RobloxStudio/lua_exception.cpp",
+   "orig_size": 16,
+   "recomp_size": 16,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -870,6 +910,17 @@
    "file": "Client/App/v8datamodel/GuiImageButton.cpp",
    "orig_size": 7,
    "recomp_size": 7,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x009689f0",
+   "kind": "FUNCTION",
+   "name": "RBX::Workspace::getSomeField",
+   "mangled": "?getSomeField@Workspace@RBX@@QAEPAXXZ",
+   "file": "Client/App/v8datamodel/Workspace.cpp",
+   "orig_size": 17,
+   "recomp_size": 17,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1270,6 +1321,39 @@
    "matchable": true
   },
   {
+   "address": "0x0082e3e0",
+   "kind": "FUNCTION",
+   "name": "RBX::SetGridSizeToTwo::isGridSizeTwo",
+   "mangled": "?isGridSizeTwo@SetGridSizeToTwo@RBX@@QBEHXZ",
+   "file": "Client/App/v8datamodel/SetGridSizeToTwo.cpp",
+   "orig_size": 17,
+   "recomp_size": 17,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x0082e3c0",
+   "kind": "FUNCTION",
+   "name": "RBX::SetGridSizeToSixteen::isChecked",
+   "mangled": "?isChecked@SetGridSizeToSixteen@RBX@@QAEHXZ",
+   "file": "Client/App/v8datamodel/SetGridSizeToSixteen.cpp",
+   "orig_size": 17,
+   "recomp_size": 17,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x0082e3a0",
+   "kind": "FUNCTION",
+   "name": "RBX::SetGridSizeToFour::isChecked",
+   "mangled": "?isChecked@SetGridSizeToFour@RBX@@QAEHXZ",
+   "file": "Client/App/v8datamodel/SetGridSizeToFour.cpp",
+   "orig_size": 17,
+   "recomp_size": 17,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x0082e390",
    "kind": "FUNCTION",
    "name": "RBX::SetDragGridToOneFifth::isEnabled",
@@ -1442,6 +1526,17 @@
    "file": "Client/Rendering/GfxRender/RenderView.cpp",
    "orig_size": 14,
    "recomp_size": 14,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x006762e0",
+   "kind": "FUNCTION",
+   "name": "RBX::Graphics::RenderView::noop",
+   "mangled": "?noop@RenderView@Graphics@RBX@@QAEXXZ",
+   "file": "Client/Rendering/GfxRender/RenderView.cpp",
+   "orig_size": 17,
+   "recomp_size": 1,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1985,6 +2080,17 @@
    "matchable": true
   },
   {
+   "address": "0x00545f00",
+   "kind": "FUNCTION",
+   "name": "RBX::ViewBase::dispose",
+   "mangled": "?dispose@ViewBase@RBX@@QAEXXZ",
+   "file": "Client/Rendering/GfxBase/ViewBase.cpp",
+   "orig_size": 15,
+   "recomp_size": 15,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x0053dbe0",
    "kind": "FUNCTION",
    "name": "RobloxTreeWidget::hasSelection",
@@ -2058,6 +2164,17 @@
    "file": "Client/RobloxStudio/ToggleCollisionCheckVerb.cpp",
    "orig_size": 6,
    "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x005241c0",
+   "kind": "FUNCTION",
+   "name": "Toggle3DGridVerb::isChecked",
+   "mangled": "?isChecked@Toggle3DGridVerb@@QBE_NXZ",
+   "file": "Client/RobloxStudio/Toggle3DGridVerb.cpp",
+   "orig_size": 17,
+   "recomp_size": 17,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -2194,6 +2311,17 @@
    "matchable": true
   },
   {
+   "address": "0x0042d8e0",
+   "kind": "FUNCTION",
+   "name": "std::basic_filebuf::_Lock",
+   "mangled": "?_Lock@basic_filebuf@std@@QAEXXZ",
+   "file": "Client/App/v8datamodel/basic_filebuf.cpp",
+   "orig_size": 16,
+   "recomp_size": 16,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x0042ae00",
    "kind": "FUNCTION",
    "name": "RBX::DSVideoCaptureEngine::getElapsedTime",
@@ -2278,6 +2406,17 @@
    "file": "Client/App/v8datamodel/PartInstance.cpp",
    "orig_size": 4,
    "recomp_size": 4,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00403b10",
+   "kind": "FUNCTION",
+   "name": "RBX::StarterPackService::getFlag8C",
+   "mangled": "?getFlag8C@StarterPackService@RBX@@QBE_NXZ",
+   "file": "Client/App/v8datamodel/StarterPackService.cpp",
+   "orig_size": 20,
+   "recomp_size": 7,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -2540,9 +2679,81 @@
    "matched": 191,
    "implemented": 191,
    "pct": 2.0395
+  },
+  {
+   "t": "2026-11-18 19:58:20 UTC",
+   "matched": 202,
+   "implemented": 202,
+   "pct": 2.157
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-18T19:57:23",
+   "address": "0x00403b10",
+   "name": "RBX::StarterPackService::getFlag8C",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:55:50",
+   "address": "0x0082e3e0",
+   "name": "RBX::SetGridSizeToTwo::isGridSizeTwo",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:55:33",
+   "address": "0x009689f0",
+   "name": "RBX::Workspace::getSomeField",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:55:06",
+   "address": "0x0082e3c0",
+   "name": "RBX::SetGridSizeToSixteen::isChecked",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:54:30",
+   "address": "0x005241c0",
+   "name": "Toggle3DGridVerb::isChecked",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:54:24",
+   "address": "0x0082e3a0",
+   "name": "RBX::SetGridSizeToFour::isChecked",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:53:31",
+   "address": "0x0042d8e0",
+   "name": "std::basic_filebuf::_Lock",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:53:20",
+   "address": "0x006762e0",
+   "name": "RBX::Graphics::RenderView::noop",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:53:18",
+   "address": "0x00a37120",
+   "name": "lua_exception::raise",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:51:57",
+   "address": "0x00b8f1f0",
+   "name": "RBX::RotatePJoint::stepUi",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:51:52",
+   "address": "0x00545f00",
+   "name": "RBX::ViewBase::dispose",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-18T19:50:58",
    "address": "0x00621790",
@@ -3196,73 +3407,7 @@
    "address": "0x00a2da10",
    "name": "std::stream_buffer::getConst19190288",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:45:16",
-   "address": "0x00a2da00",
-   "name": "std::stream_buffer::getConst19190364",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:45:14",
-   "address": "0x00a026a0",
-   "name": "RBX::ExtrudedPartInstance::getConst19178964",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:45:13",
-   "address": "0x0099ce10",
-   "name": "RBX::GlueJoint::getConst9",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:45:11",
-   "address": "0x00860c40",
-   "name": "boost::io::too_few_args::getConst15063552",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:44:27",
-   "address": "0x00860c30",
-   "name": "boost::io::format_error::getConst15063428",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:44:25",
-   "address": "0x00860c20",
-   "name": "boost::bad_lexical_cast::getConst15061952",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:44:23",
-   "address": "0x00860c10",
-   "name": "boost::io::bad_format_string::getConst15063484",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:44:22",
-   "address": "0x0082ef60",
-   "name": "RBX::SetManualJointToStrong::getFlag_ef60",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:44:20",
-   "address": "0x007ca780",
-   "name": "RBX::Script::getConst18804796",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:44:18",
-   "address": "0x00788400",
-   "name": "std::parser_error::getConst15005704",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:44:17",
-   "address": "0x00787f90",
-   "name": "std::holder::getConst19652792",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 60.8
+ "match_rate_per_hour": 62.15
 }

@@ -38,6 +38,12 @@ bool RenderView::testAndClearFlagA0()
 	return oldValue;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006762e0
+void RenderView::noop()
+{
+
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

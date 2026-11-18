@@ -18,6 +18,15 @@ int Workspace::method_00888300()
     return rbx_helper_0x7b3b40() + 6;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x009689f0
+void* Workspace::getSomeField()
+{
+	void* v = *reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 0xB4);
+	if (v != 0)
+		return v;
+	return *reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 0xBC);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

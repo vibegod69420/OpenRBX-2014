@@ -29,6 +29,7 @@ public:
 	int getSubField0C_1B0() const;
 	int getSubField8C_BA0() const;
 	bool testAndClearFlagA0();
+	void noop();
 	// AUTO-GENERATED METHODS
 };
 

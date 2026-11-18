@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	bool isChecked() const;
 	// AUTO-GENERATED METHODS
 };
 
