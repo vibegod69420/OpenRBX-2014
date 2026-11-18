@@ -23,6 +23,7 @@ public:
 	int getField484() const;
 	int getField5E0() const;
 	int GetLeadingUnassignedAddressCount() const;
+	int GetNextSendReceipt();
 	// AUTO-GENERATED METHODS
 };
 

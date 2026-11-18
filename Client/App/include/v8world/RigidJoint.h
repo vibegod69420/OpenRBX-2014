@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	int getJointType() const;
 	// AUTO-GENERATED METHODS
 };
 

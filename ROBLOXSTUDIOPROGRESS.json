@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 22:26:19 UTC",
+  "updated_at": "2026-11-18 22:32:55 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 3.3529,
-  "implemented_total": 314,
-  "function_annotations": 314,
+  "matchable_coverage_pct": 3.3956,
+  "implemented_total": 318,
+  "function_annotations": 318,
   "stub_annotations": 0,
-  "perfect_100_count": 314,
-  "matched_real_functions": 314,
+  "perfect_100_count": 318,
+  "matched_real_functions": 318,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.7741,
-  "overall_byte_coverage_pct": 0.0582,
+  "overall_function_coverage_pct": 0.784,
+  "overall_byte_coverage_pct": 0.0607,
   "usage": {
-    "calls_24h": 1059,
+    "calls_24h": 1091,
     "failures_24h": 0,
-    "completion_tokens_24h": 10599710,
-    "reasoning_tokens_24h": 10441943,
-    "avg_latency_s": 177.0
+    "completion_tokens_24h": 10994895,
+    "reasoning_tokens_24h": 10830585,
+    "avg_latency_s": 178.3
   },
   "functions": [
     {
@@ -1541,6 +1541,17 @@
       "matchable": true
     },
     {
+      "address": "0x007b3b40",
+      "kind": "FUNCTION",
+      "name": "RBX::NonFactoryProduct::initFactoryData",
+      "mangled": "?initFactoryData@NonFactoryProduct@RBX@@QAEHXZ",
+      "file": "Client/App/v8datamodel/NonFactoryProduct.cpp",
+      "orig_size": 42,
+      "recomp_size": 42,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x007bcdc0",
       "kind": "FUNCTION",
       "name": "RBX::Humanoid::dispatch",
@@ -2197,6 +2208,17 @@
       "file": "Client/App/v8world/Motor6D.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00913db0",
+      "kind": "FUNCTION",
+      "name": "RBX::RigidJoint::getJointType",
+      "mangled": "?getJointType@RigidJoint@RBX@@QBEHXZ",
+      "file": "Client/App/v8world/RigidJoint.cpp",
+      "orig_size": 68,
+      "recomp_size": 68,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -2872,6 +2894,17 @@
       "matchable": true
     },
     {
+      "address": "0x00b80080",
+      "kind": "FUNCTION",
+      "name": "RBX::LibraryService::LibraryStateObject::dispose",
+      "mangled": "?dispose@LibraryStateObject@LibraryService@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/LibraryStateObject.cpp",
+      "orig_size": 72,
+      "recomp_size": 72,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00b842a0",
       "kind": "FUNCTION",
       "name": "RBX::Lua::FunctionScriptSlot::dispose",
@@ -3484,6 +3517,17 @@
       "file": "Client/Network/ProfiledRakPeer.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00cead10",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::ProfiledRakPeer::GetNextSendReceipt",
+      "mangled": "?GetNextSendReceipt@ProfiledRakPeer@Network@RBX@@QAEHXZ",
+      "file": "Client/Network/ProfiledRakPeer.cpp",
+      "orig_size": 62,
+      "recomp_size": 62,
       "match_pct": 100.0,
       "matchable": true
     }

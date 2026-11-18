@@ -71,6 +71,24 @@ int ProfiledRakPeer::GetLeadingUnassignedAddressCount() const
 	return count;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00cead10
+int ProfiledRakPeer::GetNextSendReceipt()
+{
+	char* base = reinterpret_cast<char*>(this);
+	reinterpret_cast<RakNet::SimpleMutex*>(base + 0x5c8)->Lock();
+
+	int value = *reinterpret_cast<int*>(base + 0x5e0);
+	int next = value + 1;
+	*reinterpret_cast<int*>(base + 0x5e0) = next;
+	if (next == 0)
+	{
+		*reinterpret_cast<int*>(base + 0x5e0) = 1;
+	}
+
+	reinterpret_cast<RakNet::SimpleMutex*>(base + 0x5c8)->Unlock();
+	return value;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network
