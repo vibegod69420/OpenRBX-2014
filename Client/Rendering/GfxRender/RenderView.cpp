@@ -61,6 +61,64 @@ void RenderView::initResources()
 	}
 }
 
+class RVSub1FC
+{
+public:
+	void m();
+};
+
+class RVSub1A0
+{
+public:
+	void m();
+};
+
+class RVSub1A4
+{
+public:
+	void m();
+};
+
+class RVSub1C0
+{
+public:
+	void m();
+};
+
+class RVSub1BC
+{
+public:
+	void m();
+};
+
+struct RenderViewSub0C
+{
+	char pad_000[0x1a0];
+	RVSub1A0* field_1a0;
+	RVSub1A4* field_1a4;
+	char pad_1a8[0x14];
+	RVSub1BC* field_1bc;
+	RVSub1C0* field_1c0;
+	char pad_1c4[0x38];
+	RVSub1FC* field_1fc;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x006771a0
+void RenderView::update()
+{
+	((RenderViewSub0C*)sub_000c_01c8)->field_1fc->m();
+	((RenderViewSub0C*)sub_000c_01c8)->field_1a0->m();
+	((RenderViewSub0C*)sub_000c_01c8)->field_1a4->m();
+
+	RenderViewSub0C* sub = (RenderViewSub0C*)sub_000c_01c8;
+	if (sub->field_1c0)
+		sub->field_1c0->m();
+
+	sub = (RenderViewSub0C*)sub_000c_01c8;
+	if (sub->field_1bc)
+		sub->field_1bc->m();
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

@@ -31,6 +31,7 @@ public:
 	bool testAndClearFlagA0();
 	void noop();
 	void initResources();
+	void update();
 	// AUTO-GENERATED METHODS
 };
 
