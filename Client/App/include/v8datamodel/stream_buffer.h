@@ -30,6 +30,7 @@ public:
 	bool getFlag60Bit2() const;
 	bool getFlag68Bit2() const;
 	bool getFlagA0Bit2() const;
+	bool getFlagF0Bit2() const;
 	// AUTO-GENERATED METHODS
 };
 

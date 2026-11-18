@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18 19:26:34 UTC",
+ "updated_at": "2026-11-18 19:29:56 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 1.8793,
- "implemented_total": 176,
- "function_annotations": 176,
+ "matchable_coverage_pct": 1.9114,
+ "implemented_total": 179,
+ "function_annotations": 179,
  "stub_annotations": 0,
- "perfect_100_count": 176,
- "matched_real_functions": 176,
+ "perfect_100_count": 179,
+ "matched_real_functions": 179,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.4339,
- "overall_byte_coverage_pct": 0.0131,
+ "overall_function_coverage_pct": 0.4413,
+ "overall_byte_coverage_pct": 0.0136,
  "usage": {
-  "calls_24h": 117,
+  "calls_24h": 127,
   "failures_24h": 0,
-  "completion_tokens_24h": 645988,
-  "reasoning_tokens_24h": 636749,
-  "avg_latency_s": 100.9
+  "completion_tokens_24h": 698031,
+  "reasoning_tokens_24h": 688023,
+  "avg_latency_s": 101.0
  },
- "functions_total": 176,
+ "functions_total": 179,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 69,
-   "functions": 69,
-   "bytes": 526
+   "matched": 71,
+   "functions": 71,
+   "bytes": 554
   },
   {
    "name": "App/v8kernel",
@@ -81,6 +81,12 @@
    "matched": 3,
    "functions": 3,
    "bytes": 23
+  },
+  {
+   "name": "RobloxStudio/RobloxTreeWidget.cpp",
+   "matched": 2,
+   "functions": 2,
+   "bytes": 19
   },
   {
    "name": "App/v8tree",
@@ -156,12 +162,6 @@
   },
   {
    "name": "RobloxStudio/RobloxTreeWidgetItem.cpp",
-   "matched": 1,
-   "functions": 1,
-   "bytes": 4
-  },
-  {
-   "name": "RobloxStudio/RobloxTreeWidget.cpp",
    "matched": 1,
    "functions": 1,
    "bytes": 4
@@ -598,6 +598,17 @@
    "matchable": true
   },
   {
+   "address": "0x00a9c2e0",
+   "kind": "FUNCTION",
+   "name": "RBX::HandlesBase::MouseDownCaptureInfo::dispose",
+   "mangled": "?dispose@MouseDownCaptureInfo@HandlesBase@RBX@@QAEXXZ",
+   "file": "Client/App/v8datamodel/MouseDownCaptureInfo.cpp",
+   "orig_size": 15,
+   "recomp_size": 15,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00a8d9a0",
    "kind": "FUNCTION",
    "name": "RBX::Motor6D::getCurrentAngle",
@@ -726,6 +737,17 @@
    "file": "Client/App/v8datamodel/stream_buffer.cpp",
    "orig_size": 10,
    "recomp_size": 10,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00a2d200",
+   "kind": "FUNCTION",
+   "name": "std::stream_buffer::getFlagF0Bit2",
+   "mangled": "?getFlagF0Bit2@stream_buffer@std@@QBE_NXZ",
+   "file": "Client/App/v8datamodel/stream_buffer.cpp",
+   "orig_size": 13,
+   "recomp_size": 13,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1852,6 +1874,17 @@
    "matchable": true
   },
   {
+   "address": "0x0053dbe0",
+   "kind": "FUNCTION",
+   "name": "RobloxTreeWidget::hasSelection",
+   "mangled": "?hasSelection@RobloxTreeWidget@@QAEHXZ",
+   "file": "Client/RobloxStudio/RobloxTreeWidget.cpp",
+   "orig_size": 15,
+   "recomp_size": 15,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00539120",
    "kind": "FUNCTION",
    "name": "RobloxTreeWidget::getCompleteObject",
@@ -2333,9 +2366,33 @@
    "matched": 176,
    "implemented": 176,
    "pct": 1.8793
+  },
+  {
+   "t": "2026-11-18 19:29:56 UTC",
+   "matched": 179,
+   "implemented": 179,
+   "pct": 1.9114
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-18T19:29:17",
+   "address": "0x00a2d200",
+   "name": "std::stream_buffer::getFlagF0Bit2",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:28:06",
+   "address": "0x00a9c2e0",
+   "name": "RBX::HandlesBase::MouseDownCaptureInfo::dispose",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:26:35",
+   "address": "0x0053dbe0",
+   "name": "RobloxTreeWidget::hasSelection",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-18T19:25:55",
    "address": "0x00bd7f90",
@@ -3037,25 +3094,7 @@
    "address": "0x00596500",
    "name": "btSphereShape::getConst17002028",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:43:13",
-   "address": "0x00595e70",
-   "name": "btTriangleIndexVertexArray::getConst28",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:42:36",
-   "address": "0x00595dd0",
-   "name": "RBX::StarterPackService::getConst12",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:42:34",
-   "address": "0x00594f30",
-   "name": "btConvexHullShape::getConst68",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 64.69
+ "match_rate_per_hour": 64.46
 }
