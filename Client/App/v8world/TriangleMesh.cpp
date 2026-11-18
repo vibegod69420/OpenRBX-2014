@@ -35,6 +35,33 @@ bool TriangleMesh::update()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0099d2d0
+int TriangleMesh::getTriangleCount() const
+{
+	struct TriangleElement
+	{
+		char data[36];
+	};
+
+	struct TriangleArray
+	{
+		char pad[0x18];
+		TriangleElement* begin;
+		TriangleElement* end;
+	};
+
+	struct TriangleMeshData
+	{
+		char pad[0x18];
+		TriangleArray* array;
+	};
+
+	TriangleMeshData* meshData = *reinterpret_cast<TriangleMeshData* const*>(
+		reinterpret_cast<const char*>(this) + 0x28);
+	TriangleArray* array = meshData->array;
+	return static_cast<int>(array->end - array->begin);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

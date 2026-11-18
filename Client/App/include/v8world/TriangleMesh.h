@@ -18,6 +18,7 @@ public:
 
 	float getGridSize() const;
 	bool update();
+	int getTriangleCount() const;
 	// AUTO-GENERATED METHODS
 };
 
