@@ -47,7 +47,8 @@ trap 'rm -rf "$tmp"' EXIT
 git -C "$SRC" archive HEAD Client | tar -x -C "$tmp"
 
 rsync -a --delete "$tmp/Client/" "$DST/Client/"
-rsync -a --delete "$SRC/docs/" "$DST/docs/"
+# The harness writes worker.json through a .tmp probe before renaming it; never publish that.
+rsync -a --delete --exclude='*.tmp' "$SRC/docs/" "$DST/docs/"
 cp -f "$SRC/ROBLOXSTUDIOPROGRESS.json" "$SRC/ROBLOXSTUDIOPROGRESS.SVG" "$DST/" 2>/dev/null || true
 
 git add -A
