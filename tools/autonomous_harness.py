@@ -137,6 +137,7 @@ def _apply_and_verify(
     orig_bytes: bytes,
     original_cpp: str,
     original_h: str,
+    parsed: dict | None = None,
 ):
     """
     Mutating half of one attempt: append, compile, score, then promote or restore. Runs under
@@ -144,8 +145,23 @@ def _apply_and_verify(
     make an unverified `// FUNCTION:` marker look implemented).
     """
     with WRITE_LOCK:
+        if parsed and parsed.get("decl"):
+            source_router.ensure_class_header_and_cpp(route, method_decl=parsed["decl"])
         source_router.append_method_to_cpp(cpp_path, snippet)
         ok, obj_path, compiler_out = verify_tu.compile_cpp_to_coff(cpp_path, use_cache=False)
+        # A compile is ~2s and a model retry is ~150s, so undeclared types in the generated
+        # signature are worth fixing with the compiler before buying another round-trip.
+        repairs = 0
+        while not ok and repairs < 2:
+            if not _repair_missing_declarations(compiler_out, cpp_path, h_path):
+                break
+            repairs += 1
+            ok, obj_path, compiler_out = verify_tu.compile_cpp_to_coff(cpp_path, use_cache=False)
+        if repairs:
+            log(
+                f"  [0x{addr:08x}] auto-repaired missing declarations in {route['h_rel']} "
+                f"({repairs} pass(es), compiles={ok})"
+            )
         if not ok:
             cpp_path.write_text(original_cpp, encoding="utf-8")
             h_path.write_text(original_h, encoding="utf-8")
@@ -1155,43 +1171,189 @@ def run_deterministic_batch_pass(candidate_addrs: list[int], max_matches: int = 
     return verified_hex
 
 
-def _strip_enclosing_namespaces(snippet: str, namespaces: list[str]) -> str:
-    """
-    The .cpp already sits inside its namespace, so a generated `RBX::Class::method`
-    definition is a C2888 error ('symbol cannot be defined within namespace').
-    Removes the enclosing prefix, longest first, to leave `Class::method`.
-    """
-    nss = [n for n in namespaces if n]
-    for depth in range(len(nss), 0, -1):
-        prefix = "::".join(nss[:depth]) + "::"
-        snippet = re.sub(r"(?<![\w:])" + re.escape(prefix), "", snippet)
-    return snippet
+_STORAGE_KEYWORDS = (
+    "virtual",
+    "static",
+    "inline",
+    "__thiscall",
+    "__cdecl",
+    "__stdcall",
+    "explicit",
+    "extern",
+    "constexpr",
+    "register",
+)
+_BUILTIN_TYPE_WORDS = {
+    "void", "int", "char", "float", "double", "bool", "short", "long", "unsigned",
+    "signed", "const", "volatile", "struct", "class", "enum", "union", "std",
+    "size_t", "wchar_t", "auto", "this", "return", "operator", "true", "false",
+}
+_QUALIFIED_HEAD_RE = re.compile(
+    r"(?P<qual>(?:[A-Za-z_]\w*\s*::\s*)+)(?P<name>~?[A-Za-z_]\w*)\s*\("
+)
+_STATEMENT_SEP_RE = re.compile(r"[;{}]")
 
 
-def _declaration_from_llm_snippet(snippet: str, cls: str) -> str | None:
+def _split_params(text: str, open_idx: int) -> tuple[str, int]:
+    """Returns (parameter_text, index_after_closing_paren) for the `(` at `open_idx`."""
+    depth = 0
+    angle = 0
+    i = open_idx
+    while i < len(text):
+        ch = text[i]
+        if ch == '"':
+            i += 1
+            while i < len(text) and text[i] != '"':
+                i += 2 if text[i] == "\\" else 1
+        elif ch == "<":
+            angle += 1
+        elif ch == ">" and angle:
+            angle -= 1
+        elif not angle and ch == "(":
+            depth += 1
+        elif not angle and ch == ")":
+            depth -= 1
+            if depth == 0:
+                return text[open_idx + 1 : i], i + 1
+        i += 1
+    return "", -1
+
+
+def _normalize_generated_definition(snippet: str, route: dict) -> tuple[str, dict | None]:
     """
-    Turns a generated definition (`void Class::name(int a) const`) into the member
-    declaration the header needs. Without it every LLM body fails with C2039
-    'name is not a member of Class', which silently burned whole attempt budgets.
+    Collapses a generated definition head onto `<route.class_name>::<name>` and derives the
+    member declaration the header must carry.
+
+    The block is appended *inside* `namespace X { ... }`, so a definition that repeats the
+    enclosing namespace is C2888 ('symbol cannot be defined within namespace "X"'), and one
+    that names any other owning class is C2039 ('is not a member of'). Together those were 86
+    of 192 compile failures in a 4.6 hour window, and each cost a full model round-trip.
     """
-    for line in snippet.splitlines():
-        text = line.strip()
-        if f"{cls}::" not in text or "(" not in text or text.startswith("//"):
+    cls = route["class_name"]
+    for match in _QUALIFIED_HEAD_RE.finditer(snippet):
+        prefix = snippet[: match.start()]
+        seg_start = 0
+        for sep in _STATEMENT_SEP_RE.finditer(prefix):
+            seg_start = sep.end()
+        # The `// FUNCTION: 0x...` marker sits right above the head and is not part of the
+        # signature; leaving it in rejects a perfectly good definition.
+        segment = re.sub(r"//[^\n]*", "", prefix[seg_start:])
+        # A call (`return RBX::Math::clamp(`) is not a definition head: a definition head is a
+        # return type, optionally preceded by storage keywords, and nothing else.
+        if any(tok in segment for tok in ("=", "(", ")", "return", "delete", "[", "]")):
             continue
-        head, _, rest = text.partition(f"{cls}::")
-        name, _, tail = rest.partition("(")
-        params, _, after = tail.partition(")")
-        if not name.strip().isidentifier():
+        ret_type = " ".join(segment.split())
+        for _ in range(4):
+            for kw in _STORAGE_KEYWORDS:
+                if ret_type.startswith(kw + " "):
+                    ret_type = ret_type[len(kw) + 1 :].strip()
+
+        name = match.group("name").strip()
+        if ret_type:
+            if not re.match(r"^[A-Za-z_~]", ret_type):
+                continue
+        elif name not in (cls, "~" + cls):
+            # A head with no return type is only legal for a constructor/destructor.
             continue
-        ret = head.strip()
-        for kw in ("virtual ", "static ", "inline ", "__thiscall ", "explicit "):
-            while ret.startswith(kw):
-                ret = ret[len(kw):].strip()
-        if not ret:
+
+        params, after = _split_params(snippet, match.end() - 1)
+        if after < 0:
             continue
-        const = " const" if after.strip().startswith("const") else ""
-        return f"{ret} {name.strip()}({params}){const};"
-    return None
+        # A parameter list split across lines is legal but produces an unreadable declaration.
+        params = re.sub(r"\s*\n\s*", " ", params)
+        is_const = bool(re.match(r"\s*const\b", snippet[after : after + 24]))
+        parts = [p.strip() for p in match.group("qual").strip().rstrip(":").split("::") if p.strip()]
+        original_class = parts[-1] if parts else cls
+        # `QWidget *Class::m()` rather than `QWidget * Class::m()`.
+        sep = "" if ret_type.endswith(("*", "&")) else " "
+
+        head = f"{ret_type}{sep}{cls}::{name}(" if ret_type else f"{cls}::{name}("
+        snippet = snippet[:seg_start] + head + snippet[match.end() :]
+        return snippet, {
+            "method_name": name,
+            "class": cls,
+            "original_class": original_class,
+            "renamed": original_class != cls,
+            "decl": (f"{ret_type}{sep}" if ret_type else "") + f"{name}({params}){' const' if is_const else ''};",
+        }
+    return snippet, None
+
+
+_ERROR_LINE_RE = re.compile(
+    r"(?P<file>[^|\n]+?)\((?P<line>\d+)\)\s*:\s*(?:fatal\s+)?error\s+(?P<code>C\d{4})\s*:\s*(?P<msg>[^|\n]*)"
+)
+# C4430/C2143/C3646 report an unknown type; C2065/C2653 name it in quotes; C2504 is an
+# undefined base class. C2039 is deliberately absent: the quoted token there is the *member*
+# name, so forward-declaring it would inject `class dispose;`.
+_UNKNOWN_TYPE_CODES = {"C4430", "C2143", "C2065", "C2653", "C2504", "C3646"}
+
+
+def _leading_pointer_type(line: str) -> str | None:
+    """`QWidget *getWidget();` -> `QWidget` (the type MSVC could not name)."""
+    m = re.match(r"^\s*(?:[A-Za-z_]\w*\s+)*(?P<name>[A-Za-z_]\w*)\s*[\*&]", line)
+    return m.group("name") if m else None
+
+
+def _repair_missing_declarations(compiler_out: str, cpp_path: Path, h_path: Path) -> bool:
+    """
+    Uses the ~2s compiler as a declaration oracle instead of paying a ~150s model call for it:
+    reads undeclared-type errors and forward-declares them in the target header so the caller can
+    simply recompile. Declarations are kept inside the namespace block so unqualified uses resolve.
+    Returns True when the header actually changed.
+    """
+    try:
+        h_text = h_path.read_text(encoding="utf-8")
+        cpp_text = cpp_path.read_text(encoding="utf-8", errors="ignore")
+    except OSError:
+        return False
+
+    wanted: list[str] = []
+    for m in _ERROR_LINE_RE.finditer(compiler_out):
+        if m.group("code") not in _UNKNOWN_TYPE_CODES:
+            continue
+        ident = None
+        quoted = re.search(r"'([A-Za-z_]\w*)'", m.group("msg"))
+        if quoted:
+            ident = quoted.group(1)
+        else:
+            err_file = m.group("file").replace("\\", "/").rsplit("/", 1)[-1]
+            source = h_text if err_file == h_path.name else cpp_text if err_file == cpp_path.name else None
+            if source is not None:
+                try:
+                    ident = _leading_pointer_type(source.splitlines()[int(m.group("line")) - 1])
+                except (IndexError, ValueError):
+                    ident = None
+        if ident and ident not in _BUILTIN_TYPE_WORDS and ident not in wanted:
+            wanted.append(ident)
+    if not wanted:
+        return False
+
+    extra: list[str] = []
+    for ident in wanted[:4]:
+        if re.search(r"\b(?:class|struct|union|enum)\s+" + re.escape(ident) + r"\b", h_text):
+            continue
+        if re.search(r"\btypedef\b[^;]*\b" + re.escape(ident) + r"\b\s*;", h_text):
+            continue
+        if ident == "NULL":
+            if "#define NULL" in h_text:
+                continue
+            extra.append("#ifndef NULL\n#define NULL 0\n#endif")
+        else:
+            extra.append(f"class {ident};")
+    if not extra:
+        return False
+
+    block = "\n".join(extra)
+    marker = "// AUTO-GENERATED HELPERS"
+    if marker in h_text:
+        h_text = h_text.replace(marker, f"{block}\n{marker}", 1)
+    else:
+        ns = re.search(r"^namespace\s+\w+\s*\{", h_text, flags=re.MULTILINE)
+        if not ns:
+            return False
+        h_text = h_text[: ns.end()] + f"\n{block}" + h_text[ns.end() :]
+    h_path.write_text(h_text, encoding="utf-8")
+    return True
 
 
 def _mentions_address(text: str, addr: int) -> bool:
@@ -1271,6 +1433,15 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
         "Do NOT include `main()` or non-existent external headers.\n\n"
         "Write plain C++ only: no `__asm`/inline assembly, no absolute-address calls, and "
         f"the body must be a member of `{route['class_name']}` with an ordinary signature.\n\n"
+        f"HARD RULES for the owning class `{route['class_name']}`:\n"
+        f"1. Define exactly one method as `<ReturnType> {route['class_name']}::<name>(<params>)`.\n"
+        f"2. Never repeat `{'::'.join(route['namespaces'])}::` in that definition head -- the block is "
+        "already inserted inside that namespace, so a qualified head is MSVC C2888.\n"
+        f"3. Never define a member of a different class; if the real owner looks different, still write "
+        f"`{route['class_name']}::<name>` (anything else is C2039).\n"
+        f"4. The matching declaration is added to `{route['h_rel']}` automatically. Every type you use "
+        "must be a builtin, already visible in the header, or forward-declared (`class Foo;`) at the "
+        "top of your own block.\n\n"
         + claude_md
     )
 
@@ -1324,29 +1495,26 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
             )
             continue
 
-        stripped = _strip_enclosing_namespaces(candidate_cpp_snippet, route["namespaces"])
-        if stripped != candidate_cpp_snippet:
-            log(f"  [0x{addr:08x} Attempt {attempt}] dropped redundant namespace qualification from the definition")
-            candidate_cpp_snippet = stripped
+        candidate_cpp_snippet, parsed_def = _normalize_generated_definition(candidate_cpp_snippet, route)
+        if parsed_def and parsed_def["renamed"]:
+            log(
+                f"  [0x{addr:08x} Attempt {attempt}] re-qualified definition "
+                f"{parsed_def['original_class']}::{parsed_def['method_name']} -> "
+                f"{parsed_def['class']}::{parsed_def['method_name']}"
+            )
 
-        if re.search(r"_*asm", candidate_cpp_snippet, re.IGNORECASE):
+        if re.search(r"\b_*asm\b", candidate_cpp_snippet, re.IGNORECASE):
             log(f"  [0x{addr:08x} Attempt {attempt}] rejected inline-assembly snippet (not verifiable C++)")
             continue
 
-        member_decl = _declaration_from_llm_snippet(candidate_cpp_snippet, route["class_name"])
-        if member_decl:
-            name_match = re.search(r"(\w+)\s*\(", member_decl)
-            already = bool(
-                name_match and re.search(r"" + re.escape(name_match.group(1)) + r"\s*\(", h_path.read_text(encoding="utf-8"))
-            )
-            if already and name_match and re.search(
-                re.escape(name_match.group(1)) + r"\s*\([^;{]*\{", h_path.read_text(encoding="utf-8")
-            ):
-                log(f"  [0x{addr:08x} Attempt {attempt}] member already defined inline in header; skipping target")
-                continue
-            if not already:
-                with WRITE_LOCK:
-                    source_router.ensure_class_header_and_cpp(route, method_decl=member_decl)
+        # A body the header already defines inline can never be redeclared: skip before
+        # spending the compile, and before a retry re-burns the same guaranteed failure.
+        if parsed_def and re.search(
+            r"\b" + re.escape(parsed_def["method_name"]) + r"\s*\([^;{]*\{",
+            h_path.read_text(encoding="utf-8"),
+        ):
+            log(f"  [0x{addr:08x} Attempt {attempt}] member already defined inline in header; skipping target")
+            continue
 
         outcome = _apply_and_verify(
             route,
@@ -1357,6 +1525,7 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
             orig_bytes,
             original_cpp_content,
             original_h_content,
+            parsed=parsed_def,
         )
         if outcome[0] == "compile_failed":
             compiler_out = outcome[1]
