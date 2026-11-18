@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18 22:45:45 UTC",
+ "updated_at": "2026-11-18 22:52:12 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 3.4277,
- "implemented_total": 321,
- "function_annotations": 321,
+ "matchable_coverage_pct": 3.4383,
+ "implemented_total": 322,
+ "function_annotations": 322,
  "stub_annotations": 0,
- "perfect_100_count": 321,
- "matched_real_functions": 321,
+ "perfect_100_count": 322,
+ "matched_real_functions": 322,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.7914,
- "overall_byte_coverage_pct": 0.063,
+ "overall_function_coverage_pct": 0.7939,
+ "overall_byte_coverage_pct": 0.0638,
  "usage": {
-  "calls_24h": 1172,
+  "calls_24h": 1211,
   "failures_24h": 0,
-  "completion_tokens_24h": 12012702,
-  "reasoning_tokens_24h": 11827740,
-  "avg_latency_s": 180.0
+  "completion_tokens_24h": 12527984,
+  "reasoning_tokens_24h": 12332463,
+  "avg_latency_s": 180.9
  },
- "functions_total": 321,
+ "functions_total": 322,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -108,6 +108,12 @@
   },
   {
    "name": "RobloxStudio/ReplaceDialog.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 79
+  },
+  {
+   "name": "RobloxStudio/RbxWorkspace.cpp",
    "matched": 1,
    "functions": 1,
    "bytes": 79
@@ -3459,9 +3465,21 @@
    "matched": 321,
    "implemented": 321,
    "pct": 3.4277
+  },
+  {
+   "t": "2026-11-18 22:52:12 UTC",
+   "matched": 322,
+   "implemented": 322,
+   "pct": 3.4383
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-18T22:49:44",
+   "address": "0x005864e0",
+   "name": "RbxWorkspace::getView",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-18T22:39:31",
    "address": "0x00469d00",
@@ -4175,13 +4193,7 @@
    "address": "0x00894960",
    "name": "RBX::UnionOperation::sub_894960",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T19:58:25",
-   "address": "0x00495660",
-   "name": "btDefaultCollisionConfiguration::getField18",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 53.14
+ "match_rate_per_hour": 52.37
 }
