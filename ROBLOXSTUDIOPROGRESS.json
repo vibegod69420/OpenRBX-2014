@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 22:05:40 UTC",
+  "updated_at": "2026-11-18 22:12:26 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 3.2782,
-  "implemented_total": 307,
-  "function_annotations": 307,
+  "matchable_coverage_pct": 3.2995,
+  "implemented_total": 309,
+  "function_annotations": 309,
   "stub_annotations": 0,
-  "perfect_100_count": 307,
-  "matched_real_functions": 307,
+  "perfect_100_count": 309,
+  "matched_real_functions": 309,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.7569,
-  "overall_byte_coverage_pct": 0.0554,
+  "overall_function_coverage_pct": 0.7618,
+  "overall_byte_coverage_pct": 0.0558,
   "usage": {
-    "calls_24h": 935,
+    "calls_24h": 979,
     "failures_24h": 0,
-    "completion_tokens_24h": 9114847,
-    "reasoning_tokens_24h": 8974782,
-    "avg_latency_s": 172.4
+    "completion_tokens_24h": 9629580,
+    "reasoning_tokens_24h": 9483591,
+    "avg_latency_s": 174.1
   },
   "functions": [
     {
@@ -320,6 +320,17 @@
       "matchable": true
     },
     {
+      "address": "0x004b3be0",
+      "kind": "FUNCTION",
+      "name": "RBX::detail::sp_counted_impl_p::invoke",
+      "mangled": "?invoke@sp_counted_impl_p@RBX@@QAAXXZ",
+      "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
+      "orig_size": 18,
+      "recomp_size": 18,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x004bb180",
       "kind": "FUNCTION",
       "name": "RobloxIDEDoc::getField80",
@@ -503,6 +514,17 @@
       "file": "Client/RobloxStudio/RobloxWebDoc.cpp",
       "orig_size": 5,
       "recomp_size": 5,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0052fcd0",
+      "kind": "FUNCTION",
+      "name": "boost::thread_data::invoke",
+      "mangled": "?invoke@thread_data@boost@@QAAXXZ",
+      "file": "Client/App/v8datamodel/thread_data.cpp",
+      "orig_size": 21,
+      "recomp_size": 21,
       "match_pct": 100.0,
       "matchable": true
     },

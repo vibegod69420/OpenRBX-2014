@@ -17,6 +17,7 @@ public:
 	};
 
 	void run();
+	void __cdecl invoke();
 	// AUTO-GENERATED METHODS
 };
 

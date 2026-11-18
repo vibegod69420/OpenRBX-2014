@@ -20,6 +20,7 @@ public:
 	void freeMember0C();
 	void freeMember0C_slot1();
 	void dispose();
+	void __cdecl invoke();
 	// AUTO-GENERATED METHODS
 };
 

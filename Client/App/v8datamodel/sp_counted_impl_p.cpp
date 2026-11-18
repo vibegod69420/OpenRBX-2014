@@ -35,6 +35,19 @@ void sp_counted_impl_p::dispose()
 	}
 }
 
+struct sp_counted_impl_p_call
+{
+	void (*func)(void*);
+	void* data;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x004b3be0
+void __cdecl sp_counted_impl_p::invoke()
+{
+	sp_counted_impl_p_call* c = reinterpret_cast<sp_counted_impl_p_call*>(this);
+	c->func(c->data);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
