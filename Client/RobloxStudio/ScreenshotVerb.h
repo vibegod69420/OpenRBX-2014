@@ -17,6 +17,7 @@ public:
 	};
 
 	int isEnabled();
+	void*getTarget();
 	// AUTO-GENERATED METHODS
 };
 
