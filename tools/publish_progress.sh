@@ -56,6 +56,17 @@ if git diff --cached --quiet; then
     exit 0
 fi
 
+# docs/worker.json is only a liveness heartbeat. Publish it on its own at most every ten
+# minutes so a long target proves the worker is alive without flooding the history.
+if [ "$(git diff --cached --name-only | grep -v '^docs/worker\.json$' | wc -l)" -eq 0 ]; then
+    last=$(git log -1 --format=%ct 2>/dev/null || echo 0)
+    if [ $(( $(date +%s) - last )) -lt 600 ]; then
+        echo "heartbeat only; throttled"
+        git reset -q
+        exit 0
+    fi
+fi
+
 matched="$(python3 -c "import json;print(json.load(open('docs/progress.json'))['perfect_100_count'])" 2>/dev/null || echo "?")"
 git -c user.name="OpenRBX worker" -c user.email="harness@openrbx.local" \
     commit -q -m "Worker sync: ${matched} byte-exact functions"

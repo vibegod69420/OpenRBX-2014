@@ -61,6 +61,27 @@ def log(msg: str):
     print(f"[{ts}] {msg}", flush=True)
 
 
+WORKER_STATUS = ROOT / "docs" / "worker.json"
+_STATUS: dict = {"state": "starting", "address": None, "name": None, "attempt": 0, "pct": None}
+
+
+def publish_status(**fields) -> None:
+    """
+    A hard routine can occupy four model calls, so the dashboard otherwise looks dead for ten
+    minutes even though the worker is busy. This heartbeat is written before every request and
+    published by tools/publish_progress.sh, which throttles commits of this file alone.
+    """
+    _STATUS.update(fields)
+    _STATUS["ts"] = time.strftime("%Y-%m-%dT%H:%M:%S")
+    try:
+        WORKER_STATUS.parent.mkdir(parents=True, exist_ok=True)
+        probe = WORKER_STATUS.with_suffix(".tmp")
+        probe.write_text(json.dumps(_STATUS), encoding="utf-8")
+        probe.replace(WORKER_STATUS)
+    except OSError:
+        pass
+
+
 def rotate_log_if_needed(max_bytes: int = 64 * 1024 * 1024, keep: int = 8 * 1024 * 1024) -> None:
     """
     The worker writes one append-only file for weeks. systemd holds that fd in O_APPEND mode,
@@ -1173,6 +1194,13 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
             f"Provide only the C++ implementation block (and any needed inline struct/declaration above it) "
             f"preceded by `// FUNCTION: ROBLOXSTUDIO 0x{addr:08x}` in a ```cpp block."
         )
+        publish_status(
+            state="generating",
+            address=f"0x{addr:08x}",
+            name=route["qualified_class"],
+            attempt=attempt,
+            pct=round(best_pct, 2) if best_pct >= 0 else None,
+        )
         try:
             resp_text = call_llm_chat(base_url, system_prompt, prompt, max_tokens=budget_tokens)
             candidate_cpp_snippet = extract_cpp_code_block(resp_text)
@@ -1443,12 +1471,16 @@ def run_forever():
                 record_work(addr, ok, pct, fn_name)
                 if ok and pct >= 99.99:
                     matched_in_cycle.append(f"0x{addr:08x}")
+                    # A verified match is the only thing the dashboard needs. Holding it until
+                    # nine more targets had been scanned left the site stale for half an hour at
+                    # a time — and a restart discarded the uncommitted batch entirely. Publish
+                    # this one now, then pick up the next target on the following pass.
+                    break
+                if base_url:
+                    attempted_with_llm.add(addr)
                 else:
-                    if base_url:
-                        attempted_with_llm.add(addr)
-                    else:
-                        skipped_without_llm.add(addr)
-                if len(matched_in_cycle) >= 20 or (base_url and scanned >= 10) or (not base_url and scanned >= 500):
+                    skipped_without_llm.add(addr)
+                if (base_url and scanned >= 10) or (not base_url and scanned >= 500):
                     break
 
             if matched_in_cycle:
