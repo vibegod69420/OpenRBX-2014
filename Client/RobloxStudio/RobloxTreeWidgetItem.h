@@ -17,6 +17,7 @@ public:
 	};
 
 	RobloxTreeWidgetItem* getThis();
+	int vslot1();
 	// AUTO-GENERATED METHODS
 };
 

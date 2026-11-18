@@ -22,6 +22,11 @@ int Seat::isOccupied() const
     return *reinterpret_cast<const int*>(reinterpret_cast<const char*>(this) + 0x118) == 1;
 }
 
+void*Seat::sub_892DE0()
+{
+	return reinterpret_cast<char*>(this) - 0x64;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

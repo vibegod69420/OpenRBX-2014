@@ -18,6 +18,7 @@ public:
 
 	int getClassIndex();
 	int isOccupied() const;
+	void*sub_892DE0();
 	// AUTO-GENERATED METHODS
 };
 

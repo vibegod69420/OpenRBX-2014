@@ -88,6 +88,15 @@ bool stream_buffer::getFlagF0Bit2() const
 	return ((*(const unsigned int*)((const char*)this + 0xf0)) >> 2) & 1;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a2f000
+extern "C" __declspec(dllimport) void __stdcall stream_buffer_iat_e102e8(void*, void*, void*);
+
+void stream_buffer::vslot22()
+{
+	void* p = *(void**)((char*)this + 0x88);
+	stream_buffer_iat_e102e8(p, p, p);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18 21:58:28 UTC",
+ "updated_at": "2026-11-18 22:05:40 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 3.2675,
- "implemented_total": 306,
- "function_annotations": 306,
+ "matchable_coverage_pct": 3.2782,
+ "implemented_total": 307,
+ "function_annotations": 307,
  "stub_annotations": 0,
- "perfect_100_count": 306,
- "matched_real_functions": 306,
+ "perfect_100_count": 307,
+ "matched_real_functions": 307,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.7544,
- "overall_byte_coverage_pct": 0.0553,
+ "overall_function_coverage_pct": 0.7569,
+ "overall_byte_coverage_pct": 0.0554,
  "usage": {
-  "calls_24h": 898,
+  "calls_24h": 935,
   "failures_24h": 0,
-  "completion_tokens_24h": 8754558,
-  "reasoning_tokens_24h": 8618845,
-  "avg_latency_s": 173.1
+  "completion_tokens_24h": 9114847,
+  "reasoning_tokens_24h": 8974782,
+  "avg_latency_s": 172.4
  },
- "functions_total": 306,
+ "functions_total": 307,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 124,
-   "functions": 124,
-   "bytes": 1976
+   "matched": 125,
+   "functions": 125,
+   "bytes": 1992
   },
   {
    "name": "App/v8world",
@@ -1138,6 +1138,17 @@
    "file": "Client/App/v8datamodel/stream_buffer.cpp",
    "orig_size": 6,
    "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00a2f000",
+   "kind": "FUNCTION",
+   "name": "stream_buffer_iat_e102e8",
+   "mangled": "?vslot22@stream_buffer@std@@QAEXXZ",
+   "file": "Client/App/v8datamodel/stream_buffer.cpp",
+   "orig_size": 16,
+   "recomp_size": 16,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3032,17 +3043,6 @@
    "recomp_size": 4,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x0058f6b0",
-   "kind": "FUNCTION",
-   "name": "RBX::PathInterpolatedCFrame::getField44",
-   "mangled": "?getField44@PathInterpolatedCFrame@RBX@@QBEHXZ",
-   "file": "Client/App/util/PathInterpolatedCFrame.cpp",
-   "orig_size": 4,
-   "recomp_size": 4,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -3405,9 +3405,33 @@
    "matched": 306,
    "implemented": 306,
    "pct": 3.2675
+  },
+  {
+   "t": "2026-11-18 22:05:40 UTC",
+   "matched": 307,
+   "implemented": 307,
+   "pct": 3.2782
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-18T22:04:01",
+   "address": "0x00a2f000",
+   "name": "stream_buffer_iat_e102e8",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T21:59:08",
+   "address": "0x00892de0",
+   "name": "func_00892de0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T21:58:37",
+   "address": "0x005378a0",
+   "name": "func_005378a0",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-18T21:56:57",
    "address": "0x00bb1500",
@@ -4109,25 +4133,7 @@
    "address": "0x00621790",
    "name": "RBX::Graphics::FastCluster::size",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T19:46:18",
-   "address": "0x0052fcf0",
-   "name": "RBX::Network::RoundRobinPhysicsSender::dispose",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T19:43:55",
-   "address": "0x007c2460",
-   "name": "RBX::BoxSelectCommand::cancelSelection",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T19:43:14",
-   "address": "0x00ca97e0",
-   "name": "sendDataOut",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 58.26
+ "match_rate_per_hour": 57.14
 }
