@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 23:48:26 UTC",
+  "updated_at": "2026-11-18 23:55:15 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 3.6092,
-  "implemented_total": 338,
-  "function_annotations": 338,
+  "matchable_coverage_pct": 3.6519,
+  "implemented_total": 342,
+  "function_annotations": 342,
   "stub_annotations": 0,
-  "perfect_100_count": 338,
-  "matched_real_functions": 338,
+  "perfect_100_count": 342,
+  "matched_real_functions": 342,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.8333,
-  "overall_byte_coverage_pct": 0.0863,
+  "overall_function_coverage_pct": 0.8432,
+  "overall_byte_coverage_pct": 0.0964,
   "usage": {
-    "calls_24h": 1451,
+    "calls_24h": 1472,
     "failures_24h": 0,
-    "completion_tokens_24h": 15844090,
-    "reasoning_tokens_24h": 15577171,
-    "avg_latency_s": 190.8
+    "completion_tokens_24h": 16147080,
+    "reasoning_tokens_24h": 15871559,
+    "avg_latency_s": 191.2
   },
   "functions": [
     {
@@ -1405,6 +1405,17 @@
       "file": "Client/Rendering/GfxRender/ParticleEmitter.cpp",
       "orig_size": 32,
       "recomp_size": 32,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00672a20",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::Emitter::destroySubPtr0C",
+      "mangled": "?destroySubPtr0C@Emitter@Graphics@RBX@@QAEXXZ",
+      "file": "Client/Rendering/GfxRender/Emitter.cpp",
+      "orig_size": 402,
+      "recomp_size": 26,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -2993,6 +3004,17 @@
       "matchable": true
     },
     {
+      "address": "0x00b530d0",
+      "kind": "FUNCTION",
+      "name": "RBX::Kernel::getConst15",
+      "mangled": "?getConst15@Kernel@RBX@@QBEHXZ",
+      "file": "Client/App/v8kernel/Kernel.cpp",
+      "orig_size": 285,
+      "recomp_size": 6,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00b5c020",
       "kind": "FUNCTION",
       "name": "RBX::Assembly::setSleepEligible",
@@ -3070,6 +3092,17 @@
       "matchable": true
     },
     {
+      "address": "0x00b8c490",
+      "kind": "FUNCTION",
+      "name": "RBX::Assembly::putInKernel",
+      "mangled": "?putInKernel@Assembly@RBX@@QAEXXZ",
+      "file": "Client/App/v8world/Assembly.cpp",
+      "orig_size": 158,
+      "recomp_size": 158,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00b8daf0",
       "kind": "FUNCTION",
       "name": "RBX::NormalBreakConnector::getFlag28",
@@ -3108,6 +3141,17 @@
       "name": "RBX::AdvRotateTool::isEnabled",
       "mangled": "?isEnabled@AdvRotateTool@RBX@@QAE_NXZ",
       "file": "Client/App/tool/AdvRotateTool.cpp",
+      "orig_size": 120,
+      "recomp_size": 120,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b97b10",
+      "kind": "FUNCTION",
+      "name": "bool",
+      "mangled": "?isChecked@DropperTool@RBX@@QAE_NXZ",
+      "file": "Client/App/v8datamodel/DropperTool.cpp",
       "orig_size": 120,
       "recomp_size": 120,
       "match_pct": 100.0,

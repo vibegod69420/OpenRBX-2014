@@ -17,6 +17,7 @@ public:
 	};
 
 	void setSleepEligible();
+	void putInKernel();
 	// AUTO-GENERATED METHODS
 };
 
