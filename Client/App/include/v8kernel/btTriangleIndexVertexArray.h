@@ -19,6 +19,7 @@ public:
 
 	int getField24() const;
 	int getConst28() const;
+	int hasPremadeAabb() const;
 	// AUTO-GENERATED METHODS
 };
 

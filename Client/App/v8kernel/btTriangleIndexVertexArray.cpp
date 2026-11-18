@@ -16,6 +16,12 @@ int btTriangleIndexVertexArray::getConst28() const
 	return 28;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005961a0
+int btTriangleIndexVertexArray::hasPremadeAabb() const
+{
+	return (&field_0024)[6] == 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
