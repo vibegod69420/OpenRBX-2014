@@ -70,6 +70,12 @@ bool stream_buffer::getFlag60Bit2() const
 	return ((*(const unsigned int*)((const char*)this + 0x60)) >> 2) & 1;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a2d220
+bool stream_buffer::getFlag68Bit2() const
+{
+	return ((*(const unsigned int*)((const char*)this + 0x68)) >> 2) & 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

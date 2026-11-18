@@ -28,6 +28,7 @@ public:
 	int getConst19553048() const;
 	int getConst19554176() const;
 	bool getFlag60Bit2() const;
+	bool getFlag68Bit2() const;
 	// AUTO-GENERATED METHODS
 };
 

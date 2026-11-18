@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18 19:02:00 UTC",
+ "updated_at": "2026-11-18 19:05:55 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 1.5376,
- "implemented_total": 144,
- "function_annotations": 144,
+ "matchable_coverage_pct": 1.591,
+ "implemented_total": 149,
+ "function_annotations": 149,
  "stub_annotations": 0,
- "perfect_100_count": 144,
- "matched_real_functions": 144,
+ "perfect_100_count": 149,
+ "matched_real_functions": 149,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.355,
- "overall_byte_coverage_pct": 0.0091,
+ "overall_function_coverage_pct": 0.3673,
+ "overall_byte_coverage_pct": 0.0096,
  "usage": {
-  "calls_24h": 51,
+  "calls_24h": 54,
   "failures_24h": 0,
-  "completion_tokens_24h": 292140,
-  "reasoning_tokens_24h": 288191,
-  "avg_latency_s": 96.8
+  "completion_tokens_24h": 302571,
+  "reasoning_tokens_24h": 298396,
+  "avg_latency_s": 95.1
  },
- "functions_total": 144,
+ "functions_total": 149,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 54,
-   "functions": 54,
-   "bytes": 345
+   "matched": 56,
+   "functions": 56,
+   "bytes": 365
   },
   {
    "name": "App/v8kernel",
@@ -48,9 +48,9 @@
   },
   {
    "name": "App/v8world",
-   "matched": 17,
-   "functions": 17,
-   "bytes": 106
+   "matched": 18,
+   "functions": 18,
+   "bytes": 116
   },
   {
    "name": "Rendering/GfxCore",
@@ -59,16 +59,16 @@
    "bytes": 54
   },
   {
+   "name": "Rendering/GfxRender",
+   "matched": 6,
+   "functions": 6,
+   "bytes": 45
+  },
+  {
    "name": "App/humanoid",
    "matched": 6,
    "functions": 6,
    "bytes": 36
-  },
-  {
-   "name": "Rendering/GfxRender",
-   "matched": 5,
-   "functions": 5,
-   "bytes": 35
   },
   {
    "name": "App/v8tree",
@@ -105,6 +105,12 @@
    "matched": 2,
    "functions": 2,
    "bytes": 12
+  },
+  {
+   "name": "Network/SharedStringDictionary.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 10
   },
   {
    "name": "RobloxStudio/RobloxIDEDoc.cpp",
@@ -190,6 +196,28 @@
    "matchable": true
   },
   {
+   "address": "0x00ca6040",
+   "kind": "FUNCTION",
+   "name": "RBX::sp_counted_impl_p::freeMember0C",
+   "mangled": "?freeMember0C@sp_counted_impl_p@RBX@@QAEXXZ",
+   "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
+   "orig_size": 10,
+   "recomp_size": 10,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00c84730",
+   "kind": "FUNCTION",
+   "name": "RBX::Network::SharedStringDictionary::freeMember0C",
+   "mangled": "?freeMember0C@SharedStringDictionary@Network@RBX@@QAEXXZ",
+   "file": "Client/Network/SharedStringDictionary.cpp",
+   "orig_size": 10,
+   "recomp_size": 10,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00c81bc0",
    "kind": "FUNCTION",
    "name": "std::stream_buffer::getConst19554176",
@@ -261,6 +289,17 @@
    "name": "RBX::BallCellContact::deleteAllConnectors",
    "mangled": "?deleteAllConnectors@BallCellContact@RBX@@QAEXXZ",
    "file": "Client/App/v8world/BallCellContact.cpp",
+   "orig_size": 10,
+   "recomp_size": 10,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00c192e0",
+   "kind": "FUNCTION",
+   "name": "RBX::PolyPolyContact::deleteAllConnectors",
+   "mangled": "?deleteAllConnectors@PolyPolyContact@RBX@@QAEXXZ",
+   "file": "Client/App/v8world/PolyPolyContact.cpp",
    "orig_size": 10,
    "recomp_size": 10,
    "match_pct": 100.0,
@@ -604,6 +643,17 @@
    "file": "Client/App/v8datamodel/stream_buffer.cpp",
    "orig_size": 6,
    "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00a2d220",
+   "kind": "FUNCTION",
+   "name": "std::stream_buffer::getFlag68Bit2",
+   "mangled": "?getFlag68Bit2@stream_buffer@std@@QBE_NXZ",
+   "file": "Client/App/v8datamodel/stream_buffer.cpp",
+   "orig_size": 10,
+   "recomp_size": 10,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1022,6 +1072,17 @@
    "file": "Client/App/v8datamodel/FormFactorPart.cpp",
    "orig_size": 7,
    "recomp_size": 7,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x006766f0",
+   "kind": "FUNCTION",
+   "name": "RBX::Graphics::RenderView::getSubField0C_1B0",
+   "mangled": "?getSubField0C_1B0@RenderView@Graphics@RBX@@QBEHXZ",
+   "file": "Client/Rendering/GfxRender/RenderView.cpp",
+   "orig_size": 10,
+   "recomp_size": 10,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1885,9 +1946,57 @@
    "matched": 144,
    "implemented": 144,
    "pct": 1.5376
+  },
+  {
+   "t": "2026-11-18 19:04:06 UTC",
+   "matched": 145,
+   "implemented": 145,
+   "pct": 1.5483
+  },
+  {
+   "t": "2026-11-18 19:05:20 UTC",
+   "matched": 148,
+   "implemented": 148,
+   "pct": 1.5804
+  },
+  {
+   "t": "2026-11-18 19:05:55 UTC",
+   "matched": 149,
+   "implemented": 149,
+   "pct": 1.591
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-18T19:05:22",
+   "address": "0x00a2d220",
+   "name": "std::stream_buffer::getFlag68Bit2",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:04:42",
+   "address": "0x00ca6040",
+   "name": "RBX::sp_counted_impl_p::freeMember0C",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:04:42",
+   "address": "0x00c84730",
+   "name": "RBX::Network::SharedStringDictionary::freeMember0C",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:04:08",
+   "address": "0x006766f0",
+   "name": "RBX::Graphics::RenderView::getSubField0C_1B0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:03:32",
+   "address": "0x00c192e0",
+   "name": "RBX::PolyPolyContact::deleteAllConnectors",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-18T19:01:26",
    "address": "0x00c1af60",
@@ -2577,37 +2686,7 @@
    "address": "0x00a9c560",
    "name": "RBX::ArcHandles::getHandleId",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:21:49",
-   "address": "0x0099d310",
-   "name": "RBX::TriangleMesh::getGridSize",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:20:31",
-   "address": "0x0099d2f0",
-   "name": "RBX::Ball::getGridVolume",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:18:34",
-   "address": "0x00953980",
-   "name": "boost::unknown_exception::add_ref",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:16:50",
-   "address": "0x00403b30",
-   "name": "RBX::PartInstance::getField70",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:13:40",
-   "address": "0x00892dc0",
-   "name": "RBX::PathInterpolatedCFrame::getFlag40",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 62.3
+ "match_rate_per_hour": 62.69
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 19:02:00 UTC",
+  "updated_at": "2026-11-18 19:05:55 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 1.5376,
-  "implemented_total": 144,
-  "function_annotations": 144,
+  "matchable_coverage_pct": 1.591,
+  "implemented_total": 149,
+  "function_annotations": 149,
   "stub_annotations": 0,
-  "perfect_100_count": 144,
-  "matched_real_functions": 144,
+  "perfect_100_count": 149,
+  "matched_real_functions": 149,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.355,
-  "overall_byte_coverage_pct": 0.0091,
+  "overall_function_coverage_pct": 0.3673,
+  "overall_byte_coverage_pct": 0.0096,
   "usage": {
-    "calls_24h": 51,
+    "calls_24h": 54,
     "failures_24h": 0,
-    "completion_tokens_24h": 292140,
-    "reasoning_tokens_24h": 288191,
-    "avg_latency_s": 96.8
+    "completion_tokens_24h": 302571,
+    "reasoning_tokens_24h": 298396,
+    "avg_latency_s": 95.1
   },
   "functions": [
     {
@@ -749,6 +749,17 @@
       "matchable": true
     },
     {
+      "address": "0x006766f0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::RenderView::getSubField0C_1B0",
+      "mangled": "?getSubField0C_1B0@RenderView@Graphics@RBX@@QBEHXZ",
+      "file": "Client/Rendering/GfxRender/RenderView.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0067e190",
       "kind": "FUNCTION",
       "name": "RBX::FormFactorPart::getField110",
@@ -1167,6 +1178,17 @@
       "matchable": true
     },
     {
+      "address": "0x00a2d220",
+      "kind": "FUNCTION",
+      "name": "std::stream_buffer::getFlag68Bit2",
+      "mangled": "?getFlag68Bit2@stream_buffer@std@@QBE_NXZ",
+      "file": "Client/App/v8datamodel/stream_buffer.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00a2da00",
       "kind": "FUNCTION",
       "name": "std::stream_buffer::getConst19190364",
@@ -1508,6 +1530,17 @@
       "matchable": true
     },
     {
+      "address": "0x00c192e0",
+      "kind": "FUNCTION",
+      "name": "RBX::PolyPolyContact::deleteAllConnectors",
+      "mangled": "?deleteAllConnectors@PolyPolyContact@RBX@@QAEXXZ",
+      "file": "Client/App/v8world/PolyPolyContact.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00c1af60",
       "kind": "FUNCTION",
       "name": "RBX::BallCellContact::deleteAllConnectors",
@@ -1581,6 +1614,28 @@
       "file": "Client/App/v8datamodel/stream_buffer.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c84730",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::SharedStringDictionary::freeMember0C",
+      "mangled": "?freeMember0C@SharedStringDictionary@Network@RBX@@QAEXXZ",
+      "file": "Client/Network/SharedStringDictionary.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00ca6040",
+      "kind": "FUNCTION",
+      "name": "RBX::sp_counted_impl_p::freeMember0C",
+      "mangled": "?freeMember0C@sp_counted_impl_p@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
       "match_pct": 100.0,
       "matchable": true
     },
