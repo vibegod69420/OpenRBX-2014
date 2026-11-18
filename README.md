@@ -104,7 +104,12 @@ systemctl status openrbx-harness
 tail -f /var/log/openrbx/harness.log
 ```
 
-Publishing is opt-in: `DECOMP_PUSH=1` in the unit lets the loop `git push` progress to GitHub Pages.
+**Publishing.** The worker runs as root from a root-owned unit, and its git history predates the
+annotation reset, so it cannot push `main` itself. Instead `/opt/openrbx/publish.sh` runs from the
+ubuntu crontab every five minutes using a repo-scoped deploy key: it mirrors the worker's last
+*committed* `Client/` tree plus its current `docs/` data into a shallow clone of `main` and pushes.
+The repo's `pages.yml` workflow then deploys `docs/` to GitHub Pages. (`DECOMP_PUSH=1` is the
+alternative path — the unit pushing its own history — but it has no credential.)
 It is `0` by default because the worker has no GitHub credential.
 
 ## Tooling
