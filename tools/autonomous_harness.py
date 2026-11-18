@@ -54,6 +54,11 @@ _LOG_PATH = Path(os.environ.get("DECOMP_LOG_PATH", "/var/log/openrbx/harness.log
 WATCHDOG_STALE_SECONDS = int(os.environ.get("DECOMP_WATCHDOG_STALE", "3600"))
 
 
+import threading
+from collections import deque
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
+
+
 def log(msg: str):
     global LAST_ACTIVITY
     LAST_ACTIVITY = time.time()
@@ -80,6 +85,65 @@ def publish_status(**fields) -> None:
         probe.replace(WORKER_STATUS)
     except OSError:
         pass
+
+
+# Targets are decompiled by several subagents at once, but only one of them may touch the
+# working tree: the `.cpp`/`.h` edits, the cl.exe compile and update_progress.py's rescan all
+# have to see a consistent tree. Model calls, which are 95% of the wall clock, stay unlocked.
+WRITE_LOCK = threading.Lock()
+WORKERS = max(1, int(os.environ.get("DECOMP_WORKERS", "4")))
+
+
+def target_key(addr: int) -> str:
+    """Targets sharing a header can never be edited concurrently, so group by header path."""
+    try:
+        route = source_router.get_router().route_address(addr)
+        return route.get("h_rel") or route.get("cpp_rel") or f"addr:{addr}"
+    except Exception:
+        return f"addr:{addr}"
+
+
+def _apply_and_verify(
+    route: dict,
+    cpp_path: Path,
+    h_path: Path,
+    snippet: str,
+    addr: int,
+    orig_bytes: bytes,
+    original_cpp: str,
+    original_h: str,
+):
+    """
+    Mutating half of one attempt: append, compile, score, then promote or restore. Runs under
+    WRITE_LOCK so a publisher can never observe a half-written translation unit (which would
+    make an unverified `// FUNCTION:` marker look implemented).
+    """
+    with WRITE_LOCK:
+        source_router.append_method_to_cpp(cpp_path, snippet)
+        ok, obj_path, compiler_out = verify_tu.compile_cpp_to_coff(cpp_path, use_cache=False)
+        if not ok:
+            cpp_path.write_text(original_cpp, encoding="utf-8")
+            h_path.write_text(original_h, encoding="utf-8")
+            return ("compile_failed", compiler_out)
+
+        coff_funcs = verify_tu.parse_coff_functions(obj_path)
+        anns = verify_tu.parse_annotations_in_cpp(cpp_path)
+        fn_hint = next((h for a, k, h in anns if a == addr), f"func_{addr:08x}")
+        short_hint = fn_hint.split("::")[-1]
+
+        cur_pct, cur_diff = 0.0, []
+        for sym_name, (recomp_bytes, rel_offsets) in coff_funcs.items():
+            if short_hint and short_hint in sym_name:
+                cur_pct, cur_diff = verify_tu.compare_with_relocations(orig_bytes, recomp_bytes, rel_offsets)
+                break
+
+        if cur_pct >= 99.99:
+            promote_marker(cpp_path, addr)
+            return ("match", cur_pct, fn_hint)
+
+        cpp_path.write_text(original_cpp, encoding="utf-8")
+        h_path.write_text(original_h, encoding="utf-8")
+        return ("diff", cur_pct, cur_diff, fn_hint)
 
 
 def rotate_log_if_needed(max_bytes: int = 64 * 1024 * 1024, keep: int = 8 * 1024 * 1024) -> None:
@@ -306,9 +370,15 @@ def discover_kaggle_tunnel_url() -> str | None:
     return None
 
 
-def call_llm_chat(base_url: str, system_prompt: str, user_prompt: str, max_tokens: int = MAX_OUTPUT_TOKENS) -> str:
+def call_llm_chat(
+    base_url: str,
+    system_prompt: str,
+    user_prompt: str,
+    max_tokens: int = MAX_OUTPUT_TOKENS,
+    effort: str | None = None,
+) -> str:
     if base_url.startswith(DEEPAI_SENTINEL):
-        return deepai_backend.ask(system_prompt, user_prompt, max_tokens=max_tokens)
+        return deepai_backend.ask(system_prompt, user_prompt, max_tokens=max_tokens, effort=effort)
     if base_url.startswith(OPENCODE_SENTINEL):
         return opencode_backend.ask(system_prompt, user_prompt, max_tokens=max_tokens)
     kb_url, kb_key = load_kbench_credentials()
@@ -1112,7 +1182,8 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
     """
     router = source_router.get_router()
     route = router.route_address(addr)
-    cpp_path, h_path = source_router.ensure_class_header_and_cpp(route)
+    with WRITE_LOCK:
+        cpp_path, h_path = source_router.ensure_class_header_and_cpp(route)
 
     sizes = verify_tu.load_function_sizes()
     fn_size = sizes.get(addr, 16)
@@ -1174,11 +1245,13 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
     feedback_history = ""
     best_code = None
     best_pct = -1.0
-    max_attempts = 4
+    max_attempts = 3
     # Thinking budget escalation. DeepSeek V4.1 Flash accepts 131,072 output tokens, and the
     # gateway bills this catalog entry 0 theos per request, so the ceiling is set high: a
     # difficult 2014 routine benefits far more from one deep pass than from many shallow ones.
-    token_schedule = [16384, 32768, 65536, 98304]
+    # Effort is tiered: most targets are small getters, and paying `max` thinking on a
+    # first attempt wasted more time than the repair loop it was meant to avoid.
+    token_schedule = [16384, 32768, 65536]
 
     for attempt in range(1, max_attempts + 1):
         budget_tokens = min(MAX_OUTPUT_TOKENS, token_schedule[attempt - 1])
@@ -1201,8 +1274,9 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
             attempt=attempt,
             pct=round(best_pct, 2) if best_pct >= 0 else None,
         )
+        effort = "high" if attempt == 1 else "max"
         try:
-            resp_text = call_llm_chat(base_url, system_prompt, prompt, max_tokens=budget_tokens)
+            resp_text = call_llm_chat(base_url, system_prompt, prompt, max_tokens=budget_tokens, effort=effort)
             candidate_cpp_snippet = extract_cpp_code_block(resp_text)
         except (opencode_backend.QuotaExhausted, deepai_backend.QuotaExhausted):
             raise
@@ -1239,11 +1313,21 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
                 log(f"  [0x{addr:08x} Attempt {attempt}] member already defined inline in header; skipping target")
                 continue
             if not already:
-                source_router.ensure_class_header_and_cpp(route, method_decl=member_decl)
+                with WRITE_LOCK:
+                    source_router.ensure_class_header_and_cpp(route, method_decl=member_decl)
 
-        source_router.append_method_to_cpp(cpp_path, candidate_cpp_snippet)
-        ok, obj_path, compiler_out = verify_tu.compile_cpp_to_coff(cpp_path, use_cache=False)
-        if not ok:
+        outcome = _apply_and_verify(
+            route,
+            cpp_path,
+            h_path,
+            candidate_cpp_snippet,
+            addr,
+            orig_bytes,
+            original_cpp_content,
+            original_h_content,
+        )
+        if outcome[0] == "compile_failed":
+            compiler_out = outcome[1]
             if "previous definition" in compiler_out or "C2011" in compiler_out:
                 log(
                     f"  [0x{addr:08x} Attempt {attempt}] member already defined elsewhere in the "
@@ -1260,30 +1344,23 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
                 f"Your previous C++ snippet:\n```cpp\n{candidate_cpp_snippet}\n```\n"
                 f"Fix all missing declarations/syntax errors so `{route['cpp_rel']}` compiles cleanly."
             )
-            cpp_path.write_text(original_cpp_content, encoding="utf-8")
-            h_path.write_text(original_h_content, encoding="utf-8")
             continue
 
-        coff_funcs = verify_tu.parse_coff_functions(obj_path)
-        anns = verify_tu.parse_annotations_in_cpp(cpp_path)
-        fn_hint = next((h for a, k, h in anns if a == addr), f"func_{addr:08x}")
-        short_hint = fn_hint.split("::")[-1]
+        if outcome[0] == "match":
+            _, cur_pct, fn_hint = outcome
+            log(f"  [0x{addr:08x}] Attempt {attempt}/{max_attempts}: {cur_pct:.2f}% byte match ({fn_hint} in {route['cpp_rel']})")
+            return True, cur_pct, fn_hint
 
-        cur_pct = 0.0
-        cur_diff = []
-        for sym_name, (recomp_bytes, rel_offsets) in coff_funcs.items():
-            if short_hint and short_hint in sym_name:
-                cur_pct, cur_diff = verify_tu.compare_with_relocations(orig_bytes, recomp_bytes, rel_offsets)
-                break
-
+        _, cur_pct, cur_diff, fn_hint = outcome
         log(f"  [0x{addr:08x}] Attempt {attempt}/{max_attempts}: {cur_pct:.2f}% byte match ({fn_hint} in {route['cpp_rel']})")
         if cur_pct > best_pct:
             best_pct = cur_pct
             best_code = candidate_cpp_snippet
-
-        if cur_pct >= 99.99:
-            promote_marker(cpp_path, addr)
-            return True, cur_pct, fn_hint
+        # Below a few percent the reply is a different routine entirely; further attempts only
+        # spend minutes reproducing the same guess.
+        if attempt == 1 and cur_pct < 5.0:
+            log(f"  [0x{addr:08x}] first attempt at {cur_pct:.2f}% is the wrong routine; moving on")
+            break
 
         diff_text = "\n".join(cur_diff[:60])
         feedback_history = (
@@ -1292,8 +1369,6 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
             f"Side-by-side Disassembly (ORIG vs RECOMP):\n```text\n{diff_text}\n```\n"
             f"Adjust the C++ implementation to achieve 100.00% byte accuracy under MSVC 11.0 `/O2`."
         )
-        cpp_path.write_text(original_cpp_content, encoding="utf-8")
-        h_path.write_text(original_h_content, encoding="utf-8")
 
     cpp_path.write_text(original_cpp_content, encoding="utf-8")
     h_path.write_text(original_h_content, encoding="utf-8")
@@ -1465,32 +1540,54 @@ def run_forever():
 
             matched_in_cycle = []
             scanned = 0
-            for addr in remaining:
-                scanned += 1
-                ok, pct, fn_name = decompile_function_with_retries(addr, base_url)
-                record_work(addr, ok, pct, fn_name)
-                if ok and pct >= 99.99:
-                    matched_in_cycle.append(f"0x{addr:08x}")
-                    # A verified match is the only thing the dashboard needs. Holding it until
-                    # nine more targets had been scanned left the site stale for half an hour at
-                    # a time — and a restart discarded the uncommitted batch entirely. Publish
-                    # this one now, then pick up the next target on the following pass.
-                    break
-                if base_url:
-                    attempted_with_llm.add(addr)
-                else:
-                    skipped_without_llm.add(addr)
-                if (base_url and scanned >= 10) or (not base_url and scanned >= 500):
-                    break
-
-            if matched_in_cycle:
-                commit_msg = f"Match {len(matched_in_cycle)} class methods ({', '.join(matched_in_cycle[:4])}) [100% byte-exact]"
-                log(f"Committing & pushing clean C++ subsystem batch to GitHub Pages: {commit_msg}")
-                subprocess.run(
-                    progress_command(commit_msg),
-                    cwd=ROOT,
-                    check=False,
-                )
+            scan_limit = 10 if base_url else 500
+            queue = deque(remaining)
+            inflight: dict = {}
+            busy_keys: set[str] = set()
+            with ThreadPoolExecutor(max_workers=WORKERS) as pool:
+                while queue or inflight:
+                    rotations = 0
+                    while queue and len(inflight) < WORKERS:
+                        if scanned >= scan_limit:
+                            queue.clear()
+                            break
+                        addr = queue.popleft()
+                        key = target_key(addr)
+                        if key in busy_keys:
+                            queue.append(addr)
+                            rotations += 1
+                            if rotations >= len(queue):
+                                break
+                            continue
+                        scanned += 1
+                        busy_keys.add(key)
+                        inflight[pool.submit(decompile_function_with_retries, addr, base_url)] = (addr, key)
+                    if not inflight:
+                        break
+                    finished, _ = wait(inflight, return_when=FIRST_COMPLETED)
+                    for fut in finished:
+                        addr, key = inflight.pop(fut)
+                        busy_keys.discard(key)
+                        try:
+                            ok, pct, fn_name = fut.result()
+                        except Exception as exc:
+                            log(f"  [0x{addr:08x}] subagent failed: {exc}")
+                            ok, pct, fn_name = False, 0.0, ""
+                        record_work(addr, ok, pct, fn_name)
+                        if ok and pct >= 99.99:
+                            # Publish the moment a function is proven; batching left the site
+                            # stale for half an hour at a time.
+                            matched_in_cycle.append(f"0x{addr:08x}")
+                        elif base_url:
+                            attempted_with_llm.add(addr)
+                        else:
+                            skipped_without_llm.add(addr)
+                    if matched_in_cycle:
+                        commit_msg = f"Match {len(matched_in_cycle)} class methods ({', '.join(matched_in_cycle[:4])}) [100% byte-exact]"
+                        log(f"Committing & pushing clean C++ subsystem batch to GitHub Pages: {commit_msg}")
+                        with WRITE_LOCK:
+                            subprocess.run(progress_command(commit_msg), cwd=ROOT, check=False)
+                        matched_in_cycle = []
 
             time.sleep(2)
         except (opencode_backend.QuotaExhausted, deepai_backend.QuotaExhausted) as exc:
