@@ -5,6 +5,9 @@
 
 namespace RBX {
 
+#ifndef NULL
+#define NULL 0
+#endif
 // AUTO-GENERATED HELPERS
 
 class GlueTool
@@ -16,6 +19,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	bool isEnabled();
 	// AUTO-GENERATED METHODS
 };
 
