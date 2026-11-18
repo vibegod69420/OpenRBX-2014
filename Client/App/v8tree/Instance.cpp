@@ -22,6 +22,16 @@ int Instance::getConst14956404() const
 	return 14956404;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006b7c50
+void Instance::destroySubPtr0C()
+{
+	Instance* p = ptr_000c;
+	if (p) {
+		p->onDestroy();
+		rbx_free_mem(p);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

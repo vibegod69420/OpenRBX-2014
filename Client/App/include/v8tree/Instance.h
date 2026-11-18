@@ -13,12 +13,15 @@ public:
 	union
 	{
 		int _vtable_or_head;
+		struct { char _pad_ptr_000c[0xc]; Instance* ptr_000c; };
 		// AUTO-GENERATED FIELDS
 	};
 
 	int getConst16797656() const;
 	int getConst16797664() const;
 	int getConst14956404() const;
+	void onDestroy();
+	void destroySubPtr0C();
 	// AUTO-GENERATED METHODS
 };
 
