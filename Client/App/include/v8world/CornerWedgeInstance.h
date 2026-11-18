@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	const void*getMeshScale() const;
 	// AUTO-GENERATED METHODS
 };
 

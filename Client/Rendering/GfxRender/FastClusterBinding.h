@@ -18,6 +18,7 @@ public:
 	};
 
 	void onTransparencyChanged();
+	void onSpecialShapeChanged();
 	// AUTO-GENERATED METHODS
 };
 

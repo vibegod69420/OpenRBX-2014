@@ -32,6 +32,24 @@ void FastClusterBinding::onTransparencyChanged()
 	*(unsigned char*)((char*)(*(void**)((char*)this + 0x1C)) + 0xCE) = 1;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00620400
+void FastClusterBinding::onSpecialShapeChanged()
+{
+	unsigned char level = g_FastClusterDFLog;
+	if (level)
+	{
+		FastClusterLogf(level,
+			"FastCluster[%p]: part %p with binding %p requests special shape change",
+			*(void**)((char*)this + 0x1C),
+			*(void**)((char*)this + 0x04),
+			this);
+	}
+
+	FastClusterEntity* cluster = *(FastClusterEntity**)((char*)this + 0x1C);
+	cluster->invalidateEntity();
+	*(unsigned char*)((char*)(*(void**)((char*)this + 0x1C)) + 0xCE) = 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

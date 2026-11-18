@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18 22:19:31 UTC",
+ "updated_at": "2026-11-18 22:26:19 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,41 +16,41 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 3.3209,
- "implemented_total": 311,
- "function_annotations": 311,
+ "matchable_coverage_pct": 3.3529,
+ "implemented_total": 314,
+ "function_annotations": 314,
  "stub_annotations": 0,
- "perfect_100_count": 311,
- "matched_real_functions": 311,
+ "perfect_100_count": 314,
+ "matched_real_functions": 314,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.7667,
- "overall_byte_coverage_pct": 0.0565,
+ "overall_function_coverage_pct": 0.7741,
+ "overall_byte_coverage_pct": 0.0582,
  "usage": {
-  "calls_24h": 1010,
+  "calls_24h": 1059,
   "failures_24h": 0,
-  "completion_tokens_24h": 9984463,
-  "reasoning_tokens_24h": 9834339,
-  "avg_latency_s": 175.2
+  "completion_tokens_24h": 10599710,
+  "reasoning_tokens_24h": 10441943,
+  "avg_latency_s": 177.0
  },
- "functions_total": 311,
+ "functions_total": 314,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 129,
-   "functions": 129,
-   "bytes": 2098
+   "matched": 130,
+   "functions": 130,
+   "bytes": 2145
   },
   {
    "name": "App/v8world",
-   "matched": 37,
-   "functions": 37,
-   "bytes": 617
+   "matched": 38,
+   "functions": 38,
+   "bytes": 670
   },
   {
    "name": "Rendering/GfxRender",
-   "matched": 18,
-   "functions": 18,
-   "bytes": 410
+   "matched": 19,
+   "functions": 19,
+   "bytes": 466
   },
   {
    "name": "App/v8kernel",
@@ -1780,6 +1780,17 @@
    "matchable": true
   },
   {
+   "address": "0x008928c0",
+   "kind": "FUNCTION",
+   "name": "RBX::CornerWedgeInstance::getMeshScale",
+   "mangled": "?getMeshScale@CornerWedgeInstance@RBX@@QBEPBXXZ",
+   "file": "Client/App/v8world/CornerWedgeInstance.cpp",
+   "orig_size": 53,
+   "recomp_size": 53,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x008928b0",
    "kind": "FUNCTION",
    "name": "RBX::MegaClusterInstance::getMinimumSize",
@@ -2040,6 +2051,17 @@
    "file": "Client/App/v8datamodel/SetGridSizeToTwo.cpp",
    "orig_size": 10,
    "recomp_size": 10,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x0082eee0",
+   "kind": "FUNCTION",
+   "name": "getStateSource",
+   "mangled": "?isEnabled@RunCommand@RBX@@QAE_NXZ",
+   "file": "Client/App/v8datamodel/RunCommand.cpp",
+   "orig_size": 47,
+   "recomp_size": 47,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -2480,6 +2502,17 @@
    "file": "Client/Rendering/GfxRender/FastCluster.cpp",
    "orig_size": 63,
    "recomp_size": 63,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00620400",
+   "kind": "FUNCTION",
+   "name": "RBX::Graphics::FastClusterBinding::onSpecialShapeChanged",
+   "mangled": "?onSpecialShapeChanged@FastClusterBinding@Graphics@RBX@@QAEXXZ",
+   "file": "Client/Rendering/GfxRender/FastClusterBinding.cpp",
+   "orig_size": 56,
+   "recomp_size": 56,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3010,39 +3043,6 @@
    "recomp_size": 6,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x00590ce0",
-   "kind": "FUNCTION",
-   "name": "btTetrahedronShapeEx::getConst17001004",
-   "mangled": "?getConst17001004@btTetrahedronShapeEx@@QBEHXZ",
-   "file": "Client/App/v8kernel/btTetrahedronShapeEx.cpp",
-   "orig_size": 6,
-   "recomp_size": 6,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00590a80",
-   "kind": "FUNCTION",
-   "name": "btTriangleShapeEx::getConst17000964",
-   "mangled": "?getConst17000964@btTriangleShapeEx@@QBEHXZ",
-   "file": "Client/App/v8kernel/btTriangleShapeEx.cpp",
-   "orig_size": 6,
-   "recomp_size": 6,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00590290",
-   "kind": "FUNCTION",
-   "name": "btTriangleShape::getConst52",
-   "mangled": "?getConst52@btTriangleShape@@QBEHXZ",
-   "file": "Client/App/v8kernel/btTriangleShape.cpp",
-   "orig_size": 6,
-   "recomp_size": 6,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -3423,9 +3423,33 @@
    "matched": 311,
    "implemented": 311,
    "pct": 3.3209
+  },
+  {
+   "t": "2026-11-18 22:26:19 UTC",
+   "matched": 314,
+   "implemented": 314,
+   "pct": 3.3529
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-18T22:23:19",
+   "address": "0x008928c0",
+   "name": "RBX::CornerWedgeInstance::getMeshScale",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T22:22:09",
+   "address": "0x00620400",
+   "name": "RBX::Graphics::FastClusterBinding::onSpecialShapeChanged",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T22:19:33",
+   "address": "0x0082eee0",
+   "name": "getStateSource",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-18T22:17:16",
    "address": "0x00786180",
@@ -4127,25 +4151,7 @@
    "address": "0x005241c0",
    "name": "Toggle3DGridVerb::isChecked",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T19:54:24",
-   "address": "0x0082e3a0",
-   "name": "RBX::SetGridSizeToFour::isChecked",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T19:53:31",
-   "address": "0x0042d8e0",
-   "name": "std::basic_filebuf::_Lock",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T19:53:20",
-   "address": "0x006762e0",
-   "name": "RBX::Graphics::RenderView::noop",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 55.5
+ "match_rate_per_hour": 54.93
 }
