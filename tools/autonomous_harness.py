@@ -1270,8 +1270,10 @@ def _normalize_generated_definition(snippet: str, route: dict) -> tuple[str, dic
         # `QWidget *Class::m()` rather than `QWidget * Class::m()`.
         sep = "" if ret_type.endswith(("*", "&")) else " "
 
-        head = f"{ret_type}{sep}{cls}::{name}(" if ret_type else f"{cls}::{name}("
-        snippet = snippet[:seg_start] + head + snippet[match.end() :]
+        # Rewrite only the qualified head itself. Rebuilding from the statement start would
+        # delete the `// STUB:`/`// FUNCTION:` marker sitting above it, and a match with no
+        # annotation promotes nothing and is silently left as uncounted dead code.
+        snippet = snippet[: match.start()] + f"{cls}::{name}(" + snippet[match.end() :]
         return snippet, {
             "method_name": name,
             "class": cls,
