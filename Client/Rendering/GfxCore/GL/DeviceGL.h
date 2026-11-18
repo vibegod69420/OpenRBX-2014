@@ -21,6 +21,7 @@ public:
 
 	int getField34() const;
 	const int* getMemberPtr0C() const;
+	bool applyViewport();
 	// AUTO-GENERATED METHODS
 };
 

@@ -18,6 +18,7 @@ public:
 	};
 
 	int size() const;
+	void invalidateEntity();
 	// AUTO-GENERATED METHODS
 };
 

@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	bool slot2();
 	// AUTO-GENERATED METHODS
 };
 

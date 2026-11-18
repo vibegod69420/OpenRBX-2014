@@ -44,6 +44,23 @@ void RenderView::noop()
 
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00676290
+void RenderView::initResources()
+{
+	unsigned char flag = *(volatile unsigned char*)0x01210363;
+	if (flag)
+	{
+		void __cdecl sub_6B8A90(int, const char*, const void*);
+		sub_6B8A90(flag, "RenderView::initResources - %p", this);
+
+		flag = *(volatile unsigned char*)0x01210363;
+		if (flag)
+		{
+			sub_6B8A90(flag, "RenderView::initResources finish", (const void*)0);
+		}
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

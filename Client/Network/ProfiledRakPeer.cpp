@@ -43,6 +43,34 @@ int ProfiledRakPeer::getField5E0() const
 	return value;
 }
 
+namespace
+{
+struct SystemAddress
+{
+	bool operator==(const SystemAddress& right) const;
+};
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00ce9e30
+int ProfiledRakPeer::GetLeadingUnassignedAddressCount() const
+{
+	const SystemAddress* address =
+		reinterpret_cast<const SystemAddress*>(reinterpret_cast<const char*>(this) + 0x498);
+	int count = 0;
+
+	if (*address == *reinterpret_cast<const SystemAddress*>(0x0131581C))
+	{
+		do
+		{
+			address = reinterpret_cast<const SystemAddress*>(
+				reinterpret_cast<const char*>(address) + 0x14);
+			++count;
+		} while (*address == *reinterpret_cast<const SystemAddress*>(0x0131581C));
+	}
+
+	return count;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

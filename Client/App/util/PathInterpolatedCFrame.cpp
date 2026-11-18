@@ -28,6 +28,12 @@ bool PathInterpolatedCFrame::getFlag40() const
 	return flag_0040;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a0f420
+double PathInterpolatedCFrame::getField98() const
+{
+    return *reinterpret_cast<const double*>(reinterpret_cast<const char*>(this) + 0x98);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

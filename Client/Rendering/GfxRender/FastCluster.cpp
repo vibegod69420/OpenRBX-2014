@@ -12,6 +12,36 @@ int FastCluster::size() const
             *reinterpret_cast<const int*>((const char*)this + 0xa8)) >> 3;
 }
 
+struct FastClusterBatcher
+{
+	void invalidateEntity(class FastCluster* cluster);
+};
+
+struct FastClusterOwner
+{
+	char pad[0x198];
+	FastClusterBatcher* batcher;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00620f40
+void FastCluster::invalidateEntity()
+{
+	extern unsigned char g_FastClusterInvalidateEntityLog;
+	if (g_FastClusterInvalidateEntityLog)
+	{
+		extern void fastLogInvalidateEntity(int level, const char* fmt, FastCluster* cluster);
+		fastLogInvalidateEntity(g_FastClusterInvalidateEntityLog, "FastCluster[%p]: invalidateEntity", this);
+	}
+
+	unsigned char& invalidated = *(unsigned char*)((char*)this + 0xCD);
+	if (invalidated == 0)
+	{
+		FastClusterOwner* owner = *(FastClusterOwner**)((char*)this + 0x38);
+		invalidated = 1;
+		owner->batcher->invalidateEntity(this);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

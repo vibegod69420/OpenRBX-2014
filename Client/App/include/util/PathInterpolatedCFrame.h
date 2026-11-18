@@ -23,6 +23,7 @@ public:
 	bool getFlag41() const;
 	double getField48() const;
 	bool getFlag40() const;
+	double getField98() const;
 	// AUTO-GENERATED METHODS
 };
 

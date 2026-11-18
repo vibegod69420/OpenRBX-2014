@@ -1,0 +1,9 @@
+#include "v8world/DynamicRotateJoint.h"
+
+#include "decomp.h"
+
+namespace RBX {
+
+// AUTO-GENERATED IMPLEMENTATIONS
+
+} // namespace RBX
