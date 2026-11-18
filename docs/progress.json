@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18 22:12:26 UTC",
+ "updated_at": "2026-11-18 22:19:31 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 3.2995,
- "implemented_total": 309,
- "function_annotations": 309,
+ "matchable_coverage_pct": 3.3209,
+ "implemented_total": 311,
+ "function_annotations": 311,
  "stub_annotations": 0,
- "perfect_100_count": 309,
- "matched_real_functions": 309,
+ "perfect_100_count": 311,
+ "matched_real_functions": 311,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.7618,
- "overall_byte_coverage_pct": 0.0558,
+ "overall_function_coverage_pct": 0.7667,
+ "overall_byte_coverage_pct": 0.0565,
  "usage": {
-  "calls_24h": 979,
+  "calls_24h": 1010,
   "failures_24h": 0,
-  "completion_tokens_24h": 9629580,
-  "reasoning_tokens_24h": 9483591,
-  "avg_latency_s": 174.1
+  "completion_tokens_24h": 9984463,
+  "reasoning_tokens_24h": 9834339,
+  "avg_latency_s": 175.2
  },
- "functions_total": 309,
+ "functions_total": 311,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 127,
-   "functions": 127,
-   "bytes": 2031
+   "matched": 129,
+   "functions": 129,
+   "bytes": 2098
   },
   {
    "name": "App/v8world",
@@ -2253,6 +2253,17 @@
    "matchable": true
   },
   {
+   "address": "0x00786180",
+   "kind": "FUNCTION",
+   "name": "std::concrete_parser::clone",
+   "mangled": "?clone@concrete_parser@std@@QBEPAXXZ",
+   "file": "Client/App/v8datamodel/concrete_parser.cpp",
+   "orig_size": 47,
+   "recomp_size": 47,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00773390",
    "kind": "FUNCTION",
    "name": "RBX::StandardOut::destroySubPtr0C",
@@ -3032,17 +3043,6 @@
    "recomp_size": 6,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x00590280",
-   "kind": "FUNCTION",
-   "name": "btTriangleShape::getMargin",
-   "mangled": "?getMargin@btTriangleShape@@QBEMXZ",
-   "file": "Client/App/v8kernel/btTriangleShape.cpp",
-   "orig_size": 4,
-   "recomp_size": 4,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -3417,9 +3417,27 @@
    "matched": 309,
    "implemented": 309,
    "pct": 3.2995
+  },
+  {
+   "t": "2026-11-18 22:19:31 UTC",
+   "matched": 311,
+   "implemented": 311,
+   "pct": 3.3209
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-18T22:17:16",
+   "address": "0x00786180",
+   "name": "std::concrete_parser::clone",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T22:12:35",
+   "address": "0x00496260",
+   "name": "RBX::callable_slot::invoke",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-18T22:09:19",
    "address": "0x004b3be0",
@@ -4127,19 +4145,7 @@
    "address": "0x006762e0",
    "name": "RBX::Graphics::RenderView::noop",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T19:53:18",
-   "address": "0x00a37120",
-   "name": "lua_exception::raise",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T19:51:57",
-   "address": "0x00b8f1f0",
-   "name": "RBX::RotatePJoint::stepUi",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 56.33
+ "match_rate_per_hour": 55.5
 }

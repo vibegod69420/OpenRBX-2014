@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void*clone() const;
 	// AUTO-GENERATED METHODS
 };
 

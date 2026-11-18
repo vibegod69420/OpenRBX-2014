@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	int __cdecl invoke();
 	// AUTO-GENERATED METHODS
 };
 
