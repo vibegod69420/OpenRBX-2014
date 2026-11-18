@@ -1,0 +1,25 @@
+#ifndef CLIENT_ROBLOXSTUDIO_TOGGLEAXISWIDGETVERB_H
+#define CLIENT_ROBLOXSTUDIO_TOGGLEAXISWIDGETVERB_H
+
+#include "decomp.h"
+
+
+
+// AUTO-GENERATED HELPERS
+
+class ToggleAxisWidgetVerb
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	bool isChecked();
+	// AUTO-GENERATED METHODS
+};
+
+
+
+#endif // CLIENT_ROBLOXSTUDIO_TOGGLEAXISWIDGETVERB_H

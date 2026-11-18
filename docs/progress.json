@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18 19:58:20 UTC",
+ "updated_at": "2026-11-18 20:07:27 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,41 +16,41 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 2.157,
- "implemented_total": 202,
- "function_annotations": 202,
+ "matchable_coverage_pct": 2.3599,
+ "implemented_total": 221,
+ "function_annotations": 221,
  "stub_annotations": 0,
- "perfect_100_count": 202,
- "matched_real_functions": 202,
+ "perfect_100_count": 221,
+ "matched_real_functions": 221,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.498,
- "overall_byte_coverage_pct": 0.0173,
+ "overall_function_coverage_pct": 0.5449,
+ "overall_byte_coverage_pct": 0.0214,
  "usage": {
-  "calls_24h": 216,
+  "calls_24h": 282,
   "failures_24h": 0,
-  "completion_tokens_24h": 1343399,
-  "reasoning_tokens_24h": 1324550,
-  "avg_latency_s": 113.4
+  "completion_tokens_24h": 1759042,
+  "reasoning_tokens_24h": 1733638,
+  "avg_latency_s": 115.6
  },
- "functions_total": 202,
+ "functions_total": 221,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 82,
-   "functions": 82,
-   "bytes": 728
+   "matched": 93,
+   "functions": 93,
+   "bytes": 955
   },
   {
    "name": "App/v8world",
-   "matched": 25,
-   "functions": 25,
-   "bytes": 209
+   "matched": 26,
+   "functions": 26,
+   "bytes": 233
   },
   {
    "name": "App/v8kernel",
-   "matched": 30,
-   "functions": 30,
-   "bytes": 184
+   "matched": 31,
+   "functions": 31,
+   "bytes": 204
   },
   {
    "name": "Rendering/GfxRender",
@@ -66,9 +66,15 @@
   },
   {
    "name": "App/humanoid",
-   "matched": 7,
-   "functions": 7,
-   "bytes": 48
+   "matched": 8,
+   "functions": 8,
+   "bytes": 71
+  },
+  {
+   "name": "Network/ClientReplicator.cpp",
+   "matched": 2,
+   "functions": 2,
+   "bytes": 34
   },
   {
    "name": "App/script",
@@ -77,10 +83,34 @@
    "bytes": 29
   },
   {
+   "name": "RobloxStudio/RobloxWebDoc.cpp",
+   "matched": 2,
+   "functions": 2,
+   "bytes": 25
+  },
+  {
    "name": "RobloxStudio/RobloxObjectBrowserDoc.cpp",
    "matched": 3,
    "functions": 3,
    "bytes": 23
+  },
+  {
+   "name": "RobloxStudio/ToggleAxisWidgetVerb.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 23
+  },
+  {
+   "name": "Network/PersistentDataStore.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 22
+  },
+  {
+   "name": "RobloxStudio/RobloxScriptDoc.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 20
   },
   {
    "name": "RobloxStudio/RobloxTreeWidget.cpp",
@@ -137,12 +167,6 @@
    "bytes": 15
   },
   {
-   "name": "Network/ClientReplicator.cpp",
-   "matched": 1,
-   "functions": 1,
-   "bytes": 14
-  },
-  {
    "name": "App/tool",
    "matched": 2,
    "functions": 2,
@@ -183,12 +207,6 @@
    "matched": 1,
    "functions": 1,
    "bytes": 6
-  },
-  {
-   "name": "RobloxStudio/RobloxWebDoc.cpp",
-   "matched": 1,
-   "functions": 1,
-   "bytes": 5
   },
   {
    "name": "RobloxStudio/RobloxTreeWidgetItem.cpp",
@@ -239,6 +257,17 @@
    "file": "Client/Network/ClientReplicator.cpp",
    "orig_size": 14,
    "recomp_size": 14,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00ca6810",
+   "kind": "FUNCTION",
+   "name": "RBX::Network::ClientReplicator::getDataPing",
+   "mangled": "?getDataPing@ClientReplicator@Network@RBX@@QAEHXZ",
+   "file": "Client/Network/ClientReplicator.cpp",
+   "orig_size": 20,
+   "recomp_size": 20,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -349,6 +378,17 @@
    "file": "Client/Network/ServerReplicator.cpp",
    "orig_size": 7,
    "recomp_size": 7,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00c4b290",
+   "kind": "FUNCTION",
+   "name": "RBX::Network::PersistentDataStore::dispatch",
+   "mangled": "?dispatch@PersistentDataStore@Network@RBX@@QAAXXZ",
+   "file": "Client/Network/PersistentDataStore.cpp",
+   "orig_size": 22,
+   "recomp_size": 22,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -672,6 +712,17 @@
    "matchable": true
   },
   {
+   "address": "0x00a644f0",
+   "kind": "FUNCTION",
+   "name": "RBX::VirtualHardwareDevice::initViewportSize",
+   "mangled": "?initViewportSize@VirtualHardwareDevice@RBX@@QAEXXZ",
+   "file": "Client/App/v8datamodel/VirtualHardwareDevice.cpp",
+   "orig_size": 21,
+   "recomp_size": 21,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00a5c5b0",
    "kind": "FUNCTION",
    "name": "RBX::MarketplaceService::getFlag",
@@ -679,6 +730,17 @@
    "file": "Client/App/v8datamodel/MarketplaceService.cpp",
    "orig_size": 7,
    "recomp_size": 7,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00a541c0",
+   "kind": "FUNCTION",
+   "name": "RBX::MouseCommand::clear",
+   "mangled": "?clear@MouseCommand@RBX@@QAEXXZ",
+   "file": "Client/App/v8datamodel/MouseCommand.cpp",
+   "orig_size": 18,
+   "recomp_size": 18,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1068,6 +1130,17 @@
    "matchable": true
   },
   {
+   "address": "0x008c5810",
+   "kind": "FUNCTION",
+   "name": "RBX::PhysicsJob::getErrorEmphasis",
+   "mangled": "?getErrorEmphasis@PhysicsJob@RBX@@QBEHXZ",
+   "file": "Client/App/v8datamodel/PhysicsJob.cpp",
+   "orig_size": 21,
+   "recomp_size": 21,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x008aca00",
    "kind": "FUNCTION",
    "name": "RBX::UnionOperation::hasChildData",
@@ -1075,6 +1148,17 @@
    "file": "Client/App/v8datamodel/UnionOperation.cpp",
    "orig_size": 12,
    "recomp_size": 12,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x008ac950",
+   "kind": "FUNCTION",
+   "name": "RBX::HUMAN::StrafingNoPhysics::getConst11",
+   "mangled": "?getConst11@StrafingNoPhysics@HUMAN@RBX@@QBEHXZ",
+   "file": "Client/App/humanoid/StrafingNoPhysics.cpp",
+   "orig_size": 23,
+   "recomp_size": 6,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1108,6 +1192,17 @@
    "file": "Client/App/v8datamodel/GuiImageButton.cpp",
    "orig_size": 7,
    "recomp_size": 7,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00894960",
+   "kind": "FUNCTION",
+   "name": "RBX::UnionOperation::sub_894960",
+   "mangled": "?sub_894960@UnionOperation@RBX@@QAEXXZ",
+   "file": "Client/App/v8datamodel/UnionOperation.cpp",
+   "orig_size": 19,
+   "recomp_size": 19,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1162,6 +1257,17 @@
    "mangled": "?getField48@PathInterpolatedCFrame@RBX@@QBENXZ",
    "file": "Client/App/util/PathInterpolatedCFrame.cpp",
    "orig_size": 4,
+   "recomp_size": 4,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00891b30",
+   "kind": "FUNCTION",
+   "name": "RBX::DS::CAudioStreamFilter::getField48",
+   "mangled": "?getField48@CAudioStreamFilter@DS@RBX@@QBEHXZ",
+   "file": "Client/App/v8datamodel/CAudioStreamFilter.cpp",
+   "orig_size": 23,
    "recomp_size": 4,
    "match_pct": 100.0,
    "matchable": true
@@ -1288,6 +1394,28 @@
    "matchable": true
   },
   {
+   "address": "0x0082f080",
+   "kind": "FUNCTION",
+   "name": "RBX::ToggleViewMode::isEnabled",
+   "mangled": "?isEnabled@ToggleViewMode@RBX@@QAE_NXZ",
+   "file": "Client/App/v8datamodel/ToggleViewMode.cpp",
+   "orig_size": 22,
+   "recomp_size": 22,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x0082efb0",
+   "kind": "FUNCTION",
+   "name": "RBX::StopCommand::isEnabled",
+   "mangled": "?isEnabled@StopCommand@RBX@@QAE_NXZ",
+   "file": "Client/App/v8datamodel/StopCommand.cpp",
+   "orig_size": 18,
+   "recomp_size": 18,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x0082ef60",
    "kind": "FUNCTION",
    "name": "RBX::SetManualJointToStrong::getFlag_ef60",
@@ -1306,6 +1434,17 @@
    "file": "Client/App/v8datamodel/SetGridSizeToTwo.cpp",
    "orig_size": 10,
    "recomp_size": 10,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x0082e5f0",
+   "kind": "FUNCTION",
+   "name": "RBX::TurnOnManualJointCreation::shouldTurnOn",
+   "mangled": "?shouldTurnOn@TurnOnManualJointCreation@RBX@@QAE_NXZ",
+   "file": "Client/App/v8world/TurnOnManualJointCreation.cpp",
+   "orig_size": 24,
+   "recomp_size": 24,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -2179,6 +2318,17 @@
    "matchable": true
   },
   {
+   "address": "0x00524020",
+   "kind": "FUNCTION",
+   "name": "ToggleAxisWidgetVerb::isChecked",
+   "mangled": "?isChecked@ToggleAxisWidgetVerb@@QAE_NXZ",
+   "file": "Client/RobloxStudio/ToggleAxisWidgetVerb.cpp",
+   "orig_size": 23,
+   "recomp_size": 23,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00500320",
    "kind": "FUNCTION",
    "name": "RBX::Graphics::CullableSceneNode::getConst1",
@@ -2234,6 +2384,28 @@
    "matchable": true
   },
   {
+   "address": "0x004d1e20",
+   "kind": "FUNCTION",
+   "name": "RBX::BoundVerb::isChecked",
+   "mangled": "?isChecked@BoundVerb@RBX@@QAE_NXZ",
+   "file": "Client/App/v8datamodel/BoundVerb.cpp",
+   "orig_size": 23,
+   "recomp_size": 23,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x004d1e00",
+   "kind": "FUNCTION",
+   "name": "RBX::BoundVerb::isEnabled",
+   "mangled": "?isEnabled@BoundVerb@RBX@@QAE_NXZ",
+   "file": "Client/App/v8datamodel/BoundVerb.cpp",
+   "orig_size": 21,
+   "recomp_size": 21,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x004cef90",
    "kind": "FUNCTION",
    "name": "RBX::Graphics::TextureProxy::release",
@@ -2278,12 +2450,45 @@
    "matchable": true
   },
   {
+   "address": "0x00495660",
+   "kind": "FUNCTION",
+   "name": "btDefaultCollisionConfiguration::getField18",
+   "mangled": "?getField18@btDefaultCollisionConfiguration@@QBEHXZ",
+   "file": "Client/App/v8kernel/btDefaultCollisionConfiguration.cpp",
+   "orig_size": 20,
+   "recomp_size": 4,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00495640",
+   "kind": "FUNCTION",
+   "name": "RobloxWebDoc::getField14",
+   "mangled": "?getField14@RobloxWebDoc@@QBEHXZ",
+   "file": "Client/RobloxStudio/RobloxWebDoc.cpp",
+   "orig_size": 20,
+   "recomp_size": 4,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00495630",
    "kind": "FUNCTION",
    "name": "RobloxObjectBrowserDoc::getField1C",
    "mangled": "?getField1C@RobloxObjectBrowserDoc@@QBEHXZ",
    "file": "Client/RobloxStudio/RobloxObjectBrowserDoc.cpp",
    "orig_size": 4,
+   "recomp_size": 4,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00495610",
+   "kind": "FUNCTION",
+   "name": "RobloxScriptDoc::getField40",
+   "mangled": "?getField40@RobloxScriptDoc@@QBEHXZ",
+   "file": "Client/RobloxStudio/RobloxScriptDoc.cpp",
+   "orig_size": 20,
    "recomp_size": 4,
    "match_pct": 100.0,
    "matchable": true
@@ -2329,6 +2534,17 @@
    "file": "Client/Win/DSVideoCaptureEngine.cpp",
    "orig_size": 14,
    "recomp_size": 14,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00427ac0",
+   "kind": "FUNCTION",
+   "name": "RBX::DS::CAudioStream::sub_427AC0",
+   "mangled": "?sub_427AC0@CAudioStream@DS@RBX@@QAEXXZ",
+   "file": "Client/App/v8datamodel/CAudioStream.cpp",
+   "orig_size": 19,
+   "recomp_size": 19,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -2384,6 +2600,17 @@
    "file": "Client/App/v8datamodel/RunTransition.cpp",
    "orig_size": 9,
    "recomp_size": 9,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x004122e0",
+   "kind": "FUNCTION",
+   "name": "rbx::bad_placement_any_cast::getConst15812400",
+   "mangled": "?getConst15812400@bad_placement_any_cast@rbx@@QBEHXZ",
+   "file": "Client/App/v8datamodel/bad_placement_any_cast.cpp",
+   "orig_size": 22,
+   "recomp_size": 6,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -2685,9 +2912,129 @@
    "matched": 202,
    "implemented": 202,
    "pct": 2.157
+  },
+  {
+   "t": "2026-11-18 20:07:27 UTC",
+   "matched": 221,
+   "implemented": 221,
+   "pct": 2.3599
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-18T20:06:32",
+   "address": "0x004d1e20",
+   "name": "RBX::BoundVerb::isChecked",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T20:04:15",
+   "address": "0x0082e5f0",
+   "name": "RBX::TurnOnManualJointCreation::shouldTurnOn",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T20:03:06",
+   "address": "0x00c4b290",
+   "name": "RBX::Network::PersistentDataStore::dispatch",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T20:02:41",
+   "address": "0x0082f080",
+   "name": "RBX::ToggleViewMode::isEnabled",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T20:02:06",
+   "address": "0x008ac950",
+   "name": "RBX::HUMAN::StrafingNoPhysics::getConst11",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T20:02:05",
+   "address": "0x00524020",
+   "name": "ToggleAxisWidgetVerb::isChecked",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T20:01:52",
+   "address": "0x00891b30",
+   "name": "RBX::DS::CAudioStreamFilter::getField48",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T20:01:49",
+   "address": "0x004d1e00",
+   "name": "RBX::BoundVerb::isEnabled",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T20:00:55",
+   "address": "0x0082efb0",
+   "name": "RBX::StopCommand::isEnabled",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T20:00:50",
+   "address": "0x00a644f0",
+   "name": "RBX::VirtualHardwareDevice::initViewportSize",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T20:00:45",
+   "address": "0x008c5810",
+   "name": "RBX::PhysicsJob::getErrorEmphasis",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:59:49",
+   "address": "0x004122e0",
+   "name": "rbx::bad_placement_any_cast::getConst15812400",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:59:46",
+   "address": "0x00ca6810",
+   "name": "RBX::Network::ClientReplicator::getDataPing",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:59:31",
+   "address": "0x00a541c0",
+   "name": "RBX::MouseCommand::clear",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:59:25",
+   "address": "0x00427ac0",
+   "name": "RBX::DS::CAudioStream::sub_427AC0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:59:17",
+   "address": "0x00894960",
+   "name": "RBX::UnionOperation::sub_894960",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:58:25",
+   "address": "0x00495660",
+   "name": "btDefaultCollisionConfiguration::getField18",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:58:23",
+   "address": "0x00495640",
+   "name": "RobloxWebDoc::getField14",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:58:22",
+   "address": "0x00495610",
+   "name": "RobloxScriptDoc::getField40",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-18T19:57:23",
    "address": "0x00403b10",
@@ -3293,121 +3640,7 @@
    "address": "0x00490c00",
    "name": "RBX::ScreenGui::getFlag8D",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:47:06",
-   "address": "0x0042f280",
-   "name": "RBX::Graphics::RenderView::getField8C",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:47:04",
-   "address": "0x00c81bc0",
-   "name": "std::stream_buffer::getConst19554176",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:47:03",
-   "address": "0x00c81bb0",
-   "name": "std::stream_buffer::getConst19553048",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:46:17",
-   "address": "0x00c16a00",
-   "name": "RBX::BulletShapeCellConnector::getConst13",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:46:15",
-   "address": "0x00c169f0",
-   "name": "RBX::SimulateStage::getConst14",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:46:14",
-   "address": "0x00c15080",
-   "name": "RBX::HUMAN::Physics::getConst16",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:46:12",
-   "address": "0x00c0e210",
-   "name": "RBX::AdvRotateTool::getFlag_e210",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:46:10",
-   "address": "0x00c0bbd0",
-   "name": "RBX::AdvMoveToolBase::getFlag_bbd0",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:46:08",
-   "address": "0x00be9a20",
-   "name": "RBX::OrderedDataStore::getConst15618428",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:46:07",
-   "address": "0x00be9a10",
-   "name": "RBX::DataStore::getConst15617916",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:46:05",
-   "address": "0x00ba4120",
-   "name": "RBX::MovingAssemblyStage::getConst10",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:46:03",
-   "address": "0x00ba2b30",
-   "name": "RBX::TreeStage::getConst5",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:46:02",
-   "address": "0x00aa2d10",
-   "name": "RBX::MotorJoint::getConst4",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:45:26",
-   "address": "0x00a320c0",
-   "name": "std::stream_buffer::getConst19196136",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:45:25",
-   "address": "0x00a2da50",
-   "name": "std::stream_buffer::getConst19190472",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:45:23",
-   "address": "0x00a2da40",
-   "name": "std::stream_buffer::getConst19190512",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:45:21",
-   "address": "0x00a2da30",
-   "name": "std::stream_buffer::getConst19190592",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:45:20",
-   "address": "0x00a2da20",
-   "name": "std::stream_buffer::getConst19190392",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:45:18",
-   "address": "0x00a2da10",
-   "name": "std::stream_buffer::getConst19190288",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 62.15
+ "match_rate_per_hour": 64.96
 }

@@ -62,6 +62,35 @@ char* UnionOperation::getPrimitiveDataOffset24() const
 	return (*(UnionOpPrimitiveOwner**)((const char*)this + 0xE0))->getPrimitiveData() + 0x24;
 }
 
+namespace {
+
+struct UnionOperationSlot74Vf12
+{
+	virtual void vf0();
+	virtual void vf1();
+	virtual void vf2();
+	virtual void vf3();
+	virtual void vf4();
+	virtual void vf5();
+	virtual void vf6();
+	virtual void vf7();
+	virtual void vf8();
+	virtual void vf9();
+	virtual void vf10();
+	virtual void vf11();
+	virtual void vf12(void* arg);
+};
+
+} // namespace
+
+// FUNCTION: ROBLOXSTUDIO 0x00894960
+void UnionOperation::sub_894960()
+{
+	UnionOperationSlot74Vf12* obj = *(UnionOperationSlot74Vf12**)((char*)this + 0x74);
+	if (obj)
+		obj->vf12((char*)this - 0x70);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

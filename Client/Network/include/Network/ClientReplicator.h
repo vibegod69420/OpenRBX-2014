@@ -18,6 +18,7 @@ public:
 	};
 
 	void sendDataOutStep();
+	int getDataPing();
 	// AUTO-GENERATED METHODS
 };
 

@@ -19,6 +19,22 @@ void ClientReplicator::sendDataOutStep()
     }
 }
 
+struct ClientReplicatorPeer
+{
+	char padding[0x178];
+	int dataPing;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00ca6810
+int ClientReplicator::getDataPing()
+{
+	ClientReplicatorPeer* peer = *reinterpret_cast<ClientReplicatorPeer**>(reinterpret_cast<char*>(this) + 0x20D4);
+	if (peer)
+		return peer->dataPing;
+
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network
