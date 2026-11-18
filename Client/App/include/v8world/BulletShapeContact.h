@@ -18,6 +18,7 @@ public:
 	};
 
 	int getFieldD4() const;
+	void deleteAllManifolds();
 	// AUTO-GENERATED METHODS
 };
 

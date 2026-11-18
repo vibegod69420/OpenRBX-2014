@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void deleteAllConnectors();
 	// AUTO-GENERATED METHODS
 };
 
