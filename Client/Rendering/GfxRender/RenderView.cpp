@@ -29,6 +29,15 @@ int RenderView::getSubField8C_BA0() const
 	return sub_008c_0ba0->val;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00676640
+bool RenderView::testAndClearFlagA0()
+{
+	bool* pFlag = (bool*)((char*)this + 0xA0);
+	bool oldValue = *pFlag;
+	*pFlag = false;
+	return oldValue;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

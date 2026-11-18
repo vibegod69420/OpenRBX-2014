@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18 19:24:00 UTC",
+ "updated_at": "2026-11-18 19:25:07 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 1.8473,
- "implemented_total": 173,
- "function_annotations": 173,
+ "matchable_coverage_pct": 1.8687,
+ "implemented_total": 175,
+ "function_annotations": 175,
  "stub_annotations": 0,
- "perfect_100_count": 173,
- "matched_real_functions": 173,
+ "perfect_100_count": 175,
+ "matched_real_functions": 175,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.4265,
- "overall_byte_coverage_pct": 0.0127,
+ "overall_function_coverage_pct": 0.4314,
+ "overall_byte_coverage_pct": 0.013,
  "usage": {
-  "calls_24h": 107,
+  "calls_24h": 111,
   "failures_24h": 0,
-  "completion_tokens_24h": 586214,
-  "reasoning_tokens_24h": 577932,
-  "avg_latency_s": 99.9
+  "completion_tokens_24h": 608981,
+  "reasoning_tokens_24h": 600326,
+  "avg_latency_s": 100.3
  },
- "functions_total": 173,
+ "functions_total": 175,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 68,
-   "functions": 68,
-   "bytes": 513
+   "matched": 69,
+   "functions": 69,
+   "bytes": 526
   },
   {
    "name": "App/v8kernel",
@@ -60,9 +60,9 @@
   },
   {
    "name": "Rendering/GfxRender",
-   "matched": 7,
-   "functions": 7,
-   "bytes": 58
+   "matched": 8,
+   "functions": 8,
+   "bytes": 72
   },
   {
    "name": "App/humanoid",
@@ -539,6 +539,17 @@
    "file": "Client/App/v8datamodel/MarketplaceService.cpp",
    "orig_size": 7,
    "recomp_size": 7,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00aa8790",
+   "kind": "FUNCTION",
+   "name": "RBX::SkateboardPlatform::getSkateboardController",
+   "mangled": "?getSkateboardController@SkateboardPlatform@RBX@@QAEPAXXZ",
+   "file": "Client/App/v8datamodel/SkateboardPlatform.cpp",
+   "orig_size": 13,
+   "recomp_size": 13,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1298,6 +1309,17 @@
    "file": "Client/Rendering/GfxRender/RenderView.cpp",
    "orig_size": 13,
    "recomp_size": 13,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00676640",
+   "kind": "FUNCTION",
+   "name": "RBX::Graphics::RenderView::testAndClearFlagA0",
+   "mangled": "?testAndClearFlagA0@RenderView@Graphics@RBX@@QAE_NXZ",
+   "file": "Client/Rendering/GfxRender/RenderView.cpp",
+   "orig_size": 14,
+   "recomp_size": 14,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -2288,9 +2310,27 @@
    "matched": 173,
    "implemented": 173,
    "pct": 1.8473
+  },
+  {
+   "t": "2026-11-18 19:25:07 UTC",
+   "matched": 175,
+   "implemented": 175,
+   "pct": 1.8687
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-18T19:24:27",
+   "address": "0x00676640",
+   "name": "RBX::Graphics::RenderView::testAndClearFlagA0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:24:02",
+   "address": "0x00aa8790",
+   "name": "RBX::SkateboardPlatform::getSkateboardController",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-18T19:23:03",
    "address": "0x0091a6d0",
@@ -2998,19 +3038,7 @@
    "address": "0x00594f20",
    "name": "btConvexHullShape::getConst17001568",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:42:31",
-   "address": "0x00594b20",
-   "name": "btCollisionObject::getConst256",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:42:29",
-   "address": "0x00590ce0",
-   "name": "btTetrahedronShapeEx::getConst17001004",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 64.6
+ "match_rate_per_hour": 64.89
 }

@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void* getSkateboardController();
 	// AUTO-GENERATED METHODS
 };
 
