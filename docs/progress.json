@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18 19:29:56 UTC",
+ "updated_at": "2026-11-18 19:35:47 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 1.9114,
- "implemented_total": 179,
- "function_annotations": 179,
+ "matchable_coverage_pct": 1.9861,
+ "implemented_total": 186,
+ "function_annotations": 186,
  "stub_annotations": 0,
- "perfect_100_count": 179,
- "matched_real_functions": 179,
+ "perfect_100_count": 186,
+ "matched_real_functions": 186,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.4413,
- "overall_byte_coverage_pct": 0.0136,
+ "overall_function_coverage_pct": 0.4586,
+ "overall_byte_coverage_pct": 0.0146,
  "usage": {
-  "calls_24h": 127,
+  "calls_24h": 153,
   "failures_24h": 0,
-  "completion_tokens_24h": 698031,
-  "reasoning_tokens_24h": 688023,
-  "avg_latency_s": 101.0
+  "completion_tokens_24h": 897761,
+  "reasoning_tokens_24h": 885097,
+  "avg_latency_s": 106.0
  },
- "functions_total": 179,
+ "functions_total": 186,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 71,
-   "functions": 71,
-   "bytes": 554
+   "matched": 75,
+   "functions": 75,
+   "bytes": 612
   },
   {
    "name": "App/v8kernel",
@@ -48,21 +48,21 @@
   },
   {
    "name": "App/v8world",
-   "matched": 22,
-   "functions": 22,
-   "bytes": 168
+   "matched": 23,
+   "functions": 23,
+   "bytes": 181
+  },
+  {
+   "name": "Rendering/GfxRender",
+   "matched": 9,
+   "functions": 9,
+   "bytes": 86
   },
   {
    "name": "Rendering/GfxCore",
    "matched": 12,
    "functions": 12,
    "bytes": 79
-  },
-  {
-   "name": "Rendering/GfxRender",
-   "matched": 8,
-   "functions": 8,
-   "bytes": 72
   },
   {
    "name": "App/humanoid",
@@ -92,6 +92,12 @@
    "name": "App/v8tree",
    "matched": 3,
    "functions": 3,
+   "bytes": 18
+  },
+  {
+   "name": "Win/DSVideoCaptureEngine.cpp",
+   "matched": 2,
+   "functions": 2,
    "bytes": 18
   },
   {
@@ -153,12 +159,6 @@
    "matched": 1,
    "functions": 1,
    "bytes": 5
-  },
-  {
-   "name": "Win/DSVideoCaptureEngine.cpp",
-   "matched": 1,
-   "functions": 1,
-   "bytes": 4
   },
   {
    "name": "RobloxStudio/RobloxTreeWidgetItem.cpp",
@@ -928,6 +928,17 @@
    "matchable": true
   },
   {
+   "address": "0x00913e00",
+   "kind": "FUNCTION",
+   "name": "RBX::Motor6D::getMaxVelocity",
+   "mangled": "?getMaxVelocity@Motor6D@RBX@@QAEMXZ",
+   "file": "Client/App/v8world/Motor6D.cpp",
+   "orig_size": 13,
+   "recomp_size": 13,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00913d00",
    "kind": "FUNCTION",
    "name": "RBX::Motor6D::getDesiredAngle",
@@ -972,6 +983,17 @@
    "matchable": true
   },
   {
+   "address": "0x008aca00",
+   "kind": "FUNCTION",
+   "name": "RBX::UnionOperation::hasChildData",
+   "mangled": "?hasChildData@UnionOperation@RBX@@QBEHXZ",
+   "file": "Client/App/v8datamodel/UnionOperation.cpp",
+   "orig_size": 12,
+   "recomp_size": 12,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x008ac870",
    "kind": "FUNCTION",
    "name": "RBX::UnionOperation::getGridSizeY",
@@ -1001,6 +1023,17 @@
    "file": "Client/App/v8datamodel/GuiImageButton.cpp",
    "orig_size": 7,
    "recomp_size": 7,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00893340",
+   "kind": "FUNCTION",
+   "name": "RBX::UnionOperation::getPrimitiveDataOffset24",
+   "mangled": "?getPrimitiveDataOffset24@UnionOperation@RBX@@QBEPADXZ",
+   "file": "Client/App/v8datamodel/UnionOperation.cpp",
+   "orig_size": 15,
+   "recomp_size": 15,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1276,6 +1309,17 @@
    "file": "Client/App/v8datamodel/holder.cpp",
    "orig_size": 6,
    "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00786a60",
+   "kind": "FUNCTION",
+   "name": "RBX::PathfindingService::CreatePathRequest::cancel",
+   "mangled": "?cancel@CreatePathRequest@PathfindingService@RBX@@QAEXXZ",
+   "file": "Client/App/v8datamodel/CreatePathRequest.cpp",
+   "orig_size": 15,
+   "recomp_size": 15,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1863,6 +1907,17 @@
    "matchable": true
   },
   {
+   "address": "0x0056f7f0",
+   "kind": "FUNCTION",
+   "name": "boost::thread_data::run",
+   "mangled": "?run@thread_data@boost@@QAEXXZ",
+   "file": "Client/App/v8datamodel/thread_data.cpp",
+   "orig_size": 16,
+   "recomp_size": 16,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x005559c0",
    "kind": "FUNCTION",
    "name": "ShortcutHelpDialog::getConst16984184",
@@ -1995,6 +2050,17 @@
    "matchable": true
   },
   {
+   "address": "0x004cef90",
+   "kind": "FUNCTION",
+   "name": "RBX::Graphics::TextureProxy::release",
+   "mangled": "?release@TextureProxy@Graphics@RBX@@QAEXXZ",
+   "file": "Client/Rendering/GfxRender/TextureProxy.cpp",
+   "orig_size": 14,
+   "recomp_size": 14,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x004bb180",
    "kind": "FUNCTION",
    "name": "RobloxIDEDoc::getField80",
@@ -2057,6 +2123,17 @@
    "file": "Client/Rendering/GfxRender/RenderView.cpp",
    "orig_size": 7,
    "recomp_size": 7,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x0042ae00",
+   "kind": "FUNCTION",
+   "name": "RBX::DSVideoCaptureEngine::getElapsedTime",
+   "mangled": "?getElapsedTime@DSVideoCaptureEngine@RBX@@QAEHXZ",
+   "file": "Client/Win/DSVideoCaptureEngine.cpp",
+   "orig_size": 14,
+   "recomp_size": 14,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -2372,9 +2449,57 @@
    "matched": 179,
    "implemented": 179,
    "pct": 1.9114
+  },
+  {
+   "t": "2026-11-18 19:35:47 UTC",
+   "matched": 186,
+   "implemented": 186,
+   "pct": 1.9861
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-18T19:35:01",
+   "address": "0x0056f7f0",
+   "name": "boost::thread_data::run",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:34:32",
+   "address": "0x00893340",
+   "name": "RBX::UnionOperation::getPrimitiveDataOffset24",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:32:46",
+   "address": "0x00786a60",
+   "name": "RBX::PathfindingService::CreatePathRequest::cancel",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:31:08",
+   "address": "0x004cef90",
+   "name": "RBX::Graphics::TextureProxy::release",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:30:37",
+   "address": "0x0042ae00",
+   "name": "RBX::DSVideoCaptureEngine::getElapsedTime",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:30:04",
+   "address": "0x008aca00",
+   "name": "RBX::UnionOperation::hasChildData",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T19:29:58",
+   "address": "0x00913e00",
+   "name": "RBX::Motor6D::getMaxVelocity",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-18T19:29:17",
    "address": "0x00a2d200",
@@ -3052,49 +3177,7 @@
    "address": "0x0059fd00",
    "name": "btBoxShape::getConst17002324",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:43:25",
-   "address": "0x0059f930",
-   "name": "RBX::RotateVJoint::getConst8",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:43:24",
-   "address": "0x0059f920",
-   "name": "RBX::HUMAN::Flying::getConst6",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:43:22",
-   "address": "0x0059b8b0",
-   "name": "btBvhTriangleMeshShape::getConst60",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:43:20",
-   "address": "0x0059b8a0",
-   "name": "btBvhTriangleMeshShape::getConst17002256",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:43:19",
-   "address": "0x0059b590",
-   "name": "btGImpactConvexDecompositionShape::getConst17002116",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:43:17",
-   "address": "0x0059ab00",
-   "name": "btGImpactShapeInterface::getConst25",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:43:15",
-   "address": "0x00596500",
-   "name": "btSphereShape::getConst17002028",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 64.46
+ "match_rate_per_hour": 64.71
 }

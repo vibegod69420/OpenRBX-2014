@@ -18,6 +18,7 @@ public:
 	};
 
 	const int* getMemberPtr44() const;
+	int getElapsedTime();
 	// AUTO-GENERATED METHODS
 };
 

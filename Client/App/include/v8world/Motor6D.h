@@ -18,6 +18,7 @@ public:
 
 	float getDesiredAngle();
 	float getCurrentAngle();
+	float getMaxVelocity();
 	// AUTO-GENERATED METHODS
 };
 

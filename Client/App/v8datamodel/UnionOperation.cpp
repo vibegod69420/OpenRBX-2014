@@ -41,6 +41,27 @@ float UnionOperation::getGridSizeY() const
 	return reinterpret_cast<const PartOperationVSlot35*>(this)->getGridSize().y;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008aca00
+int UnionOperation::hasChildData() const
+{
+	return *(const int*)((const char*)this + 0x170) != 0;
+}
+
+namespace {
+
+struct UnionOpPrimitiveOwner
+{
+	char* getPrimitiveData(); // 0x0099c980
+};
+
+} // namespace
+
+// FUNCTION: ROBLOXSTUDIO 0x00893340
+char* UnionOperation::getPrimitiveDataOffset24() const
+{
+	return (*(UnionOpPrimitiveOwner**)((const char*)this + 0xE0))->getPrimitiveData() + 0x24;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

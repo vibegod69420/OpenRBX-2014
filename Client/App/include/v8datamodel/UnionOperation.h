@@ -18,6 +18,8 @@ public:
 
 	float getGridSizeX() const;
 	float getGridSizeY() const;
+	int hasChildData() const;
+	char* getPrimitiveDataOffset24() const;
 	// AUTO-GENERATED METHODS
 };
 
