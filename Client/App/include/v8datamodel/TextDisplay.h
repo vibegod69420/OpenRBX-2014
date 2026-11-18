@@ -14,10 +14,12 @@ public:
 	{
 		int _vtable_or_head;
 		struct { char _pad_field_0090[0x90]; int field_0090; };
+		struct { char _pad_flag_00b8[0xb8]; bool flag_00b8; };
 		// AUTO-GENERATED FIELDS
 	};
 
 	int getField90() const;
+	bool getFlagB8() const;
 	// AUTO-GENERATED METHODS
 };
 
