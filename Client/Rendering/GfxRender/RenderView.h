@@ -6,6 +6,7 @@
 namespace RBX {
 namespace Graphics {
 
+struct Sub_RenderView_0c_01c8 { char pad[456]; int val; };
 // AUTO-GENERATED HELPERS
 
 class RenderView
@@ -15,10 +16,12 @@ public:
 	{
 		int _vtable_or_head;
 		struct { char _pad_field_008c[0x8c]; int field_008c; };
+		struct { char _pad_sub_000c_01c8[0xc]; Sub_RenderView_0c_01c8* sub_000c_01c8; };
 		// AUTO-GENERATED FIELDS
 	};
 
 	int getField8C() const;
+	int getSubField0C_1C8() const;
 	// AUTO-GENERATED METHODS
 };
 
