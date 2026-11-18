@@ -45,6 +45,24 @@ void IndexBufferD3D9::release()
     }
 }
 
+IDirect3DIndexBuffer9* sub_5E55D0(void* device, unsigned int size, unsigned int flags, int index);
+
+// FUNCTION: ROBLOXSTUDIO 0x005e53b0
+void IndexBufferD3D9::upload()
+{
+	int index = *reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x30);
+	if (s_indexBufferD3D9Info[index][0] == 0)
+	{
+		void* owner = *reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 4);
+		*reinterpret_cast<IDirect3DIndexBuffer9**>(reinterpret_cast<char*>(this) + 0x34) =
+			sub_5E55D0(
+				*reinterpret_cast<void**>(reinterpret_cast<char*>(owner) + 0x14),
+				*reinterpret_cast<unsigned int*>(reinterpret_cast<char*>(this) + 0x28),
+				*reinterpret_cast<unsigned int*>(reinterpret_cast<char*>(this) + 0x2c),
+				index);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

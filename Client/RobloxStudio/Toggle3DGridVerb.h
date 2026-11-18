@@ -17,6 +17,7 @@ public:
 	};
 
 	bool isChecked() const;
+	bool isEnabled() const;
 	// AUTO-GENERATED METHODS
 };
 

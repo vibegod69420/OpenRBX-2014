@@ -18,6 +18,7 @@ public:
 	};
 
 	int getField40() const;
+	void sub_50F860();
 	// AUTO-GENERATED METHODS
 };
 

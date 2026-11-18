@@ -1,0 +1,24 @@
+#ifndef CLIENT_NETWORK_INCLUDE_NETWORK_PLAYERCHATLINE_H
+#define CLIENT_NETWORK_INCLUDE_NETWORK_PLAYERCHATLINE_H
+
+#include "decomp.h"
+
+namespace RBX {
+
+// AUTO-GENERATED HELPERS
+
+class PlayerChatLine
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+} // namespace RBX
+
+#endif // CLIENT_NETWORK_INCLUDE_NETWORK_PLAYERCHATLINE_H
