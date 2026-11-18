@@ -48,9 +48,62 @@ CONTEXT_WINDOW = 320000
 TUNNEL_CACHE_FILE = ROOT / "data" / "active_tunnel_url.txt"
 
 
+LAST_ACTIVITY = time.time()
+_LOG_PATH = Path(os.environ.get("DECOMP_LOG_PATH", "/var/log/openrbx/harness.log"))
+WATCHDOG_STALE_SECONDS = int(os.environ.get("DECOMP_WATCHDOG_STALE", "3600"))
+
+
 def log(msg: str):
+    global LAST_ACTIVITY
+    LAST_ACTIVITY = time.time()
     ts = time.strftime("%Y-%m-%d %H:%M:%S")
     print(f"[{ts}] {msg}", flush=True)
+
+
+def rotate_log_if_needed(max_bytes: int = 64 * 1024 * 1024, keep: int = 8 * 1024 * 1024) -> None:
+    """
+    The worker writes one append-only file for weeks. systemd holds that fd in O_APPEND mode,
+    so trimming in place is safe and needs no root-owned logrotate rule on the host.
+    """
+    try:
+        if _LOG_PATH.stat().st_size <= max_bytes:
+            return
+        with open(_LOG_PATH, "rb") as fh:
+            fh.seek(-keep, os.SEEK_END)
+            tail = fh.read()
+        with open(_LOG_PATH, "wb") as fh:
+            fh.write(b"[log rotated; earlier output trimmed]\n")
+            fh.write(tail)
+    except OSError:
+        pass
+
+
+def watchdog_loop() -> None:
+    """
+    Restarts a wedged loop that systemd still reports as healthy: a stalled HTTP stream or a
+    Wine deadlock keeps the process alive while nothing progresses. Exiting lets Restart=always
+    start a clean supervisor, which is the only recovery that does not need root on the host.
+    """
+    last_rotation = time.time()
+    while True:
+        time.sleep(60)
+        if time.time() - last_rotation > 3600:
+            rotate_log_if_needed()
+            last_rotation = time.time()
+        idle = time.time() - LAST_ACTIVITY
+        if idle > WATCHDOG_STALE_SECONDS:
+            log(f"WATCHDOG: no activity for {int(idle)}s; exiting so systemd restarts the supervisor")
+            try:
+                sys.stdout.flush()
+            except Exception:
+                pass
+            os._exit(1)
+
+
+def start_watchdog() -> None:
+    import threading
+
+    threading.Thread(target=watchdog_loop, name="harness-watchdog", daemon=True).start()
 
 
 def _first_error(compiler_out: str) -> str:
@@ -1286,7 +1339,11 @@ def rotate_after_quota(reason: str) -> bool:
 
 
 def run_forever():
-    log("Starting OpenRBX-2014 Immortal 24/7 Autonomous Decompilation Supervisor (Clean Subsystem Layout + MoE Max Reasoning)...")
+    start_watchdog()
+    log(
+        "Starting OpenRBX-2014 Immortal 24/7 Autonomous Decompilation Supervisor "
+        f"(watchdog: {WATCHDOG_STALE_SECONDS}s idle -> restart, log self-rotation at 64 MiB)..."
+    )
     sizes = verify_tu.load_function_sizes()
     vt_map = func_context.load_vtable_membership()
     skipped_without_llm: set[int] = set()

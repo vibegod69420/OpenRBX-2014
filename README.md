@@ -89,11 +89,13 @@ python tools/deploy_aws.py stop        # keep the disk
 python tools/deploy_aws.py terminate   # delete the worker
 ```
 
-**Why `m7i-flex.large` / `us-east-1`.** This AWS account is on the Free plan, which only permits
-free-tier-eligible instance types (`m7i-flex.large`, `c7i-flex.large`, `t3.small`, `t3.micro`, …).
-`m7i-flex.large` is the largest of those — 2 vCPU, 8 GiB — and `us-east-1`, `us-east-2` and
-`us-west-2` are its cheapest regions at **$0.0958/hr** (≈ $70/month on-demand, covered by the
-account's credit balance). `tools/deploy_aws.py compare` reproduces that comparison live.
+**Why `t3.small` / `us-east-1`.** This AWS account is on the Free plan, which only permits
+free-tier-eligible instance types (`t3.small`, `t3.micro`, `c7i-flex.large`, `m7i-flex.large`, …).
+The worker is API-bound, not CPU-bound: it waits on DeepSeek responses and measures ~560 MB
+resident at load 0.01, so the 8 GiB `m7i-flex.large` was mostly idle. `t3.small` gives 2
+burstable vCPU and 2 GiB (plus a 4 GiB swapfile) at **$0.0208/hr** — $15.18/month instead of
+$69.90 — with the same measured throughput. `tools/deploy_aws.py compare` reproduces that
+comparison live.
 
 The unit restarts on failure and is enabled at boot:
 

@@ -17,9 +17,11 @@ Actions
   terminate  Terminate the instance and delete its security group.
 
 Defaults come from the price comparison plus the account's plan eligibility: this AWS account
-is on the Free plan, which only permits free-tier-eligible instance types. The best of those is
-`m7i-flex.large` (2 vCPU, 8 GiB, current-gen Intel), and us-east-1 / us-west-2 / us-east-2 are
-its cheapest regions at $0.0958/hr. Override with --region / --instance-type.
+is on the Free plan, which only permits free-tier-eligible instance types. The measured worker
+uses ~560 MB of RAM and sits at load 0.01 because it waits on the model API, not the CPU, so
+`t3.small` (2 burstable vCPU, 2 GiB, plus a 4 GiB swapfile) is the cheapest type that loses
+nothing: $0.0208/hr in us-east-1 versus $0.0958/hr for m7i-flex.large. Override with
+--region / --instance-type.
 
 Nothing secret is written into the repository: the DeepAI key is read from DEEPAI_API_KEY
 in the environment and installed as /etc/openrbx/deepai.env (0600) on the instance.
@@ -57,7 +59,7 @@ SPECS = {  # vCPU, GiB
 }
 
 DEFAULT_REGION = os.environ.get("OPENRBX_REGION", "us-east-1")
-DEFAULT_TYPE = os.environ.get("OPENRBX_INSTANCE_TYPE", "m7i-flex.large")
+DEFAULT_TYPE = os.environ.get("OPENRBX_INSTANCE_TYPE", "t3.small")
 DEFAULT_KEY = "openrbx-harness"
 DEFAULT_SG = "openrbx-harness"
 
@@ -176,15 +178,16 @@ def action_compare(args) -> int:
             print(f"{itype:15s} {cpu:>4d}/{ram:<4d} {location:30s} {usd:8.4f} {usd * 730:9.2f}")
             if best is None or usd < best[2]:
                 best = (itype, location, usd)
-            # Wine + a 32-bit cl.exe + ISO extraction does not fit in 2 GiB.
-            if ram >= 8 and (recommended is None or usd < recommended[2]):
+            # Measured worker footprint is ~560 MB resident with a 4 GiB swapfile behind it;
+            # 2 GiB is the floor that leaves real headroom for a compile spike.
+            if ram >= 2 and (recommended is None or usd < recommended[2]):
                 recommended = (itype, location, usd)
     if best:
         print(f"\nCheapest absolute: {best[0]} in {best[1]} at ${best[2]:.4f}/hr (${best[2] * 730:.2f}/month).")
     if recommended:
         print(
             f"Recommended:      {recommended[0]} in {recommended[1]} at ${recommended[2]:.4f}/hr "
-            f"(${recommended[2] * 730:.2f}/month) -- cheapest option with enough RAM for Wine + MSVC."
+            f"(${recommended[2] * 730:.2f}/month) -- cheapest option with measured headroom for Wine + MSVC."
         )
     print(
         "\nRegion ids for the cheap locations above: "

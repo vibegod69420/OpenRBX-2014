@@ -258,6 +258,92 @@ def _newest_header_mtime() -> float:
     return _NEWEST_HEADER_MTIME
 
 
+# Per-translation-unit dependency records live next to the object. `_newest_header_mtime`
+# above is only a fallback for objects built before this existed: invalidating every object
+# whenever any header in the tree changed meant one edit recompiled the whole client on
+# every batch, which is the one cost that grows with the project.
+DEPS_SUFFIX = ".deps.txt"
+
+
+def _host_dep_path(raw: str) -> str | None:
+    """Map a `/showIncludes` path onto a real file when it points inside this checkout."""
+    cand = (raw or "").strip().strip('"').replace("\\", "/")
+    if not cand:
+        return None
+    root = str(ROOT).replace("\\", "/").rstrip("/")
+    if cand.lower().startswith(root.lower()):
+        return cand
+    # Wine maps the Linux filesystem onto Z:.
+    if len(cand) > 2 and cand[1] == ":" and cand[2] == "/":
+        stripped = cand[2:]
+        if stripped.lower().startswith(root.lower()):
+            return stripped
+    return None  # toolchain header: the toolchain never changes mid-run
+
+
+# cl.exe localises its `/showIncludes` note ("Note: including file:", "Observação: incluindo
+# arquivo:", …), so the path is taken from the rest of the line instead of from the sentence
+# around it. Only headers are recorded: a diagnostic line also names a source file, and
+# tracking that would rebuild a unit that merely reported an error.
+_DEP_LINE = re.compile(r"([A-Za-z]:[\\/].*|/.*)$")
+_HEADER_SUFFIXES = (".h", ".hpp", ".inl", ".hxx", ".hh")
+
+
+def _parse_show_includes(output: str) -> list[str]:
+    headers: list[str] = []
+    for line in (output or "").splitlines():
+        match = _DEP_LINE.search(line)
+        if not match:
+            continue
+        cand = match.group(1).strip().strip('"').strip()
+        if not cand.lower().endswith(_HEADER_SUFFIXES):
+            continue
+        dep = _host_dep_path(cand)
+        if dep and dep not in headers:
+            headers.append(dep)
+    return headers
+
+
+def _deps_path(obj_path: Path) -> Path:
+    return obj_path.with_suffix(obj_path.suffix + DEPS_SUFFIX)
+
+
+def _cache_fresh(obj_path: Path, cpp_path: Path) -> bool:
+    """True when the cached object is newer than every input that produced it."""
+    try:
+        obj_mtime = obj_path.stat().st_mtime
+    except OSError:
+        return False
+    try:
+        lines = _deps_path(obj_path).read_text(encoding="utf-8").splitlines()
+    except OSError:
+        try:  # legacy cache entry: keep the old conservative rule
+            return obj_mtime >= max(cpp_path.stat().st_mtime, _newest_header_mtime())
+        except OSError:
+            return False
+    try:
+        if obj_mtime < cpp_path.stat().st_mtime:
+            return False
+    except OSError:
+        return False
+    for dep in lines:
+        if not dep.strip():
+            continue
+        try:
+            if obj_mtime < Path(dep.strip()).stat().st_mtime:
+                return False
+        except OSError:
+            return False  # an included header disappeared: rebuild
+    return True
+
+
+def _write_deps(obj_path: Path, headers: list[str]) -> None:
+    try:
+        _deps_path(obj_path).write_text("\n".join(headers) + "\n", encoding="utf-8")
+    except OSError:
+        pass
+
+
 def compile_cpp_to_coff(cpp_path: Path, use_cache: bool = False) -> tuple[bool, Path, str]:
     BUILD_OBJ_DIR.mkdir(parents=True, exist_ok=True)
     try:
@@ -266,13 +352,8 @@ def compile_cpp_to_coff(cpp_path: Path, use_cache: bool = False) -> tuple[bool, 
         rel_slug = cpp_path.stem
     obj_path = BUILD_OBJ_DIR / f"{rel_slug}.obj"
 
-    if use_cache and obj_path.exists():
-        try:
-            newest = max(cpp_path.stat().st_mtime, _newest_header_mtime())
-            if obj_path.stat().st_mtime >= newest:
-                return True, obj_path, ""
-        except Exception:
-            pass
+    if use_cache and obj_path.exists() and _cache_fresh(obj_path, cpp_path):
+        return True, obj_path, ""
 
     if obj_path.exists():
         obj_path.unlink()
@@ -305,11 +386,20 @@ def compile_cpp_to_coff(cpp_path: Path, use_cache: bool = False) -> tuple[bool, 
             flags = stripped.split(":", 1)[1].strip()
             break
 
+    # Records the exact header set so a later cached build only rebuilds when one of *those*
+    # files changed. /showIncludes only prints include notes, so it cannot affect codegen,
+    # and every successful build seeds the record (the harness compiles with use_cache=False).
+    flags += " /showIncludes"
+
     cmd_str = f'{CL_BIN} {flags} {" ".join(includes)} "{cpp_path}" /Fo"{obj_path}"'
 
     res = subprocess.run(cmd_str, shell=True, capture_output=True, text=True, env=get_msvc_env())
     out = (res.stdout + "\n" + res.stderr).strip()
-    return (res.returncode == 0 and obj_path.exists()), obj_path, out
+    ok = res.returncode == 0 and obj_path.exists()
+    if ok:
+        _write_deps(obj_path, _parse_show_includes(out))
+    out = "\n".join(line for line in out.splitlines() if "including file:" not in line.lower()).strip()
+    return ok, obj_path, out
 
 
 def parse_coff_functions(obj_path: Path) -> dict[str, tuple[bytes, set[int]]]:

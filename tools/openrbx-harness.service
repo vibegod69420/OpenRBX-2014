@@ -2,6 +2,9 @@
 Description=OpenRBX-2014 autonomous decompilation harness (DeepSeek V4.1 Flash + MSVC 11 under Wine)
 After=network-online.target
 Wants=network-online.target
+# Never stop trying: the run is measured in weeks, and a transient API or Wine failure must
+# not leave the worker dead until someone notices.
+StartLimitIntervalSec=0
 
 [Service]
 Type=simple
@@ -24,7 +27,11 @@ Environment=HOME=/root
 ExecStartPre=/bin/mkdir -p /var/log/openrbx
 ExecStart=/usr/bin/python3 /opt/openrbx/OpenRBX-2014/tools/autonomous_harness.py
 Restart=always
-RestartSec=15
+RestartSec=10
+# SIGINT reaches the harness's KeyboardInterrupt handler, which logs the stop and lets an
+# in-flight batch finish its bookkeeping instead of being killed mid-write.
+KillSignal=SIGINT
+TimeoutStopSec=90
 StandardOutput=append:/var/log/openrbx/harness.log
 StandardError=append:/var/log/openrbx/harness.log
 

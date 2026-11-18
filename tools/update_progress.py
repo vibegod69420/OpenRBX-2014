@@ -35,9 +35,11 @@ DOCS_DIR = ROOT / "docs"
 PROGRESS_JSON = ROOT / "ROBLOXSTUDIOPROGRESS.json"
 PROGRESS_SVG = ROOT / "ROBLOXSTUDIOPROGRESS.SVG"
 USAGE_LEDGER = ROOT / "data" / "llm_usage.jsonl"
+WORK_LEDGER = ROOT / "data" / "work_ledger.jsonl"
 
 RECENT_LIMIT = 250
 HISTORY_LIMIT = 500
+ACTIVITY_LIMIT = 120
 
 
 def _usage_summary() -> dict:
@@ -73,6 +75,49 @@ def _usage_summary() -> dict:
         "reasoning_tokens_24h": reasoning,
         "avg_latency_s": round(sum(latencies) / len(latencies), 1) if latencies else None,
     }
+
+
+def _activity() -> list[dict]:
+    """Newest verified functions from the harness ledger, for the dashboard feed."""
+    events: list[dict] = []
+    try:
+        lines = WORK_LEDGER.read_text(encoding="utf-8").splitlines()
+    except OSError:
+        return events
+    for line in reversed(lines):
+        try:
+            entry = json.loads(line)
+        except Exception:
+            continue
+        if not entry.get("matched"):
+            continue
+        events.append({
+            "ts": entry.get("ts"),
+            "address": entry.get("address"),
+            "name": entry.get("name"),
+            "pct": entry.get("best_pct"),
+        })
+        if len(events) >= ACTIVITY_LIMIT:
+            break
+    return events
+
+
+def _match_rate(history: list[dict]) -> float:
+    """Verified functions per hour across the retained history window."""
+    if len(history) < 2:
+        return 0.0
+
+    def stamp(entry: dict) -> datetime.datetime:
+        return datetime.datetime.strptime(entry["t"], "%Y-%m-%d %H:%M:%S UTC").replace(
+            tzinfo=datetime.timezone.utc
+        )
+
+    try:
+        hours = (stamp(history[-1]) - stamp(history[0])).total_seconds() / 3600.0
+        gained = int(history[-1].get("matched") or 0) - int(history[0].get("matched") or 0)
+    except Exception:
+        return 0.0
+    return round(gained / hours, 2) if hours > 0 and gained > 0 else 0.0
 
 
 def evaluate_all_client_files() -> dict:
@@ -263,6 +308,8 @@ def write_dashboard_data(summary: dict):
     public["subsystems"] = subsystems
     public["recent"] = recent
     public["history"] = history
+    public["activity"] = _activity()
+    public["match_rate_per_hour"] = _match_rate(history)
 
     (DOCS_DIR / "progress.json").write_text(json.dumps(public, indent=1), encoding="utf-8")
     (DOCS_DIR / "history.json").write_text(json.dumps(history, indent=0), encoding="utf-8")
