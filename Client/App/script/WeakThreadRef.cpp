@@ -5,6 +5,29 @@
 namespace RBX {
 namespace Lua {
 
+// FUNCTION: ROBLOXSTUDIO 0x008c19c0
+void WeakThreadRef::removeRef()
+{
+	extern unsigned char gLogWeakThreadRef;
+	extern void logWeakThreadRefRemove(int, const char*, const WeakThreadRef*, void*, int);
+
+	unsigned char logFlag = gLogWeakThreadRef;
+	if (logFlag)
+	{
+		void* node = *(void**)((char*)this + 0x18);
+		logWeakThreadRefRemove((int)logFlag, "WeakThreadRef::removeRef() %p for node %p", this, node, 0);
+	}
+
+	void* ref = *(void**)((char*)this + 0x14);
+	*(void**)((char*)this + 0x14) = 0;
+
+	if (ref)
+	{
+		extern void freeWeakThreadRef(void*);
+		freeWeakThreadRef(ref);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

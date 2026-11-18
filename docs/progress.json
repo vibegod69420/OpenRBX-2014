@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18 22:32:55 UTC",
+ "updated_at": "2026-11-18 22:39:20 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 3.3956,
- "implemented_total": 318,
- "function_annotations": 318,
+ "matchable_coverage_pct": 3.4063,
+ "implemented_total": 319,
+ "function_annotations": 319,
  "stub_annotations": 0,
- "perfect_100_count": 318,
- "matched_real_functions": 318,
+ "perfect_100_count": 319,
+ "matched_real_functions": 319,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.784,
- "overall_byte_coverage_pct": 0.0607,
+ "overall_function_coverage_pct": 0.7865,
+ "overall_byte_coverage_pct": 0.0613,
  "usage": {
-  "calls_24h": 1091,
+  "calls_24h": 1132,
   "failures_24h": 0,
-  "completion_tokens_24h": 10994895,
-  "reasoning_tokens_24h": 10830585,
-  "avg_latency_s": 178.3
+  "completion_tokens_24h": 11473657,
+  "reasoning_tokens_24h": 11299359,
+  "avg_latency_s": 178.5
  },
- "functions_total": 318,
+ "functions_total": 319,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -71,16 +71,16 @@
    "bytes": 171
   },
   {
+   "name": "App/script",
+   "matched": 7,
+   "functions": 7,
+   "bytes": 164
+  },
+  {
    "name": "App/util",
    "matched": 6,
    "functions": 6,
    "bytes": 117
-  },
-  {
-   "name": "App/script",
-   "matched": 6,
-   "functions": 6,
-   "bytes": 106
   },
   {
    "name": "App/humanoid",
@@ -1703,6 +1703,17 @@
    "matchable": true
   },
   {
+   "address": "0x008c19c0",
+   "kind": "FUNCTION",
+   "name": "RBX::Lua::WeakThreadRef::removeRef",
+   "mangled": "?removeRef@WeakThreadRef@Lua@RBX@@QAEXXZ",
+   "file": "Client/App/script/WeakThreadRef.cpp",
+   "orig_size": 58,
+   "recomp_size": 58,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x008aca00",
    "kind": "FUNCTION",
    "name": "RBX::UnionOperation::hasChildData",
@@ -3032,17 +3043,6 @@
    "recomp_size": 6,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x00595de0",
-   "kind": "FUNCTION",
-   "name": "btConcaveShape::getMargin",
-   "mangled": "?getMargin@btConcaveShape@@QBEMXZ",
-   "file": "Client/App/v8kernel/btConcaveShape.cpp",
-   "orig_size": 4,
-   "recomp_size": 4,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -3435,9 +3435,21 @@
    "matched": 318,
    "implemented": 318,
    "pct": 3.3956
+  },
+  {
+   "t": "2026-11-18 22:39:20 UTC",
+   "matched": 319,
+   "implemented": 319,
+   "pct": 3.4063
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-18T22:33:02",
+   "address": "0x008c19c0",
+   "name": "RBX::Lua::WeakThreadRef::removeRef",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-18T22:30:06",
    "address": "0x00b80080",
@@ -4151,13 +4163,7 @@
    "address": "0x00495610",
    "name": "RobloxScriptDoc::getField40",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T19:57:23",
-   "address": "0x00403b10",
-   "name": "RBX::StarterPackService::getFlag8C",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 54.58
+ "match_rate_per_hour": 53.76
 }
