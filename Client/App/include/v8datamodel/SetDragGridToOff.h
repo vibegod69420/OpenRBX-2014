@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	int isDragGridOff();
 	// AUTO-GENERATED METHODS
 };
 

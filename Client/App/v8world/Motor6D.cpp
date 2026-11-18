@@ -4,6 +4,20 @@
 
 namespace RBX {
 
+// FUNCTION: ROBLOXSTUDIO 0x00913d00
+float Motor6D::getDesiredAngle()
+{
+	char* internalData = *(char**)((char*)this + 0x8C);
+	return *(float*)(internalData + 0x98);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00a8d9a0
+float Motor6D::getCurrentAngle()
+{
+	char* internalData = *(char**)((char*)this + 0x8C);
+	return *(float*)(internalData + 0xAC);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

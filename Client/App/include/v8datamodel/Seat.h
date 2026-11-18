@@ -17,6 +17,7 @@ public:
 	};
 
 	int getClassIndex();
+	int isOccupied() const;
 	// AUTO-GENERATED METHODS
 };
 

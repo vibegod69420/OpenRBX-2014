@@ -16,6 +16,8 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	float getDesiredAngle();
+	float getCurrentAngle();
 	// AUTO-GENERATED METHODS
 };
 

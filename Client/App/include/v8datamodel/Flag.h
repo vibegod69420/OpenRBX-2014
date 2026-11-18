@@ -17,6 +17,7 @@ public:
 	};
 
 	void resetField78();
+	int isCtfWon();
 	// AUTO-GENERATED METHODS
 };
 
