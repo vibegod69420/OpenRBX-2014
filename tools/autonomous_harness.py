@@ -170,13 +170,16 @@ def _apply_and_verify(
         coff_funcs = verify_tu.parse_coff_functions(obj_path)
         anns = verify_tu.parse_annotations_in_cpp(cpp_path)
         fn_hint = next((h for a, k, h in anns if a == addr), f"func_{addr:08x}")
-        short_hint = fn_hint.split("::")[-1]
 
+        # Score the best-matching symbol rather than the first name hit: the name hint comes from
+        # parsing the model's own annotation, and when it drifts every symbol is skipped and a body
+        # that compiled perfectly is silently recorded as 0%, which is indistinguishable from a
+        # wrong routine and throws away a whole call.
         cur_pct, cur_diff = 0.0, []
         for sym_name, (recomp_bytes, rel_offsets) in coff_funcs.items():
-            if short_hint and short_hint in sym_name:
-                cur_pct, cur_diff = verify_tu.compare_with_relocations(orig_bytes, recomp_bytes, rel_offsets)
-                break
+            pct, diff = verify_tu.compare_with_relocations(orig_bytes, recomp_bytes, rel_offsets)
+            if pct > cur_pct:
+                cur_pct, cur_diff = pct, diff
 
         if cur_pct >= 99.99:
             promote_marker(cpp_path, addr)
@@ -1441,7 +1444,11 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
         f"`{route['class_name']}::<name>` (anything else is C2039).\n"
         f"4. The matching declaration is added to `{route['h_rel']}` automatically. Every type you use "
         "must be a builtin, already visible in the header, or forward-declared (`class Foo;`) at the "
-        "top of your own block.\n\n"
+        "top of your own block.\n"
+        "5. Never declare a class, struct or enum inside the function body: a local class whose methods "
+        "are not defined inline is MSVC C3640, which cannot be repaired afterwards.\n"
+        "6. A non-void return type must return a value on every path (C4716).\n"
+        "7. Never open or extend `namespace std`; doing so corrupts the system headers that follow.\n\n"
         + claude_md
     )
 
@@ -1494,6 +1501,12 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
                 f"{resp_text[:160]!r}"
             )
             continue
+
+        # The reply only has to mention the address, so a model that writes a bare comment or no
+        # marker at all still yields usable code. Without the canonical annotation the body is
+        # invisible to both scoring and promote_marker, so a 100% match is silently discarded.
+        if not re.search(r"//\s*(?:FUNCTION|STUB):\s*ROBLOXSTUDIO\s+0x", candidate_cpp_snippet, re.IGNORECASE):
+            candidate_cpp_snippet = f"// STUB: ROBLOXSTUDIO 0x{addr:08x}\n{candidate_cpp_snippet}"
 
         candidate_cpp_snippet, parsed_def = _normalize_generated_definition(candidate_cpp_snippet, route)
         if parsed_def and parsed_def["renamed"]:
