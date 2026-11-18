@@ -6,6 +6,9 @@
 namespace RBX {
 
 extern bool s_flag_00c0e210;
+#ifndef NULL
+#define NULL 0
+#endif
 // AUTO-GENERATED HELPERS
 
 class AdvRotateTool
@@ -18,6 +21,7 @@ public:
 	};
 
 	bool getFlag_e210() const;
+	bool isEnabled();
 	// AUTO-GENERATED METHODS
 };
 

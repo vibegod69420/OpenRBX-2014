@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18 23:19:56 UTC",
+ "updated_at": "2026-11-18 23:26:33 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 3.481,
- "implemented_total": 326,
- "function_annotations": 326,
+ "matchable_coverage_pct": 3.5024,
+ "implemented_total": 328,
+ "function_annotations": 328,
  "stub_annotations": 0,
- "perfect_100_count": 326,
- "matched_real_functions": 326,
+ "perfect_100_count": 328,
+ "matched_real_functions": 328,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.8037,
- "overall_byte_coverage_pct": 0.0675,
+ "overall_function_coverage_pct": 0.8087,
+ "overall_byte_coverage_pct": 0.0696,
  "usage": {
-  "calls_24h": 1341,
+  "calls_24h": 1373,
   "failures_24h": 0,
-  "completion_tokens_24h": 14291615,
-  "reasoning_tokens_24h": 14062041,
-  "avg_latency_s": 186.8
+  "completion_tokens_24h": 14715078,
+  "reasoning_tokens_24h": 14476205,
+  "avg_latency_s": 187.2
  },
- "functions_total": 326,
+ "functions_total": 328,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -65,6 +65,12 @@
    "bytes": 380
   },
   {
+   "name": "App/humanoid",
+   "matched": 10,
+   "functions": 10,
+   "bytes": 174
+  },
+  {
    "name": "Network/ProfiledRakPeer.cpp",
    "matched": 6,
    "functions": 6,
@@ -77,16 +83,16 @@
    "bytes": 164
   },
   {
+   "name": "App/tool",
+   "matched": 3,
+   "functions": 3,
+   "bytes": 132
+  },
+  {
    "name": "App/util",
    "matched": 6,
    "functions": 6,
    "bytes": 117
-  },
-  {
-   "name": "App/humanoid",
-   "matched": 9,
-   "functions": 9,
-   "bytes": 93
   },
   {
    "name": "RobloxStudio/ScreenshotVerb.cpp",
@@ -267,12 +273,6 @@
    "matched": 1,
    "functions": 1,
    "bytes": 15
-  },
-  {
-   "name": "App/tool",
-   "matched": 2,
-   "functions": 2,
-   "bytes": 12
   },
   {
    "name": "Network/SharedStringDictionary.cpp",
@@ -753,6 +753,17 @@
    "matchable": true
   },
   {
+   "address": "0x00bb8a80",
+   "kind": "FUNCTION",
+   "name": "RBX::HUMAN::RunningBase::fireStateEvents",
+   "mangled": "?fireStateEvents@RunningBase@HUMAN@RBX@@QAEXXZ",
+   "file": "Client/App/humanoid/RunningBase.cpp",
+   "orig_size": 81,
+   "recomp_size": 81,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00bb3d30",
    "kind": "FUNCTION",
    "name": "CornerWedgeMesh_dispose",
@@ -892,6 +903,17 @@
    "file": "Client/App/v8world/BlockCorners.cpp",
    "orig_size": 28,
    "recomp_size": 28,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00b97910",
+   "kind": "FUNCTION",
+   "name": "RBX::AdvRotateTool::isEnabled",
+   "mangled": "?isEnabled@AdvRotateTool@RBX@@QAE_NXZ",
+   "file": "Client/App/tool/AdvRotateTool.cpp",
+   "orig_size": 120,
+   "recomp_size": 120,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3039,28 +3061,6 @@
    "recomp_size": 5,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x00596510",
-   "kind": "FUNCTION",
-   "name": "btSphereShape::getRadius",
-   "mangled": "?getRadius@btSphereShape@@QBEMXZ",
-   "file": "Client/App/v8kernel/btSphereShape.cpp",
-   "orig_size": 39,
-   "recomp_size": 26,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00596500",
-   "kind": "FUNCTION",
-   "name": "btSphereShape::getConst17002028",
-   "mangled": "?getConst17002028@btSphereShape@@QBEHXZ",
-   "file": "Client/App/v8kernel/btSphereShape.cpp",
-   "orig_size": 6,
-   "recomp_size": 6,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -3495,9 +3495,27 @@
    "matched": 326,
    "implemented": 326,
    "pct": 3.481
+  },
+  {
+   "t": "2026-11-18 23:26:33 UTC",
+   "matched": 328,
+   "implemented": 328,
+   "pct": 3.5024
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-18T23:24:48",
+   "address": "0x00b97910",
+   "name": "RBX::AdvRotateTool::isEnabled",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T23:20:07",
+   "address": "0x00bb8a80",
+   "name": "RBX::HUMAN::RunningBase::fireStateEvents",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-18T23:13:24",
    "address": "0x00aa0880",
@@ -4205,19 +4223,7 @@
    "address": "0x00a644f0",
    "name": "RBX::VirtualHardwareDevice::initViewportSize",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T20:00:45",
-   "address": "0x008c5810",
-   "name": "RBX::PhysicsJob::getErrorEmphasis",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T19:59:49",
-   "address": "0x004122e0",
-   "name": "rbx::bad_placement_any_cast::getConst15812400",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 49.32
+ "match_rate_per_hour": 48.81
 }

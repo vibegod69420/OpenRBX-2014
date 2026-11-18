@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 23:19:56 UTC",
+  "updated_at": "2026-11-18 23:26:33 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 3.481,
-  "implemented_total": 326,
-  "function_annotations": 326,
+  "matchable_coverage_pct": 3.5024,
+  "implemented_total": 328,
+  "function_annotations": 328,
   "stub_annotations": 0,
-  "perfect_100_count": 326,
-  "matched_real_functions": 326,
+  "perfect_100_count": 328,
+  "matched_real_functions": 328,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.8037,
-  "overall_byte_coverage_pct": 0.0675,
+  "overall_function_coverage_pct": 0.8087,
+  "overall_byte_coverage_pct": 0.0696,
   "usage": {
-    "calls_24h": 1341,
+    "calls_24h": 1373,
     "failures_24h": 0,
-    "completion_tokens_24h": 14291615,
-    "reasoning_tokens_24h": 14062041,
-    "avg_latency_s": 186.8
+    "completion_tokens_24h": 14715078,
+    "reasoning_tokens_24h": 14476205,
+    "avg_latency_s": 187.2
   },
   "functions": [
     {
@@ -3037,6 +3037,17 @@
       "matchable": true
     },
     {
+      "address": "0x00b97910",
+      "kind": "FUNCTION",
+      "name": "RBX::AdvRotateTool::isEnabled",
+      "mangled": "?isEnabled@AdvRotateTool@RBX@@QAE_NXZ",
+      "file": "Client/App/tool/AdvRotateTool.cpp",
+      "orig_size": 120,
+      "recomp_size": 120,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00b9b6c0",
       "kind": "FUNCTION",
       "name": "RBX::POLY::BlockCorners::dispose",
@@ -3176,6 +3187,17 @@
       "file": "Client/App/v8world/CornerWedgeMesh.cpp",
       "orig_size": 28,
       "recomp_size": 28,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00bb8a80",
+      "kind": "FUNCTION",
+      "name": "RBX::HUMAN::RunningBase::fireStateEvents",
+      "mangled": "?fireStateEvents@RunningBase@HUMAN@RBX@@QAEXXZ",
+      "file": "Client/App/humanoid/RunningBase.cpp",
+      "orig_size": 81,
+      "recomp_size": 81,
       "match_pct": 100.0,
       "matchable": true
     },

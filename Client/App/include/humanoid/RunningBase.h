@@ -18,6 +18,7 @@ public:
 	};
 
 	float getSpeed();
+	void fireStateEvents();
 	// AUTO-GENERATED METHODS
 };
 
