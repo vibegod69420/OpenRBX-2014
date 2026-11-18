@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	const char* what() const;
 	// AUTO-GENERATED METHODS
 };
 

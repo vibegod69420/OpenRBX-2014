@@ -18,6 +18,7 @@ public:
 	};
 
 	bool getFlagB68() const;
+	DataModel* getDataModel();
 	// AUTO-GENERATED METHODS
 };
 

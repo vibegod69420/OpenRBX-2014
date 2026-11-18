@@ -10,6 +10,14 @@ bool SetManualJointToStrong::getFlag_ef60() const
 	return s_flag_0082ef60;
 }
 
+extern int s_flag_011edc14;
+
+// FUNCTION: ROBLOXSTUDIO 0x0082e400
+int SetManualJointToStrong::getFlag_011edc14() const
+{
+	return s_flag_011edc14 == 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

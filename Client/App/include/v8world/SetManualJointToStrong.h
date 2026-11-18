@@ -18,6 +18,7 @@ public:
 	};
 
 	bool getFlag_ef60() const;
+	int getFlag_011edc14() const;
 	// AUTO-GENERATED METHODS
 };
 

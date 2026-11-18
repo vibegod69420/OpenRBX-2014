@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	int isSetToOne();
 	// AUTO-GENERATED METHODS
 };
 

@@ -23,6 +23,12 @@ int RenderView::getSubField0C_1B0() const
 	return sub_000c_01b0->val;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006766d0
+int RenderView::getSubField8C_BA0() const
+{
+	return sub_008c_0ba0->val;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

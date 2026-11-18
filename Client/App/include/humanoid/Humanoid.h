@@ -17,6 +17,7 @@ public:
 	};
 
 	void setFlag0x31();
+	int getInt148() const;
 	// AUTO-GENERATED METHODS
 };
 

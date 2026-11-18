@@ -18,6 +18,7 @@ public:
 	};
 
 	int getField0C() const;
+	void* getInternalManifoldPointer();
 	// AUTO-GENERATED METHODS
 };
 
