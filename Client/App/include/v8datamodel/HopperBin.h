@@ -18,6 +18,7 @@ public:
 	};
 
 	bool getFlag190() const;
+	void deactivate();
 	// AUTO-GENERATED METHODS
 };
 
