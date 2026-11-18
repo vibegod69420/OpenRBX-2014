@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 19:39:39 UTC",
+  "updated_at": "2026-11-18 19:47:04 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 1.9968,
-  "implemented_total": 187,
-  "function_annotations": 187,
+  "matchable_coverage_pct": 2.0288,
+  "implemented_total": 190,
+  "function_annotations": 190,
   "stub_annotations": 0,
-  "perfect_100_count": 187,
-  "matched_real_functions": 187,
+  "perfect_100_count": 190,
+  "matched_real_functions": 190,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.461,
-  "overall_byte_coverage_pct": 0.0147,
+  "overall_function_coverage_pct": 0.4684,
+  "overall_byte_coverage_pct": 0.0152,
   "usage": {
-    "calls_24h": 163,
+    "calls_24h": 182,
     "failures_24h": 0,
-    "completion_tokens_24h": 949388,
-    "reasoning_tokens_24h": 935957,
-    "avg_latency_s": 105.4
+    "completion_tokens_24h": 1115938,
+    "reasoning_tokens_24h": 1100467,
+    "avg_latency_s": 110.5
   },
   "functions": [
     {
@@ -283,6 +283,17 @@
       "file": "Client/RobloxStudio/RobloxWebDoc.cpp",
       "orig_size": 5,
       "recomp_size": 5,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0052fcf0",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::RoundRobinPhysicsSender::dispose",
+      "mangled": "?dispose@RoundRobinPhysicsSender@Network@RBX@@QAEXXZ",
+      "file": "Client/Network/RoundRobinPhysicsSender.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -954,6 +965,17 @@
       "file": "Client/App/v8datamodel/parser_error.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x007c2460",
+      "kind": "FUNCTION",
+      "name": "RBX::BoxSelectCommand::cancelSelection",
+      "mangled": "?cancelSelection@BoxSelectCommand@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/BoxSelectCommand.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -2054,6 +2076,17 @@
       "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
       "orig_size": 10,
       "recomp_size": 10,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00ca97e0",
+      "kind": "FUNCTION",
+      "name": "sendDataOut",
+      "mangled": "?sendDataOutStep@ClientReplicator@Network@RBX@@QAEXXZ",
+      "file": "Client/Network/ClientReplicator.cpp",
+      "orig_size": 14,
+      "recomp_size": 14,
       "match_pct": 100.0,
       "matchable": true
     },
