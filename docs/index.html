@@ -172,6 +172,9 @@
   .hero h2 em { font-style: normal; color: hsl(var(--subtle-foreground)); }
   .hero p { margin: 0; color: hsl(var(--muted-foreground)); max-width: 58ch; font-size: 13.5px; }
   .hero-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+  .worker { display: flex; align-items: center; gap: 8px; margin-top: 14px; font-family: var(--mono); font-size: 11.5px; color: hsl(var(--muted-foreground)); }
+  .worker .wd { width: 6px; height: 6px; border-radius: 50%; background: hsl(var(--subtle-foreground)); flex: none; }
+  .worker.live .wd { background: hsl(var(--success)); animation: pulse 1.8s ease-out infinite; }
 
   .gauge { min-width: 300px; flex: 0 0 340px; }
   .gauge-row { display: flex; align-items: center; gap: 20px; padding: 20px; }
@@ -442,6 +445,7 @@
           <span class="badge mono" id="chipCtx">320K context · thinking max</span>
           <span class="badge mono" id="chipTarget">9,365 matchable</span>
         </div>
+        <div class="worker" id="workerLine"><span class="wd"></span><span id="workerText">worker status unavailable</span></div>
       </div>
 
       <div class="card gauge">
@@ -1068,6 +1072,31 @@
     renderTable();
   }
 
+  // Liveness, not progress: a hard routine can occupy four model calls and look like a stall
+  // on a page that only counts verified matches.
+  async function refreshWorker() {
+    try {
+      const res = await fetch(`worker.json?ts=${Date.now()}`, { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const w = await res.json();
+      const box = $("workerLine");
+      const age = (Date.now() - parseStamp(w.ts)) / 1000;
+      if (!Number.isFinite(age)) return;
+      if (age < 600) {
+        box.classList.add("live");
+        const pctText = w.pct !== null && w.pct !== undefined ? ` · best ${Number(w.pct).toFixed(2)}%` : "";
+        $("workerText").textContent =
+          `${w.name ? w.name + " · " : ""}${w.state || "working"} ${w.address || ""} · attempt ${w.attempt || 1}/4${pctText} · ${ago(parseStamp(w.ts))}`;
+      } else {
+        box.classList.remove("live");
+        $("workerText").textContent =
+          `no worker heartbeat for ${Math.round(age / 60)}m — a difficult target can take several attempts`;
+      }
+    } catch {
+      /* heartbeat is optional; the rest of the page still works */
+    }
+  }
+
   async function refresh(initial = false) {
     if (state.paused && !initial) return;
     try {
@@ -1082,6 +1111,7 @@
         if (fresh.ok) state.all = (await fresh.json()).functions || state.all;
       }
       render();
+      refreshWorker();
       if (!initial) setTimeout(() => state.freshAddrs.clear(), 2400);
     } catch (err) {
       $("liveText").textContent = "offline";
