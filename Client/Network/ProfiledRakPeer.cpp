@@ -17,6 +17,12 @@ unsigned short ProfiledRakPeer::GetNumberOfAddresses() const
 	return *reinterpret_cast<const unsigned short*>(reinterpret_cast<const char*>(this) + 0x0e);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00cea7a0
+int ProfiledRakPeer::getField484() const
+{
+	return field_0484;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

@@ -14,11 +14,13 @@ public:
 	union
 	{
 		int _vtable_or_head;
+		struct { char _pad_field_0484[0x484]; int field_0484; };
 		// AUTO-GENERATED FIELDS
 	};
 
 	unsigned short GetMaximumIncomingConnections() const;
 	unsigned short GetNumberOfAddresses() const;
+	int getField484() const;
 	// AUTO-GENERATED METHODS
 };
 

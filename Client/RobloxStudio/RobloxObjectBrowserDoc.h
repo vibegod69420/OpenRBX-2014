@@ -18,6 +18,7 @@ public:
 	};
 
 	int getField1C() const;
+	bool OnNewDocument();
 	// AUTO-GENERATED METHODS
 };
 
