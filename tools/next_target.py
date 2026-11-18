@@ -21,7 +21,10 @@ VTABLES_PATH = ROOT / "data" / "rtti_vtables_2014.json"
 
 def get_implemented_addresses() -> set[int]:
     done = set()
-    pattern = re.compile(r"//\s*(?:FUNCTION|STUB):\s*ROBLOXSTUDIO\s+0x([0-9a-fA-F]+)")
+    # Only a promoted `// FUNCTION:` annotation is evidence of a measured 100% COFF match.
+    # Counting `// STUB:` as "implemented" let the supervisor treat every touched address as
+    # finished while real coverage was still far below 100%.
+    pattern = re.compile(r"//\s*FUNCTION:\s*ROBLOXSTUDIO\s+0x([0-9a-fA-F]+)")
     if CLIENT_DIR.exists():
         for p in CLIENT_DIR.rglob("*"):
             if p.suffix in (".cpp", ".c", ".h", ".hpp", ".inl"):

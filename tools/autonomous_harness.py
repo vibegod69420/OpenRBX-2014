@@ -44,6 +44,7 @@ DEEPAI_SENTINEL = deepai_backend.SENTINEL
 PUSH_ENABLED = os.environ.get("DECOMP_PUSH", "0").lower() in ("1", "true", "yes")
 LOCAL_LLM_URL = os.environ.get("DECOMP_LOCAL_URL", "http://127.0.0.1:8080/v1")
 LEDGER_PATH = ROOT / "data" / "work_ledger.jsonl"
+COMPLETION_FLAG = ROOT / "COMPLETED_100_PERCENT.flag"
 CONTEXT_WINDOW = 320000
 TUNNEL_CACHE_FILE = ROOT / "data" / "active_tunnel_url.txt"
 
@@ -1338,12 +1339,26 @@ def rotate_after_quota(reason: str) -> bool:
         return False
 
 
+def idle_when_complete() -> None:
+    """
+    The unit is Restart=always, so a finished project that exits would be relaunched and would
+    re-run the full-client build every restart. Parking here keeps the worker healthy and quiet
+    until someone intentionally starts the next phase.
+    """
+    log("COMPLETED_100_PERCENT.flag present: every matchable function is verified; idling")
+    while True:
+        time.sleep(1800)
+        log("idle heartbeat: project complete, nothing left to match")
+
+
 def run_forever():
     start_watchdog()
     log(
         "Starting OpenRBX-2014 Immortal 24/7 Autonomous Decompilation Supervisor "
         f"(watchdog: {WATCHDOG_STALE_SECONDS}s idle -> restart, log self-rotation at 64 MiB)..."
     )
+    if COMPLETION_FLAG.exists():
+        idle_when_complete()
     sizes = verify_tu.load_function_sizes()
     vt_map = func_context.load_vtable_membership()
     skipped_without_llm: set[int] = set()
@@ -1405,14 +1420,17 @@ def run_forever():
                 if exclude:
                     exclude.clear()
                     continue
-                log("100% OF ALL 40,561 FUNCTIONS IMPLEMENTED! Running full-client build verification...")
+                log(
+                    f"All {len(real_targets)} matchable functions verified byte-exact! "
+                    "Running full-client build verification..."
+                )
                 subprocess.run([sys.executable, str(ROOT / "tools" / "build_client.py")], cwd=ROOT, check=False)
                 subprocess.run(
                     progress_command("100% of RobloxStudioBeta.exe matched!"),
                     cwd=ROOT,
                     check=False,
                 )
-                (ROOT / "COMPLETED_100_PERCENT.flag").write_text("100% COMPLETED\n", encoding="utf-8")
+                COMPLETION_FLAG.write_text("100% COMPLETED\n", encoding="utf-8")
                 break
 
             remaining.sort(key=lambda a: (0 if a in vt_map else 1, sizes[a], a))
