@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 18:31:48 UTC",
+  "updated_at": "2026-11-18 18:38:17 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 1.4202,
-  "implemented_total": 133,
-  "function_annotations": 133,
+  "matchable_coverage_pct": 1.4309,
+  "implemented_total": 134,
+  "function_annotations": 134,
   "stub_annotations": 0,
-  "perfect_100_count": 133,
-  "matched_real_functions": 133,
+  "perfect_100_count": 134,
+  "matched_real_functions": 134,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.3279,
-  "overall_byte_coverage_pct": 0.008,
+  "overall_function_coverage_pct": 0.3304,
+  "overall_byte_coverage_pct": 0.0081,
   "usage": {
-    "calls_24h": 39,
+    "calls_24h": 41,
     "failures_24h": 0,
-    "completion_tokens_24h": 210066,
-    "reasoning_tokens_24h": 207277,
-    "avg_latency_s": 94.0
+    "completion_tokens_24h": 228508,
+    "reasoning_tokens_24h": 225566,
+    "avg_latency_s": 97.9
   },
   "functions": [
     {
@@ -943,6 +943,17 @@
       "file": "Client/App/util/PathInterpolatedCFrame.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00892dd0",
+      "kind": "FUNCTION",
+      "name": "RBX::Seat::getClassIndex",
+      "mangled": "?getClassIndex@Seat@RBX@@QAEHXZ",
+      "file": "Client/App/v8datamodel/Seat.cpp",
+      "orig_size": 9,
+      "recomp_size": 9,
       "match_pct": 100.0,
       "matchable": true
     },
