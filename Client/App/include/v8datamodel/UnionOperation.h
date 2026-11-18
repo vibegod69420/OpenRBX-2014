@@ -13,6 +13,7 @@ public:
 	union
 	{
 		int _vtable_or_head;
+		struct { char _pad_field_0170[0x170]; int field_0170; };
 		// AUTO-GENERATED FIELDS
 	};
 
@@ -22,6 +23,7 @@ public:
 	char* getPrimitiveDataOffset24() const;
 	void sub_894960();
 	void sub_8940E0();
+	int getField170() const;
 	// AUTO-GENERATED METHODS
 };
 

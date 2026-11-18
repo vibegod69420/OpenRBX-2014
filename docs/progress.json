@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18 20:53:09 UTC",
+ "updated_at": "2026-11-18 21:00:00 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 2.9899,
- "implemented_total": 280,
- "function_annotations": 280,
+ "matchable_coverage_pct": 3.0112,
+ "implemented_total": 282,
+ "function_annotations": 282,
  "stub_annotations": 0,
- "perfect_100_count": 280,
- "matched_real_functions": 280,
+ "perfect_100_count": 282,
+ "matched_real_functions": 282,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.6903,
- "overall_byte_coverage_pct": 0.0385,
+ "overall_function_coverage_pct": 0.6952,
+ "overall_byte_coverage_pct": 0.0393,
  "usage": {
-  "calls_24h": 544,
+  "calls_24h": 584,
   "failures_24h": 0,
-  "completion_tokens_24h": 4336648,
-  "reasoning_tokens_24h": 4276447,
-  "avg_latency_s": 144.1
+  "completion_tokens_24h": 4793232,
+  "reasoning_tokens_24h": 4727174,
+  "avg_latency_s": 148.7
  },
- "functions_total": 280,
+ "functions_total": 282,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 118,
-   "functions": 118,
-   "bytes": 1638
+   "matched": 119,
+   "functions": 119,
+   "bytes": 1677
   },
   {
    "name": "App/v8world",
@@ -48,9 +48,9 @@
   },
   {
    "name": "App/v8kernel",
-   "matched": 32,
-   "functions": 32,
-   "bytes": 240
+   "matched": 33,
+   "functions": 33,
+   "bytes": 279
   },
   {
    "name": "Rendering/GfxRender",
@@ -959,6 +959,17 @@
    "file": "Client/App/v8datamodel/ArcHandles.cpp",
    "orig_size": 4,
    "recomp_size": 4,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00a9c530",
+   "kind": "FUNCTION",
+   "name": "RBX::UnionOperation::getField170",
+   "mangled": "?getField170@UnionOperation@RBX@@QBEHXZ",
+   "file": "Client/App/v8datamodel/UnionOperation.cpp",
+   "orig_size": 39,
+   "recomp_size": 7,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -2657,6 +2668,17 @@
    "matchable": true
   },
   {
+   "address": "0x00596510",
+   "kind": "FUNCTION",
+   "name": "btSphereShape::getRadius",
+   "mangled": "?getRadius@btSphereShape@@QBEMXZ",
+   "file": "Client/App/v8kernel/btSphereShape.cpp",
+   "orig_size": 39,
+   "recomp_size": 26,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00596500",
    "kind": "FUNCTION",
    "name": "btSphereShape::getConst17002028",
@@ -2985,28 +3007,6 @@
    "recomp_size": 6,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x004f6cd0",
-   "kind": "FUNCTION",
-   "name": "RobloxObjectBrowserDoc::DeleteContents",
-   "mangled": "?DeleteContents@RobloxObjectBrowserDoc@@QAEXXZ",
-   "file": "Client/RobloxStudio/RobloxObjectBrowserDoc.cpp",
-   "orig_size": 11,
-   "recomp_size": 11,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x004f6c10",
-   "kind": "FUNCTION",
-   "name": "RobloxObjectBrowserDoc::OnNewDocument",
-   "mangled": "?OnNewDocument@RobloxObjectBrowserDoc@@QAE_NXZ",
-   "file": "Client/RobloxStudio/RobloxObjectBrowserDoc.cpp",
-   "orig_size": 8,
-   "recomp_size": 8,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -3315,9 +3315,27 @@
    "matched": 280,
    "implemented": 280,
    "pct": 2.9899
+  },
+  {
+   "t": "2026-11-18 21:00:00 UTC",
+   "matched": 282,
+   "implemented": 282,
+   "pct": 3.0112
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-18T20:55:13",
+   "address": "0x00596510",
+   "name": "btSphereShape::getRadius",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T20:53:33",
+   "address": "0x00a9c530",
+   "name": "RBX::UnionOperation::getField170",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-18T20:50:58",
    "address": "0x00520640",
@@ -4025,19 +4043,7 @@
    "address": "0x0082e390",
    "name": "RBX::SetDragGridToOneFifth::isEnabled",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T19:20:46",
-   "address": "0x005e0070",
-   "name": "RBX::Graphics::DeviceContextFFPD3D9::executeCallback",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T19:20:02",
-   "address": "0x00c72990",
-   "name": "RBX::network_stream_exception::what",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 67.24
+ "match_rate_per_hour": 65.92
 }

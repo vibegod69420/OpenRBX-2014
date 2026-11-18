@@ -110,6 +110,12 @@ void UnionOperation::sub_8940E0()
 		result->sub_995CD0(*(void**)((char*)this + 0xE0));
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a9c530
+int UnionOperation::getField170() const
+{
+	return field_0170;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

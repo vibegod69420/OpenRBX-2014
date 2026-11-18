@@ -17,6 +17,7 @@ public:
 	};
 
 	int getConst17002028() const;
+	float getRadius() const;
 	// AUTO-GENERATED METHODS
 };
 
