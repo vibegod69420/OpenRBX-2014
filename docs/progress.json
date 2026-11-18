@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18 19:05:55 UTC",
+ "updated_at": "2026-11-18 19:06:49 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 1.591,
- "implemented_total": 149,
- "function_annotations": 149,
+ "matchable_coverage_pct": 1.6017,
+ "implemented_total": 150,
+ "function_annotations": 150,
  "stub_annotations": 0,
- "perfect_100_count": 149,
- "matched_real_functions": 149,
+ "perfect_100_count": 150,
+ "matched_real_functions": 150,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.3673,
- "overall_byte_coverage_pct": 0.0096,
+ "overall_function_coverage_pct": 0.3698,
+ "overall_byte_coverage_pct": 0.0097,
  "usage": {
-  "calls_24h": 54,
+  "calls_24h": 57,
   "failures_24h": 0,
-  "completion_tokens_24h": 302571,
-  "reasoning_tokens_24h": 298396,
-  "avg_latency_s": 95.1
+  "completion_tokens_24h": 313247,
+  "reasoning_tokens_24h": 308883,
+  "avg_latency_s": 93.7
  },
- "functions_total": 149,
+ "functions_total": 150,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -71,6 +71,12 @@
    "bytes": 36
   },
   {
+   "name": "RobloxStudio/RobloxObjectBrowserDoc.cpp",
+   "matched": 3,
+   "functions": 3,
+   "bytes": 23
+  },
+  {
    "name": "App/v8tree",
    "matched": 3,
    "functions": 3,
@@ -93,12 +99,6 @@
    "matched": 2,
    "functions": 2,
    "bytes": 16
-  },
-  {
-   "name": "RobloxStudio/RobloxObjectBrowserDoc.cpp",
-   "matched": 2,
-   "functions": 2,
-   "bytes": 12
   },
   {
    "name": "App/tool",
@@ -1626,6 +1626,17 @@
    "matchable": true
   },
   {
+   "address": "0x004f6cd0",
+   "kind": "FUNCTION",
+   "name": "RobloxObjectBrowserDoc::DeleteContents",
+   "mangled": "?DeleteContents@RobloxObjectBrowserDoc@@QAEXXZ",
+   "file": "Client/RobloxStudio/RobloxObjectBrowserDoc.cpp",
+   "orig_size": 11,
+   "recomp_size": 11,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x004f6c10",
    "kind": "FUNCTION",
    "name": "RobloxObjectBrowserDoc::OnNewDocument",
@@ -1964,9 +1975,21 @@
    "matched": 149,
    "implemented": 149,
    "pct": 1.591
+  },
+  {
+   "t": "2026-11-18 19:06:49 UTC",
+   "matched": 150,
+   "implemented": 150,
+   "pct": 1.6017
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-18T19:06:12",
+   "address": "0x004f6cd0",
+   "name": "RobloxObjectBrowserDoc::DeleteContents",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-18T19:05:22",
    "address": "0x00a2d220",
@@ -2680,13 +2703,7 @@
    "address": "0x00a9d6d0",
    "name": "RBX::ArcHandles::getFlag20",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:23:31",
-   "address": "0x00a9c560",
-   "name": "RBX::ArcHandles::getHandleId",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 62.69
+ "match_rate_per_hour": 62.72
 }

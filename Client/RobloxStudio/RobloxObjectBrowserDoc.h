@@ -19,6 +19,7 @@ public:
 
 	int getField1C() const;
 	bool OnNewDocument();
+	void DeleteContents();
 	// AUTO-GENERATED METHODS
 };
 

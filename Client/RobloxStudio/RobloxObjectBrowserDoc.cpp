@@ -51,6 +51,14 @@ bool RobloxObjectBrowserDoc::OnNewDocument()
     return true;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x004f6cd0
+void RobloxObjectBrowserDoc::DeleteContents()
+{
+	unsigned char& flag = *reinterpret_cast<unsigned char*>(reinterpret_cast<char*>(this) + 0x0c);
+	if (flag)
+		flag = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
