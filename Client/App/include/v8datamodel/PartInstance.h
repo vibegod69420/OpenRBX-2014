@@ -13,9 +13,11 @@ public:
 	union
 	{
 		int _vtable_or_head;
+		struct { char _pad_field_0070[0x70]; int field_0070; };
 		// AUTO-GENERATED FIELDS
 	};
 
+	int getField70() const;
 	// AUTO-GENERATED METHODS
 };
 

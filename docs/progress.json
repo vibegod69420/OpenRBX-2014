@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18 17:45:07 UTC",
+ "updated_at": "2026-11-18 17:47:56 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,15 +16,15 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 0.8329,
- "implemented_total": 78,
- "function_annotations": 78,
+ "matchable_coverage_pct": 1.1532,
+ "implemented_total": 108,
+ "function_annotations": 108,
  "stub_annotations": 0,
- "perfect_100_count": 78,
- "matched_real_functions": 78,
+ "perfect_100_count": 108,
+ "matched_real_functions": 108,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.1923,
- "overall_byte_coverage_pct": 0.0041,
+ "overall_function_coverage_pct": 0.2663,
+ "overall_byte_coverage_pct": 0.006,
  "usage": {
   "calls_24h": 22,
   "failures_24h": 0,
@@ -32,37 +32,37 @@
   "reasoning_tokens_24h": 95234,
   "avg_latency_s": 87.2
  },
- "functions_total": 78,
+ "functions_total": 108,
  "subsystems": [
   {
-   "name": "App/v8kernel",
-   "matched": 23,
-   "functions": 23,
-   "bytes": 123
+   "name": "App/v8datamodel",
+   "matched": 33,
+   "functions": 33,
+   "bytes": 179
   },
   {
-   "name": "App/v8datamodel",
-   "matched": 18,
-   "functions": 18,
-   "bytes": 87
+   "name": "App/v8kernel",
+   "matched": 27,
+   "functions": 27,
+   "bytes": 150
   },
   {
    "name": "App/v8world",
-   "matched": 7,
-   "functions": 7,
-   "bytes": 33
+   "matched": 12,
+   "functions": 12,
+   "bytes": 63
   },
   {
    "name": "Rendering/GfxCore",
-   "matched": 7,
-   "functions": 7,
-   "bytes": 30
+   "matched": 8,
+   "functions": 8,
+   "bytes": 37
   },
   {
    "name": "App/humanoid",
-   "matched": 4,
-   "functions": 4,
-   "bytes": 23
+   "matched": 5,
+   "functions": 5,
+   "bytes": 29
   },
   {
    "name": "App/v8tree",
@@ -71,22 +71,34 @@
    "bytes": 18
   },
   {
+   "name": "Rendering/GfxRender",
+   "matched": 3,
+   "functions": 3,
+   "bytes": 17
+  },
+  {
    "name": "App/util",
    "matched": 4,
    "functions": 4,
    "bytes": 16
   },
   {
-   "name": "Rendering/GfxRender",
+   "name": "App/tool",
    "matched": 2,
    "functions": 2,
-   "bytes": 10
+   "bytes": 12
   },
   {
    "name": "Network/ProfiledRakPeer.cpp",
    "matched": 2,
    "functions": 2,
    "bytes": 10
+  },
+  {
+   "name": "RobloxStudio/RobloxIDEDoc.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 7
   },
   {
    "name": "RobloxStudio/ToggleCollisionCheckVerb.cpp",
@@ -161,6 +173,28 @@
    "matchable": true
   },
   {
+   "address": "0x00c81bc0",
+   "kind": "FUNCTION",
+   "name": "std::stream_buffer::getConst19554176",
+   "mangled": "?getConst19554176@stream_buffer@std@@QBEHXZ",
+   "file": "Client/App/v8datamodel/stream_buffer.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00c81bb0",
+   "kind": "FUNCTION",
+   "name": "std::stream_buffer::getConst19553048",
+   "mangled": "?getConst19553048@stream_buffer@std@@QBEHXZ",
+   "file": "Client/App/v8datamodel/stream_buffer.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00c81ba0",
    "kind": "FUNCTION",
    "name": "std::indirect_streambuf::getMemberPtr3C",
@@ -183,6 +217,83 @@
    "matchable": true
   },
   {
+   "address": "0x00c16a00",
+   "kind": "FUNCTION",
+   "name": "RBX::BulletShapeCellConnector::getConst13",
+   "mangled": "?getConst13@BulletShapeCellConnector@RBX@@QBEHXZ",
+   "file": "Client/App/v8kernel/BulletShapeCellConnector.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00c169f0",
+   "kind": "FUNCTION",
+   "name": "RBX::SimulateStage::getConst14",
+   "mangled": "?getConst14@SimulateStage@RBX@@QBEHXZ",
+   "file": "Client/App/v8world/SimulateStage.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00c15080",
+   "kind": "FUNCTION",
+   "name": "RBX::HUMAN::Physics::getConst16",
+   "mangled": "?getConst16@Physics@HUMAN@RBX@@QBEHXZ",
+   "file": "Client/App/humanoid/Physics.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00c0e210",
+   "kind": "FUNCTION",
+   "name": "RBX::AdvRotateTool::getFlag_e210",
+   "mangled": "?getFlag_e210@AdvRotateTool@RBX@@QBE_NXZ",
+   "file": "Client/App/tool/AdvRotateTool.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00c0bbd0",
+   "kind": "FUNCTION",
+   "name": "RBX::AdvMoveToolBase::getFlag_bbd0",
+   "mangled": "?getFlag_bbd0@AdvMoveToolBase@RBX@@QBE_NXZ",
+   "file": "Client/App/tool/AdvMoveToolBase.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00be9a20",
+   "kind": "FUNCTION",
+   "name": "RBX::OrderedDataStore::getConst15618428",
+   "mangled": "?getConst15618428@OrderedDataStore@RBX@@QBEHXZ",
+   "file": "Client/App/v8datamodel/OrderedDataStore.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00be9a10",
+   "kind": "FUNCTION",
+   "name": "RBX::DataStore::getConst15617916",
+   "mangled": "?getConst15617916@DataStore@RBX@@QBEHXZ",
+   "file": "Client/App/v8datamodel/DataStore.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00bda810",
    "kind": "FUNCTION",
    "name": "RBX::BuoyancyContact::getField4C",
@@ -190,6 +301,28 @@
    "file": "Client/App/v8world/BuoyancyContact.cpp",
    "orig_size": 4,
    "recomp_size": 4,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00ba4120",
+   "kind": "FUNCTION",
+   "name": "RBX::MovingAssemblyStage::getConst10",
+   "mangled": "?getConst10@MovingAssemblyStage@RBX@@QBEHXZ",
+   "file": "Client/App/v8world/MovingAssemblyStage.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00ba2b30",
+   "kind": "FUNCTION",
+   "name": "RBX::TreeStage::getConst5",
+   "mangled": "?getConst5@TreeStage@RBX@@QBEHXZ",
+   "file": "Client/App/v8world/TreeStage.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -227,6 +360,17 @@
    "matchable": true
   },
   {
+   "address": "0x00aa2d10",
+   "kind": "FUNCTION",
+   "name": "RBX::MotorJoint::getConst4",
+   "mangled": "?getConst4@MotorJoint@RBX@@QBEHXZ",
+   "file": "Client/App/v8world/MotorJoint.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00a9d6d0",
    "kind": "FUNCTION",
    "name": "RBX::ArcHandles::getFlag20",
@@ -245,6 +389,94 @@
    "file": "Client/App/v8datamodel/ArcHandles.cpp",
    "orig_size": 4,
    "recomp_size": 4,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00a320c0",
+   "kind": "FUNCTION",
+   "name": "std::stream_buffer::getConst19196136",
+   "mangled": "?getConst19196136@stream_buffer@std@@QBEHXZ",
+   "file": "Client/App/v8datamodel/stream_buffer.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00a2da50",
+   "kind": "FUNCTION",
+   "name": "std::stream_buffer::getConst19190472",
+   "mangled": "?getConst19190472@stream_buffer@std@@QBEHXZ",
+   "file": "Client/App/v8datamodel/stream_buffer.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00a2da40",
+   "kind": "FUNCTION",
+   "name": "std::stream_buffer::getConst19190512",
+   "mangled": "?getConst19190512@stream_buffer@std@@QBEHXZ",
+   "file": "Client/App/v8datamodel/stream_buffer.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00a2da30",
+   "kind": "FUNCTION",
+   "name": "std::stream_buffer::getConst19190592",
+   "mangled": "?getConst19190592@stream_buffer@std@@QBEHXZ",
+   "file": "Client/App/v8datamodel/stream_buffer.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00a2da20",
+   "kind": "FUNCTION",
+   "name": "std::stream_buffer::getConst19190392",
+   "mangled": "?getConst19190392@stream_buffer@std@@QBEHXZ",
+   "file": "Client/App/v8datamodel/stream_buffer.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00a2da10",
+   "kind": "FUNCTION",
+   "name": "std::stream_buffer::getConst19190288",
+   "mangled": "?getConst19190288@stream_buffer@std@@QBEHXZ",
+   "file": "Client/App/v8datamodel/stream_buffer.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00a2da00",
+   "kind": "FUNCTION",
+   "name": "std::stream_buffer::getConst19190364",
+   "mangled": "?getConst19190364@stream_buffer@std@@QBEHXZ",
+   "file": "Client/App/v8datamodel/stream_buffer.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00a026a0",
+   "kind": "FUNCTION",
+   "name": "RBX::ExtrudedPartInstance::getConst19178964",
+   "mangled": "?getConst19178964@ExtrudedPartInstance@RBX@@QBEHXZ",
+   "file": "Client/App/v8datamodel/ExtrudedPartInstance.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -278,6 +510,17 @@
    "file": "Client/App/v8world/Ball.cpp",
    "orig_size": 4,
    "recomp_size": 4,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x0099ce10",
+   "kind": "FUNCTION",
+   "name": "RBX::GlueJoint::getConst9",
+   "mangled": "?getConst9@GlueJoint@RBX@@QBEHXZ",
+   "file": "Client/App/v8world/GlueJoint.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -322,6 +565,17 @@
    "file": "Client/App/util/PathInterpolatedCFrame.cpp",
    "orig_size": 4,
    "recomp_size": 4,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00860c40",
+   "kind": "FUNCTION",
+   "name": "boost::io::too_few_args::getConst15063552",
+   "mangled": "?getConst15063552@too_few_args@io@boost@@QBEHXZ",
+   "file": "Client/App/v8datamodel/too_few_args.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -524,6 +778,17 @@
    "matchable": true
   },
   {
+   "address": "0x005e5de0",
+   "kind": "FUNCTION",
+   "name": "RBX::Graphics::ShaderProgramD3D9::getSubField28_34",
+   "mangled": "?getSubField28_34@ShaderProgramD3D9@Graphics@RBX@@QBEHXZ",
+   "file": "Client/Rendering/GfxCore/D3D9/ShaderProgramD3D9.cpp",
+   "orig_size": 7,
+   "recomp_size": 7,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x005e3a80",
    "kind": "FUNCTION",
    "name": "RBX::Graphics::DeviceD3D9::getMemberPtr1C",
@@ -542,6 +807,17 @@
    "file": "Client/Rendering/GfxCore/D3D9/DeviceD3D9.cpp",
    "orig_size": 4,
    "recomp_size": 4,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x005b87e0",
+   "kind": "FUNCTION",
+   "name": "btBvhTriangleMeshShape::getBufferOffset30_10",
+   "mangled": "?getBufferOffset30_10@btBvhTriangleMeshShape@@QBEPADXZ",
+   "file": "Client/App/v8kernel/btBvhTriangleMeshShape.cpp",
+   "orig_size": 7,
+   "recomp_size": 7,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -630,6 +906,28 @@
    "file": "Client/App/v8kernel/btGImpactConvexDecompositionShape.cpp",
    "orig_size": 6,
    "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x0059aeb0",
+   "kind": "FUNCTION",
+   "name": "btGImpactConvexDecompositionShape::getFieldD0",
+   "mangled": "?getFieldD0@btGImpactConvexDecompositionShape@@QBEHXZ",
+   "file": "Client/App/v8kernel/btGImpactConvexDecompositionShape.cpp",
+   "orig_size": 7,
+   "recomp_size": 7,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x0059aea0",
+   "kind": "FUNCTION",
+   "name": "btGImpactConvexDecompositionShape::getMemberPtrB0",
+   "mangled": "?getMemberPtrB0@btGImpactConvexDecompositionShape@@QBEPBHXZ",
+   "file": "Client/App/v8kernel/btGImpactConvexDecompositionShape.cpp",
+   "orig_size": 7,
+   "recomp_size": 7,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -810,6 +1108,17 @@
    "matchable": true
   },
   {
+   "address": "0x00575a80",
+   "kind": "FUNCTION",
+   "name": "RBX::TextDisplay::getField90",
+   "mangled": "?getField90@TextDisplay@RBX@@QBEHXZ",
+   "file": "Client/App/v8datamodel/TextDisplay.cpp",
+   "orig_size": 7,
+   "recomp_size": 7,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x005559c0",
    "kind": "FUNCTION",
    "name": "ShortcutHelpDialog::getConst16984184",
@@ -898,6 +1207,17 @@
    "matchable": true
   },
   {
+   "address": "0x004bb180",
+   "kind": "FUNCTION",
+   "name": "RobloxIDEDoc::getField80",
+   "mangled": "?getField80@RobloxIDEDoc@@QBEHXZ",
+   "file": "Client/RobloxStudio/RobloxIDEDoc.cpp",
+   "orig_size": 7,
+   "recomp_size": 7,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x004956c0",
    "kind": "FUNCTION",
    "name": "btCollisionDispatcher::getField0C",
@@ -927,6 +1247,28 @@
    "file": "Client/RobloxStudio/RobloxObjectBrowserDoc.cpp",
    "orig_size": 4,
    "recomp_size": 4,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00490c00",
+   "kind": "FUNCTION",
+   "name": "RBX::ScreenGui::getFlag8D",
+   "mangled": "?getFlag8D@ScreenGui@RBX@@QBE_NXZ",
+   "file": "Client/App/v8datamodel/ScreenGui.cpp",
+   "orig_size": 7,
+   "recomp_size": 7,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x0042f280",
+   "kind": "FUNCTION",
+   "name": "RBX::Graphics::RenderView::getField8C",
+   "mangled": "?getField8C@RenderView@Graphics@RBX@@QBEHXZ",
+   "file": "Client/Rendering/GfxRender/RenderView.cpp",
+   "orig_size": 7,
+   "recomp_size": 7,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1045,9 +1387,207 @@
    "matched": 78,
    "implemented": 78,
    "pct": 0.8329
+  },
+  {
+   "t": "2026-11-18 17:45:58 UTC",
+   "matched": 88,
+   "implemented": 88,
+   "pct": 0.9397
+  },
+  {
+   "t": "2026-11-18 17:46:59 UTC",
+   "matched": 98,
+   "implemented": 98,
+   "pct": 1.0464
+  },
+  {
+   "t": "2026-11-18 17:47:56 UTC",
+   "matched": 108,
+   "implemented": 108,
+   "pct": 1.1532
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-18T17:47:18",
+   "address": "0x005e5de0",
+   "name": "RBX::Graphics::ShaderProgramD3D9::getSubField28_34",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:47:16",
+   "address": "0x005b87e0",
+   "name": "btBvhTriangleMeshShape::getBufferOffset30_10",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:47:15",
+   "address": "0x0059aeb0",
+   "name": "btGImpactConvexDecompositionShape::getFieldD0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:47:13",
+   "address": "0x0059aea0",
+   "name": "btGImpactConvexDecompositionShape::getMemberPtrB0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:47:11",
+   "address": "0x00575a80",
+   "name": "RBX::TextDisplay::getField90",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:47:10",
+   "address": "0x004bb180",
+   "name": "RobloxIDEDoc::getField80",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:47:08",
+   "address": "0x00490c00",
+   "name": "RBX::ScreenGui::getFlag8D",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:47:06",
+   "address": "0x0042f280",
+   "name": "RBX::Graphics::RenderView::getField8C",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:47:04",
+   "address": "0x00c81bc0",
+   "name": "std::stream_buffer::getConst19554176",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:47:03",
+   "address": "0x00c81bb0",
+   "name": "std::stream_buffer::getConst19553048",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:46:17",
+   "address": "0x00c16a00",
+   "name": "RBX::BulletShapeCellConnector::getConst13",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:46:15",
+   "address": "0x00c169f0",
+   "name": "RBX::SimulateStage::getConst14",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:46:14",
+   "address": "0x00c15080",
+   "name": "RBX::HUMAN::Physics::getConst16",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:46:12",
+   "address": "0x00c0e210",
+   "name": "RBX::AdvRotateTool::getFlag_e210",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:46:10",
+   "address": "0x00c0bbd0",
+   "name": "RBX::AdvMoveToolBase::getFlag_bbd0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:46:08",
+   "address": "0x00be9a20",
+   "name": "RBX::OrderedDataStore::getConst15618428",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:46:07",
+   "address": "0x00be9a10",
+   "name": "RBX::DataStore::getConst15617916",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:46:05",
+   "address": "0x00ba4120",
+   "name": "RBX::MovingAssemblyStage::getConst10",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:46:03",
+   "address": "0x00ba2b30",
+   "name": "RBX::TreeStage::getConst5",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:46:02",
+   "address": "0x00aa2d10",
+   "name": "RBX::MotorJoint::getConst4",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:45:26",
+   "address": "0x00a320c0",
+   "name": "std::stream_buffer::getConst19196136",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:45:25",
+   "address": "0x00a2da50",
+   "name": "std::stream_buffer::getConst19190472",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:45:23",
+   "address": "0x00a2da40",
+   "name": "std::stream_buffer::getConst19190512",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:45:21",
+   "address": "0x00a2da30",
+   "name": "std::stream_buffer::getConst19190592",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:45:20",
+   "address": "0x00a2da20",
+   "name": "std::stream_buffer::getConst19190392",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:45:18",
+   "address": "0x00a2da10",
+   "name": "std::stream_buffer::getConst19190288",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:45:16",
+   "address": "0x00a2da00",
+   "name": "std::stream_buffer::getConst19190364",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:45:14",
+   "address": "0x00a026a0",
+   "name": "RBX::ExtrudedPartInstance::getConst19178964",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:45:13",
+   "address": "0x0099ce10",
+   "name": "RBX::GlueJoint::getConst9",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T17:45:11",
+   "address": "0x00860c40",
+   "name": "boost::io::too_few_args::getConst15063552",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-18T17:44:27",
    "address": "0x00860c30",
@@ -1517,5 +2057,5 @@
    "pct": 100.0
   }
  ],
- "match_rate_per_hour": 75.73
+ "match_rate_per_hour": 100.28
 }

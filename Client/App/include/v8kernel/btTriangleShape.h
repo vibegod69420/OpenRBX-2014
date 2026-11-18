@@ -17,6 +17,7 @@ public:
 	};
 
 	float getMargin() const;
+	int getConst52() const;
 	// AUTO-GENERATED METHODS
 };
 

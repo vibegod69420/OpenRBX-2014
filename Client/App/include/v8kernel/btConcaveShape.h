@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	float getMargin() const;
 	// AUTO-GENERATED METHODS
 };
 
