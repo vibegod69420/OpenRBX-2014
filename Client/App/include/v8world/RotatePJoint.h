@@ -17,6 +17,7 @@ public:
 	};
 
 	void stepUi();
+	int getConst7() const;
 	// AUTO-GENERATED METHODS
 };
 

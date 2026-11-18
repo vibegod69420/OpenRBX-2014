@@ -26,6 +26,12 @@ void RotatePJoint::stepUi()
 		kernelJoint->step();
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0099ce20
+int RotatePJoint::getConst7() const
+{
+	return 7;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
