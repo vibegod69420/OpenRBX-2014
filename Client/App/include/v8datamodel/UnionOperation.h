@@ -17,6 +17,7 @@ public:
 	};
 
 	float getGridSizeX() const;
+	float getGridSizeY() const;
 	// AUTO-GENERATED METHODS
 };
 

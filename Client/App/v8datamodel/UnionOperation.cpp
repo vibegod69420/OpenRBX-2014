@@ -35,6 +35,12 @@ float UnionOperation::getGridSizeX() const
     return reinterpret_cast<const PartOperationVSlot35*>(this)->getGridSize().x;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008ac870
+float UnionOperation::getGridSizeY() const
+{
+	return reinterpret_cast<const PartOperationVSlot35*>(this)->getGridSize().y;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
