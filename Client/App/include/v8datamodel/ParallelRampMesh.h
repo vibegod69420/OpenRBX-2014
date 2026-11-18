@@ -1,0 +1,27 @@
+#ifndef CLIENT_APP_INCLUDE_V8DATAMODEL_PARALLELRAMPMESH_H
+#define CLIENT_APP_INCLUDE_V8DATAMODEL_PARALLELRAMPMESH_H
+
+#include "decomp.h"
+
+namespace RBX {
+namespace POLY {
+
+// AUTO-GENERATED HELPERS
+
+class ParallelRampMesh
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	void dispose();
+	// AUTO-GENERATED METHODS
+};
+
+} // namespace POLY
+} // namespace RBX
+
+#endif // CLIENT_APP_INCLUDE_V8DATAMODEL_PARALLELRAMPMESH_H

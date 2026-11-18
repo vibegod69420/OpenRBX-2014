@@ -17,6 +17,7 @@ public:
 	};
 
 	float getGridSize() const;
+	bool update();
 	// AUTO-GENERATED METHODS
 };
 

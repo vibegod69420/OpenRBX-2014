@@ -16,6 +16,12 @@ int btDefaultCollisionConfiguration::getField18() const
 	return field_0018;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00495680
+int btDefaultCollisionConfiguration::getField08() const
+{
+	return field_0008;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

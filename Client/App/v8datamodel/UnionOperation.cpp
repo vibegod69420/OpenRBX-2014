@@ -91,6 +91,25 @@ void UnionOperation::sub_894960()
 		obj->vf12((char*)this - 0x70);
 }
 
+namespace {
+
+struct UnionOpSlot59Result
+{
+	void sub_995CD0(void* arg); // 0x00995cd0
+};
+
+UnionOpSlot59Result* sub_968F00(void* arg); // 0x00968f00
+
+} // namespace
+
+// FUNCTION: ROBLOXSTUDIO 0x008940e0
+void UnionOperation::sub_8940E0()
+{
+	UnionOpSlot59Result* result = sub_968F00(this);
+	if (result)
+		result->sub_995CD0(*(void**)((char*)this + 0xE0));
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

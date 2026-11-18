@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void __cdecl dispatch(void* arg1, void* arg2);
 	// AUTO-GENERATED METHODS
 };
 

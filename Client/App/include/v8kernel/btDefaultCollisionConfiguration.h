@@ -15,11 +15,13 @@ public:
 		int _vtable_or_head;
 		struct { char _pad_field_0010[0x10]; int field_0010; };
 		struct { char _pad_field_0018[0x18]; int field_0018; };
+		struct { char _pad_field_0008[0x8]; int field_0008; };
 		// AUTO-GENERATED FIELDS
 	};
 
 	int getField10() const;
 	int getField18() const;
+	int getField08() const;
 	// AUTO-GENERATED METHODS
 };
 

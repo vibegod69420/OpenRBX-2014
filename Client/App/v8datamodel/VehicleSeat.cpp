@@ -12,6 +12,18 @@ void* VehicleSeat::getSlot18Value()
 	return *(void**)((char*)ptr + 0x28);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0091bb70
+int VehicleSeat::isOccupied()
+{
+	void* p = *(void**)((char*)this + 0x1B4);
+	if (p)
+		p = *(void**)((char*)p + 4);
+	else
+		p = 0;
+
+	return p != 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

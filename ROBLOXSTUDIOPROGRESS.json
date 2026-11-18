@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 20:23:48 UTC",
+  "updated_at": "2026-11-18 20:30:07 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 2.6482,
-  "implemented_total": 248,
-  "function_annotations": 248,
+  "matchable_coverage_pct": 2.8297,
+  "implemented_total": 265,
+  "function_annotations": 265,
   "stub_annotations": 0,
-  "perfect_100_count": 248,
-  "matched_real_functions": 248,
+  "perfect_100_count": 265,
+  "matched_real_functions": 265,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.6114,
-  "overall_byte_coverage_pct": 0.0285,
+  "overall_function_coverage_pct": 0.6533,
+  "overall_byte_coverage_pct": 0.0337,
   "usage": {
-    "calls_24h": 381,
+    "calls_24h": 425,
     "failures_24h": 0,
-    "completion_tokens_24h": 2648802,
-    "reasoning_tokens_24h": 2608684,
-    "avg_latency_s": 127.6
+    "completion_tokens_24h": 3123665,
+    "reasoning_tokens_24h": 3077702,
+    "avg_latency_s": 133.9
   },
   "functions": [
     {
@@ -238,6 +238,17 @@
       "mangled": "?getField18@btDefaultCollisionConfiguration@@QBEHXZ",
       "file": "Client/App/v8kernel/btDefaultCollisionConfiguration.cpp",
       "orig_size": 20,
+      "recomp_size": 4,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00495680",
+      "kind": "FUNCTION",
+      "name": "btDefaultCollisionConfiguration::getField08",
+      "mangled": "?getField08@btDefaultCollisionConfiguration@@QBEHXZ",
+      "file": "Client/App/v8kernel/btDefaultCollisionConfiguration.cpp",
+      "orig_size": 36,
       "recomp_size": 4,
       "match_pct": 100.0,
       "matchable": true
@@ -1057,6 +1068,17 @@
       "matchable": true
     },
     {
+      "address": "0x006556c0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::LightObject::markDirty",
+      "mangled": "?markDirty@LightObject@Graphics@RBX@@QAEXXZ",
+      "file": "Client/Rendering/GfxRender/LightObject.cpp",
+      "orig_size": 32,
+      "recomp_size": 32,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x006600f0",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::Material::destroySubPtr0C",
@@ -1064,6 +1086,17 @@
       "file": "Client/Rendering/GfxRender/Material.cpp",
       "orig_size": 26,
       "recomp_size": 26,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0066e5c0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ParticleEmitter::queueSimulation",
+      "mangled": "?queueSimulation@ParticleEmitter@Graphics@RBX@@QAEXXZ",
+      "file": "Client/Rendering/GfxRender/ParticleEmitter.cpp",
+      "orig_size": 32,
+      "recomp_size": 32,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -1387,6 +1420,17 @@
       "matchable": true
     },
     {
+      "address": "0x0082eb00",
+      "kind": "FUNCTION",
+      "name": "RBX::FirstPersonCommand::isEnabled",
+      "mangled": "?isEnabled@FirstPersonCommand@RBX@@QAE_NXZ",
+      "file": "Client/App/v8datamodel/FirstPersonCommand.cpp",
+      "orig_size": 29,
+      "recomp_size": 29,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0082ef50",
       "kind": "FUNCTION",
       "name": "RBX::SetGridSizeToTwo::isEnabled",
@@ -1541,6 +1585,17 @@
       "matchable": true
     },
     {
+      "address": "0x00873a00",
+      "kind": "FUNCTION",
+      "name": "RBX::IAdornableCollector::dispatch",
+      "mangled": "?dispatch@IAdornableCollector@RBX@@QAAXPAX0@Z",
+      "file": "Client/Rendering/GfxBase/IAdornableCollector.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0087bad0",
       "kind": "FUNCTION",
       "name": "RBX::PathInterpolatedCFrame::getFlag41",
@@ -1625,6 +1680,17 @@
       "file": "Client/App/v8datamodel/UnionOperation.cpp",
       "orig_size": 15,
       "recomp_size": 15,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x008940e0",
+      "kind": "FUNCTION",
+      "name": "RBX::UnionOperation::sub_8940E0",
+      "mangled": "?sub_8940E0@UnionOperation@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/UnionOperation.cpp",
+      "orig_size": 31,
+      "recomp_size": 31,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -1790,6 +1856,17 @@
       "file": "Client/App/v8datamodel/VehicleSeat.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0091bb70",
+      "kind": "FUNCTION",
+      "name": "RBX::VehicleSeat::isOccupied",
+      "mangled": "?isOccupied@VehicleSeat@RBX@@QAEHXZ",
+      "file": "Client/App/v8datamodel/VehicleSeat.cpp",
+      "orig_size": 31,
+      "recomp_size": 31,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -2300,6 +2377,17 @@
       "matchable": true
     },
     {
+      "address": "0x00b613f0",
+      "kind": "FUNCTION",
+      "name": "RBX::POLY::MegaClusterMesh::dispose",
+      "mangled": "?dispose@MegaClusterMesh@POLY@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/MegaClusterMesh.cpp",
+      "orig_size": 28,
+      "recomp_size": 28,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00b61fa0",
       "kind": "FUNCTION",
       "name": "RBX::MegaClusterPoly::getMemberPtr04",
@@ -2307,6 +2395,17 @@
       "file": "Client/App/v8world/MegaClusterPoly.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b6c280",
+      "kind": "FUNCTION",
+      "name": "RBX::TriangleMesh::update",
+      "mangled": "?update@TriangleMesh@RBX@@QAE_NXZ",
+      "file": "Client/App/v8world/TriangleMesh.cpp",
+      "orig_size": 28,
+      "recomp_size": 28,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -2344,6 +2443,39 @@
       "matchable": true
     },
     {
+      "address": "0x00b9b6c0",
+      "kind": "FUNCTION",
+      "name": "RBX::POLY::BlockCorners::dispose",
+      "mangled": "?dispose@BlockCorners@POLY@RBX@@QAEXXZ",
+      "file": "Client/App/v8world/BlockCorners.cpp",
+      "orig_size": 28,
+      "recomp_size": 28,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b9b6e0",
+      "kind": "FUNCTION",
+      "name": "RBX::POLY::BlockMesh::dispose",
+      "mangled": "?dispose@BlockMesh@POLY@RBX@@QAEXXZ",
+      "file": "Client/App/v8world/BlockMesh.cpp",
+      "orig_size": 28,
+      "recomp_size": 28,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b9b700",
+      "kind": "FUNCTION",
+      "name": "RBX::BulletBoxShapeWrapper::dispose",
+      "mangled": "?dispose@BulletBoxShapeWrapper@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/BulletBoxShapeWrapper.cpp",
+      "orig_size": 28,
+      "recomp_size": 28,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00ba2b30",
       "kind": "FUNCTION",
       "name": "RBX::TreeStage::getConst5",
@@ -2362,6 +2494,61 @@
       "file": "Client/App/v8world/MovingAssemblyStage.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00bad080",
+      "kind": "FUNCTION",
+      "name": "RBX::FloatComparer::dispose",
+      "mangled": "?dispose@FloatComparer@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/FloatComparer.cpp",
+      "orig_size": 28,
+      "recomp_size": 28,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00bae600",
+      "kind": "FUNCTION",
+      "name": "RBX::BulletWedgeShapeWrapper::dispose",
+      "mangled": "?dispose@BulletWedgeShapeWrapper@RBX@@QAEXXZ",
+      "file": "Client/App/v8world/BulletWedgeShapeWrapper.cpp",
+      "orig_size": 28,
+      "recomp_size": 28,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00bae620",
+      "kind": "FUNCTION",
+      "name": "RBX::POLY::RBX::POLY::WedgeMesh::dispose",
+      "mangled": "?dispose@WedgeMesh@?A0x0204ef2e@POLY@RBX@@QAEXXZ",
+      "file": "Client/App/v8world/WedgeMesh.cpp",
+      "orig_size": 28,
+      "recomp_size": 28,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00bb2630",
+      "kind": "FUNCTION",
+      "name": "RBX::POLY::ParallelRampMesh::dispose",
+      "mangled": "?dispose@ParallelRampMesh@POLY@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/ParallelRampMesh.cpp",
+      "orig_size": 28,
+      "recomp_size": 28,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00bb3d10",
+      "kind": "FUNCTION",
+      "name": "RBX::BulletCornerWedgeSpCountedImpl::dispose",
+      "mangled": "?dispose@BulletCornerWedgeSpCountedImpl@?A0x8cf97af3@RBX@@QAEXXZ",
+      "file": "Client/App/v8world/BulletCornerWedgeShapeWrapper.cpp",
+      "orig_size": 28,
+      "recomp_size": 28,
       "match_pct": 100.0,
       "matchable": true
     },

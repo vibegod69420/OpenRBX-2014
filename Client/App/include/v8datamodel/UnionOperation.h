@@ -21,6 +21,7 @@ public:
 	int hasChildData() const;
 	char* getPrimitiveDataOffset24() const;
 	void sub_894960();
+	void sub_8940E0();
 	// AUTO-GENERATED METHODS
 };
 

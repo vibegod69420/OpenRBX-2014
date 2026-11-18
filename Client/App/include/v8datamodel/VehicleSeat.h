@@ -17,6 +17,7 @@ public:
 	};
 
 	void* getSlot18Value();
+	int isOccupied();
 	// AUTO-GENERATED METHODS
 };
 
