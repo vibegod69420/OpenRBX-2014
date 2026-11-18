@@ -16,6 +16,12 @@ int btConvexHullShape::getConst68() const
 	return 68;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00532380
+int btConvexHullShape::getField84() const
+{
+	return field_0084;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void swapBuffers();
 	// AUTO-GENERATED METHODS
 };
 

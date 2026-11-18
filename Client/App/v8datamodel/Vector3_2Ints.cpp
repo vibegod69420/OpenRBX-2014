@@ -18,6 +18,17 @@ void Vector3_2Ints::dispose()
 	}
 }
 
+// 0x00bb1e90
+void __cdecl sub_BB1E90(void* token, int value);void Vector3_2Ints::disposeImpl()
+{
+	void* px = *(void**)((char*)this + 0x0C);
+	if (px)
+	{
+		sub_BB1E90(px, *(int*)((char*)px + 0x14));
+		::operator delete(px);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

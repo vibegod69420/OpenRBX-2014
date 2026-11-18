@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18 21:50:26 UTC",
+ "updated_at": "2026-11-18 21:58:28 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 3.2461,
- "implemented_total": 304,
- "function_annotations": 304,
+ "matchable_coverage_pct": 3.2675,
+ "implemented_total": 306,
+ "function_annotations": 306,
  "stub_annotations": 0,
- "perfect_100_count": 304,
- "matched_real_functions": 304,
+ "perfect_100_count": 306,
+ "matched_real_functions": 306,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.7495,
- "overall_byte_coverage_pct": 0.0533,
+ "overall_function_coverage_pct": 0.7544,
+ "overall_byte_coverage_pct": 0.0553,
  "usage": {
-  "calls_24h": 857,
+  "calls_24h": 898,
   "failures_24h": 0,
-  "completion_tokens_24h": 8365813,
-  "reasoning_tokens_24h": 8235578,
-  "avg_latency_s": 174.1
+  "completion_tokens_24h": 8754558,
+  "reasoning_tokens_24h": 8618845,
+  "avg_latency_s": 173.1
  },
- "functions_total": 304,
+ "functions_total": 306,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -54,15 +54,15 @@
   },
   {
    "name": "App/v8kernel",
-   "matched": 33,
-   "functions": 33,
-   "bytes": 279
+   "matched": 34,
+   "functions": 34,
+   "bytes": 380
   },
   {
    "name": "Rendering/GfxCore",
-   "matched": 17,
-   "functions": 17,
-   "bytes": 267
+   "matched": 18,
+   "functions": 18,
+   "bytes": 352
   },
   {
    "name": "App/util",
@@ -2572,6 +2572,17 @@
    "matchable": true
   },
   {
+   "address": "0x00606300",
+   "kind": "FUNCTION",
+   "name": "RBX::Graphics::ContextGLWin32::swapBuffers",
+   "mangled": "?swapBuffers@ContextGLWin32@Graphics@RBX@@QAEXXZ",
+   "file": "Client/Rendering/GfxCore/GL/ContextGLWin32.cpp",
+   "orig_size": 85,
+   "recomp_size": 85,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x005e6910",
    "kind": "FUNCTION",
    "name": "RBX::Graphics::ShaderProgramFFPD3D9::getConst1",
@@ -3032,17 +3043,6 @@
    "recomp_size": 4,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x0058f690",
-   "kind": "FUNCTION",
-   "name": "btCollisionDispatcher::getInternalManifoldPointer",
-   "mangled": "?getInternalManifoldPointer@btCollisionDispatcher@@QAEPAXXZ",
-   "file": "Client/App/v8kernel/btCollisionDispatcher.cpp",
-   "orig_size": 13,
-   "recomp_size": 13,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -3399,9 +3399,33 @@
    "matched": 304,
    "implemented": 304,
    "pct": 3.2461
+  },
+  {
+   "t": "2026-11-18 21:58:28 UTC",
+   "matched": 306,
+   "implemented": 306,
+   "pct": 3.2675
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-18T21:56:57",
+   "address": "0x00bb1500",
+   "name": "func_00bb1500",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T21:50:55",
+   "address": "0x00532380",
+   "name": "btConvexHullShape::getField84",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T21:50:27",
+   "address": "0x00606300",
+   "name": "RBX::Graphics::ContextGLWin32::swapBuffers",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-18T21:48:22",
    "address": "0x00589de0",
@@ -4103,25 +4127,7 @@
    "address": "0x00ca97e0",
    "name": "sendDataOut",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T19:38:54",
-   "address": "0x00913e10",
-   "name": "RBX::Motor6D::getAngle",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T19:35:01",
-   "address": "0x0056f7f0",
-   "name": "boost::thread_data::run",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T19:34:32",
-   "address": "0x00893340",
-   "name": "RBX::UnionOperation::getPrimitiveDataOffset24",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 59.39
+ "match_rate_per_hour": 58.26
 }

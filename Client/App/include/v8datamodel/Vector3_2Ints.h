@@ -17,6 +17,7 @@ public:
 	};
 
 	void dispose();
+	void disposeImpl();
 	// AUTO-GENERATED METHODS
 };
 
