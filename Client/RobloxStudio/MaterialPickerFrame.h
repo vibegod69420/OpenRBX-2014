@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void * getMaterialWidget();
 	// AUTO-GENERATED METHODS
 };
 

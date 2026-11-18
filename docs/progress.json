@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18 21:37:08 UTC",
+ "updated_at": "2026-11-18 21:43:31 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 3.2141,
- "implemented_total": 301,
- "function_annotations": 301,
+ "matchable_coverage_pct": 3.2248,
+ "implemented_total": 302,
+ "function_annotations": 302,
  "stub_annotations": 0,
- "perfect_100_count": 301,
- "matched_real_functions": 301,
+ "perfect_100_count": 302,
+ "matched_real_functions": 302,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.7421,
- "overall_byte_coverage_pct": 0.0508,
+ "overall_function_coverage_pct": 0.7446,
+ "overall_byte_coverage_pct": 0.0516,
  "usage": {
-  "calls_24h": 786,
+  "calls_24h": 825,
   "failures_24h": 0,
-  "completion_tokens_24h": 7385462,
-  "reasoning_tokens_24h": 7273646,
-  "avg_latency_s": 167.9
+  "completion_tokens_24h": 7945043,
+  "reasoning_tokens_24h": 7822798,
+  "avg_latency_s": 171.8
  },
- "functions_total": 301,
+ "functions_total": 302,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -96,6 +96,12 @@
   },
   {
    "name": "RobloxStudio/ReplaceDialog.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 79
+  },
+  {
+   "name": "RobloxStudio/MaterialPickerFrame.cpp",
    "matched": 1,
    "functions": 1,
    "bytes": 79
@@ -3022,11 +3028,11 @@
    "matchable": true
   },
   {
-   "address": "0x005859b0",
+   "address": "0x00586e10",
    "kind": "FUNCTION",
-   "name": "ReplaceDialog::getReplaceValue",
-   "mangled": "?getReplaceValue@ReplaceDialog@@QAEPAXXZ",
-   "file": "Client/RobloxStudio/ReplaceDialog.cpp",
+   "name": "MaterialPickerFrame::getMaterialWidget",
+   "mangled": "?getMaterialWidget@MaterialPickerFrame@@QAEPAXXZ",
+   "file": "Client/RobloxStudio/MaterialPickerFrame.cpp",
    "orig_size": 79,
    "recomp_size": 79,
    "match_pct": 100.0,
@@ -3375,9 +3381,21 @@
    "matched": 301,
    "implemented": 301,
    "pct": 3.2141
+  },
+  {
+   "t": "2026-11-18 21:43:31 UTC",
+   "matched": 302,
+   "implemented": 302,
+   "pct": 3.2248
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-18T21:38:39",
+   "address": "0x00586e10",
+   "name": "MaterialPickerFrame::getMaterialWidget",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-18T21:35:46",
    "address": "0x005859b0",
@@ -4091,13 +4109,7 @@
    "address": "0x004cef90",
    "name": "RBX::Graphics::TextureProxy::release",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T19:30:37",
-   "address": "0x0042ae00",
-   "name": "RBX::DSVideoCaptureEngine::getElapsedTime",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 61.47
+ "match_rate_per_hour": 60.36
 }
