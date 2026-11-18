@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 23:06:16 UTC",
+  "updated_at": "2026-11-18 23:13:17 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 3.4597,
-  "implemented_total": 324,
-  "function_annotations": 324,
+  "matchable_coverage_pct": 3.4704,
+  "implemented_total": 325,
+  "function_annotations": 325,
   "stub_annotations": 0,
-  "perfect_100_count": 324,
-  "matched_real_functions": 324,
+  "perfect_100_count": 325,
+  "matched_real_functions": 325,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.7988,
-  "overall_byte_coverage_pct": 0.0655,
+  "overall_function_coverage_pct": 0.8013,
+  "overall_byte_coverage_pct": 0.0665,
   "usage": {
-    "calls_24h": 1280,
+    "calls_24h": 1313,
     "failures_24h": 0,
-    "completion_tokens_24h": 13476827,
-    "reasoning_tokens_24h": 13263308,
-    "avg_latency_s": 184.2
+    "completion_tokens_24h": 13895151,
+    "reasoning_tokens_24h": 13673233,
+    "avg_latency_s": 185.3
   },
   "functions": [
     {
@@ -1185,6 +1185,17 @@
       "file": "Client/Rendering/GfxCore/D3D9/ShaderProgramFFPD3D9.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00606290",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGLWin32::makeCurrent",
+      "mangled": "?makeCurrent@ContextGLWin32@Graphics@RBX@@QAEXXZ",
+      "file": "Client/Rendering/GfxCore/GL/ContextGLWin32.cpp",
+      "orig_size": 97,
+      "recomp_size": 97,
       "match_pct": 100.0,
       "matchable": true
     },

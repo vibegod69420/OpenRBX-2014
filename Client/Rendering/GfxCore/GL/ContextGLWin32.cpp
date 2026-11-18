@@ -35,6 +35,42 @@ void ContextGLWin32::swapBuffers()
 	SwapBuffers(*(HDC*)((char*)this + 8));
 }
 
+extern "C" __declspec(dllimport) int __stdcall wglMakeCurrent(HDC, HGLRC);
+
+// FUNCTION: ROBLOXSTUDIO 0x00606290
+void ContextGLWin32::makeCurrent()
+{
+	HGLRC hglrc = *(HGLRC*)((char*)this + 12);
+	if (wglGetCurrentContext() == hglrc)
+		return;
+
+	int result = wglMakeCurrent(*(HDC*)((char*)this + 8), hglrc);
+
+	unsigned char flag = *(unsigned char*)0x012DE657;
+	if (flag == 0)
+		return;
+
+	if (result != 0)
+		return;
+
+	typedef unsigned char(__cdecl *AssertHandler)(const char*, const char*, int);
+	AssertHandler handler = *(AssertHandler*)0x012DE694;
+	if (handler != 0)
+	{
+		if (handler("result",
+		            "D:\\BuildAgent\\work\\Trunk2012\\Client\\Rendering\\GfxCore\\GL\\ContextGLWin32.cpp",
+		            97) != 0)
+		{
+			return;
+		}
+
+		flag = *(unsigned char*)0x012DE657;
+	}
+
+	sub_6B9740(flag,
+	           "result file: D:\\BuildAgent\\work\\Trunk2012\\Client\\Rendering\\GfxCore\\GL\\ContextGLWin32.cpp line: 97");
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

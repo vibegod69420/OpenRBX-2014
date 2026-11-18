@@ -4,10 +4,10 @@
     OpenRBX-2014 &middot; byte-accurate decompilation
   </text>
   <text x="22" y="60" fill="#e2e8f0" font-family="Consolas, ui-monospace, monospace" font-size="13">
-    324 matched / 9,365 matchable &middot; 3.46% &middot; 0.07% of .text bytes
+    325 matched / 9,365 matchable &middot; 3.47% &middot; 0.07% of .text bytes
   </text>
   <text x="22" y="80" fill="#8b9bb4" font-family="Consolas, ui-monospace, monospace" font-size="12">
-    deepseek-v4.1-flash @ max &middot; 17.00.50727.1 &middot; 2026-11-18 23:06:16 UTC
+    deepseek-v4.1-flash @ max &middot; 17.00.50727.1 &middot; 2026-11-18 23:13:17 UTC
   </text>
   <rect x="22" y="94" width="516" height="12" rx="6" fill="#1b2432"/>
   <rect x="22" y="94" width="17" height="12" rx="6" fill="url(#g)"/>

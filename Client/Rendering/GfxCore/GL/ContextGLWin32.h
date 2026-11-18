@@ -18,6 +18,7 @@ public:
 	};
 
 	void swapBuffers();
+	void makeCurrent();
 	// AUTO-GENERATED METHODS
 };
 
