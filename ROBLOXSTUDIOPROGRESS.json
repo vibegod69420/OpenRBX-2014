@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 18:07:27 UTC",
+  "updated_at": "2026-11-18 18:31:48 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 1.3668,
-  "implemented_total": 128,
-  "function_annotations": 128,
+  "matchable_coverage_pct": 1.4202,
+  "implemented_total": 133,
+  "function_annotations": 133,
   "stub_annotations": 0,
-  "perfect_100_count": 128,
-  "matched_real_functions": 128,
+  "perfect_100_count": 133,
+  "matched_real_functions": 133,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.3156,
-  "overall_byte_coverage_pct": 0.0075,
+  "overall_function_coverage_pct": 0.3279,
+  "overall_byte_coverage_pct": 0.008,
   "usage": {
-    "calls_24h": 31,
+    "calls_24h": 39,
     "failures_24h": 0,
-    "completion_tokens_24h": 154929,
-    "reasoning_tokens_24h": 152659,
-    "avg_latency_s": 93.2
+    "completion_tokens_24h": 210066,
+    "reasoning_tokens_24h": 207277,
+    "avg_latency_s": 94.0
   },
   "functions": [
     {
@@ -52,6 +52,17 @@
       "file": "Client/App/v8datamodel/sp_counted_impl_pd.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0041e9a0",
+      "kind": "FUNCTION",
+      "name": "RBX::RunTransition::isConnected",
+      "mangled": "?isConnected@RunTransition@RBX@@QBEHXZ",
+      "file": "Client/App/v8datamodel/RunTransition.cpp",
+      "orig_size": 9,
+      "recomp_size": 9,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -573,6 +584,17 @@
       "matchable": true
     },
     {
+      "address": "0x005dce80",
+      "kind": "FUNCTION",
+      "name": "RBX::CSGMeshSgCore::isValid",
+      "mangled": "?isValid@CSGMeshSgCore@RBX@@QBEHXZ",
+      "file": "Client/App/v8datamodel/CSGMeshSgCore.cpp",
+      "orig_size": 9,
+      "recomp_size": 9,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x005e1160",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::DeviceD3D9::getField40",
@@ -881,6 +903,17 @@
       "matchable": true
     },
     {
+      "address": "0x00888300",
+      "kind": "FUNCTION",
+      "name": "RBX::Workspace::method_00888300",
+      "mangled": "?method_00888300@Workspace@RBX@@QAEHXZ",
+      "file": "Client/App/v8datamodel/Workspace.cpp",
+      "orig_size": 9,
+      "recomp_size": 9,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00892590",
       "kind": "FUNCTION",
       "name": "RBX::PathInterpolatedCFrame::getField48",
@@ -921,6 +954,17 @@
       "file": "Client/App/v8datamodel/GuiImageButton.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00925b30",
+      "kind": "FUNCTION",
+      "name": "RBX::Flag::resetField78",
+      "mangled": "?resetField78@Flag@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/Flag.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -1174,6 +1218,17 @@
       "file": "Client/App/v8datamodel/MarketplaceService.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b16da0",
+      "kind": "FUNCTION",
+      "name": "RBX::ArcHandles::setFieldA0",
+      "mangled": "?setFieldA0@ArcHandles@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/ArcHandles.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
       "match_pct": 100.0,
       "matchable": true
     },

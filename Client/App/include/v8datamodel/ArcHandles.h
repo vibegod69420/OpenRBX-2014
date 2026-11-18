@@ -19,6 +19,7 @@ public:
 
 	int getHandleId();
 	bool getFlag20() const;
+	void setFieldA0();
 	// AUTO-GENERATED METHODS
 };
 

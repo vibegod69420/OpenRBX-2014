@@ -16,6 +16,12 @@ bool ArcHandles::getFlag20() const
 	return flag_0020;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b16da0
+void ArcHandles::setFieldA0()
+{
+	*(bool*)((char*)this + 0xA0) = true;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

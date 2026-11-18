@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18 18:07:27 UTC",
+ "updated_at": "2026-11-18 18:31:48 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 1.3668,
- "implemented_total": 128,
- "function_annotations": 128,
+ "matchable_coverage_pct": 1.4202,
+ "implemented_total": 133,
+ "function_annotations": 133,
  "stub_annotations": 0,
- "perfect_100_count": 128,
- "matched_real_functions": 128,
+ "perfect_100_count": 133,
+ "matched_real_functions": 133,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.3156,
- "overall_byte_coverage_pct": 0.0075,
+ "overall_function_coverage_pct": 0.3279,
+ "overall_byte_coverage_pct": 0.008,
  "usage": {
-  "calls_24h": 31,
+  "calls_24h": 39,
   "failures_24h": 0,
-  "completion_tokens_24h": 154929,
-  "reasoning_tokens_24h": 152659,
-  "avg_latency_s": 93.2
+  "completion_tokens_24h": 210066,
+  "reasoning_tokens_24h": 207277,
+  "avg_latency_s": 94.0
  },
- "functions_total": 128,
+ "functions_total": 133,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 45,
-   "functions": 45,
-   "bytes": 263
+   "matched": 50,
+   "functions": 50,
+   "bytes": 306
   },
   {
    "name": "App/v8kernel",
@@ -421,6 +421,17 @@
    "matchable": true
   },
   {
+   "address": "0x00b16da0",
+   "kind": "FUNCTION",
+   "name": "RBX::ArcHandles::setFieldA0",
+   "mangled": "?setFieldA0@ArcHandles@RBX@@QAEXXZ",
+   "file": "Client/App/v8datamodel/ArcHandles.cpp",
+   "orig_size": 8,
+   "recomp_size": 8,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00ac2600",
    "kind": "FUNCTION",
    "name": "RBX::MarketplaceService::getFlag2",
@@ -674,6 +685,17 @@
    "matchable": true
   },
   {
+   "address": "0x00925b30",
+   "kind": "FUNCTION",
+   "name": "RBX::Flag::resetField78",
+   "mangled": "?resetField78@Flag@RBX@@QAEXXZ",
+   "file": "Client/App/v8datamodel/Flag.cpp",
+   "orig_size": 8,
+   "recomp_size": 8,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x008a8740",
    "kind": "FUNCTION",
    "name": "RBX::GuiImageButton::getFieldA4",
@@ -714,6 +736,17 @@
    "file": "Client/App/util/PathInterpolatedCFrame.cpp",
    "orig_size": 4,
    "recomp_size": 4,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00888300",
+   "kind": "FUNCTION",
+   "name": "RBX::Workspace::method_00888300",
+   "mangled": "?method_00888300@Workspace@RBX@@QAEHXZ",
+   "file": "Client/App/v8datamodel/Workspace.cpp",
+   "orig_size": 9,
+   "recomp_size": 9,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1022,6 +1055,17 @@
    "file": "Client/Rendering/GfxCore/D3D9/DeviceD3D9.cpp",
    "orig_size": 4,
    "recomp_size": 4,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x005dce80",
+   "kind": "FUNCTION",
+   "name": "RBX::CSGMeshSgCore::isValid",
+   "mangled": "?isValid@CSGMeshSgCore@RBX@@QBEHXZ",
+   "file": "Client/App/v8datamodel/CSGMeshSgCore.cpp",
+   "orig_size": 9,
+   "recomp_size": 9,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1543,6 +1587,17 @@
    "matchable": true
   },
   {
+   "address": "0x0041e9a0",
+   "kind": "FUNCTION",
+   "name": "RBX::RunTransition::isConnected",
+   "mangled": "?isConnected@RunTransition@RBX@@QBEHXZ",
+   "file": "Client/App/v8datamodel/RunTransition.cpp",
+   "orig_size": 9,
+   "recomp_size": 9,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x0040dfd0",
    "kind": "FUNCTION",
    "name": "RBX::sp_counted_impl_pd::getMemberPtr10",
@@ -1643,9 +1698,45 @@
    "matched": 128,
    "implemented": 128,
    "pct": 1.3668
+  },
+  {
+   "t": "2026-11-18 18:31:48 UTC",
+   "matched": 133,
+   "implemented": 133,
+   "pct": 1.4202
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-18T18:31:17",
+   "address": "0x00888300",
+   "name": "RBX::Workspace::method_00888300",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T18:16:32",
+   "address": "0x005dce80",
+   "name": "RBX::CSGMeshSgCore::isValid",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T18:15:02",
+   "address": "0x0041e9a0",
+   "name": "RBX::RunTransition::isConnected",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T18:13:11",
+   "address": "0x00b16da0",
+   "name": "RBX::ArcHandles::setFieldA0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-18T18:11:58",
+   "address": "0x00925b30",
+   "name": "RBX::Flag::resetField78",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-18T18:06:45",
    "address": "0x0061f640",
@@ -2335,37 +2426,7 @@
    "address": "0x005e3a80",
    "name": "RBX::Graphics::DeviceD3D9::getMemberPtr1C",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:10:28",
-   "address": "0x005e1160",
-   "name": "RBX::Graphics::DeviceD3D9::getField40",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:10:27",
-   "address": "0x0059ab40",
-   "name": "btGImpactShapeInterface::getMemberPtr40",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:10:25",
-   "address": "0x00595fa0",
-   "name": "btTriangleIndexVertexArray::getField24",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:10:24",
-   "address": "0x00595de0",
-   "name": "btConcaveShape::getMargin",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T17:07:34",
-   "address": "0x00590280",
-   "name": "btTriangleShape::getMargin",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 91.28
+ "match_rate_per_hour": 73.56
 }

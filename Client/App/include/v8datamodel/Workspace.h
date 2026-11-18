@@ -17,6 +17,7 @@ public:
 	};
 
 	void* getBasePtr();
+	int method_00888300();
 	// AUTO-GENERATED METHODS
 };
 
