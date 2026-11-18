@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void __cdecl get_deleter(void* arg2, void* arg3, void* arg4);
 	// AUTO-GENERATED METHODS
 };
 

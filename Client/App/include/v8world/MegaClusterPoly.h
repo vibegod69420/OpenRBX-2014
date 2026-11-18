@@ -18,6 +18,7 @@ public:
 	};
 
 	const int* getMemberPtr04() const;
+	int getNumFaces() const;
 	// AUTO-GENERATED METHODS
 };
 

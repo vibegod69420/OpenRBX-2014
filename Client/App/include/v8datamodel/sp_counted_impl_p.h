@@ -19,6 +19,7 @@ public:
 
 	void freeMember0C();
 	void freeMember0C_slot1();
+	void dispose();
 	// AUTO-GENERATED METHODS
 };
 

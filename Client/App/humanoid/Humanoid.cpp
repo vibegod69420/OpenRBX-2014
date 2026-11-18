@@ -16,6 +16,20 @@ int Humanoid::getInt148() const
 	return *reinterpret_cast<const int*>(reinterpret_cast<const char*>(this) + 0x148) != 0;
 }
 
+struct HumanoidThunk
+{
+	void (__thiscall *func)(void*, void*);
+	int offset;
+	char* target;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x007bcdc0
+void __cdecl Humanoid::dispatch(int arg)
+{
+	HumanoidThunk* thunk = reinterpret_cast<HumanoidThunk*>(this);
+	thunk->func(thunk->target + thunk->offset, &arg);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

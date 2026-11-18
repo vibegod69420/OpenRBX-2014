@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 20:17:10 UTC",
+  "updated_at": "2026-11-18 20:23:48 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 2.4773,
-  "implemented_total": 232,
-  "function_annotations": 232,
+  "matchable_coverage_pct": 2.6482,
+  "implemented_total": 248,
+  "function_annotations": 248,
   "stub_annotations": 0,
-  "perfect_100_count": 232,
-  "matched_real_functions": 232,
+  "perfect_100_count": 248,
+  "matched_real_functions": 248,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.572,
-  "overall_byte_coverage_pct": 0.0243,
+  "overall_function_coverage_pct": 0.6114,
+  "overall_byte_coverage_pct": 0.0285,
   "usage": {
-    "calls_24h": 334,
+    "calls_24h": 381,
     "failures_24h": 0,
-    "completion_tokens_24h": 2170433,
-    "reasoning_tokens_24h": 2138663,
-    "avg_latency_s": 120.5
+    "completion_tokens_24h": 2648802,
+    "reasoning_tokens_24h": 2608684,
+    "avg_latency_s": 127.6
   },
   "functions": [
     {
@@ -173,6 +173,17 @@
       "file": "Client/Rendering/GfxRender/RenderView.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00467d10",
+      "kind": "FUNCTION",
+      "name": "RBX::detail::sp_counted_impl_p::dispose",
+      "mangled": "?dispose@sp_counted_impl_p@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
+      "orig_size": 14,
+      "recomp_size": 14,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -848,6 +859,17 @@
       "matchable": true
     },
     {
+      "address": "0x005e0810",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::QueryD3D9::release",
+      "mangled": "?release@QueryD3D9@Graphics@RBX@@QAEXXZ",
+      "file": "Client/Rendering/GfxCore/D3D9/QueryD3D9.cpp",
+      "orig_size": 25,
+      "recomp_size": 25,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x005e1160",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::DeviceD3D9::getField40",
@@ -1211,6 +1233,17 @@
       "matchable": true
     },
     {
+      "address": "0x007bcdc0",
+      "kind": "FUNCTION",
+      "name": "RBX::Humanoid::dispatch",
+      "mangled": "?dispatch@Humanoid@RBX@@QAAXH@Z",
+      "file": "Client/App/humanoid/Humanoid.cpp",
+      "orig_size": 22,
+      "recomp_size": 22,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x007c2460",
       "kind": "FUNCTION",
       "name": "RBX::BoxSelectCommand::cancelSelection",
@@ -1486,6 +1519,17 @@
       "matchable": true
     },
     {
+      "address": "0x00860c50",
+      "kind": "FUNCTION",
+      "name": "boost::io::too_many_args::getConst15063648",
+      "mangled": "?getConst15063648@too_many_args@io@boost@@QBEHXZ",
+      "file": "Client/App/v8datamodel/too_many_args.cpp",
+      "orig_size": 27,
+      "recomp_size": 6,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00872a50",
       "kind": "FUNCTION",
       "name": "RBX::GuiImageButton::getFlag278",
@@ -1662,6 +1706,17 @@
       "matchable": true
     },
     {
+      "address": "0x008c5c70",
+      "kind": "FUNCTION",
+      "name": "RBX::HeartbeatTask::get_deleter",
+      "mangled": "?get_deleter@HeartbeatTask@RBX@@QAAXPAX00@Z",
+      "file": "Client/App/v8datamodel/HeartbeatTask.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x008d5490",
       "kind": "FUNCTION",
       "name": "RBX::ScriptStats::freeMember0C",
@@ -1783,6 +1838,28 @@
       "matchable": true
     },
     {
+      "address": "0x009358e0",
+      "kind": "FUNCTION",
+      "name": "RBX::CommonVerbs::destroySubPtr0C",
+      "mangled": "?destroySubPtr0C@CommonVerbs@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/CommonVerbs.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00935900",
+      "kind": "FUNCTION",
+      "name": "RBX::ProfanityFilter::destroySubPtr0C",
+      "mangled": "?destroySubPtr0C@ProfanityFilter@RBX@@QAEXXZ",
+      "file": "Client/App/gui/ProfanityFilter.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00953980",
       "kind": "FUNCTION",
       "name": "boost::unknown_exception::add_ref",
@@ -1849,6 +1926,17 @@
       "matchable": true
     },
     {
+      "address": "0x0099d2b0",
+      "kind": "FUNCTION",
+      "name": "RBX::MegaClusterPoly::getNumFaces",
+      "mangled": "?getNumFaces@MegaClusterPoly@RBX@@QBEHXZ",
+      "file": "Client/App/v8world/MegaClusterPoly.cpp",
+      "orig_size": 27,
+      "recomp_size": 27,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0099d2f0",
       "kind": "FUNCTION",
       "name": "RBX::Ball::getGridVolume",
@@ -1900,6 +1988,17 @@
       "file": "Client/App/humanoid/Humanoid.cpp",
       "orig_size": 5,
       "recomp_size": 5,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x009ff6f0",
+      "kind": "FUNCTION",
+      "name": "RBX::CacheableContentProvider::CachedItem::destroySubPtr0C",
+      "mangled": "?destroySubPtr0C@CachedItem@CacheableContentProvider@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/CachedItem.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -2043,6 +2142,17 @@
       "file": "Client/RobloxStudio/lua_exception.cpp",
       "orig_size": 16,
       "recomp_size": 16,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00a46260",
+      "kind": "FUNCTION",
+      "name": "RBX::ScriptService::Info::destroySubPtr0C",
+      "mangled": "?destroySubPtr0C@Info@ScriptService@RBX@@QAEXXZ",
+      "file": "Client/App/script/Info.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -2201,6 +2311,17 @@
       "matchable": true
     },
     {
+      "address": "0x00b8a2f0",
+      "kind": "FUNCTION",
+      "name": "RBX::Http::destroySubPtr0C",
+      "mangled": "?destroySubPtr0C@Http@RBX@@QAEXXZ",
+      "file": "Client/App/util/Http.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00b8daf0",
       "kind": "FUNCTION",
       "name": "RBX::NormalBreakConnector::getFlag28",
@@ -2311,6 +2432,17 @@
       "matchable": true
     },
     {
+      "address": "0x00be8170",
+      "kind": "FUNCTION",
+      "name": "RBX::Lua::WeakFunctionRef::dispose",
+      "mangled": "?dispose@WeakFunctionRef@Lua@RBX@@QAEXXZ",
+      "file": "Client/App/script/WeakFunctionRef.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00be9a10",
       "kind": "FUNCTION",
       "name": "RBX::DataStore::getConst15617916",
@@ -2410,6 +2542,17 @@
       "matchable": true
     },
     {
+      "address": "0x00c2f640",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::ChatMessage::destroySubPtr0C",
+      "mangled": "?destroySubPtr0C@ChatMessage@Network@RBX@@QAEXXZ",
+      "file": "Client/Network/ChatMessage.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00c4b290",
       "kind": "FUNCTION",
       "name": "RBX::Network::PersistentDataStore::dispatch",
@@ -2428,6 +2571,17 @@
       "file": "Client/Network/ServerReplicator.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c63780",
+      "kind": "FUNCTION",
+      "name": "RBX::GamePerfMonitor::destroySubPtr0C",
+      "mangled": "?destroySubPtr0C@GamePerfMonitor@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/GamePerfMonitor.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -2509,9 +2663,31 @@
       "matchable": true
     },
     {
+      "address": "0x00c84740",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::SharedStringProtectedDictionary::destroySubPtr0C",
+      "mangled": "?destroySubPtr0C@SharedStringProtectedDictionary@Network@RBX@@QAEXXZ",
+      "file": "Client/Network/SharedStringProtectedDictionary.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c9f600",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::ConcurrentRakPeer::destroySubPtr0C",
+      "mangled": "?destroySubPtr0C@ConcurrentRakPeer@Network@RBX@@QAEXXZ",
+      "file": "Client/Network/ConcurrentRakPeer.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00ca6040",
       "kind": "FUNCTION",
-      "name": "RBX::sp_counted_impl_p::freeMember0C",
+      "name": "RBX::detail::sp_counted_impl_p::freeMember0C",
       "mangled": "?freeMember0C@sp_counted_impl_p@RBX@@QAEXXZ",
       "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
       "orig_size": 10,
@@ -2522,7 +2698,7 @@
     {
       "address": "0x00ca6050",
       "kind": "FUNCTION",
-      "name": "RBX::sp_counted_impl_p::freeMember0C_slot1",
+      "name": "RBX::detail::sp_counted_impl_p::freeMember0C_slot1",
       "mangled": "?freeMember0C_slot1@sp_counted_impl_p@RBX@@QAEXXZ",
       "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
       "orig_size": 10,

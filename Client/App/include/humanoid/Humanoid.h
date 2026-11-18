@@ -18,6 +18,7 @@ public:
 
 	void setFlag0x31();
 	int getInt148() const;
+	void __cdecl dispatch(int arg);
 	// AUTO-GENERATED METHODS
 };
 
