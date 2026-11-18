@@ -14,6 +14,7 @@ Usage:
 """
 
 import csv
+import hashlib
 import os
 import re
 import struct
@@ -308,6 +309,13 @@ def _deps_path(obj_path: Path) -> Path:
     return obj_path.with_suffix(obj_path.suffix + DEPS_SUFFIX)
 
 
+def _cpp_digest(cpp_path: Path) -> str:
+    try:
+        return hashlib.sha1(cpp_path.read_bytes()).hexdigest()
+    except OSError:
+        return ""
+
+
 def _cache_fresh(obj_path: Path, cpp_path: Path) -> bool:
     """True when the cached object is newer than every input that produced it."""
     try:
@@ -321,12 +329,28 @@ def _cache_fresh(obj_path: Path, cpp_path: Path) -> bool:
             return obj_mtime >= max(cpp_path.stat().st_mtime, _newest_header_mtime())
         except OSError:
             return False
-    try:
-        if obj_mtime < cpp_path.stat().st_mtime:
+    deps: list[str] = []
+    digest = None
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+        if line.startswith("sha1:"):
+            digest = line[5:]
+            continue
+        deps.append(line)
+    if digest:
+        # Compare content, not mtime: a failed attempt that was reverted leaves byte-identical
+        # source, and recompiling it on every publish is what made update_progress cost 40s.
+        if _cpp_digest(cpp_path) != digest:
             return False
-    except OSError:
-        return False
-    for dep in lines:
+    else:
+        try:
+            if obj_mtime < cpp_path.stat().st_mtime:
+                return False
+        except OSError:
+            return False
+    for dep in deps:
         if not dep.strip():
             continue
         try:
@@ -337,9 +361,12 @@ def _cache_fresh(obj_path: Path, cpp_path: Path) -> bool:
     return True
 
 
-def _write_deps(obj_path: Path, headers: list[str]) -> None:
+def _write_deps(obj_path: Path, headers: list[str], digest: str = "") -> None:
     try:
-        _deps_path(obj_path).write_text("\n".join(headers) + "\n", encoding="utf-8")
+        lines = list(headers)
+        if digest:
+            lines.append(f"sha1:{digest}")
+        _deps_path(obj_path).write_text("\n".join(lines) + "\n", encoding="utf-8")
     except OSError:
         pass
 
@@ -397,7 +424,7 @@ def compile_cpp_to_coff(cpp_path: Path, use_cache: bool = False) -> tuple[bool, 
     out = (res.stdout + "\n" + res.stderr).strip()
     ok = res.returncode == 0 and obj_path.exists()
     if ok:
-        _write_deps(obj_path, _parse_show_includes(out))
+        _write_deps(obj_path, _parse_show_includes(out), _cpp_digest(cpp_path))
     out = "\n".join(line for line in out.splitlines() if "including file:" not in line.lower()).strip()
     return ok, obj_path, out
 
