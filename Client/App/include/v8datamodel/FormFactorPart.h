@@ -18,6 +18,7 @@ public:
 	};
 
 	int getField110() const;
+	void createJoints();
 	// AUTO-GENERATED METHODS
 };
 

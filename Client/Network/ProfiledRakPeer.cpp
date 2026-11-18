@@ -23,6 +23,26 @@ int ProfiledRakPeer::getField484() const
 	return field_0484;
 }
 
+namespace RakNet
+{
+	struct SimpleMutex
+	{
+		void Lock();
+		void Unlock();
+	};
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00ce9e00
+int ProfiledRakPeer::getField5E0() const
+{
+	char* base = reinterpret_cast<char*>(const_cast<ProfiledRakPeer*>(this));
+	RakNet::SimpleMutex* lock = reinterpret_cast<RakNet::SimpleMutex*>(base + 0x5c8);
+	lock->Lock();
+	int value = *reinterpret_cast<int*>(base + 0x5e0);
+	lock->Unlock();
+	return value;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

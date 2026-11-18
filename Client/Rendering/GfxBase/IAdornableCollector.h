@@ -13,10 +13,13 @@ public:
 	union
 	{
 		int _vtable_or_head;
+		struct { char _pad_ptr_000c[0xc]; IAdornableCollector* ptr_000c; };
 		// AUTO-GENERATED FIELDS
 	};
 
 	void __cdecl dispatch(void* arg1, void* arg2);
+	void onDestroy();
+	void destroySubPtr0C();
 	// AUTO-GENERATED METHODS
 };
 

@@ -18,6 +18,16 @@ void __cdecl IAdornableCollector::dispatch(void* arg1, void* arg2)
 	thunk->function(thunk->target + thunk->offset, &arg1, &arg2);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0090b590
+void IAdornableCollector::destroySubPtr0C()
+{
+	IAdornableCollector* p = ptr_000c;
+	if (p) {
+		p->onDestroy();
+		rbx_free_mem(p);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

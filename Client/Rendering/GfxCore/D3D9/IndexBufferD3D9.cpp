@@ -28,6 +28,23 @@ void IndexBufferD3D9::unlock()
 	(*(IDirect3DIndexBuffer9**)((char*)this + 0x34))->Unlock();
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005e5380
+static int s_indexBufferD3D9Info[8][2];
+
+void IndexBufferD3D9::release()
+{
+    IDirect3DIndexBuffer9* buffer = *reinterpret_cast<IDirect3DIndexBuffer9**>(reinterpret_cast<char*>(this) + 0x34);
+    if (buffer != 0)
+    {
+        int index = *reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x30);
+        if (s_indexBufferD3D9Info[index][0] == 0)
+        {
+            buffer->slot2();
+            *reinterpret_cast<IDirect3DIndexBuffer9**>(reinterpret_cast<char*>(this) + 0x34) = 0;
+        }
+    }
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

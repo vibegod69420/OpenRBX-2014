@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void onDescendentRemoving();
 	// AUTO-GENERATED METHODS
 };
 

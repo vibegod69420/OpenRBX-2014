@@ -19,6 +19,29 @@ int DSVideoCaptureEngine::getElapsedTime()
 	return (int)(GetTickCount() - *(DWORD*)((char*)this + 0x18));
 }
 
+struct IDSCaptureState
+{
+	virtual int getState() = 0;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0042add0
+int DSVideoCaptureEngine::getState()
+{
+	void* p = *(void**)((char*)this + 0x2C);
+	if (p)
+	{
+		void* q = *(void**)((char*)p + 0x54);
+		void* obj = *(void**)q;
+		if (obj)
+			obj = (char*)obj + 0xF0;
+		else
+			obj = 0;
+
+		return ((IDSCaptureState*)obj)->getState();
+	}
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

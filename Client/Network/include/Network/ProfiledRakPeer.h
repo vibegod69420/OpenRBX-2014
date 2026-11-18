@@ -21,6 +21,7 @@ public:
 	unsigned short GetMaximumIncomingConnections() const;
 	unsigned short GetNumberOfAddresses() const;
 	int getField484() const;
+	int getField5E0() const;
 	// AUTO-GENERATED METHODS
 };
 
