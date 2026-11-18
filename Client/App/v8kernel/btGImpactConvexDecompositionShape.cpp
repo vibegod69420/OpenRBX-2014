@@ -22,6 +22,12 @@ int btGImpactConvexDecompositionShape::getFieldD0() const
 	return field_00d0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0059ae90
+unsigned char btGImpactConvexDecompositionShape::childrenHasTransform() const
+{
+	return (*(const int*)((const char*)this + 0xbc)) != 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

@@ -21,6 +21,7 @@ public:
 	int getConst17002116() const;
 	const int* getMemberPtrB0() const;
 	int getFieldD0() const;
+	unsigned char childrenHasTransform() const;
 	// AUTO-GENERATED METHODS
 };
 

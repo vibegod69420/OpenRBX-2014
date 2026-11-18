@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	float getGridSizeX() const;
 	// AUTO-GENERATED METHODS
 };
 
