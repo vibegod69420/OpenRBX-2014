@@ -1,9 +1,25 @@
-#pragma once
+#ifndef CLIENT_ROBLOXSTUDIO_ROBLOXTREEWIDGET_H
+#define CLIENT_ROBLOXSTUDIO_ROBLOXTREEWIDGET_H
 
-// Qt's tree widget slot 1 hands back a pointer 0x14 bytes before the object.
+#include "decomp.h"
+
+
+
+// AUTO-GENERATED HELPERS
+
 class RobloxTreeWidget
 {
 public:
-	void* getFieldECPtr() const;
-	bool isBaseNonZero() const;
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	void* getCompleteObject();
+	// AUTO-GENERATED METHODS
 };
+
+
+
+#endif // CLIENT_ROBLOXSTUDIO_ROBLOXTREEWIDGET_H

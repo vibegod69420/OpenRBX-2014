@@ -15,3 +15,11 @@ run_daemon.cmd
 data/active_tunnel_url.txt
 
 data/work_ledger.jsonl
+data/llm_usage.jsonl
+data/rotation_log.jsonl
+data/rotation_state.json
+data/ec2_state.json
+
+# Deployment secrets: the DeepAI key and the EC2 private key never enter git.
+secrets/
+.deepai.env

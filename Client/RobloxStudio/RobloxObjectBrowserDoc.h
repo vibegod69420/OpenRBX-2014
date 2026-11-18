@@ -1,14 +1,26 @@
-#pragma once
+#ifndef CLIENT_ROBLOXSTUDIO_ROBLOXOBJECTBROWSERDOC_H
+#define CLIENT_ROBLOXSTUDIO_ROBLOXOBJECTBROWSERDOC_H
+
+#include "decomp.h"
+
+
+
+// AUTO-GENERATED HELPERS
 
 class RobloxObjectBrowserDoc
 {
 public:
-	int getField1C() const;
-	void clearField0C();
+	union
+	{
+		int _vtable_or_head;
+		struct { char _pad_field_001c[0x1c]; int field_001c; };
+		// AUTO-GENERATED FIELDS
+	};
 
-private:
-	char _pad0C[0x0c];
-	bool flag0C;
-	char _pad0D[0x1c - 0x0d];
-	int field1C;
+	int getField1C() const;
+	// AUTO-GENERATED METHODS
 };
+
+
+
+#endif // CLIENT_ROBLOXSTUDIO_ROBLOXOBJECTBROWSERDOC_H

@@ -1,7 +1,15 @@
 #include "RobloxTreeWidgetItem.h"
 
+#include "decomp.h"
+
+
+
 // FUNCTION: ROBLOXSTUDIO 0x005378c0
-void* RobloxTreeWidgetItem::getBasePtr() const
+RobloxTreeWidgetItem* RobloxTreeWidgetItem::getThis()
 {
-	return (void*)((char*)this - 0x20);
+	return reinterpret_cast<RobloxTreeWidgetItem*>(reinterpret_cast<char*>(this) - 0x20);
 }
+
+// AUTO-GENERATED IMPLEMENTATIONS
+
+

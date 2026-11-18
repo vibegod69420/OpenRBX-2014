@@ -10,6 +10,22 @@ This file provides guidance to Claude Code (`claude`), Pi (`pi`), and autonomous
 
 Our goal is **100% byte-for-byte accuracy** verified by `reccmp`. You must work **non-stop**, retrying on any compiler or `reccmp` mismatch until each target function reaches `100%` (or highest proven structural match), committing and pushing live progress to GitHub after every matched batch.
 
+### Generation model
+
+- `DeepSeek V4.1 Flash` (`deepseek-v4.1-flash`) through `https://api.deepai.org/deepai_code`,
+  320,000-token context, 131,072 max output, `reasoning_effort: "max"`.
+- Implemented in `tools/deepai_backend.py`; `tools/autonomous_harness.py` selects it by default
+  (`DECOMP_BACKEND=deepai`) and escalates the completion budget 16K → 32K → 64K → 96K across
+  the four repair attempts.
+- The key comes from `DEEPAI_API_KEY` or `/etc/openrbx/deepai.env` (0600 on the worker). It is
+  never stored in a tracked file.
+
+### Reset baseline
+
+`Client/` was emptied on 2026-11-18 so the new model starts from a clean tree; the tooling,
+indexes and dashboard remain. Progress is reported against the 9,365 matchable routines only,
+and `matchable_coverage_pct` can never exceed 100 by construction.
+
 ---
 
 ## Core Decompilation Workflow (Mandatory Loop)

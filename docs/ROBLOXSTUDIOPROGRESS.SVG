@@ -1,14 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="540" height="120" viewBox="0 0 540 120">
-  <rect width="540" height="120" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
-  <text x="20" y="32" fill="#58a6ff" font-family="Segoe UI, Ubuntu, sans-serif" font-size="16" font-weight="bold">
-    OpenRBX-2014 Live Decompilation Progress (0.164.0.50577)
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="124" viewBox="0 0 560 124">
+  <rect width="560" height="124" rx="10" fill="#0b0f16" stroke="#222c3d" stroke-width="2"/>
+  <text x="22" y="34" fill="#7dd3fc" font-family="Segoe UI, Ubuntu, sans-serif" font-size="16" font-weight="bold">
+    OpenRBX-2014 &middot; byte-accurate decompilation
   </text>
-  <text x="20" y="58" fill="#c9d1d9" font-family="Consolas, monospace" font-size="13">
-    Matched Functions: 35630 (100% Byte-Exact) | Total Annotated: 35630 / 40561
+  <text x="22" y="60" fill="#e2e8f0" font-family="Consolas, ui-monospace, monospace" font-size="13">
+    9 matched / 9,365 matchable &middot; 0.10% &middot; 0.00% of .text bytes
   </text>
-  <text x="20" y="80" fill="#8b949e" font-family="Consolas, monospace" font-size="13">
-    Active Accuracy: 100.00% avg | Updated: 2026-11-13 22:37:57 UTC
+  <text x="22" y="80" fill="#8b9bb4" font-family="Consolas, ui-monospace, monospace" font-size="12">
+    deepseek-v4.1-flash @ max &middot; 17.00.50727.1 &middot; 2026-11-18 17:07:47 UTC
   </text>
-  <rect x="20" y="94" width="500" height="12" rx="6" fill="#21262d"/>
-  <rect x="20" y="94" width="500" height="12" rx="6" fill="#2ea043"/>
+  <rect x="22" y="94" width="516" height="12" rx="6" fill="#1b2432"/>
+  <rect x="22" y="94" width="6" height="12" rx="6" fill="url(#g)"/>
+  <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#34d399"/></linearGradient></defs>
 </svg>

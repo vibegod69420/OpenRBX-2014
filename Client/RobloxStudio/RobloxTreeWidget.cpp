@@ -1,18 +1,15 @@
 #include "RobloxTreeWidget.h"
 
+#include "decomp.h"
+
+
+
 // FUNCTION: ROBLOXSTUDIO 0x00539120
-void* RobloxTreeWidget::getFieldECPtr() const
+void* RobloxTreeWidget::getCompleteObject()
 {
-	return (void*)((char*)this - 0x14);
+	return reinterpret_cast<char*>(this) - 0x14;
 }
 
-extern "C++" struct BasePart
-{
-	int call() const;
-};
+// AUTO-GENERATED IMPLEMENTATIONS
 
-// FUNCTION: ROBLOXSTUDIO 0x0053dbe0
-bool RobloxTreeWidget::isBaseNonZero() const
-{
-	return ((BasePart*)((char*)this - 0x50))->call() != 0;
-}
+

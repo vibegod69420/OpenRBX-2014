@@ -1,16 +1,15 @@
-#include "btTriangleShape.h"
+#include "v8kernel/btTriangleShape.h"
 
-// FUNCTION: ROBLOXSTUDIO 0x00590a80
-const char* btTriangleShape::getName() const
+#include "decomp.h"
+
+
+
+// FUNCTION: ROBLOXSTUDIO 0x00590280
+float btTriangleShape::getMargin() const
 {
-	return "Triangle";
+	return *(const float*)((const char*)this + 0x30);
 }
 
-// FUNCTION: ROBLOXSTUDIO 0x00590750
-void btTriangleShape::zeroQuad(int, int* out) const
-{
-	out[0] = 0;
-	out[1] = 0;
-	out[2] = 0;
-	out[3] = 0;
-}
+// AUTO-GENERATED IMPLEMENTATIONS
+
+

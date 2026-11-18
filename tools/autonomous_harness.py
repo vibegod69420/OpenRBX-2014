@@ -2,9 +2,9 @@
 """
 Immortal 24/7 Autonomous Byte-Accurate Decompilation Harness for OpenRBX-2014 (`ROBLOXSTUDIO`).
 
-Tuned for Clean Subsystem C++ Architecture (matching `Asphaltian/OpenRBX`), Maximum Context (256K),
-and Adaptive MoE Reasoning (`8K -> 24K -> 64K` output/thinking budget) against the Dual Tesla T4
-`Qwen3.8-35B-A3B` MoE server:
+Tuned for Clean Subsystem C++ Architecture (matching `Asphaltian/OpenRBX`) and a 320K-token
+context window with maximum thinking (`DeepSeek V4.1 Flash` via `api.deepai.org/deepai_code`,
+`reasoning_effort: max`). Generation escalates 16K -> 96K completion budget across repair attempts:
 1. Routes every function (`0x00401000`..`0x00e0f3a3`) to its real subsystem `.cpp` and `.h` file
    via `tools/source_router.py` (`Client/App/v8world/Ball.cpp`, `Client/Network/ProfiledRakPeer.cpp`, etc.)
 2. Emits idiomatic C++ class methods (`namespace RBX { ... }`) with zero `DecompBatch.cpp` dump files
@@ -25,28 +25,40 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
+import deepai_backend   # noqa: E402
 import func_context     # noqa: E402
 import next_target      # noqa: E402
 import opencode_backend  # noqa: E402
 import source_router    # noqa: E402
 import update_progress  # noqa: E402
 import verify_tu        # noqa: E402
+from targets import classify_target  # noqa: E402
 
 KERNEL_REF = os.environ.get("KAGGLE_KERNEL_REF", "supahblob/kaggle-qwen-coder-api-server")
-MODEL_NAME = os.environ.get("DECOMP_MODEL", "anthropic/claude-sonnet-5@default")
+MODEL_NAME = os.environ.get("DECOMP_MODEL", deepai_backend.MODEL)
 HARNESS_MODE = os.environ.get("DECOMP_HARNESS", "auto")
-MAX_OUTPUT_TOKENS = int(os.environ.get("DECOMP_MAX_TOKENS", "65536"))
-BACKEND = os.environ.get("DECOMP_BACKEND", "deterministic")
+MAX_OUTPUT_TOKENS = int(os.environ.get("DECOMP_MAX_TOKENS", "98304"))
+BACKEND = os.environ.get("DECOMP_BACKEND", "deepai")
 OPENCODE_SENTINEL = "opencode://cli"
+DEEPAI_SENTINEL = deepai_backend.SENTINEL
+PUSH_ENABLED = os.environ.get("DECOMP_PUSH", "0").lower() in ("1", "true", "yes")
 LOCAL_LLM_URL = os.environ.get("DECOMP_LOCAL_URL", "http://127.0.0.1:8080/v1")
 LEDGER_PATH = ROOT / "data" / "work_ledger.jsonl"
-CONTEXT_WINDOW = 262144
+CONTEXT_WINDOW = 320000
 TUNNEL_CACHE_FILE = ROOT / "data" / "active_tunnel_url.txt"
 
 
 def log(msg: str):
     ts = time.strftime("%Y-%m-%d %H:%M:%S")
     print(f"[{ts}] {msg}", flush=True)
+
+
+def _first_error(compiler_out: str) -> str:
+    """MSVC emits warnings before the real cause; report the first error line, not the last."""
+    lines = [line.strip() for line in (compiler_out or "").splitlines() if line.strip()]
+    errors = [line for line in lines if "error" in line.lower() and "D9002" not in line]
+    picked = errors[:2] or lines[-2:]
+    return " | ".join(picked)[:400] or "<no output>"
 
 
 def record_work(addr: int, ok: bool, pct: float, name: str):
@@ -220,6 +232,8 @@ def discover_kaggle_tunnel_url() -> str | None:
 
 
 def call_llm_chat(base_url: str, system_prompt: str, user_prompt: str, max_tokens: int = MAX_OUTPUT_TOKENS) -> str:
+    if base_url.startswith(DEEPAI_SENTINEL):
+        return deepai_backend.ask(system_prompt, user_prompt, max_tokens=max_tokens)
     if base_url.startswith(OPENCODE_SENTINEL):
         return opencode_backend.ask(system_prompt, user_prompt, max_tokens=max_tokens)
     kb_url, kb_key = load_kbench_credentials()
@@ -340,30 +354,8 @@ def _make_field_union_entry(off: int, c_type: str, field_name: str) -> str:
     return f"struct {{ char _pad_{field_name}[0x{off:x}]; {c_type} {field_name}; }};"
 
 
-def classify_target(orig: bytes) -> str:
-    """
-    Separates the address table into what C++ can actually reproduce byte-for-byte:
-
-      - `fragment`: the bytes never terminate a routine (no `ret`), i.e. the size table
-        holds mid-instruction starts. No C++ source can ever match these.
-      - `thunk`: compiler-generated redirect emitted for multiple-inheritance adjustors
-        (`sub ecx,N; jmp`), imported functions (`jmp [__imp_x]`) or tail calls (`jmp rel32`).
-        There is no high-level body to write for them.
-      - `real`: a complete routine worth synthesizing or handing to the LLM.
-    """
-    if not orig:
-        return "fragment"
-    if orig[0] == 0xE9 or orig[:2] == b"\xff\x25":
-        return "thunk"
-    if orig[:2] == b"\x83\xe9" and len(orig) >= 7 and orig[3] == 0xE9:
-        return "thunk"
-    if orig[:3] == b"\x2b\x49\xfc" and orig[3:4] == b"\xe9":
-        return "thunk"
-    if orig[-1] not in (0xC3, 0xC2) or orig[-1:] == b"\xe9":
-        return "fragment"
-    if bytes.fromhex("64a100000000") in orig[:40] and bytes.fromhex("64892500000000") in orig[:56]:
-        return "seh"
-    return "real"
+# `classify_target` lives in tools/targets.py so the harness and the progress reporter
+# cannot drift apart on which addresses are reproducible in C++.
 
 
 def synthesize_class_method_cpp(addr: int, orig: bytes, route: dict, existing_h_text: str) -> dict | None:
@@ -1087,6 +1079,9 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
     claude_md = (ROOT / "CLAUDE.md").read_text(encoding="utf-8")
     original_cpp_content = cpp_path.read_text(encoding="utf-8")
     original_h_content = h_path.read_text(encoding="utf-8")
+    # 320K of context is affordable, but the prompt still has to stay a single useful request:
+    # the tail holds the most recent helpers and the exact style the model should continue.
+    cpp_excerpt = original_cpp_content[-24000:] if len(original_cpp_content) > 24000 else original_cpp_content
 
     system_prompt = (
         "You are an elite MSVC 11.0 (Visual Studio 2012 x86) C++ reverse engineer working on OpenRBX-2014.\n"
@@ -1105,9 +1100,10 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
     best_code = None
     best_pct = -1.0
     max_attempts = 4
-    # Adaptive MoE Reasoning Escalation, trimmed to 4 passes: a measured run converted nothing
-    # across 6 escalating attempts (best 50%), so the two most expensive passes were dropped.
-    token_schedule = [8192, 24576, 49152, 65536]
+    # Thinking budget escalation. DeepSeek V4.1 Flash accepts 131,072 output tokens, and the
+    # gateway bills this catalog entry 0 theos per request, so the ceiling is set high: a
+    # difficult 2014 routine benefits far more from one deep pass than from many shallow ones.
+    token_schedule = [16384, 32768, 65536, 98304]
 
     for attempt in range(1, max_attempts + 1):
         budget_tokens = min(MAX_OUTPUT_TOKENS, token_schedule[attempt - 1])
@@ -1116,6 +1112,8 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
             f"Decompile the following 2014 Roblox (`ROBLOXSTUDIO`) x86 function (`0x{addr:08x}`) "
             f"for `{route['qualified_class']}` in `{route['cpp_rel']}` to 100% byte-matching C++:\n\n"
             f"Current `{route['h_rel']}` header:\n```cpp\n{original_h_content}\n```\n\n"
+            f"Current `{route['cpp_rel']}` translation unit (tail, for existing members and helpers):\n"
+            f"```cpp\n{cpp_excerpt}\n```\n\n"
             f"{card}\n\n"
             f"{feedback_history}\n"
             f"Provide only the C++ implementation block (and any needed inline struct/declaration above it) "
@@ -1124,7 +1122,7 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
         try:
             resp_text = call_llm_chat(base_url, system_prompt, prompt, max_tokens=budget_tokens)
             candidate_cpp_snippet = extract_cpp_code_block(resp_text)
-        except opencode_backend.QuotaExhausted:
+        except (opencode_backend.QuotaExhausted, deepai_backend.QuotaExhausted):
             raise
         except Exception as e:
             log(f"  [0x{addr:08x} Attempt {attempt}] LLM request warning: {e}")
@@ -1172,7 +1170,7 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
                 break
             log(
                 f"  [0x{addr:08x} Attempt {attempt}] COMPILE FAILED on {route['cpp_rel']}: "
-                f"{(compiler_out.strip().splitlines() or ['<no output>'])[-1][:180]}"
+                f"{_first_error(compiler_out)}"
             )
             feedback_history = (
                 f"### Attempt {attempt} Compiler Error (`cl.exe /O2` on `{route['cpp_rel']}`):\n"
@@ -1218,6 +1216,35 @@ def decompile_function_with_retries(addr: int, base_url: str | None) -> tuple[bo
     cpp_path.write_text(original_cpp_content, encoding="utf-8")
     h_path.write_text(original_h_content, encoding="utf-8")
     return False, 0.0, ""
+
+
+_DEEPAI_READY: bool | None = None
+
+
+def deepai_ready() -> bool:
+    """One-time catalogue/auth check for the DeepAI gateway. Never raises."""
+    global _DEEPAI_READY
+    if _DEEPAI_READY is None:
+        try:
+            report = deepai_backend.preflight()
+            log(
+                f"DeepAI ready: {report['name']} | context {report['context_window']} | "
+                f"max output {report['max_tokens']} | thinking {report['reasoning_effort']} | "
+                f"key ...{report['key_suffix']}"
+            )
+            _DEEPAI_READY = True
+        except Exception as exc:
+            log(f"DeepAI backend unavailable ({exc}); deterministic synthesis only")
+            _DEEPAI_READY = False
+    return _DEEPAI_READY
+
+
+def progress_command(message: str) -> list[str]:
+    """`update_progress.py` invocation; pushing stays opt-in via DECOMP_PUSH."""
+    args = [sys.executable, str(ROOT / "tools" / "update_progress.py"), "--commit", message]
+    if PUSH_ENABLED:
+        args.append("--push")
+    return args
 
 
 _OPENCODE_READY: bool | None = None
@@ -1284,7 +1311,9 @@ def run_forever():
 
     while True:
         try:
-            if BACKEND == "opencode":
+            if BACKEND == "deepai":
+                base_url = DEEPAI_SENTINEL if deepai_ready() else None
+            elif BACKEND == "opencode":
                 base_url = OPENCODE_SENTINEL if opencode_ready() else None
             elif BACKEND == "kaggle":
                 base_url = discover_kaggle_tunnel_url()
@@ -1296,7 +1325,13 @@ def run_forever():
             else:
                 base_url = None
             if base_url:
-                shown_model = opencode_backend.MODEL if base_url == OPENCODE_SENTINEL else MODEL_NAME
+                shown_model = (
+                    deepai_backend.MODEL
+                    if base_url == DEEPAI_SENTINEL
+                    else opencode_backend.MODEL
+                    if base_url == OPENCODE_SENTINEL
+                    else MODEL_NAME
+                )
                 log(f"Generation backend: {base_url} | Model: {shown_model}")
             elif BACKEND == "local":
                 log("No local llama-server reachable; running deterministic synthesis only")
@@ -1316,7 +1351,7 @@ def run_forever():
                 log("100% OF ALL 40,561 FUNCTIONS IMPLEMENTED! Running full-client build verification...")
                 subprocess.run([sys.executable, str(ROOT / "tools" / "build_client.py")], cwd=ROOT, check=False)
                 subprocess.run(
-                    [sys.executable, str(ROOT / "tools" / "update_progress.py"), "--commit", "100% of RobloxStudioBeta.exe matched!", "--push"],
+                    progress_command("100% of RobloxStudioBeta.exe matched!"),
                     cwd=ROOT,
                     check=False,
                 )
@@ -1345,13 +1380,13 @@ def run_forever():
                 commit_msg = f"Match {len(matched_in_cycle)} class methods ({', '.join(matched_in_cycle[:4])}) [100% byte-exact]"
                 log(f"Committing & pushing clean C++ subsystem batch to GitHub Pages: {commit_msg}")
                 subprocess.run(
-                    [sys.executable, str(ROOT / "tools" / "update_progress.py"), "--commit", commit_msg, "--push"],
+                    progress_command(commit_msg),
                     cwd=ROOT,
                     check=False,
                 )
 
             time.sleep(2)
-        except opencode_backend.QuotaExhausted as exc:
+        except (opencode_backend.QuotaExhausted, deepai_backend.QuotaExhausted) as exc:
             log(f"OpenCode free-tier quota reached: {exc}")
             if rotate_after_quota(str(exc)):
                 log("Instance stop requested; quota_rotate.py --start (or the EventBridge schedule) restarts it on a new public IP")

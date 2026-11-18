@@ -1,17 +1,25 @@
 [Unit]
-Description=OpenRBX-2014 autonomous decompilation harness (MSVC 11 under Wine)
+Description=OpenRBX-2014 autonomous decompilation harness (DeepSeek V4.1 Flash + MSVC 11 under Wine)
 After=network-online.target
 Wants=network-online.target
 
 [Service]
 Type=simple
 WorkingDirectory=/opt/openrbx/OpenRBX-2014
+# The DeepAI key lives here, 0600 root-only; it is never part of the repository.
+EnvironmentFile=-/etc/openrbx/deepai.env
+Environment=DECOMP_BACKEND=deepai
+Environment=DEEPAI_MODEL=deepseek-v4.1-flash
+Environment=DEEPAI_REASONING_EFFORT=max
+Environment=DEEPAI_ENV_FILE=/etc/openrbx/deepai.env
+Environment=DECOMP_MAX_TOKENS=98304
+# Set to 1 once a git credential is installed for root and progress should publish itself.
+Environment=DECOMP_PUSH=0
 Environment=MSVC_BIN_DIR=/opt/msvc110/bin
 Environment=MSVC_ROOT=/opt/msvc110
 Environment=WINEPREFIX=/opt/msvc110/wineprefix
 Environment=WINEDEBUG=-all
 Environment=PYTHONUNBUFFERED=1
-# systemd does not set HOME; git's credential store and global config live there.
 Environment=HOME=/root
 ExecStartPre=/bin/mkdir -p /var/log/openrbx
 ExecStart=/usr/bin/python3 /opt/openrbx/OpenRBX-2014/tools/autonomous_harness.py

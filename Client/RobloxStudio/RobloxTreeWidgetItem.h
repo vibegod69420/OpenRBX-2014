@@ -1,8 +1,25 @@
-#pragma once
+#ifndef CLIENT_ROBLOXSTUDIO_ROBLOXTREEWIDGETITEM_H
+#define CLIENT_ROBLOXSTUDIO_ROBLOXTREEWIDGETITEM_H
 
-// Slot 2 hands back a pointer 0x20 bytes before the item.
+#include "decomp.h"
+
+
+
+// AUTO-GENERATED HELPERS
+
 class RobloxTreeWidgetItem
 {
 public:
-	void* getBasePtr() const;
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	RobloxTreeWidgetItem* getThis();
+	// AUTO-GENERATED METHODS
 };
+
+
+
+#endif // CLIENT_ROBLOXSTUDIO_ROBLOXTREEWIDGETITEM_H

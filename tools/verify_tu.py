@@ -286,12 +286,12 @@ def compile_cpp_to_coff(cpp_path: Path, use_cache: bool = False) -> tuple[bool, 
         f'/I"{ROOT / "Client" / "Rendering" / "g3d" / "include"}"',
         f'/I"{cpp_path.parent}"',
     ]
-    # /arch:SSE matters: the 2014 build used SSE1, so scalar int->float conversions
-    # are `cvtsi2ss`; the default SSE2 target folds them into packed `cvtdq2ps`
-    # and no float-bearing function can match.
+    # MSVC 11 (cl 17) has no /arch:SSE switch -- it only understands SSE2 and AVX, and
+    # x86 defaults to SSE2. Passing it produced D9002 on every compile, which buried the
+    # real error line, so the default is used deliberately rather than ignored silently.
     flags = (
         "/nologo /c /O2 /Ob2 /Oi /Ot /Oy- /GS /EHsc /GR /Gy /fp:precise "
-        "/arch:SSE /Zc:wchar_t /Zc:forScope"
+        "/Zc:wchar_t /Zc:forScope"
     )
     # A `// FLAGS:` line pins the exact flag set for a TU whose original was built
     # with different options (third-party libraries here use frame-pointer omission).

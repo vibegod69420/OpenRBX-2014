@@ -1,13 +1,22 @@
 #!/usr/bin/env python3
 """
-Computes live byte-accuracy metrics across all implemented functions in `Client/`,
-generates `ROBLOXSTUDIOPROGRESS.SVG`, `ROBLOXSTUDIOPROGRESS.json`, and the live
-GitHub Pages dashboard (`docs/index.html` + `docs/progress.json`), and optionally
-commits and pushes to GitHub.
+Computes live byte-accuracy metrics for everything annotated in `Client/`, then
+publishes them as data files and a badge:
+
+  ROBLOXSTUDIOPROGRESS.json   canonical, complete record (summary + every function)
+  ROBLOXSTUDIOPROGRESS.SVG    README badge
+  docs/progress.json          dashboard summary + recent functions + subsystems
+  docs/functions.json         full function list, fetched only when a visitor asks
+  docs/history.json           rolling samples for the dashboard sparkline
+
+`docs/index.html` is a static, hand-maintained page: it renders these files in
+the browser, so this script never rewrites 250k lines of HTML again.
 
 Usage:
-    python tools/update_progress.py [--commit "Match RBX::Joint methods"] [--push]
+    python tools/update_progress.py [--commit "Match ..."] [--push]
 """
+
+from __future__ import annotations
 
 import argparse
 import datetime
@@ -19,35 +28,75 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 import verify_tu  # noqa: E402
-import autonomous_harness as harness  # noqa: E402
+from targets import classify_target  # noqa: E402
 
 CLIENT_DIR = ROOT / "Client"
 DOCS_DIR = ROOT / "docs"
-CSV_PATH = ROOT / "ROBLOXSTUDIO-function-size.csv"
 PROGRESS_JSON = ROOT / "ROBLOXSTUDIOPROGRESS.json"
 PROGRESS_SVG = ROOT / "ROBLOXSTUDIOPROGRESS.SVG"
+USAGE_LEDGER = ROOT / "data" / "llm_usage.jsonl"
+
+RECENT_LIMIT = 250
+HISTORY_LIMIT = 500
 
 
-def evaluate_all_client_files():
+def _usage_summary() -> dict:
+    """Aggregate the last 24h of LLM calls recorded by deepai_backend."""
+    calls = tokens = reasoning = 0
+    latencies: list[float] = []
+    failures = 0
+    cutoff = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=24)
+    try:
+        lines = USAGE_LEDGER.read_text(encoding="utf-8").splitlines()
+    except OSError:
+        lines = []
+    for line in lines:
+        try:
+            entry = json.loads(line)
+            stamp = datetime.datetime.strptime(entry.get("ts", ""), "%Y-%m-%dT%H:%M:%S")
+        except Exception:
+            continue
+        if stamp.replace(tzinfo=datetime.timezone.utc) < cutoff:
+            continue
+        if entry.get("ok"):
+            calls += 1
+            tokens += int(entry.get("completion_tokens") or 0)
+            reasoning += int(entry.get("reasoning_tokens") or 0)
+            if entry.get("latency_s"):
+                latencies.append(float(entry["latency_s"]))
+        else:
+            failures += 1
+    return {
+        "calls_24h": calls,
+        "failures_24h": failures,
+        "completion_tokens_24h": tokens,
+        "reasoning_tokens_24h": reasoning,
+        "avg_latency_s": round(sum(latencies) / len(latencies), 1) if latencies else None,
+    }
+
+
+def evaluate_all_client_files() -> dict:
     sizes = verify_tu.load_function_sizes()
     total_funcs = len(sizes)
     total_binary_bytes = sum(sizes.values())
 
-    # The address table is not all real functions: it also indexes mid-instruction fragments and
-    # compiler-generated thunks. Reporting against the matchable subset keeps the denominator honest.
     kind_counts = {"real": 0, "fragment": 0, "thunk": 0, "seh": 0}
+    real_addresses: set[int] = set()
     for addr, sz in sizes.items():
         if sz < 3:
             continue
-        kind_counts[harness.classify_target(verify_tu.get_original_function_bytes(addr, sz))] += 1
+        kind = classify_target(verify_tu.get_original_function_bytes(addr, sz))
+        kind_counts[kind] += 1
+        if kind == "real":
+            real_addresses.add(addr)
 
-    records = []
+    records: list[dict] = []
     if CLIENT_DIR.exists():
         for cpp_path in sorted(CLIENT_DIR.rglob("*.cpp")):
             anns = verify_tu.parse_annotations_in_cpp(cpp_path)
             if not anns:
                 continue
-            ok, obj_path, compiler_out = verify_tu.compile_cpp_to_coff(cpp_path, use_cache=True)
+            ok, obj_path, _ = verify_tu.compile_cpp_to_coff(cpp_path, use_cache=True)
             coff_funcs = verify_tu.parse_coff_functions(obj_path) if ok else {}
             rel_file = str(cpp_path.relative_to(ROOT)).replace("\\", "/")
 
@@ -83,15 +132,13 @@ def evaluate_all_client_files():
                     "orig_size": sz,
                     "recomp_size": recomp_len,
                     "match_pct": round(actual_pct, 2),
+                    "matchable": addr in real_addresses,
                 })
 
-    func_count = sum(1 for r in records if r["kind"] == "FUNCTION")
-    stub_count = sum(1 for r in records if r["kind"] == "STUB")
-    perfect_count = sum(1 for r in records if r["match_pct"] >= 99.99)
-    matched_bytes = sum(r["orig_size"] * (r["match_pct"] / 100.0) for r in records)
-    avg_match_pct = (
-        sum(r["match_pct"] for r in records) / len(records) if records else 0.0
-    )
+    perfect = [r for r in records if r["match_pct"] >= 99.99]
+    matched_real = [r for r in perfect if r["matchable"]]
+    matched_bytes = sum(r["orig_size"] for r in perfect)
+    avg_match_pct = sum(r["match_pct"] for r in records) / len(records) if records else 0.0
 
     cl_version = verify_tu.get_compiler_version()
     compiler_ok = cl_version.startswith(verify_tu.TARGET_CL_VERSION)
@@ -102,45 +149,101 @@ def evaluate_all_client_files():
             f"evidence until the v110 toolset is the one compiling."
         )
 
+    model_name = "deepseek-v4.1-flash"
+    try:
+        import deepai_backend  # noqa: PLC0415
+
+        model_name = deepai_backend.MODEL
+        effort = deepai_backend.REASONING_EFFORT
+        context_window = 320000
+    except Exception:
+        effort, context_window = "max", 320000
+
     summary = {
         "updated_at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
         "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
         "compiler": f"cl {cl_version}" + (" (MSVC 11.0 / VS2012)" if compiler_ok else " (NOT the target toolchain)"),
         "compiler_version": cl_version,
         "compiler_matches_target": compiler_ok,
+        "model": {
+            "name": model_name,
+            "reasoning_effort": effort,
+            "context_window": context_window,
+            "backend": "api.deepai.org",
+        },
         "total_binary_functions": total_funcs,
         "total_binary_bytes": total_binary_bytes,
         "matchable_functions": kind_counts["real"],
         "fragment_entries": kind_counts["fragment"],
         "compiler_thunk_entries": kind_counts["thunk"],
         "seh_scaffold_entries": kind_counts["seh"],
-        "matchable_coverage_pct": round(perfect_count * 100.0 / max(1, kind_counts["real"]), 4),
+        "matchable_coverage_pct": round(len(matched_real) * 100.0 / max(1, kind_counts["real"]), 4),
         "implemented_total": len(records),
-        "function_annotations": func_count,
-        "stub_annotations": stub_count,
-        "perfect_100_count": perfect_count,
+        "function_annotations": sum(1 for r in records if r["kind"] == "FUNCTION"),
+        "stub_annotations": sum(1 for r in records if r["kind"] == "STUB"),
+        "perfect_100_count": len(perfect),
+        "matched_real_functions": len(matched_real),
         "average_match_pct": round(avg_match_pct, 2),
-        "overall_function_coverage_pct": round(len(records) * 100.0 / max(1, total_funcs), 4),
+        "overall_function_coverage_pct": round(len(perfect) * 100.0 / max(1, total_funcs), 4),
         "overall_byte_coverage_pct": round(matched_bytes * 100.0 / max(1, total_binary_bytes), 4),
+        "usage": _usage_summary(),
         "functions": sorted(records, key=lambda r: r["address"]),
     }
     return summary
 
 
+def _subsystems(records: list[dict]) -> list[dict]:
+    buckets: dict[str, dict] = {}
+    for rec in records:
+        parts = rec["file"].split("/")
+        key = "/".join(parts[1:3]) if len(parts) > 2 else parts[-1]
+        bucket = buckets.setdefault(key, {"name": key, "matched": 0, "functions": 0, "bytes": 0})
+        bucket["functions"] += 1
+        if rec["match_pct"] >= 99.99:
+            bucket["matched"] += 1
+            bucket["bytes"] += rec["orig_size"]
+    ordered = sorted(buckets.values(), key=lambda b: (-b["bytes"], -b["functions"]))
+    return ordered
+
+
+def _history(summary: dict) -> list[dict]:
+    path = DOCS_DIR / "history.json"
+    try:
+        history = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(history, list):
+            history = []
+    except Exception:
+        history = []
+    sample = {
+        "t": summary["updated_at"],
+        "matched": summary["perfect_100_count"],
+        "implemented": summary["implemented_total"],
+        "pct": summary["matchable_coverage_pct"],
+    }
+    if history and history[-1].get("matched") == sample["matched"] and history[-1].get("implemented") == sample["implemented"]:
+        history[-1] = sample
+    else:
+        history.append(sample)
+    return history[-HISTORY_LIMIT:]
+
+
 def write_svg(summary: dict):
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="540" height="120" viewBox="0 0 540 120">
-  <rect width="540" height="120" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
-  <text x="20" y="32" fill="#58a6ff" font-family="Segoe UI, Ubuntu, sans-serif" font-size="16" font-weight="bold">
-    OpenRBX-2014 Live Decompilation Progress (0.164.0.50577)
+    pct = summary["matchable_coverage_pct"]
+    bar = max(6, int(5.0 * min(100.0, pct)))
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="560" height="124" viewBox="0 0 560 124">
+  <rect width="560" height="124" rx="10" fill="#0b0f16" stroke="#222c3d" stroke-width="2"/>
+  <text x="22" y="34" fill="#7dd3fc" font-family="Segoe UI, Ubuntu, sans-serif" font-size="16" font-weight="bold">
+    OpenRBX-2014 &middot; byte-accurate decompilation
   </text>
-  <text x="20" y="58" fill="#c9d1d9" font-family="Consolas, monospace" font-size="13">
-    Matched Functions: {summary['perfect_100_count']} (100% Byte-Exact) | Total Annotated: {summary['implemented_total']} / {summary['total_binary_functions']}
+  <text x="22" y="60" fill="#e2e8f0" font-family="Consolas, ui-monospace, monospace" font-size="13">
+    {summary['perfect_100_count']:,} matched / {summary['matchable_functions']:,} matchable &middot; {pct:.2f}% &middot; {summary['overall_byte_coverage_pct']:.2f}% of .text bytes
   </text>
-  <text x="20" y="80" fill="#8b949e" font-family="Consolas, monospace" font-size="13">
-    Active Accuracy: {summary['average_match_pct']:.2f}% avg | Updated: {summary['updated_at']}
+  <text x="22" y="80" fill="#8b9bb4" font-family="Consolas, ui-monospace, monospace" font-size="12">
+    {summary['model']['name']} @ {summary['model']['reasoning_effort']} &middot; {summary['compiler_version']} &middot; {summary['updated_at']}
   </text>
-  <rect x="20" y="94" width="500" height="12" rx="6" fill="#21262d"/>
-  <rect x="20" y="94" width="{max(6, int(5.0 * min(100.0, summary['average_match_pct'])))}" height="12" rx="6" fill="#2ea043"/>
+  <rect x="22" y="94" width="516" height="12" rx="6" fill="#1b2432"/>
+  <rect x="22" y="94" width="{bar}" height="12" rx="6" fill="url(#g)"/>
+  <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#34d399"/></linearGradient></defs>
 </svg>
 """
     PROGRESS_SVG.write_text(svg, encoding="utf-8")
@@ -148,171 +251,26 @@ def write_svg(summary: dict):
     (DOCS_DIR / "ROBLOXSTUDIOPROGRESS.SVG").write_text(svg, encoding="utf-8")
 
 
-def write_dashboard_html(summary: dict):
+def write_dashboard_data(summary: dict):
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
-    (DOCS_DIR / "progress.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    history = _history(summary)
+    functions = summary["functions"]
+    recent = sorted(functions, key=lambda r: r["address"], reverse=True)[:RECENT_LIMIT]
+    subsystems = _subsystems(functions)
+
+    public = {k: v for k, v in summary.items() if k != "functions"}
+    public["functions_total"] = len(functions)
+    public["subsystems"] = subsystems
+    public["recent"] = recent
+    public["history"] = history
+
+    (DOCS_DIR / "progress.json").write_text(json.dumps(public, indent=1), encoding="utf-8")
+    (DOCS_DIR / "history.json").write_text(json.dumps(history, indent=0), encoding="utf-8")
+    (DOCS_DIR / "functions.json").write_text(
+        json.dumps({"generated_at": summary["updated_at"], "functions": functions}, separators=(",", ":")),
+        encoding="utf-8",
+    )
     PROGRESS_JSON.write_text(json.dumps(summary, indent=2), encoding="utf-8")
-
-    rows_html = []
-    for fn in reversed(summary["functions"]):
-        badge_color = "#2ea043" if fn["match_pct"] >= 99.99 else ("#d29922" if fn["match_pct"] >= 75.0 else "#f85149")
-        gh_url = f"https://github.com/vibegod69420/OpenRBX-2014/blob/main/{fn['file']}"
-        rows_html.append(
-            f"""<tr>
-              <td><code>{fn['address']}</code></td>
-              <td><span class="tag">{fn['kind']}</span></td>
-              <td><strong>{fn['name']}</strong><br><small style="color:#8b949e">{fn['mangled']}</small></td>
-              <td><a href="{gh_url}" target="_blank" style="color:var(--accent);text-decoration:none"><code>{fn['file']}</code></a></td>
-              <td>{fn['orig_size']} B</td>
-              <td><span class="badge" style="background:{badge_color}">{fn['match_pct']:.2f}%</span></td>
-            </tr>"""
-        )
-
-    html = f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="30">
-  <title>OpenRBX-2014 — Live Autonomous Decompilation Dashboard</title>
-  <style>
-    :root {{
-      --bg: #0d1117;
-      --panel: #161b22;
-      --border: #30363d;
-      --text: #c9d1d9;
-      --muted: #8b949e;
-      --accent: #58a6ff;
-      --green: #2ea043;
-    }}
-    body {{
-      margin: 0;
-      padding: 32px;
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    }}
-    .container {{ max-width: 1200px; margin: 0 auto; }}
-    .header {{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 20px;
-      margin-bottom: 24px;
-    }}
-    h1 {{ margin: 0; font-size: 24px; color: #fff; }}
-    .sub {{ color: var(--muted); font-size: 14px; margin-top: 6px; }}
-    .grid {{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-      margin-bottom: 24px;
-    }}
-    .card {{
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 18px;
-    }}
-    .card .label {{ color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }}
-    .card .val {{ font-size: 28px; font-weight: 700; color: #fff; margin-top: 6px; }}
-    .card .hint {{ color: var(--accent); font-size: 12px; margin-top: 4px; }}
-    table {{
-      width: 100%;
-      border-collapse: collapse;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-    }}
-    th, td {{
-      padding: 12px 14px;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-      font-size: 13px;
-    }}
-    th {{ background: #21262d; color: #fff; font-weight: 600; }}
-    code {{ font-family: ui-monospace, SFMono-Regular, Consolas, monospace; color: var(--accent); }}
-    .badge {{
-      display: inline-block;
-      padding: 3px 8px;
-      border-radius: 12px;
-      color: #fff;
-      font-weight: 600;
-      font-size: 12px;
-    }}
-    .tag {{
-      display: inline-block;
-      padding: 2px 6px;
-      border-radius: 4px;
-      background: #21262d;
-      border: 1px solid var(--border);
-      font-family: monospace;
-      font-size: 11px;
-    }}
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="header">
-      <div>
-        <h1>OpenRBX-2014 — Autonomous Byte-Accurate Decompilation</h1>
-        <div class="sub">
-          Target: <code>RobloxStudioBeta.exe (0.164.0.50577 — Aug 20, 2014)</code> &bull;
-          Compiler: <code>MSVC 11.0 (VS2012 x86)</code> &bull;
-          Auto-refreshes every 30s &bull; Last Updated: <strong>{summary['updated_at']}</strong>
-        </div>
-      </div>
-      <div>
-        <img src="ROBLOXSTUDIOPROGRESS.SVG" alt="Progress SVG" height="72">
-      </div>
-    </div>
-
-    <div class="grid">
-      <div class="card">
-        <div class="label">100% Byte-Matched Functions</div>
-        <div class="val">{summary['perfect_100_count']}</div>
-        <div class="hint">{summary['implemented_total']} total decompiled functions</div>
-      </div>
-      <div class="card">
-        <div class="label">Active Function Accuracy</div>
-        <div class="val">{summary['average_match_pct']:.2f}%</div>
-        <div class="hint">Relocation-invariant COFF/reccmp match</div>
-      </div>
-      <div class="card">
-        <div class="label">Matchable Function Index</div>
-        <div class="val">{summary['perfect_100_count']} / {summary['matchable_functions']:,}</div>
-        <div class="hint">{summary['matchable_coverage_pct']:.2f}% of addressable functions &bull;
-          {summary['fragment_entries']:,} fragments + {summary['compiler_thunk_entries']:,} thunks + {summary['seh_scaffold_entries']:,} SEH frames excluded</div>
-      </div>
-      <div class="card">
-        <div class="label">Verification Toolchain</div>
-        <div class="val" style="color: var(--green);">{summary['compiler_version']}</div>
-        <div class="hint">{'MSVC 11.0 x86 (target toolchain)' if summary['compiler_matches_target'] else 'NOT the target toolchain &mdash; matches are not evidence'}</div>
-      </div>
-    </div>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Address</th>
-          <th>Status</th>
-          <th>Symbol / Method</th>
-          <th>Source File</th>
-          <th>Size</th>
-          <th>Byte Accuracy</th>
-        </tr>
-      </thead>
-      <tbody>
-        {"".join(rows_html) if rows_html else '<tr><td colspan="6">Initializing first batch...</td></tr>'}
-      </tbody>
-    </table>
-  </div>
-</body>
-</html>
-"""
-    (DOCS_DIR / "index.html").write_text(html, encoding="utf-8")
 
 
 def main():
@@ -323,14 +281,15 @@ def main():
 
     summary = evaluate_all_client_files()
     write_svg(summary)
-    write_dashboard_html(summary)
+    write_dashboard_data(summary)
 
     print(
         f"[PROGRESS] Annotated: {summary['implemented_total']} | "
-        f"100% Exact: {summary['perfect_100_count']} | "
-        f"Avg Match: {summary['average_match_pct']:.2f}% | "
-        f"Matchable: {summary['matchable_functions']} ({summary['fragment_entries']} fragments, "
-        f"{summary['compiler_thunk_entries']} thunks, {summary['seh_scaffold_entries']} SEH excluded)"
+        f"100% exact: {summary['perfect_100_count']} | "
+        f"Matchable: {summary['matched_real_functions']}/{summary['matchable_functions']} "
+        f"({summary['matchable_coverage_pct']:.2f}%) | "
+        f"Bytes: {summary['overall_byte_coverage_pct']:.2f}% | "
+        f"Avg match: {summary['average_match_pct']:.2f}%"
     )
 
     if args.commit:
