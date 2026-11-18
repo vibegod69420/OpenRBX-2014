@@ -1,0 +1,24 @@
+#ifndef CLIENT_BASE_INCLUDE_RBX_TASKSCHEDULERSETTINGS_H
+#define CLIENT_BASE_INCLUDE_RBX_TASKSCHEDULERSETTINGS_H
+
+#include "decomp.h"
+
+namespace RBX {
+
+// AUTO-GENERATED HELPERS
+
+class TaskSchedulerSettings
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+} // namespace RBX
+
+#endif // CLIENT_BASE_INCLUDE_RBX_TASKSCHEDULERSETTINGS_H

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18 23:13:17 UTC",
+ "updated_at": "2026-11-18 23:19:56 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 3.4704,
- "implemented_total": 325,
- "function_annotations": 325,
+ "matchable_coverage_pct": 3.481,
+ "implemented_total": 326,
+ "function_annotations": 326,
  "stub_annotations": 0,
- "perfect_100_count": 325,
- "matched_real_functions": 325,
+ "perfect_100_count": 326,
+ "matched_real_functions": 326,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.8013,
- "overall_byte_coverage_pct": 0.0665,
+ "overall_function_coverage_pct": 0.8037,
+ "overall_byte_coverage_pct": 0.0675,
  "usage": {
-  "calls_24h": 1313,
+  "calls_24h": 1341,
   "failures_24h": 0,
-  "completion_tokens_24h": 13895151,
-  "reasoning_tokens_24h": 13673233,
-  "avg_latency_s": 185.3
+  "completion_tokens_24h": 14291615,
+  "reasoning_tokens_24h": 14062041,
+  "avg_latency_s": 186.8
  },
- "functions_total": 325,
+ "functions_total": 326,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 132,
-   "functions": 132,
-   "bytes": 2259
+   "matched": 133,
+   "functions": 133,
+   "bytes": 2359
   },
   {
    "name": "App/v8world",
@@ -1046,6 +1046,17 @@
    "file": "Client/App/v8world/MotorJoint.cpp",
    "orig_size": 6,
    "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00aa0880",
+   "kind": "FUNCTION",
+   "name": "RBX::ArcHandles::getAxes",
+   "mangled": "?getAxes@ArcHandles@RBX@@QAEHXZ",
+   "file": "Client/App/v8datamodel/ArcHandles.cpp",
+   "orig_size": 100,
+   "recomp_size": 100,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3050,17 +3061,6 @@
    "recomp_size": 6,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x005961a0",
-   "kind": "FUNCTION",
-   "name": "btTriangleIndexVertexArray::hasPremadeAabb",
-   "mangled": "?hasPremadeAabb@btTriangleIndexVertexArray@@QBEHXZ",
-   "file": "Client/App/v8kernel/btTriangleIndexVertexArray.cpp",
-   "orig_size": 10,
-   "recomp_size": 10,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -3489,9 +3489,21 @@
    "matched": 325,
    "implemented": 325,
    "pct": 3.4704
+  },
+  {
+   "t": "2026-11-18 23:19:56 UTC",
+   "matched": 326,
+   "implemented": 326,
+   "pct": 3.481
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-18T23:13:24",
+   "address": "0x00aa0880",
+   "name": "RBX::ArcHandles::getAxes",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-18T23:11:45",
    "address": "0x00606290",
@@ -4205,13 +4217,7 @@
    "address": "0x004122e0",
    "name": "rbx::bad_placement_any_cast::getConst15812400",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T19:59:46",
-   "address": "0x00ca6810",
-   "name": "RBX::Network::ClientReplicator::getDataPing",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 50.0
+ "match_rate_per_hour": 49.32
 }
