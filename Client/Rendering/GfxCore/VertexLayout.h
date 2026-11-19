@@ -22,6 +22,7 @@ public:
 	bool initGLBindFragDataLocationIndexed();
 	bool initGLDrawIndirect();
 	bool initGLMultiDrawIndirectCountARB();
+	bool initGLMapBufferRange();
 	// AUTO-GENERATED METHODS
 };
 

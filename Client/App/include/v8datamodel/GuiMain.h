@@ -17,6 +17,7 @@ public:
 	};
 
 	void removeNode();
+	void __cdecl append(const void* data);
 	// AUTO-GENERATED METHODS
 };
 

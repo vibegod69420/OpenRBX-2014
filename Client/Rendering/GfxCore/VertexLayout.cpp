@@ -110,6 +110,27 @@ bool VertexLayout::initGLMultiDrawIndirectCountARB()
 	return false;
 }
 
+extern void* g_glFlushMappedBufferRange;
+extern void* g_glMapBufferRange;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f59a0
+bool VertexLayout::initGLMapBufferRange()
+{
+	void* flushProc = g_glGetProcAddress("glFlushMappedBufferRange");
+	g_glFlushMappedBufferRange = flushProc;
+	bool missingFlush = (flushProc == 0);
+
+	void* mapProc = g_glGetProcAddress("glMapBufferRange");
+	g_glMapBufferRange = mapProc;
+
+	if (mapProc == 0)
+		return true;
+	if (missingFlush)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

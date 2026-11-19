@@ -24,6 +24,7 @@ public:
 	const Vector3&getRadialNormal();
 	const Vector3&getUpRadialNormal();
 	const Vector3&getCrossUpNormal();
+	const Vector3&getCrossUpHalfNormal();
 	// AUTO-GENERATED METHODS
 };
 

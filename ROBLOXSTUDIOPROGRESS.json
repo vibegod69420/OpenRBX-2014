@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 18:19:57 UTC",
+  "updated_at": "2026-11-19 18:28:45 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,20 +16,20 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 9.0657,
-  "implemented_total": 851,
-  "function_annotations": 851,
+  "matchable_coverage_pct": 9.1191,
+  "implemented_total": 856,
+  "function_annotations": 856,
   "stub_annotations": 0,
-  "perfect_100_count": 849,
-  "matched_real_functions": 849,
+  "perfect_100_count": 854,
+  "matched_real_functions": 854,
   "average_match_pct": 99.88,
-  "overall_function_coverage_pct": 2.0931,
-  "overall_byte_coverage_pct": 0.3418,
+  "overall_function_coverage_pct": 2.1055,
+  "overall_byte_coverage_pct": 0.3447,
   "usage": {
-    "calls_24h": 6238,
+    "calls_24h": 6278,
     "failures_24h": 0,
-    "completion_tokens_24h": 72335030,
-    "reasoning_tokens_24h": 70909644,
+    "completion_tokens_24h": 72770997,
+    "reasoning_tokens_24h": 71339362,
     "avg_latency_s": 203.0
   },
   "functions": [
@@ -2102,6 +2102,17 @@
       "matchable": true
     },
     {
+      "address": "0x005f59a0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::VertexLayout::initGLMapBufferRange",
+      "mangled": "?initAppleBufferExtensions@VertexLayout@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/VertexLayout.cpp",
+      "orig_size": 54,
+      "recomp_size": 54,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00605980",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::ContextGL::assignIfNull",
@@ -3327,6 +3338,17 @@
       "kind": "FUNCTION",
       "name": "RBX::CircleRadialNormal::getCrossUpNormal",
       "mangled": "?getCrossUpNormal@CircleRadialNormal@RBX@@QAEABUVector3@2@XZ",
+      "file": "Client/App/v8datamodel/CircleRadialNormal.cpp",
+      "orig_size": 53,
+      "recomp_size": 53,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x006d1420",
+      "kind": "FUNCTION",
+      "name": "RBX::CircleRadialNormal::getCrossUpHalfNormal",
+      "mangled": "?getCrossUpHalfNormal@CircleRadialNormal@RBX@@QAEABUVector3@2@XZ",
       "file": "Client/App/v8datamodel/CircleRadialNormal.cpp",
       "orig_size": 53,
       "recomp_size": 53,
@@ -4914,6 +4936,17 @@
       "file": "Client/App/v8datamodel/UnionOperation.cpp",
       "orig_size": 12,
       "recomp_size": 12,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x008b16a0",
+      "kind": "FUNCTION",
+      "name": "RBX::GuiMain::append",
+      "mangled": "?append@GuiMain@RBX@@QAAXPBX@Z",
+      "file": "Client/App/v8datamodel/GuiMain.cpp",
+      "orig_size": 57,
+      "recomp_size": 57,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -8614,6 +8647,17 @@
       "matchable": true
     },
     {
+      "address": "0x00c282e0",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::Players::func00c282e0",
+      "mangled": "?func00c282e0@Players@Network@RBX@@QAEXXZ",
+      "file": "Client/Network/Players.cpp",
+      "orig_size": 57,
+      "recomp_size": 40,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00c2f640",
       "kind": "FUNCTION",
       "name": "RBX::Network::ChatMessage::destroySubPtr0C",
@@ -9366,6 +9410,17 @@
       "kind": "FUNCTION",
       "name": "ProgramMemoryCheckerImpl::init4",
       "mangled": "?init4@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 53,
+      "recomp_size": 53,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00d9ead0",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init5",
+      "mangled": "?init5@ProgramMemoryCheckerImpl@@QAEXXZ",
       "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
       "orig_size": 53,
       "recomp_size": 53,

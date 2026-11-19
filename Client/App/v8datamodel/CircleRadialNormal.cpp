@@ -101,6 +101,21 @@ const Vector3& CircleRadialNormal::getCrossUpNormal()
 	return v;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006d1420
+const Vector3& CircleRadialNormal::getCrossUpHalfNormal()
+{
+	static Vector3 v;
+	static int guard = 0;
+	if ((guard & 1) == 0)
+	{
+		guard |= 1;
+		v.x = 1.0f;
+		v.y = 0.5f;
+		v.z = 0.0f;
+	}
+	return v;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
