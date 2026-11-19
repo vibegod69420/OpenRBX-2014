@@ -18,6 +18,7 @@ public:
 
 	void destructorHelper();
 	int getNavigationGamepadInputType();
+	void step();
 	// AUTO-GENERATED METHODS
 };
 

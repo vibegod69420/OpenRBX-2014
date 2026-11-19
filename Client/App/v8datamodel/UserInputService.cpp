@@ -50,6 +50,52 @@ int UserInputService::getNavigationGamepadInputType()
 	return *(int*)((char*)this + 0x120);
 }
 
+struct UserInputServiceStep97D7B0
+{
+	void step();
+};
+
+struct UserInputServiceStep97D470
+{
+	void step();
+};
+
+struct UserInputServiceStep97DD80
+{
+	void step();
+};
+
+struct UserInputServiceStep97D250
+{
+	void step();
+};
+
+struct UserInputServiceStep97DC20
+{
+	void step();
+};
+
+struct UserInputServiceSub368
+{
+	void clear();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0097d040
+void UserInputService::step()
+{
+	reinterpret_cast<UserInputServiceStep97D7B0*>(this)->step();
+	reinterpret_cast<UserInputServiceStep97D470*>(this)->step();
+	reinterpret_cast<UserInputServiceStep97DD80*>(this)->step();
+	reinterpret_cast<UserInputServiceStep97D250*>(this)->step();
+	reinterpret_cast<UserInputServiceStep97DC20*>(this)->step();
+
+	if (*reinterpret_cast<unsigned char*>(reinterpret_cast<char*>(this) + 0x118) != 0)
+	{
+		reinterpret_cast<UserInputServiceSub368*>(reinterpret_cast<char*>(this) + 0x368)->clear();
+		*reinterpret_cast<unsigned char*>(reinterpret_cast<char*>(this) + 0x118) = 0;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
