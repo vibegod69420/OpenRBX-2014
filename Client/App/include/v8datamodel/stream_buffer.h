@@ -33,6 +33,7 @@ public:
 	bool getFlagF0Bit2() const;
 	void vslot22();
 	void vslot22_d8();
+	void vslot22_50();
 	// AUTO-GENERATED METHODS
 };
 
