@@ -18,6 +18,7 @@ public:
 	};
 
 	void uploadTexture();
+	void sub_5EAE00();
 	// AUTO-GENERATED METHODS
 };
 

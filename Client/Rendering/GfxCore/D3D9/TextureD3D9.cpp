@@ -35,6 +35,20 @@ void TextureD3D9::uploadTexture()
 	}
 }
 
+struct TextureD3D9_ListHelper
+{
+	void sub_5EB040(void* out, void* node, void* head);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x005eae00
+void TextureD3D9::sub_5EAE00()
+{
+	void* local;
+	void* head = *(void**)this;
+	reinterpret_cast<TextureD3D9_ListHelper*>(this)->sub_5EB040(&local, *(void**)head, head);
+	::operator delete(*(void**)this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
