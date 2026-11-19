@@ -18,6 +18,7 @@ public:
 	};
 
 	void sub_c9b2f0();
+	void sub_c9e270();
 	// AUTO-GENERATED METHODS
 };
 
