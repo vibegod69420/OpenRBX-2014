@@ -105,6 +105,16 @@ __int64 __cdecl sp_counted_impl_p::getPair()
 	return *r;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0069ec60
+void sp_counted_impl_p::destroySubPtr0C()
+{
+	sp_counted_impl_p* p = ptr_000c;
+	if (p) {
+		p->onDestroy();
+		rbx_free_mem(p);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

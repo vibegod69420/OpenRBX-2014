@@ -24,6 +24,7 @@ public:
 	void sub_894960();
 	void sub_8940E0();
 	int getField170() const;
+	int getConst512000() const;
 	// AUTO-GENERATED METHODS
 };
 

@@ -116,6 +116,12 @@ int UnionOperation::getField170() const
 	return field_0170;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008ac630
+int UnionOperation::getConst512000() const
+{
+	return 512000;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

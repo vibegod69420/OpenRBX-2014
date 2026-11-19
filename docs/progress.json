@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 14:41:01 UTC",
+ "updated_at": "2026-11-19 14:53:53 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 8.3396,
- "implemented_total": 782,
- "function_annotations": 782,
+ "matchable_coverage_pct": 8.393,
+ "implemented_total": 787,
+ "function_annotations": 787,
  "stub_annotations": 0,
- "perfect_100_count": 781,
- "matched_real_functions": 781,
+ "perfect_100_count": 786,
+ "matched_real_functions": 786,
  "average_match_pct": 99.88,
- "overall_function_coverage_pct": 1.9255,
- "overall_byte_coverage_pct": 0.3002,
+ "overall_function_coverage_pct": 1.9378,
+ "overall_byte_coverage_pct": 0.3009,
  "usage": {
-  "calls_24h": 5312,
+  "calls_24h": 5329,
   "failures_24h": 0,
-  "completion_tokens_24h": 61432139,
-  "reasoning_tokens_24h": 60261962,
-  "avg_latency_s": 204.8
+  "completion_tokens_24h": 61564568,
+  "reasoning_tokens_24h": 60391439,
+  "avg_latency_s": 204.6
  },
- "functions_total": 782,
+ "functions_total": 787,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 312,
-   "functions": 313,
-   "bytes": 8965
+   "matched": 314,
+   "functions": 315,
+   "bytes": 8997
   },
   {
    "name": "App/v8world",
@@ -54,9 +54,9 @@
   },
   {
    "name": "App/v8kernel",
-   "matched": 61,
-   "functions": 61,
-   "bytes": 2014
+   "matched": 62,
+   "functions": 62,
+   "bytes": 2021
   },
   {
    "name": "Rendering/g3d",
@@ -66,9 +66,9 @@
   },
   {
    "name": "Rendering/GfxCore",
-   "matched": 38,
-   "functions": 38,
-   "bytes": 1428
+   "matched": 39,
+   "functions": 39,
+   "bytes": 1452
   },
   {
    "name": "App/script",
@@ -78,9 +78,9 @@
   },
   {
    "name": "App/humanoid",
-   "matched": 22,
-   "functions": 22,
-   "bytes": 609
+   "matched": 23,
+   "functions": 23,
+   "bytes": 616
   },
   {
    "name": "Network/InstancePacketCache.cpp",
@@ -2357,6 +2357,17 @@
    "matchable": true
   },
   {
+   "address": "0x00b53580",
+   "kind": "FUNCTION",
+   "name": "RBX::Kernel::getSubField24_54",
+   "mangled": "?getSubField24_54@Kernel@RBX@@QBEHXZ",
+   "file": "Client/App/v8kernel/Kernel.cpp",
+   "orig_size": 7,
+   "recomp_size": 7,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00b53570",
    "kind": "FUNCTION",
    "name": "RBX::Kernel::getSubField24_44",
@@ -3288,17 +3299,6 @@
    "file": "Client/App/v8datamodel/Smoke.cpp",
    "orig_size": 10,
    "recomp_size": 10,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00a026a0",
-   "kind": "FUNCTION",
-   "name": "RBX::ExtrudedPartInstance::getConst19178964",
-   "mangled": "?getConst19178964@ExtrudedPartInstance@RBX@@QBEHXZ",
-   "file": "Client/App/v8datamodel/ExtrudedPartInstance.cpp",
-   "orig_size": 6,
-   "recomp_size": 6,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -4329,9 +4329,21 @@
    "matched": 781,
    "implemented": 782,
    "pct": 8.3396
+  },
+  {
+   "t": "2026-11-19 14:53:53 UTC",
+   "matched": 786,
+   "implemented": 787,
+   "pct": 8.393
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T14:50:38",
+   "address": "0x009d8740",
+   "name": "RBX::Humanoid::getField290",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T14:31:52",
    "address": "0x0043f9f0",
@@ -5045,13 +5057,7 @@
    "address": "0x008b1720",
    "name": "RBX::GuiMain::removeNode",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T07:41:23",
-   "address": "0x0047b7a0",
-   "name": "RbxWorkspace::reset",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 35.56
+ "match_rate_per_hour": 35.44
 }

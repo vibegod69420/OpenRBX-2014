@@ -14,6 +14,7 @@ public:
 	{
 		int _vtable_or_head;
 		struct { char _pad_alloc_000c[0xc]; void* alloc_000c; };
+		struct { char _pad_ptr_000c[0xc]; sp_counted_impl_p* ptr_000c; };
 		// AUTO-GENERATED FIELDS
 	};
 
@@ -25,6 +26,8 @@ public:
 	void __cdecl invoke(void* a, void* b);
 	void __cdecl call(void* arg);
 	__int64 __cdecl getPair();
+	void onDestroy();
+	void destroySubPtr0C();
 	// AUTO-GENERATED METHODS
 };
 
