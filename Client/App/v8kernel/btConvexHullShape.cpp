@@ -22,6 +22,17 @@ int btConvexHullShape::getField84() const
 	return field_0084;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005323f0
+struct btConvexHullShapeString
+{
+	int compare(int pos, int len, const char* str, int strLen);
+};
+
+int btConvexHullShape::isHttp()
+{
+	return ((btConvexHullShapeString*)this)->compare(0, 4, "http", 4) == 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

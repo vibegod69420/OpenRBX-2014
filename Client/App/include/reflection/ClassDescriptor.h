@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	int __cdecl is(const ClassDescriptor* target) const;
 	// AUTO-GENERATED METHODS
 };
 

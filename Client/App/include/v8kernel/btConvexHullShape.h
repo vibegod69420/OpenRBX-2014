@@ -20,6 +20,7 @@ public:
 	int getConst17001568() const;
 	int getConst68() const;
 	int getField84() const;
+	int isHttp();
 	// AUTO-GENERATED METHODS
 };
 

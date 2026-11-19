@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 00:16:37 UTC",
+  "updated_at": "2026-11-19 00:23:41 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 4.1111,
-  "implemented_total": 385,
-  "function_annotations": 385,
+  "matchable_coverage_pct": 4.2072,
+  "implemented_total": 394,
+  "function_annotations": 394,
   "stub_annotations": 0,
-  "perfect_100_count": 385,
-  "matched_real_functions": 385,
+  "perfect_100_count": 394,
+  "matched_real_functions": 394,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.9492,
-  "overall_byte_coverage_pct": 0.1013,
+  "overall_function_coverage_pct": 0.9714,
+  "overall_byte_coverage_pct": 0.1035,
   "usage": {
-    "calls_24h": 1590,
+    "calls_24h": 1646,
     "failures_24h": 0,
-    "completion_tokens_24h": 17289876,
-    "reasoning_tokens_24h": 16988906,
-    "avg_latency_s": 189.2
+    "completion_tokens_24h": 17826052,
+    "reasoning_tokens_24h": 17516152,
+    "avg_latency_s": 188.5
   },
   "functions": [
     {
@@ -96,6 +96,17 @@
       "file": "Client/App/v8datamodel/sp_counted_impl_pd.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00411990",
+      "kind": "FUNCTION",
+      "name": "RBX::Reflection::ClassDescriptor::is",
+      "mangled": "?is@ClassDescriptor@Reflection@RBX@@QBAHPBV123@@Z",
+      "file": "Client/App/reflection/ClassDescriptor.cpp",
+      "orig_size": 19,
+      "recomp_size": 19,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -261,6 +272,17 @@
       "file": "Client/App/script/ScriptDebugger.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00449aa0",
+      "kind": "FUNCTION",
+      "name": "QTreeWidgetItem::sub_449aa0",
+      "mangled": "?sub_449aa0@QTreeWidgetItem@@QAEPAV1@XZ",
+      "file": "Client/RobloxStudio/QTreeWidgetItem.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -690,6 +712,17 @@
       "file": "Client/App/v8kernel/btConvexHullShape.cpp",
       "orig_size": 101,
       "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x005323f0",
+      "kind": "FUNCTION",
+      "name": "compare",
+      "mangled": "?isHttp@btConvexHullShape@@QAEHXZ",
+      "file": "Client/App/v8kernel/btConvexHullShape.cpp",
+      "orig_size": 22,
+      "recomp_size": 22,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -1295,6 +1328,28 @@
       "file": "Client/Rendering/GfxCore/D3D9/ShaderProgramFFPD3D9.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x005eb770",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::Device::releaseAll",
+      "mangled": "?releaseAll@Device@Graphics@RBX@@QAEXXZ",
+      "file": "Client/Rendering/GfxCore/Device.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00605980",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGL::assignIfNull",
+      "mangled": "?assignIfNull@ContextGL@Graphics@RBX@@SAXPAHPBH@Z",
+      "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -2971,6 +3026,17 @@
       "matchable": true
     },
     {
+      "address": "0x0099eb50",
+      "kind": "FUNCTION",
+      "name": "RBX::Geometry::getCount",
+      "mangled": "?getCount@Geometry@RBX@@QBEHXZ",
+      "file": "Client/Rendering/GfxCore/Geometry.cpp",
+      "orig_size": 23,
+      "recomp_size": 23,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x009ccfc0",
       "kind": "FUNCTION",
       "name": "RBX::InputObject::isInputType8",
@@ -3055,6 +3121,28 @@
       "file": "Client/App/util/PathInterpolatedCFrame.cpp",
       "orig_size": 75,
       "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00a212a0",
+      "kind": "FUNCTION",
+      "name": "RBX::SurfaceEnumPropDescriptor::getEnumCount",
+      "mangled": "?getEnumCount@SurfaceEnumPropDescriptor@RBX@@QBEHXZ",
+      "file": "Client/App/reflection/SurfaceEnumPropDescriptor.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00a2cb70",
+      "kind": "FUNCTION",
+      "name": "std::filtering_stream::reset",
+      "mangled": "?reset@filtering_stream@std@@QAEXXZ",
+      "file": "Client/App/v8datamodel/filtering_stream.cpp",
+      "orig_size": 22,
+      "recomp_size": 22,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -3792,6 +3880,17 @@
       "file": "Client/App/humanoid/RunningBase.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00bc88e0",
+      "kind": "FUNCTION",
+      "name": "PolyContact_deleteEdge",
+      "mangled": "?deleteEdge@PolyContact@RBX@@QAAXPAX@Z",
+      "file": "Client/App/v8world/PolyContact.cpp",
+      "orig_size": 23,
+      "recomp_size": 23,
       "match_pct": 100.0,
       "matchable": true
     },
