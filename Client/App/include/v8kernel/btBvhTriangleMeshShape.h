@@ -20,6 +20,7 @@ public:
 	int getConst17002256() const;
 	int getConst60() const;
 	char* getBufferOffset30_10() const;
+	void destroyInternalBuffer();
 	// AUTO-GENERATED METHODS
 };
 

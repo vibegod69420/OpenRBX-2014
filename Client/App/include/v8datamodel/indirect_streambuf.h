@@ -18,6 +18,7 @@ public:
 	};
 
 	const int* getMemberPtr3C() const;
+	void sync();
 	// AUTO-GENERATED METHODS
 };
 

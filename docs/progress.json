@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 06:03:17 UTC",
+ "updated_at": "2026-11-19 06:11:06 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 6.6631,
- "implemented_total": 625,
- "function_annotations": 625,
+ "matchable_coverage_pct": 6.6845,
+ "implemented_total": 627,
+ "function_annotations": 627,
  "stub_annotations": 0,
- "perfect_100_count": 624,
- "matched_real_functions": 624,
+ "perfect_100_count": 626,
+ "matched_real_functions": 626,
  "average_match_pct": 99.85,
- "overall_function_coverage_pct": 1.5384,
- "overall_byte_coverage_pct": 0.189,
+ "overall_function_coverage_pct": 1.5434,
+ "overall_byte_coverage_pct": 0.191,
  "usage": {
-  "calls_24h": 3304,
+  "calls_24h": 3336,
   "failures_24h": 0,
-  "completion_tokens_24h": 36346260,
-  "reasoning_tokens_24h": 35734348,
-  "avg_latency_s": 192.7
+  "completion_tokens_24h": 36743926,
+  "reasoning_tokens_24h": 36123059,
+  "avg_latency_s": 192.9
  },
- "functions_total": 625,
+ "functions_total": 627,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 257,
-   "functions": 258,
-   "bytes": 6519
+   "matched": 258,
+   "functions": 259,
+   "bytes": 6611
   },
   {
    "name": "App/v8world",
@@ -54,9 +54,9 @@
   },
   {
    "name": "App/v8kernel",
-   "matched": 49,
-   "functions": 49,
-   "bytes": 1068
+   "matched": 50,
+   "functions": 50,
+   "bytes": 1166
   },
   {
    "name": "Rendering/GfxCore",
@@ -821,6 +821,17 @@
    "file": "Client/Network/Server.cpp",
    "orig_size": 21,
    "recomp_size": 21,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00c86360",
+   "kind": "FUNCTION",
+   "name": "std::indirect_streambuf::sync",
+   "mangled": "?sync@indirect_streambuf@std@@QAEXXZ",
+   "file": "Client/App/v8datamodel/indirect_streambuf.cpp",
+   "orig_size": 92,
+   "recomp_size": 92,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3254,17 +3265,6 @@
    "recomp_size": 66,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x00925b30",
-   "kind": "FUNCTION",
-   "name": "RBX::Flag::resetField78",
-   "mangled": "?resetField78@Flag@RBX@@QAEXXZ",
-   "file": "Client/App/v8datamodel/Flag.cpp",
-   "orig_size": 8,
-   "recomp_size": 8,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -3999,9 +3999,27 @@
    "matched": 624,
    "implemented": 625,
    "pct": 6.6631
+  },
+  {
+   "t": "2026-11-19 06:11:06 UTC",
+   "matched": 626,
+   "implemented": 627,
+   "pct": 6.6845
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T06:07:39",
+   "address": "0x0059b7e0",
+   "name": "btBvhTriangleMeshShape::destroyInternalBuffer",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T06:03:24",
+   "address": "0x00c86360",
+   "name": "std::indirect_streambuf::sync",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T06:00:25",
    "address": "0x00b2d3c0",
@@ -4709,19 +4727,7 @@
    "address": "0x004a4c00",
    "name": "setPage",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T02:08:00",
-   "address": "0x0049ff40",
-   "name": "PickerFrame::PickerFrame",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T02:07:05",
-   "address": "0x00baa1e0",
-   "name": "ctor",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 46.8
+ "match_rate_per_hour": 46.5
 }
