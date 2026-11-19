@@ -76,6 +76,30 @@ void* __cdecl PolyContact::getEdge(void* arg2, void* arg3)
 	return result;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00bcca50
+void __cdecl PolyContact::updateEdges(int count)
+{
+	char* obj = *(char**)((char*)this + 0x30);
+	*(unsigned char*)(obj + 0x32) += (unsigned char)count;
+
+	if (count != 0)
+	{
+		do
+		{
+			unsigned char cur = *(unsigned char*)(obj + 0x32);
+			int index = (int)cur - count;
+			unsigned short w = *(unsigned short*)(obj + index * 2 + 0xAC);
+			int strideIndex = (int)w * 3;
+			char* base = *(char**)obj;
+			char* table = *(char**)(base + 0x18);
+			void* value = *(void**)(obj + 0x18);
+			*(void**)(table + strideIndex * 4 + 4) = value;
+			--count;
+		}
+		while (count != 0);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -26,6 +26,7 @@ public:
 	bool initARBPointParameters();
 	bool initGLShaderImageLoadStore();
 	bool initARBSparseTexture();
+	bool initTextureBufferRange();
 	// AUTO-GENERATED METHODS
 };
 

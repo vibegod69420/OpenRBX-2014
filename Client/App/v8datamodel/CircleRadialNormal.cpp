@@ -161,6 +161,21 @@ const Vector3& CircleRadialNormal::getOneNormal()
 	return v;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006d1520
+const Vector3& CircleRadialNormal::getOriginNormal()
+{
+	static Vector3 v;
+	static int guard = 0;
+	if ((guard & 1) == 0)
+	{
+		guard |= 1;
+		v.x = 0.0f;
+		v.y = 0.0f;
+		v.z = 0.0f;
+	}
+	return v;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

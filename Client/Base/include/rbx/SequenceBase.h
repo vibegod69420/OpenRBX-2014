@@ -18,6 +18,7 @@ public:
 	};
 
 	double getTime();
+	void start();
 	// AUTO-GENERATED METHODS
 };
 

@@ -15,6 +15,16 @@ double SequenceBase::getTime()
 	return t;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006c4fe0
+void SequenceBase::start()
+{
+	double t;
+	*(int*)((char*)this + 0x90) = 1;
+	double* p = reinterpret_cast<double*(*)(double*)>(getWallTime)(&t);
+	*(int*)((char*)this + 0xA0) = *(int*)p;
+	*(int*)((char*)this + 0xA4) = *(int*)((char*)p + 4);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Tasks

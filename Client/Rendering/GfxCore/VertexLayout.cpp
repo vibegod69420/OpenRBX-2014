@@ -194,6 +194,27 @@ bool VertexLayout::initARBSparseTexture()
 	return false;
 }
 
+extern void* g_glTexBufferRange;
+extern void* g_glTextureBufferRangeEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f6f00
+bool VertexLayout::initTextureBufferRange()
+{
+	void* first = g_glGetProcAddress("glTexBufferRange");
+	g_glTexBufferRange = first;
+	unsigned char missingFirst = (first == 0);
+
+	void* second = g_glGetProcAddress("glTextureBufferRangeEXT");
+	g_glTextureBufferRangeEXT = second;
+
+	if (second == 0)
+		return true;
+	if (missingFirst)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
