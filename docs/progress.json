@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 16:07:14 UTC",
+ "updated_at": "2026-11-19 16:15:38 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 8.6919,
- "implemented_total": 815,
- "function_annotations": 815,
+ "matchable_coverage_pct": 8.7026,
+ "implemented_total": 816,
+ "function_annotations": 816,
  "stub_annotations": 0,
- "perfect_100_count": 814,
- "matched_real_functions": 814,
+ "perfect_100_count": 815,
+ "matched_real_functions": 815,
  "average_match_pct": 99.88,
- "overall_function_coverage_pct": 2.0069,
- "overall_byte_coverage_pct": 0.3193,
+ "overall_function_coverage_pct": 2.0093,
+ "overall_byte_coverage_pct": 0.3208,
  "usage": {
-  "calls_24h": 5666,
+  "calls_24h": 5693,
   "failures_24h": 0,
-  "completion_tokens_24h": 65540302,
-  "reasoning_tokens_24h": 64297047,
-  "avg_latency_s": 205.6
+  "completion_tokens_24h": 65921348,
+  "reasoning_tokens_24h": 64669203,
+  "avg_latency_s": 205.9
  },
- "functions_total": 815,
+ "functions_total": 816,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -60,9 +60,9 @@
   },
   {
    "name": "Rendering/g3d",
-   "matched": 25,
-   "functions": 25,
-   "bytes": 1890
+   "matched": 26,
+   "functions": 26,
+   "bytes": 2035
   },
   {
    "name": "Rendering/GfxCore",
@@ -4377,9 +4377,21 @@
    "matched": 814,
    "implemented": 815,
    "pct": 8.6919
+  },
+  {
+   "t": "2026-11-19 16:15:38 UTC",
+   "matched": 815,
+   "implemented": 816,
+   "pct": 8.7026
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T16:07:15",
+   "address": "0x006dec80",
+   "name": "G3D::PhysicsFrame::getMaxFiniteStorage",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T16:01:44",
    "address": "0x006d66e0",
@@ -5093,13 +5105,7 @@
    "address": "0x009d6ff0",
    "name": "RBX::HUMAN::HumanoidState::dispose",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T11:07:08",
-   "address": "0x0082e830",
-   "name": "RBX::CameraTiltDownCommand::execute",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 34.79
+ "match_rate_per_hour": 34.62
 }
