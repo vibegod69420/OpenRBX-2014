@@ -111,6 +111,13 @@ void stream_buffer::vslot22_50()
 	stream_buffer_iat_e102e8(p, p, p);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a33490
+void stream_buffer::vslot22_48()
+{
+	void* p = *(void**)((char*)this + 0x48);
+	stream_buffer_iat_e102e8(p, p, p);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

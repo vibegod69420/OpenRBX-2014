@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 13:31:31 UTC",
+  "updated_at": "2026-11-19 13:39:48 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 7.9979,
-  "implemented_total": 750,
-  "function_annotations": 750,
+  "matchable_coverage_pct": 8.0192,
+  "implemented_total": 752,
+  "function_annotations": 752,
   "stub_annotations": 0,
-  "perfect_100_count": 749,
-  "matched_real_functions": 749,
+  "perfect_100_count": 751,
+  "matched_real_functions": 751,
   "average_match_pct": 99.87,
-  "overall_function_coverage_pct": 1.8466,
-  "overall_byte_coverage_pct": 0.2843,
+  "overall_function_coverage_pct": 1.8515,
+  "overall_byte_coverage_pct": 0.285,
   "usage": {
-    "calls_24h": 5039,
+    "calls_24h": 5068,
     "failures_24h": 0,
-    "completion_tokens_24h": 58339498,
-    "reasoning_tokens_24h": 57239670,
-    "avg_latency_s": 203.8
+    "completion_tokens_24h": 58713215,
+    "reasoning_tokens_24h": 57601271,
+    "avg_latency_s": 204.1
   },
   "functions": [
     {
@@ -1768,6 +1768,17 @@
       "file": "Client/App/v8kernel/btGjkPairDetector.cpp",
       "orig_size": 59,
       "recomp_size": 59,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x005d5920",
+      "kind": "FUNCTION",
+      "name": "btConvexPolyhedron::initialize",
+      "mangled": "?initialize@btConvexPolyhedron@@QAEPAXXZ",
+      "file": "Client/App/v8kernel/btConvexPolyhedron.cpp",
+      "orig_size": 50,
+      "recomp_size": 50,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -5981,6 +5992,17 @@
       "file": "Client/App/v8datamodel/stream_buffer.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00a33490",
+      "kind": "FUNCTION",
+      "name": "std::stream_buffer::vslot22_48",
+      "mangled": "?vslot22_48@stream_buffer@std@@QAEXXZ",
+      "file": "Client/App/v8datamodel/stream_buffer.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
       "match_pct": 100.0,
       "matchable": true
     },

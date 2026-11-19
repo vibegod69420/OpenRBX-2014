@@ -34,6 +34,7 @@ public:
 	void vslot22();
 	void vslot22_d8();
 	void vslot22_50();
+	void vslot22_48();
 	// AUTO-GENERATED METHODS
 };
 
