@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 03:13:43 UTC",
+ "updated_at": "2026-11-19 03:21:45 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 5.7982,
- "implemented_total": 543,
- "function_annotations": 543,
+ "matchable_coverage_pct": 5.8089,
+ "implemented_total": 544,
+ "function_annotations": 544,
  "stub_annotations": 0,
- "perfect_100_count": 543,
- "matched_real_functions": 543,
+ "perfect_100_count": 544,
+ "matched_real_functions": 544,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 1.3387,
- "overall_byte_coverage_pct": 0.1564,
+ "overall_function_coverage_pct": 1.3412,
+ "overall_byte_coverage_pct": 0.1573,
  "usage": {
-  "calls_24h": 2532,
+  "calls_24h": 2565,
   "failures_24h": 0,
-  "completion_tokens_24h": 27457361,
-  "reasoning_tokens_24h": 26993061,
-  "avg_latency_s": 189.7
+  "completion_tokens_24h": 27841151,
+  "reasoning_tokens_24h": 27369567,
+  "avg_latency_s": 190.0
  },
- "functions_total": 543,
+ "functions_total": 544,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -135,6 +135,12 @@
    "matched": 4,
    "functions": 4,
    "bytes": 84
+  },
+  {
+   "name": "RobloxStudio/QuickAccessConfigDialog.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 83
   },
   {
    "name": "RobloxStudio/QuickAccessBarProxyAction.cpp",
@@ -3849,9 +3855,21 @@
    "matched": 543,
    "implemented": 543,
    "pct": 5.7982
+  },
+  {
+   "t": "2026-11-19 03:21:45 UTC",
+   "matched": 544,
+   "implemented": 544,
+   "pct": 5.8089
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T03:14:01",
+   "address": "0x00502550",
+   "name": "QuickAccessConfigDialog::removeSelectedItem",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T03:06:22",
    "address": "0x00ac9500",
@@ -4565,13 +4583,7 @@
    "address": "0x007760a0",
    "name": "boost::thread_data::invoke",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:55:49",
-   "address": "0x00930600",
-   "name": "RBX::callable_slot::invoke_float",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 51.68
+ "match_rate_per_hour": 51.13
 }
