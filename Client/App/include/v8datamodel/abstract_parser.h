@@ -18,6 +18,7 @@ public:
 
 	void _Tidy();
 	void _Tidy2();
+	void _Tidy1();
 	// AUTO-GENERATED METHODS
 };
 

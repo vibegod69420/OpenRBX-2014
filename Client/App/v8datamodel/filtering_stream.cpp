@@ -89,6 +89,27 @@ filtering_stream::filtering_stream()
 	reinterpret_cast<int*>(this)[10] = 4;
 }
 
+__declspec(dllimport) void __cdecl rbxi_fs_ctor_0xe1031c();
+
+// FUNCTION: ROBLOXSTUDIO 0x00a2b610
+filtering_stream* filtering_stream::sub_a2b610()
+{
+	rbxi_fs_ctor_0xe1031c();
+
+	*(int*)((char*)this + 0x38) = 0;
+	*(int*)this = 0x00EA622C;
+	*((unsigned char*)this + 0xC8) = 0;
+	*(int*)((char*)this + 0xD0) = 0;
+	*(int*)((char*)this + 0xD8) = 0;
+	*(int*)((char*)this + 0xE0) = 0;
+	*(int*)((char*)this + 0xE4) = 0;
+	*(int*)((char*)this + 0xE8) = 0;
+	*(int*)((char*)this + 0xEC) = 0;
+	*(int*)((char*)this + 0xF0) = 4;
+
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

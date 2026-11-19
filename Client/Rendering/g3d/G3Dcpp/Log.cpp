@@ -35,6 +35,25 @@ Log* Log::common()
     return (Log*)s_commonLog.data;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006d6760
+Log* Log::getCommon()
+{
+    if (!(s_commonLog.initialized & 1))
+    {
+        s_commonLog.initialized |= 1;
+        s_commonLog.data[0] = 0x3f800000;
+        s_commonLog.data[1] = 0;
+        s_commonLog.data[2] = 0;
+        s_commonLog.data[3] = 0;
+        s_commonLog.data[4] = 0x3f800000;
+        s_commonLog.data[5] = 0;
+        s_commonLog.data[6] = 0;
+        s_commonLog.data[7] = 0;
+        s_commonLog.data[8] = 0x3f800000;
+    }
+    return (Log*)s_commonLog.data;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace G3D

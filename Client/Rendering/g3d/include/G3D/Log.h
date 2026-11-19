@@ -19,6 +19,7 @@ public:
 
 	int getField04() const;
 	Log*common();
+	Log*getCommon();
 	// AUTO-GENERATED METHODS
 };
 
