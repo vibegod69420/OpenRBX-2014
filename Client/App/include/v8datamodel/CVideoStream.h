@@ -20,6 +20,7 @@ public:
 
 	int getField30() const;
 	int sub_4285D0();
+	const char*sub_42BD50() const;
 	// AUTO-GENERATED METHODS
 };
 

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 17:52:23 UTC",
+ "updated_at": "2026-11-19 18:01:07 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 8.9482,
- "implemented_total": 839,
- "function_annotations": 839,
+ "matchable_coverage_pct": 8.9589,
+ "implemented_total": 840,
+ "function_annotations": 840,
  "stub_annotations": 0,
- "perfect_100_count": 838,
- "matched_real_functions": 838,
+ "perfect_100_count": 839,
+ "matched_real_functions": 839,
  "average_match_pct": 99.89,
- "overall_function_coverage_pct": 2.066,
- "overall_byte_coverage_pct": 0.3391,
+ "overall_function_coverage_pct": 2.0685,
+ "overall_byte_coverage_pct": 0.3393,
  "usage": {
-  "calls_24h": 6185,
+  "calls_24h": 6189,
   "failures_24h": 0,
-  "completion_tokens_24h": 71685130,
-  "reasoning_tokens_24h": 70273301,
-  "avg_latency_s": 202.6
+  "completion_tokens_24h": 71857210,
+  "reasoning_tokens_24h": 70439754,
+  "avg_latency_s": 203.0
  },
- "functions_total": 839,
+ "functions_total": 840,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 337,
-   "functions": 338,
-   "bytes": 10637
+   "matched": 338,
+   "functions": 339,
+   "bytes": 10649
   },
   {
    "name": "App/v8world",
@@ -4449,9 +4449,21 @@
    "matched": 838,
    "implemented": 839,
    "pct": 8.9482
+  },
+  {
+   "t": "2026-11-19 18:01:07 UTC",
+   "matched": 839,
+   "implemented": 840,
+   "pct": 8.9589
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T17:52:34",
+   "address": "0x0042bd50",
+   "name": "RBX::DS::CVideoStream::sub_42BD50",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T17:48:37",
    "address": "0x008930f0",
@@ -5165,13 +5177,7 @@
    "address": "0x00c3dd00",
    "name": "RBX::Network::Player::getReplicator",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T11:27:27",
-   "address": "0x008cfc20",
-   "name": "RBX::ScriptContext::close",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 33.32
+ "match_rate_per_hour": 33.17
 }

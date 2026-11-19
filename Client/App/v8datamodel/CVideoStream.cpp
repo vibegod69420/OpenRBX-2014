@@ -25,6 +25,14 @@ int CVideoStream::sub_4285D0()
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0042bd50
+const char* CVideoStream::sub_42BD50() const
+{
+	if (*(const unsigned int*)((const char*)this + 0x14) >= 8)
+		return *(const char* const*)this;
+	return (const char*)this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace DS
