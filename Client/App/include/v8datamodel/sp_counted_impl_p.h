@@ -23,6 +23,7 @@ public:
 	void __cdecl invoke();
 	void __cdecl invoke(void* arg);
 	void __cdecl invoke(void* a, void* b);
+	void __cdecl call(void* arg);
 	// AUTO-GENERATED METHODS
 };
 

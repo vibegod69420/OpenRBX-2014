@@ -77,6 +77,20 @@ void __cdecl sp_counted_impl_p::invoke(void* a, void* b)
 	c->func(c->target, c->data, a, b);
 }
 
+struct sp_counted_impl_p_invoke_cdecl
+{
+	void (__cdecl *func)(void*, void*, void*);
+	void* arg1;
+	void* arg2;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x004b3fa0
+void __cdecl sp_counted_impl_p::call(void* arg)
+{
+	sp_counted_impl_p_invoke_cdecl* c = reinterpret_cast<sp_counted_impl_p_invoke_cdecl*>(this);
+	c->func(c->arg1, c->arg2, arg);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

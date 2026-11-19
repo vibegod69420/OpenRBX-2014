@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	~InstancePacketCache();
 	// AUTO-GENERATED METHODS
 };
 

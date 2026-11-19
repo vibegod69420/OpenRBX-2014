@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 10:35:59 UTC",
+ "updated_at": "2026-11-19 10:43:57 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 7.3358,
- "implemented_total": 688,
- "function_annotations": 688,
+ "matchable_coverage_pct": 7.3572,
+ "implemented_total": 690,
+ "function_annotations": 690,
  "stub_annotations": 0,
- "perfect_100_count": 687,
- "matched_real_functions": 687,
+ "perfect_100_count": 689,
+ "matched_real_functions": 689,
  "average_match_pct": 99.86,
- "overall_function_coverage_pct": 1.6937,
- "overall_byte_coverage_pct": 0.2395,
+ "overall_function_coverage_pct": 1.6987,
+ "overall_byte_coverage_pct": 0.2449,
  "usage": {
-  "calls_24h": 4370,
+  "calls_24h": 4393,
   "failures_24h": 0,
-  "completion_tokens_24h": 50007312,
-  "reasoning_tokens_24h": 49100451,
-  "avg_latency_s": 199.7
+  "completion_tokens_24h": 50339051,
+  "reasoning_tokens_24h": 49415557,
+  "avg_latency_s": 200.0
  },
- "functions_total": 688,
+ "functions_total": 690,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 281,
-   "functions": 282,
-   "bytes": 7942
+   "matched": 282,
+   "functions": 283,
+   "bytes": 7966
   },
   {
    "name": "App/v8world",
@@ -75,6 +75,12 @@
    "matched": 24,
    "functions": 24,
    "bytes": 796
+  },
+  {
+   "name": "Network/InstancePacketCache.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 494
   },
   {
    "name": "App/humanoid",
@@ -1085,6 +1091,17 @@
    "mangled": "?acquire@PhysicsPacketCache@Network@RBX@@QAEXXZ",
    "file": "Client/Network/PhysicsPacketCache.cpp",
    "orig_size": 86,
+   "recomp_size": 86,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00c5a5f0",
+   "kind": "FUNCTION",
+   "name": "destroyRange",
+   "mangled": "??1InstancePacketCache@Network@RBX@@QAE@XZ",
+   "file": "Client/Network/InstancePacketCache.cpp",
+   "orig_size": 494,
    "recomp_size": 86,
    "match_pct": 100.0,
    "matchable": true
@@ -3266,17 +3283,6 @@
    "recomp_size": 84,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x00968e70",
-   "kind": "FUNCTION",
-   "name": "RBX::DecalTool::getField1A8",
-   "mangled": "?getField1A8@DecalTool@RBX@@QBEHXZ",
-   "file": "Client/App/v8datamodel/DecalTool.cpp",
-   "orig_size": 7,
-   "recomp_size": 7,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -4155,9 +4161,27 @@
    "matched": 687,
    "implemented": 688,
    "pct": 7.3358
+  },
+  {
+   "t": "2026-11-19 10:43:57 UTC",
+   "matched": 689,
+   "implemented": 690,
+   "pct": 7.3572
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T10:40:47",
+   "address": "0x00c5a5f0",
+   "name": "destroyRange",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T10:40:37",
+   "address": "0x004b3fa0",
+   "name": "RBX::detail::sp_counted_impl_p::call",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T10:29:18",
    "address": "0x00672ce0",
@@ -4865,19 +4889,7 @@
    "address": "0x00b4ebd0",
    "name": "RBX::BallBallConnector::getConst19",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T04:03:44",
-   "address": "0x00bd52d0",
-   "name": "RBX::CellEdgeEdgePair::getEdge",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T04:03:42",
-   "address": "0x0076f0d0",
-   "name": "RBX::ViewBase::getCurrentEntryFloat",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 38.43
+ "match_rate_per_hour": 38.26
 }
