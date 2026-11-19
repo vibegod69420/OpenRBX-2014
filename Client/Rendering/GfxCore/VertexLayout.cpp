@@ -89,6 +89,27 @@ bool VertexLayout::initGLDrawIndirect()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005f5840
+extern void* g_glMultiDrawArraysIndirectCountARB;
+extern void* g_glMultiDrawElementsIndirectCountARB;
+
+bool VertexLayout::initGLMultiDrawIndirectCountARB()
+{
+	void* arraysProc = g_glGetProcAddress("glMultiDrawArraysIndirectCountARB");
+	g_glMultiDrawArraysIndirectCountARB = arraysProc;
+	bool missingArrays = (arraysProc == 0);
+
+	void* elementsProc = g_glGetProcAddress("glMultiDrawElementsIndirectCountARB");
+	g_glMultiDrawElementsIndirectCountARB = elementsProc;
+
+	if (elementsProc == 0)
+		return true;
+	if (missingArrays)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

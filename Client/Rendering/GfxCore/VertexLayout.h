@@ -21,6 +21,7 @@ public:
 	bool initAppleTextureExtensions();
 	bool initGLBindFragDataLocationIndexed();
 	bool initGLDrawIndirect();
+	bool initGLMultiDrawIndirectCountARB();
 	// AUTO-GENERATED METHODS
 };
 
