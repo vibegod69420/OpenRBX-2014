@@ -6,6 +6,9 @@
 namespace RBX {
 namespace Network {
 
+#ifndef NULL
+#define NULL 0
+#endif
 // AUTO-GENERATED HELPERS
 
 class Marker
@@ -19,6 +22,7 @@ public:
 	};
 
 	int getField8C0() const;
+	void reset();
 	// AUTO-GENERATED METHODS
 };
 

@@ -18,6 +18,7 @@ public:
 	};
 
 	void dispose();
+	void*clone();
 	// AUTO-GENERATED METHODS
 };
 

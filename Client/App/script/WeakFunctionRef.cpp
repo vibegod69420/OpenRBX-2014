@@ -25,6 +25,28 @@ void WeakFunctionRef::dispose()
 	}
 }
 
+__declspec(dllimport) __declspec(noreturn) void __cdecl weakFunctionRefAllocFail();
+
+// FUNCTION: ROBLOXSTUDIO 0x00be5e40
+void* WeakFunctionRef::clone()
+{
+	void* mem = ::operator new(0x90u);
+	if (!mem)
+		weakFunctionRefAllocFail();
+
+	*reinterpret_cast<int*>(mem) = _vtable_or_head;
+
+	int* slot = reinterpret_cast<int*>(reinterpret_cast<char*>(mem) + 4);
+	if (slot)
+		*slot = _vtable_or_head;
+
+	slot = reinterpret_cast<int*>(reinterpret_cast<char*>(mem) + 8);
+	if (slot)
+		*slot = _vtable_or_head;
+
+	return mem;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

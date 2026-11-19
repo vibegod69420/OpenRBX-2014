@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	~SimpleThrottlingArbiter();
 	// AUTO-GENERATED METHODS
 };
 
