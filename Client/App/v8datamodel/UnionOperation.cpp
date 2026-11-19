@@ -128,6 +128,12 @@ int UnionOperation::getConst2500() const
 	return 2500;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008930f0
+char* UnionOperation::getPrimitiveDataOffset3C() const
+{
+	return (*(UnionOpPrimitiveOwner**)((const char*)this + 0xE0))->getPrimitiveData() + 0x3C;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

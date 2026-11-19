@@ -26,6 +26,7 @@ public:
 	int getField170() const;
 	int getConst512000() const;
 	int getConst2500() const;
+	char*getPrimitiveDataOffset3C() const;
 	// AUTO-GENERATED METHODS
 };
 
