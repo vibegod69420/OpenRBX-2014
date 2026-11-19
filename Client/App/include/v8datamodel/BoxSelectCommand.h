@@ -17,6 +17,7 @@ public:
 	};
 
 	void cancelSelection();
+	bool canSelect();
 	// AUTO-GENERATED METHODS
 };
 

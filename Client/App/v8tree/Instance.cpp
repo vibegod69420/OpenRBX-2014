@@ -32,6 +32,15 @@ void Instance::destroySubPtr0C()
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00426d00
+void* sub_825140();
+
+Instance::Instance()
+{
+	_vtable_or_head = (int)sub_825140();
+	*((int*)this + 1) = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

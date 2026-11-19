@@ -22,6 +22,7 @@ public:
 	int getConst14956404() const;
 	void onDestroy();
 	void destroySubPtr0C();
+	Instance();
 	// AUTO-GENERATED METHODS
 };
 

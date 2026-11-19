@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 00:09:26 UTC",
+ "updated_at": "2026-11-19 00:16:37 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 4.0577,
- "implemented_total": 380,
- "function_annotations": 380,
+ "matchable_coverage_pct": 4.1111,
+ "implemented_total": 385,
+ "function_annotations": 385,
  "stub_annotations": 0,
- "perfect_100_count": 380,
- "matched_real_functions": 380,
+ "perfect_100_count": 385,
+ "matched_real_functions": 385,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 0.9369,
- "overall_byte_coverage_pct": 0.1003,
+ "overall_function_coverage_pct": 0.9492,
+ "overall_byte_coverage_pct": 0.1013,
  "usage": {
-  "calls_24h": 1550,
+  "calls_24h": 1590,
   "failures_24h": 0,
-  "completion_tokens_24h": 16975609,
-  "reasoning_tokens_24h": 16679499,
-  "avg_latency_s": 190.4
+  "completion_tokens_24h": 17289876,
+  "reasoning_tokens_24h": 16988906,
+  "avg_latency_s": 189.2
  },
- "functions_total": 380,
+ "functions_total": 385,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 161,
-   "functions": 161,
-   "bytes": 3151
+   "matched": 164,
+   "functions": 164,
+   "bytes": 3208
   },
   {
    "name": "App/v8world",
@@ -60,9 +60,9 @@
   },
   {
    "name": "Rendering/g3d",
-   "matched": 2,
-   "functions": 2,
-   "bytes": 451
+   "matched": 3,
+   "functions": 3,
+   "bytes": 470
   },
   {
    "name": "Rendering/GfxCore",
@@ -161,6 +161,12 @@
    "bytes": 67
   },
   {
+   "name": "App/v8tree",
+   "matched": 5,
+   "functions": 5,
+   "bytes": 65
+  },
+  {
    "name": "RobloxStudio/RobloxScriptDoc.cpp",
    "matched": 2,
    "functions": 2,
@@ -189,12 +195,6 @@
    "matched": 1,
    "functions": 1,
    "bytes": 50
-  },
-  {
-   "name": "App/v8tree",
-   "matched": 4,
-   "functions": 4,
-   "bytes": 44
   },
   {
    "name": "Network/ClientReplicator.cpp",
@@ -433,6 +433,17 @@
    "file": "Client/Network/ProfiledRakPeer.cpp",
    "orig_size": 5,
    "recomp_size": 5,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00cc7320",
+   "kind": "FUNCTION",
+   "name": "RakNet::PluginInterface2::IsEmpty",
+   "mangled": "?IsEmpty@PluginInterface2@RakNet@@QBE_NXZ",
+   "file": "Client/App/v8datamodel/PluginInterface2.cpp",
+   "orig_size": 20,
+   "recomp_size": 20,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -2417,6 +2428,17 @@
    "matchable": true
   },
   {
+   "address": "0x0085fb80",
+   "kind": "FUNCTION",
+   "name": "assign",
+   "mangled": "?setProgress@GenericJob@DataModel@RBX@@QAEXXZ",
+   "file": "Client/App/v8datamodel/GenericJob.cpp",
+   "orig_size": 19,
+   "recomp_size": 19,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00857ca0",
    "kind": "FUNCTION",
    "name": "RBX::DataModel::getFlagB68",
@@ -2670,6 +2692,17 @@
    "matchable": true
   },
   {
+   "address": "0x007c2d40",
+   "kind": "FUNCTION",
+   "name": "RBX::BoxSelectCommand::canSelect",
+   "mangled": "?canSelect@BoxSelectCommand@RBX@@QAE_NXZ",
+   "file": "Client/App/v8datamodel/BoxSelectCommand.cpp",
+   "orig_size": 18,
+   "recomp_size": 18,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x007c2460",
    "kind": "FUNCTION",
    "name": "RBX::BoxSelectCommand::cancelSelection",
@@ -2776,6 +2809,17 @@
    "file": "Client/App/v8datamodel/StandardOut.cpp",
    "orig_size": 26,
    "recomp_size": 26,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00717520",
+   "kind": "FUNCTION",
+   "name": "G3D::TextInput::TokenException::number",
+   "mangled": "?number@TokenException@TextInput@G3D@@QBENXZ",
+   "file": "Client/Rendering/g3d/G3Dcpp/TokenException.cpp",
+   "orig_size": 19,
+   "recomp_size": 19,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3050,50 +3094,6 @@
    "mangled": "?destroySubPtr0C@Emitter@Graphics@RBX@@QAEXXZ",
    "file": "Client/Rendering/GfxRender/Emitter.cpp",
    "orig_size": 402,
-   "recomp_size": 26,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x0066e5c0",
-   "kind": "FUNCTION",
-   "name": "RBX::Graphics::ParticleEmitter::queueSimulation",
-   "mangled": "?queueSimulation@ParticleEmitter@Graphics@RBX@@QAEXXZ",
-   "file": "Client/Rendering/GfxRender/ParticleEmitter.cpp",
-   "orig_size": 32,
-   "recomp_size": 32,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x006600f0",
-   "kind": "FUNCTION",
-   "name": "RBX::Graphics::Material::destroySubPtr0C",
-   "mangled": "?destroySubPtr0C@Material@Graphics@RBX@@QAEXXZ",
-   "file": "Client/Rendering/GfxRender/Material.cpp",
-   "orig_size": 26,
-   "recomp_size": 26,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x006556c0",
-   "kind": "FUNCTION",
-   "name": "RBX::Graphics::LightObject::markDirty",
-   "mangled": "?markDirty@LightObject@Graphics@RBX@@QAEXXZ",
-   "file": "Client/Rendering/GfxRender/LightObject.cpp",
-   "orig_size": 32,
-   "recomp_size": 32,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x0063f6b0",
-   "kind": "FUNCTION",
-   "name": "RBX::FileMeshData::destroySubPtr0C",
-   "mangled": "?destroySubPtr0C@FileMeshData@RBX@@QAEXXZ",
-   "file": "Client/App/v8datamodel/FileMeshData.cpp",
-   "orig_size": 26,
    "recomp_size": 26,
    "match_pct": 100.0,
    "matchable": true
@@ -3573,9 +3573,45 @@
    "matched": 380,
    "implemented": 380,
    "pct": 4.0577
+  },
+  {
+   "t": "2026-11-19 00:16:37 UTC",
+   "matched": 385,
+   "implemented": 385,
+   "pct": 4.1111
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T00:13:31",
+   "address": "0x00426d00",
+   "name": "sub_825140",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T00:13:28",
+   "address": "0x00cc7320",
+   "name": "RakNet::PluginInterface2::IsEmpty",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T00:12:31",
+   "address": "0x00717520",
+   "name": "G3D::TextInput::TokenException::number",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T00:11:24",
+   "address": "0x0085fb80",
+   "name": "assign",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T00:09:48",
+   "address": "0x007c2d40",
+   "name": "RBX::BoxSelectCommand::canSelect",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T00:07:37",
    "address": "0x00b46420",
@@ -4265,37 +4301,7 @@
    "address": "0x00ce9e00",
    "name": "RBX::Network::ProfiledRakPeer::getField5E0",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T20:30:16",
-   "address": "0x00bb31a0",
-   "name": "RBX::POLY::RBX::POLY::RightAngleRampMesh::dispose",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T20:30:10",
-   "address": "0x00890cc0",
-   "name": "RBX::FormFactorPart::createJoints",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T20:30:09",
-   "address": "0x00bb3d30",
-   "name": "CornerWedgeMesh_dispose",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T20:28:50",
-   "address": "0x00bae620",
-   "name": "RBX::POLY::RBX::POLY::WedgeMesh::dispose",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T20:28:41",
-   "address": "0x0066e5c0",
-   "name": "RBX::Graphics::ParticleEmitter::queueSimulation",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 51.11
+ "match_rate_per_hour": 50.96
 }

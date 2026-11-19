@@ -34,6 +34,15 @@ void BoxSelectCommand::cancelSelection()
     }
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x007c2d40
+bool BoxSelectCommand::canSelect()
+{
+	if (*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x68) != 0 ||
+		*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x64) != 0)
+		return false;
+	return true;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

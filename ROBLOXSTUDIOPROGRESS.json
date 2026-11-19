@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 00:09:26 UTC",
+  "updated_at": "2026-11-19 00:16:37 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 4.0577,
-  "implemented_total": 380,
-  "function_annotations": 380,
+  "matchable_coverage_pct": 4.1111,
+  "implemented_total": 385,
+  "function_annotations": 385,
   "stub_annotations": 0,
-  "perfect_100_count": 380,
-  "matched_real_functions": 380,
+  "perfect_100_count": 385,
+  "matched_real_functions": 385,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.9369,
-  "overall_byte_coverage_pct": 0.1003,
+  "overall_function_coverage_pct": 0.9492,
+  "overall_byte_coverage_pct": 0.1013,
   "usage": {
-    "calls_24h": 1550,
+    "calls_24h": 1590,
     "failures_24h": 0,
-    "completion_tokens_24h": 16975609,
-    "reasoning_tokens_24h": 16679499,
-    "avg_latency_s": 190.4
+    "completion_tokens_24h": 17289876,
+    "reasoning_tokens_24h": 16988906,
+    "avg_latency_s": 189.2
   },
   "functions": [
     {
@@ -140,6 +140,17 @@
       "file": "Client/App/v8datamodel/islot.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00426d00",
+      "kind": "FUNCTION",
+      "name": "sub_825140",
+      "mangled": "??0Instance@RBX@@QAE@XZ",
+      "file": "Client/App/v8tree/Instance.cpp",
+      "orig_size": 21,
+      "recomp_size": 21,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -1783,6 +1794,17 @@
       "matchable": true
     },
     {
+      "address": "0x00717520",
+      "kind": "FUNCTION",
+      "name": "G3D::TextInput::TokenException::number",
+      "mangled": "?number@TokenException@TextInput@G3D@@QBENXZ",
+      "file": "Client/Rendering/g3d/G3Dcpp/TokenException.cpp",
+      "orig_size": 19,
+      "recomp_size": 19,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00773390",
       "kind": "FUNCTION",
       "name": "RBX::StandardOut::destroySubPtr0C",
@@ -1889,6 +1911,17 @@
       "file": "Client/App/v8datamodel/BoxSelectCommand.cpp",
       "orig_size": 12,
       "recomp_size": 12,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x007c2d40",
+      "kind": "FUNCTION",
+      "name": "RBX::BoxSelectCommand::canSelect",
+      "mangled": "?canSelect@BoxSelectCommand@RBX@@QAE_NXZ",
+      "file": "Client/App/v8datamodel/BoxSelectCommand.cpp",
+      "orig_size": 18,
+      "recomp_size": 18,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -2142,6 +2175,17 @@
       "file": "Client/App/v8datamodel/DataModel.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0085fb80",
+      "kind": "FUNCTION",
+      "name": "assign",
+      "mangled": "?setProgress@GenericJob@DataModel@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/GenericJob.cpp",
+      "orig_size": 19,
+      "recomp_size": 19,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -4122,6 +4166,17 @@
       "file": "Client/Network/Marker.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00cc7320",
+      "kind": "FUNCTION",
+      "name": "RakNet::PluginInterface2::IsEmpty",
+      "mangled": "?IsEmpty@PluginInterface2@RakNet@@QBE_NXZ",
+      "file": "Client/App/v8datamodel/PluginInterface2.cpp",
+      "orig_size": 20,
+      "recomp_size": 20,
       "match_pct": 100.0,
       "matchable": true
     },
