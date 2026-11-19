@@ -19,6 +19,7 @@ public:
 
 	int getConst1() const;
 	void __cdecl clearStdString();
+	void*loadD3DXModule();
 	// AUTO-GENERATED METHODS
 };
 
