@@ -20,6 +20,7 @@ public:
 	int getUnknown();
 	float getCurrentEntryFloat();
 	int getCurrentEntryInt();
+	bool getCurrentEntryByte();
 	// AUTO-GENERATED METHODS
 };
 

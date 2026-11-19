@@ -22,6 +22,7 @@ public:
 	void*getPart() const;
 	void*getPrimitive() const;
 	void*getGrid() const;
+	int __cdecl getValue();
 	// AUTO-GENERATED METHODS
 };
 

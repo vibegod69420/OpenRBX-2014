@@ -45,6 +45,12 @@ float Humanoid::getUnknown200Float()
 	return *reinterpret_cast<float*>(&value);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x009d86b0
+int Humanoid::getField270() const
+{
+	return field_0270;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

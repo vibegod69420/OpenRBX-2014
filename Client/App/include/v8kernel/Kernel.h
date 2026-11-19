@@ -8,6 +8,7 @@ namespace RBX {
 struct Sub_Kernel_24_34 { char pad[52]; int val; };
 struct Sub_Kernel_24_04 { char pad[4]; int val; };
 struct Sub_Kernel_24_64 { char pad[100]; int val; };
+struct Sub_Kernel_24_24 { char pad[36]; int val; };
 // AUTO-GENERATED HELPERS
 
 class Kernel
@@ -19,6 +20,7 @@ public:
 		struct { char _pad_sub_0024_34[0x24]; Sub_Kernel_24_34* sub_0024_34; };
 		struct { char _pad_sub_0024_04[0x24]; Sub_Kernel_24_04* sub_0024_04; };
 		struct { char _pad_sub_0024_64[0x24]; Sub_Kernel_24_64* sub_0024_64; };
+		struct { char _pad_sub_0024_24[0x24]; Sub_Kernel_24_24* sub_0024_24; };
 		// AUTO-GENERATED FIELDS
 	};
 
@@ -26,6 +28,7 @@ public:
 	int getSubField24_34() const;
 	int getSubField24_04() const;
 	int getSubField24_64() const;
+	int getSubField24_24() const;
 	// AUTO-GENERATED METHODS
 };
 

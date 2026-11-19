@@ -17,6 +17,7 @@ public:
 	};
 
 	int getConst18957256() const;
+	static int derefInt(const int* p);
 	// AUTO-GENERATED METHODS
 };
 

@@ -18,6 +18,8 @@ public:
 
 	int getEnumCount() const;
 	int getEnumValueCount() const;
+	void onDestroy();
+	static void destroyInstance(SurfaceEnumPropDescriptor* p);
 	// AUTO-GENERATED METHODS
 };
 

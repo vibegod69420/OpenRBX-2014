@@ -16,6 +16,15 @@ int SurfaceEnumPropDescriptor::getEnumValueCount() const
 	return (*(char**)((char*)this + 0x04) - *(char**)((char*)this + 0x00)) / 28;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a26f70
+void SurfaceEnumPropDescriptor::destroyInstance(SurfaceEnumPropDescriptor* p)
+{
+	if (p) {
+		p->onDestroy();
+		rbx_free_mem(p);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

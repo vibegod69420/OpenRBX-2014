@@ -17,6 +17,12 @@ int MegaCluster::derefInt_baa0(const int* p)
 	return *p;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00770e20
+int MegaCluster::getSize() const
+{
+	return ((unsigned int)_vtable_or_head < 0x03D09000u) ? 512 : 1024;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

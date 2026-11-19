@@ -19,6 +19,7 @@ public:
 	int isInputType8();
 	int isInputType127();
 	int isInputType27();
+	bool isInputType13Or271();
 	// AUTO-GENERATED METHODS
 };
 

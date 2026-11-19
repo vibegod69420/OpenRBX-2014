@@ -13,6 +13,7 @@ public:
 	union
 	{
 		int _vtable_or_head;
+		struct { char _pad_field_0270[0x270]; int field_0270; };
 		// AUTO-GENERATED FIELDS
 	};
 
@@ -20,6 +21,7 @@ public:
 	int getInt148() const;
 	void __cdecl dispatch(int arg);
 	float getUnknown200Float();
+	int getField270() const;
 	// AUTO-GENERATED METHODS
 };
 

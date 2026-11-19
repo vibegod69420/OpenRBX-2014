@@ -85,6 +85,14 @@ void* TriangleMesh::getGrid() const
 		*reinterpret_cast<void* const*>(reinterpret_cast<const char*>(this) + 0x100)) + 4;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b6ffd0
+int sub_B71570(int, int);
+
+int __cdecl TriangleMesh::getValue()
+{
+	return sub_B71570((int)this, 0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

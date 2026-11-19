@@ -20,6 +20,7 @@ public:
 	__int64 getId() const;
 	void dispatch();
 	void send();
+	TagItem*read();
 	// AUTO-GENERATED METHODS
 };
 
