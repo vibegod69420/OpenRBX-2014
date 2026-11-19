@@ -29,6 +29,12 @@ bool InputObject::isInputType13Or271()
 	return inputType == 0xD || inputType == 0x10F;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x009ccff0
+int InputObject::isInputType12()
+{
+	return *(int*)((char*)this + 0x84) == 0xc;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

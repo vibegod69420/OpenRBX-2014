@@ -21,6 +21,7 @@ public:
 	int __cdecl getLine();
 	int __cdecl getType();
 	int __cdecl getLevel();
+	void __cdecl raise(int arg1, int arg2);
 	// AUTO-GENERATED METHODS
 };
 

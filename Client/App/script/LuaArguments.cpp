@@ -51,6 +51,12 @@ void __cdecl LuaArguments::pushAllYields(void* arg)
 	sub_A389C0(this, arg, *(void**)0x0124EB1C);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008d8cb0
+void __cdecl LuaArguments::pushAllThreads(void* arg)
+{
+	sub_A389C0(this, arg, *(void**)0x0124EB30);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

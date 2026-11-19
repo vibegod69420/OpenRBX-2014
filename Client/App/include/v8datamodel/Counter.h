@@ -20,6 +20,8 @@ public:
 
 	void freeMember0C();
 	void wait();
+	void onDestroy();
+	static void destroyInstance(Counter* p);
 	// AUTO-GENERATED METHODS
 };
 

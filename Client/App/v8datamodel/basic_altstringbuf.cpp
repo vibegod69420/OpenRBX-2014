@@ -33,6 +33,19 @@ void basic_altstringbuf::FreeHandle()
 	}
 }
 
+struct basic_altstringbuf_substate
+{
+	void init();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00cf4e50
+basic_altstringbuf::basic_altstringbuf()
+{
+	((basic_altstringbuf_substate*)((char*)this + 8))->init();
+	_vtable_or_head = -1;
+	*(int*)((char*)this + 0x20) = -1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

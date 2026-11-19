@@ -23,6 +23,7 @@ public:
 	void*getPrimitive() const;
 	void*getGrid() const;
 	int __cdecl getValue();
+	void __cdecl stringGfindRenamed();
 	// AUTO-GENERATED METHODS
 };
 

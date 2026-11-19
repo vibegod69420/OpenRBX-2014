@@ -42,6 +42,15 @@ void* ServerReplicator::getReplicator() const
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00cb9810
+void* ServerReplicator::getReplicator()
+{
+	ReplicatorPeer* peer = *(ReplicatorPeer**)((char*)this + 0x0C);
+	if (peer->isPeer(getPeerContext()))
+		return (char*)this - 0x1C;
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

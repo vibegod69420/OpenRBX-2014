@@ -26,6 +26,15 @@ void Counter::wait()
 	WaitForSingleObject((HANDLE)_vtable_or_head, 0xFFFFFFFFu);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006bda90
+void Counter::destroyInstance(Counter* p)
+{
+	if (p) {
+		p->onDestroy();
+		rbx_free_mem(p);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Limits

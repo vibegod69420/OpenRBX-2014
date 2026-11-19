@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	~thread_specific_ptr();
 	// AUTO-GENERATED METHODS
 };
 

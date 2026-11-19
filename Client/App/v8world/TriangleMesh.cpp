@@ -93,6 +93,14 @@ int __cdecl TriangleMesh::getValue()
 	return sub_B71570((int)this, 0);
 }
 
+void sub_A38A50(void*, const char*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b70040
+void __cdecl TriangleMesh::stringGfindRenamed()
+{
+	sub_A38A50(this, "'string.gfind' was renamed to 'string.gmatch'");
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

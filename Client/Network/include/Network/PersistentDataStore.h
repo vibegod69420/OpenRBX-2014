@@ -23,6 +23,7 @@ public:
 	static void destroyInstance(PersistentDataStore* p);
 	PersistentDataStore* __cdecl sub_94aff0(void* arg);
 	PersistentDataStore* __cdecl sub_94b010(void* arg);
+	PersistentDataStore* __cdecl sub_94b030(void* arg);
 	// AUTO-GENERATED METHODS
 };
 

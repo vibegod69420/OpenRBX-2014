@@ -23,6 +23,7 @@ public:
 	int getGlobal_94e0() const;
 	void*getPtr1E90() const;
 	void*getReplicator() const;
+	void*getReplicator();
 	// AUTO-GENERATED METHODS
 };
 
