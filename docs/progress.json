@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 21:38:12 UTC",
+ "updated_at": "2026-11-19 21:57:26 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 9.5889,
- "implemented_total": 902,
- "function_annotations": 902,
+ "matchable_coverage_pct": 9.5996,
+ "implemented_total": 903,
+ "function_annotations": 903,
  "stub_annotations": 0,
- "perfect_100_count": 898,
- "matched_real_functions": 898,
+ "perfect_100_count": 899,
+ "matched_real_functions": 899,
  "average_match_pct": 99.86,
- "overall_function_coverage_pct": 2.2139,
- "overall_byte_coverage_pct": 0.3753,
+ "overall_function_coverage_pct": 2.2164,
+ "overall_byte_coverage_pct": 0.3765,
  "usage": {
-  "calls_24h": 6243,
+  "calls_24h": 6203,
   "failures_24h": 0,
-  "completion_tokens_24h": 74978184,
-  "reasoning_tokens_24h": 73455773,
+  "completion_tokens_24h": 74559535,
+  "reasoning_tokens_24h": 73037661,
   "avg_latency_s": 210.2
  },
- "functions_total": 902,
+ "functions_total": 903,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 354,
-   "functions": 355,
-   "bytes": 11470
+   "matched": 355,
+   "functions": 356,
+   "bytes": 11577
   },
   {
    "name": "App/v8world",
@@ -4587,9 +4587,21 @@
    "matched": 898,
    "implemented": 902,
    "pct": 9.5889
+  },
+  {
+   "t": "2026-11-19 21:57:26 UTC",
+   "matched": 899,
+   "implemented": 903,
+   "pct": 9.5996
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T21:53:39",
+   "address": "0x00574ce0",
+   "name": "RBX::TextDisplay::~TextDisplay",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T21:30:39",
    "address": "0x00b9c490",
@@ -5303,13 +5315,7 @@
    "address": "0x00605a40",
    "name": "RBX::Graphics::ContextGL::assignIfNull_5a40",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T14:50:38",
-   "address": "0x009d8740",
-   "name": "RBX::Humanoid::getField290",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 31.06
+ "match_rate_per_hour": 30.75
 }

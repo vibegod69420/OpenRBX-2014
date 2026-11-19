@@ -20,6 +20,7 @@ public:
 
 	int getField90() const;
 	bool getFlagB8() const;
+	~TextDisplay();
 	// AUTO-GENERATED METHODS
 };
 
