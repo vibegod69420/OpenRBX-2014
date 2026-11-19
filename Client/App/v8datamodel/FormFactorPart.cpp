@@ -34,6 +34,12 @@ int FormFactorPart::getField104() const
 	return field_0104;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00891b50
+bool FormFactorPart::getSubFlagE0_111() const
+{
+	return subb_00e0_0111->val;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

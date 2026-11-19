@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	int getQualityLevel() const;
 	// AUTO-GENERATED METHODS
 };
 

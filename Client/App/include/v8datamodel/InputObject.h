@@ -17,6 +17,7 @@ public:
 	};
 
 	int isInputType8();
+	int isInputType127();
 	// AUTO-GENERATED METHODS
 };
 

@@ -28,6 +28,28 @@ void WeakThreadRef::removeRef()
 	}
 }
 
+class WeakThreadRefTarget;
+
+struct WeakThreadRefAccessor
+{
+	WeakThreadRefTarget* slot; // offset 0
+	void* fetchContext();
+};
+
+class WeakThreadRefTarget
+{
+public:
+	void update(void* context);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0043edf0
+void WeakThreadRef::update()
+{
+	WeakThreadRefAccessor* self = reinterpret_cast<WeakThreadRefAccessor*>(this);
+	void* context = self->fetchContext();
+	self->slot->update(context);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

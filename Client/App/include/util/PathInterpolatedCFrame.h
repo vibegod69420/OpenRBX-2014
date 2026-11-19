@@ -24,6 +24,7 @@ public:
 	double getField48() const;
 	bool getFlag40() const;
 	double getField98() const;
+	void*getField20() const;
 	// AUTO-GENERATED METHODS
 };
 

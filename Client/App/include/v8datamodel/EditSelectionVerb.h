@@ -17,6 +17,7 @@ public:
 	};
 
 	int release();
+	int addRef();
 	// AUTO-GENERATED METHODS
 };
 

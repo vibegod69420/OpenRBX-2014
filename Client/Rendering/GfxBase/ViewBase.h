@@ -17,6 +17,7 @@ public:
 	};
 
 	void dispose();
+	int getUnknown();
 	// AUTO-GENERATED METHODS
 };
 

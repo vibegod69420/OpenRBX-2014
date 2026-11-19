@@ -18,6 +18,7 @@ public:
 	};
 
 	void removeRef();
+	void update();
 	// AUTO-GENERATED METHODS
 };
 

@@ -17,6 +17,7 @@ public:
 	};
 
 	int getConst30() const;
+	int getKernelSteps() const;
 	// AUTO-GENERATED METHODS
 };
 

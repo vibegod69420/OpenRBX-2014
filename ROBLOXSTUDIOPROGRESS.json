@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 01:25:54 UTC",
+  "updated_at": "2026-11-19 01:33:17 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 4.8372,
-  "implemented_total": 453,
-  "function_annotations": 453,
+  "matchable_coverage_pct": 4.9439,
+  "implemented_total": 463,
+  "function_annotations": 463,
   "stub_annotations": 0,
-  "perfect_100_count": 453,
-  "matched_real_functions": 453,
+  "perfect_100_count": 463,
+  "matched_real_functions": 463,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 1.1168,
-  "overall_byte_coverage_pct": 0.1205,
+  "overall_function_coverage_pct": 1.1415,
+  "overall_byte_coverage_pct": 0.1221,
   "usage": {
-    "calls_24h": 1905,
+    "calls_24h": 1954,
     "failures_24h": 0,
-    "completion_tokens_24h": 20837737,
-    "reasoning_tokens_24h": 20474329,
-    "avg_latency_s": 190.6
+    "completion_tokens_24h": 21288880,
+    "reasoning_tokens_24h": 20914263,
+    "avg_latency_s": 189.7
   },
   "functions": [
     {
@@ -283,6 +283,17 @@
       "file": "Client/App/script/ScriptDebugger.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0043edf0",
+      "kind": "FUNCTION",
+      "name": "RBX::Lua::WeakThreadRef::update",
+      "mangled": "?update@WeakThreadRef@Lua@RBX@@QAEXXZ",
+      "file": "Client/App/script/WeakThreadRef.cpp",
+      "orig_size": 18,
+      "recomp_size": 18,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -2003,6 +2014,17 @@
       "matchable": true
     },
     {
+      "address": "0x006b97d0",
+      "kind": "FUNCTION",
+      "name": "RBX::EditSelectionVerb::addRef",
+      "mangled": "?addRef@EditSelectionVerb@RBX@@QAEHXZ",
+      "file": "Client/App/v8datamodel/EditSelectionVerb.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x006b9800",
       "kind": "FUNCTION",
       "name": "RBX::EditSelectionVerb::release",
@@ -2120,6 +2142,17 @@
       "file": "Client/Rendering/g3d/G3Dcpp/TokenException.cpp",
       "orig_size": 19,
       "recomp_size": 19,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0076f0b0",
+      "kind": "FUNCTION",
+      "name": "RBX::ViewBase::getUnknown",
+      "mangled": "?getUnknown@ViewBase@RBX@@QAEHXZ",
+      "file": "Client/Rendering/GfxBase/ViewBase.cpp",
+      "orig_size": 17,
+      "recomp_size": 17,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -2751,6 +2784,17 @@
       "matchable": true
     },
     {
+      "address": "0x00891b50",
+      "kind": "FUNCTION",
+      "name": "RBX::FormFactorPart::getSubFlagE0_111",
+      "mangled": "?getSubFlagE0_111@FormFactorPart@RBX@@QBE_NXZ",
+      "file": "Client/App/v8datamodel/FormFactorPart.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00891b60",
       "kind": "FUNCTION",
       "name": "RBX::FormFactorPart::getField104",
@@ -2912,6 +2956,17 @@
       "file": "Client/App/v8datamodel/UnionOperation.cpp",
       "orig_size": 12,
       "recomp_size": 12,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x008bb880",
+      "kind": "FUNCTION",
+      "name": "RBX::GameBasicSettings::getQualityLevel",
+      "mangled": "?getQualityLevel@GameBasicSettings@RBX@@QBEHXZ",
+      "file": "Client/App/v8datamodel/GameBasicSettings.cpp",
+      "orig_size": 14,
+      "recomp_size": 14,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -3488,6 +3543,17 @@
       "matchable": true
     },
     {
+      "address": "0x009cd010",
+      "kind": "FUNCTION",
+      "name": "RBX::InputObject::isInputType127",
+      "mangled": "?isInputType127@InputObject@RBX@@QAEHXZ",
+      "file": "Client/App/v8datamodel/InputObject.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x009d91d0",
       "kind": "FUNCTION",
       "name": "RBX::Humanoid::getInt148",
@@ -3572,6 +3638,17 @@
       "file": "Client/App/util/PathInterpolatedCFrame.cpp",
       "orig_size": 75,
       "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00a0fac0",
+      "kind": "FUNCTION",
+      "name": "RBX::PathInterpolatedCFrame::getField20",
+      "mangled": "?getField20@PathInterpolatedCFrame@RBX@@QBEPAXXZ",
+      "file": "Client/App/util/PathInterpolatedCFrame.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -4005,6 +4082,17 @@
       "matchable": true
     },
     {
+      "address": "0x00b4ec80",
+      "kind": "FUNCTION",
+      "name": "RBX::BallBallConnector::getKernelSteps",
+      "mangled": "?getKernelSteps@BallBallConnector@RBX@@QBEHXZ",
+      "file": "Client/App/v8kernel/BallBallConnector.cpp",
+      "orig_size": 19,
+      "recomp_size": 19,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00b530d0",
       "kind": "FUNCTION",
       "name": "RBX::Kernel::getConst15",
@@ -4291,6 +4379,17 @@
       "matchable": true
     },
     {
+      "address": "0x00ba8ed0",
+      "kind": "FUNCTION",
+      "name": "RBX::Body::advanceStateIndex",
+      "mangled": "?advanceStateIndex@Body@RBX@@QAEXXZ",
+      "file": "Client/App/v8kernel/Body.cpp",
+      "orig_size": 18,
+      "recomp_size": 18,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00bad080",
       "kind": "FUNCTION",
       "name": "RBX::FloatComparer::dispose",
@@ -4408,6 +4507,17 @@
       "file": "Client/App/v8world/PolyContact.cpp",
       "orig_size": 23,
       "recomp_size": 23,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00bd3030",
+      "kind": "FUNCTION",
+      "name": "EdgeEdgePairIdentity",
+      "mangled": "?getEdgeEdgePairField@EdgeEdgePair@RBX@@QAEHXZ",
+      "file": "Client/App/v8world/EdgeEdgePair.cpp",
+      "orig_size": 18,
+      "recomp_size": 18,
       "match_pct": 100.0,
       "matchable": true
     },

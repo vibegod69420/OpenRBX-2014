@@ -44,6 +44,14 @@ void ViewBase::dispose()
 		impl->vf26(1);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0076f0b0
+int ViewBase::getUnknown()
+{
+    int* p = *reinterpret_cast<int**>(reinterpret_cast<char*>(this) + 4);
+    int value = p[2];
+    return value ? value : 2;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

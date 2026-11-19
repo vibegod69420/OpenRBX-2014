@@ -34,6 +34,17 @@ double PathInterpolatedCFrame::getField98() const
     return *reinterpret_cast<const double*>(reinterpret_cast<const char*>(this) + 0x98);
 }
 
+void* __fastcall PathInterpolatedCFrame_computeField20(const PathInterpolatedCFrame* self);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a0fac0
+void* PathInterpolatedCFrame::getField20() const
+{
+	void* value = *reinterpret_cast<void* const*>(reinterpret_cast<const char*>(this) + 0x20);
+	if (!value)
+		return PathInterpolatedCFrame_computeField20(this);
+	return value;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

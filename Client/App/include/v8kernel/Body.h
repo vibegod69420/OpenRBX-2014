@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void advanceStateIndex();
 	// AUTO-GENERATED METHODS
 };
 
