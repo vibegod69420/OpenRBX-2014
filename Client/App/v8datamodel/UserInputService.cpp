@@ -26,6 +26,30 @@ void UserInputService::destructorHelper()
 	}
 }
 
+class UserInputNavigationFocus;
+UserInputNavigationFocus* getUserInputNavigationFocus(UserInputService*);
+
+class UserInputNavigationFocus
+{
+public:
+	bool isNavigationSuppressed();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0097aea0
+int UserInputService::getNavigationGamepadInputType()
+{
+	if ((unsigned int)(*(int*)((char*)this + 0x11C) - 1) <= 1)
+	{
+		UserInputNavigationFocus* focus = getUserInputNavigationFocus(this);
+		if (focus && !focus->isNavigationSuppressed())
+		{
+			return (*(int*)((char*)this + 0x11C) != 1) + 3;
+		}
+	}
+
+	return *(int*)((char*)this + 0x120);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

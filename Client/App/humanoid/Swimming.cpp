@@ -33,6 +33,25 @@ void __cdecl Swimming::setState(int a, int b, int c, int d)
 	sub_C18030(this, (((c << 9) | d) << 8 | b) << 6 | a, (*(int**)((char*)this + 0x0C))[2]);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c17ff0
+void __cdecl sub_BC88E0(void* arg0, const char* message);
+
+void __cdecl Swimming::accumulate(int delta)
+{
+    void* obj = *(void**)this;
+    int val = *(int*)((char*)this + 0x24);
+    int limit = *(unsigned char*)((char*)obj + 0x4B);
+    val += delta;
+
+    if (val <= limit)
+        return;
+
+    if (val >= 250)
+        sub_BC88E0(*(void**)((char*)this + 0x0C), "function or expression too complex");
+
+    *(unsigned char*)((char*)*(void**)this + 0x4B) = (unsigned char)val;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace HUMAN

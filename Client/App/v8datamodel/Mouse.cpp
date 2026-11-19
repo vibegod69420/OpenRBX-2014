@@ -79,6 +79,23 @@ int Mouse::getY()
 	return -1;
 }
 
+class MouseBaseInit
+{
+public:
+	void init();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00b1a8d0
+Mouse::Mouse()
+{
+	reinterpret_cast<MouseBaseInit*>(this)->init();
+
+	*reinterpret_cast<int*>(this) = 0x00EC5574;
+	*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 4) = 0x00EC5624;
+	*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x18) = 0x00EC562C;
+	*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x1C) = 0x00EC5638;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -17,6 +17,7 @@ public:
 	};
 
 	void destructorHelper();
+	int getNavigationGamepadInputType();
 	// AUTO-GENERATED METHODS
 };
 
