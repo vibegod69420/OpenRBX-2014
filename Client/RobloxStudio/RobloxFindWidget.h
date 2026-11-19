@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void releaseControlBlock();
 	// AUTO-GENERATED METHODS
 };
 
