@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void*getFirstInClump();
 	// AUTO-GENERATED METHODS
 };
 

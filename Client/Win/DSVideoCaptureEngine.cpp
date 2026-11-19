@@ -42,6 +42,14 @@ int DSVideoCaptureEngine::getState()
 	return 0;
 }
 
+__declspec(dllimport) void __stdcall DSVideoCaptureEngine_Stop(void* pEngine);
+
+// FUNCTION: ROBLOXSTUDIO 0x00427a20
+void DSVideoCaptureEngine::stopCapture()
+{
+	DSVideoCaptureEngine_Stop(this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

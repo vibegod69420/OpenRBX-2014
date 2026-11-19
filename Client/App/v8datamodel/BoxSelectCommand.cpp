@@ -43,6 +43,19 @@ bool BoxSelectCommand::canSelect()
 	return true;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x007c2d20
+bool BoxSelectCommand::canBoxSelect()
+{
+	if (*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x64) != 8)
+		return false;
+
+	int state = *reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x68);
+	if (state == 2 || state == 3)
+		return false;
+
+	return true;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

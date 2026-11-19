@@ -20,6 +20,7 @@ public:
 	const int* getMemberPtr44() const;
 	int getElapsedTime();
 	int getState();
+	void stopCapture();
 	// AUTO-GENERATED METHODS
 };
 

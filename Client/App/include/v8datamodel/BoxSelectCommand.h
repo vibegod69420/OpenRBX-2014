@@ -18,6 +18,7 @@ public:
 
 	void cancelSelection();
 	bool canSelect();
+	bool canBoxSelect();
 	// AUTO-GENERATED METHODS
 };
 

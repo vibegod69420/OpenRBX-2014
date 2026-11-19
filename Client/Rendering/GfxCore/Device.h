@@ -18,6 +18,7 @@ public:
 	};
 
 	void releaseAll();
+	void destroyAll();
 	// AUTO-GENERATED METHODS
 };
 

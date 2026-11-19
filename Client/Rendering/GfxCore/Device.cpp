@@ -24,6 +24,27 @@ void Device::releaseAll()
     }
 }
 
+struct DeviceNodeSlot2
+{
+	virtual void slot0() = 0;
+	virtual void slot1() = 0;
+	virtual void slot2() = 0;
+	int pad0;
+	int pad1;
+	DeviceNodeSlot2* next;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x005eb790
+void Device::destroyAll()
+{
+	DeviceNodeSlot2* node = *reinterpret_cast<DeviceNodeSlot2**>(reinterpret_cast<char*>(this) + 4);
+	while (node)
+	{
+		node->slot2();
+		node = node->next;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
