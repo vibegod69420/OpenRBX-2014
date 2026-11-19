@@ -21,6 +21,7 @@ public:
 	float getMaxVelocity();
 	float getAngle();
 	float getTargetAngle();
+	const char*getClassName();
 	// AUTO-GENERATED METHODS
 };
 

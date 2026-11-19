@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	PVInstance*getAncestorPVInstance();
 	// AUTO-GENERATED METHODS
 };
 

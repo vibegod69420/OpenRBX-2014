@@ -17,6 +17,7 @@ public:
 	};
 
 	void closeState();
+	void close();
 	// AUTO-GENERATED METHODS
 };
 

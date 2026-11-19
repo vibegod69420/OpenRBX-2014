@@ -18,6 +18,7 @@ public:
 	};
 
 	void fireEventTarget();
+	void*getReplicator();
 	// AUTO-GENERATED METHODS
 };
 

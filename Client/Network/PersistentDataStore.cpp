@@ -40,6 +40,19 @@ void PersistentDataStore::destroyInstance(PersistentDataStore* p)
 	}
 }
 
+struct _PDSCall94C470
+{
+	void sub_94c470(void* arg, int flag);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0094aff0
+PersistentDataStore* __cdecl PersistentDataStore::sub_94aff0(void* arg)
+{
+	volatile int local = 0;
+	((_PDSCall94C470*)this)->sub_94c470(arg, 1);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

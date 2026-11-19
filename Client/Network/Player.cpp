@@ -28,6 +28,24 @@ void Player::fireEventTarget()
 	}
 }
 
+class NetworkPeer
+{
+public:
+	bool contains(NetworkPeer* peer);
+};
+
+NetworkPeer* getCurrentNetworkPeer();
+
+// FUNCTION: ROBLOXSTUDIO 0x00c3dd00
+void* Player::getReplicator()
+{
+	NetworkPeer* peer = *(NetworkPeer**)((char*)this + 0x0C);
+	if (peer->contains(getCurrentNetworkPeer()))
+		return (char*)this - 0x1C;
+
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

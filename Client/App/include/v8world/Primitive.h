@@ -17,6 +17,7 @@ public:
 	};
 
 	void*getFirstInClump();
+	void clearDirtyFlags();
 	// AUTO-GENERATED METHODS
 };
 

@@ -21,6 +21,7 @@ public:
 	void dispose();
 	void onDestroy();
 	static void destroyInstance(PersistentDataStore* p);
+	PersistentDataStore* __cdecl sub_94aff0(void* arg);
 	// AUTO-GENERATED METHODS
 };
 

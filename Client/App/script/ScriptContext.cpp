@@ -21,6 +21,16 @@ void ScriptContext::closeState()
 	ScriptContextDeleteState(*(void**)this);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008cfc20
+void ScriptContext::close()
+{
+	void* it;
+	void* state = *(void**)this;
+
+	((ScriptContextUnlinkHelper*)this)->unlink(&it, *(void**)state, state);
+	ScriptContextDeleteState(*(void**)this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
