@@ -18,6 +18,7 @@ public:
 
 	double getValue();
 	double getCurrentValue();
+	int getIntValue();
 	// AUTO-GENERATED METHODS
 };
 

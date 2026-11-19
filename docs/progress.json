@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 12:24:48 UTC",
+ "updated_at": "2026-11-19 12:33:17 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 7.9124,
- "implemented_total": 742,
- "function_annotations": 742,
+ "matchable_coverage_pct": 7.9231,
+ "implemented_total": 743,
+ "function_annotations": 743,
  "stub_annotations": 0,
- "perfect_100_count": 741,
- "matched_real_functions": 741,
+ "perfect_100_count": 742,
+ "matched_real_functions": 742,
  "average_match_pct": 99.87,
- "overall_function_coverage_pct": 1.8269,
- "overall_byte_coverage_pct": 0.2652,
+ "overall_function_coverage_pct": 1.8293,
+ "overall_byte_coverage_pct": 0.2662,
  "usage": {
-  "calls_24h": 4832,
+  "calls_24h": 4859,
   "failures_24h": 0,
-  "completion_tokens_24h": 55312401,
-  "reasoning_tokens_24h": 54298113,
-  "avg_latency_s": 200.9
+  "completion_tokens_24h": 55709548,
+  "reasoning_tokens_24h": 54688176,
+  "avg_latency_s": 201.4
  },
- "functions_total": 742,
+ "functions_total": 743,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -107,6 +107,12 @@
    "bytes": 265
   },
   {
+   "name": "RobloxStudio/SoundServiceStatsItem.cpp",
+   "matched": 3,
+   "functions": 3,
+   "bytes": 218
+  },
+  {
    "name": "RobloxStudio/ArchiveBinder.cpp",
    "matched": 2,
    "functions": 2,
@@ -176,12 +182,6 @@
    "name": "App/gui",
    "matched": 3,
    "functions": 3,
-   "bytes": 118
-  },
-  {
-   "name": "RobloxStudio/SoundServiceStatsItem.cpp",
-   "matched": 2,
-   "functions": 2,
    "bytes": 118
   },
   {
@@ -4233,9 +4233,21 @@
    "matched": 741,
    "implemented": 742,
    "pct": 7.9124
+  },
+  {
+   "t": "2026-11-19 12:33:17 UTC",
+   "matched": 742,
+   "implemented": 743,
+   "pct": 7.9231
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T12:26:51",
+   "address": "0x00704f00",
+   "name": "SoundServiceStatsItem::getIntValue",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T12:20:33",
    "address": "0x0091ca30",
@@ -4949,13 +4961,7 @@
    "address": "0x00619df0",
    "name": "RBX::GfxBinding::clear",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T05:55:09",
-   "address": "0x00629630",
-   "name": "intrinsic",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 37.63
+ "match_rate_per_hour": 37.41
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 12:24:48 UTC",
+  "updated_at": "2026-11-19 12:33:17 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 7.9124,
-  "implemented_total": 742,
-  "function_annotations": 742,
+  "matchable_coverage_pct": 7.9231,
+  "implemented_total": 743,
+  "function_annotations": 743,
   "stub_annotations": 0,
-  "perfect_100_count": 741,
-  "matched_real_functions": 741,
+  "perfect_100_count": 742,
+  "matched_real_functions": 742,
   "average_match_pct": 99.87,
-  "overall_function_coverage_pct": 1.8269,
-  "overall_byte_coverage_pct": 0.2652,
+  "overall_function_coverage_pct": 1.8293,
+  "overall_byte_coverage_pct": 0.2662,
   "usage": {
-    "calls_24h": 4832,
+    "calls_24h": 4859,
     "failures_24h": 0,
-    "completion_tokens_24h": 55312401,
-    "reasoning_tokens_24h": 54298113,
-    "avg_latency_s": 200.9
+    "completion_tokens_24h": 55709548,
+    "reasoning_tokens_24h": 54688176,
+    "avg_latency_s": 201.4
   },
   "functions": [
     {
@@ -3220,6 +3220,17 @@
       "file": "Client/RobloxStudio/SoundServiceStatsItem.cpp",
       "orig_size": 57,
       "recomp_size": 22,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00704f00",
+      "kind": "FUNCTION",
+      "name": "SoundServiceStatsItem::getIntValue",
+      "mangled": "?getIntValue@SoundServiceStatsItem@@QAEHXZ",
+      "file": "Client/RobloxStudio/SoundServiceStatsItem.cpp",
+      "orig_size": 100,
+      "recomp_size": 45,
       "match_pct": 100.0,
       "matchable": true
     },

@@ -33,6 +33,38 @@ double SoundServiceStatsItem::getCurrentValue()
 	return reinterpret_cast<SoundServiceStatsItemLayout*>(this)->value;
 }
 
+struct SoundServiceStatsItemSetModeHelper
+{
+	void setMode(int, int);
+};
+
+struct SoundServiceStatsItemIntLayout
+{
+	char pad0[0x18];
+	int state;
+	char pad1c[0x0C];
+	char* data;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00704f00
+int SoundServiceStatsItem::getIntValue()
+{
+	reinterpret_cast<SoundServiceStatsItemHelper*>(this)->update();
+	reinterpret_cast<SoundServiceStatsItemSetModeHelper*>(this)->setMode(4, 5);
+
+	SoundServiceStatsItemIntLayout* self = reinterpret_cast<SoundServiceStatsItemIntLayout*>(this);
+	int state = self->state;
+	state -= 4;
+	if (state == 0 || --state == 0)
+	{
+		char* p = self->data;
+		p = *reinterpret_cast<char**>(p + 4);
+		return *reinterpret_cast<int*>(p + 4);
+	}
+
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
