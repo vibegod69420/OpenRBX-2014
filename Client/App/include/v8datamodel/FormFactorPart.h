@@ -24,6 +24,7 @@ public:
 	void createJoints();
 	int getField104() const;
 	bool getSubFlagE0_111() const;
+	void breakJoints();
 	// AUTO-GENERATED METHODS
 };
 

@@ -17,6 +17,7 @@ public:
 	};
 
 	void __cdecl destroy();
+	void __cdecl destruct();
 	// AUTO-GENERATED METHODS
 };
 

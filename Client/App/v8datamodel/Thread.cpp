@@ -49,6 +49,19 @@ void Thread::executeScheduledJobs()
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006c34f0
+void Thread::runJobs()
+{
+	ScheduledJobEntry* cur = *(ScheduledJobEntry**)((char*)this + 0x220);
+	ScheduledJobEntry* end = *(ScheduledJobEntry**)((char*)this + 0x224);
+
+	while (cur != end)
+	{
+		cur->job->execute();
+		++cur;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace TaskScheduler

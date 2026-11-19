@@ -31,6 +31,16 @@ BodyColorsGlobal* BodyColors::getContextOwner()
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0063c040
+BodyColorsGlobal* BodyColors::getContextOwner() const
+{
+	BodyColorsGlobal* obj = *(BodyColorsGlobal**)((char*)this + 0x0C);
+	BodyColorsGlobal* global = getBodyColorsGlobal();
+	if (obj->check(global))
+		return (BodyColorsGlobal*)((char*)this - 0x1C);
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

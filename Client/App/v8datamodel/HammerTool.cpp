@@ -21,6 +21,21 @@ void HammerTool::clearTarget()
 	_vtable_or_head = 0;
 }
 
+class HammerToolSubobject
+{
+public:
+	void init();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c048d0
+HammerTool::HammerTool()
+{
+	HammerToolSubobject* sub = reinterpret_cast<HammerToolSubobject*>(reinterpret_cast<char*>(this) + 12);
+	reinterpret_cast<int*>(this)[1] = 0;
+	reinterpret_cast<int*>(this)[2] = -1;
+	sub->init();
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

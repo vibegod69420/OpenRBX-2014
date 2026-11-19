@@ -17,6 +17,7 @@ public:
 	};
 
 	void clearTarget();
+	HammerTool();
 	// AUTO-GENERATED METHODS
 };
 

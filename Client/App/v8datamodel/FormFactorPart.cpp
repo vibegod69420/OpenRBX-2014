@@ -40,6 +40,16 @@ bool FormFactorPart::getSubFlagE0_111() const
 	return subb_00e0_0111->val;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00890c90
+void FormFactorPart::breakJoints()
+{
+	JointsService* service = getJointsService(this);
+	if (service)
+	{
+		service->createJoint(*(void**)((char*)this + 0xE0), 0);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

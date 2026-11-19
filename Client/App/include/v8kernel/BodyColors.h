@@ -20,6 +20,7 @@ public:
 	void onDestroy();
 	static void destroyInstance(BodyColors* p);
 	BodyColorsGlobal*getContextOwner();
+	BodyColorsGlobal*getContextOwner() const;
 	// AUTO-GENERATED METHODS
 };
 

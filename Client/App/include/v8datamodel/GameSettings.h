@@ -5,6 +5,7 @@
 
 namespace RBX {
 
+class DataModel;
 // AUTO-GENERATED HELPERS
 
 class GameSettings
@@ -18,6 +19,7 @@ public:
 
 	void onDestroy();
 	static void destroyInstance(GameSettings* p);
+	DataModel*getDataModel();
 	// AUTO-GENERATED METHODS
 };
 
