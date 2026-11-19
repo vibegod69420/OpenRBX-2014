@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	~LineSegment();
 	// AUTO-GENERATED METHODS
 };
 

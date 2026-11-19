@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 02:19:11 UTC",
+  "updated_at": "2026-11-19 02:26:38 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 5.4778,
-  "implemented_total": 513,
-  "function_annotations": 513,
+  "matchable_coverage_pct": 5.5099,
+  "implemented_total": 516,
+  "function_annotations": 516,
   "stub_annotations": 0,
-  "perfect_100_count": 513,
-  "matched_real_functions": 513,
+  "perfect_100_count": 516,
+  "matched_real_functions": 516,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 1.2648,
-  "overall_byte_coverage_pct": 0.1385,
+  "overall_function_coverage_pct": 1.2722,
+  "overall_byte_coverage_pct": 0.14,
   "usage": {
-    "calls_24h": 2258,
+    "calls_24h": 2293,
     "failures_24h": 0,
-    "completion_tokens_24h": 24198057,
-    "reasoning_tokens_24h": 23785076,
-    "avg_latency_s": 187.1
+    "completion_tokens_24h": 24598316,
+    "reasoning_tokens_24h": 24179935,
+    "avg_latency_s": 187.3
   },
   "functions": [
     {
@@ -2377,6 +2377,17 @@
       "matchable": true
     },
     {
+      "address": "0x007024f0",
+      "kind": "FUNCTION",
+      "name": "G3D::G3D::LineSegment::~LineSegment",
+      "mangled": "??1LineSegment@G3D@@QAE@XZ",
+      "file": "Client/Rendering/g3d/G3Dcpp/LineSegment.cpp",
+      "orig_size": 44,
+      "recomp_size": 44,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00717520",
       "kind": "FUNCTION",
       "name": "G3D::TextInput::TokenException::number",
@@ -4445,6 +4456,17 @@
       "matchable": true
     },
     {
+      "address": "0x00ac85f0",
+      "kind": "FUNCTION",
+      "name": "check",
+      "mangled": "?hasAny@Vector2int16@G3D@@QAE_NXZ",
+      "file": "Client/Rendering/g3d/G3Dcpp/Vector2int16.cpp",
+      "orig_size": 50,
+      "recomp_size": 50,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00af1120",
       "kind": "FUNCTION",
       "name": "RBX::MultiJoint::getJointType",
@@ -4485,6 +4507,17 @@
       "file": "Client/App/v8datamodel/KeyframeSequenceProvider.cpp",
       "orig_size": 22,
       "recomp_size": 22,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b391b0",
+      "kind": "FUNCTION",
+      "name": "RBX::CustomStatsGuiJSON::~CustomStatsGuiJSON",
+      "mangled": "??1CustomStatsGuiJSON@RBX@@QAE@XZ",
+      "file": "Client/App/v8datamodel/CustomStatsGuiJSON.cpp",
+      "orig_size": 45,
+      "recomp_size": 45,
       "match_pct": 100.0,
       "matchable": true
     },

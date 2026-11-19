@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	~CustomStatsGuiJSON();
 	// AUTO-GENERATED METHODS
 };
 
