@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 08:20:17 UTC",
+ "updated_at": "2026-11-19 08:48:36 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 7.2184,
- "implemented_total": 677,
- "function_annotations": 677,
+ "matchable_coverage_pct": 7.229,
+ "implemented_total": 678,
+ "function_annotations": 678,
  "stub_annotations": 0,
- "perfect_100_count": 676,
- "matched_real_functions": 676,
+ "perfect_100_count": 677,
+ "matched_real_functions": 677,
  "average_match_pct": 99.86,
- "overall_function_coverage_pct": 1.6666,
- "overall_byte_coverage_pct": 0.2151,
+ "overall_function_coverage_pct": 1.6691,
+ "overall_byte_coverage_pct": 0.216,
  "usage": {
-  "calls_24h": 3870,
+  "calls_24h": 4013,
   "failures_24h": 0,
-  "completion_tokens_24h": 42994445,
-  "reasoning_tokens_24h": 42261061,
-  "avg_latency_s": 194.0
+  "completion_tokens_24h": 44923948,
+  "reasoning_tokens_24h": 44156549,
+  "avg_latency_s": 196.0
  },
- "functions_total": 677,
+ "functions_total": 678,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -72,9 +72,9 @@
   },
   {
    "name": "App/script",
-   "matched": 23,
-   "functions": 23,
-   "bytes": 708
+   "matched": 24,
+   "functions": 24,
+   "bytes": 796
   },
   {
    "name": "App/humanoid",
@@ -4089,9 +4089,21 @@
    "matched": 676,
    "implemented": 677,
    "pct": 7.2184
+  },
+  {
+   "t": "2026-11-19 08:48:36 UTC",
+   "matched": 677,
+   "implemented": 678,
+   "pct": 7.229
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T08:45:07",
+   "address": "0x0079f500",
+   "name": "RBX::Scripting::DebuggerBreakpoint::sub_79F500",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T08:16:17",
    "address": "0x00cbbe60",
@@ -4805,13 +4817,7 @@
    "address": "0x00cf40b0",
    "name": "TagItemDispatch",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T04:00:39",
-   "address": "0x00892460",
-   "name": "RBX::PartInstance::getSubFlagE0_110",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 43.29
+ "match_rate_per_hour": 42.08
 }

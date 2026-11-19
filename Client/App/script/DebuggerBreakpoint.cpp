@@ -15,6 +15,18 @@ DebuggerBreakpoint::DebuggerBreakpoint()
 	this->_vtable_or_head = DebuggerBreakpoint_CreateDebugInfo();
 }
 
+void __stdcall sub_7A3000(void* out, int value, int ptr);
+void __cdecl sub_CF6522(void* ptr);
+
+// FUNCTION: ROBLOXSTUDIO 0x0079f500
+void DebuggerBreakpoint::sub_79F500()
+{
+	int local;
+	void* node = (void*)this->_vtable_or_head;
+	sub_7A3000(&local, *(int*)node, (int)node);
+	sub_CF6522((void*)this->_vtable_or_head);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Scripting

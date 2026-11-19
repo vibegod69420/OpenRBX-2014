@@ -18,6 +18,7 @@ public:
 	};
 
 	DebuggerBreakpoint();
+	void sub_79F500();
 	// AUTO-GENERATED METHODS
 };
 
