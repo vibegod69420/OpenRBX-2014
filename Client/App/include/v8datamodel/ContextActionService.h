@@ -18,6 +18,7 @@ public:
 
 	~ContextActionService();
 	void unbindAllActions();
+	void clearAllBoundActions();
 	// AUTO-GENERATED METHODS
 };
 

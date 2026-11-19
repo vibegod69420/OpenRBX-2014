@@ -85,6 +85,40 @@ void ContextActionService::unbindAllActions()
 	*reinterpret_cast<void**>(this) = reinterpret_cast<void*>(0x00E33A28);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b11490
+void ContextActionService::clearAllBoundActions()
+{
+	ContextActionBoundString* str = *reinterpret_cast<ContextActionBoundString**>(reinterpret_cast<char*>(this) + 0x34);
+	if (str)
+	{
+		if (str->_Myres >= 0x10)
+			::operator delete(str->_Bx._Ptr);
+
+		str->_Myres = 0x0F;
+		str->_Mysize = 0;
+		str->_Bx._Buf[0] = 0;
+		::operator delete(str);
+	}
+
+	str = *reinterpret_cast<ContextActionBoundString**>(reinterpret_cast<char*>(this) + 0x30);
+	if (str)
+	{
+		if (str->_Myres >= 0x10)
+			::operator delete(str->_Bx._Ptr);
+
+		str->_Myres = 0x0F;
+		str->_Mysize = 0;
+		str->_Bx._Buf[0] = 0;
+		::operator delete(str);
+	}
+
+	ContextActionBoundTree* boundTree = reinterpret_cast<ContextActionBoundTree*>(reinterpret_cast<char*>(this) + 0x20);
+	boundTree->_Tidy();
+	::operator delete(boundTree->_Myhead);
+
+	*reinterpret_cast<void**>(this) = reinterpret_cast<void*>(0x00E33A28);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

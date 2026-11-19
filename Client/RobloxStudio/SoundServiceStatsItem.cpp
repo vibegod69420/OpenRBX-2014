@@ -65,6 +65,21 @@ int SoundServiceStatsItem::getIntValue()
 	return 0;
 }
 
+struct SoundServiceStatsItemBoolLayout
+{
+	char pad[0x20];
+	bool value;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00705900
+bool SoundServiceStatsItem::getBoolValue()
+{
+	reinterpret_cast<SoundServiceStatsItemHelper*>(this)->update();
+	reinterpret_cast<SoundServiceStatsItemHelper*>(this)->update();
+	reinterpret_cast<SoundServiceStatsItemHelper*>(this)->setMode(1);
+	return reinterpret_cast<SoundServiceStatsItemBoolLayout*>(this)->value;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void*findAncestorCast() const;
 	// AUTO-GENERATED METHODS
 };
 

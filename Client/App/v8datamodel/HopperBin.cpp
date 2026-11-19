@@ -75,6 +75,49 @@ HopperBin::HopperBin()
 	*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x90) = 4;
 }
 
+namespace {
+
+struct HopperBinScriptHost
+{
+	int run(HopperBin* owner);
+};
+
+typedef unsigned char (__cdecl *HopperBinAssertCallback)(int, const char*, int);
+
+void __cdecl HopperBin_assertFailure(int level, const char* message);
+
+} // namespace
+
+// FUNCTION: ROBLOXSTUDIO 0x00928950
+int HopperBin::runScript()
+{
+	HopperBinScriptHost* host = *reinterpret_cast<HopperBinScriptHost**>(reinterpret_cast<char*>(this) + 0x38);
+	if (host)
+	{
+		return host->run(this);
+	}
+
+	unsigned char enabled = *reinterpret_cast<unsigned char*>(0x012DE657);
+	if (enabled)
+	{
+		HopperBinAssertCallback callback = *reinterpret_cast<HopperBinAssertCallback*>(0x012DE694);
+		if (callback)
+		{
+			if (callback(0x0010062B8, (const char*)0x00E80064, 0x69))
+			{
+				goto done;
+			}
+
+			enabled = *reinterpret_cast<unsigned char*>(0x012DE657);
+		}
+
+		HopperBin_assertFailure((int)enabled, (const char*)0x00E800A8);
+	}
+
+done:
+	return -1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -19,6 +19,7 @@ public:
 	double getValue();
 	double getCurrentValue();
 	int getIntValue();
+	bool getBoolValue();
 	// AUTO-GENERATED METHODS
 };
 
