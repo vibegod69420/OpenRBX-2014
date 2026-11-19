@@ -17,6 +17,7 @@ public:
 	};
 
 	void reset();
+	void setupConnections();
 	// AUTO-GENERATED METHODS
 };
 

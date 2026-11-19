@@ -25,6 +25,28 @@ void QSignalMapper::reset()
     }
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x004f2c80
+void QSignalMapper::setupConnections()
+{
+	typedef void (__thiscall QSignalMapper::*ConnectFn)(void*, void*);
+	ConnectFn connect = *(ConnectFn*)0x00E1119C;
+
+	(this->*connect)(*(void**)((char*)this + 0x274), *(void**)((char*)this + 0x278));
+
+	if (*(unsigned char*)0x013000F0)
+	{
+		(this->*connect)(*(void**)((char*)this + 0x278), *(void**)((char*)this + 0x274));
+	}
+	else
+	{
+		(this->*connect)(*(void**)((char*)this + 0x278), *(void**)((char*)this + 0x27C));
+		(this->*connect)(*(void**)((char*)this + 0x27C), *(void**)((char*)this + 0x274));
+	}
+
+	(this->*connect)(*(void**)((char*)this + 0x274), *(void**)((char*)this + 0x280));
+	(this->*connect)(*(void**)((char*)this + 0x280), *(void**)((char*)this + 0x318));
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
