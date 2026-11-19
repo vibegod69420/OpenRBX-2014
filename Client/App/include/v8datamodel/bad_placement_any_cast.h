@@ -17,6 +17,7 @@ public:
 	};
 
 	int getConst15812400() const;
+	static void deleteObjectStatic(RbxVDelBase* p);
 	// AUTO-GENERATED METHODS
 };
 

@@ -17,6 +17,7 @@ public:
 	};
 
 	void raise();
+	int __cdecl getCode();
 	// AUTO-GENERATED METHODS
 };
 

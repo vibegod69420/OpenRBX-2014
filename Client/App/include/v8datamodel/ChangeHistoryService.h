@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	int IsRecording();
 	// AUTO-GENERATED METHODS
 };
 

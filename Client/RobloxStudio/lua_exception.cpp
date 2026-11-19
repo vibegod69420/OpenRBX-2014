@@ -13,6 +13,12 @@ void lua_exception::raise()
 	lua_exception_throw(*(int*)((char*)this + 0x0C), -1, 0);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a37a80
+int __cdecl lua_exception::getCode()
+{
+	return *(int*)((char*)this + 0x44);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

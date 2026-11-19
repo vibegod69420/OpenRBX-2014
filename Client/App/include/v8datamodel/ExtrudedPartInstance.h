@@ -17,6 +17,7 @@ public:
 	};
 
 	int getConst19178964() const;
+	char*extrudedPartInstance_00892710();
 	// AUTO-GENERATED METHODS
 };
 

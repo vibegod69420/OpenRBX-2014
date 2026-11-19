@@ -17,6 +17,7 @@ public:
 	};
 
 	int getErrorEmphasis() const;
+	float getSleepTime() const;
 	// AUTO-GENERATED METHODS
 };
 

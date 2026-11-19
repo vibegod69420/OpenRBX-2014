@@ -19,6 +19,7 @@ public:
 	};
 
 	void freeMember0C();
+	void wait();
 	// AUTO-GENERATED METHODS
 };
 

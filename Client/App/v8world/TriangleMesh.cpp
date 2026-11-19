@@ -62,6 +62,14 @@ int TriangleMesh::getTriangleCount() const
 	return static_cast<int>(array->end - array->begin);
 }
 
+void* sub_B5BD60(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x0099c7f0
+void* TriangleMesh::getPart() const
+{
+	return sub_B5BD60(const_cast<TriangleMesh*>(this));
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
