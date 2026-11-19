@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void __fastcall destroyStringRange(void* end);
 	// AUTO-GENERATED METHODS
 };
 

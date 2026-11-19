@@ -45,6 +45,35 @@ void ContentPropertyItem::update()
     }
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00470560
+struct ContentPropertyItemSub
+{
+	void clearRange(int* end, ContentPropertyItem* owner);
+};
+
+void ContentPropertyItem::clear()
+{
+	char* sub = reinterpret_cast<char*>(this) + 0x14;
+	if (*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x1c) != 0)
+	{
+		reinterpret_cast<ContentPropertyItemSub*>(sub)->clearRange(
+			*reinterpret_cast<int**>(sub + 0x14) + *reinterpret_cast<int*>(sub + 0x04),
+			this);
+
+		int* begin = *reinterpret_cast<int**>(sub + 0x14);
+		int* end = begin + *reinterpret_cast<int*>(sub + 0x04);
+		if (begin != end)
+		{
+			do
+			{
+				*begin = 0;
+				++begin;
+			}
+			while (begin != end);
+		}
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

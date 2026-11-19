@@ -17,6 +17,7 @@ public:
 	};
 
 	int getCount() const;
+	void update();
 	// AUTO-GENERATED METHODS
 };
 

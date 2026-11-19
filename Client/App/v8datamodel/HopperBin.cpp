@@ -52,6 +52,29 @@ void HopperBin::deactivate()
 	}
 }
 
+namespace {
+
+struct HopperBinBase
+{
+	void construct();
+};
+
+} // namespace
+
+// FUNCTION: ROBLOXSTUDIO 0x00928040
+HopperBin::HopperBin()
+{
+	reinterpret_cast<HopperBinBase*>(this)->construct();
+
+	*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x00) = 0x00E7FB14;
+	*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x04) = 0x00E7FBB0;
+	*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x18) = 0x00E7FBB8;
+	*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x1C) = 0x00E7FBC4;
+	*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x64) = 0x00E7FBD4;
+	*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x94) = 1;
+	*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x90) = 4;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -19,6 +19,7 @@ public:
 
 	void onDestroy();
 	void destroySubPtr0C();
+	void clear();
 	// AUTO-GENERATED METHODS
 };
 

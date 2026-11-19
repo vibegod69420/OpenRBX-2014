@@ -19,6 +19,7 @@ public:
 
 	bool getFlag190() const;
 	void deactivate();
+	HopperBin();
 	// AUTO-GENERATED METHODS
 };
 
