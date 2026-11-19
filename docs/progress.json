@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 12:41:37 UTC",
+ "updated_at": "2026-11-19 12:49:53 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 7.9338,
- "implemented_total": 744,
- "function_annotations": 744,
+ "matchable_coverage_pct": 7.9552,
+ "implemented_total": 746,
+ "function_annotations": 746,
  "stub_annotations": 0,
- "perfect_100_count": 743,
- "matched_real_functions": 743,
+ "perfect_100_count": 745,
+ "matched_real_functions": 745,
  "average_match_pct": 99.87,
- "overall_function_coverage_pct": 1.8318,
- "overall_byte_coverage_pct": 0.2671,
+ "overall_function_coverage_pct": 1.8367,
+ "overall_byte_coverage_pct": 0.2701,
  "usage": {
-  "calls_24h": 4886,
+  "calls_24h": 4919,
   "failures_24h": 0,
-  "completion_tokens_24h": 56094214,
-  "reasoning_tokens_24h": 55065092,
-  "avg_latency_s": 201.7
+  "completion_tokens_24h": 56546365,
+  "reasoning_tokens_24h": 55505661,
+  "avg_latency_s": 202.1
  },
- "functions_total": 744,
+ "functions_total": 746,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -48,21 +48,21 @@
   },
   {
    "name": "Rendering/GfxRender",
-   "matched": 50,
-   "functions": 50,
-   "bytes": 1988
+   "matched": 51,
+   "functions": 51,
+   "bytes": 2134
+  },
+  {
+   "name": "App/v8kernel",
+   "matched": 57,
+   "functions": 57,
+   "bytes": 1643
   },
   {
    "name": "Rendering/g3d",
    "matched": 21,
    "functions": 21,
    "bytes": 1618
-  },
-  {
-   "name": "App/v8kernel",
-   "matched": 56,
-   "functions": 56,
-   "bytes": 1509
   },
   {
    "name": "Rendering/GfxCore",
@@ -4245,9 +4245,27 @@
    "matched": 743,
    "implemented": 744,
    "pct": 7.9338
+  },
+  {
+   "t": "2026-11-19 12:49:53 UTC",
+   "matched": 745,
+   "implemented": 746,
+   "pct": 7.9552
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T12:41:54",
+   "address": "0x00656940",
+   "name": "RBX::Graphics::LightObject::getSpatialOwner",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T12:41:41",
+   "address": "0x005bd880",
+   "name": "btBvhTriangleMeshShape::removeFromShapeArray",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T12:33:29",
    "address": "0x00c87230",
@@ -4955,19 +4973,7 @@
    "address": "0x0059b7e0",
    "name": "btBvhTriangleMeshShape::destroyInternalBuffer",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T06:03:24",
-   "address": "0x00c86360",
-   "name": "std::indirect_streambuf::sync",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T06:00:25",
-   "address": "0x00b2d3c0",
-   "name": "",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 37.2
+ "match_rate_per_hour": 37.05
 }

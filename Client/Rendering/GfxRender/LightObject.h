@@ -18,6 +18,7 @@ public:
 	};
 
 	void markDirty();
+	void*getSpatialOwner();
 	// AUTO-GENERATED METHODS
 };
 

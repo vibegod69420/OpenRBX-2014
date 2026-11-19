@@ -21,6 +21,7 @@ public:
 	int getConst60() const;
 	char* getBufferOffset30_10() const;
 	void destroyInternalBuffer();
+	void removeFromShapeArray();
 	// AUTO-GENERATED METHODS
 };
 

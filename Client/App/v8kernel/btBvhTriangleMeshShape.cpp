@@ -65,6 +65,44 @@ void btBvhTriangleMeshShape::destroyInternalBuffer()
 	*reinterpret_cast<int*>(this->_pad_buf_0030 + 8) = 0;
 }
 
+struct btShapeRefArray
+{
+	btBvhTriangleMeshShape** m_data;
+	int m_size;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x005bd880
+void btBvhTriangleMeshShape::removeFromShapeArray()
+{
+	typedef void (__cdecl* AssertFailureFunc)(const char*, const char*, int);
+	AssertFailureFunc assertFailure = *(AssertFailureFunc*)0x00E10800;
+
+	int index = *(int*)(this->_pad_buf_0030 + 0x18);
+	btShapeRefArray* shapeArray = *(btShapeRefArray**)(this->_pad_buf_0030 + 0x24);
+	btShapeRefArray* savedShapeArray = shapeArray;
+
+	if (index < 0 || index >= shapeArray->m_size)
+	{
+		assertFailure((const char*)0x01037D60, (const char*)0x01037450, 0x579);
+		shapeArray = savedShapeArray;
+	}
+
+	if (shapeArray->m_data[index] != this)
+	{
+		assertFailure((const char*)0x010379CC, (const char*)0x01037450, 0x936);
+	}
+
+	index = *(int*)(this->_pad_buf_0030 + 0x18);
+	shapeArray = *(btShapeRefArray**)(this->_pad_buf_0030 + 0x24);
+
+	if (index < 0 || index >= shapeArray->m_size)
+	{
+		assertFailure((const char*)0x01037D60, (const char*)0x01037450, 0x579);
+	}
+
+	shapeArray->m_data[index] = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

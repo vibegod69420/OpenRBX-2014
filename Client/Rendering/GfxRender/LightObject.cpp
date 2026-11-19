@@ -39,6 +39,30 @@ void LightObject::markDirty()
 	}
 }
 
+struct LightKey;
+
+struct LightKeyProvider
+{
+	LightKey* getKey();
+};
+
+struct LightKeyList
+{
+	bool contains(LightKey* key);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00656940
+void* LightObject::getSpatialOwner()
+{
+	LightKeyList* list = *(LightKeyList**)((char*)this + 0x0C);
+	LightKey* key = reinterpret_cast<LightKeyProvider*>(this)->getKey();
+
+	if (list->contains(key))
+		return (char*)this - 0x1C;
+
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
