@@ -17,6 +17,7 @@ public:
 	};
 
 	bool IsEmpty() const;
+	void __cdecl Sub_CC76F0(int* out);
 	// AUTO-GENERATED METHODS
 };
 

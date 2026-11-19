@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 05:24:12 UTC",
+ "updated_at": "2026-11-19 05:40:45 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 6.599,
- "implemented_total": 619,
- "function_annotations": 619,
+ "matchable_coverage_pct": 6.6097,
+ "implemented_total": 620,
+ "function_annotations": 620,
  "stub_annotations": 0,
- "perfect_100_count": 618,
- "matched_real_functions": 618,
+ "perfect_100_count": 619,
+ "matched_real_functions": 619,
  "average_match_pct": 99.85,
- "overall_function_coverage_pct": 1.5236,
- "overall_byte_coverage_pct": 0.1834,
+ "overall_function_coverage_pct": 1.5261,
+ "overall_byte_coverage_pct": 0.1843,
  "usage": {
-  "calls_24h": 3140,
+  "calls_24h": 3208,
   "failures_24h": 0,
-  "completion_tokens_24h": 34224748,
-  "reasoning_tokens_24h": 33653669,
-  "avg_latency_s": 190.6
+  "completion_tokens_24h": 35168705,
+  "reasoning_tokens_24h": 34583203,
+  "avg_latency_s": 192.1
  },
- "functions_total": 619,
+ "functions_total": 620,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 254,
-   "functions": 255,
-   "bytes": 6252
+   "matched": 255,
+   "functions": 256,
+   "bytes": 6336
   },
   {
    "name": "App/v8world",
@@ -667,6 +667,17 @@
    "file": "Client/Network/RakPeerInterface.cpp",
    "orig_size": 56,
    "recomp_size": 56,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00cc76f0",
+   "kind": "FUNCTION",
+   "name": "RakNet::PluginInterface2::Sub_CC76F0",
+   "mangled": "?Sub_CC76F0@PluginInterface2@RakNet@@QAAXPAH@Z",
+   "file": "Client/App/v8datamodel/PluginInterface2.cpp",
+   "orig_size": 84,
+   "recomp_size": 84,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3254,17 +3265,6 @@
    "recomp_size": 50,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x0091bb70",
-   "kind": "FUNCTION",
-   "name": "RBX::VehicleSeat::isOccupied",
-   "mangled": "?isOccupied@VehicleSeat@RBX@@QAEHXZ",
-   "file": "Client/App/v8datamodel/VehicleSeat.cpp",
-   "orig_size": 31,
-   "recomp_size": 31,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -3981,9 +3981,21 @@
    "matched": 618,
    "implemented": 619,
    "pct": 6.599
+  },
+  {
+   "t": "2026-11-19 05:40:45 UTC",
+   "matched": 619,
+   "implemented": 620,
+   "pct": 6.6097
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T05:37:47",
+   "address": "0x00cc76f0",
+   "name": "RakNet::PluginInterface2::Sub_CC76F0",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T05:21:08",
    "address": "0x00a1c880",
@@ -4697,13 +4709,7 @@
    "address": "0x009439b0",
    "name": "RBX::Toolbar::getRibbonTool",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T02:01:18",
-   "address": "0x00c9cf70",
-   "name": "RBX::Network::OneQuarterClusterPacketCache::getFieldAD8",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 48.73
+ "match_rate_per_hour": 47.77
 }
