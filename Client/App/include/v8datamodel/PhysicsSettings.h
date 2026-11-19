@@ -5,6 +5,7 @@
 
 namespace RBX {
 
+extern int s_value_00a70890;
 // AUTO-GENERATED HELPERS
 
 class PhysicsSettings
@@ -16,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	int getGlobal_0890() const;
 	// AUTO-GENERATED METHODS
 };
 

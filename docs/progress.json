@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 16:24:08 UTC",
+ "updated_at": "2026-11-19 16:33:01 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 8.7133,
- "implemented_total": 817,
- "function_annotations": 817,
+ "matchable_coverage_pct": 8.724,
+ "implemented_total": 818,
+ "function_annotations": 818,
  "stub_annotations": 0,
- "perfect_100_count": 816,
- "matched_real_functions": 816,
+ "perfect_100_count": 817,
+ "matched_real_functions": 817,
  "average_match_pct": 99.88,
- "overall_function_coverage_pct": 2.0118,
- "overall_byte_coverage_pct": 0.3225,
+ "overall_function_coverage_pct": 2.0143,
+ "overall_byte_coverage_pct": 0.3258,
  "usage": {
-  "calls_24h": 5729,
+  "calls_24h": 5779,
   "failures_24h": 0,
-  "completion_tokens_24h": 66453258,
-  "reasoning_tokens_24h": 65188312,
-  "avg_latency_s": 206.0
+  "completion_tokens_24h": 67050700,
+  "reasoning_tokens_24h": 65760679,
+  "avg_latency_s": 205.5
  },
- "functions_total": 817,
+ "functions_total": 818,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 327,
-   "functions": 328,
-   "bytes": 9834
+   "matched": 328,
+   "functions": 329,
+   "bytes": 10144
   },
   {
    "name": "App/v8world",
@@ -2940,6 +2940,17 @@
    "matchable": true
   },
   {
+   "address": "0x00a70890",
+   "kind": "FUNCTION",
+   "name": "RBX::PhysicsSettings::getGlobal_0890",
+   "mangled": "?getGlobal_0890@PhysicsSettings@RBX@@QBEHXZ",
+   "file": "Client/App/v8datamodel/PhysicsSettings.cpp",
+   "orig_size": 310,
+   "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00a685e0",
    "kind": "FUNCTION",
    "name": "RBX::LogService::Clear",
@@ -3288,17 +3299,6 @@
    "file": "Client/App/v8datamodel/filtering_stream.cpp",
    "orig_size": 57,
    "recomp_size": 57,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00a2b9b0",
-   "kind": "FUNCTION",
-   "name": "std::filtering_stream::filtering_stream",
-   "mangled": "??0filtering_stream@std@@QAE@XZ",
-   "file": "Client/App/v8datamodel/filtering_stream.cpp",
-   "orig_size": 87,
-   "recomp_size": 87,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -4389,9 +4389,21 @@
    "matched": 816,
    "implemented": 817,
    "pct": 8.7133
+  },
+  {
+   "t": "2026-11-19 16:33:01 UTC",
+   "matched": 817,
+   "implemented": 818,
+   "pct": 8.724
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T16:24:39",
+   "address": "0x00a70890",
+   "name": "RBX::PhysicsSettings::getGlobal_0890",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T16:15:45",
    "address": "0x0060db00",
@@ -5105,13 +5117,7 @@
    "address": "0x00412e50",
    "name": "RBX::sp_counted_impl_pd::destroy",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T11:07:15",
-   "address": "0x008fa600",
-   "name": "boost::thread_data::run_bind",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 34.46
+ "match_rate_per_hour": 34.29
 }
