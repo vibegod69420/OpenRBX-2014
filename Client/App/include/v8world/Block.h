@@ -21,6 +21,7 @@ public:
 	void __cdecl release();
 	Block*allocate();
 	Block*allocate2();
+	Block*allocate3();
 	// AUTO-GENERATED METHODS
 };
 

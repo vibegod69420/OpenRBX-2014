@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 21:29:12 UTC",
+ "updated_at": "2026-11-19 21:38:12 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 9.5782,
- "implemented_total": 901,
- "function_annotations": 901,
+ "matchable_coverage_pct": 9.5889,
+ "implemented_total": 902,
+ "function_annotations": 902,
  "stub_annotations": 0,
- "perfect_100_count": 897,
- "matched_real_functions": 897,
+ "perfect_100_count": 898,
+ "matched_real_functions": 898,
  "average_match_pct": 99.86,
- "overall_function_coverage_pct": 2.2115,
- "overall_byte_coverage_pct": 0.3744,
+ "overall_function_coverage_pct": 2.2139,
+ "overall_byte_coverage_pct": 0.3753,
  "usage": {
-  "calls_24h": 6252,
+  "calls_24h": 6243,
   "failures_24h": 0,
-  "completion_tokens_24h": 75122109,
-  "reasoning_tokens_24h": 73599046,
-  "avg_latency_s": 210.3
+  "completion_tokens_24h": 74978184,
+  "reasoning_tokens_24h": 73455773,
+  "avg_latency_s": 210.2
  },
- "functions_total": 901,
+ "functions_total": 902,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8world",
-   "matched": 93,
-   "functions": 93,
-   "bytes": 4752
+   "matched": 94,
+   "functions": 94,
+   "bytes": 4841
   },
   {
    "name": "Rendering/g3d",
@@ -2231,6 +2231,17 @@
    "matchable": true
   },
   {
+   "address": "0x00b9c490",
+   "kind": "FUNCTION",
+   "name": "RBX::Block::allocate3",
+   "mangled": "?allocate3@Block@RBX@@QAEPAV12@XZ",
+   "file": "Client/App/v8world/Block.cpp",
+   "orig_size": 89,
+   "recomp_size": 89,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00b9c430",
    "kind": "FUNCTION",
    "name": "RBX::Block::allocate2",
@@ -3294,17 +3305,6 @@
    "file": "Client/App/v8datamodel/LogService.cpp",
    "orig_size": 36,
    "recomp_size": 36,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00a644f0",
-   "kind": "FUNCTION",
-   "name": "RBX::VirtualHardwareDevice::initViewportSize",
-   "mangled": "?initViewportSize@VirtualHardwareDevice@RBX@@QAEXXZ",
-   "file": "Client/App/v8datamodel/VirtualHardwareDevice.cpp",
-   "orig_size": 21,
-   "recomp_size": 21,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -4581,9 +4581,21 @@
    "matched": 897,
    "implemented": 901,
    "pct": 9.5782
+  },
+  {
+   "t": "2026-11-19 21:38:12 UTC",
+   "matched": 898,
+   "implemented": 902,
+   "pct": 9.5889
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T21:30:39",
+   "address": "0x00b9c490",
+   "name": "RBX::Block::allocate3",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T21:24:20",
    "address": "0x00c17b40",
@@ -5297,13 +5309,7 @@
    "address": "0x009d8740",
    "name": "RBX::Humanoid::getField290",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T14:31:52",
-   "address": "0x0043f9f0",
-   "name": "QDockWidget::~QDockWidget",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 31.18
+ "match_rate_per_hour": 31.06
 }

@@ -109,6 +109,32 @@ Block* Block::allocate2()
 	return (Block*)block;
 }
 
+void* __cdecl sub_b9c1b0();
+
+// FUNCTION: ROBLOXSTUDIO 0x00b9c490
+Block* Block::allocate3()
+{
+	BlockPool* pool = (BlockPool*)sub_b9c1b0();
+	sub_40ed30(pool);
+
+	void* block = pool->freeList;
+	if (block)
+		pool->freeList = *(void**)block;
+	else
+		block = sub_48af30(&pool->freeList);
+
+	long oldState = _InterlockedExchangeAdd((long volatile*)&pool->state, 0x80000000);
+	if ((oldState & 0x40000000) == 0 && oldState > (long)0x80000000)
+	{
+		if (_interlockedbittestandset((long volatile*)&pool->state, 30) == 0)
+		{
+			SetEvent(sub_40fb10(pool));
+		}
+	}
+
+	return (Block*)block;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
