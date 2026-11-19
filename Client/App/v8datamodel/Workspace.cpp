@@ -81,6 +81,13 @@ void Workspace::method_0099fe10()
 	((WorkspaceCallee007c4b50*)this)->method_007c4b50(&local);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x009a11a0
+void Workspace::method_009a11a0()
+{
+	void* local = (void*)0x009a10c0;
+	((WorkspaceCallee007c4b50*)this)->method_007c4b50(&local);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

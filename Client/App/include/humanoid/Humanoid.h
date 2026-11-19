@@ -34,6 +34,7 @@ public:
 	int getField268() const;
 	int getField268Or298();
 	int getField270DerefE0() const;
+	int getField2A0DerefE0() const;
 	// AUTO-GENERATED METHODS
 };
 

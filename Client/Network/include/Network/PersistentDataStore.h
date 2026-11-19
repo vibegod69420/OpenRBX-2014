@@ -29,6 +29,7 @@ public:
 	PersistentDataStore* __cdecl sub_94b090(void* arg, int flag);
 	PersistentDataStore* __cdecl sub_94b0b0(void* arg, int flag);
 	PersistentDataStore* __cdecl sub_94b0d0(void* arg, int flag);
+	PersistentDataStore* __cdecl sub_94b0f0(void* arg, int flag);
 	// AUTO-GENERATED METHODS
 };
 

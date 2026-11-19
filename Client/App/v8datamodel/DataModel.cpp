@@ -16,6 +16,12 @@ DataModel* DataModel::getDataModel()
 	return (char*)this - 0xA0 ? this : 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x007453c0
+int DataModel::getZero() const
+{
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

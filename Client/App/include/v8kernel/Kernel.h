@@ -50,6 +50,7 @@ public:
 	int getSubField24_A4() const;
 	int getSubField24_94() const;
 	int getSubField24_84() const;
+	int getSubField24_A4_94_84_74() const;
 	// AUTO-GENERATED METHODS
 };
 
