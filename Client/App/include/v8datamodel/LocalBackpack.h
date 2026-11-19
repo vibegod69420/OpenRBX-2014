@@ -25,6 +25,7 @@ public:
 	int isNull() const;
 	Instance*getPlayer() const;
 	const Color4&getSelectionColor();
+	const Color4&getDeselectedColor();
 	// AUTO-GENERATED METHODS
 };
 

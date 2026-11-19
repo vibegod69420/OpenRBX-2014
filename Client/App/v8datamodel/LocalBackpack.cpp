@@ -55,6 +55,13 @@ const Color4& LocalBackpack::getSelectionColor()
 	return color;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0092b750
+const Color4& LocalBackpack::getDeselectedColor()
+{
+	static Color4 color(0.6f, 0.6f, 0.6f, 0.6f);
+	return color;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

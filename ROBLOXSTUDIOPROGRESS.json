@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 11:40:46 UTC",
+  "updated_at": "2026-11-19 11:49:05 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 7.827,
-  "implemented_total": 734,
-  "function_annotations": 734,
+  "matchable_coverage_pct": 7.859,
+  "implemented_total": 737,
+  "function_annotations": 737,
   "stub_annotations": 0,
-  "perfect_100_count": 733,
-  "matched_real_functions": 733,
+  "perfect_100_count": 736,
+  "matched_real_functions": 736,
   "average_match_pct": 99.87,
-  "overall_function_coverage_pct": 1.8072,
-  "overall_byte_coverage_pct": 0.2588,
+  "overall_function_coverage_pct": 1.8146,
+  "overall_byte_coverage_pct": 0.2607,
   "usage": {
-    "calls_24h": 4649,
+    "calls_24h": 4693,
     "failures_24h": 0,
-    "completion_tokens_24h": 52960657,
-    "reasoning_tokens_24h": 51984646,
-    "avg_latency_s": 199.3
+    "completion_tokens_24h": 53476965,
+    "reasoning_tokens_24h": 52493902,
+    "avg_latency_s": 199.5
   },
   "functions": [
     {
@@ -789,6 +789,17 @@
       "file": "Client/RobloxStudio/RobloxDocManager.cpp",
       "orig_size": 58,
       "recomp_size": 58,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x004ae3e0",
+      "kind": "FUNCTION",
+      "name": "QStandardItem::clear",
+      "mangled": "?clear@QStandardItem@@QAEXXZ",
+      "file": "Client/RobloxStudio/QStandardItem.cpp",
+      "orig_size": 63,
+      "recomp_size": 63,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -2769,6 +2780,17 @@
       "file": "Client/Rendering/GfxRender/TextureCompositor.cpp",
       "orig_size": 30,
       "recomp_size": 30,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x006a9cb0",
+      "kind": "FUNCTION",
+      "name": "func_0x006E0800",
+      "mangled": "?draw@Typesetter@RBX@@QAAXHHHHH@Z",
+      "file": "Client/App/v8datamodel/Typesetter.cpp",
+      "orig_size": 54,
+      "recomp_size": 54,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -4881,6 +4903,17 @@
       "file": "Client/App/v8datamodel/TextDisplay.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0092b750",
+      "kind": "FUNCTION",
+      "name": "RBX::LocalBackpack::getDeselectedColor",
+      "mangled": "?getDeselectedColor@LocalBackpack@RBX@@QAEABUColor4@2@XZ",
+      "file": "Client/App/v8datamodel/LocalBackpack.cpp",
+      "orig_size": 63,
+      "recomp_size": 63,
       "match_pct": 100.0,
       "matchable": true
     },
