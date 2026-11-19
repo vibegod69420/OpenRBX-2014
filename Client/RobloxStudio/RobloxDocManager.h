@@ -17,6 +17,7 @@ public:
 	};
 
 	void CloseAllDocuments();
+	bool SaveAllDocuments();
 	// AUTO-GENERATED METHODS
 };
 

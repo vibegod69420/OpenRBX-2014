@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 05:04:56 UTC",
+ "updated_at": "2026-11-19 05:13:04 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 6.5777,
- "implemented_total": 617,
- "function_annotations": 617,
+ "matchable_coverage_pct": 6.5884,
+ "implemented_total": 618,
+ "function_annotations": 618,
  "stub_annotations": 0,
- "perfect_100_count": 616,
- "matched_real_functions": 616,
+ "perfect_100_count": 617,
+ "matched_real_functions": 617,
  "average_match_pct": 99.85,
- "overall_function_coverage_pct": 1.5187,
- "overall_byte_coverage_pct": 0.1818,
+ "overall_function_coverage_pct": 1.5212,
+ "overall_byte_coverage_pct": 0.1826,
  "usage": {
-  "calls_24h": 3051,
+  "calls_24h": 3088,
   "failures_24h": 0,
-  "completion_tokens_24h": 33130186,
-  "reasoning_tokens_24h": 32578320,
-  "avg_latency_s": 189.9
+  "completion_tokens_24h": 33552793,
+  "reasoning_tokens_24h": 32994302,
+  "avg_latency_s": 190.1
  },
- "functions_total": 617,
+ "functions_total": 618,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -117,6 +117,12 @@
    "matched": 7,
    "functions": 7,
    "bytes": 144
+  },
+  {
+   "name": "RobloxStudio/RobloxDocManager.cpp",
+   "matched": 2,
+   "functions": 2,
+   "bytes": 130
   },
   {
    "name": "App/gui",
@@ -243,12 +249,6 @@
    "matched": 1,
    "functions": 1,
    "bytes": 62
-  },
-  {
-   "name": "RobloxStudio/RobloxDocManager.cpp",
-   "matched": 1,
-   "functions": 1,
-   "bytes": 58
   },
   {
    "name": "RobloxStudio/Toggle3DGridVerb.cpp",
@@ -3969,9 +3969,21 @@
    "matched": 616,
    "implemented": 617,
    "pct": 6.5777
+  },
+  {
+   "t": "2026-11-19 05:13:04 UTC",
+   "matched": 617,
+   "implemented": 618,
+   "pct": 6.5884
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T05:07:07",
+   "address": "0x004a4fc0",
+   "name": "RobloxDocManager::SaveAllDocuments",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T04:59:44",
    "address": "0x00b5e4a0",
@@ -4685,13 +4697,7 @@
    "address": "0x00be5240",
    "name": "RBX::DataStore::RemoveHead",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:57:00",
-   "address": "0x0063c010",
-   "name": "RBX::BodyColors::getContextOwner",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 49.84
+ "match_rate_per_hour": 49.38
 }

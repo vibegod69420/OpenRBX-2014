@@ -46,6 +46,36 @@ void RobloxDocManager::CloseAllDocuments()
 	}
 }
 
+struct RobloxDocManager_SaveCallee
+{
+	bool sub_4ECB70(int doc, int flag);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x004a4fc0
+bool RobloxDocManager::SaveAllDocuments()
+{
+	RobloxDocManagerDocList* list = (RobloxDocManagerDocList*)((char*)this + 0x0C);
+	RobloxDocManagerDocListData* data = list->data;
+
+	if (data->count != 0)
+	{
+		do
+		{
+			if (data->state != 1)
+				list->sub_4781C0();
+
+			data = list->data;
+			if (!(*(RobloxDocManager_SaveCallee**)((char*)this + 8))->sub_4ECB70(data->items[-1], 1))
+				return false;
+
+			data = list->data;
+		}
+		while (data->count != 0);
+	}
+
+	return true;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
