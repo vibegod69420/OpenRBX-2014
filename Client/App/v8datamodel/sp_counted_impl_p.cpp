@@ -91,6 +91,20 @@ void __cdecl sp_counted_impl_p::call(void* arg)
 	c->func(c->arg1, c->arg2, arg);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00ca73e0
+struct sp_counted_impl_p_get_pair
+{
+	void* (__cdecl *func)(void*);
+	void* data;
+};
+
+__int64 __cdecl sp_counted_impl_p::getPair()
+{
+	sp_counted_impl_p_get_pair* c = reinterpret_cast<sp_counted_impl_p_get_pair*>(this);
+	__int64* r = reinterpret_cast<__int64*>(c->func(c->data));
+	return *r;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

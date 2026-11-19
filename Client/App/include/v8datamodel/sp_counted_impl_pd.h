@@ -20,6 +20,7 @@ public:
 	const int* getMemberPtr10() const;
 	void dispose();
 	void destroy();
+	double __cdecl getDouble();
 	// AUTO-GENERATED METHODS
 };
 

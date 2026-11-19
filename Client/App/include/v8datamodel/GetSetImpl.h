@@ -17,6 +17,7 @@ public:
 	};
 
 	void __cdecl get(int* out) const;
+	void __cdecl set(void* arg) const;
 	// AUTO-GENERATED METHODS
 };
 

@@ -40,6 +40,19 @@ void sp_counted_impl_pd::destroy()
 	}
 }
 
+struct sp_counted_impl_pd_double_getter
+{
+	double* (*func)(void*);
+	void* arg;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0067e4d0
+double __cdecl sp_counted_impl_pd::getDouble()
+{
+	sp_counted_impl_pd_double_getter* getter = (sp_counted_impl_pd_double_getter*)this;
+	return *getter->func(getter->arg);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

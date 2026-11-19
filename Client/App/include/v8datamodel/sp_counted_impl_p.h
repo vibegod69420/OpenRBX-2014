@@ -24,6 +24,7 @@ public:
 	void __cdecl invoke(void* arg);
 	void __cdecl invoke(void* a, void* b);
 	void __cdecl call(void* arg);
+	__int64 __cdecl getPair();
 	// AUTO-GENERATED METHODS
 };
 
