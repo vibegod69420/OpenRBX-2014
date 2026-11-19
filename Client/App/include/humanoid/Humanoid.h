@@ -32,6 +32,7 @@ public:
 	int getField278() const;
 	int getField288() const;
 	int getField268() const;
+	int getField268Or298();
 	// AUTO-GENERATED METHODS
 };
 

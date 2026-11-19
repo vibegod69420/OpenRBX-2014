@@ -110,6 +110,16 @@ void __cdecl TriangleMesh::checkStack()
 	sub_A36E40(this, sub_A35150(this));
 }
 
+int sub_A34EF0(void*, int, int);
+void sub_A35650(void*, int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b6e380
+int __cdecl TriangleMesh::getOptInt3()
+{
+	sub_A35650(this, sub_A34EF0(this, 3, 0));
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

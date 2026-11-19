@@ -24,6 +24,7 @@ public:
 	void __cdecl raise(int arg1, int arg2);
 	void __cdecl initContext(void* context);
 	int __cdecl dispatchGlobal();
+	int __cdecl dispatchGlobalState();
 	// AUTO-GENERATED METHODS
 };
 

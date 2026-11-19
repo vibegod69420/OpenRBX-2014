@@ -21,6 +21,7 @@ public:
 	void* getSomeField();
 	bool method_00969740();
 	bool method_00969760();
+	bool method_00969fc0();
 	// AUTO-GENERATED METHODS
 };
 

@@ -49,6 +49,26 @@ bool Workspace::method_00969760()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00969fc0
+bool Workspace::method_00969fc0()
+{
+    // Original assembly:
+    //   cmp dword ptr [ecx + 0x70], 1
+    //   jne 0x969fd2
+    //   cmp byte ptr [ecx + 0x80], 0
+    //   je 0x969fd2
+    //   mov al, 1
+    //   ret
+    //   xor al, al
+    //   ret
+    if (*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x70) == 1 &&
+        *reinterpret_cast<char*>(reinterpret_cast<char*>(this) + 0x80) != 0)
+    {
+        return true;
+    }
+    return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

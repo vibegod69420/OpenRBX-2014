@@ -25,6 +25,7 @@ public:
 	int __cdecl getValue();
 	void __cdecl stringGfindRenamed();
 	void __cdecl checkStack();
+	int __cdecl getOptInt3();
 	// AUTO-GENERATED METHODS
 };
 
