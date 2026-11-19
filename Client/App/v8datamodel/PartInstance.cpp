@@ -40,6 +40,24 @@ int PartInstance::getSubFlagE0_112IsZero() const
 	return *(unsigned char*)((char*)subb_00e0_0110 + 0x112) == 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00890430
+bool PartInstance::hasHingeMotorOrSteppedSurface() const
+{
+	const SubBool_PartInstance_00e0_0110* sub = subb_00e0_0110;
+	int i = 0;
+	const int* surface = reinterpret_cast<const int*>(
+		reinterpret_cast<const char*>(sub) + 0x120);
+
+	for (; i < 6; ++i, ++surface)
+	{
+		int surfaceType = *surface;
+		if (surfaceType == 6 || surfaceType == 8 || surfaceType == 7)
+			return true;
+	}
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -56,6 +56,12 @@ void* Player::getServerReplicator()
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c4a1a0
+int Player::getField1E4() const
+{
+	return field_01e4;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

@@ -23,6 +23,13 @@ int MegaCluster::getSize() const
 	return ((unsigned int)_vtable_or_head < 0x03D09000u) ? 512 : 1024;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0061b580
+int MegaCluster::getCount() const
+{
+	int delta = *(int*)((char*)this + 0x20) - *(int*)((char*)this + 0x1c);
+	return delta / 56;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

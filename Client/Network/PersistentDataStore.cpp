@@ -79,6 +79,17 @@ PersistentDataStore* __cdecl PersistentDataStore::sub_94b030(void* arg)
 	return this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0094b050
+// Forward declaration of the helper called at 0x94cde0 (relocation masked by verifier)
+void __cdecl _helper_94cde0(void* a, int b);
+
+PersistentDataStore* __cdecl PersistentDataStore::sub_94b050(void* arg, int flag)
+{
+	volatile int local = 0;
+	_helper_94cde0(arg, flag);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

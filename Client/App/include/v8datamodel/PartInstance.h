@@ -27,6 +27,7 @@ public:
 	bool getSubFlagE0_110() const;
 	float getSubFloatE0_11C() const;
 	int getSubFlagE0_112IsZero() const;
+	bool hasHingeMotorOrSteppedSurface() const;
 	// AUTO-GENERATED METHODS
 };
 

@@ -14,12 +14,14 @@ public:
 	union
 	{
 		int _vtable_or_head;
+		struct { char _pad_field_01e4[0x1e4]; int field_01e4; };
 		// AUTO-GENERATED FIELDS
 	};
 
 	void fireEventTarget();
 	void*getReplicator();
 	void*getServerReplicator();
+	int getField1E4() const;
 	// AUTO-GENERATED METHODS
 };
 
