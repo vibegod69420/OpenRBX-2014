@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 22:48:39 UTC",
+ "updated_at": "2026-11-19 22:57:41 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 9.7491,
- "implemented_total": 918,
- "function_annotations": 918,
+ "matchable_coverage_pct": 9.7704,
+ "implemented_total": 920,
+ "function_annotations": 920,
  "stub_annotations": 0,
- "perfect_100_count": 913,
- "matched_real_functions": 913,
+ "perfect_100_count": 915,
+ "matched_real_functions": 915,
  "average_match_pct": 99.85,
- "overall_function_coverage_pct": 2.2509,
- "overall_byte_coverage_pct": 0.3822,
+ "overall_function_coverage_pct": 2.2559,
+ "overall_byte_coverage_pct": 0.3841,
  "usage": {
-  "calls_24h": 6000,
+  "calls_24h": 5993,
   "failures_24h": 0,
-  "completion_tokens_24h": 72058784,
-  "reasoning_tokens_24h": 70571691,
-  "avg_latency_s": 210.4
+  "completion_tokens_24h": 71853926,
+  "reasoning_tokens_24h": 70370521,
+  "avg_latency_s": 210.2
  },
- "functions_total": 918,
+ "functions_total": 920,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8world",
-   "matched": 97,
-   "functions": 97,
-   "bytes": 5009
+   "matched": 98,
+   "functions": 98,
+   "bytes": 5098
   },
   {
    "name": "Rendering/g3d",
@@ -78,9 +78,9 @@
   },
   {
    "name": "App/humanoid",
-   "matched": 30,
-   "functions": 30,
-   "bytes": 814
+   "matched": 31,
+   "functions": 31,
+   "bytes": 907
   },
   {
    "name": "Network/InstancePacketCache.cpp",
@@ -1655,6 +1655,17 @@
    "file": "Client/App/humanoid/Swimming.cpp",
    "orig_size": 83,
    "recomp_size": 83,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00c179f0",
+   "kind": "FUNCTION",
+   "name": "RBX::HUMAN::Swimming::applyState",
+   "mangled": "?applyState@Swimming@HUMAN@RBX@@QAAHHHHH@Z",
+   "file": "Client/App/humanoid/Swimming.cpp",
+   "orig_size": 93,
+   "recomp_size": 93,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3296,17 +3307,6 @@
    "recomp_size": 4,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x00a9c530",
-   "kind": "FUNCTION",
-   "name": "RBX::UnionOperation::getField170",
-   "mangled": "?getField170@UnionOperation@RBX@@QBEHXZ",
-   "file": "Client/App/v8datamodel/UnionOperation.cpp",
-   "orig_size": 39,
-   "recomp_size": 7,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -4611,9 +4611,27 @@
    "matched": 913,
    "implemented": 918,
    "pct": 9.7491
+  },
+  {
+   "t": "2026-11-19 22:57:41 UTC",
+   "matched": 915,
+   "implemented": 920,
+   "pct": 9.7704
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T22:53:04",
+   "address": "0x00a4f940",
+   "name": "RBX::RBX::BallBallContact::allocate",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T22:51:37",
+   "address": "0x00c179f0",
+   "name": "RBX::HUMAN::Swimming::applyState",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T22:40:26",
    "address": "0x00c18b80",
@@ -5321,19 +5339,7 @@
    "address": "0x00d9ea50",
    "name": "ProgramMemoryCheckerImpl::init3",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T15:08:28",
-   "address": "0x005f5070",
-   "name": "RBX::Graphics::VertexLayout::initGLDrawIndirect",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T15:06:56",
-   "address": "0x005d5960",
-   "name": "btConvexPolyhedron::initializeFaces",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 30.34
+ "match_rate_per_hour": 30.26
 }

@@ -17,6 +17,7 @@ public:
 	};
 
 	int isColliding();
+	void*allocate();
 	// AUTO-GENERATED METHODS
 };
 

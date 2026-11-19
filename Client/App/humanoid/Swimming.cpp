@@ -77,6 +77,24 @@ void __cdecl Swimming::accumulate(int* event)
 	}
 }
 
+void __cdecl sub_C18130(Swimming* self, int* result, int oldValue);
+
+// FUNCTION: ROBLOXSTUDIO 0x00c179f0
+int __cdecl Swimming::applyState(int a, int b, int c, int d)
+{
+	typedef int (__cdecl *SubC18030RetFn)(Swimming*, int, int);
+
+	sub_C18030(this, (((c << 9) | d) << 8 | b) << 6 | a, (*(int**)((char*)this + 0x0C))[2]);
+
+	int oldValue = *(int*)((char*)this + 0x20);
+	*(int*)((char*)this + 0x20) = -1;
+
+	int result = ((SubC18030RetFn)sub_C18030)(this, 0x7fff8016, (*(int**)((char*)this + 0x0C))[2]);
+	sub_C18130(this, &result, oldValue);
+
+	return result;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace HUMAN

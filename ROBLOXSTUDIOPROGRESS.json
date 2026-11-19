@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 22:48:39 UTC",
+  "updated_at": "2026-11-19 22:57:41 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 9.7491,
-  "implemented_total": 918,
-  "function_annotations": 918,
+  "matchable_coverage_pct": 9.7704,
+  "implemented_total": 920,
+  "function_annotations": 920,
   "stub_annotations": 0,
-  "perfect_100_count": 913,
-  "matched_real_functions": 913,
+  "perfect_100_count": 915,
+  "matched_real_functions": 915,
   "average_match_pct": 99.85,
-  "overall_function_coverage_pct": 2.2509,
-  "overall_byte_coverage_pct": 0.3822,
+  "overall_function_coverage_pct": 2.2559,
+  "overall_byte_coverage_pct": 0.3841,
   "usage": {
-    "calls_24h": 6000,
+    "calls_24h": 5993,
     "failures_24h": 0,
-    "completion_tokens_24h": 72058784,
-    "reasoning_tokens_24h": 70571691,
-    "avg_latency_s": 210.4
+    "completion_tokens_24h": 71853926,
+    "reasoning_tokens_24h": 70370521,
+    "avg_latency_s": 210.2
   },
   "functions": [
     {
@@ -7239,9 +7239,20 @@
       "matchable": true
     },
     {
+      "address": "0x00a4f940",
+      "kind": "FUNCTION",
+      "name": "RBX::RBX::BallBallContact::allocate",
+      "mangled": "?allocate@BallBallContact@RBX@@QAEPAXXZ",
+      "file": "Client/App/v8world/BallBallContact.cpp",
+      "orig_size": 89,
+      "recomp_size": 89,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00a4fcd0",
       "kind": "FUNCTION",
-      "name": "RBX::BallBallContact::isColliding",
+      "name": "RBX::RBX::BallBallContact::isColliding",
       "mangled": "?isColliding@BallBallContact@RBX@@QAEHXZ",
       "file": "Client/App/v8world/BallBallContact.cpp",
       "orig_size": 9,
@@ -9028,6 +9039,17 @@
       "file": "Client/App/v8kernel/BulletShapeCellConnector.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c179f0",
+      "kind": "FUNCTION",
+      "name": "RBX::HUMAN::Swimming::applyState",
+      "mangled": "?applyState@Swimming@HUMAN@RBX@@QAAHHHHH@Z",
+      "file": "Client/App/humanoid/Swimming.cpp",
+      "orig_size": 93,
+      "recomp_size": 93,
       "match_pct": 100.0,
       "matchable": true
     },
