@@ -20,6 +20,7 @@ public:
 	void dispose();
 	void*getOwner();
 	BlockMesh();
+	void sub_625d40();
 	// AUTO-GENERATED METHODS
 };
 

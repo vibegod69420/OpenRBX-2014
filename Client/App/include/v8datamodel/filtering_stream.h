@@ -17,6 +17,7 @@ public:
 	};
 
 	void reset();
+	void sync();
 	// AUTO-GENERATED METHODS
 };
 

@@ -35,6 +35,26 @@ Instance* LocalBackpack::getPlayer() const
 	return NULL;
 }
 
+struct Color4
+{
+	float r;
+	float g;
+	float b;
+	float a;
+
+	Color4(float r_, float g_, float b_, float a_)
+		: r(r_), g(g_), b(b_), a(a_)
+	{
+	}
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0092a210
+const Color4& LocalBackpack::getSelectionColor()
+{
+	static Color4 color(0.7f, 0.7f, 0.7f, 0.5f);
+	return color;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

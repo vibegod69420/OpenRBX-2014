@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 08:03:45 UTC",
+  "updated_at": "2026-11-19 08:12:07 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 7.1543,
-  "implemented_total": 671,
-  "function_annotations": 671,
+  "matchable_coverage_pct": 7.1863,
+  "implemented_total": 674,
+  "function_annotations": 674,
   "stub_annotations": 0,
-  "perfect_100_count": 670,
-  "matched_real_functions": 670,
+  "perfect_100_count": 673,
+  "matched_real_functions": 673,
   "average_match_pct": 99.86,
-  "overall_function_coverage_pct": 1.6518,
-  "overall_byte_coverage_pct": 0.2112,
+  "overall_function_coverage_pct": 1.6592,
+  "overall_byte_coverage_pct": 0.2131,
   "usage": {
-    "calls_24h": 3789,
+    "calls_24h": 3833,
     "failures_24h": 0,
-    "completion_tokens_24h": 42006180,
-    "reasoning_tokens_24h": 41288676,
-    "avg_latency_s": 193.4
+    "completion_tokens_24h": 42551361,
+    "reasoning_tokens_24h": 41825776,
+    "avg_latency_s": 193.9
   },
   "functions": [
     {
@@ -2252,6 +2252,17 @@
       "file": "Client/App/v8world/BlockMesh.cpp",
       "orig_size": 54,
       "recomp_size": 54,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00625d40",
+      "kind": "FUNCTION",
+      "name": "RBX::POLY::BlockMesh::sub_625d40",
+      "mangled": "?sub_625d40@BlockMesh@POLY@RBX@@QAEXXZ",
+      "file": "Client/App/v8world/BlockMesh.cpp",
+      "orig_size": 62,
+      "recomp_size": 62,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -4511,6 +4522,17 @@
       "matchable": true
     },
     {
+      "address": "0x0092a210",
+      "kind": "FUNCTION",
+      "name": "RBX::LocalBackpack::getSelectionColor",
+      "mangled": "?getSelectionColor@LocalBackpack@RBX@@QAEABUColor4@2@XZ",
+      "file": "Client/App/v8datamodel/LocalBackpack.cpp",
+      "orig_size": 63,
+      "recomp_size": 63,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0092a630",
       "kind": "FUNCTION",
       "name": "RBX::LocalBackpack::getPlayer",
@@ -5211,6 +5233,17 @@
       "file": "Client/App/reflection/SurfaceEnumPropDescriptor.cpp",
       "orig_size": 27,
       "recomp_size": 27,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00a2cb30",
+      "kind": "FUNCTION",
+      "name": "_v0",
+      "mangled": "?sync@filtering_stream@std@@QAEXXZ",
+      "file": "Client/App/v8datamodel/filtering_stream.cpp",
+      "orig_size": 57,
+      "recomp_size": 57,
       "match_pct": 100.0,
       "matchable": true
     },

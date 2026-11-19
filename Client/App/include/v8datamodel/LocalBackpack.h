@@ -9,6 +9,8 @@ class Instance;
 #ifndef NULL
 #define NULL 0
 #endif
+class Color4;
+class color;
 // AUTO-GENERATED HELPERS
 
 class LocalBackpack
@@ -22,6 +24,7 @@ public:
 
 	int isNull() const;
 	Instance*getPlayer() const;
+	const Color4&getSelectionColor();
 	// AUTO-GENERATED METHODS
 };
 

@@ -52,6 +52,38 @@ BlockMesh::BlockMesh()
 	reinterpret_cast<int*>(this)[15] = 0;
 }
 
+namespace {
+
+struct BlockMeshDataVec
+{
+	void* _Myfirst;
+	void* _Mylast;
+	void* _Myend;
+
+	__declspec(dllimport) void _Orphan_all();
+	void _Destroy(void* first, void* last);
+};
+
+void __cdecl BlockMeshDataVec_deallocate(void* ptr);
+
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00625d40
+void BlockMesh::sub_625d40()
+{
+	BlockMeshDataVec* v = reinterpret_cast<BlockMeshDataVec*>(reinterpret_cast<char*>(this) + 4);
+	if (v->_Myfirst == 0)
+		return;
+
+	v->_Orphan_all();
+	v->_Destroy(v->_Myfirst, v->_Mylast);
+	BlockMeshDataVec_deallocate(v->_Myfirst);
+
+	v->_Myfirst = 0;
+	v->_Mylast = 0;
+	v->_Myend = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace POLY
