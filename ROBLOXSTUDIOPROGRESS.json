@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 11:49:05 UTC",
+  "updated_at": "2026-11-19 11:57:28 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 7.859,
-  "implemented_total": 737,
-  "function_annotations": 737,
+  "matchable_coverage_pct": 7.8697,
+  "implemented_total": 738,
+  "function_annotations": 738,
   "stub_annotations": 0,
-  "perfect_100_count": 736,
-  "matched_real_functions": 736,
+  "perfect_100_count": 737,
+  "matched_real_functions": 737,
   "average_match_pct": 99.87,
-  "overall_function_coverage_pct": 1.8146,
-  "overall_byte_coverage_pct": 0.2607,
+  "overall_function_coverage_pct": 1.817,
+  "overall_byte_coverage_pct": 0.2615,
   "usage": {
-    "calls_24h": 4693,
+    "calls_24h": 4724,
     "failures_24h": 0,
-    "completion_tokens_24h": 53476965,
-    "reasoning_tokens_24h": 52493902,
-    "avg_latency_s": 199.5
+    "completion_tokens_24h": 53859574,
+    "reasoning_tokens_24h": 52870685,
+    "avg_latency_s": 199.6
   },
   "functions": [
     {
@@ -3055,6 +3055,17 @@
       "file": "Client/App/v8datamodel/CircleRadialNormal.cpp",
       "orig_size": 53,
       "recomp_size": 53,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x006d7bc0",
+      "kind": "FUNCTION",
+      "name": "G3D::Log::getField04",
+      "mangled": "?getField04@Log@G3D@@QBEHXZ",
+      "file": "Client/Rendering/g3d/G3Dcpp/Log.cpp",
+      "orig_size": 75,
+      "recomp_size": 4,
       "match_pct": 100.0,
       "matchable": true
     },
