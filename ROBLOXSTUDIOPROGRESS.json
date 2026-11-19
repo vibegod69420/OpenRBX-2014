@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 19:23:52 UTC",
+  "updated_at": "2026-11-19 19:32:14 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 9.2152,
-  "implemented_total": 865,
-  "function_annotations": 865,
+  "matchable_coverage_pct": 9.2258,
+  "implemented_total": 866,
+  "function_annotations": 866,
   "stub_annotations": 0,
-  "perfect_100_count": 863,
-  "matched_real_functions": 863,
+  "perfect_100_count": 864,
+  "matched_real_functions": 864,
   "average_match_pct": 99.88,
-  "overall_function_coverage_pct": 2.1277,
-  "overall_byte_coverage_pct": 0.3539,
+  "overall_function_coverage_pct": 2.1301,
+  "overall_byte_coverage_pct": 0.3541,
   "usage": {
-    "calls_24h": 6422,
+    "calls_24h": 6415,
     "failures_24h": 0,
-    "completion_tokens_24h": 75234661,
-    "reasoning_tokens_24h": 73747014,
-    "avg_latency_s": 205.5
+    "completion_tokens_24h": 75377319,
+    "reasoning_tokens_24h": 73883992,
+    "avg_latency_s": 206.0
   },
   "functions": [
     {
@@ -7697,6 +7697,17 @@
       "file": "Client/App/v8world/TriangleMesh.cpp",
       "orig_size": 21,
       "recomp_size": 21,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b771a0",
+      "kind": "FUNCTION",
+      "name": "RBX::detail::sp_counted_impl_p::destroySubPtr0C_71a0",
+      "mangled": "?destroySubPtr0C_71a0@sp_counted_impl_p@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
       "match_pct": 100.0,
       "matchable": true
     },

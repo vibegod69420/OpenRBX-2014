@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 19:23:52 UTC",
+ "updated_at": "2026-11-19 19:32:14 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 9.2152,
- "implemented_total": 865,
- "function_annotations": 865,
+ "matchable_coverage_pct": 9.2258,
+ "implemented_total": 866,
+ "function_annotations": 866,
  "stub_annotations": 0,
- "perfect_100_count": 863,
- "matched_real_functions": 863,
+ "perfect_100_count": 864,
+ "matched_real_functions": 864,
  "average_match_pct": 99.88,
- "overall_function_coverage_pct": 2.1277,
- "overall_byte_coverage_pct": 0.3539,
+ "overall_function_coverage_pct": 2.1301,
+ "overall_byte_coverage_pct": 0.3541,
  "usage": {
-  "calls_24h": 6422,
+  "calls_24h": 6415,
   "failures_24h": 0,
-  "completion_tokens_24h": 75234661,
-  "reasoning_tokens_24h": 73747014,
-  "avg_latency_s": 205.5
+  "completion_tokens_24h": 75377319,
+  "reasoning_tokens_24h": 73883992,
+  "avg_latency_s": 206.0
  },
- "functions_total": 865,
+ "functions_total": 866,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 345,
-   "functions": 346,
-   "bytes": 10966
+   "matched": 346,
+   "functions": 347,
+   "bytes": 10992
   },
   {
    "name": "App/v8world",
@@ -2407,6 +2407,17 @@
    "matchable": true
   },
   {
+   "address": "0x00b771a0",
+   "kind": "FUNCTION",
+   "name": "RBX::detail::sp_counted_impl_p::destroySubPtr0C_71a0",
+   "mangled": "?destroySubPtr0C_71a0@sp_counted_impl_p@RBX@@QAEXXZ",
+   "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
+   "orig_size": 26,
+   "recomp_size": 26,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00b70040",
    "kind": "FUNCTION",
    "name": "RBX::TriangleMesh::stringGfindRenamed",
@@ -3294,17 +3305,6 @@
    "file": "Client/App/v8datamodel/stream_buffer.cpp",
    "orig_size": 6,
    "recomp_size": 6,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00a2f020",
-   "kind": "FUNCTION",
-   "name": "std::stream_buffer::vslot22_50",
-   "mangled": "?vslot22_50@stream_buffer@std@@QAEXXZ",
-   "file": "Client/App/v8datamodel/stream_buffer.cpp",
-   "orig_size": 13,
-   "recomp_size": 13,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -4509,9 +4509,21 @@
    "matched": 863,
    "implemented": 865,
    "pct": 9.2152
+  },
+  {
+   "t": "2026-11-19 19:32:14 UTC",
+   "matched": 864,
+   "implemented": 866,
+   "pct": 9.2258
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T19:27:35",
+   "address": "0x00b771a0",
+   "name": "boost::sp_counted_impl_p::destroySubPtr0C_71a0",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T19:20:30",
    "address": "0x00c9e270",
@@ -5225,13 +5237,7 @@
    "address": "0x00a94c80",
    "name": "RBX::BodyAngularVelocity::BodyAngularVelocity",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T12:41:54",
-   "address": "0x00656940",
-   "name": "RBX::Graphics::LightObject::getSpatialOwner",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 32.35
+ "match_rate_per_hour": 32.22
 }
