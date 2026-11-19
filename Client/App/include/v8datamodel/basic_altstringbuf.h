@@ -20,6 +20,7 @@ public:
 	void BasicAltStringBuf_Thunk_E100D4();
 	void FreeHandle();
 	basic_altstringbuf();
+	void Release();
 	// AUTO-GENERATED METHODS
 };
 

@@ -47,6 +47,23 @@ void __cdecl PolyPolyContact::match(int a, int b)
 		*(void**)((char*)*(void**)((char*)this + 0x0C) + 8));
 }
 
+void __cdecl sub_C19000(PolyPolyContact* contact, int a, int b, int c, int d);
+
+// FUNCTION: ROBLOXSTUDIO 0x00c18820
+void __cdecl PolyPolyContact::matchSeparatingEdge(int featureId, int separatingEdge)
+{
+	int cachedEdge = *(int*)((char*)this + 0x18);
+	if (separatingEdge == cachedEdge)
+	{
+		*(int*)((char*)this + 0x1C) = cachedEdge;
+		sub_00C18130(this, (char*)this + 0x20, featureId);
+	}
+	else
+	{
+		sub_C19000(this, featureId, separatingEdge, 0xFF, separatingEdge);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

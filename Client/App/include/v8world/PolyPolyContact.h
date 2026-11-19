@@ -22,6 +22,7 @@ public:
 	void __cdecl update(int value);
 	void __cdecl compute(void* out, void* param);
 	void __cdecl match(int a, int b);
+	void __cdecl matchSeparatingEdge(int featureId, int separatingEdge);
 	// AUTO-GENERATED METHODS
 };
 

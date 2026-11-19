@@ -46,6 +46,25 @@ basic_altstringbuf::basic_altstringbuf()
 	*(int*)((char*)this + 0x20) = -1;
 }
 
+extern int g_basicAltStringBufRefCount;
+__declspec(dllimport) void __stdcall basicAltStringBufCleanup();
+
+// FUNCTION: ROBLOXSTUDIO 0x00cf4fc0
+void basic_altstringbuf::Release()
+{
+	int count = g_basicAltStringBufRefCount;
+	if (count != 0)
+	{
+		if (count > 1)
+		{
+			g_basicAltStringBufRefCount = count - 1;
+			return;
+		}
+		basicAltStringBufCleanup();
+		g_basicAltStringBufRefCount = 0;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std
