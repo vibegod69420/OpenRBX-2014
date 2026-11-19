@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 14:31:38 UTC",
+  "updated_at": "2026-11-19 14:41:01 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 8.3289,
-  "implemented_total": 781,
-  "function_annotations": 781,
+  "matchable_coverage_pct": 8.3396,
+  "implemented_total": 782,
+  "function_annotations": 782,
   "stub_annotations": 0,
-  "perfect_100_count": 780,
-  "matched_real_functions": 780,
+  "perfect_100_count": 781,
+  "matched_real_functions": 781,
   "average_match_pct": 99.88,
-  "overall_function_coverage_pct": 1.923,
-  "overall_byte_coverage_pct": 0.2989,
+  "overall_function_coverage_pct": 1.9255,
+  "overall_byte_coverage_pct": 0.3002,
   "usage": {
-    "calls_24h": 5289,
+    "calls_24h": 5312,
     "failures_24h": 0,
-    "completion_tokens_24h": 61162978,
-    "reasoning_tokens_24h": 59997817,
-    "avg_latency_s": 204.7
+    "completion_tokens_24h": 61432139,
+    "reasoning_tokens_24h": 60261962,
+    "avg_latency_s": 204.8
   },
   "functions": [
     {
@@ -360,6 +360,17 @@
       "file": "Client/App/script/WeakThreadRef.cpp",
       "orig_size": 18,
       "recomp_size": 18,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0043f9f0",
+      "kind": "FUNCTION",
+      "name": "QDockWidget::~QDockWidget",
+      "mangled": "??1QDockWidget@@QAE@XZ",
+      "file": "Client/RobloxStudio/QDockWidget.cpp",
+      "orig_size": 124,
+      "recomp_size": 8,
       "match_pct": 100.0,
       "matchable": true
     },

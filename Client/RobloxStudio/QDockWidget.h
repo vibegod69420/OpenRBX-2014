@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	~QDockWidget();
 	// AUTO-GENERATED METHODS
 };
 
