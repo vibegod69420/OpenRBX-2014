@@ -23,6 +23,7 @@ public:
 	bool initGLDrawIndirect();
 	bool initGLMultiDrawIndirectCountARB();
 	bool initGLMapBufferRange();
+	bool initARBPointParameters();
 	// AUTO-GENERATED METHODS
 };
 

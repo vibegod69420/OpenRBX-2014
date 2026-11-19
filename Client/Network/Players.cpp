@@ -28,6 +28,46 @@ void Players::func00c282e0()
 	::operator delete(list->head);
 }
 
+struct PlayerListNode
+{
+	PlayerListNode* next;
+	PlayerListNode* prev;
+};
+
+struct PlayerListNodeData
+{
+	void destroy();
+};
+
+struct PlayersListLayout
+{
+	PlayerListNode* head;
+	int size;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c2cf10
+void Players::func00c2cf10()
+{
+	PlayersListLayout* list = (PlayersListLayout*)this;
+	PlayerListNode* node = list->head->next;
+	list->head->next = list->head;
+	list->head->prev = list->head;
+	list->size = 0;
+
+	if (node != list->head)
+	{
+		PlayerListNode* next;
+		do
+		{
+			next = node->next;
+			((PlayerListNodeData*)(node + 1))->destroy();
+			::operator delete(node);
+			node = next;
+		}
+		while (next != list->head);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

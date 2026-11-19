@@ -131,6 +131,27 @@ bool VertexLayout::initGLMapBufferRange()
 	return false;
 }
 
+extern void* g_glPointParameterfARB;
+extern void* g_glPointParameterfvARB;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f5f10
+bool VertexLayout::initARBPointParameters()
+{
+	void* first = g_glGetProcAddress("glPointParameterfARB");
+	g_glPointParameterfARB = first;
+	unsigned char missingFirst = (first == 0);
+
+	void* second = g_glGetProcAddress("glPointParameterfvARB");
+	g_glPointParameterfvARB = second;
+
+	if (second == 0)
+		return true;
+	if (missingFirst)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
