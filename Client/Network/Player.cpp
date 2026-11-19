@@ -46,6 +46,16 @@ void* Player::getReplicator()
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c3dd30
+void* Player::getServerReplicator()
+{
+	NetworkPeer* peer = *(NetworkPeer**)((char*)this + 0x0C);
+	if (peer->contains(getCurrentNetworkPeer()))
+		return (char*)this - 0x1C;
+
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

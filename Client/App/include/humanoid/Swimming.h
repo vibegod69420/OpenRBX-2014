@@ -19,6 +19,7 @@ public:
 
 	void __cdecl onEvent(int* event);
 	void __cdecl setState(int a, int b, int c);
+	void __cdecl setState(int a, int b, int c, int d);
 	// AUTO-GENERATED METHODS
 };
 

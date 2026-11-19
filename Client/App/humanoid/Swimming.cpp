@@ -27,6 +27,12 @@ void __cdecl Swimming::setState(int a, int b, int c)
 	sub_C18030(this, ((c << 8) | b) << 6 | a, (*(int**)((char*)this + 0x0C))[2]);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c180d0
+void __cdecl Swimming::setState(int a, int b, int c, int d)
+{
+	sub_C18030(this, (((c << 9) | d) << 8 | b) << 6 | a, (*(int**)((char*)this + 0x0C))[2]);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace HUMAN

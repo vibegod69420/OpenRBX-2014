@@ -26,6 +26,23 @@ void Primitive::clearDirtyFlags()
 	*(unsigned char*)((char*)this + 0x14) = 0;
 }
 
+struct PrimitiveSubB8
+{
+	void* get(int);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0099ccc0
+void* Primitive::getAssemblyPrimitive()
+{
+	if (*(int*)((char*)this + 0xc0) > 0)
+		return ((PrimitiveSubB8*)((char*)this + 0xb8))->get(0);
+
+	if (*(int*)((char*)this + 0x9c) > 0)
+		return **(void***)((char*)this + 0x98);
+
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

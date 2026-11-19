@@ -18,6 +18,7 @@ public:
 
 	void*getFirstInClump();
 	void clearDirtyFlags();
+	void*getAssemblyPrimitive();
 	// AUTO-GENERATED METHODS
 };
 

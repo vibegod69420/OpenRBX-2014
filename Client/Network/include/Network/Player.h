@@ -19,6 +19,7 @@ public:
 
 	void fireEventTarget();
 	void*getReplicator();
+	void*getServerReplicator();
 	// AUTO-GENERATED METHODS
 };
 
