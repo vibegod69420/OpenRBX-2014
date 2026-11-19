@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	NetworkOwnerJob();
 	// AUTO-GENERATED METHODS
 };
 

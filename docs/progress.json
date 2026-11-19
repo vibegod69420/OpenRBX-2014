@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 02:04:18 UTC",
+ "updated_at": "2026-11-19 02:11:40 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 5.3284,
- "implemented_total": 499,
- "function_annotations": 499,
+ "matchable_coverage_pct": 5.4245,
+ "implemented_total": 508,
+ "function_annotations": 508,
  "stub_annotations": 0,
- "perfect_100_count": 499,
- "matched_real_functions": 499,
+ "perfect_100_count": 508,
+ "matched_real_functions": 508,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 1.2302,
- "overall_byte_coverage_pct": 0.1328,
+ "overall_function_coverage_pct": 1.2524,
+ "overall_byte_coverage_pct": 0.1364,
  "usage": {
-  "calls_24h": 2165,
+  "calls_24h": 2207,
   "failures_24h": 0,
-  "completion_tokens_24h": 23187476,
-  "reasoning_tokens_24h": 22786553,
+  "completion_tokens_24h": 23635813,
+  "reasoning_tokens_24h": 23229736,
   "avg_latency_s": 187.0
  },
- "functions_total": 499,
+ "functions_total": 508,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 207,
-   "functions": 207,
-   "bytes": 4370
+   "matched": 211,
+   "functions": 211,
+   "bytes": 4520
   },
   {
    "name": "App/v8world",
@@ -48,15 +48,15 @@
   },
   {
    "name": "Rendering/GfxRender",
-   "matched": 37,
-   "functions": 37,
-   "bytes": 1261
+   "matched": 38,
+   "functions": 38,
+   "bytes": 1299
   },
   {
    "name": "App/v8kernel",
-   "matched": 42,
-   "functions": 42,
-   "bytes": 802
+   "matched": 43,
+   "functions": 43,
+   "bytes": 843
   },
   {
    "name": "Rendering/GfxCore",
@@ -95,16 +95,16 @@
    "bytes": 171
   },
   {
+   "name": "App/util",
+   "matched": 8,
+   "functions": 8,
+   "bytes": 168
+  },
+  {
    "name": "RobloxStudio/ToggleLocalSpaceVerb.cpp",
    "matched": 1,
    "functions": 1,
    "bytes": 165
-  },
-  {
-   "name": "App/util",
-   "matched": 7,
-   "functions": 7,
-   "bytes": 129
   },
   {
    "name": "App/reflection",
@@ -215,6 +215,12 @@
    "bytes": 50
   },
   {
+   "name": "RobloxStudio/PickerFrame.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 40
+  },
+  {
    "name": "RobloxStudio/lua_exception.cpp",
    "matched": 3,
    "functions": 3,
@@ -225,6 +231,12 @@
    "matched": 1,
    "functions": 1,
    "bytes": 38
+  },
+  {
+   "name": "Network/NetworkOwnerJob.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 37
   },
   {
    "name": "Network/ClientReplicator.cpp",
@@ -730,6 +742,17 @@
    "file": "Client/App/v8datamodel/network_stream_exception.cpp",
    "orig_size": 12,
    "recomp_size": 12,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00c687d0",
+   "kind": "FUNCTION",
+   "name": "RBX::Network::NetworkOwnerJob::NetworkOwnerJob",
+   "mangled": "??0NetworkOwnerJob@Network@RBX@@QAE@XZ",
+   "file": "Client/Network/NetworkOwnerJob.cpp",
+   "orig_size": 37,
+   "recomp_size": 37,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1240,6 +1263,17 @@
    "matchable": true
   },
   {
+   "address": "0x00baa1e0",
+   "kind": "FUNCTION",
+   "name": "ctor",
+   "mangled": "??0IndexedMesh@RBX@@QAE@XZ",
+   "file": "Client/App/util/IndexedMesh.cpp",
+   "orig_size": 39,
+   "recomp_size": 39,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00ba8ed0",
    "kind": "FUNCTION",
    "name": "RBX::Body::advanceStateIndex",
@@ -1720,6 +1754,17 @@
    "file": "Client/App/v8world/Motor6D.cpp",
    "orig_size": 13,
    "recomp_size": 13,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00a685e0",
+   "kind": "FUNCTION",
+   "name": "RBX::LogService::Clear",
+   "mangled": "?Clear@LogService@RBX@@QAEXXZ",
+   "file": "Client/App/v8datamodel/LogService.cpp",
+   "orig_size": 36,
+   "recomp_size": 36,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -2413,6 +2458,17 @@
    "file": "Client/Network/PersistentDataStore.cpp",
    "orig_size": 49,
    "recomp_size": 49,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x009439b0",
+   "kind": "FUNCTION",
+   "name": "RBX::Toolbar::getRibbonTool",
+   "mangled": "?getRibbonTool@Toolbar@RBX@@QAEPAXXZ",
+   "file": "Client/App/v8datamodel/Toolbar.cpp",
+   "orig_size": 38,
+   "recomp_size": 38,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3119,50 +3175,6 @@
    "recomp_size": 19,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x00857ca0",
-   "kind": "FUNCTION",
-   "name": "RBX::DataModel::getFlagB68",
-   "mangled": "?getFlagB68@DataModel@RBX@@QBE_NXZ",
-   "file": "Client/App/v8datamodel/DataModel.cpp",
-   "orig_size": 7,
-   "recomp_size": 7,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00856210",
-   "kind": "FUNCTION",
-   "name": "RBX::DataModel::getDataModel",
-   "mangled": "?getDataModel@DataModel@RBX@@QAEPAV12@XZ",
-   "file": "Client/App/v8datamodel/DataModel.cpp",
-   "orig_size": 13,
-   "recomp_size": 13,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x008510f0",
-   "kind": "FUNCTION",
-   "name": "std::numpunct::getFlag0D",
-   "mangled": "?getFlag0D@numpunct@std@@QBE_NXZ",
-   "file": "Client/App/v8datamodel/numpunct.cpp",
-   "orig_size": 4,
-   "recomp_size": 4,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00851020",
-   "kind": "FUNCTION",
-   "name": "std::numpunct::getFlag0C",
-   "mangled": "?getFlag0C@numpunct@std@@QBE_NXZ",
-   "file": "Client/App/v8datamodel/numpunct.cpp",
-   "orig_size": 4,
-   "recomp_size": 4,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -3735,9 +3747,69 @@
    "matched": 499,
    "implemented": 499,
    "pct": 5.3284
+  },
+  {
+   "t": "2026-11-19 02:11:40 UTC",
+   "matched": 508,
+   "implemented": 508,
+   "pct": 5.4245
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T02:09:24",
+   "address": "0x005c7ee0",
+   "name": "",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T02:08:53",
+   "address": "0x004a4c00",
+   "name": "setPage",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T02:08:00",
+   "address": "0x0049ff40",
+   "name": "PickerFrame::PickerFrame",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T02:07:05",
+   "address": "0x00baa1e0",
+   "name": "ctor",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T02:04:48",
+   "address": "0x00a685e0",
+   "name": "RBX::LogService::Clear",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T02:04:42",
+   "address": "0x007c8c20",
+   "name": "RBX::LocalScript::unk_7C8C20",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T02:04:35",
+   "address": "0x00c687d0",
+   "name": "RBX::Network::NetworkOwnerJob::NetworkOwnerJob",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T02:04:29",
+   "address": "0x00674450",
+   "name": "void",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T02:04:27",
+   "address": "0x009439b0",
+   "name": "RBX::Toolbar::getRibbonTool",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T02:01:18",
    "address": "0x00c9cf70",
@@ -4403,61 +4475,7 @@
    "address": "0x005eb770",
    "name": "RBX::Graphics::Device::releaseAll",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:16:54",
-   "address": "0x00a2cb70",
-   "name": "std::filtering_stream::reset",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:16:48",
-   "address": "0x005323f0",
-   "name": "compare",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:16:39",
-   "address": "0x00411990",
-   "name": "RBX::Reflection::ClassDescriptor::is",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:13:31",
-   "address": "0x00426d00",
-   "name": "sub_825140",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:13:28",
-   "address": "0x00cc7320",
-   "name": "RakNet::PluginInterface2::IsEmpty",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:12:31",
-   "address": "0x00717520",
-   "name": "G3D::TextInput::TokenException::number",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:11:24",
-   "address": "0x0085fb80",
-   "name": "assign",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:09:48",
-   "address": "0x007c2d40",
-   "name": "RBX::BoxSelectCommand::canSelect",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:07:37",
-   "address": "0x00b46420",
-   "name": "RBX::ModelTool::onDragEnd",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 53.37
+ "match_rate_per_hour": 53.63
 }

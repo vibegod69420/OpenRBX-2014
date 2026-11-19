@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	PickerFrame();
 	// AUTO-GENERATED METHODS
 };
 
