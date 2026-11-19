@@ -1,0 +1,24 @@
+#ifndef CLIENT_ROBLOXSTUDIO_TEXTXMLPARSER_H
+#define CLIENT_ROBLOXSTUDIO_TEXTXMLPARSER_H
+
+#include "decomp.h"
+
+
+
+// AUTO-GENERATED HELPERS
+
+class TextXmlParser
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+
+
+#endif // CLIENT_ROBLOXSTUDIO_TEXTXMLPARSER_H

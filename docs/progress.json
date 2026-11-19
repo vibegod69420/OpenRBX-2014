@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 06:35:51 UTC",
+ "updated_at": "2026-11-19 06:47:09 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 6.7379,
- "implemented_total": 632,
- "function_annotations": 632,
+ "matchable_coverage_pct": 6.7485,
+ "implemented_total": 633,
+ "function_annotations": 633,
  "stub_annotations": 0,
- "perfect_100_count": 631,
- "matched_real_functions": 631,
+ "perfect_100_count": 632,
+ "matched_real_functions": 632,
  "average_match_pct": 99.85,
- "overall_function_coverage_pct": 1.5557,
- "overall_byte_coverage_pct": 0.1964,
+ "overall_function_coverage_pct": 1.5581,
+ "overall_byte_coverage_pct": 0.1977,
  "usage": {
-  "calls_24h": 3448,
+  "calls_24h": 3495,
   "failures_24h": 0,
-  "completion_tokens_24h": 38142911,
-  "reasoning_tokens_24h": 37488515,
-  "avg_latency_s": 193.4
+  "completion_tokens_24h": 38743248,
+  "reasoning_tokens_24h": 38073738,
+  "avg_latency_s": 193.8
  },
- "functions_total": 632,
+ "functions_total": 633,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -66,9 +66,9 @@
   },
   {
    "name": "Rendering/GfxCore",
-   "matched": 30,
-   "functions": 30,
-   "bytes": 835
+   "matched": 31,
+   "functions": 31,
+   "bytes": 961
   },
   {
    "name": "App/script",
@@ -4023,9 +4023,21 @@
    "matched": 631,
    "implemented": 632,
    "pct": 6.7379
+  },
+  {
+   "t": "2026-11-19 06:47:09 UTC",
+   "matched": 632,
+   "implemented": 633,
+   "pct": 6.7485
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T06:44:16",
+   "address": "0x0060aaf0",
+   "name": "RBX::Graphics::VertexLayoutGL::upload",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T06:30:30",
    "address": "0x00aa1ed0",
@@ -4739,13 +4751,7 @@
    "address": "0x00a95990",
    "name": "RBX::BodyAngularVelocity::update",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T02:12:57",
-   "address": "0x00783910",
-   "name": "std::abstract_parser::_Tidy",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 45.48
+ "match_rate_per_hour": 44.94
 }
