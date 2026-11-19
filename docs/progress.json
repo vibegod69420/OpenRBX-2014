@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 10:43:57 UTC",
+ "updated_at": "2026-11-19 10:52:26 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 7.3572,
- "implemented_total": 690,
- "function_annotations": 690,
+ "matchable_coverage_pct": 7.3785,
+ "implemented_total": 692,
+ "function_annotations": 692,
  "stub_annotations": 0,
- "perfect_100_count": 689,
- "matched_real_functions": 689,
+ "perfect_100_count": 691,
+ "matched_real_functions": 691,
  "average_match_pct": 99.86,
- "overall_function_coverage_pct": 1.6987,
- "overall_byte_coverage_pct": 0.2449,
+ "overall_function_coverage_pct": 1.7036,
+ "overall_byte_coverage_pct": 0.2452,
  "usage": {
-  "calls_24h": 4393,
+  "calls_24h": 4423,
   "failures_24h": 0,
-  "completion_tokens_24h": 50339051,
-  "reasoning_tokens_24h": 49415557,
-  "avg_latency_s": 200.0
+  "completion_tokens_24h": 50771016,
+  "reasoning_tokens_24h": 49831594,
+  "avg_latency_s": 200.3
  },
- "functions_total": 690,
+ "functions_total": 692,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 282,
-   "functions": 283,
-   "bytes": 7966
+   "matched": 284,
+   "functions": 285,
+   "bytes": 8000
   },
   {
    "name": "App/v8world",
@@ -4167,9 +4167,27 @@
    "matched": 689,
    "implemented": 690,
    "pct": 7.3572
+  },
+  {
+   "t": "2026-11-19 10:52:26 UTC",
+   "matched": 691,
+   "implemented": 692,
+   "pct": 7.3785
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T10:44:56",
+   "address": "0x008ee2b0",
+   "name": "RBX::TeleportService::getConst18957256",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T10:44:11",
+   "address": "0x0056fa20",
+   "name": "boost::thread_data::do_call",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T10:40:47",
    "address": "0x00c5a5f0",
@@ -4877,19 +4895,7 @@
    "address": "0x00cf4f70",
    "name": "std::basic_altstringbuf::BasicAltStringBuf_Thunk_E10140",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T04:03:49",
-   "address": "0x006059c0",
-   "name": "RBX::Graphics::ContextGL::assignIfNull_59c0",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T04:03:47",
-   "address": "0x00b4ebd0",
-   "name": "RBX::BallBallConnector::getConst19",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 38.26
+ "match_rate_per_hour": 38.07
 }

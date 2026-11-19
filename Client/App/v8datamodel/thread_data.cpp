@@ -39,6 +39,17 @@ void __cdecl thread_data::invoke(void* arg1, void* arg2)
 	(*(void (__cdecl**)(void*, void*))this)(arg1, arg2);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0056fa20
+void __cdecl thread_data::do_call()
+{
+	char* base = reinterpret_cast<char*>(this) + 4;
+	(*reinterpret_cast<void (__cdecl**)(void*, void*, void*, void*)>(this))(
+		base,
+		*reinterpret_cast<void**>(base + 4),
+		*reinterpret_cast<void**>(base + 8),
+		*reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 16));
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace boost
