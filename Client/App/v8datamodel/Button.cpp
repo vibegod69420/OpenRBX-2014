@@ -34,6 +34,21 @@ void Button::clear()
 	::operator delete(list0->head);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00940c80
+void Button::clearLists()
+{
+	void* it;
+	ButtonList* base = reinterpret_cast<ButtonList*>(reinterpret_cast<char*>(this) + 4);
+
+	ButtonList* list12 = reinterpret_cast<ButtonList*>(reinterpret_cast<char*>(base) + 8);
+	list12->clear();
+	::operator delete(list12->head);
+
+	ButtonNode* head = base->head;
+	base->erase(&it, head->next, head);
+	::operator delete(base->head);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

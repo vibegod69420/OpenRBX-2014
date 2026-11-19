@@ -5,6 +5,10 @@
 
 namespace RBX {
 
+class Instance;
+#ifndef NULL
+#define NULL 0
+#endif
 // AUTO-GENERATED HELPERS
 
 class LocalBackpack
@@ -17,6 +21,7 @@ public:
 	};
 
 	int isNull() const;
+	Instance*getPlayer() const;
 	// AUTO-GENERATED METHODS
 };
 

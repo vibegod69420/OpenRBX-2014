@@ -17,6 +17,7 @@ public:
 	};
 
 	void __fastcall remove(btGjkPairDetector* node);
+	btGjkPairDetector*getClosestPoint();
 	// AUTO-GENERATED METHODS
 };
 

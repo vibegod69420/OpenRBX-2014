@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 04:49:03 UTC",
+  "updated_at": "2026-11-19 04:56:50 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,20 +16,20 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 6.4709,
-  "implemented_total": 607,
-  "function_annotations": 607,
+  "matchable_coverage_pct": 6.5456,
+  "implemented_total": 614,
+  "function_annotations": 614,
   "stub_annotations": 0,
-  "perfect_100_count": 606,
-  "matched_real_functions": 606,
-  "average_match_pct": 99.84,
-  "overall_function_coverage_pct": 1.494,
-  "overall_byte_coverage_pct": 0.1759,
+  "perfect_100_count": 613,
+  "matched_real_functions": 613,
+  "average_match_pct": 99.85,
+  "overall_function_coverage_pct": 1.5113,
+  "overall_byte_coverage_pct": 0.1799,
   "usage": {
-    "calls_24h": 2962,
+    "calls_24h": 3004,
     "failures_24h": 0,
-    "completion_tokens_24h": 32162852,
-    "reasoning_tokens_24h": 31625212,
+    "completion_tokens_24h": 32606396,
+    "reasoning_tokens_24h": 32062624,
     "avg_latency_s": 189.8
   },
   "functions": [
@@ -1585,6 +1585,17 @@
       "matchable": true
     },
     {
+      "address": "0x005c8cb0",
+      "kind": "FUNCTION",
+      "name": "?getClosestPoint@btGjkPairDetector@@QAEPAV1@XZ",
+      "mangled": "?getClosestPoint@btGjkPairDetector@@QAEPAV1@XZ",
+      "file": "Client/App/v8kernel/btGjkPairDetector.cpp",
+      "orig_size": 59,
+      "recomp_size": 59,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x005dce80",
       "kind": "FUNCTION",
       "name": "RBX::CSGMeshSgCore::isValid",
@@ -2087,6 +2098,17 @@
       "file": "Client/App/v8world/BlockMesh.cpp",
       "orig_size": 35,
       "recomp_size": 35,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00624ce0",
+      "kind": "FUNCTION",
+      "name": "RBX::POLY::BlockMesh::BlockMesh",
+      "mangled": "??0BlockMesh@POLY@RBX@@QAE@XZ",
+      "file": "Client/App/v8world/BlockMesh.cpp",
+      "orig_size": 54,
+      "recomp_size": 54,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -2678,6 +2700,17 @@
       "kind": "FUNCTION",
       "name": "G3D::PhysicsFrame::getZeroStorage",
       "mangled": "?getZeroStorage@PhysicsFrame@G3D@@QAEPAHXZ",
+      "file": "Client/Rendering/g3d/G3Dcpp/PhysicsFrame.cpp",
+      "orig_size": 53,
+      "recomp_size": 53,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x006dea40",
+      "kind": "FUNCTION",
+      "name": "G3D::PhysicsFrame::getOneStorage",
+      "mangled": "?getOneStorage@PhysicsFrame@G3D@@QAEPAHXZ",
       "file": "Client/Rendering/g3d/G3Dcpp/PhysicsFrame.cpp",
       "orig_size": 53,
       "recomp_size": 53,
@@ -4104,6 +4137,17 @@
       "matchable": true
     },
     {
+      "address": "0x0092a630",
+      "kind": "FUNCTION",
+      "name": "RBX::LocalBackpack::getPlayer",
+      "mangled": "?getPlayer@LocalBackpack@RBX@@QBEPAVInstance@2@XZ",
+      "file": "Client/App/v8datamodel/LocalBackpack.cpp",
+      "orig_size": 44,
+      "recomp_size": 44,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0092ac60",
       "kind": "FUNCTION",
       "name": "RBX::TextDisplay::getFlagB8",
@@ -4199,6 +4243,17 @@
       "file": "Client/App/gui/ProfanityFilter.cpp",
       "orig_size": 26,
       "recomp_size": 26,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00940c80",
+      "kind": "FUNCTION",
+      "name": "RBX::Button::clearLists",
+      "mangled": "?clearLists@Button@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/Button.cpp",
+      "orig_size": 60,
+      "recomp_size": 60,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -5193,6 +5248,17 @@
       "matchable": true
     },
     {
+      "address": "0x00ad18c0",
+      "kind": "FUNCTION",
+      "name": "animatorPreClear",
+      "mangled": "?clear@Animator@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/Animator.cpp",
+      "orig_size": 58,
+      "recomp_size": 58,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00af1120",
       "kind": "FUNCTION",
       "name": "RBX::MultiJoint::getJointType",
@@ -6080,6 +6146,17 @@
       "file": "Client/App/v8datamodel/HammerTool.cpp",
       "orig_size": 29,
       "recomp_size": 29,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c0a010",
+      "kind": "FUNCTION",
+      "name": "RBX::MoveResizeJoinTool::getSnapValues",
+      "mangled": "?getSnapValues@MoveResizeJoinTool@RBX@@QAEPBMXZ",
+      "file": "Client/App/tool/MoveResizeJoinTool.cpp",
+      "orig_size": 53,
+      "recomp_size": 53,
       "match_pct": 100.0,
       "matchable": true
     },

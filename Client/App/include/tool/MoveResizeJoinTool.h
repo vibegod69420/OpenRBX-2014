@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	const float*getSnapValues();
 	// AUTO-GENERATED METHODS
 };
 

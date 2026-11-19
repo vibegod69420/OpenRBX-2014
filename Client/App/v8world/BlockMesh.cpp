@@ -37,6 +37,21 @@ void* BlockMesh::getOwner()
 	return 0;
 }
 
+void __fastcall sub_629f20(void* self);
+
+// FUNCTION: ROBLOXSTUDIO 0x00624ce0
+BlockMesh::BlockMesh()
+{
+	sub_629f20(this);
+
+	reinterpret_cast<int*>(this)[10] = 0;
+	reinterpret_cast<int*>(this)[11] = 0;
+	reinterpret_cast<int*>(this)[12] = 0;
+	reinterpret_cast<int*>(this)[13] = 0;
+	reinterpret_cast<int*>(this)[14] = 0;
+	reinterpret_cast<int*>(this)[15] = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace POLY

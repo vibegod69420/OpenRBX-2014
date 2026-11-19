@@ -17,6 +17,7 @@ public:
 	};
 
 	int*getZeroStorage();
+	int*getOneStorage();
 	// AUTO-GENERATED METHODS
 };
 

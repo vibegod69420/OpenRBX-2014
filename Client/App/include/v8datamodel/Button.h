@@ -17,6 +17,7 @@ public:
 	};
 
 	void clear();
+	void clearLists();
 	// AUTO-GENERATED METHODS
 };
 

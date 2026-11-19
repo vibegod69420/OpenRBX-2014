@@ -26,6 +26,28 @@ int* PhysicsFrame::getZeroStorage()
 	return storage.data;
 }
 
+struct PhysicsFrameOneStorage
+{
+	int data[3];
+	int initialized;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x006dea40
+int* PhysicsFrame::getOneStorage()
+{
+	static PhysicsFrameOneStorage storage;
+
+	if ((storage.initialized & 1) == 0)
+	{
+		storage.initialized |= 1;
+		storage.data[0] = 0x3f800000;
+		storage.data[1] = 0x3f800000;
+		storage.data[2] = 0x3f800000;
+	}
+
+	return storage.data;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace G3D

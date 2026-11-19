@@ -37,6 +37,42 @@ void __fastcall btGjkPairDetector::remove(btGjkPairDetector* node)
 	--l->count;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005c8cb0
+struct GjkPairDetectorNode
+{
+	char pad0[0x10];
+	float value;
+	char pad14[0x18];
+	GjkPairDetectorNode* prev;
+	GjkPairDetectorNode* next;
+};
+
+btGjkPairDetector* btGjkPairDetector::getClosestPoint()
+{
+	GjkPairDetectorNode* best = *(GjkPairDetectorNode**)((char*)this + 0x2854);
+	GjkPairDetectorNode* cur = best->next;
+	float bestSq = best->value;
+	bestSq *= bestSq;
+
+	if (cur)
+	{
+		do
+		{
+			float curSq = cur->value;
+			curSq *= curSq;
+			if (bestSq > curSq)
+			{
+				best = cur;
+				bestSq = curSq;
+			}
+			cur = cur->next;
+		}
+		while (cur);
+	}
+
+	return reinterpret_cast<btGjkPairDetector*>(best);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
