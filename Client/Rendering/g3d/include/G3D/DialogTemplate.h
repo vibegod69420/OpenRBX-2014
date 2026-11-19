@@ -1,0 +1,26 @@
+#ifndef CLIENT_RENDERING_G3D_INCLUDE_G3D_DIALOGTEMPLATE_H
+#define CLIENT_RENDERING_G3D_INCLUDE_G3D_DIALOGTEMPLATE_H
+
+#include "decomp.h"
+
+namespace G3D {
+namespace _internal {
+
+// AUTO-GENERATED HELPERS
+
+class DialogTemplate
+{
+public:
+	union
+	{
+		int _vtable_or_head;
+		// AUTO-GENERATED FIELDS
+	};
+
+	// AUTO-GENERATED METHODS
+};
+
+} // namespace _internal
+} // namespace G3D
+
+#endif // CLIENT_RENDERING_G3D_INCLUDE_G3D_DIALOGTEMPLATE_H

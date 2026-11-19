@@ -59,6 +59,30 @@ void RobloxObjectBrowserDoc::DeleteContents()
 		flag = 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x004f60c0
+extern "C" int __cdecl sub_CF67F8(void*, int, const char*, const char*, int);
+
+int RobloxObjectBrowserDoc::GetIconIndex()
+{
+	if (sub_CF67F8(this, 0, (const char*)0x012BE620, (const char*)0x012BE4B0, 0))
+		return 6;
+	if (sub_CF67F8(this, 0, (const char*)0x012BE620, (const char*)0x012BC0A4, 0))
+		return 5;
+	if (sub_CF67F8(this, 0, (const char*)0x012BE620, (const char*)0x012C9074, 0))
+		return 4;
+	if (sub_CF67F8(this, 0, (const char*)0x012BE620, (const char*)0x012C9044, 0))
+		return 3;
+	if (sub_CF67F8(this, 0, (const char*)0x012BE620, (const char*)0x012BC38C, 0))
+		return 2;
+	if (sub_CF67F8(this, 0, (const char*)0x012BE620, (const char*)0x012C90DC, 0))
+		return 1;
+
+	if (sub_CF67F8(this, 0, (const char*)0x012BE620, (const char*)0x012BE104, 0))
+		return 0;
+
+	return 100;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

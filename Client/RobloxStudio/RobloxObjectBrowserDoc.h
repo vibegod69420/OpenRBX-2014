@@ -20,6 +20,7 @@ public:
 	int getField1C() const;
 	bool OnNewDocument();
 	void DeleteContents();
+	int GetIconIndex();
 	// AUTO-GENERATED METHODS
 };
 
