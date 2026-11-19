@@ -26,6 +26,20 @@ void sp_counted_impl_pd::dispose()
 	}
 }
 
+struct sp_counted_impl_pd_scalar_deleting_dtor
+{
+	virtual void* destroy(unsigned int);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00412e50
+void sp_counted_impl_pd::destroy()
+{
+	if (this)
+	{
+		((sp_counted_impl_pd_scalar_deleting_dtor*)this)->destroy(1);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -50,6 +50,21 @@ void __cdecl thread_data::do_call()
 		*reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 16));
 }
 
+struct thread_data_run_bind_layout
+{
+	char pad[0x3c];
+	void (__cdecl *fn)(__int64, void*);
+	int value;
+	void* arg;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x008fa600
+void thread_data::run_bind()
+{
+	thread_data_run_bind_layout* self = reinterpret_cast<thread_data_run_bind_layout*>(this);
+	self->fn(self->value, self->arg);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace boost

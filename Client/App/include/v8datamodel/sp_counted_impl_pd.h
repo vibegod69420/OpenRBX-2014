@@ -19,6 +19,7 @@ public:
 
 	const int* getMemberPtr10() const;
 	void dispose();
+	void destroy();
 	// AUTO-GENERATED METHODS
 };
 

@@ -19,6 +19,7 @@ public:
 
 	int getConst2() const;
 	int getForwardedStateValue();
+	void dispose();
 	// AUTO-GENERATED METHODS
 };
 

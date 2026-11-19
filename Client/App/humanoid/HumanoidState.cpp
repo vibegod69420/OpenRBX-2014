@@ -50,6 +50,23 @@ int HumanoidState::getForwardedStateValue()
 	return *(int*)((char*)cur + 8);
 }
 
+class HumanoidStateVCall
+{
+public:
+	virtual void v0();
+	virtual void v1(int);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x009d6ff0
+void HumanoidState::dispose()
+{
+	char* p = *(char**)((char*)this + 0x0C);
+	if (p)
+	{
+		((HumanoidStateVCall*)(p + 4))->v1(1);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace HUMAN

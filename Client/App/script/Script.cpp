@@ -52,6 +52,12 @@ void Script::sub_7CA820()
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x007ca790
+const char* Script::sub_7CA790() const
+{
+	return (*(const int*)((const char*)this + 0x74) == 0) ? (const char*)this + 0xA4 : (const char*)0x011EF03C;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
