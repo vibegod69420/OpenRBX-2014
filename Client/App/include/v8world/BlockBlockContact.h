@@ -18,6 +18,7 @@ public:
 
 	void*allocate();
 	void*allocate(unsigned int size);
+	void deleteAllConnectors();
 	// AUTO-GENERATED METHODS
 };
 

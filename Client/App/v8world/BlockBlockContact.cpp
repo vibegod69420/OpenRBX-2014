@@ -98,6 +98,61 @@ void* BlockBlockContact::allocate(unsigned int size)
 	return node;
 }
 
+struct BlockBlockContact_Element
+{
+	char padding0[0x18];
+	int field_18;
+	char padding1[0x4C];
+	int field_68;
+	int field_6C;
+	char padding2[0x80];
+	int field_F0;
+	int field_F4;
+	int field_F8;
+};
+
+struct BlockBlockContact_VTable
+{
+	virtual void v0() {}
+	virtual void v1() {}
+	virtual void v2() {}
+	virtual void v3() {}
+	virtual void v4() {}
+	virtual void v5() {}
+	virtual void v6() {}
+	virtual void v7() {}
+	virtual void v8() {}
+	virtual void v9() {}
+	virtual int getCount() { return 0; }                                   // 0x28
+	virtual BlockBlockContact_Element* getElement(int index) { return 0; }  // 0x2C
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00b4da60
+void BlockBlockContact::deleteAllConnectors()
+{
+	int i = 0;
+	int count = reinterpret_cast<BlockBlockContact_VTable*>(this)->getCount();
+	if (count > 0)
+	{
+		do
+		{
+			BlockBlockContact_Element* element =
+				reinterpret_cast<BlockBlockContact_VTable*>(this)->getElement(i);
+
+			element->field_F0 = 0;
+			element->field_F4 = 0;
+			element->field_F8 = 0;
+			element->field_18 = 0;
+			element->field_68 = 0;
+			element->field_6C = 0;
+
+			++i;
+			count = reinterpret_cast<BlockBlockContact_VTable*>(this)->getCount();
+		}
+		while (i < count);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
