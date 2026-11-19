@@ -5,6 +5,7 @@
 
 namespace RBX {
 
+struct Sub_Kernel_24_34 { char pad[52]; int val; };
 // AUTO-GENERATED HELPERS
 
 class Kernel
@@ -13,10 +14,12 @@ public:
 	union
 	{
 		int _vtable_or_head;
+		struct { char _pad_sub_0024_34[0x24]; Sub_Kernel_24_34* sub_0024_34; };
 		// AUTO-GENERATED FIELDS
 	};
 
 	int getConst15() const;
+	int getSubField24_34() const;
 	// AUTO-GENERATED METHODS
 };
 

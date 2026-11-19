@@ -19,6 +19,12 @@ int __cdecl lua_exception::getCode()
 	return *(int*)((char*)this + 0x44);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a37a90
+int __cdecl lua_exception::getLine()
+{
+	return *(int*)((char*)this + 0x3C);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

@@ -5,6 +5,7 @@
 
 namespace RBX {
 
+extern int s_value_00825850;
 // AUTO-GENERATED HELPERS
 
 class PartInstance
@@ -20,6 +21,7 @@ public:
 
 	int getField70() const;
 	int getField74() const;
+	int getGlobal_5850() const;
 	// AUTO-GENERATED METHODS
 };
 

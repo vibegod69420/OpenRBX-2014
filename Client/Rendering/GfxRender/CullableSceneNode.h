@@ -19,6 +19,7 @@ public:
 
 	int getConst1() const;
 	static int derefInt(const int* p);
+	static int derefInt_9b80(const int* p);
 	// AUTO-GENERATED METHODS
 };
 

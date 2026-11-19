@@ -5,6 +5,7 @@
 
 namespace RBX {
 
+class Primitive;
 // AUTO-GENERATED HELPERS
 
 class Ball
@@ -17,6 +18,7 @@ public:
 	};
 
 	float getGridVolume() const;
+	Primitive*getPrimitive() const;
 	// AUTO-GENERATED METHODS
 };
 

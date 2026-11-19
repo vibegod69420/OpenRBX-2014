@@ -42,6 +42,12 @@ void FastCluster::invalidateEntity()
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00622460
+int FastCluster::derefInt(const int* p)
+{
+	return *p;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

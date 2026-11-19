@@ -18,6 +18,7 @@ public:
 	};
 
 	__int64 getId() const;
+	void dispatch();
 	// AUTO-GENERATED METHODS
 };
 

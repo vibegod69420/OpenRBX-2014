@@ -11,6 +11,12 @@ int RenderEntity::derefInt(const int* p)
 	return *p;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006742a0
+int RenderEntity::derefInt_42a0(const int* p)
+{
+	return *p;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

@@ -11,6 +11,12 @@ int ServerReplicator::getField46AC() const
 	return field_46ac;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00cb94e0
+int ServerReplicator::getGlobal_94e0() const
+{
+	return s_value_00cb94e0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

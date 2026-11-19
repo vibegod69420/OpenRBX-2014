@@ -11,6 +11,14 @@ __int64 TagItem::getId() const
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00cf40a0
+__declspec(dllimport) void __stdcall TagItemDispatch(TagItem*);
+
+void TagItem::dispatch()
+{
+	TagItemDispatch(this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 01:18:22 UTC",
+  "updated_at": "2026-11-19 01:25:54 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 4.6129,
-  "implemented_total": 432,
-  "function_annotations": 432,
+  "matchable_coverage_pct": 4.8372,
+  "implemented_total": 453,
+  "function_annotations": 453,
   "stub_annotations": 0,
-  "perfect_100_count": 432,
-  "matched_real_functions": 432,
+  "perfect_100_count": 453,
+  "matched_real_functions": 453,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 1.0651,
-  "overall_byte_coverage_pct": 0.1186,
+  "overall_function_coverage_pct": 1.1168,
+  "overall_byte_coverage_pct": 0.1205,
   "usage": {
-    "calls_24h": 1877,
+    "calls_24h": 1905,
     "failures_24h": 0,
-    "completion_tokens_24h": 20511555,
-    "reasoning_tokens_24h": 20163487,
-    "avg_latency_s": 190.2
+    "completion_tokens_24h": 20837737,
+    "reasoning_tokens_24h": 20474329,
+    "avg_latency_s": 190.6
   },
   "functions": [
     {
@@ -914,6 +914,17 @@
       "matchable": true
     },
     {
+      "address": "0x0058a950",
+      "kind": "FUNCTION",
+      "name": "UploadDialog::getField28",
+      "mangled": "?getField28@UploadDialog@@QBEHXZ",
+      "file": "Client/RobloxStudio/UploadDialog.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0058f690",
       "kind": "FUNCTION",
       "name": "btCollisionDispatcher::getInternalManifoldPointer",
@@ -1552,6 +1563,28 @@
       "matchable": true
     },
     {
+      "address": "0x00619b80",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::CullableSceneNode::derefInt_9b80",
+      "mangled": "?derefInt_9b80@CullableSceneNode@Graphics@RBX@@SAHPBH@Z",
+      "file": "Client/Rendering/GfxRender/CullableSceneNode.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0061ba90",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::MegaCluster::derefInt",
+      "mangled": "?derefInt@MegaCluster@Graphics@RBX@@SAHPBH@Z",
+      "file": "Client/Rendering/GfxRender/MegaCluster.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0061e6e0",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::Technique::destroySubPtr0C",
@@ -1625,6 +1658,17 @@
       "file": "Client/Rendering/GfxRender/FastCluster.cpp",
       "orig_size": 16,
       "recomp_size": 16,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00622460",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::FastCluster::derefInt",
+      "mangled": "?derefInt@FastCluster@Graphics@RBX@@SAHPBH@Z",
+      "file": "Client/Rendering/GfxRender/FastCluster.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -1710,6 +1754,17 @@
       "kind": "FUNCTION",
       "name": "RBX::Graphics::RenderEntity::derefInt",
       "mangled": "?derefInt@RenderEntity@Graphics@RBX@@SAHPBH@Z",
+      "file": "Client/Rendering/GfxRender/RenderEntity.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x006742a0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::RenderEntity::derefInt_42a0",
+      "mangled": "?derefInt_42a0@RenderEntity@Graphics@RBX@@SAHPBH@Z",
       "file": "Client/Rendering/GfxRender/RenderEntity.cpp",
       "orig_size": 10,
       "recomp_size": 10,
@@ -1805,10 +1860,32 @@
       "matchable": true
     },
     {
+      "address": "0x006801d0",
+      "kind": "FUNCTION",
+      "name": "RBX::TypedStatsItem::derefInt",
+      "mangled": "?derefInt@TypedStatsItem@RBX@@SAHPBH@Z",
+      "file": "Client/App/v8datamodel/TypedStatsItem.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00686b50",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::SceneUpdater::derefInt",
       "mangled": "?derefInt@SceneUpdater@Graphics@RBX@@SAHPBH@Z",
+      "file": "Client/Rendering/GfxRender/SceneUpdater.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00686b60",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::SceneUpdater::derefInt_6b60",
+      "mangled": "?derefInt_6b60@SceneUpdater@Graphics@RBX@@SAHPBH@Z",
       "file": "Client/Rendering/GfxRender/SceneUpdater.cpp",
       "orig_size": 10,
       "recomp_size": 10,
@@ -1827,6 +1904,17 @@
       "matchable": true
     },
     {
+      "address": "0x00693730",
+      "kind": "FUNCTION",
+      "name": "RBX::Sky::derefInt_3730",
+      "mangled": "?derefInt_3730@Sky@RBX@@SAHPBH@Z",
+      "file": "Client/App/v8datamodel/Sky.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00696790",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::SSAO::derefInt",
@@ -1838,10 +1926,32 @@
       "matchable": true
     },
     {
+      "address": "0x006967a0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::SSAO::derefInt_67a0",
+      "mangled": "?derefInt_67a0@SSAO@Graphics@RBX@@SAHPBH@Z",
+      "file": "Client/Rendering/GfxRender/SSAO.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x006ad930",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::VisualEngine::derefInt",
       "mangled": "?derefInt@VisualEngine@Graphics@RBX@@SAHPBH@Z",
+      "file": "Client/Rendering/GfxRender/VisualEngine.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x006ad940",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::VisualEngine::derefInt_d940",
+      "mangled": "?derefInt_d940@VisualEngine@Graphics@RBX@@SAHPBH@Z",
       "file": "Client/Rendering/GfxRender/VisualEngine.cpp",
       "orig_size": 10,
       "recomp_size": 10,
@@ -1970,6 +2080,17 @@
       "matchable": true
     },
     {
+      "address": "0x006e0dc0",
+      "kind": "FUNCTION",
+      "name": "G3D::Sphere::getGlobalDouble",
+      "mangled": "?getGlobalDouble@Sphere@G3D@@QAENXZ",
+      "file": "Client/Rendering/g3d/G3Dcpp/Sphere.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x006e86d0",
       "kind": "FUNCTION",
       "name": "G3D::AlignedMemoryManager::isTrue",
@@ -2091,6 +2212,17 @@
       "matchable": true
     },
     {
+      "address": "0x007929d0",
+      "kind": "FUNCTION",
+      "name": "RBX::ChangeHistoryService::IsPlaying",
+      "mangled": "?IsPlaying@ChangeHistoryService@RBX@@QAEHXZ",
+      "file": "Client/App/v8datamodel/ChangeHistoryService.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0079e3c0",
       "kind": "FUNCTION",
       "name": "DebuggerBreakpoint_CreateDebugInfo",
@@ -2184,6 +2316,17 @@
       "name": "RBX::Script::getConst18804796",
       "mangled": "?getConst18804796@Script@RBX@@QBEHXZ",
       "file": "Client/App/script/Script.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00825850",
+      "kind": "FUNCTION",
+      "name": "RBX::PartInstance::getGlobal_5850",
+      "mangled": "?getGlobal_5850@PartInstance@RBX@@QBEHXZ",
+      "file": "Client/App/v8datamodel/PartInstance.cpp",
       "orig_size": 6,
       "recomp_size": 6,
       "match_pct": 100.0,
@@ -3191,10 +3334,32 @@
       "matchable": true
     },
     {
+      "address": "0x009977c0",
+      "kind": "FUNCTION",
+      "name": "RBX::Soundscape::SoundId::getFieldB8",
+      "mangled": "?getFieldB8@SoundId@Soundscape@RBX@@QBEHXZ",
+      "file": "Client/App/v8datamodel/SoundId.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0099c7f0",
       "kind": "FUNCTION",
       "name": "RBX::TriangleMesh::getPart",
       "mangled": "?getPart@TriangleMesh@RBX@@QBEPAXXZ",
+      "file": "Client/App/v8world/TriangleMesh.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0099c800",
+      "kind": "FUNCTION",
+      "name": "RBX::TriangleMesh::getPrimitive",
+      "mangled": "?getPrimitive@TriangleMesh@RBX@@QBEPAXXZ",
       "file": "Client/App/v8world/TriangleMesh.cpp",
       "orig_size": 10,
       "recomp_size": 10,
@@ -3220,6 +3385,17 @@
       "file": "Client/App/v8world/RotatePJoint.cpp",
       "orig_size": 194,
       "recomp_size": 6,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0099d070",
+      "kind": "FUNCTION",
+      "name": "RBX::Ball::getPrimitive",
+      "mangled": "?getPrimitive@Ball@RBX@@QBEPAVPrimitive@2@XZ",
+      "file": "Client/App/v8world/Ball.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -3587,6 +3763,17 @@
       "matchable": true
     },
     {
+      "address": "0x00a37a90",
+      "kind": "FUNCTION",
+      "name": "lua_exception::getLine",
+      "mangled": "?getLine@lua_exception@@QAAHXZ",
+      "file": "Client/RobloxStudio/lua_exception.cpp",
+      "orig_size": 11,
+      "recomp_size": 11,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00a45db0",
       "kind": "FUNCTION",
       "name": "RBX::ScriptService::Info::destroyInstance",
@@ -3825,6 +4012,17 @@
       "file": "Client/App/v8kernel/Kernel.cpp",
       "orig_size": 285,
       "recomp_size": 6,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b53510",
+      "kind": "FUNCTION",
+      "name": "RBX::Kernel::getSubField24_34",
+      "mangled": "?getSubField24_34@Kernel@RBX@@QBEHXZ",
+      "file": "Client/App/v8kernel/Kernel.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -4210,6 +4408,17 @@
       "file": "Client/App/v8world/PolyContact.cpp",
       "orig_size": 23,
       "recomp_size": 23,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00bd4ad0",
+      "kind": "FUNCTION",
+      "name": "RBX::CellEdgeEdgePair::getField2C",
+      "mangled": "?getField2C@CellEdgeEdgePair@RBX@@QBEHXZ",
+      "file": "Client/App/v8world/CellEdgeEdgePair.cpp",
+      "orig_size": 4,
+      "recomp_size": 4,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -4676,6 +4885,17 @@
       "matchable": true
     },
     {
+      "address": "0x00cb94e0",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::ServerReplicator::getGlobal_94e0",
+      "mangled": "?getGlobal_94e0@ServerReplicator@Network@RBX@@QBEHXZ",
+      "file": "Client/Network/ServerReplicator.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00cbd6b0",
       "kind": "FUNCTION",
       "name": "RBX::Network::Marker::getField8C0",
@@ -4771,6 +4991,17 @@
       "file": "Client/Network/TagItem.cpp",
       "orig_size": 5,
       "recomp_size": 5,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00cf40a0",
+      "kind": "FUNCTION",
+      "name": "TagItemDispatch",
+      "mangled": "?dispatch@TagItem@Network@RBX@@QAEXXZ",
+      "file": "Client/Network/TagItem.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
       "match_pct": 100.0,
       "matchable": true
     },

@@ -19,6 +19,7 @@ public:
 
 	int size() const;
 	void invalidateEntity();
+	static int derefInt(const int* p);
 	// AUTO-GENERATED METHODS
 };
 

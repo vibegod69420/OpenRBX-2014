@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 01:18:22 UTC",
+ "updated_at": "2026-11-19 01:25:54 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,47 +16,47 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 4.6129,
- "implemented_total": 432,
- "function_annotations": 432,
+ "matchable_coverage_pct": 4.8372,
+ "implemented_total": 453,
+ "function_annotations": 453,
  "stub_annotations": 0,
- "perfect_100_count": 432,
- "matched_real_functions": 432,
+ "perfect_100_count": 453,
+ "matched_real_functions": 453,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 1.0651,
- "overall_byte_coverage_pct": 0.1186,
+ "overall_function_coverage_pct": 1.1168,
+ "overall_byte_coverage_pct": 0.1205,
  "usage": {
-  "calls_24h": 1877,
+  "calls_24h": 1905,
   "failures_24h": 0,
-  "completion_tokens_24h": 20511555,
-  "reasoning_tokens_24h": 20163487,
-  "avg_latency_s": 190.2
+  "completion_tokens_24h": 20837737,
+  "reasoning_tokens_24h": 20474329,
+  "avg_latency_s": 190.6
  },
- "functions_total": 432,
+ "functions_total": 453,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 184,
-   "functions": 184,
-   "bytes": 3869
+   "matched": 189,
+   "functions": 189,
+   "bytes": 3912
   },
   {
    "name": "App/v8world",
-   "matched": 47,
-   "functions": 47,
-   "bytes": 1407
+   "matched": 50,
+   "functions": 50,
+   "bytes": 1431
   },
   {
    "name": "Rendering/GfxRender",
-   "matched": 27,
-   "functions": 27,
-   "bytes": 1101
+   "matched": 34,
+   "functions": 34,
+   "bytes": 1171
   },
   {
    "name": "App/v8kernel",
-   "matched": 38,
-   "functions": 38,
-   "bytes": 723
+   "matched": 39,
+   "functions": 39,
+   "bytes": 730
   },
   {
    "name": "Rendering/GfxCore",
@@ -66,9 +66,9 @@
   },
   {
    "name": "Rendering/g3d",
-   "matched": 4,
-   "functions": 4,
-   "bytes": 500
+   "matched": 5,
+   "functions": 5,
+   "bytes": 508
   },
   {
    "name": "App/tool",
@@ -215,6 +215,12 @@
    "bytes": 50
   },
   {
+   "name": "RobloxStudio/lua_exception.cpp",
+   "matched": 3,
+   "functions": 3,
+   "bytes": 38
+  },
+  {
    "name": "Network/ClientReplicator.cpp",
    "matched": 2,
    "functions": 2,
@@ -243,12 +249,6 @@
    "matched": 1,
    "functions": 1,
    "bytes": 30
-  },
-  {
-   "name": "RobloxStudio/lua_exception.cpp",
-   "matched": 2,
-   "functions": 2,
-   "bytes": 27
   },
   {
    "name": "RobloxStudio/RenderStatsItem.cpp",
@@ -323,6 +323,18 @@
    "bytes": 14
   },
   {
+   "name": "Network/ServerReplicator.cpp",
+   "matched": 2,
+   "functions": 2,
+   "bytes": 13
+  },
+  {
+   "name": "Network/TagItem.cpp",
+   "matched": 2,
+   "functions": 2,
+   "bytes": 13
+  },
+  {
    "name": "Network/SharedStringDictionary.cpp",
    "matched": 1,
    "functions": 1,
@@ -330,12 +342,6 @@
   },
   {
    "name": "RobloxStudio/RobloxIDEDoc.cpp",
-   "matched": 1,
-   "functions": 1,
-   "bytes": 7
-  },
-  {
-   "name": "Network/ServerReplicator.cpp",
    "matched": 1,
    "functions": 1,
    "bytes": 7
@@ -365,13 +371,13 @@
    "bytes": 6
   },
   {
-   "name": "Network/TagItem.cpp",
+   "name": "RobloxStudio/RobloxTreeWidgetItem.cpp",
    "matched": 1,
    "functions": 1,
-   "bytes": 5
+   "bytes": 4
   },
   {
-   "name": "RobloxStudio/RobloxTreeWidgetItem.cpp",
+   "name": "RobloxStudio/UploadDialog.cpp",
    "matched": 1,
    "functions": 1,
    "bytes": 4
@@ -386,6 +392,17 @@
    "file": "Client/App/v8datamodel/AdornBillboarder.cpp",
    "orig_size": 16,
    "recomp_size": 16,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00cf40a0",
+   "kind": "FUNCTION",
+   "name": "TagItemDispatch",
+   "mangled": "?dispatch@TagItem@Network@RBX@@QAEXXZ",
+   "file": "Client/Network/TagItem.cpp",
+   "orig_size": 8,
+   "recomp_size": 8,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -485,6 +502,17 @@
    "file": "Client/Network/Marker.cpp",
    "orig_size": 7,
    "recomp_size": 7,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00cb94e0",
+   "kind": "FUNCTION",
+   "name": "RBX::Network::ServerReplicator::getGlobal_94e0",
+   "mangled": "?getGlobal_94e0@ServerReplicator@Network@RBX@@QBEHXZ",
+   "file": "Client/Network/ServerReplicator.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -951,6 +979,17 @@
    "matchable": true
   },
   {
+   "address": "0x00bd4ad0",
+   "kind": "FUNCTION",
+   "name": "RBX::CellEdgeEdgePair::getField2C",
+   "mangled": "?getField2C@CellEdgeEdgePair@RBX@@QBEHXZ",
+   "file": "Client/App/v8world/CellEdgeEdgePair.cpp",
+   "orig_size": 4,
+   "recomp_size": 4,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00bc88e0",
    "kind": "FUNCTION",
    "name": "PolyContact_deleteEdge",
@@ -1336,6 +1375,17 @@
    "matchable": true
   },
   {
+   "address": "0x00b53510",
+   "kind": "FUNCTION",
+   "name": "RBX::Kernel::getSubField24_34",
+   "mangled": "?getSubField24_34@Kernel@RBX@@QBEHXZ",
+   "file": "Client/App/v8kernel/Kernel.cpp",
+   "orig_size": 7,
+   "recomp_size": 7,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00b530d0",
    "kind": "FUNCTION",
    "name": "RBX::Kernel::getConst15",
@@ -1574,6 +1624,17 @@
    "file": "Client/App/script/Info.cpp",
    "orig_size": 30,
    "recomp_size": 30,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00a37a90",
+   "kind": "FUNCTION",
+   "name": "lua_exception::getLine",
+   "mangled": "?getLine@lua_exception@@QAAHXZ",
+   "file": "Client/RobloxStudio/lua_exception.cpp",
+   "orig_size": 11,
+   "recomp_size": 11,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1941,6 +2002,17 @@
    "matchable": true
   },
   {
+   "address": "0x0099d070",
+   "kind": "FUNCTION",
+   "name": "RBX::Ball::getPrimitive",
+   "mangled": "?getPrimitive@Ball@RBX@@QBEPAVPrimitive@2@XZ",
+   "file": "Client/App/v8world/Ball.cpp",
+   "orig_size": 10,
+   "recomp_size": 10,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x0099ce20",
    "kind": "FUNCTION",
    "name": "RBX::RotatePJoint::getConst7",
@@ -1963,6 +2035,17 @@
    "matchable": true
   },
   {
+   "address": "0x0099c800",
+   "kind": "FUNCTION",
+   "name": "RBX::TriangleMesh::getPrimitive",
+   "mangled": "?getPrimitive@TriangleMesh@RBX@@QBEPAXXZ",
+   "file": "Client/App/v8world/TriangleMesh.cpp",
+   "orig_size": 10,
+   "recomp_size": 10,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x0099c7f0",
    "kind": "FUNCTION",
    "name": "RBX::TriangleMesh::getPart",
@@ -1970,6 +2053,17 @@
    "file": "Client/App/v8world/TriangleMesh.cpp",
    "orig_size": 10,
    "recomp_size": 10,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x009977c0",
+   "kind": "FUNCTION",
+   "name": "RBX::Soundscape::SoundId::getFieldB8",
+   "mangled": "?getFieldB8@SoundId@Soundscape@RBX@@QBEHXZ",
+   "file": "Client/App/v8datamodel/SoundId.cpp",
+   "orig_size": 7,
+   "recomp_size": 7,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -2975,6 +3069,17 @@
    "matchable": true
   },
   {
+   "address": "0x00825850",
+   "kind": "FUNCTION",
+   "name": "RBX::PartInstance::getGlobal_5850",
+   "mangled": "?getGlobal_5850@PartInstance@RBX@@QBEHXZ",
+   "file": "Client/App/v8datamodel/PartInstance.cpp",
+   "orig_size": 6,
+   "recomp_size": 6,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x007ca780",
    "kind": "FUNCTION",
    "name": "RBX::Script::getConst18804796",
@@ -3026,105 +3131,6 @@
    "file": "Client/App/humanoid/Humanoid.cpp",
    "orig_size": 22,
    "recomp_size": 22,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x007b4990",
-   "kind": "FUNCTION",
-   "name": "RBX::ServiceProvider::getField50",
-   "mangled": "?getField50@ServiceProvider@RBX@@QBEHXZ",
-   "file": "Client/App/v8datamodel/ServiceProvider.cpp",
-   "orig_size": 4,
-   "recomp_size": 4,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x007b3ff0",
-   "kind": "FUNCTION",
-   "name": "call",
-   "mangled": "?sub_007B3FF0@Vector3@G3D@@QAEXXZ",
-   "file": "Client/Rendering/g3d/G3Dcpp/Vector3.cpp",
-   "orig_size": 30,
-   "recomp_size": 30,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x007b3b40",
-   "kind": "FUNCTION",
-   "name": "RBX::NonFactoryProduct::initFactoryData",
-   "mangled": "?initFactoryData@NonFactoryProduct@RBX@@QAEHXZ",
-   "file": "Client/App/v8datamodel/NonFactoryProduct.cpp",
-   "orig_size": 42,
-   "recomp_size": 42,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x0079e3c0",
-   "kind": "FUNCTION",
-   "name": "DebuggerBreakpoint_CreateDebugInfo",
-   "mangled": "??0DebuggerBreakpoint@Scripting@RBX@@QAE@XZ",
-   "file": "Client/App/script/DebuggerBreakpoint.cpp",
-   "orig_size": 27,
-   "recomp_size": 27,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x007929c0",
-   "kind": "FUNCTION",
-   "name": "RBX::ChangeHistoryService::IsRecording",
-   "mangled": "?IsRecording@ChangeHistoryService@RBX@@QAEHXZ",
-   "file": "Client/App/v8datamodel/ChangeHistoryService.cpp",
-   "orig_size": 10,
-   "recomp_size": 10,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x0078a110",
-   "kind": "FUNCTION",
-   "name": "std::parser_error::destroyInstance",
-   "mangled": "?destroyInstance@parser_error@std@@SAXPAV12@@Z",
-   "file": "Client/App/v8datamodel/parser_error.cpp",
-   "orig_size": 30,
-   "recomp_size": 30,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00788400",
-   "kind": "FUNCTION",
-   "name": "std::parser_error::getConst15005704",
-   "mangled": "?getConst15005704@parser_error@std@@QBEHXZ",
-   "file": "Client/App/v8datamodel/parser_error.cpp",
-   "orig_size": 6,
-   "recomp_size": 6,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00787f90",
-   "kind": "FUNCTION",
-   "name": "std::holder::getConst19652792",
-   "mangled": "?getConst19652792@holder@std@@QBEHXZ",
-   "file": "Client/App/v8datamodel/holder.cpp",
-   "orig_size": 6,
-   "recomp_size": 6,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00786a60",
-   "kind": "FUNCTION",
-   "name": "RBX::PathfindingService::CreatePathRequest::cancel",
-   "mangled": "?cancel@CreatePathRequest@PathfindingService@RBX@@QAEXXZ",
-   "file": "Client/App/v8datamodel/CreatePathRequest.cpp",
-   "orig_size": 15,
-   "recomp_size": 15,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -3663,9 +3669,135 @@
    "matched": 432,
    "implemented": 432,
    "pct": 4.6129
+  },
+  {
+   "t": "2026-11-19 01:25:54 UTC",
+   "matched": 453,
+   "implemented": 453,
+   "pct": 4.8372
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T01:22:38",
+   "address": "0x0099d070",
+   "name": "RBX::Ball::getPrimitive",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:22:29",
+   "address": "0x0099c800",
+   "name": "RBX::TriangleMesh::getPrimitive",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:20:39",
+   "address": "0x00cf40a0",
+   "name": "TagItemDispatch",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:20:35",
+   "address": "0x007929d0",
+   "name": "RBX::ChangeHistoryService::IsPlaying",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:19:37",
+   "address": "0x006ad940",
+   "name": "RBX::Graphics::VisualEngine::derefInt_d940",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:19:36",
+   "address": "0x006967a0",
+   "name": "RBX::Graphics::SSAO::derefInt_67a0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:19:34",
+   "address": "0x00693730",
+   "name": "RBX::Sky::derefInt_3730",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:19:32",
+   "address": "0x00686b60",
+   "name": "RBX::Graphics::SceneUpdater::derefInt_6b60",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:19:30",
+   "address": "0x006801d0",
+   "name": "RBX::TypedStatsItem::derefInt",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:19:28",
+   "address": "0x006742a0",
+   "name": "RBX::Graphics::RenderEntity::derefInt_42a0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:19:27",
+   "address": "0x00622460",
+   "name": "RBX::Graphics::FastCluster::derefInt",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:19:25",
+   "address": "0x0061ba90",
+   "name": "RBX::Graphics::MegaCluster::derefInt",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:19:23",
+   "address": "0x00619b80",
+   "name": "RBX::Graphics::CullableSceneNode::derefInt_9b80",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:19:21",
+   "address": "0x006e0dc0",
+   "name": "G3D::Sphere::getGlobalDouble",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:18:38",
+   "address": "0x00bd4ad0",
+   "name": "RBX::CellEdgeEdgePair::getField2C",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:18:37",
+   "address": "0x00b53510",
+   "name": "RBX::Kernel::getSubField24_34",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:18:36",
+   "address": "0x009977c0",
+   "name": "RBX::Soundscape::SoundId::getFieldB8",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:18:36",
+   "address": "0x00cb94e0",
+   "name": "RBX::Network::ServerReplicator::getGlobal_94e0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:18:36",
+   "address": "0x00825850",
+   "name": "RBX::PartInstance::getGlobal_5850",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:18:36",
+   "address": "0x0058a950",
+   "name": "UploadDialog::getField28",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T01:10:47",
    "address": "0x0090ff90",
@@ -4265,127 +4397,7 @@
    "address": "0x005247e0",
    "name": "ToggleLocalSpaceVerb::isChecked",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T23:35:48",
-   "address": "0x00b97d10",
-   "name": "RBX::GlueTool::isEnabled",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T23:35:26",
-   "address": "0x00b97890",
-   "name": "RBX::AdvMoveTool::isEnabled",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T23:34:07",
-   "address": "0x00b98410",
-   "name": "RBX::UniversalTool::isEnabled",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T23:27:59",
-   "address": "0x00b98190",
-   "name": "RBX::NullTool::isChecked",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T23:24:48",
-   "address": "0x00b97910",
-   "name": "RBX::AdvRotateTool::isEnabled",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T23:20:07",
-   "address": "0x00bb8a80",
-   "name": "RBX::HUMAN::RunningBase::fireStateEvents",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T23:13:24",
-   "address": "0x00aa0880",
-   "name": "RBX::ArcHandles::getAxes",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T23:11:45",
-   "address": "0x00606290",
-   "name": "RBX::Graphics::ContextGLWin32::makeCurrent",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T23:02:51",
-   "address": "0x006771a0",
-   "name": "RBX::Graphics::RenderView::update",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T22:57:52",
-   "address": "0x00588b60",
-   "name": "ScreenshotVerb::getTarget",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T22:49:44",
-   "address": "0x005864e0",
-   "name": "RbxWorkspace::getView",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T22:39:31",
-   "address": "0x00469d00",
-   "name": "",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T22:39:26",
-   "address": "0x00469b10",
-   "name": "CallStackWidget::metaObject",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T22:33:02",
-   "address": "0x008c19c0",
-   "name": "RBX::Lua::WeakThreadRef::removeRef",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T22:30:06",
-   "address": "0x00b80080",
-   "name": "RBX::LibraryService::LibraryStateObject::dispose",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T22:30:04",
-   "address": "0x00913db0",
-   "name": "RBX::RigidJoint::getJointType",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T22:26:45",
-   "address": "0x00cead10",
-   "name": "RBX::Network::ProfiledRakPeer::GetNextSendReceipt",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T22:26:31",
-   "address": "0x007b3b40",
-   "name": "RBX::NonFactoryProduct::initFactoryData",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T22:23:19",
-   "address": "0x008928c0",
-   "name": "RBX::CornerWedgeInstance::getMeshScale",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T22:22:09",
-   "address": "0x00620400",
-   "name": "RBX::Graphics::FastClusterBinding::onSpecialShapeChanged",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 50.33
+ "match_rate_per_hour": 52.01
 }

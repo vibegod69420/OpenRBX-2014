@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	double getGlobalDouble();
 	// AUTO-GENERATED METHODS
 };
 

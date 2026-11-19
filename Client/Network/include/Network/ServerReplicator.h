@@ -6,6 +6,7 @@
 namespace RBX {
 namespace Network {
 
+extern int s_value_00cb94e0;
 // AUTO-GENERATED HELPERS
 
 class ServerReplicator
@@ -19,6 +20,7 @@ public:
 	};
 
 	int getField46AC() const;
+	int getGlobal_94e0() const;
 	// AUTO-GENERATED METHODS
 };
 

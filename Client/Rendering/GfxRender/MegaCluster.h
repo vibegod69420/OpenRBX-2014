@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	static int derefInt(const int* p);
 	// AUTO-GENERATED METHODS
 };
 

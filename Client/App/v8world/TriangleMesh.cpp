@@ -70,6 +70,14 @@ void* TriangleMesh::getPart() const
 	return sub_B5BD60(const_cast<TriangleMesh*>(this));
 }
 
+void* sub_B5A020(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x0099c800
+void* TriangleMesh::getPrimitive() const
+{
+	return sub_B5A020(const_cast<TriangleMesh*>(this));
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

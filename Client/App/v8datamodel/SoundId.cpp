@@ -13,6 +13,12 @@ void SoundId::sub_991D40()
 	sub_991C40(this);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x009977c0
+int SoundId::getFieldB8() const
+{
+	return field_00b8;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Soundscape

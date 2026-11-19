@@ -17,6 +17,7 @@ public:
 	};
 
 	int IsRecording();
+	int IsPlaying();
 	// AUTO-GENERATED METHODS
 };
 

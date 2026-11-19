@@ -18,6 +18,7 @@ public:
 	};
 
 	int getField04() const;
+	static int derefInt(const int* p);
 	// AUTO-GENERATED METHODS
 };
 

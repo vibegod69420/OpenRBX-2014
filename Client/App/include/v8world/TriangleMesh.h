@@ -20,6 +20,7 @@ public:
 	bool update();
 	int getTriangleCount() const;
 	void*getPart() const;
+	void*getPrimitive() const;
 	// AUTO-GENERATED METHODS
 };
 
