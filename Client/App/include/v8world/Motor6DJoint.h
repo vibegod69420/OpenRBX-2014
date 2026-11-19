@@ -17,6 +17,7 @@ public:
 	};
 
 	void wake();
+	void*getMotorState();
 	// AUTO-GENERATED METHODS
 };
 

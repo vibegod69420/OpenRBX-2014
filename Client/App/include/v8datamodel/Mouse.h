@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	bool isTargetFilterActive();
 	// AUTO-GENERATED METHODS
 };
 

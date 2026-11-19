@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	int getConst14976464() const;
 	// AUTO-GENERATED METHODS
 };
 

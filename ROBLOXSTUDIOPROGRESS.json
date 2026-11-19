@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 07:45:43 UTC",
+  "updated_at": "2026-11-19 07:54:55 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 7.0902,
-  "implemented_total": 665,
-  "function_annotations": 665,
+  "matchable_coverage_pct": 7.1223,
+  "implemented_total": 668,
+  "function_annotations": 668,
   "stub_annotations": 0,
-  "perfect_100_count": 664,
-  "matched_real_functions": 664,
+  "perfect_100_count": 667,
+  "matched_real_functions": 667,
   "average_match_pct": 99.86,
-  "overall_function_coverage_pct": 1.637,
-  "overall_byte_coverage_pct": 0.2081,
+  "overall_function_coverage_pct": 1.6444,
+  "overall_byte_coverage_pct": 0.2095,
   "usage": {
-    "calls_24h": 3710,
+    "calls_24h": 3751,
     "failures_24h": 0,
-    "completion_tokens_24h": 41026754,
-    "reasoning_tokens_24h": 40321562,
-    "avg_latency_s": 192.5
+    "completion_tokens_24h": 41542991,
+    "reasoning_tokens_24h": 40831584,
+    "avg_latency_s": 193.1
   },
   "functions": [
     {
@@ -3004,6 +3004,17 @@
       "matchable": true
     },
     {
+      "address": "0x00727730",
+      "kind": "FUNCTION",
+      "name": "G3D::TextInput::WrongSymbol::getConst14976464",
+      "mangled": "?getConst14976464@WrongSymbol@TextInput@G3D@@QBEHXZ",
+      "file": "Client/Rendering/g3d/G3Dcpp/WrongSymbol.cpp",
+      "orig_size": 52,
+      "recomp_size": 6,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0076f0b0",
       "kind": "FUNCTION",
       "name": "RBX::ViewBase::getUnknown",
@@ -3253,6 +3264,17 @@
       "file": "Client/App/v8datamodel/ServiceProvider.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x007bcc90",
+      "kind": "FUNCTION",
+      "name": "RBX::Mouse::isTargetFilterActive",
+      "mangled": "?isTargetFilterActive@Mouse@RBX@@QAE_NXZ",
+      "file": "Client/App/v8datamodel/Mouse.cpp",
+      "orig_size": 39,
+      "recomp_size": 24,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -6036,6 +6058,17 @@
       "file": "Client/App/v8world/RotatePJoint.cpp",
       "orig_size": 15,
       "recomp_size": 15,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b90900",
+      "kind": "FUNCTION",
+      "name": "sub_CF67F8",
+      "mangled": "?getMotorState@Motor6DJoint@RBX@@QAEPAXXZ",
+      "file": "Client/App/v8world/Motor6DJoint.cpp",
+      "orig_size": 50,
+      "recomp_size": 50,
       "match_pct": 100.0,
       "matchable": true
     },

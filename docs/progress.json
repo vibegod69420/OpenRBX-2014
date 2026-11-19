@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 07:45:43 UTC",
+ "updated_at": "2026-11-19 07:54:55 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,35 +16,35 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 7.0902,
- "implemented_total": 665,
- "function_annotations": 665,
+ "matchable_coverage_pct": 7.1223,
+ "implemented_total": 668,
+ "function_annotations": 668,
  "stub_annotations": 0,
- "perfect_100_count": 664,
- "matched_real_functions": 664,
+ "perfect_100_count": 667,
+ "matched_real_functions": 667,
  "average_match_pct": 99.86,
- "overall_function_coverage_pct": 1.637,
- "overall_byte_coverage_pct": 0.2081,
+ "overall_function_coverage_pct": 1.6444,
+ "overall_byte_coverage_pct": 0.2095,
  "usage": {
-  "calls_24h": 3710,
+  "calls_24h": 3751,
   "failures_24h": 0,
-  "completion_tokens_24h": 41026754,
-  "reasoning_tokens_24h": 40321562,
-  "avg_latency_s": 192.5
+  "completion_tokens_24h": 41542991,
+  "reasoning_tokens_24h": 40831584,
+  "avg_latency_s": 193.1
  },
- "functions_total": 665,
+ "functions_total": 668,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 273,
-   "functions": 274,
-   "bytes": 7136
+   "matched": 274,
+   "functions": 275,
+   "bytes": 7175
   },
   {
    "name": "App/v8world",
-   "matched": 68,
-   "functions": 68,
-   "bytes": 2258
+   "matched": 69,
+   "functions": 69,
+   "bytes": 2308
   },
   {
    "name": "Rendering/GfxRender",
@@ -60,9 +60,9 @@
   },
   {
    "name": "Rendering/g3d",
-   "matched": 14,
-   "functions": 14,
-   "bytes": 1014
+   "matched": 15,
+   "functions": 15,
+   "bytes": 1066
   },
   {
    "name": "Rendering/GfxCore",
@@ -1832,6 +1832,17 @@
    "matchable": true
   },
   {
+   "address": "0x00b90900",
+   "kind": "FUNCTION",
+   "name": "sub_CF67F8",
+   "mangled": "?getMotorState@Motor6DJoint@RBX@@QAEPAXXZ",
+   "file": "Client/App/v8world/Motor6DJoint.cpp",
+   "orig_size": 50,
+   "recomp_size": 50,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00b8f1f0",
    "kind": "FUNCTION",
    "name": "RBX::RotatePJoint::stepUi",
@@ -3260,17 +3271,6 @@
    "recomp_size": 49,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x009439b0",
-   "kind": "FUNCTION",
-   "name": "RBX::Toolbar::getRibbonTool",
-   "mangled": "?getRibbonTool@Toolbar@RBX@@QAEPAXXZ",
-   "file": "Client/App/v8datamodel/Toolbar.cpp",
-   "orig_size": 38,
-   "recomp_size": 38,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -4065,9 +4065,33 @@
    "matched": 664,
    "implemented": 665,
    "pct": 7.0902
+  },
+  {
+   "t": "2026-11-19 07:54:55 UTC",
+   "matched": 667,
+   "implemented": 668,
+   "pct": 7.1223
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T07:49:23",
+   "address": "0x00b90900",
+   "name": "sub_CF67F8",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T07:47:50",
+   "address": "0x00727730",
+   "name": "G3D::TextInput::WrongSymbol::getConst14976464",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T07:46:02",
+   "address": "0x007bcc90",
+   "name": "RBX::Mouse::isTargetFilterActive",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T07:42:31",
    "address": "0x00c17e70",
@@ -4769,25 +4793,7 @@
    "address": "0x007a29f0",
    "name": "RBX::sp_counted_impl_pd::dispose",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T03:34:52",
-   "address": "0x00c5cfa0",
-   "name": "_InterlockedCompareExchange",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T03:31:36",
-   "address": "0x00ba6fb0",
-   "name": "RBX::SleepStage::updateSleepState",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T03:28:43",
-   "address": "0x00b11520",
-   "name": "",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 44.15
+ "match_rate_per_hour": 43.9
 }

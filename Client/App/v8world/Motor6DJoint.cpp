@@ -32,6 +32,22 @@ void Motor6DJoint::wake()
 		body1->wakeTarget->wake();
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b90900
+void* sub_CF67F8(Motor6DJoint*, int, const void*, const void*, int);
+void* sub_968F00(void*);
+
+void* Motor6DJoint::getMotorState()
+{
+	void* result = sub_CF67F8(this, 0, (const void*)0x011ECEBC, (const void*)0x012BDBF4, 0);
+	if (result)
+	{
+		result = sub_968F00(result);
+		if (result)
+			return *(void**)((char*)result + 0xB4);
+	}
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
