@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	SelectionPartLasso();
 	// AUTO-GENERATED METHODS
 };
 
