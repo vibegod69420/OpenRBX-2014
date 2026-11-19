@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 03:54:52 UTC",
+  "updated_at": "2026-11-19 04:00:11 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 5.8516,
-  "implemented_total": 548,
-  "function_annotations": 548,
-  "stub_annotations": 0,
-  "perfect_100_count": 548,
-  "matched_real_functions": 548,
+  "matchable_coverage_pct": 5.8943,
+  "implemented_total": 552,
+  "function_annotations": 551,
+  "stub_annotations": 1,
+  "perfect_100_count": 552,
+  "matched_real_functions": 552,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 1.3511,
-  "overall_byte_coverage_pct": 0.1601,
+  "overall_function_coverage_pct": 1.3609,
+  "overall_byte_coverage_pct": 0.1606,
   "usage": {
-    "calls_24h": 2652,
+    "calls_24h": 2677,
     "failures_24h": 0,
-    "completion_tokens_24h": 29006905,
-    "reasoning_tokens_24h": 28514661,
-    "avg_latency_s": 191.6
+    "completion_tokens_24h": 29291626,
+    "reasoning_tokens_24h": 28794580,
+    "avg_latency_s": 191.4
   },
   "functions": [
     {
@@ -657,6 +657,17 @@
       "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
       "orig_size": 18,
       "recomp_size": 18,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x004b3c80",
+      "kind": "FUNCTION",
+      "name": "RBX::detail::sp_counted_impl_p::invoke",
+      "mangled": "?invoke@sp_counted_impl_p@RBX@@QAAXPAX@Z",
+      "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
+      "orig_size": 21,
+      "recomp_size": 21,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -1805,6 +1816,17 @@
       "matchable": true
     },
     {
+      "address": "0x00613950",
+      "kind": "STUB",
+      "name": "RBX::Graphics::AdornRender::derefInt",
+      "mangled": "?derefInt@AdornRender@Graphics@RBX@@SAHPBH@Z",
+      "file": "Client/Rendering/GfxRender/AdornRender.cpp",
+      "orig_size": 10,
+      "recomp_size": 10,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00619b70",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::CullableSceneNode::derefInt",
@@ -2447,6 +2469,17 @@
       "kind": "FUNCTION",
       "name": "G3D::Sphere::getGlobalDouble",
       "mangled": "?getGlobalDouble@Sphere@G3D@@QAENXZ",
+      "file": "Client/Rendering/g3d/G3Dcpp/Sphere.cpp",
+      "orig_size": 8,
+      "recomp_size": 8,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x006e0dd0",
+      "kind": "FUNCTION",
+      "name": "G3D::Sphere::getGlobalDouble2",
+      "mangled": "?getGlobalDouble2@Sphere@G3D@@QAENXZ",
       "file": "Client/Rendering/g3d/G3Dcpp/Sphere.cpp",
       "orig_size": 8,
       "recomp_size": 8,
@@ -4856,6 +4889,17 @@
       "kind": "FUNCTION",
       "name": "RBX::Kernel::getSubField24_34",
       "mangled": "?getSubField24_34@Kernel@RBX@@QBEHXZ",
+      "file": "Client/App/v8kernel/Kernel.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b53530",
+      "kind": "FUNCTION",
+      "name": "RBX::Kernel::getSubField24_04",
+      "mangled": "?getSubField24_04@Kernel@RBX@@QBEHXZ",
       "file": "Client/App/v8kernel/Kernel.cpp",
       "orig_size": 7,
       "recomp_size": 7,

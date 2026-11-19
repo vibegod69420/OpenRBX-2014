@@ -17,6 +17,7 @@ public:
 	};
 
 	double getGlobalDouble();
+	double getGlobalDouble2();
 	// AUTO-GENERATED METHODS
 };
 

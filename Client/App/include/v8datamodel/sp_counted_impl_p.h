@@ -21,6 +21,7 @@ public:
 	void freeMember0C_slot1();
 	void dispose();
 	void __cdecl invoke();
+	void __cdecl invoke(void* arg);
 	// AUTO-GENERATED METHODS
 };
 
