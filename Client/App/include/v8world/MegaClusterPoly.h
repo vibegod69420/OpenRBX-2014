@@ -19,6 +19,7 @@ public:
 
 	const int* getMemberPtr04() const;
 	int getNumFaces() const;
+	void*getMesh();
 	// AUTO-GENERATED METHODS
 };
 

@@ -20,6 +20,7 @@ public:
 
 	void onDestroy();
 	void destroySubPtr0C();
+	static void destroyInstance(Material* p);
 	// AUTO-GENERATED METHODS
 };
 

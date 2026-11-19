@@ -16,6 +16,8 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void onDestroy();
+	static void destroyInstance(GameSettings* p);
 	// AUTO-GENERATED METHODS
 };
 

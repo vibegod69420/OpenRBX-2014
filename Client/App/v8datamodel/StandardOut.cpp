@@ -14,6 +14,15 @@ void StandardOut::destroySubPtr0C()
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00772de0
+void StandardOut::destroyInstance(StandardOut* p)
+{
+	if (p) {
+		p->onDestroy();
+		rbx_free_mem(p);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

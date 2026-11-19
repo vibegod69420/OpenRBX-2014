@@ -17,6 +17,7 @@ public:
 	};
 
 	int getEnumCount() const;
+	int getEnumValueCount() const;
 	// AUTO-GENERATED METHODS
 };
 

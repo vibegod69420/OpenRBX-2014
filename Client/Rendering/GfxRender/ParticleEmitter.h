@@ -18,6 +18,8 @@ public:
 	};
 
 	void queueSimulation();
+	void onDestroy();
+	static void destroyInstance(ParticleEmitter* p);
 	// AUTO-GENERATED METHODS
 };
 

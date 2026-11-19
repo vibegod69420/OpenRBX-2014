@@ -32,6 +32,15 @@ void ParticleEmitter::queueSimulation()
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00670840
+void ParticleEmitter::destroyInstance(ParticleEmitter* p)
+{
+	if (p) {
+		p->onDestroy();
+		rbx_free_mem(p);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

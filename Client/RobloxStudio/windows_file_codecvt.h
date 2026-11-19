@@ -16,6 +16,8 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void onDestroy();
+	static void destroyInstance(windows_file_codecvt* p);
 	// AUTO-GENERATED METHODS
 };
 

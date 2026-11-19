@@ -17,6 +17,7 @@ public:
 	};
 
 	bool isTargetSlot() const;
+	bool isSecondaryTargetSlot() const;
 	// AUTO-GENERATED METHODS
 };
 

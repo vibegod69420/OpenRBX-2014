@@ -19,6 +19,7 @@ public:
 
 	void onDestroy();
 	static void destroyInstance(RunningNoPhysics* p);
+	static void destroyInstance_2d50(RunningNoPhysics* p);
 	// AUTO-GENERATED METHODS
 };
 

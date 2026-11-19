@@ -29,6 +29,20 @@ int MegaClusterPoly::getNumFaces() const
 	return (int)(data->end - data->begin);
 }
 
+struct MegaClusterPolyMeshBuilder
+{
+	void buildMesh();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0099d3b0
+void* MegaClusterPoly::getMesh()
+{
+	if (*(void**)((char*)this + 0x8c) == 0)
+		((MegaClusterPolyMeshBuilder*)this)->buildMesh();
+
+	return *(void**)((char*)this + 0x8c);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

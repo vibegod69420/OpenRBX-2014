@@ -19,6 +19,18 @@ bool RbxRay::isTargetSlot() const
 	return rbxRaySlotCheck((void*)0x012C38A0, slot);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0044e0b0
+bool RbxRay::isSecondaryTargetSlot() const
+{
+	void** vtable = *(void***)this;
+	void* slot = vtable[4];
+
+	if (slot == (void*)0x012C38C0)
+		return true;
+
+	return rbxRaySlotCheck((void*)0x012C38C0, slot);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -14,6 +14,15 @@ void RunningNoPhysics::destroyInstance(RunningNoPhysics* p)
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c22d50
+void RunningNoPhysics::destroyInstance_2d50(RunningNoPhysics* p)
+{
+	if (p) {
+		p->onDestroy();
+		rbx_free_mem(p);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace HUMAN

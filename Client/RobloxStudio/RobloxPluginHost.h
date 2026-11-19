@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	RobloxPluginHost();
 	// AUTO-GENERATED METHODS
 };
 

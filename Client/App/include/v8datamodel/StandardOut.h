@@ -19,6 +19,7 @@ public:
 
 	void onDestroy();
 	void destroySubPtr0C();
+	static void destroyInstance(StandardOut* p);
 	// AUTO-GENERATED METHODS
 };
 

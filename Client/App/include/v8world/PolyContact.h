@@ -17,6 +17,7 @@ public:
 	};
 
 	void __cdecl deleteEdge(void* edge);
+	void __cdecl findClosestFeature();
 	// AUTO-GENERATED METHODS
 };
 
