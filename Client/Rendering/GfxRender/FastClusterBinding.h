@@ -19,6 +19,7 @@ public:
 
 	void onTransparencyChanged();
 	void onSpecialShapeChanged();
+	void onCoordinateFrameChanged();
 	// AUTO-GENERATED METHODS
 };
 

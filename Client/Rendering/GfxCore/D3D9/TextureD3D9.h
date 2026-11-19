@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void uploadTexture();
 	// AUTO-GENERATED METHODS
 };
 

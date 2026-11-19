@@ -13,10 +13,12 @@ public:
 	union
 	{
 		int _vtable_or_head;
+		struct { char _pad_field_00cc[0xcc]; int field_00cc; };
 		// AUTO-GENERATED FIELDS
 	};
 
 	void deleteAllConnectors();
+	int getFieldCC() const;
 	// AUTO-GENERATED METHODS
 };
 

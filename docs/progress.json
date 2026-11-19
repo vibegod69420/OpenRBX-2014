@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 01:02:57 UTC",
+ "updated_at": "2026-11-19 01:10:26 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 4.5702,
- "implemented_total": 428,
- "function_annotations": 428,
+ "matchable_coverage_pct": 4.6022,
+ "implemented_total": 431,
+ "function_annotations": 431,
  "stub_annotations": 0,
- "perfect_100_count": 428,
- "matched_real_functions": 428,
+ "perfect_100_count": 431,
+ "matched_real_functions": 431,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 1.0552,
- "overall_byte_coverage_pct": 0.1146,
+ "overall_function_coverage_pct": 1.0626,
+ "overall_byte_coverage_pct": 0.1176,
  "usage": {
-  "calls_24h": 1820,
+  "calls_24h": 1860,
   "failures_24h": 0,
-  "completion_tokens_24h": 19708074,
-  "reasoning_tokens_24h": 19377116,
-  "avg_latency_s": 189.1
+  "completion_tokens_24h": 20271888,
+  "reasoning_tokens_24h": 19931320,
+  "avg_latency_s": 189.9
  },
- "functions_total": 428,
+ "functions_total": 431,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -42,15 +42,15 @@
   },
   {
    "name": "App/v8world",
-   "matched": 46,
-   "functions": 46,
-   "bytes": 1288
+   "matched": 47,
+   "functions": 47,
+   "bytes": 1407
   },
   {
    "name": "Rendering/GfxRender",
-   "matched": 26,
-   "functions": 26,
-   "bytes": 1000
+   "matched": 27,
+   "functions": 27,
+   "bytes": 1101
   },
   {
    "name": "App/v8kernel",
@@ -60,9 +60,9 @@
   },
   {
    "name": "Rendering/GfxCore",
-   "matched": 24,
-   "functions": 24,
-   "bytes": 588
+   "matched": 25,
+   "functions": 25,
+   "bytes": 650
   },
   {
    "name": "Rendering/g3d",
@@ -672,6 +672,17 @@
    "file": "Client/Network/SpatialQueryCache.cpp",
    "orig_size": 30,
    "recomp_size": 30,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00c57310",
+   "kind": "FUNCTION",
+   "name": "RBX::PolyPolyContact::getFieldCC",
+   "mangled": "?getFieldCC@PolyPolyContact@RBX@@QBEHXZ",
+   "file": "Client/App/v8world/PolyPolyContact.cpp",
+   "orig_size": 119,
+   "recomp_size": 7,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3116,17 +3127,6 @@
    "recomp_size": 47,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x007760a0",
-   "kind": "FUNCTION",
-   "name": "boost::thread_data::invoke",
-   "mangled": "?invoke@thread_data@boost@@QAAXPAX0@Z",
-   "file": "Client/App/v8datamodel/thread_data.cpp",
-   "orig_size": 21,
-   "recomp_size": 21,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -3651,9 +3651,33 @@
    "matched": 428,
    "implemented": 428,
    "pct": 4.5702
+  },
+  {
+   "t": "2026-11-19 01:10:26 UTC",
+   "matched": 431,
+   "implemented": 431,
+   "pct": 4.6022
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T01:07:19",
+   "address": "0x005e9f80",
+   "name": "RBX::Graphics::TextureD3D9::uploadTexture",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:07:12",
+   "address": "0x006202e0",
+   "name": "RBX::Graphics::FastClusterBinding::onCoordinateFrameChanged",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:04:20",
+   "address": "0x00c57310",
+   "name": "RBX::PolyPolyContact::getFieldCC",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T00:59:00",
    "address": "0x00946870",
@@ -4355,25 +4379,7 @@
    "address": "0x0082eee0",
    "name": "getStateSource",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T22:17:16",
-   "address": "0x00786180",
-   "name": "std::concrete_parser::clone",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T22:12:35",
-   "address": "0x00496260",
-   "name": "RBX::callable_slot::invoke",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-18T22:09:19",
-   "address": "0x004b3be0",
-   "name": "RBX::detail::sp_counted_impl_p::invoke",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 51.4
+ "match_rate_per_hour": 50.99
 }
