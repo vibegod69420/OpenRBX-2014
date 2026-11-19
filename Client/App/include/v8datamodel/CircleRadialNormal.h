@@ -5,6 +5,8 @@
 
 namespace RBX {
 
+class Vector3;
+class v;
 // AUTO-GENERATED HELPERS
 
 class CircleRadialNormal
@@ -16,6 +18,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	const Vector3&getNormal();
 	// AUTO-GENERATED METHODS
 };
 

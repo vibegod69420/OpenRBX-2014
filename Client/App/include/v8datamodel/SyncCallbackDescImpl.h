@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	SyncCallbackDescImpl();
 	// AUTO-GENERATED METHODS
 };
 

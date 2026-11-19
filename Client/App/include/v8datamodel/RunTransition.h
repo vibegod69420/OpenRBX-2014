@@ -17,6 +17,7 @@ public:
 	};
 
 	int isConnected() const;
+	void disconnect();
 	// AUTO-GENERATED METHODS
 };
 

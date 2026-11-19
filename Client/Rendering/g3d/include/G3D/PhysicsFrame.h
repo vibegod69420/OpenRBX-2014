@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	int*getZeroStorage();
 	// AUTO-GENERATED METHODS
 };
 

@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	double getValue();
 	// AUTO-GENERATED METHODS
 };
 

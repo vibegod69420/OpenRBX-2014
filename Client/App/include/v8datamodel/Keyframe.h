@@ -5,6 +5,9 @@
 
 namespace RBX {
 
+#ifndef NULL
+#define NULL 0
+#endif
 // AUTO-GENERATED HELPERS
 
 class Keyframe
@@ -16,6 +19,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void notifyKeyframeSequence();
 	// AUTO-GENERATED METHODS
 };
 

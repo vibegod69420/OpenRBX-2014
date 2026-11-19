@@ -6,6 +6,7 @@
 namespace RBX {
 namespace HUMAN {
 
+class DeadStorage;
 // AUTO-GENERATED HELPERS
 
 class Dead
@@ -17,6 +18,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	DeadStorage*get();
 	// AUTO-GENERATED METHODS
 };
 
