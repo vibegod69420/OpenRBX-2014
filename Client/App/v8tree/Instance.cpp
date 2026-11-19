@@ -50,6 +50,19 @@ void Instance::fetchContextId()
 	*(int*)((char*)this + 0x40C) = *sub_E10B04(&local);
 }
 
+class InstanceStaticSingleton
+{
+public:
+	virtual ~InstanceStaticSingleton() {}
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x006b8870
+void* Instance::getStaticSingleton()
+{
+	static InstanceStaticSingleton instance;
+	return &instance;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

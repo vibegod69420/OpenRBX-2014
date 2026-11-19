@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 04:40:59 UTC",
+  "updated_at": "2026-11-19 04:49:03 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 6.4282,
-  "implemented_total": 602,
-  "function_annotations": 602,
+  "matchable_coverage_pct": 6.4709,
+  "implemented_total": 607,
+  "function_annotations": 607,
   "stub_annotations": 0,
-  "perfect_100_count": 602,
-  "matched_real_functions": 602,
-  "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 1.4842,
-  "overall_byte_coverage_pct": 0.174,
+  "perfect_100_count": 606,
+  "matched_real_functions": 606,
+  "average_match_pct": 99.84,
+  "overall_function_coverage_pct": 1.494,
+  "overall_byte_coverage_pct": 0.1759,
   "usage": {
-    "calls_24h": 2911,
+    "calls_24h": 2962,
     "failures_24h": 0,
-    "completion_tokens_24h": 31690336,
-    "reasoning_tokens_24h": 31159511,
-    "avg_latency_s": 190.6
+    "completion_tokens_24h": 32162852,
+    "reasoning_tokens_24h": 31625212,
+    "avg_latency_s": 189.8
   },
   "functions": [
     {
@@ -2509,6 +2509,17 @@
       "matchable": true
     },
     {
+      "address": "0x006b8870",
+      "kind": "FUNCTION",
+      "name": "RBX::Instance::getStaticSingleton",
+      "mangled": "?getStaticSingleton@Instance@RBX@@QAEPAXXZ",
+      "file": "Client/App/v8tree/Instance.cpp",
+      "orig_size": 46,
+      "recomp_size": 46,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x006b89b0",
       "kind": "FUNCTION",
       "name": "RBX::Instance::getConst14956404",
@@ -2645,6 +2656,17 @@
       "kind": "FUNCTION",
       "name": "RBX::CircleRadialNormal::getNormal",
       "mangled": "?getNormal@CircleRadialNormal@RBX@@QAEABUVector3@2@XZ",
+      "file": "Client/App/v8datamodel/CircleRadialNormal.cpp",
+      "orig_size": 53,
+      "recomp_size": 53,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x006d12a0",
+      "kind": "FUNCTION",
+      "name": "RBX::CircleRadialNormal::getUpNormal",
+      "mangled": "?getUpNormal@CircleRadialNormal@RBX@@QAEABUVector3@2@XZ",
       "file": "Client/App/v8datamodel/CircleRadialNormal.cpp",
       "orig_size": 53,
       "recomp_size": 53,
@@ -4126,6 +4148,28 @@
       "matchable": true
     },
     {
+      "address": "0x00933ec0",
+      "kind": "FUNCTION",
+      "name": "RBX::MouseCommand::create",
+      "mangled": "?create@MouseCommand@RBX@@QAAPAV12@PAX00@Z",
+      "file": "Client/App/v8datamodel/MouseCommand.cpp",
+      "orig_size": 41,
+      "recomp_size": 41,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00933ef0",
+      "kind": "FUNCTION",
+      "name": "MouseCommand_createImpl",
+      "mangled": "?create@MouseCommand@RBX@@QAAPAV12@PAX00@Z",
+      "file": "Client/App/v8datamodel/MouseCommand.cpp",
+      "orig_size": 164,
+      "recomp_size": 41,
+      "match_pct": 4.88,
+      "matchable": false
+    },
+    {
       "address": "0x009349c0",
       "kind": "FUNCTION",
       "name": "RBX::CameraZoomOutCommand::destroyInstance",
@@ -5156,6 +5200,17 @@
       "file": "Client/App/v8world/MultiJoint.cpp",
       "orig_size": 68,
       "recomp_size": 68,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00af1390",
+      "kind": "FUNCTION",
+      "name": "wake",
+      "mangled": "?wake@Motor6DJoint@RBX@@QAEXXZ",
+      "file": "Client/App/v8world/Motor6DJoint.cpp",
+      "orig_size": 48,
+      "recomp_size": 48,
       "match_pct": 100.0,
       "matchable": true
     },

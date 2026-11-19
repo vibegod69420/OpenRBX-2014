@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void wake();
 	// AUTO-GENERATED METHODS
 };
 

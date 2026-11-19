@@ -24,6 +24,7 @@ public:
 	void destroySubPtr0C();
 	Instance();
 	void fetchContextId();
+	void*getStaticSingleton();
 	// AUTO-GENERATED METHODS
 };
 

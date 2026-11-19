@@ -25,6 +25,19 @@ void MouseCommand::clear()
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00933ef0
+void __cdecl MouseCommand_createImpl(void* a1, void* a2, void* a3, void* a4, void* a5, void* a6);
+
+// FUNCTION: ROBLOXSTUDIO 0x00933ec0
+MouseCommand* __cdecl MouseCommand::create(void* a1, void* a2, void* a3)
+{
+	void* v1;
+	void* v2;
+
+	MouseCommand_createImpl(this, a1, a2, a3, &v2, &v1);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

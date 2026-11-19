@@ -19,6 +19,7 @@ public:
 	};
 
 	const Vector3&getNormal();
+	const Vector3&getUpNormal();
 	// AUTO-GENERATED METHODS
 };
 
