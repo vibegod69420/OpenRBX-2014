@@ -21,6 +21,7 @@ public:
 	void __cdecl setState(int a, int b, int c);
 	void __cdecl setState(int a, int b, int c, int d);
 	void __cdecl accumulate(int delta);
+	void __cdecl accumulate(int* event);
 	// AUTO-GENERATED METHODS
 };
 

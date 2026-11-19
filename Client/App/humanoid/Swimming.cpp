@@ -52,6 +52,31 @@ void __cdecl Swimming::accumulate(int delta)
     *(unsigned char*)((char*)*(void**)this + 0x4B) = (unsigned char)val;
 }
 
+void __cdecl sub_C17BA0(Swimming* self, int* event, int arg3);
+
+// FUNCTION: ROBLOXSTUDIO 0x00c17b40
+void __cdecl Swimming::accumulate(int* event)
+{
+	if (event[0] != 12)
+	{
+		void* obj = *(void**)this;
+		int val = *(int*)((char*)this + 0x24);
+		int limit = *(unsigned char*)((char*)obj + 0x4B);
+		++val;
+
+		if (val > limit)
+		{
+			if (val >= 250)
+				sub_BC88E0(*(void**)((char*)this + 0x0C), "function or expression too complex");
+
+			*(unsigned char*)((char*)*(void**)this + 0x4B) = (unsigned char)val;
+		}
+
+		++*(int*)((char*)this + 0x24);
+		sub_C17BA0(this, event, *(int*)((char*)this + 0x24) - 1);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace HUMAN
