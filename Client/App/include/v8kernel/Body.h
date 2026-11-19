@@ -17,6 +17,7 @@ public:
 	};
 
 	void advanceStateIndex();
+	void*allocFromPool();
 	// AUTO-GENERATED METHODS
 };
 

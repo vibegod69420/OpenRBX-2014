@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 12:16:17 UTC",
+  "updated_at": "2026-11-19 12:24:48 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 7.8804,
-  "implemented_total": 739,
-  "function_annotations": 739,
+  "matchable_coverage_pct": 7.9124,
+  "implemented_total": 742,
+  "function_annotations": 742,
   "stub_annotations": 0,
-  "perfect_100_count": 738,
-  "matched_real_functions": 738,
+  "perfect_100_count": 741,
+  "matched_real_functions": 741,
   "average_match_pct": 99.87,
-  "overall_function_coverage_pct": 1.8195,
-  "overall_byte_coverage_pct": 0.2624,
+  "overall_function_coverage_pct": 1.8269,
+  "overall_byte_coverage_pct": 0.2652,
   "usage": {
-    "calls_24h": 4803,
+    "calls_24h": 4832,
     "failures_24h": 0,
-    "completion_tokens_24h": 54953591,
-    "reasoning_tokens_24h": 53946787,
-    "avg_latency_s": 200.7
+    "completion_tokens_24h": 55312401,
+    "reasoning_tokens_24h": 54298113,
+    "avg_latency_s": 200.9
   },
   "functions": [
     {
@@ -4819,6 +4819,17 @@
       "matchable": true
     },
     {
+      "address": "0x0091ca30",
+      "kind": "FUNCTION",
+      "name": "RBX::Pose::getLinkedPose",
+      "mangled": "?getLinkedPose@Pose@RBX@@QAEPAV12@XZ",
+      "file": "Client/App/v8datamodel/Pose.cpp",
+      "orig_size": 87,
+      "recomp_size": 87,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0091d330",
       "kind": "FUNCTION",
       "name": "RBX::Keyframe::notifyKeyframeSequence",
@@ -6909,6 +6920,17 @@
       "matchable": true
     },
     {
+      "address": "0x00ba9710",
+      "kind": "FUNCTION",
+      "name": "RBX::Body::allocFromPool",
+      "mangled": "?allocFromPool@Body@RBX@@QAEPAXXZ",
+      "file": "Client/App/v8kernel/Body.cpp",
+      "orig_size": 89,
+      "recomp_size": 89,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00baa1e0",
       "kind": "FUNCTION",
       "name": "ctor",
@@ -6916,6 +6938,17 @@
       "file": "Client/App/util/IndexedMesh.cpp",
       "orig_size": 39,
       "recomp_size": 39,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00babde0",
+      "kind": "FUNCTION",
+      "name": "RBX::WedgePoly::getEdgeData",
+      "mangled": "?getEdgeData@WedgePoly@RBX@@QAEPAXXZ",
+      "file": "Client/App/v8world/WedgePoly.cpp",
+      "orig_size": 88,
+      "recomp_size": 88,
       "match_pct": 100.0,
       "matchable": true
     },

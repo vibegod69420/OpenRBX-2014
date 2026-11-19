@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	Pose*getLinkedPose();
 	// AUTO-GENERATED METHODS
 };
 
