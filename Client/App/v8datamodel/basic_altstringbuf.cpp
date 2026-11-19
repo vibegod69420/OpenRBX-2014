@@ -73,6 +73,27 @@ void basic_altstringbuf::Create()
 	_vtable_or_head = BasicAltStringBuf_Thunk_E1018C(0, 0, 0, 0);
 }
 
+__declspec(dllimport) void __stdcall BasicAltStringBuf_Thunk_E10194(int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00cf4e70
+void basic_altstringbuf::Close()
+{
+	int handle = _vtable_or_head;
+	if (handle != -1)
+	{
+		BasicAltStringBuf_FreeHandle(handle);
+	}
+
+	int handle20 = *(int*)((char*)this + 0x20);
+	if (handle20 != -1)
+	{
+		BasicAltStringBuf_Thunk_E10194(handle20);
+		*(int*)((char*)this + 0x20) = -1;
+	}
+
+	_vtable_or_head = -1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

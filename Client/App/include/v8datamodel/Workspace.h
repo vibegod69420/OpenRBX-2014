@@ -22,6 +22,7 @@ public:
 	bool method_00969740();
 	bool method_00969760();
 	bool method_00969fc0();
+	void method_0099fe10();
 	// AUTO-GENERATED METHODS
 };
 

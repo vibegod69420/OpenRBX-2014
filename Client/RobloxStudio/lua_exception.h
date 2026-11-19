@@ -25,6 +25,7 @@ public:
 	void __cdecl initContext(void* context);
 	int __cdecl dispatchGlobal();
 	int __cdecl dispatchGlobalState();
+	int __cdecl dispatchGlobalState2();
 	// AUTO-GENERATED METHODS
 };
 

@@ -56,6 +56,26 @@ void __cdecl PolyContact::computeContact(void* out, void* param)
 	*(void**)((char*)out + 8) = result;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00bc87b0
+void* PolyContact_sub_BC9420(void* arg1, void* arg2, void* arg3);
+void* PolyContact_sub_BC9D00(void* arg1, void* arg2, void* arg3);
+
+void* __cdecl PolyContact::getEdge(void* arg2, void* arg3)
+{
+	void* v34 = *(void**)((char*)this + 0x34);
+	void* result = PolyContact_sub_BC9420(v34, arg2, arg3);
+	void* v30 = *(void**)((char*)this + 0x30);
+	void* contact = PolyContact_sub_BC9D00(v34, *(void**)((char*)v30 + 4), result);
+
+	if (*(int*)((char*)contact + 8) == 0)
+	{
+		*(int*)contact = 1;
+		*(int*)((char*)contact + 8) = 1;
+	}
+
+	return result;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

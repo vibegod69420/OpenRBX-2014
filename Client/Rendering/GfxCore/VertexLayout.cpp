@@ -173,6 +173,27 @@ bool VertexLayout::initGLShaderImageLoadStore()
 	return false;
 }
 
+extern void* g_glTexPageCommitmentARB;
+extern void* g_glTexturePageCommitmentEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f6db0
+bool VertexLayout::initARBSparseTexture()
+{
+	void* first = g_glGetProcAddress("glTexPageCommitmentARB");
+	g_glTexPageCommitmentARB = first;
+	unsigned char missingFirst = (first == 0);
+
+	void* second = g_glGetProcAddress("glTexturePageCommitmentEXT");
+	g_glTexturePageCommitmentEXT = second;
+
+	if (second == 0)
+		return true;
+	if (missingFirst)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

@@ -21,6 +21,7 @@ public:
 	void __cdecl addEdge(void* edge, unsigned char info);
 	void __cdecl init(void* target, void* arg2, void* arg3);
 	void __cdecl computeContact(void* out, void* param);
+	void* __cdecl getEdge(void* arg2, void* arg3);
 	// AUTO-GENERATED METHODS
 };
 

@@ -69,6 +69,18 @@ bool Workspace::method_00969fc0()
     return false;
 }
 
+struct WorkspaceCallee007c4b50
+{
+	void method_007c4b50(void* arg);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0099fe10
+void Workspace::method_0099fe10()
+{
+	void* local = (void*)0x0099FD30;
+	((WorkspaceCallee007c4b50*)this)->method_007c4b50(&local);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -22,6 +22,7 @@ public:
 	basic_altstringbuf();
 	void Release();
 	void Create();
+	void Close();
 	// AUTO-GENERATED METHODS
 };
 

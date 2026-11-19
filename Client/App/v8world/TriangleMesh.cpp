@@ -120,6 +120,18 @@ int __cdecl TriangleMesh::getOptInt3()
 	return 1;
 }
 
+int sub_A35780(void*);
+void sub_A356D0(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b6ebf0
+int __cdecl TriangleMesh::checkCondition()
+{
+	if (sub_A35780(this))
+		sub_A356D0(this);
+
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

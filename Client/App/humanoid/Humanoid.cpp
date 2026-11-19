@@ -90,6 +90,15 @@ int Humanoid::getField268Or298()
 	return *reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x298);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x009d86d0
+int Humanoid::getField270DerefE0() const
+{
+	int obj = field_0270;
+	if (obj)
+		return *reinterpret_cast<int*>(reinterpret_cast<char*>(obj) + 0xE0);
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
