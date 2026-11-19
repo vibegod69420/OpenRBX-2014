@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 17:26:15 UTC",
+  "updated_at": "2026-11-19 17:34:43 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 8.9055,
-  "implemented_total": 835,
-  "function_annotations": 835,
+  "matchable_coverage_pct": 8.9269,
+  "implemented_total": 837,
+  "function_annotations": 837,
   "stub_annotations": 0,
-  "perfect_100_count": 834,
-  "matched_real_functions": 834,
+  "perfect_100_count": 836,
+  "matched_real_functions": 836,
   "average_match_pct": 99.89,
-  "overall_function_coverage_pct": 2.0562,
-  "overall_byte_coverage_pct": 0.3344,
+  "overall_function_coverage_pct": 2.0611,
+  "overall_byte_coverage_pct": 0.3387,
   "usage": {
-    "calls_24h": 6097,
+    "calls_24h": 6133,
     "failures_24h": 0,
-    "completion_tokens_24h": 70528464,
-    "reasoning_tokens_24h": 69157459,
-    "avg_latency_s": 202.5
+    "completion_tokens_24h": 70975807,
+    "reasoning_tokens_24h": 69589812,
+    "avg_latency_s": 202.4
   },
   "functions": [
     {
@@ -3389,6 +3389,17 @@
       "matchable": true
     },
     {
+      "address": "0x006deb00",
+      "kind": "FUNCTION",
+      "name": "G3D::PhysicsFrame::getZAxisStorage",
+      "mangled": "?getZAxisStorage@PhysicsFrame@G3D@@QAEPAHXZ",
+      "file": "Client/Rendering/g3d/G3Dcpp/PhysicsFrame.cpp",
+      "orig_size": 308,
+      "recomp_size": 53,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x006dec40",
       "kind": "FUNCTION",
       "name": "G3D::PhysicsFrame::getMinFiniteStorage",
@@ -4782,6 +4793,17 @@
       "file": "Client/App/v8datamodel/UnionOperation.cpp",
       "orig_size": 19,
       "recomp_size": 19,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x008a0cc0",
+      "kind": "FUNCTION",
+      "name": "RBX::MegaClusterInstance::clear",
+      "mangled": "?clear@MegaClusterInstance@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/MegaClusterInstance.cpp",
+      "orig_size": 108,
+      "recomp_size": 108,
       "match_pct": 100.0,
       "matchable": true
     },

@@ -5,6 +5,9 @@
 
 namespace RBX {
 
+#ifndef NULL
+#define NULL 0
+#endif
 // AUTO-GENERATED HELPERS
 
 class MegaClusterInstance
@@ -17,6 +20,7 @@ public:
 	};
 
 	float getMinimumSize() const;
+	void clear();
 	// AUTO-GENERATED METHODS
 };
 

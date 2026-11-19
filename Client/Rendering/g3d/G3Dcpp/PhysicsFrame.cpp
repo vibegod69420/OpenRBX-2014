@@ -136,6 +136,28 @@ int* PhysicsFrame::getMaxFiniteStorage()
 	return storage.data;
 }
 
+struct PhysicsFrameZAxisStorage
+{
+	int data[3];
+	int initialized;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x006deb00
+int* PhysicsFrame::getZAxisStorage()
+{
+	static PhysicsFrameZAxisStorage storage;
+
+	if ((storage.initialized & 1) == 0)
+	{
+		storage.initialized |= 1;
+		storage.data[0] = 0;
+		storage.data[1] = 0;
+		storage.data[2] = 0x3f800000;
+	}
+
+	return storage.data;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace G3D

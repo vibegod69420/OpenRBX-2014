@@ -22,6 +22,7 @@ public:
 	int*getYAxisStorage();
 	int*getMinFiniteStorage();
 	int*getMaxFiniteStorage();
+	int*getZAxisStorage();
 	// AUTO-GENERATED METHODS
 };
 
