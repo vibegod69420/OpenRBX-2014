@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	~CharacterAppearance();
 	// AUTO-GENERATED METHODS
 };
 

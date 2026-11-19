@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 06:47:09 UTC",
+  "updated_at": "2026-11-19 06:55:11 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 6.7485,
-  "implemented_total": 633,
-  "function_annotations": 633,
+  "matchable_coverage_pct": 6.7592,
+  "implemented_total": 634,
+  "function_annotations": 634,
   "stub_annotations": 0,
-  "perfect_100_count": 632,
-  "matched_real_functions": 632,
+  "perfect_100_count": 633,
+  "matched_real_functions": 633,
   "average_match_pct": 99.85,
-  "overall_function_coverage_pct": 1.5581,
-  "overall_byte_coverage_pct": 0.1977,
+  "overall_function_coverage_pct": 1.5606,
+  "overall_byte_coverage_pct": 0.1992,
   "usage": {
-    "calls_24h": 3495,
+    "calls_24h": 3523,
     "failures_24h": 0,
-    "completion_tokens_24h": 38743248,
-    "reasoning_tokens_24h": 38073738,
-    "avg_latency_s": 193.8
+    "completion_tokens_24h": 39155112,
+    "reasoning_tokens_24h": 38476080,
+    "avg_latency_s": 194.2
   },
   "functions": [
     {
@@ -5431,6 +5431,17 @@
       "file": "Client/App/v8world/Motor6DJoint.cpp",
       "orig_size": 48,
       "recomp_size": 48,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b02c30",
+      "kind": "FUNCTION",
+      "name": "delete",
+      "mangled": "??1CharacterAppearance@RBX@@QAE@XZ",
+      "file": "Client/App/v8datamodel/CharacterAppearance.cpp",
+      "orig_size": 141,
+      "recomp_size": 141,
       "match_pct": 100.0,
       "matchable": true
     },
