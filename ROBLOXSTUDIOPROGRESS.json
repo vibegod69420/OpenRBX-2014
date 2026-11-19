@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 18:54:33 UTC",
+  "updated_at": "2026-11-19 19:12:56 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 9.1938,
-  "implemented_total": 863,
-  "function_annotations": 863,
+  "matchable_coverage_pct": 9.2045,
+  "implemented_total": 864,
+  "function_annotations": 864,
   "stub_annotations": 0,
-  "perfect_100_count": 861,
-  "matched_real_functions": 861,
+  "perfect_100_count": 862,
+  "matched_real_functions": 862,
   "average_match_pct": 99.88,
-  "overall_function_coverage_pct": 2.1227,
-  "overall_byte_coverage_pct": 0.3504,
+  "overall_function_coverage_pct": 2.1252,
+  "overall_byte_coverage_pct": 0.3518,
   "usage": {
-    "calls_24h": 6367,
+    "calls_24h": 6420,
     "failures_24h": 0,
-    "completion_tokens_24h": 73964112,
-    "reasoning_tokens_24h": 72511902,
-    "avg_latency_s": 204.0
+    "completion_tokens_24h": 74910967,
+    "reasoning_tokens_24h": 73436269,
+    "avg_latency_s": 204.9
   },
   "functions": [
     {
@@ -3494,6 +3494,17 @@
       "mangled": "?getStaticData@Sphere@G3D@@QAEPAXXZ",
       "file": "Client/Rendering/g3d/G3Dcpp/Sphere.cpp",
       "orig_size": 43,
+      "recomp_size": 43,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x006e0800",
+      "kind": "FUNCTION",
+      "name": "G3D::Sphere::getStaticData3",
+      "mangled": "?getStaticData3@Sphere@G3D@@QAEPAXXZ",
+      "file": "Client/Rendering/g3d/G3Dcpp/Sphere.cpp",
+      "orig_size": 139,
       "recomp_size": 43,
       "match_pct": 100.0,
       "matchable": true

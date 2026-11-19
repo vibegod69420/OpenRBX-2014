@@ -22,6 +22,7 @@ public:
 	float getGlobalFloat2();
 	void*getStaticData();
 	void*getStaticData2();
+	void*getStaticData3();
 	// AUTO-GENERATED METHODS
 };
 

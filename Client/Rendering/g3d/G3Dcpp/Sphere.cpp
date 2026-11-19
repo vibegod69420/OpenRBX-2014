@@ -54,6 +54,20 @@ void* Sphere::getStaticData2()
 	return reinterpret_cast<void*>(0x012DFCBC);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006e0800
+void* Sphere::getStaticData3()
+{
+	int guard = *reinterpret_cast<int*>(0x012DFB74);
+	if ((guard & 1) == 0)
+	{
+		guard |= 1;
+		*reinterpret_cast<int*>(0x012DFB74) = guard;
+		*reinterpret_cast<int*>(0x012DFB6C) = 0x3F800000;
+		*reinterpret_cast<int*>(0x012DFB70) = 0x3F800000;
+	}
+	return reinterpret_cast<void*>(0x012DFB6C);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace G3D
