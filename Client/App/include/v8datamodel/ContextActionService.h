@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	~ContextActionService();
 	// AUTO-GENERATED METHODS
 };
 
