@@ -18,6 +18,7 @@ public:
 
 	int getConst18804796() const;
 	Script* __cdecl sub_7CA2A0(const Script& src);
+	void sub_7CA820();
 	// AUTO-GENERATED METHODS
 };
 

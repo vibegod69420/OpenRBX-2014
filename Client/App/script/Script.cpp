@@ -20,6 +20,38 @@ Script* __cdecl Script::sub_7CA2A0(const Script& src)
 	return this;
 }
 
+class ScriptContext
+{
+public:
+	void sub_8E0460(Script* script);
+	void sub_8E2CC0(Script* script);
+};
+
+ScriptContext* __fastcall sub_7C9470(Script* script);
+
+// FUNCTION: ROBLOXSTUDIO 0x007ca820
+void Script::sub_7CA820()
+{
+	ScriptContext* newContext = sub_7C9470(this);
+	ScriptContext* oldContext = *(ScriptContext**)((char*)this + 0x80);
+
+	if (oldContext != newContext)
+	{
+		if (oldContext)
+		{
+			*(ScriptContext**)((char*)this + 0x80) = 0;
+			oldContext->sub_8E0460(this);
+		}
+
+		*(ScriptContext**)((char*)this + 0x80) = newContext;
+
+		if (newContext)
+		{
+			newContext->sub_8E2CC0(this);
+		}
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

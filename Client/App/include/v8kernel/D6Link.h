@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	D6Link();
 	// AUTO-GENERATED METHODS
 };
 

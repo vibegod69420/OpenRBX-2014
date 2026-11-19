@@ -24,6 +24,15 @@ double SoundServiceStatsItem::getValue()
     return reinterpret_cast<SoundServiceStatsItemLayout*>(this)->value;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x007058c0
+double SoundServiceStatsItem::getCurrentValue()
+{
+	reinterpret_cast<SoundServiceStatsItemHelper*>(this)->update();
+	reinterpret_cast<SoundServiceStatsItemHelper*>(this)->update();
+	reinterpret_cast<SoundServiceStatsItemHelper*>(this)->setMode(2);
+	return reinterpret_cast<SoundServiceStatsItemLayout*>(this)->value;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

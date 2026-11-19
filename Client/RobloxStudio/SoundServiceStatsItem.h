@@ -17,6 +17,7 @@ public:
 	};
 
 	double getValue();
+	double getCurrentValue();
 	// AUTO-GENERATED METHODS
 };
 

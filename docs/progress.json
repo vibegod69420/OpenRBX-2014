@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 04:56:50 UTC",
+ "updated_at": "2026-11-19 05:04:56 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 6.5456,
- "implemented_total": 614,
- "function_annotations": 614,
+ "matchable_coverage_pct": 6.5777,
+ "implemented_total": 617,
+ "function_annotations": 617,
  "stub_annotations": 0,
- "perfect_100_count": 613,
- "matched_real_functions": 613,
+ "perfect_100_count": 616,
+ "matched_real_functions": 616,
  "average_match_pct": 99.85,
- "overall_function_coverage_pct": 1.5113,
- "overall_byte_coverage_pct": 0.1799,
+ "overall_function_coverage_pct": 1.5187,
+ "overall_byte_coverage_pct": 0.1818,
  "usage": {
-  "calls_24h": 3004,
+  "calls_24h": 3051,
   "failures_24h": 0,
-  "completion_tokens_24h": 32606396,
-  "reasoning_tokens_24h": 32062624,
-  "avg_latency_s": 189.8
+  "completion_tokens_24h": 33130186,
+  "reasoning_tokens_24h": 32578320,
+  "avg_latency_s": 189.9
  },
- "functions_total": 614,
+ "functions_total": 617,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -54,9 +54,9 @@
   },
   {
    "name": "App/v8kernel",
-   "matched": 48,
-   "functions": 48,
-   "bytes": 1008
+   "matched": 49,
+   "functions": 49,
+   "bytes": 1068
   },
   {
    "name": "Rendering/GfxCore",
@@ -71,16 +71,16 @@
    "bytes": 716
   },
   {
+   "name": "App/script",
+   "matched": 19,
+   "functions": 19,
+   "bytes": 509
+  },
+  {
    "name": "App/tool",
    "matched": 7,
    "functions": 7,
    "bytes": 461
-  },
-  {
-   "name": "App/script",
-   "matched": 18,
-   "functions": 18,
-   "bytes": 447
   },
   {
    "name": "App/humanoid",
@@ -122,6 +122,12 @@
    "name": "App/gui",
    "matched": 3,
    "functions": 3,
+   "bytes": 118
+  },
+  {
+   "name": "RobloxStudio/SoundServiceStatsItem.cpp",
+   "matched": 2,
+   "functions": 2,
    "bytes": 118
   },
   {
@@ -243,12 +249,6 @@
    "matched": 1,
    "functions": 1,
    "bytes": 58
-  },
-  {
-   "name": "RobloxStudio/SoundServiceStatsItem.cpp",
-   "matched": 1,
-   "functions": 1,
-   "bytes": 57
   },
   {
    "name": "RobloxStudio/Toggle3DGridVerb.cpp",
@@ -1859,6 +1859,17 @@
    "matchable": true
   },
   {
+   "address": "0x00b5e4a0",
+   "kind": "FUNCTION",
+   "name": "D6Link_ConstructPart",
+   "mangled": "??0D6Link@RBX@@QAE@XZ",
+   "file": "Client/App/v8kernel/D6Link.cpp",
+   "orig_size": 60,
+   "recomp_size": 60,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00b5c470",
    "kind": "FUNCTION",
    "name": "RBX::Mechanism::step",
@@ -3254,17 +3265,6 @@
    "recomp_size": 10,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x0091a6d0",
-   "kind": "FUNCTION",
-   "name": "RBX::VehicleSeat::getSlot18Value",
-   "mangled": "?getSlot18Value@VehicleSeat@RBX@@QAEPAXXZ",
-   "file": "Client/App/v8datamodel/VehicleSeat.cpp",
-   "orig_size": 13,
-   "recomp_size": 13,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -3963,9 +3963,39 @@
    "matched": 613,
    "implemented": 614,
    "pct": 6.5456
+  },
+  {
+   "t": "2026-11-19 05:04:56 UTC",
+   "matched": 616,
+   "implemented": 617,
+   "pct": 6.5777
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T04:59:44",
+   "address": "0x00b5e4a0",
+   "name": "D6Link_ConstructPart",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T04:57:17",
+   "address": "0x007ca820",
+   "name": "RBX::Script::sub_7CA820",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T04:56:52",
+   "address": "0x007058c0",
+   "name": "SoundServiceStatsItem::getCurrentValue",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T04:56:50",
+   "address": "0x005c8cb0",
+   "name": "",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T04:53:44",
    "address": "0x00940c80",
@@ -4661,31 +4691,7 @@
    "address": "0x0063c010",
    "name": "RBX::BodyColors::getContextOwner",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:56:57",
-   "address": "0x007ca2a0",
-   "name": "RBX::Script::sub_7CA2A0",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:56:53",
-   "address": "0x00860130",
-   "name": "RBX::DataModel::GenericJob::initializeState",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:56:40",
-   "address": "0x006c2710",
-   "name": "RBX::TaskScheduler::Thread::executeScheduledJobs",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:53:49",
-   "address": "0x009f0f30",
-   "name": "RBX::RemoteFunction::sub_9f0f30",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 50.14
+ "match_rate_per_hour": 49.84
 }
