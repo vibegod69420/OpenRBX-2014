@@ -15,6 +15,7 @@ struct Sub_Kernel_24_14 { char pad[20]; int val; };
 struct Sub_Kernel_24_74 { char pad[116]; int val; };
 struct Sub_Kernel_24_00a4 { char pad[164]; int val; };
 struct Sub_Kernel_24_0094 { char pad[148]; int val; };
+struct Sub_Kernel_24_0084 { char pad[132]; int val; };
 // AUTO-GENERATED HELPERS
 
 class Kernel
@@ -33,6 +34,7 @@ public:
 		struct { char _pad_sub_0024_74[0x24]; Sub_Kernel_24_74* sub_0024_74; };
 		struct { char _pad_sub_0024_00a4[0x24]; Sub_Kernel_24_00a4* sub_0024_00a4; };
 		struct { char _pad_sub_0024_0094[0x24]; Sub_Kernel_24_0094* sub_0024_0094; };
+		struct { char _pad_sub_0024_0084[0x24]; Sub_Kernel_24_0084* sub_0024_0084; };
 		// AUTO-GENERATED FIELDS
 	};
 
@@ -47,6 +49,7 @@ public:
 	int getSubField24_74() const;
 	int getSubField24_A4() const;
 	int getSubField24_94() const;
+	int getSubField24_84() const;
 	// AUTO-GENERATED METHODS
 };
 

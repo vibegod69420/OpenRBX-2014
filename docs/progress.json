@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 21:57:26 UTC",
+ "updated_at": "2026-11-19 22:31:44 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 9.5996,
- "implemented_total": 903,
- "function_annotations": 903,
+ "matchable_coverage_pct": 9.6316,
+ "implemented_total": 906,
+ "function_annotations": 906,
  "stub_annotations": 0,
- "perfect_100_count": 899,
- "matched_real_functions": 899,
+ "perfect_100_count": 902,
+ "matched_real_functions": 902,
  "average_match_pct": 99.86,
- "overall_function_coverage_pct": 2.2164,
- "overall_byte_coverage_pct": 0.3765,
+ "overall_function_coverage_pct": 2.2238,
+ "overall_byte_coverage_pct": 0.3771,
  "usage": {
-  "calls_24h": 6203,
+  "calls_24h": 6033,
   "failures_24h": 0,
-  "completion_tokens_24h": 74559535,
-  "reasoning_tokens_24h": 73037661,
-  "avg_latency_s": 210.2
+  "completion_tokens_24h": 72652600,
+  "reasoning_tokens_24h": 71151929,
+  "avg_latency_s": 210.6
  },
- "functions_total": 903,
+ "functions_total": 906,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 355,
-   "functions": 356,
-   "bytes": 11577
+   "matched": 356,
+   "functions": 357,
+   "bytes": 11603
   },
   {
    "name": "App/v8world",
@@ -54,9 +54,9 @@
   },
   {
    "name": "App/v8kernel",
-   "matched": 68,
-   "functions": 68,
-   "bytes": 2194
+   "matched": 69,
+   "functions": 69,
+   "bytes": 2204
   },
   {
    "name": "Rendering/GfxRender",
@@ -66,9 +66,9 @@
   },
   {
    "name": "Rendering/GfxCore",
-   "matched": 51,
-   "functions": 51,
-   "bytes": 2106
+   "matched": 52,
+   "functions": 52,
+   "bytes": 2130
   },
   {
    "name": "App/script",
@@ -1325,6 +1325,17 @@
    "file": "Client/Network/PhysicsPacketCache.cpp",
    "orig_size": 86,
    "recomp_size": 86,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00c5ae90",
+   "kind": "FUNCTION",
+   "name": "RBX::detail::sp_counted_impl_p::destroySubPtr0C_ae90",
+   "mangled": "?destroySubPtr0C_ae90@sp_counted_impl_p@RBX@@QAEXXZ",
+   "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
+   "orig_size": 26,
+   "recomp_size": 26,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -2715,6 +2726,17 @@
    "matchable": true
   },
   {
+   "address": "0x00b535a0",
+   "kind": "FUNCTION",
+   "name": "RBX::Kernel::getSubField24_84",
+   "mangled": "?getSubField24_84@Kernel@RBX@@QBEHXZ",
+   "file": "Client/App/v8kernel/Kernel.cpp",
+   "orig_size": 10,
+   "recomp_size": 10,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00b53590",
    "kind": "FUNCTION",
    "name": "RBX::Kernel::getSubField24_14",
@@ -3283,28 +3305,6 @@
    "file": "Client/App/v8world/Motor6D.cpp",
    "orig_size": 13,
    "recomp_size": 13,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00a70890",
-   "kind": "FUNCTION",
-   "name": "RBX::PhysicsSettings::getGlobal_0890",
-   "mangled": "?getGlobal_0890@PhysicsSettings@RBX@@QBEHXZ",
-   "file": "Client/App/v8datamodel/PhysicsSettings.cpp",
-   "orig_size": 310,
-   "recomp_size": 6,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00a685e0",
-   "kind": "FUNCTION",
-   "name": "RBX::LogService::Clear",
-   "mangled": "?Clear@LogService@RBX@@QAEXXZ",
-   "file": "Client/App/v8datamodel/LogService.cpp",
-   "orig_size": 36,
-   "recomp_size": 36,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -4593,9 +4593,21 @@
    "matched": 899,
    "implemented": 903,
    "pct": 9.5996
+  },
+  {
+   "t": "2026-11-19 22:31:44 UTC",
+   "matched": 902,
+   "implemented": 906,
+   "pct": 9.6316
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T22:28:31",
+   "address": "0x00b535a0",
+   "name": "RBX::Kernel::getSubField24_84",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T21:53:39",
    "address": "0x00574ce0",
@@ -5309,13 +5321,7 @@
    "address": "0x0069ec60",
    "name": "RBX::sp_counted_impl_p::destroySubPtr0C",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T14:53:53",
-   "address": "0x00605a40",
-   "name": "RBX::Graphics::ContextGL::assignIfNull_5a40",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 30.75
+ "match_rate_per_hour": 30.26
 }
