@@ -26,6 +26,7 @@ public:
 	const Vector3&getCrossUpNormal();
 	const Vector3&getCrossUpHalfNormal();
 	const Vector3&getZeroNormal();
+	const Vector3&getFullNormal();
 	// AUTO-GENERATED METHODS
 };
 

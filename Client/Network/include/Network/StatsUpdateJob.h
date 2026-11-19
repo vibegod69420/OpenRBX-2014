@@ -18,6 +18,7 @@ public:
 	};
 
 	void appendBit();
+	StatsUpdateJob& __cdecl reserve(unsigned int bits);
 	// AUTO-GENERATED METHODS
 };
 

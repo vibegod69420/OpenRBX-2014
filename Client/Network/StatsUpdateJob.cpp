@@ -30,6 +30,16 @@ void StatsUpdateJob::appendBit()
 	++self->bitCount;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c6dfd0
+StatsUpdateJob& __cdecl StatsUpdateJob::reserve(unsigned int bits)
+{
+	StatsUpdateJobLayout* self = reinterpret_cast<StatsUpdateJobLayout*>(this);
+	self->reserve(bits);
+	self->reserve(bits + 2);
+	self->reserve(bits + 4);
+	return *this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

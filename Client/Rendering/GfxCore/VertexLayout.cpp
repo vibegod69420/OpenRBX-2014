@@ -152,6 +152,27 @@ bool VertexLayout::initARBPointParameters()
 	return false;
 }
 
+extern void* g_glBindImageTexture;
+extern void* g_glMemoryBarrier;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f6890
+bool VertexLayout::initGLShaderImageLoadStore()
+{
+	void* bindProc = g_glGetProcAddress("glBindImageTexture");
+	g_glBindImageTexture = bindProc;
+	bool missingBind = (bindProc == 0);
+
+	void* barrierProc = g_glGetProcAddress("glMemoryBarrier");
+	g_glMemoryBarrier = barrierProc;
+
+	if (barrierProc == 0)
+		return true;
+	if (missingBind)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
