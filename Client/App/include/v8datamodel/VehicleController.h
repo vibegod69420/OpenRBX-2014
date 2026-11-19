@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	~VehicleController();
 	// AUTO-GENERATED METHODS
 };
 
