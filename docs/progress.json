@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 09:01:53 UTC",
+ "updated_at": "2026-11-19 09:30:40 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 7.2397,
- "implemented_total": 679,
- "function_annotations": 679,
+ "matchable_coverage_pct": 7.2504,
+ "implemented_total": 680,
+ "function_annotations": 680,
  "stub_annotations": 0,
- "perfect_100_count": 678,
- "matched_real_functions": 678,
+ "perfect_100_count": 679,
+ "matched_real_functions": 679,
  "average_match_pct": 99.86,
- "overall_function_coverage_pct": 1.6716,
- "overall_byte_coverage_pct": 0.2172,
+ "overall_function_coverage_pct": 1.674,
+ "overall_byte_coverage_pct": 0.2188,
  "usage": {
-  "calls_24h": 4064,
+  "calls_24h": 4168,
   "failures_24h": 0,
-  "completion_tokens_24h": 45589066,
-  "reasoning_tokens_24h": 44806716,
-  "avg_latency_s": 196.3
+  "completion_tokens_24h": 47132799,
+  "reasoning_tokens_24h": 46314144,
+  "avg_latency_s": 197.4
  },
- "functions_total": 679,
+ "functions_total": 680,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -54,9 +54,9 @@
   },
   {
    "name": "App/v8kernel",
-   "matched": 52,
-   "functions": 52,
-   "bytes": 1212
+   "matched": 53,
+   "functions": 53,
+   "bytes": 1367
   },
   {
    "name": "Rendering/g3d",
@@ -2019,6 +2019,17 @@
    "matchable": true
   },
   {
+   "address": "0x00b5e680",
+   "kind": "FUNCTION",
+   "name": "RBX::RevoluteLink::dirty",
+   "mangled": "?dirty@RevoluteLink@RBX@@QAEXXZ",
+   "file": "Client/App/v8kernel/RevoluteLink.cpp",
+   "orig_size": 155,
+   "recomp_size": 91,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00b5e4a0",
    "kind": "FUNCTION",
    "name": "D6Link_ConstructPart",
@@ -3260,17 +3271,6 @@
    "recomp_size": 16,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x0095cae0",
-   "kind": "FUNCTION",
-   "name": "RBX::Pages::Pages",
-   "mangled": "??0Pages@RBX@@QAE@XZ",
-   "file": "Client/App/v8datamodel/Pages.cpp",
-   "orig_size": 57,
-   "recomp_size": 57,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -4101,9 +4101,21 @@
    "matched": 678,
    "implemented": 679,
    "pct": 7.2397
+  },
+  {
+   "t": "2026-11-19 09:30:40 UTC",
+   "matched": 679,
+   "implemented": 680,
+   "pct": 7.2504
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T09:27:21",
+   "address": "0x00b5e680",
+   "name": "RBX::RevoluteLink::dirty",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T08:58:39",
    "address": "0x00cc7750",
@@ -4817,13 +4829,7 @@
    "address": "0x009cd020",
    "name": "RBX::InputObject::isInputType27",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T04:01:03",
-   "address": "0x0091a7f0",
-   "name": "rbx_vehicleseat_helper_0x9d8750",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 41.57
+ "match_rate_per_hour": 40.44
 }
