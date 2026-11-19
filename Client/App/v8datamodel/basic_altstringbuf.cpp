@@ -65,6 +65,14 @@ void basic_altstringbuf::Release()
 	}
 }
 
+__declspec(dllimport) int __stdcall BasicAltStringBuf_Thunk_E1018C(int, int, int, int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00cf4f20
+void basic_altstringbuf::Create()
+{
+	_vtable_or_head = BasicAltStringBuf_Thunk_E1018C(0, 0, 0, 0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

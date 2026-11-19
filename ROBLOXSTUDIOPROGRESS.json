@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 21:01:55 UTC",
+  "updated_at": "2026-11-19 21:10:29 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,20 +16,20 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 9.4714,
-  "implemented_total": 891,
-  "function_annotations": 891,
+  "matchable_coverage_pct": 9.5141,
+  "implemented_total": 895,
+  "function_annotations": 895,
   "stub_annotations": 0,
-  "perfect_100_count": 887,
-  "matched_real_functions": 887,
+  "perfect_100_count": 891,
+  "matched_real_functions": 891,
   "average_match_pct": 99.86,
-  "overall_function_coverage_pct": 2.1868,
-  "overall_byte_coverage_pct": 0.3683,
+  "overall_function_coverage_pct": 2.1967,
+  "overall_byte_coverage_pct": 0.3707,
   "usage": {
-    "calls_24h": 6300,
+    "calls_24h": 6288,
     "failures_24h": 0,
-    "completion_tokens_24h": 75676074,
-    "reasoning_tokens_24h": 74141721,
+    "completion_tokens_24h": 75546521,
+    "reasoning_tokens_24h": 74013127,
     "avg_latency_s": 210.3
   },
   "functions": [
@@ -3759,6 +3759,17 @@
       "file": "Client/Rendering/g3d/G3Dcpp/WrongSymbol.cpp",
       "orig_size": 52,
       "recomp_size": 6,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0076ef40",
+      "kind": "FUNCTION",
+      "name": "RBX::ViewBase::updateViewData",
+      "mangled": "?updateViewData@ViewBase@RBX@@QAEXXZ",
+      "file": "Client/Rendering/GfxBase/ViewBase.cpp",
+      "orig_size": 72,
+      "recomp_size": 72,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -8900,6 +8911,17 @@
       "matchable": true
     },
     {
+      "address": "0x00c18710",
+      "kind": "FUNCTION",
+      "name": "RBX::PolyPolyContact::getSeparatingEdgeCandidate",
+      "mangled": "?getSeparatingEdgeCandidate@PolyPolyContact@RBX@@QAAHXZ",
+      "file": "Client/App/v8world/PolyPolyContact.cpp",
+      "orig_size": 59,
+      "recomp_size": 59,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00c18820",
       "kind": "FUNCTION",
       "name": "RBX::PolyPolyContact::matchSeparatingEdge",
@@ -9472,6 +9494,17 @@
       "matchable": true
     },
     {
+      "address": "0x00cb9510",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::ServerReplicator::releaseSharedInstance",
+      "mangled": "?releaseSharedInstance@ServerReplicator@Network@RBX@@QAEXXZ",
+      "file": "Client/Network/ServerReplicator.cpp",
+      "orig_size": 56,
+      "recomp_size": 56,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00cb97e0",
       "kind": "FUNCTION",
       "name": "RBX::Network::ServerReplicator::getReplicator",
@@ -9710,6 +9743,17 @@
       "file": "Client/App/v8datamodel/basic_altstringbuf.cpp",
       "orig_size": 25,
       "recomp_size": 25,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00cf4f20",
+      "kind": "FUNCTION",
+      "name": "std::basic_altstringbuf::Create",
+      "mangled": "?Create@basic_altstringbuf@std@@QAEXXZ",
+      "file": "Client/App/v8datamodel/basic_altstringbuf.cpp",
+      "orig_size": 41,
+      "recomp_size": 21,
       "match_pct": 100.0,
       "matchable": true
     },

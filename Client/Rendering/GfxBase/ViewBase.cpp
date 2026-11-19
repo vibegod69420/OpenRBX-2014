@@ -88,6 +88,33 @@ int ViewBase::getCurrentEntryInt2()
     return *reinterpret_cast<const int*>(arrBase + (idx << 6) + 0x14);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0076ef40
+void ViewBase::updateViewData()
+{
+	char* base = reinterpret_cast<char*>(this);
+	char* info = *reinterpret_cast<char**>(base + 4);
+	char* entries = *reinterpret_cast<char**>(base + 0x148);
+
+	int value;
+	if (*reinterpret_cast<int*>(info + 0xC) != 2)
+	{
+		unsigned int index = *reinterpret_cast<unsigned int*>(base + 0x28);
+		value = *reinterpret_cast<int*>(entries + (index << 6) + 0xC);
+	}
+	else
+	{
+		value = *reinterpret_cast<int*>(entries + 0xC);
+	}
+
+	*reinterpret_cast<int*>(base + 0x140) = value;
+	*reinterpret_cast<unsigned char*>(base + 0x139) = 1;
+
+	float f = *reinterpret_cast<float*>(entries + 8);
+	*reinterpret_cast<float*>(base + 0x98) = f * f;
+
+	*reinterpret_cast<int*>(base + 0x8C) = *reinterpret_cast<int*>(0x011DDD08);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

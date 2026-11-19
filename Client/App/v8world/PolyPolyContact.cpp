@@ -64,6 +64,24 @@ void __cdecl PolyPolyContact::matchSeparatingEdge(int featureId, int separatingE
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c18710
+int __cdecl PolyPolyContact::getSeparatingEdgeCandidate()
+{
+	typedef int(__cdecl* SubC18030Func)(PolyPolyContact*, unsigned int, void*);
+
+	void* base = *(void**)((char*)this + 0x0C);
+	int oldValue = *(int*)((char*)this + 0x20);
+	*(int*)((char*)this + 0x20) = -1;
+
+	int result = ((SubC18030Func)sub_C18030)(
+		this,
+		0x7fff8016u,
+		*(void**)((char*)base + 8));
+
+	sub_00C18130(this, &result, oldValue);
+	return result;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

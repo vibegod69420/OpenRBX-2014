@@ -22,6 +22,7 @@ public:
 	int getCurrentEntryInt();
 	bool getCurrentEntryByte();
 	int getCurrentEntryInt2();
+	void updateViewData();
 	// AUTO-GENERATED METHODS
 };
 

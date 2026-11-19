@@ -51,6 +51,37 @@ void* ServerReplicator::getReplicator()
 	return 0;
 }
 
+class ServerReplicatorSharedObject
+{
+public:
+	void destroy();
+};
+
+extern int g_serverReplicatorSharedRefCount;                 // 0x01314710
+extern ServerReplicatorSharedObject* g_serverReplicatorSharedObject; // 0x0131470C
+
+// FUNCTION: ROBLOXSTUDIO 0x00cb9510
+void ServerReplicator::releaseSharedInstance()
+{
+	int count = g_serverReplicatorSharedRefCount;
+	if (count <= 0)
+		return;
+
+	--count;
+	g_serverReplicatorSharedRefCount = count;
+	if (count != 0)
+		return;
+
+	ServerReplicatorSharedObject* instance = g_serverReplicatorSharedObject;
+	if (instance)
+	{
+		instance->destroy();
+		delete (char*)instance;
+	}
+
+	g_serverReplicatorSharedObject = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

@@ -21,6 +21,7 @@ public:
 	void FreeHandle();
 	basic_altstringbuf();
 	void Release();
+	void Create();
 	// AUTO-GENERATED METHODS
 };
 

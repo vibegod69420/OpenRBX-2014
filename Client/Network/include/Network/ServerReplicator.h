@@ -24,6 +24,7 @@ public:
 	void*getPtr1E90() const;
 	void*getReplicator() const;
 	void*getReplicator();
+	void releaseSharedInstance();
 	// AUTO-GENERATED METHODS
 };
 
