@@ -18,6 +18,7 @@ public:
 
 	int IsRecording();
 	int IsPlaying();
+	ChangeHistoryService*getChangeHistoryService();
 	// AUTO-GENERATED METHODS
 };
 

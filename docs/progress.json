@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 04:24:41 UTC",
+ "updated_at": "2026-11-19 04:32:42 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,41 +16,41 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 6.2787,
- "implemented_total": 588,
- "function_annotations": 588,
+ "matchable_coverage_pct": 6.3641,
+ "implemented_total": 596,
+ "function_annotations": 596,
  "stub_annotations": 0,
- "perfect_100_count": 588,
- "matched_real_functions": 588,
+ "perfect_100_count": 596,
+ "matched_real_functions": 596,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 1.4497,
- "overall_byte_coverage_pct": 0.1685,
+ "overall_function_coverage_pct": 1.4694,
+ "overall_byte_coverage_pct": 0.1715,
  "usage": {
-  "calls_24h": 2827,
+  "calls_24h": 2866,
   "failures_24h": 0,
-  "completion_tokens_24h": 30773217,
-  "reasoning_tokens_24h": 30255371,
-  "avg_latency_s": 190.4
+  "completion_tokens_24h": 31198805,
+  "reasoning_tokens_24h": 30676183,
+  "avg_latency_s": 190.5
  },
- "functions_total": 588,
+ "functions_total": 596,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 244,
-   "functions": 244,
-   "bytes": 5760
+   "matched": 245,
+   "functions": 245,
+   "bytes": 5795
   },
   {
    "name": "App/v8world",
-   "matched": 61,
-   "functions": 61,
-   "bytes": 1827
+   "matched": 62,
+   "functions": 62,
+   "bytes": 1864
   },
   {
    "name": "Rendering/GfxRender",
-   "matched": 43,
-   "functions": 43,
-   "bytes": 1373
+   "matched": 44,
+   "functions": 44,
+   "bytes": 1408
   },
   {
    "name": "App/v8kernel",
@@ -72,9 +72,9 @@
   },
   {
    "name": "App/script",
-   "matched": 17,
-   "functions": 17,
-   "bytes": 411
+   "matched": 18,
+   "functions": 18,
+   "bytes": 447
   },
   {
    "name": "App/tool",
@@ -209,6 +209,12 @@
    "bytes": 70
   },
   {
+   "name": "Network/PeerStatsItem.cpp",
+   "matched": 2,
+   "functions": 2,
+   "bytes": 65
+  },
+  {
    "name": "RobloxStudio/RobloxScriptDoc.cpp",
    "matched": 2,
    "functions": 2,
@@ -299,10 +305,28 @@
    "bytes": 38
   },
   {
+   "name": "RobloxStudio/QDoubleSpinBox.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 37
+  },
+  {
    "name": "Network/NetworkOwnerJob.cpp",
    "matched": 1,
    "functions": 1,
    "bytes": 37
+  },
+  {
+   "name": "RobloxStudio/RobloxSettings.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 36
+  },
+  {
+   "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 36
   },
   {
    "name": "Network/ClientReplicator.cpp",
@@ -348,12 +372,6 @@
   },
   {
    "name": "Network/Peer.cpp",
-   "matched": 1,
-   "functions": 1,
-   "bytes": 30
-  },
-  {
-   "name": "Network/PeerStatsItem.cpp",
    "matched": 1,
    "functions": 1,
    "bytes": 30
@@ -492,6 +510,17 @@
   }
  ],
  "recent": [
+  {
+   "address": "0x00dbc5f0",
+   "kind": "FUNCTION",
+   "name": "ProgramMemoryCheckerImpl::init",
+   "mangled": "?init@ProgramMemoryCheckerImpl@@QAEXXZ",
+   "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+   "orig_size": 36,
+   "recomp_size": 36,
+   "match_pct": 100.0,
+   "matchable": true
+  },
   {
    "address": "0x00d09250",
    "kind": "FUNCTION",
@@ -698,6 +727,17 @@
    "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
    "orig_size": 10,
    "recomp_size": 10,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00ca1840",
+   "kind": "FUNCTION",
+   "name": "RBX::Network::PeerStatsItem::getPeer",
+   "mangled": "?getPeer@PeerStatsItem@Network@RBX@@QAEPAVPeer@23@XZ",
+   "file": "Client/Network/PeerStatsItem.cpp",
+   "orig_size": 35,
+   "recomp_size": 35,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1303,6 +1343,17 @@
    "file": "Client/App/v8world/PolyContact.cpp",
    "orig_size": 26,
    "recomp_size": 26,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00bc6fc0",
+   "kind": "FUNCTION",
+   "name": "RBX::PolyContact::addEdge",
+   "mangled": "?addEdge@PolyContact@RBX@@QAAXPAXE@Z",
+   "file": "Client/App/v8world/PolyContact.cpp",
+   "orig_size": 37,
+   "recomp_size": 37,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3208,39 +3259,6 @@
    "recomp_size": 30,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x00907410",
-   "kind": "FUNCTION",
-   "name": "ArchiveBinder::slot2",
-   "mangled": "?slot2@ArchiveBinder@@QAE_NXZ",
-   "file": "Client/RobloxStudio/ArchiveBinder.cpp",
-   "orig_size": 52,
-   "recomp_size": 52,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x008f1eb0",
-   "kind": "FUNCTION",
-   "name": "sub_4115F0",
-   "mangled": "??0SyncCallbackDescImpl@RBX@@QAE@XZ",
-   "file": "Client/App/v8datamodel/SyncCallbackDescImpl.cpp",
-   "orig_size": 45,
-   "recomp_size": 45,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x008e3c90",
-   "kind": "FUNCTION",
-   "name": "RBX::Lua::LuaArguments::size",
-   "mangled": "?size@LuaArguments@Lua@RBX@@QAEHXZ",
-   "file": "Client/App/script/LuaArguments.cpp",
-   "orig_size": 13,
-   "recomp_size": 13,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -3915,9 +3933,63 @@
    "matched": 588,
    "implemented": 588,
    "pct": 6.2787
+  },
+  {
+   "t": "2026-11-19 04:32:42 UTC",
+   "matched": 596,
+   "implemented": 596,
+   "pct": 6.3641
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T04:28:48",
+   "address": "0x00478740",
+   "name": "QDoubleSpinBox::copyInternalData",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T04:28:27",
+   "address": "0x00bc6fc0",
+   "name": "RBX::PolyContact::addEdge",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T04:28:13",
+   "address": "0x00515360",
+   "name": "RobloxSettings::sub_515360",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T04:27:00",
+   "address": "0x00670f10",
+   "name": "isA",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T04:26:02",
+   "address": "0x008cfbc0",
+   "name": "unlink",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T04:25:07",
+   "address": "0x00dbc5f0",
+   "name": "ProgramMemoryCheckerImpl::init",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T04:24:58",
+   "address": "0x00ca1840",
+   "name": "RBX::Network::PeerStatsItem::getPeer",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T04:24:45",
+   "address": "0x0078a3d0",
+   "name": "RBX::ChangeHistoryService::getChangeHistoryService",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T04:21:36",
    "address": "0x00908fb0",
@@ -4589,55 +4661,7 @@
    "address": "0x00a212c0",
    "name": "RBX::SurfaceEnumPropDescriptor::getEnumValueCount",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:43:10",
-   "address": "0x0044e0b0",
-   "name": "RBX::RbxRay::isSecondaryTargetSlot",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:42:47",
-   "address": "0x0099d3b0",
-   "name": "RBX::MegaClusterPoly::getMesh",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:41:40",
-   "address": "0x00bc8790",
-   "name": "RBX::PolyContact::findClosestFeature",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:41:23",
-   "address": "0x0057a230",
-   "name": "RobloxPluginHost::RobloxPluginHost",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:37:49",
-   "address": "0x008d8c10",
-   "name": "RBX::Lua::LuaArguments::pushAllResults",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:37:31",
-   "address": "0x00427a20",
-   "name": "RBX::DSVideoCaptureEngine::stopCapture",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:37:29",
-   "address": "0x00c9b2f0",
-   "name": "RBX::Network::Server::sub_c9b2f0",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:37:27",
-   "address": "0x007c2d20",
-   "name": "RBX::BoxSelectCommand::canBoxSelect",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 50.3
+ "match_rate_per_hour": 50.41
 }

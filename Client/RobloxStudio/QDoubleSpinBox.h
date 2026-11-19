@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void __cdecl copyInternalData(void* target);
 	// AUTO-GENERATED METHODS
 };
 

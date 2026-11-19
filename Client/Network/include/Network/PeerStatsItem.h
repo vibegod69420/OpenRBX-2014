@@ -6,6 +6,7 @@
 namespace RBX {
 namespace Network {
 
+class Peer;
 // AUTO-GENERATED HELPERS
 
 class PeerStatsItem
@@ -19,6 +20,7 @@ public:
 
 	void onDestroy();
 	static void destroyInstance(PeerStatsItem* p);
+	Peer*getPeer();
 	// AUTO-GENERATED METHODS
 };
 

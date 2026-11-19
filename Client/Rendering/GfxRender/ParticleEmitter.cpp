@@ -41,6 +41,26 @@ void ParticleEmitter::destroyInstance(ParticleEmitter* p)
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00670f10
+class ParticleEmitterDescriptor
+{
+public:
+	bool isA(const ParticleEmitterDescriptor* desc);
+};
+
+ParticleEmitterDescriptor* getParticleEmitterDescriptor();
+
+ParticleEmitter* ParticleEmitter::fastDynamicCast()
+{
+	ParticleEmitterDescriptor* desc = *reinterpret_cast<ParticleEmitterDescriptor**>(
+		reinterpret_cast<char*>(this) + 0xC);
+
+	if (desc->isA(getParticleEmitterDescriptor()))
+		return reinterpret_cast<ParticleEmitter*>(reinterpret_cast<char*>(this) - 0x1C);
+
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

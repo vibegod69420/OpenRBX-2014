@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	RobloxSettings* __fastcall sub_515360(void* arg);
 	// AUTO-GENERATED METHODS
 };
 

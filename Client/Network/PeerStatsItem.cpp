@@ -14,6 +14,24 @@ void PeerStatsItem::destroyInstance(PeerStatsItem* p)
 	}
 }
 
+class Peer;
+class PeerConnection
+{
+public:
+	bool isLocalAddress(void* address);
+};
+
+void* getLocalAddress();
+
+// FUNCTION: ROBLOXSTUDIO 0x00ca1840
+Peer* PeerStatsItem::getPeer()
+{
+	PeerConnection* connection = *(PeerConnection**)((char*)this + 0x0C);
+	if (connection->isLocalAddress(getLocalAddress()))
+		return (Peer*)((char*)this - 0x1C);
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

@@ -20,6 +20,7 @@ public:
 	void queueSimulation();
 	void onDestroy();
 	static void destroyInstance(ParticleEmitter* p);
+	ParticleEmitter*fastDynamicCast();
 	// AUTO-GENERATED METHODS
 };
 
