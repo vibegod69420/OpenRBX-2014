@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 18:37:23 UTC",
+  "updated_at": "2026-11-19 18:46:08 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 9.1404,
-  "implemented_total": 858,
-  "function_annotations": 858,
+  "matchable_coverage_pct": 9.1725,
+  "implemented_total": 861,
+  "function_annotations": 861,
   "stub_annotations": 0,
-  "perfect_100_count": 856,
-  "matched_real_functions": 856,
+  "perfect_100_count": 859,
+  "matched_real_functions": 859,
   "average_match_pct": 99.88,
-  "overall_function_coverage_pct": 2.1104,
-  "overall_byte_coverage_pct": 0.346,
+  "overall_function_coverage_pct": 2.1178,
+  "overall_byte_coverage_pct": 0.3485,
   "usage": {
-    "calls_24h": 6310,
+    "calls_24h": 6338,
     "failures_24h": 0,
-    "completion_tokens_24h": 73218763,
-    "reasoning_tokens_24h": 71780676,
-    "avg_latency_s": 203.4
+    "completion_tokens_24h": 73603306,
+    "reasoning_tokens_24h": 72158233,
+    "avg_latency_s": 203.8
   },
   "functions": [
     {
@@ -3048,6 +3048,17 @@
       "matchable": true
     },
     {
+      "address": "0x006a9da0",
+      "kind": "FUNCTION",
+      "name": "RBX::Typesetter::draw",
+      "mangled": "?draw@Typesetter@RBX@@QAAXPBXHHHH@Z",
+      "file": "Client/App/v8datamodel/Typesetter.cpp",
+      "orig_size": 64,
+      "recomp_size": 64,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x006ad930",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::VisualEngine::derefInt",
@@ -4155,6 +4166,17 @@
       "file": "Client/App/v8datamodel/PartInstance.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00826180",
+      "kind": "FUNCTION",
+      "name": "free",
+      "mangled": "?clearYieldedScripts@ModuleScript@RBX@@QAEXXZ",
+      "file": "Client/App/script/ModuleScript.cpp",
+      "orig_size": 82,
+      "recomp_size": 82,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -7383,6 +7405,17 @@
     },
     {
       "address": "0x00b4d660",
+      "kind": "FUNCTION",
+      "name": "RBX::BlockBlockContact::allocate",
+      "mangled": "?allocate@BlockBlockContact@RBX@@QAEPAXXZ",
+      "file": "Client/App/v8world/BlockBlockContact.cpp",
+      "orig_size": 89,
+      "recomp_size": 89,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b4d720",
       "kind": "FUNCTION",
       "name": "RBX::BlockBlockContact::allocate",
       "mangled": "?allocate@BlockBlockContact@RBX@@QAEPAXXZ",

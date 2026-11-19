@@ -17,6 +17,7 @@ public:
 	};
 
 	void*allocate();
+	void*allocate(unsigned int size);
 	// AUTO-GENERATED METHODS
 };
 

@@ -66,6 +66,38 @@ void* BlockBlockContact::allocate()
 	return node;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b4d720
+void* BlockBlockContact::allocate(unsigned int size)
+{
+	BlockBlockContactPool* allocator = getBlockBlockContactAllocator();
+	allocator->lock();
+
+	BlockBlockContactNode* node = allocator->list.head;
+	if (node)
+	{
+		allocator->list.head = node->next;
+	}
+	else
+	{
+		node = allocator->list.allocateSlow();
+	}
+
+	long oldState = _InterlockedExchangeAdd(&allocator->state, 0x80000000);
+	if ((oldState & 0x40000000) == 0)
+	{
+		if (oldState > (long)0x80000000)
+		{
+			if (!_interlockedbittestandset(&allocator->state, 30))
+			{
+				void* ev = allocator->getEvent();
+				SetEvent(ev);
+			}
+		}
+	}
+
+	return node;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

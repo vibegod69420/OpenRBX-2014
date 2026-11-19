@@ -17,6 +17,7 @@ public:
 	};
 
 	void __cdecl draw(int arg2, int arg3, int arg4, int arg5, int arg6);
+	void __cdecl draw(const void* arg2, int arg3, int arg4, int arg5, int arg6);
 	// AUTO-GENERATED METHODS
 };
 
