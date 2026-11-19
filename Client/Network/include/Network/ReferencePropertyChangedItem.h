@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	__int64 getCurrentMicroseconds();
 	// AUTO-GENERATED METHODS
 };
 
