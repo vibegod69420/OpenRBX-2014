@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 13:15:41 UTC",
+ "updated_at": "2026-11-19 13:31:31 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 7.9872,
- "implemented_total": 749,
- "function_annotations": 749,
+ "matchable_coverage_pct": 7.9979,
+ "implemented_total": 750,
+ "function_annotations": 750,
  "stub_annotations": 0,
- "perfect_100_count": 748,
- "matched_real_functions": 748,
+ "perfect_100_count": 749,
+ "matched_real_functions": 749,
  "average_match_pct": 99.87,
- "overall_function_coverage_pct": 1.8441,
- "overall_byte_coverage_pct": 0.2762,
+ "overall_function_coverage_pct": 1.8466,
+ "overall_byte_coverage_pct": 0.2843,
  "usage": {
-  "calls_24h": 5001,
+  "calls_24h": 5039,
   "failures_24h": 0,
-  "completion_tokens_24h": 57722902,
-  "reasoning_tokens_24h": 56642934,
-  "avg_latency_s": 202.9
+  "completion_tokens_24h": 58339498,
+  "reasoning_tokens_24h": 57239670,
+  "avg_latency_s": 203.8
  },
- "functions_total": 749,
+ "functions_total": 750,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8world",
-   "matched": 78,
-   "functions": 78,
-   "bytes": 3119
+   "matched": 79,
+   "functions": 79,
+   "bytes": 3896
   },
   {
    "name": "Rendering/GfxRender",
@@ -1593,6 +1593,17 @@
    "file": "Client/App/v8world/EdgeEdgePair.cpp",
    "orig_size": 18,
    "recomp_size": 18,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00bd0930",
+   "kind": "FUNCTION",
+   "name": "RBX::BallPolyContact::getFirstField",
+   "mangled": "?getFirstField@BallPolyContact@RBX@@QAEHXZ",
+   "file": "Client/App/v8world/BallPolyContact.cpp",
+   "orig_size": 777,
+   "recomp_size": 3,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3278,17 +3289,6 @@
    "recomp_size": 13,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x009ccfd0",
-   "kind": "FUNCTION",
-   "name": "RBX::InputObject::isInputType13Or271",
-   "mangled": "?isInputType13Or271@InputObject@RBX@@QAE_NXZ",
-   "file": "Client/App/v8datamodel/InputObject.cpp",
-   "orig_size": 24,
-   "recomp_size": 24,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -4263,9 +4263,21 @@
    "matched": 748,
    "implemented": 749,
    "pct": 7.9872
+  },
+  {
+   "t": "2026-11-19 13:31:31 UTC",
+   "matched": 749,
+   "implemented": 750,
+   "pct": 7.9979
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T13:28:17",
+   "address": "0x00bd0930",
+   "name": "RBX::BallPolyContact::getFirstField",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T13:12:29",
    "address": "0x005e7400",
@@ -4979,13 +4991,7 @@
    "address": "0x004f2c80",
    "name": "QSignalMapper::setupConnections",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T06:19:19",
-   "address": "0x006e84d0",
-   "name": "G3D::ReferenceCountedObject::zeroWeakPointers",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 36.42
+ "match_rate_per_hour": 36.0
 }
