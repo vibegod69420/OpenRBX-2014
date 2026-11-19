@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 12:33:17 UTC",
+ "updated_at": "2026-11-19 12:41:37 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 7.9231,
- "implemented_total": 743,
- "function_annotations": 743,
+ "matchable_coverage_pct": 7.9338,
+ "implemented_total": 744,
+ "function_annotations": 744,
  "stub_annotations": 0,
- "perfect_100_count": 742,
- "matched_real_functions": 742,
+ "perfect_100_count": 743,
+ "matched_real_functions": 743,
  "average_match_pct": 99.87,
- "overall_function_coverage_pct": 1.8293,
- "overall_byte_coverage_pct": 0.2662,
+ "overall_function_coverage_pct": 1.8318,
+ "overall_byte_coverage_pct": 0.2671,
  "usage": {
-  "calls_24h": 4859,
+  "calls_24h": 4886,
   "failures_24h": 0,
-  "completion_tokens_24h": 55709548,
-  "reasoning_tokens_24h": 54688176,
-  "avg_latency_s": 201.4
+  "completion_tokens_24h": 56094214,
+  "reasoning_tokens_24h": 55065092,
+  "avg_latency_s": 201.7
  },
- "functions_total": 743,
+ "functions_total": 744,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -183,6 +183,12 @@
    "matched": 3,
    "functions": 3,
    "bytes": 118
+  },
+  {
+   "name": "Network/SharedStringProtectedDictionary.cpp",
+   "matched": 2,
+   "functions": 2,
+   "bytes": 115
   },
   {
    "name": "RobloxStudio/ScreenshotVerb.cpp",
@@ -444,12 +450,6 @@
   },
   {
    "name": "Network/ChatMessage.cpp",
-   "matched": 1,
-   "functions": 1,
-   "bytes": 26
-  },
-  {
-   "name": "Network/SharedStringProtectedDictionary.cpp",
    "matched": 1,
    "functions": 1,
    "bytes": 26
@@ -922,6 +922,17 @@
    "file": "Client/App/v8datamodel/chainbuf.cpp",
    "orig_size": 30,
    "recomp_size": 30,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00c87230",
+   "kind": "FUNCTION",
+   "name": "RBX::Network::SharedStringProtectedDictionary::fetch",
+   "mangled": "?fetch@SharedStringProtectedDictionary@Network@RBX@@QAEPAXXZ",
+   "file": "Client/Network/SharedStringProtectedDictionary.cpp",
+   "orig_size": 89,
+   "recomp_size": 89,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3278,17 +3289,6 @@
    "recomp_size": 36,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x009b46c0",
-   "kind": "FUNCTION",
-   "name": "??1VehicleController@RBX@@QAE@XZ",
-   "mangled": "??1VehicleController@RBX@@QAE@XZ",
-   "file": "Client/App/v8datamodel/VehicleController.cpp",
-   "orig_size": 248,
-   "recomp_size": 92,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -4239,9 +4239,21 @@
    "matched": 742,
    "implemented": 743,
    "pct": 7.9231
+  },
+  {
+   "t": "2026-11-19 12:41:37 UTC",
+   "matched": 743,
+   "implemented": 744,
+   "pct": 7.9338
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T12:33:29",
+   "address": "0x00c87230",
+   "name": "RBX::Network::SharedStringProtectedDictionary::fetch",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T12:26:51",
    "address": "0x00704f00",
@@ -4955,13 +4967,7 @@
    "address": "0x00b2d3c0",
    "name": "",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T05:58:47",
-   "address": "0x00619df0",
-   "name": "RBX::GfxBinding::clear",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 37.41
+ "match_rate_per_hour": 37.2
 }
