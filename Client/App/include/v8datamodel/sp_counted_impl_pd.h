@@ -18,6 +18,7 @@ public:
 	};
 
 	const int* getMemberPtr10() const;
+	void dispose();
 	// AUTO-GENERATED METHODS
 };
 
