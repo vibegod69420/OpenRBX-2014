@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 18:46:08 UTC",
+  "updated_at": "2026-11-19 18:54:33 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 9.1725,
-  "implemented_total": 861,
-  "function_annotations": 861,
+  "matchable_coverage_pct": 9.1938,
+  "implemented_total": 863,
+  "function_annotations": 863,
   "stub_annotations": 0,
-  "perfect_100_count": 859,
-  "matched_real_functions": 859,
+  "perfect_100_count": 861,
+  "matched_real_functions": 861,
   "average_match_pct": 99.88,
-  "overall_function_coverage_pct": 2.1178,
-  "overall_byte_coverage_pct": 0.3485,
+  "overall_function_coverage_pct": 2.1227,
+  "overall_byte_coverage_pct": 0.3504,
   "usage": {
-    "calls_24h": 6338,
+    "calls_24h": 6367,
     "failures_24h": 0,
-    "completion_tokens_24h": 73603306,
-    "reasoning_tokens_24h": 72158233,
-    "avg_latency_s": 203.8
+    "completion_tokens_24h": 73964112,
+    "reasoning_tokens_24h": 72511902,
+    "avg_latency_s": 204.0
   },
   "functions": [
     {
@@ -7569,6 +7569,17 @@
       "matchable": true
     },
     {
+      "address": "0x00b57220",
+      "kind": "FUNCTION",
+      "name": "RBX::PathInterpolatedCFrame::clearPath",
+      "mangled": "?clearPath@PathInterpolatedCFrame@RBX@@QAEXXZ",
+      "file": "Client/App/util/PathInterpolatedCFrame.cpp",
+      "orig_size": 89,
+      "recomp_size": 58,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00b5c020",
       "kind": "FUNCTION",
       "name": "RBX::Assembly::setSleepEligible",
@@ -7961,6 +7972,17 @@
       "file": "Client/App/v8datamodel/BulletBoxShapeWrapper.cpp",
       "orig_size": 28,
       "recomp_size": 28,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b9c3d0",
+      "kind": "FUNCTION",
+      "name": "RBX::Block::allocate",
+      "mangled": "?allocate@Block@RBX@@QAEPAV12@XZ",
+      "file": "Client/App/v8world/Block.cpp",
+      "orig_size": 89,
+      "recomp_size": 89,
       "match_pct": 100.0,
       "matchable": true
     },

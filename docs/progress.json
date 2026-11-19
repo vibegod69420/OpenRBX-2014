@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 18:46:08 UTC",
+ "updated_at": "2026-11-19 18:54:33 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 9.1725,
- "implemented_total": 861,
- "function_annotations": 861,
+ "matchable_coverage_pct": 9.1938,
+ "implemented_total": 863,
+ "function_annotations": 863,
  "stub_annotations": 0,
- "perfect_100_count": 859,
- "matched_real_functions": 859,
+ "perfect_100_count": 861,
+ "matched_real_functions": 861,
  "average_match_pct": 99.88,
- "overall_function_coverage_pct": 2.1178,
- "overall_byte_coverage_pct": 0.3485,
+ "overall_function_coverage_pct": 2.1227,
+ "overall_byte_coverage_pct": 0.3504,
  "usage": {
-  "calls_24h": 6338,
+  "calls_24h": 6367,
   "failures_24h": 0,
-  "completion_tokens_24h": 73603306,
-  "reasoning_tokens_24h": 72158233,
-  "avg_latency_s": 203.8
+  "completion_tokens_24h": 73964112,
+  "reasoning_tokens_24h": 72511902,
+  "avg_latency_s": 204.0
  },
- "functions_total": 861,
+ "functions_total": 863,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8world",
-   "matched": 87,
-   "functions": 87,
-   "bytes": 4333
+   "matched": 88,
+   "functions": 88,
+   "bytes": 4422
   },
   {
    "name": "Rendering/g3d",
@@ -96,9 +96,9 @@
   },
   {
    "name": "App/util",
-   "matched": 12,
-   "functions": 12,
-   "bytes": 346
+   "matched": 13,
+   "functions": 13,
+   "bytes": 435
   },
   {
    "name": "RobloxStudio/SoundServiceStatsItem.cpp",
@@ -2099,6 +2099,17 @@
    "matchable": true
   },
   {
+   "address": "0x00b9c3d0",
+   "kind": "FUNCTION",
+   "name": "RBX::Block::allocate",
+   "mangled": "?allocate@Block@RBX@@QAEPAV12@XZ",
+   "file": "Client/App/v8world/Block.cpp",
+   "orig_size": 89,
+   "recomp_size": 89,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00b9b700",
    "kind": "FUNCTION",
    "name": "RBX::BulletBoxShapeWrapper::dispose",
@@ -2491,6 +2502,17 @@
    "file": "Client/App/v8world/Assembly.cpp",
    "orig_size": 5,
    "recomp_size": 5,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00b57220",
+   "kind": "FUNCTION",
+   "name": "RBX::PathInterpolatedCFrame::clearPath",
+   "mangled": "?clearPath@PathInterpolatedCFrame@RBX@@QAEXXZ",
+   "file": "Client/App/util/PathInterpolatedCFrame.cpp",
+   "orig_size": 89,
+   "recomp_size": 58,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3283,28 +3305,6 @@
    "file": "Client/App/v8datamodel/stream_buffer.cpp",
    "orig_size": 16,
    "recomp_size": 16,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00a2f000",
-   "kind": "FUNCTION",
-   "name": "stream_buffer_iat_e102e8",
-   "mangled": "?vslot22@stream_buffer@std@@QAEXXZ",
-   "file": "Client/App/v8datamodel/stream_buffer.cpp",
-   "orig_size": 16,
-   "recomp_size": 16,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00a2da80",
-   "kind": "FUNCTION",
-   "name": "RBX::detail::sp_counted_impl_p::destroySubPtr0C_da80",
-   "mangled": "?destroySubPtr0C_da80@sp_counted_impl_p@RBX@@QAEXXZ",
-   "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
-   "orig_size": 26,
-   "recomp_size": 26,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -4491,9 +4491,27 @@
    "matched": 859,
    "implemented": 861,
    "pct": 9.1725
+  },
+  {
+   "t": "2026-11-19 18:54:33 UTC",
+   "matched": 861,
+   "implemented": 863,
+   "pct": 9.1938
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T18:46:28",
+   "address": "0x00b9c3d0",
+   "name": "RBX::Block::allocate",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T18:46:12",
+   "address": "0x00b57220",
+   "name": "RBX::PathInterpolatedCFrame::clearPath",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T18:40:50",
    "address": "0x00b4d720",
@@ -5201,19 +5219,7 @@
    "address": "0x00c87230",
    "name": "RBX::Network::SharedStringProtectedDictionary::fetch",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T12:26:51",
-   "address": "0x00704f00",
-   "name": "SoundServiceStatsItem::getIntValue",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T12:20:33",
-   "address": "0x0091ca30",
-   "name": "RBX::Pose::getLinkedPose",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 32.98
+ "match_rate_per_hour": 32.88
 }

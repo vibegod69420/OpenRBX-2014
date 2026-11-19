@@ -19,6 +19,7 @@ public:
 	void __cdecl destroy();
 	void __cdecl destruct();
 	void __cdecl release();
+	Block*allocate();
 	// AUTO-GENERATED METHODS
 };
 

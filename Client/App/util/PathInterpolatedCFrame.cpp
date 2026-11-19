@@ -90,6 +90,26 @@ void PathInterpolatedCFrame::notifyMoved()
 	wakeCounter = 30;
 }
 
+struct PathInterpolatedCFrameNode
+{
+    void* head;
+    void unlink(void* iter, void* first, void* last);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00b57220
+void PathInterpolatedCFrame::clearPath()
+{
+    PathInterpolatedCFrameNode* node = *reinterpret_cast<PathInterpolatedCFrameNode**>(this);
+    if (node)
+    {
+        void* iter;
+        node->unlink(&iter, *reinterpret_cast<void**>(node->head), node->head);
+        ::operator delete(node->head);
+        ::operator delete(node);
+        *reinterpret_cast<PathInterpolatedCFrameNode**>(this) = 0;
+    }
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
