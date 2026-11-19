@@ -17,6 +17,7 @@ public:
 	};
 
 	bool isTargetFilterActive();
+	int getY();
 	// AUTO-GENERATED METHODS
 };
 

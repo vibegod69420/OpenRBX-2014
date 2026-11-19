@@ -22,6 +22,7 @@ public:
 	int getFieldB8() const;
 	void*sub_997710() const;
 	void*sub_997790() const;
+	int sub_997830() const;
 	// AUTO-GENERATED METHODS
 };
 

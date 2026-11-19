@@ -27,6 +27,15 @@ void __cdecl PolyPolyContact::update(int value)
 	sub_00C18130(this, (char*)this + 0x20, value);
 }
 
+int __cdecl sub_C18280(void* a1, void* a2);
+
+// FUNCTION: ROBLOXSTUDIO 0x00c18650
+void __cdecl PolyPolyContact::compute(void* out, void* param)
+{
+	*(int*)((char*)out + 0x0C) = sub_C18280(this, param);
+	*(int*)out = 9;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

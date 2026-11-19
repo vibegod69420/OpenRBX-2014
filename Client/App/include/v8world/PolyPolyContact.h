@@ -20,6 +20,7 @@ public:
 	void deleteAllConnectors();
 	int getFieldCC() const;
 	void __cdecl update(int value);
+	void __cdecl compute(void* out, void* param);
 	// AUTO-GENERATED METHODS
 };
 

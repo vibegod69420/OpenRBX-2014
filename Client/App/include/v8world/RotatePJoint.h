@@ -18,6 +18,7 @@ public:
 
 	void stepUi();
 	int getConst7() const;
+	void removeChild();
 	// AUTO-GENERATED METHODS
 };
 

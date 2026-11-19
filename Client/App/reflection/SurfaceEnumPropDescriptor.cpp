@@ -25,6 +25,15 @@ void SurfaceEnumPropDescriptor::destroyInstance(SurfaceEnumPropDescriptor* p)
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a26f90
+void SurfaceEnumPropDescriptor::destroyInstance_6f90(SurfaceEnumPropDescriptor* p)
+{
+	if (p) {
+		p->onDestroy();
+		rbx_free_mem(p);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

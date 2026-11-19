@@ -20,6 +20,7 @@ public:
 	int getEnumValueCount() const;
 	void onDestroy();
 	static void destroyInstance(SurfaceEnumPropDescriptor* p);
+	static void destroyInstance_6f90(SurfaceEnumPropDescriptor* p);
 	// AUTO-GENERATED METHODS
 };
 

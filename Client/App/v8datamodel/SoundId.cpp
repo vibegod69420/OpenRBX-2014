@@ -35,6 +35,15 @@ void* SoundId::sub_997790() const
 	return *(void**)(p + 0x60);
 }
 
+int sub_B4EC80();
+
+// FUNCTION: ROBLOXSTUDIO 0x00997830
+int SoundId::sub_997830() const
+{
+	int divisor = sub_B4EC80();
+	return *(int*)((char*)this + 0x38) / divisor;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Soundscape

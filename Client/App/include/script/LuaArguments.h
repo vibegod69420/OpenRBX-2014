@@ -23,6 +23,7 @@ public:
 	void __cdecl pushAllEvents(void* arg);
 	void __cdecl pushAllObjects(void* arg);
 	void __cdecl pushAllArgs(void* arg);
+	void __cdecl pushAllYields(void* arg);
 	// AUTO-GENERATED METHODS
 };
 

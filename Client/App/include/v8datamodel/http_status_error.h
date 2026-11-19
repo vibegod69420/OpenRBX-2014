@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	http_status_error();
 	// AUTO-GENERATED METHODS
 };
 

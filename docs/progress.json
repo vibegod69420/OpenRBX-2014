@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 13:57:25 UTC",
+ "updated_at": "2026-11-19 14:05:45 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,35 +16,35 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 8.1367,
- "implemented_total": 763,
- "function_annotations": 763,
+ "matchable_coverage_pct": 8.2435,
+ "implemented_total": 773,
+ "function_annotations": 773,
  "stub_annotations": 0,
- "perfect_100_count": 762,
- "matched_real_functions": 762,
+ "perfect_100_count": 772,
+ "matched_real_functions": 772,
  "average_match_pct": 99.88,
- "overall_function_coverage_pct": 1.8787,
- "overall_byte_coverage_pct": 0.2898,
+ "overall_function_coverage_pct": 1.9033,
+ "overall_byte_coverage_pct": 0.2938,
  "usage": {
-  "calls_24h": 5137,
+  "calls_24h": 5176,
   "failures_24h": 0,
-  "completion_tokens_24h": 59436347,
-  "reasoning_tokens_24h": 58302081,
-  "avg_latency_s": 204.2
+  "completion_tokens_24h": 59793074,
+  "reasoning_tokens_24h": 58649715,
+  "avg_latency_s": 204.1
  },
- "functions_total": 763,
+ "functions_total": 773,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 307,
-   "functions": 308,
-   "bytes": 8765
+   "matched": 311,
+   "functions": 312,
+   "bytes": 8912
   },
   {
    "name": "App/v8world",
-   "matched": 79,
-   "functions": 79,
-   "bytes": 3896
+   "matched": 81,
+   "functions": 81,
+   "bytes": 4021
   },
   {
    "name": "Rendering/GfxRender",
@@ -66,15 +66,15 @@
   },
   {
    "name": "Rendering/GfxCore",
-   "matched": 36,
-   "functions": 36,
-   "bytes": 1350
+   "matched": 37,
+   "functions": 37,
+   "bytes": 1374
   },
   {
    "name": "App/script",
-   "matched": 27,
-   "functions": 27,
-   "bytes": 875
+   "matched": 28,
+   "functions": 28,
+   "bytes": 900
   },
   {
    "name": "App/humanoid",
@@ -113,6 +113,12 @@
    "bytes": 249
   },
   {
+   "name": "App/reflection",
+   "matched": 7,
+   "functions": 7,
+   "bytes": 227
+  },
+  {
    "name": "RobloxStudio/SoundServiceStatsItem.cpp",
    "matched": 3,
    "functions": 3,
@@ -131,16 +137,16 @@
    "bytes": 213
   },
   {
-   "name": "App/reflection",
-   "matched": 6,
-   "functions": 6,
-   "bytes": 197
-  },
-  {
    "name": "RobloxStudio/ToggleLocalSpaceVerb.cpp",
    "matched": 1,
    "functions": 1,
    "bytes": 165
+  },
+  {
+   "name": "Network/PersistentDataStore.cpp",
+   "matched": 5,
+   "functions": 5,
+   "bytes": 163
   },
   {
    "name": "Network/ReferencePropertyChangedItem.cpp",
@@ -165,12 +171,6 @@
    "matched": 7,
    "functions": 7,
    "bytes": 144
-  },
-  {
-   "name": "Network/PersistentDataStore.cpp",
-   "matched": 4,
-   "functions": 4,
-   "bytes": 132
   },
   {
    "name": "RobloxStudio/RobloxDocManager.cpp",
@@ -576,6 +576,17 @@
    "file": "Client/App/v8datamodel/AdornBillboarder.cpp",
    "orig_size": 16,
    "recomp_size": 16,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00d02320",
+   "kind": "FUNCTION",
+   "name": "RBX::http_status_error::http_status_error",
+   "mangled": "??0http_status_error@RBX@@QAE@XZ",
+   "file": "Client/App/v8datamodel/http_status_error.cpp",
+   "orig_size": 37,
+   "recomp_size": 37,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1302,6 +1313,17 @@
    "file": "Client/App/v8world/PolyPolyContact.cpp",
    "orig_size": 30,
    "recomp_size": 30,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00c18650",
+   "kind": "FUNCTION",
+   "name": "RBX::PolyPolyContact::compute",
+   "mangled": "?compute@PolyPolyContact@RBX@@QAAXPAX0@Z",
+   "file": "Client/App/v8world/PolyPolyContact.cpp",
+   "orig_size": 31,
+   "recomp_size": 31,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -2120,6 +2142,17 @@
    "matchable": true
   },
   {
+   "address": "0x00b8c950",
+   "kind": "FUNCTION",
+   "name": "RBX::RotatePJoint::removeChild",
+   "mangled": "?removeChild@RotatePJoint@RBX@@QAEXXZ",
+   "file": "Client/App/v8world/RotatePJoint.cpp",
+   "orig_size": 94,
+   "recomp_size": 94,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00b8c490",
    "kind": "FUNCTION",
    "name": "RBX::Assembly::putInKernel",
@@ -2501,6 +2534,17 @@
    "file": "Client/App/v8datamodel/ContextActionService.cpp",
    "orig_size": 78,
    "recomp_size": 78,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00b0b970",
+   "kind": "FUNCTION",
+   "name": "RBX::Mouse::getY",
+   "mangled": "?getY@Mouse@RBX@@QAEHXZ",
+   "file": "Client/App/v8datamodel/Mouse.cpp",
+   "orig_size": 32,
+   "recomp_size": 32,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3088,6 +3132,17 @@
    "matchable": true
   },
   {
+   "address": "0x00a26f90",
+   "kind": "FUNCTION",
+   "name": "RBX::SurfaceEnumPropDescriptor::destroyInstance_6f90",
+   "mangled": "?destroyInstance_6f90@SurfaceEnumPropDescriptor@RBX@@SAXPAV12@@Z",
+   "file": "Client/App/reflection/SurfaceEnumPropDescriptor.cpp",
+   "orig_size": 30,
+   "recomp_size": 30,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00a26f70",
    "kind": "FUNCTION",
    "name": "RBX::SurfaceEnumPropDescriptor::destroyInstance",
@@ -3238,61 +3293,6 @@
    "file": "Client/App/v8datamodel/RemoteFunction.cpp",
    "orig_size": 30,
    "recomp_size": 30,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x009e6d90",
-   "kind": "FUNCTION",
-   "name": "sub_9EB550",
-   "mangled": "??1RemoteEvent@RBX@@QAE@XZ",
-   "file": "Client/App/v8datamodel/RemoteEvent.cpp",
-   "orig_size": 56,
-   "recomp_size": 36,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x009dae60",
-   "kind": "FUNCTION",
-   "name": "RBX::Humanoid::setFlag0x31",
-   "mangled": "?setFlag0x31@Humanoid@RBX@@QAEXXZ",
-   "file": "Client/App/humanoid/Humanoid.cpp",
-   "orig_size": 5,
-   "recomp_size": 5,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x009d97d0",
-   "kind": "FUNCTION",
-   "name": "RBX::Platform::getFlagAt0x38",
-   "mangled": "?getFlagAt0x38@Platform@RBX@@QBEHXZ",
-   "file": "Client/App/v8datamodel/Platform.cpp",
-   "orig_size": 7,
-   "recomp_size": 7,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x009d91d0",
-   "kind": "FUNCTION",
-   "name": "RBX::Humanoid::getInt148",
-   "mangled": "?getInt148@Humanoid@RBX@@QBEHXZ",
-   "file": "Client/App/humanoid/Humanoid.cpp",
-   "orig_size": 12,
-   "recomp_size": 12,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x009d9120",
-   "kind": "FUNCTION",
-   "name": "RBX::Humanoid::getUnknown200Float",
-   "mangled": "?getUnknown200Float@Humanoid@RBX@@QAEMXZ",
-   "file": "Client/App/humanoid/Humanoid.cpp",
-   "orig_size": 39,
-   "recomp_size": 39,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -4293,9 +4293,81 @@
    "matched": 762,
    "implemented": 763,
    "pct": 8.1367
+  },
+  {
+   "t": "2026-11-19 14:05:45 UTC",
+   "matched": 772,
+   "implemented": 773,
+   "pct": 8.2435
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T14:02:29",
+   "address": "0x00d02320",
+   "name": "RBX::http_status_error::http_status_error",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T14:02:00",
+   "address": "0x00c18650",
+   "name": "RBX::PolyPolyContact::compute",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T14:01:42",
+   "address": "0x00975020",
+   "name": "RBX::UserInputService::destructorHelper",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T14:01:10",
+   "address": "0x0094b010",
+   "name": "RBX::Network::PersistentDataStore::sub_94b010",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T14:00:10",
+   "address": "0x00b8c950",
+   "name": "RBX::RotatePJoint::removeChild",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T13:59:15",
+   "address": "0x00a26f90",
+   "name": "RBX::SurfaceEnumPropDescriptor::destroyInstance_6f90",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T13:59:00",
+   "address": "0x008d8c90",
+   "name": "RBX::Lua::LuaArguments::pushAllYields",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T13:57:51",
+   "address": "0x00605a20",
+   "name": "RBX::Graphics::ContextGL::assignIfNull_5a20",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T13:57:43",
+   "address": "0x00b0b970",
+   "name": "RBX::Mouse::getY",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T13:57:27",
+   "address": "0x00997830",
+   "name": "RBX::Soundscape::SoundId::sub_997830",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T13:57:26",
+   "address": "0x00cb97e0",
+   "name": "RBX::Network::ServerReplicator::getReplicator",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T13:54:00",
    "address": "0x00cf4f00",
@@ -4949,73 +5021,7 @@
    "address": "0x0042e6c0",
    "name": "_Getcat",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T07:29:03",
-   "address": "0x0048bd90",
-   "name": "bool",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T07:29:01",
-   "address": "0x00b85100",
-   "name": "RBX::Lua::WaitScriptSlot::executeConnection",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T07:24:55",
-   "address": "0x008d8c50",
-   "name": "RBX::Lua::LuaArguments::pushAllObjects",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T07:23:50",
-   "address": "0x006059e0",
-   "name": "RBX::Graphics::ContextGL::assignIfNull_59e0",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T07:23:23",
-   "address": "0x0076f0f0",
-   "name": "RBX::ViewBase::getCurrentEntryInt",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T07:23:21",
-   "address": "0x00873c70",
-   "name": "RBX::GuiImageButton::isDownState",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T07:23:19",
-   "address": "0x00892990",
-   "name": "RBX::SkateboardPlatform::getFlag0078",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T07:23:11",
-   "address": "0x006974b0",
-   "name": "RBX::Graphics::SSAO::getUnk3C_74b0",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T07:22:23",
-   "address": "0x00a37aa0",
-   "name": "lua_exception::getLevel",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T07:22:10",
-   "address": "0x00997790",
-   "name": "RBX::Soundscape::SoundId::sub_997790",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T07:22:08",
-   "address": "0x00682000",
-   "name": "RBX::TypedStatsItem::checkField17C",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 35.88
+ "match_rate_per_hour": 36.12
 }
