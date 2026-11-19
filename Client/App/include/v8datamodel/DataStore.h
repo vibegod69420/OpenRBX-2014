@@ -17,6 +17,7 @@ public:
 	};
 
 	int getConst15617916() const;
+	void ReleaseHead();
 	// AUTO-GENERATED METHODS
 };
 

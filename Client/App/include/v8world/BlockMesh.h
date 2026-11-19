@@ -18,6 +18,7 @@ public:
 	};
 
 	void dispose();
+	void*getOwner();
 	// AUTO-GENERATED METHODS
 };
 

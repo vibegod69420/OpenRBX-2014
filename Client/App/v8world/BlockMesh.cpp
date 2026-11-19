@@ -19,6 +19,24 @@ void BlockMesh::dispose()
 	}
 }
 
+class BlockMeshId;
+class RenderMesh
+{
+public:
+	bool isBlockMesh(BlockMeshId* id);
+};
+
+BlockMeshId* getBlockMeshId();
+
+// FUNCTION: ROBLOXSTUDIO 0x00624a70
+void* BlockMesh::getOwner()
+{
+	RenderMesh* mesh = *reinterpret_cast<RenderMesh**>(reinterpret_cast<char*>(this) + 0x0C);
+	if (mesh->isBlockMesh(getBlockMeshId()))
+		return reinterpret_cast<char*>(this) - 0x1C;
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace POLY

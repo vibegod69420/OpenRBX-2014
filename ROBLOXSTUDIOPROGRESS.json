@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 00:38:51 UTC",
+  "updated_at": "2026-11-19 00:45:53 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 4.4207,
-  "implemented_total": 414,
-  "function_annotations": 414,
+  "matchable_coverage_pct": 4.4848,
+  "implemented_total": 420,
+  "function_annotations": 420,
   "stub_annotations": 0,
-  "perfect_100_count": 414,
-  "matched_real_functions": 414,
+  "perfect_100_count": 420,
+  "matched_real_functions": 420,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 1.0207,
-  "overall_byte_coverage_pct": 0.1096,
+  "overall_function_coverage_pct": 1.0355,
+  "overall_byte_coverage_pct": 0.1118,
   "usage": {
-    "calls_24h": 1745,
+    "calls_24h": 1766,
     "failures_24h": 0,
-    "completion_tokens_24h": 18824393,
-    "reasoning_tokens_24h": 18503020,
-    "avg_latency_s": 187.7
+    "completion_tokens_24h": 19100297,
+    "reasoning_tokens_24h": 18776542,
+    "avg_latency_s": 188.5
   },
   "functions": [
     {
@@ -1585,6 +1585,17 @@
       "matchable": true
     },
     {
+      "address": "0x00624a70",
+      "kind": "FUNCTION",
+      "name": "RBX::POLY::BlockMesh::getOwner",
+      "mangled": "?getOwner@BlockMesh@POLY@RBX@@QAEPAXXZ",
+      "file": "Client/App/v8world/BlockMesh.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0063b460",
       "kind": "FUNCTION",
       "name": "RBX::BodyColors::destroyInstance",
@@ -1867,6 +1878,17 @@
       "file": "Client/App/v8datamodel/Counter.cpp",
       "orig_size": 11,
       "recomp_size": 11,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x006be4a0",
+      "kind": "FUNCTION",
+      "name": "RBX::Security::Context::pop",
+      "mangled": "?pop@Context@Security@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/Context.cpp",
+      "orig_size": 36,
+      "recomp_size": 36,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -3048,6 +3070,17 @@
       "matchable": true
     },
     {
+      "address": "0x00986a00",
+      "kind": "FUNCTION",
+      "name": "RBX::DataModelArbiter::sub_986a00",
+      "mangled": "?sub_986a00@DataModelArbiter@RBX@@QAAPAV12@HH@Z",
+      "file": "Client/App/v8datamodel/DataModelArbiter.cpp",
+      "orig_size": 36,
+      "recomp_size": 36,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0098e060",
       "kind": "FUNCTION",
       "name": "RBX::GuiImageButton::getFieldA0",
@@ -3154,6 +3187,17 @@
       "file": "Client/Rendering/GfxCore/Geometry.cpp",
       "orig_size": 23,
       "recomp_size": 23,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x009a8f70",
+      "kind": "FUNCTION",
+      "name": "RBX::InsertService::remove",
+      "mangled": "?remove@InsertService@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/InsertService.cpp",
+      "orig_size": 36,
+      "recomp_size": 36,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -3906,6 +3950,17 @@
       "matchable": true
     },
     {
+      "address": "0x00b9ecf0",
+      "kind": "FUNCTION",
+      "name": "unlink",
+      "mangled": "?clear@NewNullTool@RBX@@QAEXXZ",
+      "file": "Client/App/tool/NewNullTool.cpp",
+      "orig_size": 36,
+      "recomp_size": 36,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00ba2b30",
       "kind": "FUNCTION",
       "name": "RBX::TreeStage::getConst5",
@@ -4111,6 +4166,17 @@
       "file": "Client/App/v8world/BuoyancyContact.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00be5210",
+      "kind": "FUNCTION",
+      "name": "RBX::DataStore::ReleaseHead",
+      "mangled": "?ReleaseHead@DataStore@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/DataStore.cpp",
+      "orig_size": 36,
+      "recomp_size": 36,
       "match_pct": 100.0,
       "matchable": true
     },

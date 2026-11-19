@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	DataModelArbiter* __cdecl sub_986a00(int a2, int a3);
 	// AUTO-GENERATED METHODS
 };
 
