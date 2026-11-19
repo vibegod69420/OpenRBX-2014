@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 19:58:27 UTC",
+  "updated_at": "2026-11-19 20:17:28 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 9.354,
-  "implemented_total": 879,
-  "function_annotations": 879,
+  "matchable_coverage_pct": 9.3647,
+  "implemented_total": 880,
+  "function_annotations": 880,
   "stub_annotations": 0,
-  "perfect_100_count": 876,
-  "matched_real_functions": 876,
+  "perfect_100_count": 877,
+  "matched_real_functions": 877,
   "average_match_pct": 99.87,
-  "overall_function_coverage_pct": 2.1597,
-  "overall_byte_coverage_pct": 0.3589,
+  "overall_function_coverage_pct": 2.1622,
+  "overall_byte_coverage_pct": 0.3598,
   "usage": {
-    "calls_24h": 6444,
+    "calls_24h": 6392,
     "failures_24h": 0,
-    "completion_tokens_24h": 76086765,
-    "reasoning_tokens_24h": 74576896,
-    "avg_latency_s": 207.0
+    "completion_tokens_24h": 76175051,
+    "reasoning_tokens_24h": 74661793,
+    "avg_latency_s": 208.9
   },
   "functions": [
     {
@@ -8101,6 +8101,17 @@
       "kind": "FUNCTION",
       "name": "RBX::Block::allocate",
       "mangled": "?allocate@Block@RBX@@QAEPAV12@XZ",
+      "file": "Client/App/v8world/Block.cpp",
+      "orig_size": 89,
+      "recomp_size": 89,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b9c430",
+      "kind": "FUNCTION",
+      "name": "RBX::Block::allocate2",
+      "mangled": "?allocate2@Block@RBX@@QAEPAV12@XZ",
       "file": "Client/App/v8world/Block.cpp",
       "orig_size": 89,
       "recomp_size": 89,
