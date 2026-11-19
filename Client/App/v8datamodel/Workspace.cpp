@@ -38,6 +38,17 @@ bool Workspace::method_00969740()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00969760
+bool Workspace::method_00969760()
+{
+	if (*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x68) == 2 &&
+		*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x64) == 2)
+	{
+		return true;
+	}
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

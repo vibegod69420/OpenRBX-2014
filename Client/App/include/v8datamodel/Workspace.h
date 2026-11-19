@@ -20,6 +20,7 @@ public:
 	int method_00888300();
 	void* getSomeField();
 	bool method_00969740();
+	bool method_00969760();
 	// AUTO-GENERATED METHODS
 };
 
