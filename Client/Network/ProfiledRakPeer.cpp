@@ -89,6 +89,29 @@ int ProfiledRakPeer::GetNextSendReceipt()
 	return value;
 }
 
+namespace
+{
+struct RakNetGUID
+{
+	bool operator==(const RakNetGUID& right) const;
+};
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00ceb740
+bool ProfiledRakPeer::IsUnassigned() const
+{
+	if (*reinterpret_cast<const RakNetGUID*>(this) == *reinterpret_cast<const RakNetGUID*>(0x012B1EF8))
+	{
+		if (*reinterpret_cast<const SystemAddress*>(reinterpret_cast<const char*>(this) + 0x10) ==
+			*reinterpret_cast<const SystemAddress*>(0x0131581C))
+		{
+			return true;
+		}
+	}
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

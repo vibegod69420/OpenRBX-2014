@@ -17,6 +17,7 @@ public:
 	};
 
 	void _Tidy();
+	void _Tidy2();
 	// AUTO-GENERATED METHODS
 };
 

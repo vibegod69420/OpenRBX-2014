@@ -17,6 +17,7 @@ public:
 	};
 
 	RBXMessageBox();
+	RBXMessageBox* __fastcall initialize(void** param);
 	// AUTO-GENERATED METHODS
 };
 

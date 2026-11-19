@@ -18,6 +18,7 @@ public:
 	};
 
 	NetworkOwnerJob();
+	unsigned int __cdecl getHash();
 	// AUTO-GENERATED METHODS
 };
 

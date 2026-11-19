@@ -18,6 +18,7 @@ public:
 	};
 
 	int getConst16795348() const;
+	void disconnect();
 	// AUTO-GENERATED METHODS
 };
 

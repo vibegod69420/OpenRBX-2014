@@ -24,6 +24,7 @@ public:
 	int getField5E0() const;
 	int GetLeadingUnassignedAddressCount() const;
 	int GetNextSendReceipt();
+	bool IsUnassigned() const;
 	// AUTO-GENERATED METHODS
 };
 
