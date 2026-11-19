@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 09:39:53 UTC",
+  "updated_at": "2026-11-19 09:48:11 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 7.2611,
-  "implemented_total": 681,
-  "function_annotations": 681,
+  "matchable_coverage_pct": 7.2718,
+  "implemented_total": 682,
+  "function_annotations": 682,
   "stub_annotations": 0,
-  "perfect_100_count": 680,
-  "matched_real_functions": 680,
+  "perfect_100_count": 681,
+  "matched_real_functions": 681,
   "average_match_pct": 99.86,
-  "overall_function_coverage_pct": 1.6765,
-  "overall_byte_coverage_pct": 0.2205,
+  "overall_function_coverage_pct": 1.679,
+  "overall_byte_coverage_pct": 0.2223,
   "usage": {
-    "calls_24h": 4203,
+    "calls_24h": 4230,
     "failures_24h": 0,
-    "completion_tokens_24h": 47655969,
-    "reasoning_tokens_24h": 46823951,
-    "avg_latency_s": 198.0
+    "completion_tokens_24h": 48040259,
+    "reasoning_tokens_24h": 47195893,
+    "avg_latency_s": 198.3
   },
   "functions": [
     {
@@ -4672,6 +4672,17 @@
       "file": "Client/App/gui/ProfanityFilter.cpp",
       "orig_size": 26,
       "recomp_size": 26,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x009377a0",
+      "kind": "FUNCTION",
+      "name": "RBX::HttpService::~HttpService",
+      "mangled": "??1HttpService@RBX@@QAE@XZ",
+      "file": "Client/App/v8datamodel/HttpService.cpp",
+      "orig_size": 176,
+      "recomp_size": 141,
       "match_pct": 100.0,
       "matchable": true
     },
