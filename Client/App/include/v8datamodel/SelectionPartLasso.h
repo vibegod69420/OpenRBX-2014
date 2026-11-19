@@ -17,6 +17,7 @@ public:
 	};
 
 	SelectionPartLasso();
+	SelectionPartLasso*SelectionPointLasso();
 	// AUTO-GENERATED METHODS
 };
 

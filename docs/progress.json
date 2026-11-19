@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 15:50:02 UTC",
+ "updated_at": "2026-11-19 15:59:04 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 8.6065,
- "implemented_total": 807,
- "function_annotations": 807,
+ "matchable_coverage_pct": 8.6172,
+ "implemented_total": 808,
+ "function_annotations": 808,
  "stub_annotations": 0,
- "perfect_100_count": 806,
- "matched_real_functions": 806,
+ "perfect_100_count": 807,
+ "matched_real_functions": 807,
  "average_match_pct": 99.88,
- "overall_function_coverage_pct": 1.9871,
- "overall_byte_coverage_pct": 0.3103,
+ "overall_function_coverage_pct": 1.9896,
+ "overall_byte_coverage_pct": 0.3114,
  "usage": {
-  "calls_24h": 5599,
+  "calls_24h": 5638,
   "failures_24h": 0,
-  "completion_tokens_24h": 64698730,
-  "reasoning_tokens_24h": 63474356,
+  "completion_tokens_24h": 65173044,
+  "reasoning_tokens_24h": 63937965,
   "avg_latency_s": 205.4
  },
- "functions_total": 807,
+ "functions_total": 808,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 323,
-   "functions": 324,
-   "bytes": 9397
+   "matched": 324,
+   "functions": 325,
+   "bytes": 9498
   },
   {
    "name": "App/v8world",
@@ -2709,6 +2709,17 @@
    "matchable": true
   },
   {
+   "address": "0x00ac9550",
+   "kind": "FUNCTION",
+   "name": "RBX::SelectionPartLasso::SelectionPointLasso",
+   "mangled": "?SelectionPointLasso@SelectionPartLasso@RBX@@QAEPAV12@XZ",
+   "file": "Client/App/v8datamodel/SelectionPartLasso.cpp",
+   "orig_size": 101,
+   "recomp_size": 88,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00ac9500",
    "kind": "FUNCTION",
    "name": "RBX::SelectionPartLasso::SelectionPartLasso",
@@ -3288,17 +3299,6 @@
    "file": "Client/App/reflection/SurfaceEnumPropDescriptor.cpp",
    "orig_size": 30,
    "recomp_size": 30,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00a212c0",
-   "kind": "FUNCTION",
-   "name": "RBX::SurfaceEnumPropDescriptor::getEnumValueCount",
-   "mangled": "?getEnumValueCount@SurfaceEnumPropDescriptor@RBX@@QBEHXZ",
-   "file": "Client/App/reflection/SurfaceEnumPropDescriptor.cpp",
-   "orig_size": 27,
-   "recomp_size": 27,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -4365,9 +4365,21 @@
    "matched": 806,
    "implemented": 807,
    "pct": 8.6065
+  },
+  {
+   "t": "2026-11-19 15:59:04 UTC",
+   "matched": 807,
+   "implemented": 808,
+   "pct": 8.6172
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T15:55:40",
+   "address": "0x00ac9550",
+   "name": "RBX::SelectionPartLasso::SelectionPointLasso",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T15:46:23",
    "address": "0x00ba9770",
@@ -5081,13 +5093,7 @@
    "address": "0x004b3fa0",
    "name": "RBX::detail::sp_counted_impl_p::call",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T10:29:18",
-   "address": "0x00672ce0",
-   "name": "RBX::Graphics::Emitter::Emitter",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 34.87
+ "match_rate_per_hour": 34.69
 }
