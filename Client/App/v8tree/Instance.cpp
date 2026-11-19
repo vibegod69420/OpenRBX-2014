@@ -41,6 +41,15 @@ Instance::Instance()
 	*((int*)this + 1) = 0;
 }
 
+__declspec(dllimport) int* __cdecl sub_E10B04(int*);
+
+// FUNCTION: ROBLOXSTUDIO 0x004f4330
+void Instance::fetchContextId()
+{
+	int local;
+	*(int*)((char*)this + 0x40C) = *sub_E10B04(&local);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

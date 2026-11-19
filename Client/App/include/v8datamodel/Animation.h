@@ -17,6 +17,7 @@ public:
 	};
 
 	Animation();
+	Animation*sub_5293b0();
 	// AUTO-GENERATED METHODS
 };
 

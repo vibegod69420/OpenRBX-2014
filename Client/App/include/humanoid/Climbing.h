@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	bool computeClimb();
 	// AUTO-GENERATED METHODS
 };
 

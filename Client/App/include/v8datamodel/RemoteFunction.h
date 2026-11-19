@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void __cdecl sub_9f0f30();
 	// AUTO-GENERATED METHODS
 };
 

@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	RBXMessageBox();
 	// AUTO-GENERATED METHODS
 };
 

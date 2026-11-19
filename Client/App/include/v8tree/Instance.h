@@ -23,6 +23,7 @@ public:
 	void onDestroy();
 	void destroySubPtr0C();
 	Instance();
+	void fetchContextId();
 	// AUTO-GENERATED METHODS
 };
 

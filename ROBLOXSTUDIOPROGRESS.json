@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 01:48:57 UTC",
+  "updated_at": "2026-11-19 01:56:24 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,20 +16,20 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 5.1895,
-  "implemented_total": 486,
-  "function_annotations": 486,
+  "matchable_coverage_pct": 5.2643,
+  "implemented_total": 493,
+  "function_annotations": 493,
   "stub_annotations": 0,
-  "perfect_100_count": 486,
-  "matched_real_functions": 486,
+  "perfect_100_count": 493,
+  "matched_real_functions": 493,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 1.1982,
-  "overall_byte_coverage_pct": 0.1284,
+  "overall_function_coverage_pct": 1.2155,
+  "overall_byte_coverage_pct": 0.1306,
   "usage": {
-    "calls_24h": 2066,
+    "calls_24h": 2115,
     "failures_24h": 0,
-    "completion_tokens_24h": 22274735,
-    "reasoning_tokens_24h": 21883988,
+    "completion_tokens_24h": 22754089,
+    "reasoning_tokens_24h": 22358498,
     "avg_latency_s": 187.9
   },
   "functions": [
@@ -419,6 +419,17 @@
       "matchable": true
     },
     {
+      "address": "0x004794a0",
+      "kind": "FUNCTION",
+      "name": "QtUtilities::RBXMessageBox::RBXMessageBox",
+      "mangled": "??0RBXMessageBox@QtUtilities@@QAE@XZ",
+      "file": "Client/App/v8datamodel/RBXMessageBox.cpp",
+      "orig_size": 32,
+      "recomp_size": 32,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0048b5e0",
       "kind": "FUNCTION",
       "name": "RBX::FlyweightService::addAssign",
@@ -628,6 +639,17 @@
       "matchable": true
     },
     {
+      "address": "0x004f4330",
+      "kind": "FUNCTION",
+      "name": "RBX::Instance::fetchContextId",
+      "mangled": "?fetchContextId@Instance@RBX@@QAEXXZ",
+      "file": "Client/App/v8tree/Instance.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x004f6040",
       "kind": "FUNCTION",
       "name": "RBX::HUMAN::HumanoidState::getConst2",
@@ -786,6 +808,17 @@
       "kind": "FUNCTION",
       "name": "sub_5322e0",
       "mangled": "??0Animation@RBX@@QAE@XZ",
+      "file": "Client/App/v8datamodel/Animation.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x005293b0",
+      "kind": "FUNCTION",
+      "name": "RBX::Animation::sub_5293b0",
+      "mangled": "?sub_5293b0@Animation@RBX@@QAEPAV12@XZ",
       "file": "Client/App/v8datamodel/Animation.cpp",
       "orig_size": 30,
       "recomp_size": 30,
@@ -2487,6 +2520,17 @@
       "matchable": true
     },
     {
+      "address": "0x007c6930",
+      "kind": "FUNCTION",
+      "name": "RBX::GlobalAdvancedSettings::registerGlobalAdvancedSettingsItem",
+      "mangled": "?registerGlobalAdvancedSettingsItem@GlobalAdvancedSettings@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/GlobalAdvancedSettings.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x007ca780",
       "kind": "FUNCTION",
       "name": "RBX::Script::getConst18804796",
@@ -3774,6 +3818,17 @@
       "matchable": true
     },
     {
+      "address": "0x009f0f30",
+      "kind": "FUNCTION",
+      "name": "RBX::RemoteFunction::sub_9f0f30",
+      "mangled": "?sub_9f0f30@RemoteFunction@RBX@@QAAXXZ",
+      "file": "Client/App/v8datamodel/RemoteFunction.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x009fe0f0",
       "kind": "FUNCTION",
       "name": "RBX::CharacterMesh::destroyInstance",
@@ -4511,6 +4566,17 @@
       "matchable": true
     },
     {
+      "address": "0x00b9ad50",
+      "kind": "FUNCTION",
+      "name": "sub_b9c680",
+      "mangled": "?destroy@Block@RBX@@QAAXXZ",
+      "file": "Client/App/v8world/Block.cpp",
+      "orig_size": 32,
+      "recomp_size": 32,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00b9b6c0",
       "kind": "FUNCTION",
       "name": "RBX::POLY::BlockCorners::dispose",
@@ -4672,6 +4738,17 @@
       "file": "Client/App/v8world/CornerWedgeMesh.cpp",
       "orig_size": 28,
       "recomp_size": 28,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00bb6c20",
+      "kind": "FUNCTION",
+      "name": "RBX::HUMAN::Climbing::computeClimb",
+      "mangled": "?computeClimb@Climbing@HUMAN@RBX@@QAE_NXZ",
+      "file": "Client/App/humanoid/Climbing.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
       "match_pct": 100.0,
       "matchable": true
     },
