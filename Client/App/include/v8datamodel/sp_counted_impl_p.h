@@ -34,6 +34,7 @@ public:
 	void destroySubPtr0C_71a0();
 	void destroySubPtr0C_f620();
 	void destroySubPtr0C_ae90();
+	void destroySubPtr0C_3d90();
 	// AUTO-GENERATED METHODS
 };
 
