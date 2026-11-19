@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	Widget();
 	// AUTO-GENERATED METHODS
 };
 
