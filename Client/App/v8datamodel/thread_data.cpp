@@ -33,6 +33,12 @@ void __cdecl thread_data::invoke()
 	data->func(data->arg1, data->arg2);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x007760a0
+void __cdecl thread_data::invoke(void* arg1, void* arg2)
+{
+	(*(void (__cdecl**)(void*, void*))this)(arg1, arg2);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace boost

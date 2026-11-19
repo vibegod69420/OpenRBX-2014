@@ -17,6 +17,19 @@ int __cdecl callable_slot::invoke()
 	return *data->func(data->param);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00930600
+float __cdecl callable_slot::invoke_float()
+{
+	struct callable_data
+	{
+		float* (__cdecl* func)(void*);
+		void* param;
+	};
+
+	callable_data* data = (callable_data*)this;
+	return *data->func(data->param);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

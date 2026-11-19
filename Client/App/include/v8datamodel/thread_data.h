@@ -18,6 +18,7 @@ public:
 
 	void run();
 	void __cdecl invoke();
+	void __cdecl invoke(void* arg1, void* arg2);
 	// AUTO-GENERATED METHODS
 };
 

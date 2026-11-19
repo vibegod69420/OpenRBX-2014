@@ -18,6 +18,7 @@ public:
 	};
 
 	void __cdecl dispatch();
+	void dispose();
 	// AUTO-GENERATED METHODS
 };
 

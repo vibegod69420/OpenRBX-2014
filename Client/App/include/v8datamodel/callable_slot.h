@@ -17,6 +17,7 @@ public:
 	};
 
 	int __cdecl invoke();
+	float __cdecl invoke_float();
 	// AUTO-GENERATED METHODS
 };
 
