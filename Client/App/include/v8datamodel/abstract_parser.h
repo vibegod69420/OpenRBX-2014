@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void _Tidy();
 	// AUTO-GENERATED METHODS
 };
 

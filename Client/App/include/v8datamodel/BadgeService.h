@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	~BadgeService();
 	// AUTO-GENERATED METHODS
 };
 

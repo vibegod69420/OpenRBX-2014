@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	InsertBasicObjectVerb();
 	// AUTO-GENERATED METHODS
 };
 

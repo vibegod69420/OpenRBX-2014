@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 02:11:40 UTC",
+ "updated_at": "2026-11-19 02:19:11 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 5.4245,
- "implemented_total": 508,
- "function_annotations": 508,
+ "matchable_coverage_pct": 5.4778,
+ "implemented_total": 513,
+ "function_annotations": 513,
  "stub_annotations": 0,
- "perfect_100_count": 508,
- "matched_real_functions": 508,
+ "perfect_100_count": 513,
+ "matched_real_functions": 513,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 1.2524,
- "overall_byte_coverage_pct": 0.1364,
+ "overall_function_coverage_pct": 1.2648,
+ "overall_byte_coverage_pct": 0.1385,
  "usage": {
-  "calls_24h": 2207,
+  "calls_24h": 2258,
   "failures_24h": 0,
-  "completion_tokens_24h": 23635813,
-  "reasoning_tokens_24h": 23229736,
-  "avg_latency_s": 187.0
+  "completion_tokens_24h": 24198057,
+  "reasoning_tokens_24h": 23785076,
+  "avg_latency_s": 187.1
  },
- "functions_total": 508,
+ "functions_total": 513,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 211,
-   "functions": 211,
-   "bytes": 4520
+   "matched": 213,
+   "functions": 213,
+   "bytes": 4600
   },
   {
    "name": "App/v8world",
@@ -54,9 +54,9 @@
   },
   {
    "name": "App/v8kernel",
-   "matched": 43,
-   "functions": 43,
-   "bytes": 843
+   "matched": 44,
+   "functions": 44,
+   "bytes": 884
   },
   {
    "name": "Rendering/GfxCore",
@@ -219,6 +219,18 @@
    "matched": 1,
    "functions": 1,
    "bytes": 40
+  },
+  {
+   "name": "RobloxStudio/InsertBasicObjectVerb.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 40
+  },
+  {
+   "name": "RobloxStudio/DummyWatchItem.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 39
   },
   {
    "name": "RobloxStudio/lua_exception.cpp",
@@ -1747,6 +1759,17 @@
    "matchable": true
   },
   {
+   "address": "0x00a95990",
+   "kind": "FUNCTION",
+   "name": "RBX::BodyAngularVelocity::update",
+   "mangled": "?update@BodyAngularVelocity@RBX@@QAEXXZ",
+   "file": "Client/App/v8kernel/BodyAngularVelocity.cpp",
+   "orig_size": 41,
+   "recomp_size": 41,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00a8d9a0",
    "kind": "FUNCTION",
    "name": "RBX::Motor6D::getCurrentAngle",
@@ -1787,6 +1810,17 @@
    "file": "Client/App/v8datamodel/MarketplaceService.cpp",
    "orig_size": 7,
    "recomp_size": 7,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00a5af20",
+   "kind": "FUNCTION",
+   "name": "RBX::BadgeService::~BadgeService",
+   "mangled": "??1BadgeService@RBX@@QAE@XZ",
+   "file": "Client/App/v8datamodel/BadgeService.cpp",
+   "orig_size": 40,
+   "recomp_size": 40,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3153,28 +3187,6 @@
    "recomp_size": 6,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x00860130",
-   "kind": "FUNCTION",
-   "name": "RBX::DataModel::GenericJob::initializeState",
-   "mangled": "?initializeState@GenericJob@DataModel@RBX@@QAAXXZ",
-   "file": "Client/App/v8datamodel/GenericJob.cpp",
-   "orig_size": 35,
-   "recomp_size": 35,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x0085fb80",
-   "kind": "FUNCTION",
-   "name": "assign",
-   "mangled": "?setProgress@GenericJob@DataModel@RBX@@QAEXXZ",
-   "file": "Client/App/v8datamodel/GenericJob.cpp",
-   "orig_size": 19,
-   "recomp_size": 19,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -3753,9 +3765,45 @@
    "matched": 508,
    "implemented": 508,
    "pct": 5.4245
+  },
+  {
+   "t": "2026-11-19 02:19:11 UTC",
+   "matched": 513,
+   "implemented": 513,
+   "pct": 5.4778
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T02:15:18",
+   "address": "0x00a95990",
+   "name": "RBX::BodyAngularVelocity::update",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T02:12:57",
+   "address": "0x00783910",
+   "name": "std::abstract_parser::_Tidy",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T02:12:03",
+   "address": "0x004452c0",
+   "name": "DummyWatchItem::updateButtonsStatus",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T02:12:01",
+   "address": "0x00517390",
+   "name": "InsertBasicObjectVerb::InsertBasicObjectVerb",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T02:11:52",
+   "address": "0x00a5af20",
+   "name": "RBX::BadgeService::~BadgeService",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T02:09:24",
    "address": "0x005c7ee0",
@@ -4445,37 +4493,7 @@
    "address": "0x00449aa0",
    "name": "QTreeWidgetItem::sub_449aa0",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:18:57",
-   "address": "0x00a212a0",
-   "name": "RBX::SurfaceEnumPropDescriptor::getEnumCount",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:18:50",
-   "address": "0x0099eb50",
-   "name": "RBX::Geometry::getCount",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:18:46",
-   "address": "0x00bc88e0",
-   "name": "PolyContact_deleteEdge",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:17:32",
-   "address": "0x00605980",
-   "name": "RBX::Graphics::ContextGL::assignIfNull",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:17:28",
-   "address": "0x005eb770",
-   "name": "RBX::Graphics::Device::releaseAll",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 53.63
+ "match_rate_per_hour": 53.45
 }
