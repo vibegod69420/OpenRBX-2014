@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void sub_9BC990();
 	// AUTO-GENERATED METHODS
 };
 

@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	~ChatOutput();
 	// AUTO-GENERATED METHODS
 };
 
