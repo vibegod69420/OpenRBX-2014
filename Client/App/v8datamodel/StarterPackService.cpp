@@ -16,6 +16,12 @@ bool StarterPackService::getFlag8C() const
 	return flag_008c;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00403ad0
+int StarterPackService::getField68() const
+{
+	return field_0068;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

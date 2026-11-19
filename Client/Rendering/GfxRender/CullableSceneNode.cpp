@@ -11,6 +11,12 @@ int CullableSceneNode::getConst1() const
 	return 1;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00619b70
+int CullableSceneNode::derefInt(const int* p)
+{
+	return *p;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

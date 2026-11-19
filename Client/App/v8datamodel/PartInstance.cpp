@@ -10,6 +10,12 @@ int PartInstance::getField70() const
 	return field_0070;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00403b40
+int PartInstance::getField74() const
+{
+	return field_0074;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

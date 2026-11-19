@@ -28,6 +28,12 @@ void FormFactorPart::createJoints()
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00891b60
+int FormFactorPart::getField104() const
+{
+	return field_0104;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
