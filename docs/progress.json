@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 11:57:28 UTC",
+ "updated_at": "2026-11-19 12:16:17 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 7.8697,
- "implemented_total": 738,
- "function_annotations": 738,
+ "matchable_coverage_pct": 7.8804,
+ "implemented_total": 739,
+ "function_annotations": 739,
  "stub_annotations": 0,
- "perfect_100_count": 737,
- "matched_real_functions": 737,
+ "perfect_100_count": 738,
+ "matched_real_functions": 738,
  "average_match_pct": 99.87,
- "overall_function_coverage_pct": 1.817,
- "overall_byte_coverage_pct": 0.2615,
+ "overall_function_coverage_pct": 1.8195,
+ "overall_byte_coverage_pct": 0.2624,
  "usage": {
-  "calls_24h": 4724,
+  "calls_24h": 4803,
   "failures_24h": 0,
-  "completion_tokens_24h": 53859574,
-  "reasoning_tokens_24h": 52870685,
-  "avg_latency_s": 199.6
+  "completion_tokens_24h": 54953591,
+  "reasoning_tokens_24h": 53946787,
+  "avg_latency_s": 200.7
  },
- "functions_total": 738,
+ "functions_total": 739,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 300,
-   "functions": 301,
-   "bytes": 8487
+   "matched": 301,
+   "functions": 302,
+   "bytes": 8574
   },
   {
    "name": "App/v8world",
@@ -2950,6 +2950,17 @@
    "matchable": true
   },
   {
+   "address": "0x00a2b9b0",
+   "kind": "FUNCTION",
+   "name": "std::filtering_stream::filtering_stream",
+   "mangled": "??0filtering_stream@std@@QAE@XZ",
+   "file": "Client/App/v8datamodel/filtering_stream.cpp",
+   "orig_size": 87,
+   "recomp_size": 87,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00a26f70",
    "kind": "FUNCTION",
    "name": "RBX::SurfaceEnumPropDescriptor::destroyInstance",
@@ -3276,17 +3287,6 @@
    "file": "Client/Rendering/GfxCore/Geometry.cpp",
    "orig_size": 60,
    "recomp_size": 60,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x0099eb50",
-   "kind": "FUNCTION",
-   "name": "RBX::Geometry::getCount",
-   "mangled": "?getCount@Geometry@RBX@@QBEHXZ",
-   "file": "Client/Rendering/GfxCore/Geometry.cpp",
-   "orig_size": 23,
-   "recomp_size": 23,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -4221,9 +4221,21 @@
    "matched": 737,
    "implemented": 738,
    "pct": 7.8697
+  },
+  {
+   "t": "2026-11-19 12:16:17 UTC",
+   "matched": 738,
+   "implemented": 739,
+   "pct": 7.8804
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T12:12:51",
+   "address": "0x00a2b9b0",
+   "name": "std::filtering_stream::filtering_stream",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T11:49:41",
    "address": "0x006d7bc0",
@@ -4937,13 +4949,7 @@
    "address": "0x00cc76f0",
    "name": "RakNet::PluginInterface2::Sub_CC76F0",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T05:21:08",
-   "address": "0x00a1c880",
-   "name": "RBX::BaseThreadPool::PoolData::pop",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 38.31
+ "match_rate_per_hour": 37.75
 }

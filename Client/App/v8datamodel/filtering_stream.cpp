@@ -71,6 +71,24 @@ void filtering_stream::sync()
     }
 }
 
+void* __stdcall sub_953940(int, int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a2b9b0
+filtering_stream::filtering_stream()
+{
+	reinterpret_cast<int*>(this)[0] = 0;
+	reinterpret_cast<int*>(this)[1] = 0;
+	reinterpret_cast<int*>(this)[0] = reinterpret_cast<int>(sub_953940(0, 0));
+	reinterpret_cast<int*>(this)[2] = 0;
+	reinterpret_cast<int*>(this)[4] = 0x1000;
+	reinterpret_cast<int*>(this)[5] = 0;
+	reinterpret_cast<int*>(this)[6] = 0x80;
+	reinterpret_cast<int*>(this)[7] = 0;
+	reinterpret_cast<int*>(this)[8] = 4;
+	reinterpret_cast<int*>(this)[9] = 0;
+	reinterpret_cast<int*>(this)[10] = 4;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

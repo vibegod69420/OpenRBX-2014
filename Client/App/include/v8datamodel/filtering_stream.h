@@ -18,6 +18,7 @@ public:
 
 	void reset();
 	void sync();
+	filtering_stream();
 	// AUTO-GENERATED METHODS
 };
 
