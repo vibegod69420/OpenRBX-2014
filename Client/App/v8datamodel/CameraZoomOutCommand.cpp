@@ -25,6 +25,15 @@ void CameraZoomOutCommand::zoomOut()
 	camera->zoom(0);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x009349c0
+void CameraZoomOutCommand::destroyInstance(CameraZoomOutCommand* p)
+{
+	if (p) {
+		p->onDestroy();
+		rbx_free_mem(p);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

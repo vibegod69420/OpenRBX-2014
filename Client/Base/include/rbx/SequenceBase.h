@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	double getTime();
 	// AUTO-GENERATED METHODS
 };
 

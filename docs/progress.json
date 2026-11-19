@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 04:08:30 UTC",
+ "updated_at": "2026-11-19 04:16:45 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 6.1078,
- "implemented_total": 572,
- "function_annotations": 572,
+ "matchable_coverage_pct": 6.204,
+ "implemented_total": 581,
+ "function_annotations": 581,
  "stub_annotations": 0,
- "perfect_100_count": 572,
- "matched_real_functions": 572,
+ "perfect_100_count": 581,
+ "matched_real_functions": 581,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 1.4102,
- "overall_byte_coverage_pct": 0.1636,
+ "overall_function_coverage_pct": 1.4324,
+ "overall_byte_coverage_pct": 0.1661,
  "usage": {
-  "calls_24h": 2744,
+  "calls_24h": 2784,
   "failures_24h": 0,
-  "completion_tokens_24h": 29867101,
-  "reasoning_tokens_24h": 29360025,
-  "avg_latency_s": 190.3
+  "completion_tokens_24h": 30280927,
+  "reasoning_tokens_24h": 29768140,
+  "avg_latency_s": 190.2
  },
- "functions_total": 572,
+ "functions_total": 581,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 237,
-   "functions": 237,
-   "bytes": 5551
+   "matched": 240,
+   "functions": 240,
+   "bytes": 5628
   },
   {
    "name": "App/v8world",
@@ -48,9 +48,9 @@
   },
   {
    "name": "Rendering/GfxRender",
-   "matched": 42,
-   "functions": 42,
-   "bytes": 1343
+   "matched": 43,
+   "functions": 43,
+   "bytes": 1373
   },
   {
    "name": "App/v8kernel",
@@ -71,16 +71,16 @@
    "bytes": 663
   },
   {
+   "name": "App/script",
+   "matched": 17,
+   "functions": 17,
+   "bytes": 411
+  },
+  {
    "name": "App/tool",
    "matched": 6,
    "functions": 6,
    "bytes": 408
-  },
-  {
-   "name": "App/script",
-   "matched": 14,
-   "functions": 14,
-   "bytes": 334
   },
   {
    "name": "App/humanoid",
@@ -122,6 +122,12 @@
    "name": "Rendering/GfxBase",
    "matched": 5,
    "functions": 5,
+   "bytes": 101
+  },
+  {
+   "name": "Network/PersistentDataStore.cpp",
+   "matched": 3,
+   "functions": 3,
    "bytes": 101
   },
   {
@@ -197,12 +203,6 @@
    "bytes": 76
   },
   {
-   "name": "Network/PersistentDataStore.cpp",
-   "matched": 2,
-   "functions": 2,
-   "bytes": 71
-  },
-  {
    "name": "RobloxStudio/RobloxFindWidget.cpp",
    "matched": 1,
    "functions": 1,
@@ -255,6 +255,12 @@
    "matched": 1,
    "functions": 1,
    "bytes": 52
+  },
+  {
+   "name": "Base/rbx",
+   "matched": 2,
+   "functions": 2,
+   "bytes": 51
   },
   {
    "name": "RobloxStudio/lua_exception.cpp",
@@ -360,12 +366,6 @@
   },
   {
    "name": "RobloxStudio/RobloxPluginHost.cpp",
-   "matched": 1,
-   "functions": 1,
-   "bytes": 26
-  },
-  {
-   "name": "Base/rbx",
    "matched": 1,
    "functions": 1,
    "bytes": 26
@@ -1653,6 +1653,28 @@
    "matchable": true
   },
   {
+   "address": "0x00b85870",
+   "kind": "FUNCTION",
+   "name": "RBX::LuaStatsItem::getCount",
+   "mangled": "?getCount@LuaStatsItem@RBX@@QBEHXZ",
+   "file": "Client/App/script/LuaStatsItem.cpp",
+   "orig_size": 24,
+   "recomp_size": 24,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00b850e0",
+   "kind": "FUNCTION",
+   "name": "RBX::Lua::WaitScriptSlot::execute",
+   "mangled": "?execute@WaitScriptSlot@Lua@RBX@@QAAHPAX@Z",
+   "file": "Client/App/script/WaitScriptSlot.cpp",
+   "orig_size": 28,
+   "recomp_size": 28,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00b842a0",
    "kind": "FUNCTION",
    "name": "RBX::Lua::FunctionScriptSlot::dispose",
@@ -2830,6 +2852,17 @@
    "matchable": true
   },
   {
+   "address": "0x009498c0",
+   "kind": "FUNCTION",
+   "name": "RBX::Network::PersistentDataStore::destroyInstance",
+   "mangled": "?destroyInstance@PersistentDataStore@Network@RBX@@SAXPAV123@@Z",
+   "file": "Client/Network/PersistentDataStore.cpp",
+   "orig_size": 30,
+   "recomp_size": 30,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00946870",
    "kind": "FUNCTION",
    "name": "sub_7A3000",
@@ -2881,6 +2914,17 @@
    "file": "Client/App/v8datamodel/CommonVerbs.cpp",
    "orig_size": 26,
    "recomp_size": 26,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x009349c0",
+   "kind": "FUNCTION",
+   "name": "RBX::CameraZoomOutCommand::destroyInstance",
+   "mangled": "?destroyInstance@CameraZoomOutCommand@RBX@@SAXPAV12@@Z",
+   "file": "Client/App/v8datamodel/CameraZoomOutCommand.cpp",
+   "orig_size": 30,
+   "recomp_size": 30,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3149,6 +3193,17 @@
    "matchable": true
   },
   {
+   "address": "0x008d8c30",
+   "kind": "FUNCTION",
+   "name": "RBX::Lua::LuaArguments::pushAllEvents",
+   "mangled": "?pushAllEvents@LuaArguments@Lua@RBX@@QAAXPAX@Z",
+   "file": "Client/App/script/LuaArguments.cpp",
+   "orig_size": 25,
+   "recomp_size": 25,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x008d8c10",
    "kind": "FUNCTION",
    "name": "RBX::Lua::LuaArguments::pushAllResults",
@@ -3178,61 +3233,6 @@
    "file": "Client/App/script/ScriptStats.cpp",
    "orig_size": 10,
    "recomp_size": 10,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x008c6960",
-   "kind": "FUNCTION",
-   "name": "RBX::PhysicsJob::getSleepTime",
-   "mangled": "?getSleepTime@PhysicsJob@RBX@@QBEMXZ",
-   "file": "Client/App/v8datamodel/PhysicsJob.cpp",
-   "orig_size": 14,
-   "recomp_size": 14,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x008c5c70",
-   "kind": "FUNCTION",
-   "name": "RBX::HeartbeatTask::get_deleter",
-   "mangled": "?get_deleter@HeartbeatTask@RBX@@QAAXPAX00@Z",
-   "file": "Client/App/v8datamodel/HeartbeatTask.cpp",
-   "orig_size": 26,
-   "recomp_size": 26,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x008c5810",
-   "kind": "FUNCTION",
-   "name": "RBX::PhysicsJob::getErrorEmphasis",
-   "mangled": "?getErrorEmphasis@PhysicsJob@RBX@@QBEHXZ",
-   "file": "Client/App/v8datamodel/PhysicsJob.cpp",
-   "orig_size": 21,
-   "recomp_size": 21,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x008c19c0",
-   "kind": "FUNCTION",
-   "name": "RBX::Lua::WeakThreadRef::removeRef",
-   "mangled": "?removeRef@WeakThreadRef@Lua@RBX@@QAEXXZ",
-   "file": "Client/App/script/WeakThreadRef.cpp",
-   "orig_size": 58,
-   "recomp_size": 58,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x008bb880",
-   "kind": "FUNCTION",
-   "name": "RBX::GameBasicSettings::getQualityLevel",
-   "mangled": "?getQualityLevel@GameBasicSettings@RBX@@QBEHXZ",
-   "file": "Client/App/v8datamodel/GameBasicSettings.cpp",
-   "orig_size": 14,
-   "recomp_size": 14,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -3897,9 +3897,69 @@
    "matched": 572,
    "implemented": 572,
    "pct": 6.1078
+  },
+  {
+   "t": "2026-11-19 04:16:45 UTC",
+   "matched": 581,
+   "implemented": 581,
+   "pct": 6.204
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T04:13:18",
+   "address": "0x004a40e0",
+   "name": "sub_4A4460",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T04:13:09",
+   "address": "0x00b850e0",
+   "name": "RBX::Lua::WaitScriptSlot::execute",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T04:10:10",
+   "address": "0x009498c0",
+   "name": "RBX::Network::PersistentDataStore::destroyInstance",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T04:10:08",
+   "address": "0x009349c0",
+   "name": "RBX::CameraZoomOutCommand::destroyInstance",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T04:10:06",
+   "address": "0x006c5910",
+   "name": "RBX::Tasks::SequenceBase::getTime",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T04:09:47",
+   "address": "0x0069d470",
+   "name": "RBX::Graphics::TextureCompositor::destroyInstance",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T04:09:43",
+   "address": "0x008d8c30",
+   "name": "RBX::Lua::LuaArguments::pushAllEvents",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T04:08:42",
+   "address": "0x0048b110",
+   "name": "RBX::FlyweightService::subAssign",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T04:08:32",
+   "address": "0x00b85870",
+   "name": "RBX::LuaStatsItem::getCount",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T04:04:30",
    "address": "0x00cf4f70",
@@ -4565,61 +4625,7 @@
    "address": "0x00b4ec80",
    "name": "RBX::BallBallConnector::getKernelSteps",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:28:05",
-   "address": "0x00a0fac0",
-   "name": "RBX::PathInterpolatedCFrame::getField20",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:28:01",
-   "address": "0x00ba8ed0",
-   "name": "RBX::Body::advanceStateIndex",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:27:57",
-   "address": "0x00bd3030",
-   "name": "EdgeEdgePairIdentity",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:27:24",
-   "address": "0x008bb880",
-   "name": "RBX::GameBasicSettings::getQualityLevel",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:27:00",
-   "address": "0x0076f0b0",
-   "name": "RBX::ViewBase::getUnknown",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:26:33",
-   "address": "0x009cd010",
-   "name": "RBX::InputObject::isInputType127",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:26:13",
-   "address": "0x00891b50",
-   "name": "RBX::FormFactorPart::getSubFlagE0_111",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:25:56",
-   "address": "0x006b97d0",
-   "name": "RBX::EditSelectionVerb::addRef",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T01:25:54",
-   "address": "0x00a37a90",
-   "name": "lua_exception::getLine",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 50.09
+ "match_rate_per_hour": 50.27
 }

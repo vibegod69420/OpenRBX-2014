@@ -24,6 +24,15 @@ int NonFactoryProduct::initFactoryData()
 	return data.result;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x004a40e0
+void sub_4A4460();
+
+NonFactoryProduct::NonFactoryProduct()
+{
+	volatile int var = 0;
+	sub_4A4460();
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

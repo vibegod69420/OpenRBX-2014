@@ -20,6 +20,7 @@ public:
 	int size();
 	void __cdecl pushAllValues(void* arg);
 	void __cdecl pushAllResults(void* arg);
+	void __cdecl pushAllEvents(void* arg);
 	// AUTO-GENERATED METHODS
 };
 

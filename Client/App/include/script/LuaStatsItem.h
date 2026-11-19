@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	int getCount() const;
 	// AUTO-GENERATED METHODS
 };
 

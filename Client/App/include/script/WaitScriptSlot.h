@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	int __cdecl execute(void* L);
 	// AUTO-GENERATED METHODS
 };
 

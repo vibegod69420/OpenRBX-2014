@@ -17,6 +17,7 @@ public:
 	};
 
 	int initFactoryData();
+	NonFactoryProduct();
 	// AUTO-GENERATED METHODS
 };
 

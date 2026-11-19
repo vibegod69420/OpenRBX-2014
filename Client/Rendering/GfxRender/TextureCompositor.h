@@ -17,6 +17,8 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void onDestroy();
+	static void destroyInstance(TextureCompositor* p);
 	// AUTO-GENERATED METHODS
 };
 

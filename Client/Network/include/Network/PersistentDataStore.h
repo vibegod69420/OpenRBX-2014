@@ -19,6 +19,8 @@ public:
 
 	void __cdecl dispatch();
 	void dispose();
+	void onDestroy();
+	static void destroyInstance(PersistentDataStore* p);
 	// AUTO-GENERATED METHODS
 };
 
