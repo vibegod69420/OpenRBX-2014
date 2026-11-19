@@ -23,6 +23,7 @@ public:
 	int __cdecl getLevel();
 	void __cdecl raise(int arg1, int arg2);
 	void __cdecl initContext(void* context);
+	int __cdecl dispatchGlobal();
 	// AUTO-GENERATED METHODS
 };
 

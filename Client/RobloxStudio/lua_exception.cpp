@@ -54,6 +54,16 @@ void __cdecl lua_exception::initContext(void* context)
 	*(int*)(p + 4) = 0;
 }
 
+// Forward declaration for callee at 0x00a389c0
+void __cdecl lua_exception_dispatchGlobal(int arg1, int arg2, int arg3);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a3cd40
+int __cdecl lua_exception::dispatchGlobal()
+{
+	lua_exception_dispatchGlobal((int)this, 1, *(int*)0x0124EACC);
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

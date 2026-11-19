@@ -27,6 +27,17 @@ void* Workspace::getSomeField()
 	return *reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 0xBC);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00969740
+bool Workspace::method_00969740()
+{
+	if (*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x68) == 0 &&
+		*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x64) == 2)
+	{
+		return true;
+	}
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

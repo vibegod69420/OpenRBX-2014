@@ -21,6 +21,7 @@ public:
 	int getFieldCC() const;
 	void __cdecl update(int value);
 	void __cdecl compute(void* out, void* param);
+	void __cdecl match(int a, int b);
 	// AUTO-GENERATED METHODS
 };
 

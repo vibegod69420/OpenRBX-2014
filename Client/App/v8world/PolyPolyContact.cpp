@@ -36,6 +36,17 @@ void __cdecl PolyPolyContact::compute(void* out, void* param)
 	*(int*)out = 9;
 }
 
+void __cdecl sub_C18030(PolyPolyContact* contact, unsigned int flags, void* feature);
+
+// FUNCTION: ROBLOXSTUDIO 0x00c18bc0
+void __cdecl PolyPolyContact::match(int a, int b)
+{
+	sub_C18030(
+		this,
+		(((unsigned int)b + 1) << 23) | ((unsigned int)a << 6) | 0x1Eu,
+		*(void**)((char*)*(void**)((char*)this + 0x0C) + 8));
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

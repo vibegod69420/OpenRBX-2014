@@ -24,6 +24,7 @@ public:
 	void*getGrid() const;
 	int __cdecl getValue();
 	void __cdecl stringGfindRenamed();
+	void __cdecl checkStack();
 	// AUTO-GENERATED METHODS
 };
 

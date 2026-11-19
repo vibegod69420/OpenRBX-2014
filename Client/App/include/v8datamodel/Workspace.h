@@ -19,6 +19,7 @@ public:
 	void* getBasePtr();
 	int method_00888300();
 	void* getSomeField();
+	bool method_00969740();
 	// AUTO-GENERATED METHODS
 };
 

@@ -101,6 +101,15 @@ void __cdecl TriangleMesh::stringGfindRenamed()
 	sub_A38A50(this, "'string.gfind' was renamed to 'string.gmatch'");
 }
 
+int sub_A35150(void*);
+void sub_A36E40(void*, int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b6ebd0
+void __cdecl TriangleMesh::checkStack()
+{
+	sub_A36E40(this, sub_A35150(this));
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
