@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 12:49:53 UTC",
+  "updated_at": "2026-11-19 12:58:13 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 7.9552,
-  "implemented_total": 746,
-  "function_annotations": 746,
+  "matchable_coverage_pct": 7.9765,
+  "implemented_total": 748,
+  "function_annotations": 748,
   "stub_annotations": 0,
-  "perfect_100_count": 745,
-  "matched_real_functions": 745,
+  "perfect_100_count": 747,
+  "matched_real_functions": 747,
   "average_match_pct": 99.87,
-  "overall_function_coverage_pct": 1.8367,
-  "overall_byte_coverage_pct": 0.2701,
+  "overall_function_coverage_pct": 1.8417,
+  "overall_byte_coverage_pct": 0.2737,
   "usage": {
-    "calls_24h": 4919,
+    "calls_24h": 4950,
     "failures_24h": 0,
-    "completion_tokens_24h": 56546365,
-    "reasoning_tokens_24h": 55505661,
-    "avg_latency_s": 202.1
+    "completion_tokens_24h": 56972792,
+    "reasoning_tokens_24h": 55918411,
+    "avg_latency_s": 202.3
   },
   "functions": [
     {
@@ -6139,6 +6139,17 @@
       "matchable": true
     },
     {
+      "address": "0x00a94c80",
+      "kind": "FUNCTION",
+      "name": "RBX::BodyAngularVelocity::BodyAngularVelocity",
+      "mangled": "??0BodyAngularVelocity@RBX@@QAE@XZ",
+      "file": "Client/App/v8kernel/BodyAngularVelocity.cpp",
+      "orig_size": 171,
+      "recomp_size": 171,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00a95990",
       "kind": "FUNCTION",
       "name": "RBX::BodyAngularVelocity::update",
@@ -6740,6 +6751,17 @@
       "file": "Client/App/v8world/RotatePJoint.cpp",
       "orig_size": 15,
       "recomp_size": 15,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b8f760",
+      "kind": "FUNCTION",
+      "name": "RBX::MotorJoint::dequeueNode",
+      "mangled": "?dequeueNode@MotorJoint@RBX@@QAEPAXXZ",
+      "file": "Client/App/v8world/MotorJoint.cpp",
+      "orig_size": 181,
+      "recomp_size": 89,
       "match_pct": 100.0,
       "matchable": true
     },

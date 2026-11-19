@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 12:49:53 UTC",
+ "updated_at": "2026-11-19 12:58:13 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 7.9552,
- "implemented_total": 746,
- "function_annotations": 746,
+ "matchable_coverage_pct": 7.9765,
+ "implemented_total": 748,
+ "function_annotations": 748,
  "stub_annotations": 0,
- "perfect_100_count": 745,
- "matched_real_functions": 745,
+ "perfect_100_count": 747,
+ "matched_real_functions": 747,
  "average_match_pct": 99.87,
- "overall_function_coverage_pct": 1.8367,
- "overall_byte_coverage_pct": 0.2701,
+ "overall_function_coverage_pct": 1.8417,
+ "overall_byte_coverage_pct": 0.2737,
  "usage": {
-  "calls_24h": 4919,
+  "calls_24h": 4950,
   "failures_24h": 0,
-  "completion_tokens_24h": 56546365,
-  "reasoning_tokens_24h": 55505661,
-  "avg_latency_s": 202.1
+  "completion_tokens_24h": 56972792,
+  "reasoning_tokens_24h": 55918411,
+  "avg_latency_s": 202.3
  },
- "functions_total": 746,
+ "functions_total": 748,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8world",
-   "matched": 77,
-   "functions": 77,
-   "bytes": 2938
+   "matched": 78,
+   "functions": 78,
+   "bytes": 3119
   },
   {
    "name": "Rendering/GfxRender",
@@ -54,9 +54,9 @@
   },
   {
    "name": "App/v8kernel",
-   "matched": 57,
-   "functions": 57,
-   "bytes": 1643
+   "matched": 58,
+   "functions": 58,
+   "bytes": 1814
   },
   {
    "name": "Rendering/g3d",
@@ -2037,6 +2037,17 @@
    "matchable": true
   },
   {
+   "address": "0x00b8f760",
+   "kind": "FUNCTION",
+   "name": "RBX::MotorJoint::dequeueNode",
+   "mangled": "?dequeueNode@MotorJoint@RBX@@QAEPAXXZ",
+   "file": "Client/App/v8world/MotorJoint.cpp",
+   "orig_size": 181,
+   "recomp_size": 89,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00b8f1f0",
    "kind": "FUNCTION",
    "name": "RBX::RotatePJoint::stepUi",
@@ -2638,6 +2649,17 @@
    "file": "Client/App/v8kernel/BodyAngularVelocity.cpp",
    "orig_size": 41,
    "recomp_size": 41,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00a94c80",
+   "kind": "FUNCTION",
+   "name": "RBX::BodyAngularVelocity::BodyAngularVelocity",
+   "mangled": "??0BodyAngularVelocity@RBX@@QAE@XZ",
+   "file": "Client/App/v8kernel/BodyAngularVelocity.cpp",
+   "orig_size": 171,
+   "recomp_size": 171,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3265,28 +3287,6 @@
    "file": "Client/App/v8datamodel/InputObject.cpp",
    "orig_size": 24,
    "recomp_size": 24,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x009ccfc0",
-   "kind": "FUNCTION",
-   "name": "RBX::InputObject::isInputType8",
-   "mangled": "?isInputType8@InputObject@RBX@@QAEHXZ",
-   "file": "Client/App/v8datamodel/InputObject.cpp",
-   "orig_size": 13,
-   "recomp_size": 13,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x009bc990",
-   "kind": "FUNCTION",
-   "name": "erase",
-   "mangled": "?sub_9BC990@FriendService@RBX@@QAEXXZ",
-   "file": "Client/App/v8datamodel/FriendService.cpp",
-   "orig_size": 36,
-   "recomp_size": 36,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -4251,9 +4251,27 @@
    "matched": 745,
    "implemented": 746,
    "pct": 7.9552
+  },
+  {
+   "t": "2026-11-19 12:58:13 UTC",
+   "matched": 747,
+   "implemented": 748,
+   "pct": 7.9765
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T12:53:47",
+   "address": "0x00b8f760",
+   "name": "RBX::MotorJoint::dequeueNode",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T12:50:14",
+   "address": "0x00a94c80",
+   "name": "RBX::BodyAngularVelocity::BodyAngularVelocity",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T12:41:54",
    "address": "0x00656940",
@@ -4961,19 +4979,7 @@
    "address": "0x00702520",
    "name": "G3D::G3D::LineSegment::ensureInternalState",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T06:11:09",
-   "address": "0x004f5e80",
-   "name": "RBX::HUMAN::HumanoidState::getForwardedStateValue",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T06:07:39",
-   "address": "0x0059b7e0",
-   "name": "btBvhTriangleMeshShape::destroyInternalBuffer",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 37.05
+ "match_rate_per_hour": 36.89
 }

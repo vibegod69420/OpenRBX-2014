@@ -17,6 +17,7 @@ public:
 	};
 
 	int getConst4() const;
+	void*dequeueNode();
 	// AUTO-GENERATED METHODS
 };
 
