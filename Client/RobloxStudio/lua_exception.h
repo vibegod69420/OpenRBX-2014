@@ -19,6 +19,7 @@ public:
 	void raise();
 	int __cdecl getCode();
 	int __cdecl getLine();
+	int __cdecl getType();
 	// AUTO-GENERATED METHODS
 };
 

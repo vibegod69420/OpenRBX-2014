@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void __cdecl get(int* out) const;
 	// AUTO-GENERATED METHODS
 };
 

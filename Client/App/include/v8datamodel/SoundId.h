@@ -20,6 +20,7 @@ public:
 
 	void sub_991D40();
 	int getFieldB8() const;
+	void*sub_997710() const;
 	// AUTO-GENERATED METHODS
 };
 

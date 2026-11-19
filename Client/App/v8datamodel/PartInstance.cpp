@@ -22,6 +22,12 @@ int PartInstance::getGlobal_5850() const
 	return s_value_00825850;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00892460
+bool PartInstance::getSubFlagE0_110() const
+{
+	return subb_00e0_0110->val;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

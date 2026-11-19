@@ -24,6 +24,14 @@ int VehicleSeat::isOccupied()
 	return p != 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0091a7f0
+extern "C" void* rbx_vehicleseat_helper_0x9d8750(void*);
+
+void* VehicleSeat::getVehicle()
+{
+    return rbx_vehicleseat_helper_0x9d8750(this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

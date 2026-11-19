@@ -17,6 +17,14 @@ int ServerReplicator::getGlobal_94e0() const
 	return s_value_00cb94e0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c85cb0
+void* ServerReplicator::getPtr1E90() const
+{
+    if (*(const int*)((const char*)this + 0xea8) != 0)
+        return (void*)((char*)this + 0x1e90);
+    return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

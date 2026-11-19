@@ -22,6 +22,7 @@ public:
 	bool getFlag278() const;
 	int getFieldA4() const;
 	int getFieldA0() const;
+	bool isHoverState() const;
 	// AUTO-GENERATED METHODS
 };
 

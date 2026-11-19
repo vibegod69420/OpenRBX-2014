@@ -16,6 +16,12 @@ int InputObject::isInputType127()
 	return *(int*)((char*)this + 0x84) == 0x7f;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x009cd020
+int InputObject::isInputType27()
+{
+	return *(int*)((char*)this + 0x84) == 0x1b;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

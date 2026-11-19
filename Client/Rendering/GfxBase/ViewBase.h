@@ -18,6 +18,7 @@ public:
 
 	void dispose();
 	int getUnknown();
+	float getCurrentEntryFloat();
 	// AUTO-GENERATED METHODS
 };
 

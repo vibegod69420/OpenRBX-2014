@@ -18,6 +18,7 @@ public:
 	};
 
 	int getField2C() const;
+	void*getEdge() const;
 	// AUTO-GENERATED METHODS
 };
 

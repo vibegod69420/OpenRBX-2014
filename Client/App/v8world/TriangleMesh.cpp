@@ -78,6 +78,13 @@ void* TriangleMesh::getPrimitive() const
 	return sub_B5A020(const_cast<TriangleMesh*>(this));
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0099d320
+void* TriangleMesh::getGrid() const
+{
+	return reinterpret_cast<char*>(
+		*reinterpret_cast<void* const*>(reinterpret_cast<const char*>(this) + 0x100)) + 4;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

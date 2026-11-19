@@ -6,6 +6,7 @@
 namespace RBX {
 
 extern int s_value_00825850;
+struct SubBool_PartInstance_00e0_0110 { char pad[272]; bool val; };
 // AUTO-GENERATED HELPERS
 
 class PartInstance
@@ -16,12 +17,14 @@ public:
 		int _vtable_or_head;
 		struct { char _pad_field_0070[0x70]; int field_0070; };
 		struct { char _pad_field_0074[0x74]; int field_0074; };
+		struct { char _pad_subb_00e0_0110[0xe0]; SubBool_PartInstance_00e0_0110* subb_00e0_0110; };
 		// AUTO-GENERATED FIELDS
 	};
 
 	int getField70() const;
 	int getField74() const;
 	int getGlobal_5850() const;
+	bool getSubFlagE0_110() const;
 	// AUTO-GENERATED METHODS
 };
 

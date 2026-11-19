@@ -18,6 +18,7 @@ public:
 
 	void* getSlot18Value();
 	int isOccupied();
+	void*getVehicle();
 	// AUTO-GENERATED METHODS
 };
 

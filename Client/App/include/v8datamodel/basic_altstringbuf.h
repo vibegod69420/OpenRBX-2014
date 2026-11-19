@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void BasicAltStringBuf_Thunk_E10140();
 	// AUTO-GENERATED METHODS
 };
 

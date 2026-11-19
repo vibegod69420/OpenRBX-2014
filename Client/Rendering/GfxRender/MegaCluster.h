@@ -18,6 +18,7 @@ public:
 	};
 
 	static int derefInt(const int* p);
+	static int derefInt_baa0(const int* p);
 	// AUTO-GENERATED METHODS
 };
 

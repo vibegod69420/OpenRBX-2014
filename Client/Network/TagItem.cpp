@@ -19,6 +19,14 @@ void TagItem::dispatch()
 	TagItemDispatch(this);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00cf40b0
+__declspec(dllimport) void __stdcall TagItemDispatch(TagItem*);
+
+void TagItem::send()
+{
+	TagItemDispatch(this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

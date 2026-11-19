@@ -11,7 +11,7 @@ const int* AdornRender::getMemberPtr24() const
 	return &member_0024;
 }
 
-// STUB: ROBLOXSTUDIO 0x00613950
+// FUNCTION: ROBLOXSTUDIO 0x00613950
 int AdornRender::derefInt(const int* p)
 {
 	return *p;

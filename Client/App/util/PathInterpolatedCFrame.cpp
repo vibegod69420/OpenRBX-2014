@@ -45,6 +45,13 @@ void* PathInterpolatedCFrame::getField20() const
 	return value;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00892520
+float PathInterpolatedCFrame::getFieldE0_118() const
+{
+	const char* ptr = *reinterpret_cast<char* const*>(reinterpret_cast<const char*>(this) + 0xE0);
+	return *reinterpret_cast<const float*>(ptr + 0x118);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

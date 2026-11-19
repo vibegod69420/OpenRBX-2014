@@ -25,6 +25,7 @@ public:
 	bool getFlag40() const;
 	double getField98() const;
 	void*getField20() const;
+	float getFieldE0_118() const;
 	// AUTO-GENERATED METHODS
 };
 

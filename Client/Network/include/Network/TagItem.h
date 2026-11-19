@@ -19,6 +19,7 @@ public:
 
 	__int64 getId() const;
 	void dispatch();
+	void send();
 	// AUTO-GENERATED METHODS
 };
 

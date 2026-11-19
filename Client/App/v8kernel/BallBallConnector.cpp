@@ -16,6 +16,12 @@ int BallBallConnector::getKernelSteps() const
 	return (*(unsigned char*)0x0130EBE4 == 0) * 4 + 4;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b4ebd0
+int BallBallConnector::getConst19() const
+{
+	return 19;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

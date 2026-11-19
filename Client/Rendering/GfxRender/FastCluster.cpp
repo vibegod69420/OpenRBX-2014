@@ -48,6 +48,12 @@ int FastCluster::derefInt(const int* p)
 	return *p;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00622470
+int FastCluster::derefInt_2470(const int* p)
+{
+	return *p;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

@@ -22,6 +22,13 @@ int GuiImageButton::getFieldA0() const
 	return field_00a0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00873c50
+bool GuiImageButton::isHoverState() const
+{
+	return *(const int*)((const char*)this + 0x68) == 0
+		&& *(const int*)((const char*)this + 0x64) == 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

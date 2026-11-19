@@ -21,6 +21,7 @@ public:
 	int getTriangleCount() const;
 	void*getPart() const;
 	void*getPrimitive() const;
+	void*getGrid() const;
 	// AUTO-GENERATED METHODS
 };
 
