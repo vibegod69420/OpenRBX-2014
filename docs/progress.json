@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 09:48:11 UTC",
+ "updated_at": "2026-11-19 09:56:27 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 7.2718,
- "implemented_total": 682,
- "function_annotations": 682,
+ "matchable_coverage_pct": 7.2931,
+ "implemented_total": 684,
+ "function_annotations": 684,
  "stub_annotations": 0,
- "perfect_100_count": 681,
- "matched_real_functions": 681,
+ "perfect_100_count": 683,
+ "matched_real_functions": 683,
  "average_match_pct": 99.86,
- "overall_function_coverage_pct": 1.679,
- "overall_byte_coverage_pct": 0.2223,
+ "overall_function_coverage_pct": 1.6839,
+ "overall_byte_coverage_pct": 0.2259,
  "usage": {
-  "calls_24h": 4230,
+  "calls_24h": 4253,
   "failures_24h": 0,
-  "completion_tokens_24h": 48040259,
-  "reasoning_tokens_24h": 47195893,
-  "avg_latency_s": 198.3
+  "completion_tokens_24h": 48368850,
+  "reasoning_tokens_24h": 47515113,
+  "avg_latency_s": 198.7
  },
- "functions_total": 682,
+ "functions_total": 684,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8world",
-   "matched": 70,
-   "functions": 70,
-   "bytes": 2370
+   "matched": 71,
+   "functions": 71,
+   "bytes": 2551
   },
   {
    "name": "Rendering/GfxRender",
@@ -93,6 +93,12 @@
    "matched": 10,
    "functions": 10,
    "bytes": 242
+  },
+  {
+   "name": "RobloxStudio/ArchiveBinder.cpp",
+   "matched": 2,
+   "functions": 2,
+   "bytes": 216
   },
   {
    "name": "Network/ProfiledRakPeer.cpp",
@@ -291,12 +297,6 @@
    "matched": 1,
    "functions": 1,
    "bytes": 56
-  },
-  {
-   "name": "RobloxStudio/ArchiveBinder.cpp",
-   "matched": 1,
-   "functions": 1,
-   "bytes": 52
   },
   {
    "name": "Base/rbx",
@@ -1625,6 +1625,17 @@
    "file": "Client/App/v8datamodel/ParallelRampMesh.cpp",
    "orig_size": 28,
    "recomp_size": 28,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00bb1dd0",
+   "kind": "FUNCTION",
+   "name": "RBX::PyramidPoly::allocate",
+   "mangled": "?allocate@PyramidPoly@RBX@@QAEPAXXZ",
+   "file": "Client/App/v8world/PyramidPoly.cpp",
+   "orig_size": 181,
+   "recomp_size": 89,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3266,17 +3277,6 @@
    "recomp_size": 17,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x009688c0",
-   "kind": "FUNCTION",
-   "name": "RBX::Workspace::getBasePtr",
-   "mangled": "?getBasePtr@Workspace@RBX@@QAEPAXXZ",
-   "file": "Client/App/v8datamodel/Workspace.cpp",
-   "orig_size": 7,
-   "recomp_size": 7,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -4125,9 +4125,27 @@
    "matched": 681,
    "implemented": 682,
    "pct": 7.2718
+  },
+  {
+   "t": "2026-11-19 09:56:27 UTC",
+   "matched": 683,
+   "implemented": 684,
+   "pct": 7.2931
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T09:48:16",
+   "address": "0x00bb1dd0",
+   "name": "RBX::PyramidPoly::allocate",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T09:48:13",
+   "address": "0x00906130",
+   "name": "sub_CF6522",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T09:43:27",
    "address": "0x009377a0",
@@ -4835,19 +4853,7 @@
    "address": "0x006974a0",
    "name": "RBX::Graphics::SSAO::getUnk3C",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T04:01:35",
-   "address": "0x00892520",
-   "name": "RBX::PathInterpolatedCFrame::getFieldE0_118",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T04:01:30",
-   "address": "0x00997710",
-   "name": "RBX::Soundscape::SoundId::sub_997710",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 39.87
+ "match_rate_per_hour": 39.67
 }

@@ -17,6 +17,7 @@ public:
 	};
 
 	bool slot2();
+	void sub_906130();
 	// AUTO-GENERATED METHODS
 };
 
