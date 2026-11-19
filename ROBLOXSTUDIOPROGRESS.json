@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 15:03:01 UTC",
+  "updated_at": "2026-11-19 15:12:04 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 8.4891,
-  "implemented_total": 796,
-  "function_annotations": 796,
+  "matchable_coverage_pct": 8.5318,
+  "implemented_total": 800,
+  "function_annotations": 800,
   "stub_annotations": 0,
-  "perfect_100_count": 795,
-  "matched_real_functions": 795,
+  "perfect_100_count": 799,
+  "matched_real_functions": 799,
   "average_match_pct": 99.88,
-  "overall_function_coverage_pct": 1.96,
-  "overall_byte_coverage_pct": 0.3035,
+  "overall_function_coverage_pct": 1.9699,
+  "overall_byte_coverage_pct": 0.3055,
   "usage": {
-    "calls_24h": 5385,
+    "calls_24h": 5429,
     "failures_24h": 0,
-    "completion_tokens_24h": 62102992,
-    "reasoning_tokens_24h": 60922731,
-    "avg_latency_s": 204.3
+    "completion_tokens_24h": 62562743,
+    "reasoning_tokens_24h": 61376343,
+    "avg_latency_s": 204.2
   },
   "functions": [
     {
@@ -1805,6 +1805,17 @@
       "matchable": true
     },
     {
+      "address": "0x005d5960",
+      "kind": "FUNCTION",
+      "name": "btConvexPolyhedron::initializeFaces",
+      "mangled": "?initializeFaces@btConvexPolyhedron@@QAEPAXXZ",
+      "file": "Client/App/v8kernel/btConvexPolyhedron.cpp",
+      "orig_size": 50,
+      "recomp_size": 50,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x005dce80",
       "kind": "FUNCTION",
       "name": "RBX::CSGMeshSgCore::isValid",
@@ -2039,6 +2050,17 @@
       "address": "0x005f4cf0",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::VertexLayout::initGLBindFragDataLocationIndexed",
+      "mangled": "?initAppleBufferExtensions@VertexLayout@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/VertexLayout.cpp",
+      "orig_size": 54,
+      "recomp_size": 54,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x005f5070",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::VertexLayout::initGLDrawIndirect",
       "mangled": "?initAppleBufferExtensions@VertexLayout@Graphics@RBX@@QAE_NXZ",
       "file": "Client/Rendering/GfxCore/VertexLayout.cpp",
       "orig_size": 54,
@@ -3206,6 +3228,17 @@
       "kind": "FUNCTION",
       "name": "RBX::CircleRadialNormal::getUpRadialNormal",
       "mangled": "?getUpRadialNormal@CircleRadialNormal@RBX@@QAEABUVector3@2@XZ",
+      "file": "Client/App/v8datamodel/CircleRadialNormal.cpp",
+      "orig_size": 53,
+      "recomp_size": 53,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x006d13a0",
+      "kind": "FUNCTION",
+      "name": "RBX::CircleRadialNormal::getCrossUpNormal",
+      "mangled": "?getCrossUpNormal@CircleRadialNormal@RBX@@QAEABUVector3@2@XZ",
       "file": "Client/App/v8datamodel/CircleRadialNormal.cpp",
       "orig_size": 53,
       "recomp_size": 53,
@@ -5552,6 +5585,17 @@
       "file": "Client/App/v8datamodel/SoundId.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00997800",
+      "kind": "FUNCTION",
+      "name": "RBX::Soundscape::SoundId::sub_997800",
+      "mangled": "?sub_997800@SoundId@Soundscape@RBX@@QBEPAXXZ",
+      "file": "Client/App/v8datamodel/SoundId.cpp",
+      "orig_size": 38,
+      "recomp_size": 38,
       "match_pct": 100.0,
       "matchable": true
     },

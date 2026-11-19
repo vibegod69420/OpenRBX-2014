@@ -17,6 +17,7 @@ public:
 	};
 
 	void*initialize();
+	void*initializeFaces();
 	// AUTO-GENERATED METHODS
 };
 

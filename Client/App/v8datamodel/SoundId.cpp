@@ -44,6 +44,25 @@ int SoundId::sub_997830() const
 	return *(int*)((char*)this + 0x38) / divisor;
 }
 
+struct SoundIdNode_997800
+{
+	virtual int vfunc0();
+	virtual int getType() const;
+	int pad;
+	SoundIdNode_997800* next;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00997800
+void* SoundId::sub_997800() const
+{
+	SoundIdNode_997800* node = *(SoundIdNode_997800**)((char*)this + 0xBC);
+	while (node->getType() != 7)
+	{
+		node = node->next;
+	}
+	return node;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Soundscape

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 15:03:01 UTC",
+ "updated_at": "2026-11-19 15:12:04 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 8.4891,
- "implemented_total": 796,
- "function_annotations": 796,
+ "matchable_coverage_pct": 8.5318,
+ "implemented_total": 800,
+ "function_annotations": 800,
  "stub_annotations": 0,
- "perfect_100_count": 795,
- "matched_real_functions": 795,
+ "perfect_100_count": 799,
+ "matched_real_functions": 799,
  "average_match_pct": 99.88,
- "overall_function_coverage_pct": 1.96,
- "overall_byte_coverage_pct": 0.3035,
+ "overall_function_coverage_pct": 1.9699,
+ "overall_byte_coverage_pct": 0.3055,
  "usage": {
-  "calls_24h": 5385,
+  "calls_24h": 5429,
   "failures_24h": 0,
-  "completion_tokens_24h": 62102992,
-  "reasoning_tokens_24h": 60922731,
-  "avg_latency_s": 204.3
+  "completion_tokens_24h": 62562743,
+  "reasoning_tokens_24h": 61376343,
+  "avg_latency_s": 204.2
  },
- "functions_total": 796,
+ "functions_total": 800,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 318,
-   "functions": 319,
-   "bytes": 9111
+   "matched": 320,
+   "functions": 321,
+   "bytes": 9202
   },
   {
    "name": "App/v8world",
@@ -54,9 +54,9 @@
   },
   {
    "name": "App/v8kernel",
-   "matched": 62,
-   "functions": 62,
-   "bytes": 2021
+   "matched": 63,
+   "functions": 63,
+   "bytes": 2071
   },
   {
    "name": "Rendering/g3d",
@@ -66,9 +66,9 @@
   },
   {
    "name": "Rendering/GfxCore",
-   "matched": 39,
-   "functions": 39,
-   "bytes": 1452
+   "matched": 40,
+   "functions": 40,
+   "bytes": 1506
   },
   {
    "name": "App/script",
@@ -4341,9 +4341,39 @@
    "matched": 795,
    "implemented": 796,
    "pct": 8.4891
+  },
+  {
+   "t": "2026-11-19 15:12:04 UTC",
+   "matched": 799,
+   "implemented": 800,
+   "pct": 8.5318
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T15:08:28",
+   "address": "0x005f5070",
+   "name": "RBX::Graphics::VertexLayout::initGLDrawIndirect",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T15:06:56",
+   "address": "0x005d5960",
+   "name": "btConvexPolyhedron::initializeFaces",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T15:06:41",
+   "address": "0x006d13a0",
+   "name": "RBX::CircleRadialNormal::getCrossUpNormal",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T15:03:20",
+   "address": "0x00997800",
+   "name": "RBX::Soundscape::SoundId::sub_997800",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T14:58:37",
    "address": "0x00cb9810",
@@ -5039,31 +5069,7 @@
    "address": "0x00ccfe70",
    "name": "RBX::Network::ReferencePropertyChangedItem::getCurrentMicroseconds",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T09:27:21",
-   "address": "0x00b5e680",
-   "name": "RBX::RevoluteLink::dirty",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T08:58:39",
-   "address": "0x00cc7750",
-   "name": "RakNet::PluginInterface2::Sub_CC7750",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T08:45:07",
-   "address": "0x0079f500",
-   "name": "RBX::Scripting::DebuggerBreakpoint::sub_79F500",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T08:16:17",
-   "address": "0x00cbbe60",
-   "name": "~MarkerItem",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 35.6
+ "match_rate_per_hour": 35.54
 }

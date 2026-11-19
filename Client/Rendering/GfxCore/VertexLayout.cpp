@@ -68,6 +68,27 @@ bool VertexLayout::initGLBindFragDataLocationIndexed()
 	return false;
 }
 
+extern void* g_glDrawArraysIndirect;
+extern void* g_glDrawElementsIndirect;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f5070
+bool VertexLayout::initGLDrawIndirect()
+{
+	void* drawArraysProc = g_glGetProcAddress("glDrawArraysIndirect");
+	g_glDrawArraysIndirect = drawArraysProc;
+	bool missingDrawArrays = (drawArraysProc == 0);
+
+	void* drawElementsProc = g_glGetProcAddress("glDrawElementsIndirect");
+	g_glDrawElementsIndirect = drawElementsProc;
+
+	if (drawElementsProc == 0)
+		return true;
+	if (missingDrawArrays)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

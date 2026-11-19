@@ -20,6 +20,7 @@ public:
 	bool initAppleBufferExtensions();
 	bool initAppleTextureExtensions();
 	bool initGLBindFragDataLocationIndexed();
+	bool initGLDrawIndirect();
 	// AUTO-GENERATED METHODS
 };
 
