@@ -18,6 +18,7 @@ public:
 
 	void advanceStateIndex();
 	void*allocFromPool();
+	void*allocateFromPool();
 	// AUTO-GENERATED METHODS
 };
 

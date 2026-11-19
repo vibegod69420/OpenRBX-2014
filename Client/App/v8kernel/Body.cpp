@@ -58,6 +58,37 @@ void* Body::allocFromPool()
 	return node;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00ba9770
+void* Body::allocateFromPool()
+{
+	BodyPool* pool = BodyPool::get();
+	pool->lock();
+
+	void* node = *(void**)((char*)pool + 8);
+	if (node)
+	{
+		*(void**)((char*)pool + 8) = *(void**)node;
+	}
+	else
+	{
+		node = ((BodyPool*)((char*)pool + 8))->allocSlow();
+	}
+
+	long oldState = _InterlockedExchangeAdd((long volatile*)pool, 0x80000000);
+	if ((oldState & 0x40000000) == 0)
+	{
+		if (oldState > (long)0x80000000)
+		{
+			if (_interlockedbittestandset((long volatile*)pool, 30) == 0)
+			{
+				SetEvent(pool->getWakeEvent());
+			}
+		}
+	}
+
+	return node;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
