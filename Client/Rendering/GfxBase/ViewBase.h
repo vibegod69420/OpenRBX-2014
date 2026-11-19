@@ -19,6 +19,7 @@ public:
 	void dispose();
 	int getUnknown();
 	float getCurrentEntryFloat();
+	int getCurrentEntryInt();
 	// AUTO-GENERATED METHODS
 };
 

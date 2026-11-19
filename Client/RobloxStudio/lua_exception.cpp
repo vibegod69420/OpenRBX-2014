@@ -31,6 +31,12 @@ int __cdecl lua_exception::getType()
     return *(unsigned char*)((char*)this + 6);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a37aa0
+int __cdecl lua_exception::getLevel()
+{
+	return *(unsigned char*)((char*)this + 0x38);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

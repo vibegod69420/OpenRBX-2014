@@ -22,6 +22,12 @@ int TypedStatsItem::derefInt_01e0(const int* p)
 	return *p;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00682000
+int TypedStatsItem::checkField17C() const
+{
+	return *(const int*)((const char*)this + 0x17C) != 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

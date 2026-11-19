@@ -20,6 +20,7 @@ public:
 	int __cdecl getCode();
 	int __cdecl getLine();
 	int __cdecl getType();
+	int __cdecl getLevel();
 	// AUTO-GENERATED METHODS
 };
 

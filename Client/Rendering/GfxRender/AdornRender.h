@@ -20,6 +20,7 @@ public:
 
 	const int* getMemberPtr24() const;
 	static int derefInt(const int* p);
+	static int derefInt_3960(const int* p);
 	// AUTO-GENERATED METHODS
 };
 

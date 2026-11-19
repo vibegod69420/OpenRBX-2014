@@ -25,6 +25,7 @@ public:
 	int getField74() const;
 	int getGlobal_5850() const;
 	bool getSubFlagE0_110() const;
+	float getSubFloatE0_11C() const;
 	// AUTO-GENERATED METHODS
 };
 

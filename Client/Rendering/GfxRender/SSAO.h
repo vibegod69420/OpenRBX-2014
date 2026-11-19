@@ -20,6 +20,7 @@ public:
 	static int derefInt(const int* p);
 	static int derefInt_67a0(const int* p);
 	int getUnk3C();
+	int getUnk3C_74b0();
 	// AUTO-GENERATED METHODS
 };
 

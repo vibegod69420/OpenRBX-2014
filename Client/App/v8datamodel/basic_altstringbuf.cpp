@@ -12,6 +12,14 @@ void basic_altstringbuf::BasicAltStringBuf_Thunk_E10140()
 	BasicAltStringBuf_Thunk_E10140_Import(this);
 }
 
+__declspec(dllimport) void __stdcall BasicAltStringBuf_Thunk_E100D4_Import(basic_altstringbuf*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00cf4f80
+void basic_altstringbuf::BasicAltStringBuf_Thunk_E100D4()
+{
+	BasicAltStringBuf_Thunk_E100D4_Import(this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

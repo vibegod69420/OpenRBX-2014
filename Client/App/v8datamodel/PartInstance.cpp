@@ -28,6 +28,12 @@ bool PartInstance::getSubFlagE0_110() const
 	return subb_00e0_0110->val;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00892470
+float PartInstance::getSubFloatE0_11C() const
+{
+	return *(float*)((char*)subb_00e0_0110 + 0x11C);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

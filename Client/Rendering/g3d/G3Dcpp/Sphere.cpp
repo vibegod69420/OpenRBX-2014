@@ -14,6 +14,11 @@ double Sphere::getGlobalDouble2() {
     return **reinterpret_cast<double**>(0x00e10444);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006e0de0
+float Sphere::getGlobalFloat() {
+    return **reinterpret_cast<float**>(0x00e1043c);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace G3D

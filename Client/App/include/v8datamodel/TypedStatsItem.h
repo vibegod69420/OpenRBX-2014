@@ -20,6 +20,7 @@ public:
 	int getField04() const;
 	static int derefInt(const int* p);
 	static int derefInt_01e0(const int* p);
+	int checkField17C() const;
 	// AUTO-GENERATED METHODS
 };
 

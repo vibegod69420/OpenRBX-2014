@@ -18,6 +18,7 @@ public:
 
 	double getGlobalDouble();
 	double getGlobalDouble2();
+	float getGlobalFloat();
 	// AUTO-GENERATED METHODS
 };
 

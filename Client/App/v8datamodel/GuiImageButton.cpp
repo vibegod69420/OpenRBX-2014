@@ -29,6 +29,13 @@ bool GuiImageButton::isHoverState() const
 		&& *(const int*)((const char*)this + 0x64) == 1;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00873c70
+bool GuiImageButton::isDownState() const
+{
+	return *(const int*)((const char*)this + 0x68) == 2
+		&& *(const int*)((const char*)this + 0x64) == 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

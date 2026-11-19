@@ -17,6 +17,7 @@ public:
 	};
 
 	void* getSkateboardController();
+	bool getFlag0078();
 	// AUTO-GENERATED METHODS
 };
 

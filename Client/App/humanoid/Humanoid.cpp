@@ -30,6 +30,21 @@ void __cdecl Humanoid::dispatch(int arg)
 	thunk->func(thunk->target + thunk->offset, &arg);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x009d9120
+float Humanoid::getUnknown200Float()
+{
+	void* p = *reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 0x200);
+	if (p)
+	{
+		typedef float (__thiscall *VFunc)(void*);
+		VFunc* vtable = *reinterpret_cast<VFunc**>(p);
+		return vtable[12](p);
+	}
+
+	int value = 0;
+	return *reinterpret_cast<float*>(&value);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -27,6 +27,23 @@ void* SkateboardPlatform::getSkateboardController()
 	return a->ptr_0104->ptr_0028;
 }
 
+namespace {
+
+struct SkateboardPlatform_PtrE0
+{
+	char pad_0000[0x78];
+	bool flag_0078;
+};
+
+} // namespace
+
+// FUNCTION: ROBLOXSTUDIO 0x00892990
+bool SkateboardPlatform::getFlag0078()
+{
+	SkateboardPlatform_PtrE0* ptr = *(SkateboardPlatform_PtrE0**)((char*)this + 0xE0);
+	return ptr->flag_0078;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

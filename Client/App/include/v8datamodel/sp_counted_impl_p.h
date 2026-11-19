@@ -22,6 +22,7 @@ public:
 	void dispose();
 	void __cdecl invoke();
 	void __cdecl invoke(void* arg);
+	void __cdecl invoke(void* a, void* b);
 	// AUTO-GENERATED METHODS
 };
 

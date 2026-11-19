@@ -32,6 +32,13 @@ float Motor6D::getAngle()
 	return *(float*)(internalData + 0xA8);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00913d10
+float Motor6D::getTargetAngle()
+{
+    char* internalData = *(char**)((char*)this + 0x8C);
+    return *(float*)(internalData + 0xD4);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

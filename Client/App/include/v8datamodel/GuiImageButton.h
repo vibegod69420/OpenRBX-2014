@@ -23,6 +23,7 @@ public:
 	int getFieldA4() const;
 	int getFieldA0() const;
 	bool isHoverState() const;
+	bool isDownState() const;
 	// AUTO-GENERATED METHODS
 };
 
