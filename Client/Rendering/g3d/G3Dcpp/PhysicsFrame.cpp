@@ -70,6 +70,28 @@ int* PhysicsFrame::getXAxisStorage()
 	return storage.data;
 }
 
+struct PhysicsFrameYAxisStorage
+{
+	int data[3];
+	int initialized;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x006deac0
+int* PhysicsFrame::getYAxisStorage()
+{
+	static PhysicsFrameYAxisStorage storage;
+
+	if ((storage.initialized & 1) == 0)
+	{
+		storage.initialized |= 1;
+		storage.data[0] = 0;
+		storage.data[1] = 0x3f800000;
+		storage.data[2] = 0;
+	}
+
+	return storage.data;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace G3D

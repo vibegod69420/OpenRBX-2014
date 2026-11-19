@@ -18,6 +18,7 @@ public:
 	};
 
 	bool initAppleBufferExtensions();
+	bool initAppleTextureExtensions();
 	// AUTO-GENERATED METHODS
 };
 

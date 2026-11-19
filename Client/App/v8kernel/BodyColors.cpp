@@ -41,6 +41,24 @@ BodyColorsGlobal* BodyColors::getContextOwner() const
 	return 0;
 }
 
+class BodyColorsBase
+{
+public:
+	void init();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x009fb9e0
+BodyColors::BodyColors()
+{
+	((BodyColorsBase*)this)->init();
+
+	*(int*)this = 0x00E9AD24;
+	*(int*)((char*)this + 4) = 0x00E9ADA8;
+	*(int*)((char*)this + 0x18) = 0x00E9ADB0;
+	*(int*)((char*)this + 0x1C) = 0x00E9ADBC;
+	*(int*)((char*)this + 0x64) = 0x00E9ADCC;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

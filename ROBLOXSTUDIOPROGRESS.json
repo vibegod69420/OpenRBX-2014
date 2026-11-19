@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 11:32:22 UTC",
+  "updated_at": "2026-11-19 11:40:46 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,20 +16,20 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 7.7202,
-  "implemented_total": 724,
-  "function_annotations": 724,
+  "matchable_coverage_pct": 7.827,
+  "implemented_total": 734,
+  "function_annotations": 734,
   "stub_annotations": 0,
-  "perfect_100_count": 723,
-  "matched_real_functions": 723,
+  "perfect_100_count": 733,
+  "matched_real_functions": 733,
   "average_match_pct": 99.87,
-  "overall_function_coverage_pct": 1.7825,
-  "overall_byte_coverage_pct": 0.2539,
+  "overall_function_coverage_pct": 1.8072,
+  "overall_byte_coverage_pct": 0.2588,
   "usage": {
-    "calls_24h": 4614,
+    "calls_24h": 4649,
     "failures_24h": 0,
-    "completion_tokens_24h": 52576997,
-    "reasoning_tokens_24h": 51605783,
+    "completion_tokens_24h": 52960657,
+    "reasoning_tokens_24h": 51984646,
     "avg_latency_s": 199.3
   },
   "functions": [
@@ -1959,6 +1959,17 @@
       "matchable": true
     },
     {
+      "address": "0x005f4900",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::VertexLayout::initAppleTextureExtensions",
+      "mangled": "?initAppleBufferExtensions@VertexLayout@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/VertexLayout.cpp",
+      "orig_size": 54,
+      "recomp_size": 54,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00605980",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::ContextGL::assignIfNull",
@@ -2263,6 +2274,17 @@
       "file": "Client/Rendering/GfxRender/FastClusterBinding.cpp",
       "orig_size": 56,
       "recomp_size": 56,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00620950",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::FastClusterBinding::getClusterData",
+      "mangled": "?getClusterData@FastClusterBinding@Graphics@RBX@@QAEPAXXZ",
+      "file": "Client/Rendering/GfxRender/FastClusterBinding.cpp",
+      "orig_size": 49,
+      "recomp_size": 10,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -3004,6 +3026,17 @@
       "matchable": true
     },
     {
+      "address": "0x006d1320",
+      "kind": "FUNCTION",
+      "name": "RBX::CircleRadialNormal::getRadialNormal",
+      "mangled": "?getRadialNormal@CircleRadialNormal@RBX@@QAEABUVector3@2@XZ",
+      "file": "Client/App/v8datamodel/CircleRadialNormal.cpp",
+      "orig_size": 53,
+      "recomp_size": 53,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x006dea00",
       "kind": "FUNCTION",
       "name": "G3D::PhysicsFrame::getZeroStorage",
@@ -3030,6 +3063,17 @@
       "kind": "FUNCTION",
       "name": "G3D::PhysicsFrame::getXAxisStorage",
       "mangled": "?getXAxisStorage@PhysicsFrame@G3D@@QAEPAHXZ",
+      "file": "Client/Rendering/g3d/G3Dcpp/PhysicsFrame.cpp",
+      "orig_size": 53,
+      "recomp_size": 53,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x006deac0",
+      "kind": "FUNCTION",
+      "name": "G3D::PhysicsFrame::getYAxisStorage",
+      "mangled": "?getYAxisStorage@PhysicsFrame@G3D@@QAEPAHXZ",
       "file": "Client/Rendering/g3d/G3Dcpp/PhysicsFrame.cpp",
       "orig_size": 53,
       "recomp_size": 53,
@@ -5413,6 +5457,17 @@
       "matchable": true
     },
     {
+      "address": "0x009cf710",
+      "kind": "FUNCTION",
+      "name": "isDescendantOf",
+      "mangled": "?getTarget@SelectionPointLasso@RBX@@QAEPAXXZ",
+      "file": "Client/App/v8datamodel/SelectionPointLasso.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x009d6ff0",
       "kind": "FUNCTION",
       "name": "RBX::HUMAN::HumanoidState::dispose",
@@ -5501,6 +5556,17 @@
       "matchable": true
     },
     {
+      "address": "0x009fb9e0",
+      "kind": "FUNCTION",
+      "name": "RBX::BodyColors::BodyColors",
+      "mangled": "??0BodyColors@RBX@@QAE@XZ",
+      "file": "Client/App/v8kernel/BodyColors.cpp",
+      "orig_size": 46,
+      "recomp_size": 46,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x009fe0f0",
       "kind": "FUNCTION",
       "name": "RBX::CharacterMesh::destroyInstance",
@@ -5552,6 +5618,17 @@
       "file": "Client/App/util/PathInterpolatedCFrame.cpp",
       "orig_size": 75,
       "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00a0f5d0",
+      "kind": "FUNCTION",
+      "name": "RBX::PathInterpolatedCFrame::PathInterpolatedCFrame",
+      "mangled": "??0PathInterpolatedCFrame@RBX@@QAE@XZ",
+      "file": "Client/App/util/PathInterpolatedCFrame.cpp",
+      "orig_size": 44,
+      "recomp_size": 44,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -6975,6 +7052,17 @@
       "matchable": true
     },
     {
+      "address": "0x00bcd220",
+      "kind": "FUNCTION",
+      "name": "PolyContact_sub_C18F70",
+      "mangled": "?computeContact@PolyContact@RBX@@QAAXPAX0@Z",
+      "file": "Client/App/v8world/PolyContact.cpp",
+      "orig_size": 48,
+      "recomp_size": 48,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00bd3030",
       "kind": "FUNCTION",
       "name": "EdgeEdgePairIdentity",
@@ -7173,6 +7261,17 @@
       "matchable": true
     },
     {
+      "address": "0x00c03000",
+      "kind": "FUNCTION",
+      "name": "RBX::Point::release",
+      "mangled": "?release@Point@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/Point.cpp",
+      "orig_size": 50,
+      "recomp_size": 50,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00c045a0",
       "kind": "FUNCTION",
       "name": "destroy",
@@ -7279,6 +7378,17 @@
       "file": "Client/App/humanoid/Swimming.cpp",
       "orig_size": 38,
       "recomp_size": 38,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c18100",
+      "kind": "FUNCTION",
+      "name": "RBX::HUMAN::Swimming::setState",
+      "mangled": "?setState@Swimming@HUMAN@RBX@@QAAXHHH@Z",
+      "file": "Client/App/humanoid/Swimming.cpp",
+      "orig_size": 39,
+      "recomp_size": 39,
       "match_pct": 100.0,
       "matchable": true
     },

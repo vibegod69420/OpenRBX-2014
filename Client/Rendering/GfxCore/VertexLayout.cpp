@@ -25,6 +25,28 @@ bool VertexLayout::initAppleBufferExtensions()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005f4900
+extern void* g_glGetTexParameterPointervAPPLE;
+extern void* g_glTextureRangeAPPLE;
+
+bool VertexLayout::initAppleTextureExtensions()
+{
+    void* first = g_glGetProcAddress("glGetTexParameterPointervAPPLE");
+    g_glGetTexParameterPointervAPPLE = first;
+    unsigned char bl = (first == 0);
+
+    void* second = g_glGetProcAddress("glTextureRangeAPPLE");
+    g_glTextureRangeAPPLE = second;
+
+    if (second == 0)
+        return true;
+
+    if (bl)
+        return true;
+
+    return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

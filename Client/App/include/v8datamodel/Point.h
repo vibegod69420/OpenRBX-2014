@@ -17,6 +17,7 @@ public:
 	};
 
 	void update();
+	void release();
 	// AUTO-GENERATED METHODS
 };
 

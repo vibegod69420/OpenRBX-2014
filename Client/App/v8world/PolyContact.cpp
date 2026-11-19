@@ -43,6 +43,19 @@ void __cdecl PolyContact::init(void* target, void* arg2, void* arg3)
 	*(void**)(p + 0x04) = 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00bcd220
+void* PolyContact_sub_C18F70(void* a, void* b);
+
+void __cdecl PolyContact::computeContact(void* out, void* param)
+{
+	void* result = PolyContact_sub_C18F70(*(void**)((char*)this + 0x30), param);
+
+	*(int*)((char*)out + 0x10) = -1;
+	*(int*)((char*)out + 0x14) = -1;
+	*(int*)out = 4;
+	*(void**)((char*)out + 8) = result;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

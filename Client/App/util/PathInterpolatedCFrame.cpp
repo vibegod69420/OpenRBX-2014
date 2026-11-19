@@ -52,6 +52,23 @@ float PathInterpolatedCFrame::getFieldE0_118() const
 	return *reinterpret_cast<const float*>(ptr + 0x118);
 }
 
+void* __fastcall PathInterpolatedCFrame_BuyHeadNode(void* list);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a0f5d0
+PathInterpolatedCFrame::PathInterpolatedCFrame()
+{
+	char* base = reinterpret_cast<char*>(this);
+
+	*reinterpret_cast<void**>(base + 0x04) = 0;
+	*reinterpret_cast<void**>(base + 0x08) = 0;
+
+	void* node = PathInterpolatedCFrame_BuyHeadNode(base + 0x04);
+
+	*reinterpret_cast<void**>(base + 0x04) = node;
+	*reinterpret_cast<void* volatile*>(base + 0x0C) = 0;
+	*reinterpret_cast<void**>(base + 0x0C) = node;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

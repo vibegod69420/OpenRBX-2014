@@ -86,6 +86,12 @@ void FastClusterBinding::onCoordinateFrameChanged()
 	*(unsigned char*)((char*)(*(FastClusterEntity**)((char*)this + 0x1C)) + 0xCE) = 1;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00620950
+void* FastClusterBinding::getClusterData()
+{
+	return (char*)*(void**)((char*)this + 0xC8) + 8;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

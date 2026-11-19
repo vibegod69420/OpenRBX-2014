@@ -26,6 +26,7 @@ public:
 	double getField98() const;
 	void*getField20() const;
 	float getFieldE0_118() const;
+	PathInterpolatedCFrame();
 	// AUTO-GENERATED METHODS
 };
 

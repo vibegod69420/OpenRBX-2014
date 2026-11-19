@@ -18,6 +18,7 @@ public:
 	};
 
 	void __cdecl onEvent(int* event);
+	void __cdecl setState(int a, int b, int c);
 	// AUTO-GENERATED METHODS
 };
 

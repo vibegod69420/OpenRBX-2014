@@ -20,6 +20,7 @@ public:
 	void onTransparencyChanged();
 	void onSpecialShapeChanged();
 	void onCoordinateFrameChanged();
+	void*getClusterData();
 	// AUTO-GENERATED METHODS
 };
 
