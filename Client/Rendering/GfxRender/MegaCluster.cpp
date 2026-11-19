@@ -30,6 +30,33 @@ int MegaCluster::getCount() const
 	return delta / 56;
 }
 
+class MegaClusterDevice
+{
+public:
+	virtual void m0();
+	virtual void m1();
+	virtual void m2();
+	virtual void m3();
+	virtual void m4();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0061c020
+void MegaCluster::unload()
+{
+	MegaClusterDevice* device = *(MegaClusterDevice**)((char*)this + 4);
+	if (device != 0)
+	{
+		if (*(int*)((char*)this + 0x44) != 0)
+		{
+			device->m4();
+
+			*(int*)((char*)this + 0x4c) = 0;
+			*(int*)((char*)this + 0x48) = 0;
+			*(int*)((char*)this + 0x44) = 0;
+		}
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

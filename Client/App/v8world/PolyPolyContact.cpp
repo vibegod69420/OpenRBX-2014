@@ -82,6 +82,30 @@ int __cdecl PolyPolyContact::getSeparatingEdgeCandidate()
 	return result;
 }
 
+void __cdecl sub_BC88E0(void*, const char*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00c18b80
+void __cdecl PolyPolyContact::accumulate(int value)
+{
+	unsigned char* obj = *(unsigned char**)this;
+	int count = *(int*)((char*)this + 0x24);
+	int v = value;
+	int limit = obj[0x4b];
+	int newCount = count + v;
+
+	if (newCount > limit)
+	{
+		if (newCount >= 250)
+		{
+			sub_BC88E0(*(void**)((char*)this + 0x0C), "function or expression too complex");
+		}
+
+		(*(unsigned char**)this)[0x4b] = (unsigned char)newCount;
+	}
+
+	*(int*)((char*)this + 0x24) += v;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

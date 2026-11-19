@@ -21,6 +21,7 @@ public:
 	static int derefInt_baa0(const int* p);
 	int getSize() const;
 	int getCount() const;
+	void unload();
 	// AUTO-GENERATED METHODS
 };
 
