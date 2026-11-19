@@ -20,6 +20,7 @@ public:
 
 	const Vector3&getNormal();
 	const Vector3&getUpNormal();
+	const Vector3&getCrossNormal();
 	// AUTO-GENERATED METHODS
 };
 

@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	bool initAppleBufferExtensions();
 	// AUTO-GENERATED METHODS
 };
 

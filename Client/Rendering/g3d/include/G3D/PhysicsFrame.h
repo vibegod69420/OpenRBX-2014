@@ -18,6 +18,7 @@ public:
 
 	int*getZeroStorage();
 	int*getOneStorage();
+	int*getXAxisStorage();
 	// AUTO-GENERATED METHODS
 };
 
