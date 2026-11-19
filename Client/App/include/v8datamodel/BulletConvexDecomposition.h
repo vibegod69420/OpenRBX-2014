@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	BulletConvexDecomposition();
 	// AUTO-GENERATED METHODS
 };
 
