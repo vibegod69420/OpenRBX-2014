@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 03:31:19 UTC",
+  "updated_at": "2026-11-19 03:39:14 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 5.8195,
-  "implemented_total": 545,
-  "function_annotations": 545,
+  "matchable_coverage_pct": 5.8409,
+  "implemented_total": 547,
+  "function_annotations": 547,
   "stub_annotations": 0,
-  "perfect_100_count": 545,
-  "matched_real_functions": 545,
+  "perfect_100_count": 547,
+  "matched_real_functions": 547,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 1.3437,
-  "overall_byte_coverage_pct": 0.1581,
+  "overall_function_coverage_pct": 1.3486,
+  "overall_byte_coverage_pct": 0.1599,
   "usage": {
-    "calls_24h": 2604,
+    "calls_24h": 2627,
     "failures_24h": 0,
-    "completion_tokens_24h": 28415790,
-    "reasoning_tokens_24h": 27934527,
-    "avg_latency_s": 191.1
+    "completion_tokens_24h": 28744080,
+    "reasoning_tokens_24h": 28255816,
+    "avg_latency_s": 191.5
   },
   "functions": [
     {
@@ -5138,6 +5138,17 @@
       "matchable": true
     },
     {
+      "address": "0x00ba6fb0",
+      "kind": "FUNCTION",
+      "name": "RBX::SleepStage::updateSleepState",
+      "mangled": "?updateSleepState@SleepStage@RBX@@QAEXXZ",
+      "file": "Client/App/v8world/SleepStage.cpp",
+      "orig_size": 86,
+      "recomp_size": 86,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00ba8ed0",
       "kind": "FUNCTION",
       "name": "RBX::Body::advanceStateIndex",
@@ -5651,6 +5662,17 @@
       "file": "Client/App/v8world/PolyPolyContact.cpp",
       "orig_size": 119,
       "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c5cfa0",
+      "kind": "FUNCTION",
+      "name": "_InterlockedCompareExchange",
+      "mangled": "?acquire@PhysicsPacketCache@Network@RBX@@QAEXXZ",
+      "file": "Client/Network/PhysicsPacketCache.cpp",
+      "orig_size": 86,
+      "recomp_size": 86,
       "match_pct": 100.0,
       "matchable": true
     },
