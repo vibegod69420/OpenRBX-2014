@@ -20,6 +20,7 @@ public:
 	void sync();
 	filtering_stream();
 	filtering_stream*sub_a2b610();
+	void sub_a2cb90();
 	// AUTO-GENERATED METHODS
 };
 

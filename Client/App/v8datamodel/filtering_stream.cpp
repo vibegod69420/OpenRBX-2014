@@ -110,6 +110,25 @@ filtering_stream* filtering_stream::sub_a2b610()
 	return this;
 }
 
+struct filtering_stream_buffer_88
+{
+	char _pad[0x88];
+	unsigned char flag; // 0x88
+
+	void sub_a2be60(); // 0xa2be60
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00a2cb90
+void filtering_stream::sub_a2cb90()
+{
+	filtering_stream_buffer_88* buffer = (filtering_stream_buffer_88*)_vtable_or_head;
+	if (buffer->flag)
+	{
+		buffer->sub_a2be60();
+		buffer->flag = 0;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std
