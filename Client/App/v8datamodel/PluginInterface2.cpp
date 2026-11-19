@@ -38,6 +38,29 @@ void __cdecl PluginInterface2::Sub_CC76F0(int* out)
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00cc7750
+void __cdecl PluginInterface2::Sub_CC7750(int value)
+{
+	if ((unsigned int)(value - 1) <= 2)
+	{
+		((PluginInterface2CallSite*)this)->Call(&value, 2, 1);
+	}
+	else
+	{
+		unsigned char temp = 0;
+		((PluginInterface2CallSite*)this)->Call((int*)&temp, 2, 1);
+
+		if (PluginInterface2_CheckC85D70() || PluginInterface2_CheckCA6930())
+		{
+			((PluginInterface2CallSite*)this)->Call(&value, 5, 1);
+		}
+		else
+		{
+			((PluginInterface2CallSite*)this)->Call(&value, 4, 1);
+		}
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RakNet

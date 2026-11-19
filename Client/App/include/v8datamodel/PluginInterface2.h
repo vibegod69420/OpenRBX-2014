@@ -18,6 +18,7 @@ public:
 
 	bool IsEmpty() const;
 	void __cdecl Sub_CC76F0(int* out);
+	void __cdecl Sub_CC7750(int value);
 	// AUTO-GENERATED METHODS
 };
 
