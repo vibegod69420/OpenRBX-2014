@@ -69,6 +69,27 @@ PathInterpolatedCFrame::PathInterpolatedCFrame()
 	*reinterpret_cast<void**>(base + 0x0C) = node;
 }
 
+extern unsigned char g_IMovingNotifyWakeFlag; // 0x012FC99E
+void __cdecl RBX_LogIMovingNotifyWake(int level, const char* fmt, const void* part); // 0x006B8A90
+void __fastcall RBX_PathInterpolatedCFrame_OnWake(PathInterpolatedCFrame* self); // 0x00A0FAD0
+
+// FUNCTION: ROBLOXSTUDIO 0x00a0fb50
+void PathInterpolatedCFrame::notifyMoved()
+{
+	int& wakeCounter = *reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x0C);
+	if (wakeCounter == 0)
+	{
+		unsigned char flag = g_IMovingNotifyWakeFlag;
+		if (flag)
+			RBX_LogIMovingNotifyWake(flag, "IMoving::notifyMoved wakes part %p", this);
+
+		wakeCounter = 30;
+		return RBX_PathInterpolatedCFrame_OnWake(this);
+	}
+
+	wakeCounter = 30;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

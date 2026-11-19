@@ -47,6 +47,27 @@ bool VertexLayout::initAppleTextureExtensions()
     return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005f4cf0
+extern void* g_glBindFragDataLocationIndexed;
+extern void* g_glGetFragDataIndex;
+
+bool VertexLayout::initGLBindFragDataLocationIndexed()
+{
+	void* bindProc = g_glGetProcAddress("glBindFragDataLocationIndexed");
+	g_glBindFragDataLocationIndexed = bindProc;
+	bool missingBind = (bindProc == 0);
+
+	void* indexProc = g_glGetProcAddress("glGetFragDataIndex");
+	g_glGetFragDataIndex = indexProc;
+
+	if (indexProc == 0)
+		return true;
+	if (missingBind)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

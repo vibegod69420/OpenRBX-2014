@@ -92,6 +92,28 @@ int* PhysicsFrame::getYAxisStorage()
 	return storage.data;
 }
 
+struct PhysicsFrameMinFiniteStorage
+{
+	int data[3];
+	int initialized;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x006dec40
+int* PhysicsFrame::getMinFiniteStorage()
+{
+	static PhysicsFrameMinFiniteStorage storage;
+
+	if ((storage.initialized & 1) == 0)
+	{
+		storage.initialized |= 1;
+		storage.data[0] = 0xff7fffff;
+		storage.data[1] = 0xff7fffff;
+		storage.data[2] = 0xff7fffff;
+	}
+
+	return storage.data;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace G3D

@@ -19,6 +19,7 @@ public:
 
 	bool initAppleBufferExtensions();
 	bool initAppleTextureExtensions();
+	bool initGLBindFragDataLocationIndexed();
 	// AUTO-GENERATED METHODS
 };
 

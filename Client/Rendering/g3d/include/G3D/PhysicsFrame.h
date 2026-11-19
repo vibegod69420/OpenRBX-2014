@@ -20,6 +20,7 @@ public:
 	int*getOneStorage();
 	int*getXAxisStorage();
 	int*getYAxisStorage();
+	int*getMinFiniteStorage();
 	// AUTO-GENERATED METHODS
 };
 

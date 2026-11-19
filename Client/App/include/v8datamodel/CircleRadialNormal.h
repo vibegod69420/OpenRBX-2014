@@ -22,6 +22,7 @@ public:
 	const Vector3&getUpNormal();
 	const Vector3&getCrossNormal();
 	const Vector3&getRadialNormal();
+	const Vector3&getUpRadialNormal();
 	// AUTO-GENERATED METHODS
 };
 

@@ -71,6 +71,21 @@ const Vector3& CircleRadialNormal::getRadialNormal()
 	return v;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006d1360
+const Vector3& CircleRadialNormal::getUpRadialNormal()
+{
+	static Vector3 v;
+	static int guard = 0;
+	if ((guard & 1) == 0)
+	{
+		guard |= 1;
+		v.x = 0.0f;
+		v.y = 0.7f;
+		v.z = 1.0f;
+	}
+	return v;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
