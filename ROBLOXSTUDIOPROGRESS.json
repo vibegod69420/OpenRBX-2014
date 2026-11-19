@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 05:54:58 UTC",
+  "updated_at": "2026-11-19 06:03:17 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 6.6204,
-  "implemented_total": 621,
-  "function_annotations": 621,
+  "matchable_coverage_pct": 6.6631,
+  "implemented_total": 625,
+  "function_annotations": 625,
   "stub_annotations": 0,
-  "perfect_100_count": 620,
-  "matched_real_functions": 620,
+  "perfect_100_count": 624,
+  "matched_real_functions": 624,
   "average_match_pct": 99.85,
-  "overall_function_coverage_pct": 1.5286,
-  "overall_byte_coverage_pct": 0.1852,
+  "overall_function_coverage_pct": 1.5384,
+  "overall_byte_coverage_pct": 0.189,
   "usage": {
-    "calls_24h": 3267,
+    "calls_24h": 3304,
     "failures_24h": 0,
-    "completion_tokens_24h": 35862621,
-    "reasoning_tokens_24h": 35261542,
-    "avg_latency_s": 192.3
+    "completion_tokens_24h": 36346260,
+    "reasoning_tokens_24h": 35734348,
+    "avg_latency_s": 192.7
   },
   "functions": [
     {
@@ -1970,6 +1970,17 @@
       "matchable": true
     },
     {
+      "address": "0x00619df0",
+      "kind": "FUNCTION",
+      "name": "RBX::GfxBinding::clear",
+      "mangled": "?clear@GfxBinding@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/GfxBinding.cpp",
+      "orig_size": 91,
+      "recomp_size": 91,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0061ba90",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::MegaCluster::derefInt",
@@ -2120,6 +2131,17 @@
       "file": "Client/App/v8world/BlockMesh.cpp",
       "orig_size": 54,
       "recomp_size": 54,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00629630",
+      "kind": "FUNCTION",
+      "name": "intrinsic",
+      "mangled": "?allocate@CylinderMesh@RBX@@QAEPAXXZ",
+      "file": "Client/App/v8world/CylinderMesh.cpp",
+      "orig_size": 89,
+      "recomp_size": 89,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -3033,6 +3055,17 @@
       "file": "Client/Rendering/g3d/G3Dcpp/Vector3.cpp",
       "orig_size": 30,
       "recomp_size": 30,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x007b4090",
+      "kind": "FUNCTION",
+      "name": "_InterlockedExchangeAdd",
+      "mangled": "?sub_007B4090@Vector3@G3D@@QAEPAXXZ",
+      "file": "Client/Rendering/g3d/G3Dcpp/Vector3.cpp",
+      "orig_size": 89,
+      "recomp_size": 89,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -5387,6 +5420,17 @@
       "file": "Client/App/gui/Widget.cpp",
       "orig_size": 56,
       "recomp_size": 56,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b2d3c0",
+      "kind": "FUNCTION",
+      "name": "?unbindAllActions@ContextActionService@RBX@@QAEXXZ",
+      "mangled": "?unbindAllActions@ContextActionService@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/ContextActionService.cpp",
+      "orig_size": 92,
+      "recomp_size": 92,
       "match_pct": 100.0,
       "matchable": true
     },

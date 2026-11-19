@@ -44,6 +44,47 @@ ContextActionService::~ContextActionService()
 	data->_Name._Bx._Buf[0] = 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b2d3c0
+struct ContextActionBoundString
+{
+	union
+	{
+		char _Buf[16];
+		char* _Ptr;
+	} _Bx;
+	unsigned int _Mysize;
+	unsigned int _Myres;
+};
+
+struct ContextActionBoundTree
+{
+	void* _Myhead;
+	void _Tidy();
+};
+
+void ContextActionService::unbindAllActions()
+{
+	::operator delete(*reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 0x34));
+
+	ContextActionBoundString* boundString = *reinterpret_cast<ContextActionBoundString**>(reinterpret_cast<char*>(this) + 0x30);
+	if (boundString)
+	{
+		if (boundString->_Myres >= 0x10)
+			::operator delete(boundString->_Bx._Ptr);
+
+		boundString->_Myres = 0x0F;
+		boundString->_Mysize = 0;
+		boundString->_Bx._Buf[0] = 0;
+		::operator delete(boundString);
+	}
+
+	ContextActionBoundTree* boundTree = reinterpret_cast<ContextActionBoundTree*>(reinterpret_cast<char*>(this) + 0x20);
+	boundTree->_Tidy();
+	::operator delete(boundTree->_Myhead);
+
+	*reinterpret_cast<void**>(this) = reinterpret_cast<void*>(0x00E33A28);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

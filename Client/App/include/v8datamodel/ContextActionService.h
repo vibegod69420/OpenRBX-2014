@@ -17,6 +17,7 @@ public:
 	};
 
 	~ContextActionService();
+	void unbindAllActions();
 	// AUTO-GENERATED METHODS
 };
 
