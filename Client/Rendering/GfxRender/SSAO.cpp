@@ -77,6 +77,32 @@ int SSAO::getUnk3C_74c0()
 	return 0;
 }
 
+struct SSAO_Unk3C_74d0
+{
+	int unk0;
+	int unk4;
+	int unk8;
+	int unkC;
+	int unk10;
+	int unk14;
+	int unk18;
+	int unk1C;
+	int unk20;
+	int unk24;
+	int unk28;
+	int unk2C;
+	int unk30;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x006974d0
+int SSAO::getUnk3C_74d0()
+{
+	SSAO_Unk3C_74d0* p = *(SSAO_Unk3C_74d0**)((char*)this + 0x3c);
+	if (p)
+		return p->unk30;
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

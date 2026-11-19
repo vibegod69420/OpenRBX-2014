@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 13:48:43 UTC",
+  "updated_at": "2026-11-19 13:57:25 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,20 +16,20 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 8.0619,
-  "implemented_total": 756,
-  "function_annotations": 756,
+  "matchable_coverage_pct": 8.1367,
+  "implemented_total": 763,
+  "function_annotations": 763,
   "stub_annotations": 0,
-  "perfect_100_count": 755,
-  "matched_real_functions": 755,
-  "average_match_pct": 99.87,
-  "overall_function_coverage_pct": 1.8614,
-  "overall_byte_coverage_pct": 0.2882,
+  "perfect_100_count": 762,
+  "matched_real_functions": 762,
+  "average_match_pct": 99.88,
+  "overall_function_coverage_pct": 1.8787,
+  "overall_byte_coverage_pct": 0.2898,
   "usage": {
-    "calls_24h": 5096,
+    "calls_24h": 5137,
     "failures_24h": 0,
-    "completion_tokens_24h": 59040434,
-    "reasoning_tokens_24h": 57918161,
+    "completion_tokens_24h": 59436347,
+    "reasoning_tokens_24h": 58302081,
     "avg_latency_s": 204.2
   },
   "functions": [
@@ -2839,6 +2839,17 @@
       "matchable": true
     },
     {
+      "address": "0x006974d0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::SSAO::getUnk3C_74d0",
+      "mangled": "?getUnk3C_74d0@SSAO@Graphics@RBX@@QAEHXZ",
+      "file": "Client/Rendering/GfxRender/SSAO.cpp",
+      "orig_size": 14,
+      "recomp_size": 14,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0069d470",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::TextureCompositor::destroyInstance",
@@ -3180,6 +3191,17 @@
       "matchable": true
     },
     {
+      "address": "0x006e07d0",
+      "kind": "FUNCTION",
+      "name": "G3D::Sphere::getStaticData",
+      "mangled": "?getStaticData@Sphere@G3D@@QAEPAXXZ",
+      "file": "Client/Rendering/g3d/G3Dcpp/Sphere.cpp",
+      "orig_size": 43,
+      "recomp_size": 43,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x006e0dc0",
       "kind": "FUNCTION",
       "name": "G3D::Sphere::getGlobalDouble",
@@ -3382,6 +3404,17 @@
       "kind": "FUNCTION",
       "name": "RBX::ViewBase::getCurrentEntryByte",
       "mangled": "?getCurrentEntryByte@ViewBase@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxBase/ViewBase.cpp",
+      "orig_size": 17,
+      "recomp_size": 17,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0076f480",
+      "kind": "FUNCTION",
+      "name": "RBX::ViewBase::getCurrentEntryInt2",
+      "mangled": "?getCurrentEntryInt2@ViewBase@RBX@@QAEHXZ",
       "file": "Client/Rendering/GfxBase/ViewBase.cpp",
       "orig_size": 17,
       "recomp_size": 17,
@@ -5633,6 +5666,17 @@
       "matchable": true
     },
     {
+      "address": "0x009d8730",
+      "kind": "FUNCTION",
+      "name": "RBX::Humanoid::getField280",
+      "mangled": "?getField280@Humanoid@RBX@@QBEHXZ",
+      "file": "Client/App/humanoid/Humanoid.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x009d9120",
       "kind": "FUNCTION",
       "name": "RBX::Humanoid::getUnknown200Float",
@@ -6616,6 +6660,17 @@
       "kind": "FUNCTION",
       "name": "RBX::Kernel::getSubField24_24",
       "mangled": "?getSubField24_24@Kernel@RBX@@QBEHXZ",
+      "file": "Client/App/v8kernel/Kernel.cpp",
+      "orig_size": 7,
+      "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b53570",
+      "kind": "FUNCTION",
+      "name": "RBX::Kernel::getSubField24_44",
+      "mangled": "?getSubField24_44@Kernel@RBX@@QBEHXZ",
       "file": "Client/App/v8kernel/Kernel.cpp",
       "orig_size": 7,
       "recomp_size": 7,
@@ -8097,6 +8152,17 @@
       "matchable": true
     },
     {
+      "address": "0x00cb97e0",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::ServerReplicator::getReplicator",
+      "mangled": "?getReplicator@ServerReplicator@Network@RBX@@QBEPAXXZ",
+      "file": "Client/Network/ServerReplicator.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00cbbe60",
       "kind": "FUNCTION",
       "name": "~MarkerItem",
@@ -8291,6 +8357,17 @@
       "file": "Client/Network/TagItem.cpp",
       "orig_size": 8,
       "recomp_size": 8,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00cf4f00",
+      "kind": "FUNCTION",
+      "name": "std::basic_altstringbuf::FreeHandle",
+      "mangled": "?FreeHandle@basic_altstringbuf@std@@QAEXXZ",
+      "file": "Client/App/v8datamodel/basic_altstringbuf.cpp",
+      "orig_size": 25,
+      "recomp_size": 25,
       "match_pct": 100.0,
       "matchable": true
     },

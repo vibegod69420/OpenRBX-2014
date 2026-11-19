@@ -18,6 +18,7 @@ public:
 
 	void BasicAltStringBuf_Thunk_E10140();
 	void BasicAltStringBuf_Thunk_E100D4();
+	void FreeHandle();
 	// AUTO-GENERATED METHODS
 };
 

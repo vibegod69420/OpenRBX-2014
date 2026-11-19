@@ -24,6 +24,20 @@ float Sphere::getGlobalFloat2() {
     return **reinterpret_cast<float**>(0x00e10448);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006e07d0
+void* Sphere::getStaticData()
+{
+	int guard = *reinterpret_cast<int*>(0x012DFB80);
+	if ((guard & 1) == 0)
+	{
+		guard |= 1;
+		*reinterpret_cast<int*>(0x012DFB80) = guard;
+		*reinterpret_cast<int*>(0x012DFB78) = 0;
+		*reinterpret_cast<int*>(0x012DFB7C) = 0;
+	}
+	return reinterpret_cast<void*>(0x012DFB78);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace G3D

@@ -21,6 +21,7 @@ public:
 	float getCurrentEntryFloat();
 	int getCurrentEntryInt();
 	bool getCurrentEntryByte();
+	int getCurrentEntryInt2();
 	// AUTO-GENERATED METHODS
 };
 

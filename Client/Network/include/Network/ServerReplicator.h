@@ -22,6 +22,7 @@ public:
 	int getField46AC() const;
 	int getGlobal_94e0() const;
 	void*getPtr1E90() const;
+	void*getReplicator() const;
 	// AUTO-GENERATED METHODS
 };
 

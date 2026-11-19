@@ -79,6 +79,15 @@ bool ViewBase::getCurrentEntryByte()
 	return *reinterpret_cast<const bool*>(arrayBase + (index << 6) + 0x24);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0076f480
+int ViewBase::getCurrentEntryInt2()
+{
+    const char* base = reinterpret_cast<const char*>(this);
+    int idx = *reinterpret_cast<const int*>(base + 0x28);
+    const char* arrBase = *reinterpret_cast<const char* const*>(base + 0x148);
+    return *reinterpret_cast<const int*>(arrBase + (idx << 6) + 0x14);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

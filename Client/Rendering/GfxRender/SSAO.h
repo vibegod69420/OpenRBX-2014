@@ -22,6 +22,7 @@ public:
 	int getUnk3C();
 	int getUnk3C_74b0();
 	int getUnk3C_74c0();
+	int getUnk3C_74d0();
 	// AUTO-GENERATED METHODS
 };
 

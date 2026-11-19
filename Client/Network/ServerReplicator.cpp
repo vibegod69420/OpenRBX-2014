@@ -25,6 +25,23 @@ void* ServerReplicator::getPtr1E90() const
     return 0;
 }
 
+class ReplicatorPeer
+{
+public:
+	bool isPeer(void* peer);
+};
+
+void* getPeerContext();
+
+// FUNCTION: ROBLOXSTUDIO 0x00cb97e0
+void* ServerReplicator::getReplicator() const
+{
+	ReplicatorPeer* peer = *(ReplicatorPeer**)((char*)this + 0x0C);
+	if (peer->isPeer(getPeerContext()))
+		return (char*)this - 0x1C;
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

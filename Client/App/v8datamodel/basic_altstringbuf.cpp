@@ -20,6 +20,19 @@ void basic_altstringbuf::BasicAltStringBuf_Thunk_E100D4()
 	BasicAltStringBuf_Thunk_E100D4_Import(this);
 }
 
+__declspec(dllimport) void __stdcall BasicAltStringBuf_FreeHandle(int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00cf4f00
+void basic_altstringbuf::FreeHandle()
+{
+	int handle = _vtable_or_head;
+	if (handle != -1)
+	{
+		BasicAltStringBuf_FreeHandle(handle);
+		_vtable_or_head = -1;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

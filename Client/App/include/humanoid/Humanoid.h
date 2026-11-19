@@ -14,6 +14,7 @@ public:
 	{
 		int _vtable_or_head;
 		struct { char _pad_field_0270[0x270]; int field_0270; };
+		struct { char _pad_field_0280[0x280]; int field_0280; };
 		// AUTO-GENERATED FIELDS
 	};
 
@@ -22,6 +23,7 @@ public:
 	void __cdecl dispatch(int arg);
 	float getUnknown200Float();
 	int getField270() const;
+	int getField280() const;
 	// AUTO-GENERATED METHODS
 };
 

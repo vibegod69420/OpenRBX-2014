@@ -20,6 +20,7 @@ public:
 	double getGlobalDouble2();
 	float getGlobalFloat();
 	float getGlobalFloat2();
+	void*getStaticData();
 	// AUTO-GENERATED METHODS
 };
 
