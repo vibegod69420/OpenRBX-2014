@@ -19,6 +19,7 @@ public:
 	void __cdecl deleteEdge(void* edge);
 	void __cdecl findClosestFeature();
 	void __cdecl addEdge(void* edge, unsigned char info);
+	void __cdecl init(void* target, void* arg2, void* arg3);
 	// AUTO-GENERATED METHODS
 };
 

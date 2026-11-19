@@ -17,6 +17,7 @@ public:
 	};
 
 	void *getView();
+	void reset();
 	// AUTO-GENERATED METHODS
 };
 

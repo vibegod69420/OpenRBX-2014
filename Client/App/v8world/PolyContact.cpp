@@ -32,6 +32,17 @@ void __cdecl PolyContact::addEdge(void* edge, unsigned char info)
 	*((unsigned char*)edge + 4) = info;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00bca5b0
+void __cdecl PolyContact::init(void* target, void* arg2, void* arg3)
+{
+	char* p = (char*)target;
+	*(void**)(p + 0x10) = this;
+	*(void**)(p + 0x08) = arg2;
+	*(void**)(p + 0x0C) = arg3;
+	*(void**)p = 0;
+	*(void**)(p + 0x04) = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

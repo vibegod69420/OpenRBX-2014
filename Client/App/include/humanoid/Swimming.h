@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void __cdecl onEvent(int* event);
 	// AUTO-GENERATED METHODS
 };
 

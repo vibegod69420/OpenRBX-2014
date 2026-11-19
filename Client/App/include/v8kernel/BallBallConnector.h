@@ -19,6 +19,7 @@ public:
 	int getConst30() const;
 	int getKernelSteps() const;
 	int getConst19() const;
+	int getConst400() const;
 	// AUTO-GENERATED METHODS
 };
 

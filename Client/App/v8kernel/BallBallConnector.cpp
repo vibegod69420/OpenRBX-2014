@@ -22,6 +22,12 @@ int BallBallConnector::getConst19() const
 	return 19;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b4eb50
+int BallBallConnector::getConst400() const
+{
+	return 400;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

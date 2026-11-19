@@ -37,6 +37,24 @@ void *RbxWorkspace::getView()
     return (void *)0x012C0968;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0047b7a0
+void RbxWorkspace::reset()
+{
+	unsigned int cookie = *(unsigned int *)((char *)this + 0x10);
+	if (cookie)
+	{
+		if ((cookie & 1) == 0)
+		{
+			void *data = (char *)this + 0x18;
+			void (__cdecl *callback)(void *, void *, int) =
+				*(void (__cdecl **)(void *, void *, int))(cookie & ~1u);
+			if (callback)
+				callback(data, data, 2);
+		}
+		*(unsigned int *)((char *)this + 0x10) = 0;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
