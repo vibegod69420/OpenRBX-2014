@@ -21,6 +21,7 @@ public:
 	void onDestroy();
 	void destroySubPtr0C();
 	static void destroyInstance(Thread* p);
+	void executeScheduledJobs();
 	// AUTO-GENERATED METHODS
 };
 

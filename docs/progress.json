@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 01:56:24 UTC",
+ "updated_at": "2026-11-19 02:04:18 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 5.2643,
- "implemented_total": 493,
- "function_annotations": 493,
+ "matchable_coverage_pct": 5.3284,
+ "implemented_total": 499,
+ "function_annotations": 499,
  "stub_annotations": 0,
- "perfect_100_count": 493,
- "matched_real_functions": 493,
+ "perfect_100_count": 499,
+ "matched_real_functions": 499,
  "average_match_pct": 100.0,
- "overall_function_coverage_pct": 1.2155,
- "overall_byte_coverage_pct": 0.1306,
+ "overall_function_coverage_pct": 1.2302,
+ "overall_byte_coverage_pct": 0.1328,
  "usage": {
-  "calls_24h": 2115,
+  "calls_24h": 2165,
   "failures_24h": 0,
-  "completion_tokens_24h": 22754089,
-  "reasoning_tokens_24h": 22358498,
-  "avg_latency_s": 187.9
+  "completion_tokens_24h": 23187476,
+  "reasoning_tokens_24h": 22786553,
+  "avg_latency_s": 187.0
  },
- "functions_total": 493,
+ "functions_total": 499,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 204,
-   "functions": 204,
-   "bytes": 4264
+   "matched": 207,
+   "functions": 207,
+   "bytes": 4370
   },
   {
    "name": "App/v8world",
@@ -54,9 +54,9 @@
   },
   {
    "name": "App/v8kernel",
-   "matched": 41,
-   "functions": 41,
-   "bytes": 767
+   "matched": 42,
+   "functions": 42,
+   "bytes": 802
   },
   {
    "name": "Rendering/GfxCore",
@@ -78,9 +78,9 @@
   },
   {
    "name": "App/script",
-   "matched": 13,
-   "functions": 13,
-   "bytes": 302
+   "matched": 14,
+   "functions": 14,
+   "bytes": 334
   },
   {
    "name": "App/humanoid",
@@ -218,6 +218,12 @@
    "name": "RobloxStudio/lua_exception.cpp",
    "matched": 3,
    "functions": 3,
+   "bytes": 38
+  },
+  {
+   "name": "Network/OneQuarterClusterPacketCache.cpp",
+   "matched": 1,
+   "functions": 1,
    "bytes": 38
   },
   {
@@ -618,6 +624,17 @@
    "matchable": true
   },
   {
+   "address": "0x00c9cf70",
+   "kind": "FUNCTION",
+   "name": "RBX::Network::OneQuarterClusterPacketCache::getFieldAD8",
+   "mangled": "?getFieldAD8@OneQuarterClusterPacketCache@Network@RBX@@QBEHXZ",
+   "file": "Client/Network/OneQuarterClusterPacketCache.cpp",
+   "orig_size": 38,
+   "recomp_size": 7,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00c9b2f0",
    "kind": "FUNCTION",
    "name": "RBX::Network::Server::sub_c9b2f0",
@@ -966,6 +983,17 @@
    "file": "Client/App/script/WeakFunctionRef.cpp",
    "orig_size": 26,
    "recomp_size": 26,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00be5240",
+   "kind": "FUNCTION",
+   "name": "RBX::DataStore::RemoveHead",
+   "mangled": "?RemoveHead@DataStore@RBX@@QAEXXZ",
+   "file": "Client/App/v8datamodel/DataStore.cpp",
+   "orig_size": 36,
+   "recomp_size": 36,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3071,6 +3099,17 @@
    "matchable": true
   },
   {
+   "address": "0x00860130",
+   "kind": "FUNCTION",
+   "name": "RBX::DataModel::GenericJob::initializeState",
+   "mangled": "?initializeState@GenericJob@DataModel@RBX@@QAAXXZ",
+   "file": "Client/App/v8datamodel/GenericJob.cpp",
+   "orig_size": 35,
+   "recomp_size": 35,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x0085fb80",
    "kind": "FUNCTION",
    "name": "assign",
@@ -3122,39 +3161,6 @@
    "file": "Client/App/v8datamodel/numpunct.cpp",
    "orig_size": 4,
    "recomp_size": 4,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x0082f080",
-   "kind": "FUNCTION",
-   "name": "RBX::ToggleViewMode::isEnabled",
-   "mangled": "?isEnabled@ToggleViewMode@RBX@@QAE_NXZ",
-   "file": "Client/App/v8datamodel/ToggleViewMode.cpp",
-   "orig_size": 22,
-   "recomp_size": 22,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x0082efb0",
-   "kind": "FUNCTION",
-   "name": "RBX::StopCommand::isEnabled",
-   "mangled": "?isEnabled@StopCommand@RBX@@QAE_NXZ",
-   "file": "Client/App/v8datamodel/StopCommand.cpp",
-   "orig_size": 18,
-   "recomp_size": 18,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x0082ef60",
-   "kind": "FUNCTION",
-   "name": "RBX::SetManualJointToStrong::getFlag_ef60",
-   "mangled": "?getFlag_ef60@SetManualJointToStrong@RBX@@QBE_NXZ",
-   "file": "Client/App/v8world/SetManualJointToStrong.cpp",
-   "orig_size": 6,
-   "recomp_size": 6,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -3723,9 +3729,51 @@
    "matched": 493,
    "implemented": 493,
    "pct": 5.2643
+  },
+  {
+   "t": "2026-11-19 02:04:18 UTC",
+   "matched": 499,
+   "implemented": 499,
+   "pct": 5.3284
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-19T02:01:18",
+   "address": "0x00c9cf70",
+   "name": "RBX::Network::OneQuarterClusterPacketCache::getFieldAD8",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:58:32",
+   "address": "0x00be5240",
+   "name": "RBX::DataStore::RemoveHead",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:57:00",
+   "address": "0x0063c010",
+   "name": "RBX::BodyColors::getContextOwner",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:56:57",
+   "address": "0x007ca2a0",
+   "name": "RBX::Script::sub_7CA2A0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:56:53",
+   "address": "0x00860130",
+   "name": "RBX::DataModel::GenericJob::initializeState",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-19T01:56:40",
+   "address": "0x006c2710",
+   "name": "RBX::TaskScheduler::Thread::executeScheduledJobs",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-19T01:53:49",
    "address": "0x009f0f30",
@@ -4409,43 +4457,7 @@
    "address": "0x00b46420",
    "name": "RBX::ModelTool::onDragEnd",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:07:25",
-   "address": "0x00960a40",
-   "name": "setVerbContainer",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:07:18",
-   "address": "0x00d09250",
-   "name": "RBX::AdornBillboarder::adorn",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:06:44",
-   "address": "0x008c6960",
-   "name": "RBX::PhysicsJob::getSleepTime",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:06:29",
-   "address": "0x00a37a80",
-   "name": "lua_exception::getCode",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:06:07",
-   "address": "0x00b1a2e0",
-   "name": "add_ref",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T00:06:04",
-   "address": "0x00412660",
-   "name": "rbx::bad_placement_any_cast::deleteObjectStatic",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 53.48
+ "match_rate_per_hour": 53.37
 }

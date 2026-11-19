@@ -5,6 +5,7 @@
 
 namespace RBX {
 
+class BodyColorsGlobal;
 // AUTO-GENERATED HELPERS
 
 class BodyColors
@@ -18,6 +19,7 @@ public:
 
 	void onDestroy();
 	static void destroyInstance(BodyColors* p);
+	BodyColorsGlobal*getContextOwner();
 	// AUTO-GENERATED METHODS
 };
 

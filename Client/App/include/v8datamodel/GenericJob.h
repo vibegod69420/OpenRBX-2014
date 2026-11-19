@@ -18,6 +18,7 @@ public:
 	};
 
 	void setProgress();
+	void __cdecl initializeState();
 	// AUTO-GENERATED METHODS
 };
 

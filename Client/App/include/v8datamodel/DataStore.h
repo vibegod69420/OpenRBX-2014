@@ -18,6 +18,7 @@ public:
 
 	int getConst15617916() const;
 	void ReleaseHead();
+	void RemoveHead();
 	// AUTO-GENERATED METHODS
 };
 

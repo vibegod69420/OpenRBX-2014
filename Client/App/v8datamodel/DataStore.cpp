@@ -21,6 +21,14 @@ void DataStore::ReleaseHead()
 	DataStoreFreeNode((void*)this->_vtable_or_head);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00be5240
+void DataStore::RemoveHead()
+{
+	void* out;
+	DataStoreUnlinkHelper(&out, *(void**)(void*)this->_vtable_or_head, (void*)this->_vtable_or_head);
+	DataStoreFreeNode((void*)this->_vtable_or_head);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
