@@ -28,6 +28,7 @@ public:
 	__int64 __cdecl getPair();
 	void onDestroy();
 	void destroySubPtr0C();
+	void destroySubPtr0C_slot1();
 	// AUTO-GENERATED METHODS
 };
 

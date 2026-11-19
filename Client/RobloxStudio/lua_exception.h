@@ -22,6 +22,7 @@ public:
 	int __cdecl getType();
 	int __cdecl getLevel();
 	void __cdecl raise(int arg1, int arg2);
+	void __cdecl initContext(void* context);
 	// AUTO-GENERATED METHODS
 };
 

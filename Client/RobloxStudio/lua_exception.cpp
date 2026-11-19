@@ -45,6 +45,15 @@ void __cdecl lua_exception::raise(int arg1, int arg2)
 	lua_exception_dispatch((int)this, arg1, arg2, 0);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a38660
+void __cdecl lua_exception::initContext(void* context)
+{
+	char* p = (char*)context;
+	*(void**)(p + 8) = this;
+	*(char**)(p + 0) = p + 0x0C;
+	*(int*)(p + 4) = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
