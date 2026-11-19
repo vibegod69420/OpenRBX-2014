@@ -14,6 +14,13 @@ int __cdecl WaitScriptSlot::execute(void* L)
 	return 1;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b85100
+int __cdecl WaitScriptSlot::executeConnection(void* L)
+{
+	waitScriptSlotAux(L, "Connection", 10);
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

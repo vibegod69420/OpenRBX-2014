@@ -17,6 +17,7 @@ public:
 	};
 
 	void _Lock();
+	int _Getcat();
 	// AUTO-GENERATED METHODS
 };
 

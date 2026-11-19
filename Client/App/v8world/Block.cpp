@@ -29,6 +29,18 @@ void __cdecl Block::destruct()
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b9ad90
+void __cdecl sub_b9c920(Block* block, void* arg);
+
+void __cdecl Block::release()
+{
+    if (this)
+    {
+        sub_b9c920(this, (void*)(*(int*)((char*)this + 0xc)));
+        sub_cf6522(this);
+    }
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

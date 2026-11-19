@@ -18,6 +18,7 @@ public:
 
 	static void addAssign(int* p, int v);
 	void __cdecl subAssign(int* p, int v);
+	FlyweightService*getIfValid();
 	// AUTO-GENERATED METHODS
 };
 

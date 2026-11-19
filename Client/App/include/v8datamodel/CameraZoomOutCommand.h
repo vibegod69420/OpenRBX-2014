@@ -19,6 +19,7 @@ public:
 	void zoomOut();
 	void onDestroy();
 	static void destroyInstance(CameraZoomOutCommand* p);
+	static void destroyInstance_49e0(CameraZoomOutCommand* p);
 	// AUTO-GENERATED METHODS
 };
 
