@@ -135,6 +135,16 @@ void sp_counted_impl_p::destroySubPtr0C_da60()
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a2da80
+void sp_counted_impl_p::destroySubPtr0C_da80()
+{
+	sp_counted_impl_p* p = ptr_000c;
+	if (p) {
+		p->onDestroy();
+		rbx_free_mem(p);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

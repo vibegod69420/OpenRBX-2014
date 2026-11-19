@@ -25,6 +25,7 @@ public:
 	static void assignIfNull_5a20(int* dst, const int* src);
 	static void assignIfNull_5a40(int* dst, const int* src);
 	static void assignIfNull_5a60(int* dst, const int* src);
+	static void assignIfNull_5a80(int* dst, const int* src);
 	// AUTO-GENERATED METHODS
 };
 

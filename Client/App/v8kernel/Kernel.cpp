@@ -52,6 +52,12 @@ int Kernel::getSubField24_14() const
 	return sub_0024_14->val;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b535b0
+int Kernel::getSubField24_74() const
+{
+	return sub_0024_74->val;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

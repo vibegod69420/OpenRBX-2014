@@ -30,6 +30,7 @@ public:
 	void destroySubPtr0C();
 	void destroySubPtr0C_slot1();
 	void destroySubPtr0C_da60();
+	void destroySubPtr0C_da80();
 	// AUTO-GENERATED METHODS
 };
 
