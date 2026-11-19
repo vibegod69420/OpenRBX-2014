@@ -20,6 +20,7 @@ public:
 
 	void onDestroy();
 	void destroySubPtr0C();
+	Emitter();
 	// AUTO-GENERATED METHODS
 };
 
