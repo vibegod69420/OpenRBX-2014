@@ -17,6 +17,7 @@ public:
 	};
 
 	~LineSegment();
+	void ensureInternalState();
 	// AUTO-GENERATED METHODS
 };
 

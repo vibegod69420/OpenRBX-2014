@@ -26,6 +26,17 @@ LineSegment::~LineSegment()
 	*(void**)((char*)this + 0x28) = 0;
 }
 
+void* sub_7021c0(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00702520
+void LineSegment::ensureInternalState()
+{
+	if (*(void**)((char*)this + 0x28) == 0)
+	{
+		*(void**)((char*)this + 0x28) = sub_7021c0(*(void**)((char*)this + 0x18));
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace G3D

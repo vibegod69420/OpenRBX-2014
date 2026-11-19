@@ -18,6 +18,7 @@ public:
 	};
 
 	int getConst2() const;
+	int getForwardedStateValue();
 	// AUTO-GENERATED METHODS
 };
 
