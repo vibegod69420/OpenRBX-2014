@@ -18,6 +18,7 @@ public:
 	};
 
 	int getConst1() const;
+	void __cdecl clearStdString();
 	// AUTO-GENERATED METHODS
 };
 

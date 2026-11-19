@@ -1,0 +1,9 @@
+#include "util/ContentProvider.h"
+
+#include "decomp.h"
+
+namespace RBX {
+
+// AUTO-GENERATED IMPLEMENTATIONS
+
+} // namespace RBX

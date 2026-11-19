@@ -18,6 +18,7 @@ public:
 	};
 
 	int size();
+	void __cdecl pushAllValues(void* arg);
 	// AUTO-GENERATED METHODS
 };
 

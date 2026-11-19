@@ -15,6 +15,15 @@ void Info::destroySubPtr0C()
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a45db0
+void Info::destroyInstance(Info* p)
+{
+	if (p) {
+		p->onDestroy();
+		rbx_free_mem(p);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace ScriptService

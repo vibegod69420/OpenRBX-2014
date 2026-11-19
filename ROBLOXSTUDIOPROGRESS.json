@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 00:23:41 UTC",
+  "updated_at": "2026-11-19 00:31:51 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 4.2072,
-  "implemented_total": 394,
-  "function_annotations": 394,
+  "matchable_coverage_pct": 4.41,
+  "implemented_total": 413,
+  "function_annotations": 413,
   "stub_annotations": 0,
-  "perfect_100_count": 394,
-  "matched_real_functions": 394,
+  "perfect_100_count": 413,
+  "matched_real_functions": 413,
   "average_match_pct": 100.0,
-  "overall_function_coverage_pct": 0.9714,
-  "overall_byte_coverage_pct": 0.1035,
+  "overall_function_coverage_pct": 1.0182,
+  "overall_byte_coverage_pct": 0.1092,
   "usage": {
-    "calls_24h": 1646,
+    "calls_24h": 1700,
     "failures_24h": 0,
-    "completion_tokens_24h": 17826052,
-    "reasoning_tokens_24h": 17516152,
-    "avg_latency_s": 188.5
+    "completion_tokens_24h": 18379968,
+    "reasoning_tokens_24h": 18063541,
+    "avg_latency_s": 188.3
   },
   "functions": [
     {
@@ -287,6 +287,17 @@
       "matchable": true
     },
     {
+      "address": "0x0044dec0",
+      "kind": "FUNCTION",
+      "name": "RBX::RbxRay::isTargetSlot",
+      "mangled": "?isTargetSlot@RbxRay@RBX@@QBE_NXZ",
+      "file": "Client/App/v8datamodel/RbxRay.cpp",
+      "orig_size": 28,
+      "recomp_size": 28,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00454e60",
       "kind": "FUNCTION",
       "name": "QuickAccessBarProxyAction::getAction",
@@ -529,6 +540,17 @@
       "matchable": true
     },
     {
+      "address": "0x004f3950",
+      "kind": "FUNCTION",
+      "name": "slot0",
+      "mangled": "?reset@QSignalMapper@@QAEXXZ",
+      "file": "Client/RobloxStudio/QSignalMapper.cpp",
+      "orig_size": 32,
+      "recomp_size": 32,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x004f6040",
       "kind": "FUNCTION",
       "name": "RBX::HUMAN::HumanoidState::getConst2",
@@ -679,6 +701,17 @@
       "file": "Client/RobloxStudio/RobloxWebDoc.cpp",
       "orig_size": 5,
       "recomp_size": 5,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x005292c0",
+      "kind": "FUNCTION",
+      "name": "sub_5322e0",
+      "mangled": "??0Animation@RBX@@QAE@XZ",
+      "file": "Client/App/v8datamodel/Animation.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -1332,6 +1365,17 @@
       "matchable": true
     },
     {
+      "address": "0x005e6ce0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ShaderProgramFFPD3D9::clearStdString",
+      "mangled": "?clearStdString@ShaderProgramFFPD3D9@Graphics@RBX@@QAAXXZ",
+      "file": "Client/Rendering/GfxCore/D3D9/ShaderProgramFFPD3D9.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x005eb770",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::Device::releaseAll",
@@ -1526,6 +1570,17 @@
       "file": "Client/Rendering/GfxRender/FastCluster.cpp",
       "orig_size": 16,
       "recomp_size": 16,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0063b460",
+      "kind": "FUNCTION",
+      "name": "RBX::BodyColors::destroyInstance",
+      "mangled": "?destroyInstance@BodyColors@RBX@@SAXPAV12@@Z",
+      "file": "Client/App/v8kernel/BodyColors.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -1816,6 +1871,17 @@
       "matchable": true
     },
     {
+      "address": "0x006c1f30",
+      "kind": "FUNCTION",
+      "name": "RBX::TaskScheduler::Thread::destroyInstance",
+      "mangled": "?destroyInstance@Thread@TaskScheduler@RBX@@SAXPAV123@@Z",
+      "file": "Client/App/v8datamodel/Thread.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x006c2660",
       "kind": "FUNCTION",
       "name": "RBX::TaskScheduler::Thread::destroySubPtr0C",
@@ -1915,6 +1981,17 @@
       "matchable": true
     },
     {
+      "address": "0x0078a110",
+      "kind": "FUNCTION",
+      "name": "std::parser_error::destroyInstance",
+      "mangled": "?destroyInstance@parser_error@std@@SAXPAV12@@Z",
+      "file": "Client/App/v8datamodel/parser_error.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x007929c0",
       "kind": "FUNCTION",
       "name": "RBX::ChangeHistoryService::IsRecording",
@@ -1926,6 +2003,17 @@
       "matchable": true
     },
     {
+      "address": "0x0079e3c0",
+      "kind": "FUNCTION",
+      "name": "DebuggerBreakpoint_CreateDebugInfo",
+      "mangled": "??0DebuggerBreakpoint@Scripting@RBX@@QAE@XZ",
+      "file": "Client/App/script/DebuggerBreakpoint.cpp",
+      "orig_size": 27,
+      "recomp_size": 27,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x007b3b40",
       "kind": "FUNCTION",
       "name": "RBX::NonFactoryProduct::initFactoryData",
@@ -1933,6 +2021,17 @@
       "file": "Client/App/v8datamodel/NonFactoryProduct.cpp",
       "orig_size": 42,
       "recomp_size": 42,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x007b3ff0",
+      "kind": "FUNCTION",
+      "name": "call",
+      "mangled": "?sub_007B3FF0@Vector3@G3D@@QAEXXZ",
+      "file": "Client/Rendering/g3d/G3Dcpp/Vector3.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -2641,6 +2740,17 @@
       "matchable": true
     },
     {
+      "address": "0x008d8bf0",
+      "kind": "FUNCTION",
+      "name": "RBX::Lua::LuaArguments::pushAllValues",
+      "mangled": "?pushAllValues@LuaArguments@Lua@RBX@@QAAXPAX@Z",
+      "file": "Client/App/script/LuaArguments.cpp",
+      "orig_size": 25,
+      "recomp_size": 25,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x008e3c90",
       "kind": "FUNCTION",
       "name": "RBX::Lua::LuaArguments::size",
@@ -3081,6 +3191,17 @@
       "matchable": true
     },
     {
+      "address": "0x009fe0f0",
+      "kind": "FUNCTION",
+      "name": "RBX::CharacterMesh::destroyInstance",
+      "mangled": "?destroyInstance@CharacterMesh@RBX@@SAXPAV12@@Z",
+      "file": "Client/App/v8datamodel/CharacterMesh.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x009ff6f0",
       "kind": "FUNCTION",
       "name": "RBX::CacheableContentProvider::CachedItem::destroySubPtr0C",
@@ -3301,6 +3422,17 @@
       "matchable": true
     },
     {
+      "address": "0x00a45db0",
+      "kind": "FUNCTION",
+      "name": "RBX::ScriptService::Info::destroyInstance",
+      "mangled": "?destroyInstance@Info@ScriptService@RBX@@SAXPAV123@@Z",
+      "file": "Client/App/script/Info.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00a46260",
       "kind": "FUNCTION",
       "name": "RBX::ScriptService::Info::destroySubPtr0C",
@@ -3484,6 +3616,17 @@
       "file": "Client/App/v8datamodel/PhysicsService.cpp",
       "orig_size": 14,
       "recomp_size": 14,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b26bc0",
+      "kind": "FUNCTION",
+      "name": "RBX::KeyframeSequenceProvider::deallocate",
+      "mangled": "?deallocate@KeyframeSequenceProvider@RBX@@QAAXHHHHI@Z",
+      "file": "Client/App/v8datamodel/KeyframeSequenceProvider.cpp",
+      "orig_size": 22,
+      "recomp_size": 22,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -3994,6 +4137,28 @@
       "matchable": true
     },
     {
+      "address": "0x00bf8370",
+      "kind": "FUNCTION",
+      "name": "RBX::EquationDisplay::destroyInstance",
+      "mangled": "?destroyInstance@EquationDisplay@RBX@@SAXPAV12@@Z",
+      "file": "Client/App/v8datamodel/EquationDisplay.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c02b40",
+      "kind": "FUNCTION",
+      "name": "RBX::Point::update",
+      "mangled": "?update@Point@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/Point.cpp",
+      "orig_size": 29,
+      "recomp_size": 29,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00c0bbd0",
       "kind": "FUNCTION",
       "name": "RBX::AdvMoveToolBase::getFlag_bbd0",
@@ -4071,6 +4236,17 @@
       "matchable": true
     },
     {
+      "address": "0x00c22d30",
+      "kind": "FUNCTION",
+      "name": "RBX::HUMAN::RunningNoPhysics::destroyInstance",
+      "mangled": "?destroyInstance@RunningNoPhysics@HUMAN@RBX@@SAXPAV123@@Z",
+      "file": "Client/App/humanoid/RunningNoPhysics.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00c2f640",
       "kind": "FUNCTION",
       "name": "RBX::Network::ChatMessage::destroySubPtr0C",
@@ -4104,6 +4280,17 @@
       "matchable": true
     },
     {
+      "address": "0x00c5fbd0",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::SpatialQueryCache::destroyInstance",
+      "mangled": "?destroyInstance@SpatialQueryCache@Network@RBX@@SAXPAV123@@Z",
+      "file": "Client/Network/SpatialQueryCache.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00c63780",
       "kind": "FUNCTION",
       "name": "RBX::GamePerfMonitor::destroySubPtr0C",
@@ -4133,6 +4320,17 @@
       "file": "Client/App/v8datamodel/network_stream_exception.cpp",
       "orig_size": 12,
       "recomp_size": 12,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c75250",
+      "kind": "FUNCTION",
+      "name": "RBX::network_stream_exception::destroyInstance",
+      "mangled": "?destroyInstance@network_stream_exception@RBX@@SAXPAV12@@Z",
+      "file": "Client/App/v8datamodel/network_stream_exception.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -4199,6 +4397,17 @@
       "file": "Client/Network/SharedStringProtectedDictionary.cpp",
       "orig_size": 26,
       "recomp_size": 26,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c9ea80",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::Peer::destroyInstance",
+      "mangled": "?destroyInstance@Peer@Network@RBX@@SAXPAV123@@Z",
+      "file": "Client/Network/Peer.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
       "match_pct": 100.0,
       "matchable": true
     },

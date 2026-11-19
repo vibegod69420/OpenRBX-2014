@@ -20,6 +20,7 @@ public:
 
 	void onDestroy();
 	void destroySubPtr0C();
+	static void destroyInstance(Thread* p);
 	// AUTO-GENERATED METHODS
 };
 

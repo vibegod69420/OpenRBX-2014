@@ -13,6 +13,14 @@ int LuaArguments::size()
 	return luaArgumentsStackSize(*(void**)((char*)this + 0x4c)) - 1;
 }
 
+void __cdecl sub_A389C0(void* a, void* b, void* c);
+
+// FUNCTION: ROBLOXSTUDIO 0x008d8bf0
+void __cdecl LuaArguments::pushAllValues(void* arg)
+{
+	sub_A389C0(this, arg, *(void**)0x0124EAC8);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

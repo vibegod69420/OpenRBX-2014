@@ -15,6 +15,15 @@ const char* network_stream_exception::what() const
 	return ptr;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c75250
+void network_stream_exception::destroyInstance(network_stream_exception* p)
+{
+	if (p) {
+		p->onDestroy();
+		rbx_free_mem(p);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

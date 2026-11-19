@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	DebuggerBreakpoint();
 	// AUTO-GENERATED METHODS
 };
 

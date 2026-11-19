@@ -15,6 +15,15 @@ void Thread::destroySubPtr0C()
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006c1f30
+void Thread::destroyInstance(Thread* p)
+{
+	if (p) {
+		p->onDestroy();
+		rbx_free_mem(p);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace TaskScheduler

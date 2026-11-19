@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void __cdecl deallocate(int, int, int, int, unsigned int capacity);
 	// AUTO-GENERATED METHODS
 };
 
