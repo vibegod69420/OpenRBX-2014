@@ -73,6 +73,11 @@ public:
 	sp_counted_impl_p* __cdecl sub_77D670(void* a, void* b);
 	sp_counted_impl_p* __cdecl sub_77D840(void* /*unused*/, const char* str);
 	sp_counted_impl_p* __cdecl sub_77E780(void* a, void* b);
+	bool sub_990120();
+	int __cdecl sub_B7A400();
+	int __cdecl sub_B7A550();
+	int __cdecl sub_B7A580();
+	int __cdecl sub_B7A5B0();
 	// AUTO-GENERATED METHODS
 };
 
