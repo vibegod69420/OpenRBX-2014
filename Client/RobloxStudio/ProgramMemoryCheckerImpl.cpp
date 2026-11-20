@@ -875,6 +875,88 @@ void ProgramMemoryCheckerImpl::init53()
 	sub_CF6609((void*)0x00DED6A0);
 }
 
+class ProgramMemoryCheckerHeartbeatTarget
+{
+public:
+	void sub_8C2AD0(int a1, const char* a2, const char* a3, int a4, int a5, int a6);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00db5d10
+void ProgramMemoryCheckerImpl::init54()
+{
+	int v[2];
+	((ProgramMemoryCheckerHeartbeatTarget*)0x012FCE78)->sub_8C2AD0(
+		0xB4,
+		(const char*)0x00E60BC0,
+		(const char*)0x00E6F404,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DEFB40);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00da2110
+void ProgramMemoryCheckerImpl::init55()
+{
+	int v[2];
+	((ProgramMemoryCheckerDebuggerAddedTarget*)0x012E1098)->sub_79DA80(
+		0xC4,
+		(const char*)0x00E52DD0,
+		(const char*)0x01033AC4,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DE2410);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00daefe0
+void ProgramMemoryCheckerImpl::init56()
+{
+	int v[2];
+	((ProgramMemoryCheckerInputTarget*)0x012F9E34)->sub_868990(
+		0xD4,
+		(const char*)0x00E62764,
+		(const char*)0x00E6275C,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DEAC50);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00daf060
+void ProgramMemoryCheckerImpl::init57()
+{
+	int v[2];
+	((ProgramMemoryCheckerInputTarget*)0x012F9E60)->sub_868990(
+		0xD8,
+		(const char*)0x00E62770,
+		(const char*)0x00E6275C,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DEAD10);
+}
+
+class ProgramMemoryCheckerFocusLostTarget
+{
+public:
+	void sub_880120(int a1, const char* a2, const char* a3, int a4, int a5, int a6);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00db0bb0
+void ProgramMemoryCheckerImpl::init58()
+{
+	int v[2];
+	((ProgramMemoryCheckerFocusLostTarget*)0x012FAB94)->sub_880120(
+		0x340,
+		(const char*)0x00E65060,
+		(const char*)0x00E65050,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DEC110);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

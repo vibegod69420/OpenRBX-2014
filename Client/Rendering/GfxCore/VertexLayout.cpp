@@ -1143,6 +1143,146 @@ bool VertexLayout::initGL32()
 	return false;
 }
 
+extern void* g_glInvalidateBufferData;
+extern void* g_glInvalidateBufferSubData;
+extern void* g_glInvalidateFramebuffer;
+extern void* g_glInvalidateSubFramebuffer;
+extern void* g_glInvalidateTexImage;
+extern void* g_glInvalidateTexSubImage;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f5910
+bool VertexLayout::initARBInvalidateSubdata()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glInvalidateBufferData");
+	g_glInvalidateBufferData = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glInvalidateBufferSubData");
+	g_glInvalidateBufferSubData = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glInvalidateFramebuffer");
+	g_glInvalidateFramebuffer = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glInvalidateSubFramebuffer");
+	g_glInvalidateSubFramebuffer = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glInvalidateTexImage");
+	g_glInvalidateTexImage = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glInvalidateTexSubImage");
+	g_glInvalidateTexSubImage = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glCopyTexImage1DEXT;
+extern void* g_glCopyTexImage2DEXT;
+extern void* g_glCopyTexSubImage1DEXT;
+extern void* g_glCopyTexSubImage2DEXT;
+extern void* g_glCopyTexSubImage3DEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f8ed0
+bool VertexLayout::initEXTCopyTexture()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glCopyTexImage1DEXT");
+	g_glCopyTexImage1DEXT = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glCopyTexImage2DEXT");
+	g_glCopyTexImage2DEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCopyTexSubImage1DEXT");
+	g_glCopyTexSubImage1DEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCopyTexSubImage2DEXT");
+	g_glCopyTexSubImage2DEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCopyTexSubImage3DEXT");
+	g_glCopyTexSubImage3DEXT = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glDebugMessageCallbackARB;
+extern void* g_glDebugMessageControlARB;
+extern void* g_glDebugMessageInsertARB;
+extern void* g_glGetDebugMessageLogARB;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f4f00
+bool VertexLayout::initARBDebugOutput()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glDebugMessageCallbackARB");
+	g_glDebugMessageCallbackARB = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glDebugMessageControlARB");
+	g_glDebugMessageControlARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glDebugMessageInsertARB");
+	g_glDebugMessageInsertARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetDebugMessageLogARB");
+	g_glGetDebugMessageLogARB = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glDrawArraysInstancedARB;
+extern void* g_glDrawElementsInstancedARB;
+extern void* g_glVertexAttribDivisorARB;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f5880
+bool VertexLayout::initARBInstancedArrays()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glDrawArraysInstancedARB");
+	g_glDrawArraysInstancedARB = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glDrawElementsInstancedARB");
+	g_glDrawElementsInstancedARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttribDivisorARB");
+	g_glVertexAttribDivisorARB = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

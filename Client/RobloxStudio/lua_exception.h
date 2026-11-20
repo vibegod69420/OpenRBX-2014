@@ -46,6 +46,8 @@ public:
 	int __cdecl setErrorData(int code, int level, int line);
 	const char* __cdecl getString(int index);
 	char* __cdecl prepBuffer();
+	void* __cdecl sub_A3B1D0(int value);
+	int __cdecl yield(int nresults);
 	// AUTO-GENERATED METHODS
 };
 

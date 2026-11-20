@@ -718,6 +718,108 @@ bool ContextGL::initSharpenTexFuncSGIS()
 	return false;
 }
 
+extern void* glTexImage4DSGIS;
+extern void* glTexSubImage4DSGIS;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fe9f0
+bool ContextGL::initTexture4DSGIS()
+{
+	void* proc = wglGetProcAddress("glTexImage4DSGIS");
+	glTexImage4DSGIS = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glTexSubImage4DSGIS");
+	glTexSubImage4DSGIS = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glBeginSceneEXT;
+extern void* glEndSceneEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fae50
+bool ContextGL::initSceneMarkerEXT()
+{
+	void* proc = wglGetProcAddress("glBeginSceneEXT");
+	glBeginSceneEXT = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glEndSceneEXT");
+	glEndSceneEXT = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glFlushVertexArrayRangeNV;
+extern void* glVertexArrayRangeNV;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fda30
+bool ContextGL::initVertexArrayRangeNV()
+{
+	void* proc = wglGetProcAddress("glFlushVertexArrayRangeNV");
+	glFlushVertexArrayRangeNV = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glVertexArrayRangeNV");
+	glVertexArrayRangeNV = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glGetQueryObjecti64vEXT;
+extern void* glGetQueryObjectui64vEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fb2c0
+bool ContextGL::initTimerQueryEXT()
+{
+	void* proc = wglGetProcAddress("glGetQueryObjecti64vEXT");
+	glGetQueryObjecti64vEXT = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glGetQueryObjectui64vEXT");
+	glGetQueryObjectui64vEXT = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glBeginConditionalRenderNVX;
+extern void* glEndConditionalRenderNVX;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fc010
+bool ContextGL::initConditionalRenderNVX()
+{
+	void* proc = wglGetProcAddress("glBeginConditionalRenderNVX");
+	glBeginConditionalRenderNVX = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glEndConditionalRenderNVX");
+	glEndConditionalRenderNVX = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glGetTexFilterFuncSGIS;
+extern void* glTexFilterFuncSGIS;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fea30
+bool ContextGL::initTexFilterFuncSGIS()
+{
+	void* proc = wglGetProcAddress("glGetTexFilterFuncSGIS");
+	glGetTexFilterFuncSGIS = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glTexFilterFuncSGIS");
+	glTexFilterFuncSGIS = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

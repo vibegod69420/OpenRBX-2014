@@ -269,6 +269,42 @@ void __cdecl LuaArguments::pushGlobalRBXScriptSignal()
 	sub_A35D10(self, -2);
 }
 
+void* __cdecl sub_A360A0(void*, void*);
+int __cdecl sub_A350C0(void*, void*);
+void __cdecl sub_A35060(void*, int, void*);
+int __cdecl sub_A35810(void*, int, int);
+void __cdecl sub_A35D10(void*, int);
+void* __cdecl sub_7D60A0();
+
+class DummySub7CFF40
+{
+public:
+	void __thiscall sub_7CFF40(void*);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00a43000
+bool __cdecl LuaArguments::getYield(void* arg, void* out)
+{
+	void* L = this;
+	void* tmp = sub_A360A0(L, arg);
+	if (tmp)
+	{
+		if (sub_A350C0(L, arg))
+		{
+			sub_A35060(L, -10000, *(void**)0x0124EB1C);
+			if (sub_A35810(L, -1, -2))
+			{
+				sub_A35D10(L, -3);
+				*(void**)out = sub_7D60A0();
+				((DummySub7CFF40*)((char*)out + 4))->sub_7CFF40(tmp);
+				return true;
+			}
+			sub_A35D10(L, -3);
+		}
+	}
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

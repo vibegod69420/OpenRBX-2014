@@ -326,6 +326,40 @@ char* __cdecl lua_exception::prepBuffer()
 	return base + 0x0C;
 }
 
+// Forward declarations for callees
+void* __cdecl sub_A353E0(lua_exception* L, int size);
+void __cdecl sub_A35060(lua_exception* L, int idx, int n);
+int __cdecl sub_A35BF0(lua_exception* L, int idx);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a3b1d0
+void* __cdecl lua_exception::sub_A3B1D0(int value)
+{
+	lua_exception* L = this;
+	void* p = sub_A353E0(L, 4);
+	if (p)
+	{
+		*(int*)p = value;
+	}
+
+	sub_A35060(L, -10000, *(int*)0x0124EAC4);
+	sub_A35BF0(L, -2);
+	return p;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00a36e40
+int __cdecl lua_exception::yield(int nresults)
+{
+	if (*(unsigned short*)((char*)this + 0x34) > *(unsigned short*)((char*)this + 0x36))
+	{
+		runError("attempt to yield across metamethod/C-call boundary");
+	}
+
+	char* base = *(char**)((char*)this + 8) - (nresults << 4);
+	*(char**)((char*)this + 0x0C) = base;
+	*(unsigned char*)((char*)this + 6) = 1;
+	return (int)base | -1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

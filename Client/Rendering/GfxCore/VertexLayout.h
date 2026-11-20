@@ -62,6 +62,10 @@ public:
 	bool initARBTransposeMatrix();
 	bool initATITexBump();
 	bool initGL32();
+	bool initARBInvalidateSubdata();
+	bool initEXTCopyTexture();
+	bool initARBDebugOutput();
+	bool initARBInstancedArrays();
 	// AUTO-GENERATED METHODS
 };
 

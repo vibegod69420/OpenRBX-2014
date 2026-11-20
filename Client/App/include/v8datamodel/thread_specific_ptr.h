@@ -21,6 +21,7 @@ public:
 	void clear();
 	void release();
 	void destroy();
+	void cleanup();
 	// AUTO-GENERATED METHODS
 };
 

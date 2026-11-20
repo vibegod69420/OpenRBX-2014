@@ -380,6 +380,38 @@ int __cdecl TriangleMesh::func_B6EFF0()
 	return res;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b70f70
+const char* __cdecl TriangleMesh::func_B70F70(const char* s, const char* p)
+{
+	if (*p == 0 || *(p + 1) == 0)
+		sub_A38A50(*reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 8), "unbalanced pattern");
+
+	if (*s != *p)
+		return 0;
+
+	{
+		int b = *p;
+		int e = *(p + 1);
+		const char* src_end = *reinterpret_cast<const char**>(reinterpret_cast<char*>(this) + 4);
+		int cont = 1;
+
+		while (++s < src_end)
+		{
+			if (*s == e)
+			{
+				if (--cont == 0)
+					return s + 1;
+			}
+			else if (*s == b)
+			{
+				cont++;
+			}
+		}
+	}
+
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

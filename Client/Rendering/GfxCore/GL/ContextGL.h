@@ -79,6 +79,12 @@ public:
 	bool initFogFuncSGIS();
 	bool initSampleMaskSGIS();
 	bool initSharpenTexFuncSGIS();
+	bool initTexture4DSGIS();
+	bool initSceneMarkerEXT();
+	bool initVertexArrayRangeNV();
+	bool initTimerQueryEXT();
+	bool initConditionalRenderNVX();
+	bool initTexFilterFuncSGIS();
 	// AUTO-GENERATED METHODS
 };
 

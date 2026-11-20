@@ -213,6 +213,52 @@ void thread_specific_ptr::destroy()
 	data->vtable = (void*)0x00E33A28;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008476d0
+void thread_specific_ptr::cleanup()
+{
+	thread_specific_ptr_impl* data = reinterpret_cast<thread_specific_ptr_impl*>(this);
+	thread_specific_ptr_string* s;
+
+	s = data->p3C;
+	if (s)
+	{
+		if (s->capacity >= 0x10)
+			delete s->ptr;
+		s->capacity = 0x0F;
+		s->size = 0;
+		s->buf[0] = 0;
+		delete s;
+	}
+
+	::operator delete(data->p38);
+
+	s = data->p34;
+	if (s)
+	{
+		if (s->capacity >= 0x10)
+			delete s->ptr;
+		s->capacity = 0x0F;
+		s->size = 0;
+		s->buf[0] = 0;
+		delete s;
+	}
+
+	s = data->p30;
+	if (s)
+	{
+		if (s->capacity >= 0x10)
+			delete s->ptr;
+		s->capacity = 0x0F;
+		s->size = 0;
+		s->buf[0] = 0;
+		delete s;
+	}
+
+	data->list.clear();
+	delete data->list.head;
+	data->vtable = (void*)0x00E33A28;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
