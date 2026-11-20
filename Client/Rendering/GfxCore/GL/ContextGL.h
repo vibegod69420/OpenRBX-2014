@@ -147,6 +147,9 @@ public:
 	bool initRegisterCombinersNV();
 	bool initShaderBufferLoadNV();
 	bool initFixedPointOES();
+	bool initPbufferEXT();
+	bool initFramebufferObjectEXT();
+	bool initSecondaryColorEXT();
 	// AUTO-GENERATED METHODS
 };
 

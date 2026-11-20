@@ -328,6 +328,30 @@ void sp_counted_impl_p::destroySubPtr0C_f5e0()
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006a6610
+extern void (__fastcall *sp_counted_impl_p_fn_006a6621)(void*);
+extern void (__fastcall *sp_counted_impl_p_fn_006a6639)(void*);
+
+struct sp_counted_impl_p_obj_006a6610
+{
+	void* ptr_0000;
+	void destroy_006a63a0();
+};
+
+void sp_counted_impl_p::destroySubPtr0C_6610()
+{
+	sp_counted_impl_p_obj_006a6610* p = (sp_counted_impl_p_obj_006a6610*)ptr_000c;
+	if (p)
+	{
+		p->destroy_006a63a0();
+		sp_counted_impl_p_fn_006a6621(p);
+		rbx_free_mem(p->ptr_0000);
+		p->ptr_0000 = 0;
+		sp_counted_impl_p_fn_006a6639(p);
+		rbx_free_mem(p);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

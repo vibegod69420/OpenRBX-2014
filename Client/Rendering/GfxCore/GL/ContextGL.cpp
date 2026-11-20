@@ -3445,6 +3445,231 @@ bool ContextGL::initFixedPointOES()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00603da0
+bool ContextGL::initPbufferEXT()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	unsigned char missing;
+	void* proc;
+
+	proc = getProc("wglCreatePbufferEXT");
+	*(void**)0x012DB5F8 = proc;
+	missing = (proc == 0) ? 1 : 0;
+
+	proc = getProc("wglDestroyPbufferEXT");
+	*(void**)0x012DB60C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglGetPbufferDCEXT");
+	*(void**)0x012DB614 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglQueryPbufferEXT");
+	*(void**)0x012DB624 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglReleasePbufferDCEXT");
+	*(void**)0x012DB628 = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x005fa5b0
+bool ContextGL::initFramebufferObjectEXT()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	unsigned char missing;
+	void* proc;
+
+	proc = getProc("glBindFramebufferEXT");
+	*(void**)0x012DAA24 = proc;
+	missing = (proc == 0) ? 1 : 0;
+
+	proc = getProc("glBindRenderbufferEXT");
+	*(void**)0x012DAA2C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glCheckFramebufferStatusEXT");
+	*(void**)0x012DAA34 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glDeleteFramebuffersEXT");
+	*(void**)0x012DAA44 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glDeleteRenderbuffersEXT");
+	*(void**)0x012DAA4C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glFramebufferRenderbufferEXT");
+	*(void**)0x012DAA50 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glFramebufferTexture1DEXT");
+	*(void**)0x012DAA60 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glFramebufferTexture2DEXT");
+	*(void**)0x012DAA64 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glFramebufferTexture3DEXT");
+	*(void**)0x012DAA6C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGenFramebuffersEXT");
+	*(void**)0x012DAA74 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGenRenderbuffersEXT");
+	*(void**)0x012DAA84 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGenerateMipmapEXT");
+	*(void**)0x012DAA8C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetFramebufferAttachmentParameterivEXT");
+	*(void**)0x012DAA94 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetRenderbufferParameterivEXT");
+	*(void**)0x012DAA9C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glIsFramebufferEXT");
+	*(void**)0x012DAAA0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glIsRenderbufferEXT");
+	*(void**)0x012DAAB0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glRenderbufferStorageEXT");
+	*(void**)0x012DAAB4 = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x005fae90
+bool ContextGL::initSecondaryColorEXT()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	unsigned char missing;
+	void* proc;
+
+	proc = getProc("glSecondaryColor3bEXT");
+	*(void**)0x012DAD5C = proc;
+	missing = (proc == 0) ? 1 : 0;
+
+	proc = getProc("glSecondaryColor3bvEXT");
+	*(void**)0x012DAD64 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glSecondaryColor3dEXT");
+	*(void**)0x012DAD6C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glSecondaryColor3dvEXT");
+	*(void**)0x012DAD70 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glSecondaryColor3fEXT");
+	*(void**)0x012DAD7C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glSecondaryColor3fvEXT");
+	*(void**)0x012DAD84 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glSecondaryColor3iEXT");
+	*(void**)0x012DAD8C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glSecondaryColor3ivEXT");
+	*(void**)0x012DAD94 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glSecondaryColor3sEXT");
+	*(void**)0x012DADA4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glSecondaryColor3svEXT");
+	*(void**)0x012DADA8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glSecondaryColor3ubEXT");
+	*(void**)0x012DADB0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glSecondaryColor3ubvEXT");
+	*(void**)0x012DADB8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glSecondaryColor3uiEXT");
+	*(void**)0x012DADC8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glSecondaryColor3uivEXT");
+	*(void**)0x012DADD0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glSecondaryColor3usEXT");
+	*(void**)0x012DADD4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glSecondaryColor3usvEXT");
+	*(void**)0x012DADE0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glSecondaryColorPointerEXT");
+	*(void**)0x012DADE8 = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

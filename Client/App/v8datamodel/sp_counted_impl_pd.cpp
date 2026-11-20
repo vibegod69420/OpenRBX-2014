@@ -53,6 +53,21 @@ double __cdecl sp_counted_impl_pd::getDouble()
 	return *getter->func(getter->arg);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008da430
+struct sp_counted_impl_pd_callee
+{
+	void __thiscall func(int, void*, void**, int);
+};
+
+void __cdecl sp_counted_impl_pd::get_deleter(void* arg)
+{
+	void* obj = (void*)_vtable_or_head;
+	void* pArg = &arg;
+	int flag;
+	*(unsigned char*)&flag = 0;
+	((sp_counted_impl_pd_callee*)((char*)obj + 8))->func(flag, obj, &pArg, 0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
