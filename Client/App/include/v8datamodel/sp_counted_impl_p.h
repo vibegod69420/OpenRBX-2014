@@ -51,6 +51,8 @@ public:
 	void __cdecl assign(void* src);
 	void __cdecl assignWord(void* src);
 	int __cdecl getCount() const;
+	int __cdecl sub_A34ED0();
+	void* __cdecl sub_A34D00(void* value);
 	// AUTO-GENERATED METHODS
 };
 

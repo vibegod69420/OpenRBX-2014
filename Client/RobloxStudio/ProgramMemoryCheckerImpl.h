@@ -180,6 +180,11 @@ public:
 	void init162();
 	void init163();
 	void init164();
+	void init165();
+	void init166();
+	void init167();
+	void init168();
+	void init169();
 	// AUTO-GENERATED METHODS
 };
 
