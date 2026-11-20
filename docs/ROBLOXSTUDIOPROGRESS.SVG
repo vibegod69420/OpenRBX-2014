@@ -4,12 +4,12 @@
     OpenRBX-2014 &middot; byte-accurate decompilation
   </text>
   <text x="22" y="60" fill="#e2e8f0" font-family="Consolas, ui-monospace, monospace" font-size="13">
-    1,723 matched / 9,365 matchable &middot; 18.40% &middot; 1.32% of .text bytes
+    1,731 matched / 9,365 matchable &middot; 18.48% &middot; 1.33% of .text bytes
   </text>
   <text x="22" y="80" fill="#8b9bb4" font-family="Consolas, ui-monospace, monospace" font-size="12">
-    deepseek-v4.1-flash @ max &middot; 17.00.50727.1 &middot; 2026-11-20 21:32:49 UTC
+    deepseek-v4.1-flash @ max &middot; 17.00.50727.1 &middot; 2026-11-20 21:41:17 UTC
   </text>
   <rect x="22" y="94" width="516" height="12" rx="6" fill="#1b2432"/>
-  <rect x="22" y="94" width="91" height="12" rx="6" fill="url(#g)"/>
+  <rect x="22" y="94" width="92" height="12" rx="6" fill="url(#g)"/>
   <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#34d399"/></linearGradient></defs>
 </svg>
