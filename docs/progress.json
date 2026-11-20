@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 01:46:56 UTC",
+ "updated_at": "2026-11-20 01:56:36 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 10.2296,
- "implemented_total": 966,
- "function_annotations": 966,
+ "matchable_coverage_pct": 10.2403,
+ "implemented_total": 967,
+ "function_annotations": 967,
  "stub_annotations": 0,
- "perfect_100_count": 958,
- "matched_real_functions": 958,
+ "perfect_100_count": 959,
+ "matched_real_functions": 959,
  "average_match_pct": 99.83,
- "overall_function_coverage_pct": 2.3619,
- "overall_byte_coverage_pct": 0.4213,
+ "overall_function_coverage_pct": 2.3643,
+ "overall_byte_coverage_pct": 0.4222,
  "usage": {
-  "calls_24h": 5804,
+  "calls_24h": 5775,
   "failures_24h": 0,
-  "completion_tokens_24h": 70921970,
-  "reasoning_tokens_24h": 69416988,
-  "avg_latency_s": 213.2
+  "completion_tokens_24h": 70786023,
+  "reasoning_tokens_24h": 69276986,
+  "avg_latency_s": 213.7
  },
- "functions_total": 966,
+ "functions_total": 967,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8world",
-   "matched": 102,
-   "functions": 102,
-   "bytes": 5431
+   "matched": 103,
+   "functions": 103,
+   "bytes": 5520
   },
   {
    "name": "Rendering/g3d",
@@ -4731,9 +4731,21 @@
    "matched": 958,
    "implemented": 966,
    "pct": 10.2296
+  },
+  {
+   "t": "2026-11-20 01:56:36 UTC",
+   "matched": 959,
+   "implemented": 967,
+   "pct": 10.2403
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T01:50:19",
+   "address": "0x00a4fa60",
+   "name": "RBX::RBX::BallBallContact::allocateFromFreeList",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T01:39:16",
    "address": "0x005f85f0",
@@ -5447,13 +5459,7 @@
    "address": "0x00b6ebd0",
    "name": "RBX::TriangleMesh::checkStack",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T18:11:41",
-   "address": "0x00a3cd40",
-   "name": "lua_exception::dispatchGlobal",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 28.98
+ "match_rate_per_hour": 28.87
 }

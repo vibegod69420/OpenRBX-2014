@@ -20,6 +20,7 @@ public:
 	void*allocate();
 	void*allocateFromPool();
 	void*allocateFromNew();
+	void*allocateFromFreeList();
 	// AUTO-GENERATED METHODS
 };
 
