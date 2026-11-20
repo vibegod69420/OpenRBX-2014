@@ -527,6 +527,56 @@ int __cdecl TriangleMesh::func_B6EB60()
 	return 1;
 }
 
+int sub_A38BC0(void*, int, const char*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b6e150
+int __cdecl TriangleMesh::setMetatable()
+{
+	int type = sub_A360D0(this, 2);
+	sub_A38960(this, 1, 5);
+
+	if (type != 0 && type != 5)
+	{
+		sub_A385A0(this, 2, "nil or table expected");
+	}
+
+	if (sub_A38BC0(this, 1, "__metatable"))
+	{
+		sub_A38A50(this, "cannot change a protected metatable");
+	}
+
+	sub_A35D10(this, 2);
+	sub_A35BF0(this, 1);
+	return 1;
+}
+
+void* sub_A36080(void*, int);
+void sub_A385A0(void*, int, const char*);
+int sub_A35150(void*);
+int sub_B6EC20(void*, void*, int);
+void sub_A35560(void*, int);
+void sub_A351C0(void*, int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b6ea80
+int __cdecl TriangleMesh::func_B6EA80()
+{
+	void* co = sub_A36080(this, 1);
+	if (!co)
+		sub_A385A0(this, 1, "coroutine expected");
+
+	int res = sub_B6EC20(this, co, sub_A35150(this) - 1);
+	if (res < 0)
+	{
+		sub_A35560(this, 0);
+		sub_A351C0(this, -2);
+		return 2;
+	}
+
+	sub_A35560(this, 1);
+	sub_A351C0(this, -1 - res);
+	return res + 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

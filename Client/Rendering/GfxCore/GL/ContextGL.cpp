@@ -1972,6 +1972,82 @@ bool ContextGL::initTransformFeedbackNV()
 	return false;
 }
 
+extern void* glReplacementCodePointerSUN;
+extern void* glReplacementCodeubSUN;
+extern void* glReplacementCodeubvSUN;
+extern void* glReplacementCodeuiSUN;
+extern void* glReplacementCodeuivSUN;
+extern void* glReplacementCodeusSUN;
+extern void* glReplacementCodeusvSUN;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fef70
+bool ContextGL::initReplacementCodeSUN()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("glReplacementCodePointerSUN");
+	glReplacementCodePointerSUN = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glReplacementCodeubSUN");
+	glReplacementCodeubSUN = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glReplacementCodeubvSUN");
+	glReplacementCodeubvSUN = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glReplacementCodeuiSUN");
+	glReplacementCodeuiSUN = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glReplacementCodeuivSUN");
+	glReplacementCodeuivSUN = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glReplacementCodeusSUN");
+	glReplacementCodeusSUN = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glReplacementCodeusvSUN");
+	glReplacementCodeusvSUN = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glTexSubImage1DEXT;
+extern void* glTexSubImage2DEXT;
+extern void* glTexSubImage3DEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fb0d0
+bool ContextGL::initTexSubImageEXT()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("glTexSubImage1DEXT");
+	glTexSubImage1DEXT = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glTexSubImage2DEXT");
+	glTexSubImage2DEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glTexSubImage3DEXT");
+	glTexSubImage3DEXT = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

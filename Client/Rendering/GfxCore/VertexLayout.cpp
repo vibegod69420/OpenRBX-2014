@@ -2486,6 +2486,80 @@ bool VertexLayout::initARBVertexBufferObject()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005f43c0
+extern void* g_glBeginPerfMonitorAMD;
+extern void* g_glDeletePerfMonitorsAMD;
+extern void* g_glEndPerfMonitorAMD;
+extern void* g_glGenPerfMonitorsAMD;
+extern void* g_glGetPerfMonitorCounterDataAMD;
+extern void* g_glGetPerfMonitorCounterInfoAMD;
+extern void* g_glGetPerfMonitorCounterStringAMD;
+extern void* g_glGetPerfMonitorCountersAMD;
+extern void* g_glGetPerfMonitorGroupStringAMD;
+extern void* g_glGetPerfMonitorGroupsAMD;
+extern void* g_glSelectPerfMonitorCountersAMD;
+
+bool VertexLayout::initAMDPerformanceMonitor()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glBeginPerfMonitorAMD");
+	g_glBeginPerfMonitorAMD = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glDeletePerfMonitorsAMD");
+	g_glDeletePerfMonitorsAMD = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glEndPerfMonitorAMD");
+	g_glEndPerfMonitorAMD = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGenPerfMonitorsAMD");
+	g_glGenPerfMonitorsAMD = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetPerfMonitorCounterDataAMD");
+	g_glGetPerfMonitorCounterDataAMD = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetPerfMonitorCounterInfoAMD");
+	g_glGetPerfMonitorCounterInfoAMD = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetPerfMonitorCounterStringAMD");
+	g_glGetPerfMonitorCounterStringAMD = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetPerfMonitorCountersAMD");
+	g_glGetPerfMonitorCountersAMD = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetPerfMonitorGroupStringAMD");
+	g_glGetPerfMonitorGroupStringAMD = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetPerfMonitorGroupsAMD");
+	g_glGetPerfMonitorGroupsAMD = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSelectPerfMonitorCountersAMD");
+	g_glSelectPerfMonitorCountersAMD = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

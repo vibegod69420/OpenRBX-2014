@@ -569,6 +569,57 @@ int __cdecl LuaArguments::pushVector2int16()
 	return 1;
 }
 
+void* __cdecl sub_A360A0(void*, void*);
+int __cdecl sub_A350C0(void*, void*);
+void __cdecl sub_A35060(void*, int, void*);
+int __cdecl sub_A35810(void*, int, int);
+void __cdecl sub_A35D10(void*, int);
+
+class DummySubA41D20
+{
+public:
+	void __thiscall sub_A41D20(void*);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00a42ae0
+bool __cdecl LuaArguments::getScript(void* arg, void* out)
+{
+	void* L = this;
+	void* tmp = sub_A360A0(L, arg);
+	if (tmp)
+	{
+		if (sub_A350C0(L, arg))
+		{
+			sub_A35060(L, -10000, *(void**)0x0128D3B4);
+			if (sub_A35810(L, -1, -2))
+			{
+				sub_A35D10(L, -3);
+				((DummySubA41D20*)out)->sub_A41D20(tmp);
+				return true;
+			}
+			sub_A35D10(L, -3);
+		}
+	}
+	return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00a40b80
+void __cdecl LuaArguments::pushVector3(void* arg)
+{
+	float x = *(float*)arg;
+	float y = *(float*)((char*)arg + 4);
+	float z = *(float*)((char*)arg + 8);
+	void* p = sub_A353E0(this, 12);
+	if (p)
+	{
+		*(float*)p = x;
+		*(float*)((char*)p + 4) = y;
+		*(float*)((char*)p + 8) = z;
+	}
+	sub_A35060(this, -10000, *(void**)0x0124EB28);
+	sub_A35BF0(this, -2);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

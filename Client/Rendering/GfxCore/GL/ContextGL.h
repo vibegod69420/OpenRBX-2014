@@ -121,6 +121,8 @@ public:
 	bool initFenceNV();
 	bool initOcclusionQueryNV();
 	bool initTransformFeedbackNV();
+	bool initReplacementCodeSUN();
+	bool initTexSubImageEXT();
 	// AUTO-GENERATED METHODS
 };
 

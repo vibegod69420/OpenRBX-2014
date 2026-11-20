@@ -92,6 +92,7 @@ public:
 	bool initARBVertexBlend();
 	bool initARBViewportArray();
 	bool initARBVertexBufferObject();
+	bool initAMDPerformanceMonitor();
 	// AUTO-GENERATED METHODS
 };
 

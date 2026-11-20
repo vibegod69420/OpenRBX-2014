@@ -50,6 +50,8 @@ public:
 	void __cdecl func_B70830();
 	int __cdecl func_B6D060(void* a2, void* a3);
 	int __cdecl func_B6EB60();
+	int __cdecl setMetatable();
+	int __cdecl func_B6EA80();
 	// AUTO-GENERATED METHODS
 };
 
