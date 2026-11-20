@@ -565,6 +565,37 @@ void __cdecl lua_exception::remove(int index)
 	*(char**)((char*)this + 8) -= 0x10;
 }
 
+// Forward declaration for callee at 0x00bcc760
+int __cdecl sub_BCC760(lua_exception* L, void* o1, void* o2);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a352c0
+int __cdecl lua_exception::equal(int index1, int index2)
+{
+	void* o1 = index2adr((int)this, index1);
+	void* o2 = index2adr((int)this, index2);
+
+	if (o1 == (void*)0x00EA7E68 || o2 == (void*)0x00EA7E68)
+		return 0;
+
+	return sub_BCC760(this, o1, o2);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00a3b400
+void* __cdecl lua_exception::sub_A3B400(int arg1, int arg2)
+{
+	lua_exception* L = this;
+	void* p = sub_A353E0(L, 8);
+	if (p)
+	{
+		*(int*)p = arg1;
+		*((int*)p + 1) = arg2;
+	}
+
+	sub_A35060(L, -10000, *(int*)0x0124EB2C);
+	sub_A35BF0(L, -2);
+	return p;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

@@ -1772,6 +1772,206 @@ bool ContextGL::initBufferRegionEXT()
 	return false;
 }
 
+extern void* glBeginTransformFeedbackEXT;
+extern void* glBindBufferBaseEXT;
+extern void* glBindBufferOffsetEXT;
+extern void* glBindBufferRangeEXT;
+extern void* glEndTransformFeedbackEXT;
+extern void* glGetTransformFeedbackVaryingEXT;
+extern void* glTransformFeedbackVaryingsEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fb300
+bool ContextGL::initTransformFeedbackEXT()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("glBeginTransformFeedbackEXT");
+	glBeginTransformFeedbackEXT = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glBindBufferBaseEXT");
+	glBindBufferBaseEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glBindBufferOffsetEXT");
+	glBindBufferOffsetEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glBindBufferRangeEXT");
+	glBindBufferRangeEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glEndTransformFeedbackEXT");
+	glEndTransformFeedbackEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetTransformFeedbackVaryingEXT");
+	glGetTransformFeedbackVaryingEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glTransformFeedbackVaryingsEXT");
+	glTransformFeedbackVaryingsEXT = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glDeleteFencesNV;
+extern void* glFinishFenceNV;
+extern void* glGenFencesNV;
+extern void* glGetFenceivNV;
+extern void* glIsFenceNV;
+extern void* glSetFenceNV;
+extern void* glTestFenceNV;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fc400
+bool ContextGL::initFenceNV()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("glDeleteFencesNV");
+	glDeleteFencesNV = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glFinishFenceNV");
+	glFinishFenceNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGenFencesNV");
+	glGenFencesNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetFenceivNV");
+	glGetFenceivNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glIsFenceNV");
+	glIsFenceNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glSetFenceNV");
+	glSetFenceNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glTestFenceNV");
+	glTestFenceNV = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glBeginOcclusionQueryNV;
+extern void* glDeleteOcclusionQueriesNV;
+extern void* glEndOcclusionQueryNV;
+extern void* glGenOcclusionQueriesNV;
+extern void* glGetOcclusionQueryivNV;
+extern void* glGetOcclusionQueryuivNV;
+extern void* glIsOcclusionQueryNV;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fcda0
+bool ContextGL::initOcclusionQueryNV()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("glBeginOcclusionQueryNV");
+	glBeginOcclusionQueryNV = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glDeleteOcclusionQueriesNV");
+	glDeleteOcclusionQueriesNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glEndOcclusionQueryNV");
+	glEndOcclusionQueryNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGenOcclusionQueriesNV");
+	glGenOcclusionQueriesNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetOcclusionQueryivNV");
+	glGetOcclusionQueryivNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetOcclusionQueryuivNV");
+	glGetOcclusionQueryuivNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glIsOcclusionQueryNV");
+	glIsOcclusionQueryNV = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glBindTransformFeedbackNV;
+extern void* glDeleteTransformFeedbacksNV;
+extern void* glDrawTransformFeedbackNV;
+extern void* glGenTransformFeedbacksNV;
+extern void* glIsTransformFeedbackNV;
+extern void* glPauseTransformFeedbackNV;
+extern void* glResumeTransformFeedbackNV;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fd890
+bool ContextGL::initTransformFeedbackNV()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("glBindTransformFeedbackNV");
+	glBindTransformFeedbackNV = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glDeleteTransformFeedbacksNV");
+	glDeleteTransformFeedbacksNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glDrawTransformFeedbackNV");
+	glDrawTransformFeedbackNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGenTransformFeedbacksNV");
+	glGenTransformFeedbacksNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glIsTransformFeedbackNV");
+	glIsTransformFeedbackNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glPauseTransformFeedbackNV");
+	glPauseTransformFeedbackNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glResumeTransformFeedbackNV");
+	glResumeTransformFeedbackNV = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

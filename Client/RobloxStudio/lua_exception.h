@@ -60,6 +60,8 @@ public:
 	int __cdecl rawequal(int index1, int index2);
 	void* __cdecl sub_A3AFB0(int value);
 	void __cdecl remove(int index);
+	int __cdecl equal(int index1, int index2);
+	void* __cdecl sub_A3B400(int arg1, int arg2);
 	// AUTO-GENERATED METHODS
 };
 

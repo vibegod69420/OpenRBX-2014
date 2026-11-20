@@ -89,6 +89,9 @@ public:
 	bool initEXTBindableUniform();
 	bool initARBUniformBufferObject();
 	bool initARBVertexAttrib64bit();
+	bool initARBVertexBlend();
+	bool initARBViewportArray();
+	bool initARBVertexBufferObject();
 	// AUTO-GENERATED METHODS
 };
 

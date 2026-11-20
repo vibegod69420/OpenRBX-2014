@@ -117,6 +117,10 @@ public:
 	bool initVideoOutputNV();
 	bool initSyncControlOML();
 	bool initBufferRegionEXT();
+	bool initTransformFeedbackEXT();
+	bool initFenceNV();
+	bool initOcclusionQueryNV();
+	bool initTransformFeedbackNV();
 	// AUTO-GENERATED METHODS
 };
 

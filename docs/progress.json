@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 14:20:21 UTC",
+ "updated_at": "2026-11-20 14:28:53 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 15.024,
- "implemented_total": 1420,
- "function_annotations": 1420,
+ "matchable_coverage_pct": 15.1308,
+ "implemented_total": 1430,
+ "function_annotations": 1430,
  "stub_annotations": 0,
- "perfect_100_count": 1407,
- "matched_real_functions": 1407,
+ "perfect_100_count": 1417,
+ "matched_real_functions": 1417,
  "average_match_pct": 99.82,
- "overall_function_coverage_pct": 3.4688,
- "overall_byte_coverage_pct": 0.8313,
+ "overall_function_coverage_pct": 3.4935,
+ "overall_byte_coverage_pct": 0.8478,
  "usage": {
-  "calls_24h": 5418,
+  "calls_24h": 5419,
   "failures_24h": 0,
-  "completion_tokens_24h": 66893497,
-  "reasoning_tokens_24h": 65225410,
-  "avg_latency_s": 210.5
+  "completion_tokens_24h": 66834411,
+  "reasoning_tokens_24h": 65161424,
+  "avg_latency_s": 210.1
  },
- "functions_total": 1420,
+ "functions_total": 1430,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -42,9 +42,9 @@
   },
   {
    "name": "Rendering/GfxCore",
-   "matched": 204,
-   "functions": 204,
-   "bytes": 14686
+   "matched": 211,
+   "functions": 211,
+   "bytes": 16061
   },
   {
    "name": "App/v8world",
@@ -66,9 +66,9 @@
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
-   "matched": 91,
-   "functions": 91,
-   "bytes": 5185
+   "matched": 92,
+   "functions": 92,
+   "bytes": 5246
   },
   {
    "name": "App/v8kernel",
@@ -84,9 +84,9 @@
   },
   {
    "name": "RobloxStudio/lua_exception.cpp",
-   "matched": 44,
-   "functions": 44,
-   "bytes": 1850
+   "matched": 46,
+   "functions": 46,
+   "bytes": 1987
   },
   {
    "name": "App/humanoid",
@@ -1293,6 +1293,17 @@
    "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
    "orig_size": 56,
    "recomp_size": 56,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00da3230",
+   "kind": "FUNCTION",
+   "name": "ProgramMemoryCheckerImpl::init92",
+   "mangled": "?init92@ProgramMemoryCheckerImpl@@QAEXXZ",
+   "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+   "orig_size": 61,
+   "recomp_size": 61,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3308,17 +3319,6 @@
    "recomp_size": 23,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x00bc87b0",
-   "kind": "FUNCTION",
-   "name": "PolyContact_sub_BC9420",
-   "mangled": "?getEdge@PolyContact@RBX@@QAAPAXPAX0@Z",
-   "file": "Client/App/v8world/PolyContact.cpp",
-   "orig_size": 68,
-   "recomp_size": 68,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -5199,9 +5199,75 @@
    "matched": 1407,
    "implemented": 1420,
    "pct": 15.024
+  },
+  {
+   "t": "2026-11-20 14:28:53 UTC",
+   "matched": 1417,
+   "implemented": 1430,
+   "pct": 15.1308
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T14:25:23",
+   "address": "0x00a3b400",
+   "name": "lua_exception::sub_A3B400",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T14:24:29",
+   "address": "0x005fd890",
+   "name": "RBX::Graphics::ContextGL::initTransformFeedbackNV",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T14:24:15",
+   "address": "0x00a352c0",
+   "name": "lua_exception::equal",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T14:23:39",
+   "address": "0x005fcda0",
+   "name": "RBX::Graphics::ContextGL::initOcclusionQueryNV",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T14:23:11",
+   "address": "0x005f7770",
+   "name": "RBX::Graphics::VertexLayout::initARBVertexBufferObject",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T14:21:52",
+   "address": "0x005fc400",
+   "name": "RBX::Graphics::ContextGL::initFenceNV",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T14:21:50",
+   "address": "0x005f8170",
+   "name": "RBX::Graphics::VertexLayout::initARBViewportArray",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T14:21:47",
+   "address": "0x00da3230",
+   "name": "ProgramMemoryCheckerImpl::init92",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T14:20:28",
+   "address": "0x005fb300",
+   "name": "RBX::Graphics::ContextGL::initTransformFeedbackEXT",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T14:20:24",
+   "address": "0x005f7680",
+   "name": "RBX::Graphics::VertexLayout::initARBVertexBlend",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T14:16:54",
    "address": "0x00da2810",
@@ -5861,67 +5927,7 @@
    "address": "0x00a42f80",
    "name": "RBX::Lua::LuaArguments::getArg",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T12:52:19",
-   "address": "0x00db6a40",
-   "name": "ProgramMemoryCheckerImpl::init61",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T12:52:08",
-   "address": "0x005fa740",
-   "name": "RBX::Graphics::ContextGL::initFramebufferTextureEXT",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T12:52:00",
-   "address": "0x00a37970",
-   "name": "lua_exception::orderError",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T12:51:25",
-   "address": "0x005f4190",
-   "name": "RBX::Graphics::VertexLayout::initGL40",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T12:51:16",
-   "address": "0x005fac00",
-   "name": "RBX::Graphics::ContextGL::initLightTextureEXT",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T12:51:11",
-   "address": "0x00a43380",
-   "name": "RBX::Lua::LuaArguments::getUserdata",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T12:50:55",
-   "address": "0x00dc1940",
-   "name": "ProgramMemoryCheckerImpl::init60",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T12:49:54",
-   "address": "0x00a43180",
-   "name": "RBX::Lua::LuaArguments::getThread",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T12:49:52",
-   "address": "0x00a35890",
-   "name": "lua_exception::rawgeti",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T12:49:50",
-   "address": "0x005f5a60",
-   "name": "RBX::Graphics::VertexLayout::initARBMultiBind",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 30.84
+ "match_rate_per_hour": 30.97
 }
