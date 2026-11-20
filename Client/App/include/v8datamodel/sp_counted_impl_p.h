@@ -48,6 +48,7 @@ public:
 	void destroySubPtr0C_f5e0();
 	void destroySubPtr0C_6610();
 	void disposeNuggetHistory();
+	void __cdecl assign(void* src);
 	// AUTO-GENERATED METHODS
 };
 

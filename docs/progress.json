@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 17:14:19 UTC",
+ "updated_at": "2026-11-20 17:43:37 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 16.7005,
- "implemented_total": 1584,
- "function_annotations": 1584,
+ "matchable_coverage_pct": 16.7112,
+ "implemented_total": 1585,
+ "function_annotations": 1585,
  "stub_annotations": 0,
- "perfect_100_count": 1564,
- "matched_real_functions": 1564,
+ "perfect_100_count": 1565,
+ "matched_real_functions": 1565,
  "average_match_pct": 99.47,
- "overall_function_coverage_pct": 3.8559,
- "overall_byte_coverage_pct": 1.2284,
+ "overall_function_coverage_pct": 3.8584,
+ "overall_byte_coverage_pct": 1.2286,
  "usage": {
-  "calls_24h": 5165,
+  "calls_24h": 5055,
   "failures_24h": 0,
-  "completion_tokens_24h": 63829024,
-  "reasoning_tokens_24h": 62131961,
-  "avg_latency_s": 211.1
+  "completion_tokens_24h": 62410677,
+  "reasoning_tokens_24h": 60755629,
+  "avg_latency_s": 211.5
  },
- "functions_total": 1584,
+ "functions_total": 1585,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 447,
-   "functions": 449,
-   "bytes": 20424
+   "matched": 448,
+   "functions": 450,
+   "bytes": 20439
   },
   {
    "name": "App/script",
@@ -5319,9 +5319,21 @@
    "matched": 1564,
    "implemented": 1584,
    "pct": 16.7005
+  },
+  {
+   "t": "2026-11-20 17:43:37 UTC",
+   "matched": 1565,
+   "implemented": 1585,
+   "pct": 16.7112
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T17:40:28",
+   "address": "0x0077d690",
+   "name": "RBX::detail::sp_counted_impl_p::assign",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T17:07:17",
    "address": "0x00dbee50",
@@ -6035,13 +6047,7 @@
    "address": "0x00a42d00",
    "name": "RBX::Lua::LuaArguments::getGlobal",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T14:57:16",
-   "address": "0x005f6000",
-   "name": "RBX::Graphics::VertexLayout::initARBRobustness",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 32.24
+ "match_rate_per_hour": 31.94
 }

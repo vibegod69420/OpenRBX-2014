@@ -365,6 +365,12 @@ void sp_counted_impl_p::disposeNuggetHistory()
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0077d690
+void __cdecl sp_counted_impl_p::assign(void* src)
+{
+	*(unsigned char*)this = *(unsigned char*)src;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
