@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 04:17:37 UTC",
+ "updated_at": "2026-11-20 04:26:18 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 10.6033,
- "implemented_total": 1003,
- "function_annotations": 1003,
+ "matchable_coverage_pct": 10.6247,
+ "implemented_total": 1005,
+ "function_annotations": 1005,
  "stub_annotations": 0,
- "perfect_100_count": 993,
- "matched_real_functions": 993,
+ "perfect_100_count": 995,
+ "matched_real_functions": 995,
  "average_match_pct": 99.82,
- "overall_function_coverage_pct": 2.4482,
- "overall_byte_coverage_pct": 0.4851,
+ "overall_function_coverage_pct": 2.4531,
+ "overall_byte_coverage_pct": 0.4934,
  "usage": {
-  "calls_24h": 5601,
+  "calls_24h": 5587,
   "failures_24h": 0,
-  "completion_tokens_24h": 69664021,
-  "reasoning_tokens_24h": 68111769,
-  "avg_latency_s": 216.0
+  "completion_tokens_24h": 69560410,
+  "reasoning_tokens_24h": 67999321,
+  "avg_latency_s": 216.1
  },
- "functions_total": 1003,
+ "functions_total": 1005,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -71,16 +71,22 @@
    "bytes": 2220
   },
   {
+   "name": "App/humanoid",
+   "matched": 37,
+   "functions": 37,
+   "bytes": 1478
+  },
+  {
    "name": "App/script",
    "matched": 38,
    "functions": 38,
    "bytes": 1328
   },
   {
-   "name": "App/humanoid",
-   "matched": 36,
-   "functions": 36,
-   "bytes": 1231
+   "name": "RobloxStudio/SoundServiceStatsItem.cpp",
+   "matched": 5,
+   "functions": 5,
+   "bytes": 878
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -117,12 +123,6 @@
    "matched": 8,
    "functions": 8,
    "bytes": 401
-  },
-  {
-   "name": "RobloxStudio/SoundServiceStatsItem.cpp",
-   "matched": 4,
-   "functions": 4,
-   "bytes": 329
   },
   {
    "name": "Rendering/GfxBase",
@@ -1847,6 +1847,17 @@
    "matchable": true
   },
   {
+   "address": "0x00c17ef0",
+   "kind": "FUNCTION",
+   "name": "RBX::HUMAN::Swimming::fireEvent",
+   "mangled": "?fireEvent@Swimming@HUMAN@RBX@@QAAHPAHH@Z",
+   "file": "Client/App/humanoid/Swimming.cpp",
+   "orig_size": 247,
+   "recomp_size": 247,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00c17e70",
    "kind": "FUNCTION",
    "name": "RBX::HUMAN::Swimming::onEvent",
@@ -3306,17 +3317,6 @@
    "file": "Client/App/v8datamodel/ContextActionService.cpp",
    "orig_size": 92,
    "recomp_size": 92,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00b28e20",
-   "kind": "FUNCTION",
-   "name": "construct",
-   "mangled": "??0Widget@RBX@@QAE@XZ",
-   "file": "Client/App/gui/Widget.cpp",
-   "orig_size": 56,
-   "recomp_size": 56,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -4803,9 +4803,27 @@
    "matched": 993,
    "implemented": 1003,
    "pct": 10.6033
+  },
+  {
+   "t": "2026-11-20 04:26:18 UTC",
+   "matched": 995,
+   "implemented": 1005,
+   "pct": 10.6247
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T04:21:19",
+   "address": "0x00c17ef0",
+   "name": "RBX::HUMAN::Swimming::fireEvent",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T04:20:21",
+   "address": "0x00705170",
+   "name": "SoundServiceStatsItem::getSoundCount",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T04:11:34",
    "address": "0x006d1560",
@@ -5513,19 +5531,7 @@
    "address": "0x00605ac0",
    "name": "RBX::Graphics::ContextGL::assignIfNull_5ac0",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T20:53:49",
-   "address": "0x00969fc0",
-   "name": "RBX::Workspace::method_00969fc0",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T20:53:39",
-   "address": "0x00b53560",
-   "name": "RBX::Kernel::getSubField24_94",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 27.92
+ "match_rate_per_hour": 27.86
 }

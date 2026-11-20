@@ -80,6 +80,14 @@ bool SoundServiceStatsItem::getBoolValue()
 	return reinterpret_cast<SoundServiceStatsItemBoolLayout*>(this)->value;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00705170
+int SoundServiceStatsItem::getSoundCount()
+{
+	reinterpret_cast<SoundServiceStatsItemHelper*>(this)->update();
+	reinterpret_cast<SoundServiceStatsItemHelper*>(this)->setMode(5);
+	return *reinterpret_cast<int*>(reinterpret_cast<SoundServiceStatsItemIntLayout*>(this)->data + 4);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

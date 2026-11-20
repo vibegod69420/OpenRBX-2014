@@ -171,6 +171,68 @@ finish:
 	return result;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c17ef0
+int __cdecl Swimming::fireEvent(int* event, int arg3)
+{
+	if (event[0] == 11)
+	{
+		int val = (*(int**)((char*)*(void**)this + 0x0C))[event[2]];
+		if ((val & 0x3F) == 0x13)
+		{
+			--*(int*)((char*)this + 0x18);
+			return applyState(0x1A, (int)((unsigned int)val >> 0x17), 0, arg3 == 0);
+		}
+	}
+
+	if (event[0] == 12)
+		goto handle12;
+
+	{
+		void* obj = *(void**)this;
+		int val = *(int*)((char*)this + 0x24);
+		int limit = *(unsigned char*)((char*)obj + 0x4B);
+		++val;
+
+		if (val > limit)
+		{
+			if (val >= 250)
+				sub_BC88E0(*(void**)((char*)this + 0x0C), "function or expression too complex");
+
+			*(unsigned char*)((char*)*(void**)this + 0x4B) = (unsigned char)val;
+		}
+
+		++*(int*)((char*)this + 0x24);
+		sub_C17BA0(this, event, *(int*)((char*)this + 0x24) - 1);
+	}
+
+	if (event[0] != 12)
+		goto tail;
+
+handle12:
+	{
+		int data = event[2];
+		if ((data & 0x100) == 0)
+		{
+			if (data >= *(unsigned char*)((char*)this + 0x32))
+				--*(int*)((char*)this + 0x24);
+		}
+	}
+
+tail:
+	sub_C18030(this, ((event[2] << 9 | arg3) << 14) | 0x3FDB, (*(int**)((char*)this + 0x0C))[2]);
+
+	{
+		int oldValue = *(int*)((char*)this + 0x20);
+		*(int*)((char*)this + 0x20) = -1;
+
+		typedef int (__cdecl *SubC18030RetFn)(Swimming*, int, int);
+		int result = ((SubC18030RetFn)sub_C18030)(this, 0x7FFF8016, (*(int**)((char*)this + 0x0C))[2]);
+		sub_C18130(this, &result, oldValue);
+
+		return result;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace HUMAN

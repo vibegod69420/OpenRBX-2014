@@ -20,6 +20,7 @@ public:
 	double getCurrentValue();
 	int getIntValue();
 	bool getBoolValue();
+	int getSoundCount();
 	// AUTO-GENERATED METHODS
 };
 
