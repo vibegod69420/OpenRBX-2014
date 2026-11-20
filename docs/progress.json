@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 07:06:29 UTC",
+ "updated_at": "2026-11-20 07:16:29 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -17,28 +17,28 @@
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
  "matchable_coverage_pct": 11.1479,
- "implemented_total": 1056,
- "function_annotations": 1056,
+ "implemented_total": 1057,
+ "function_annotations": 1057,
  "stub_annotations": 0,
  "perfect_100_count": 1044,
  "matched_real_functions": 1044,
- "average_match_pct": 99.81,
+ "average_match_pct": 99.75,
  "overall_function_coverage_pct": 2.5739,
- "overall_byte_coverage_pct": 0.5256,
+ "overall_byte_coverage_pct": 0.5259,
  "usage": {
-  "calls_24h": 5457,
+  "calls_24h": 5485,
   "failures_24h": 0,
-  "completion_tokens_24h": 68318004,
-  "reasoning_tokens_24h": 66738000,
-  "avg_latency_s": 216.2
+  "completion_tokens_24h": 68678169,
+  "reasoning_tokens_24h": 67085146,
+  "avg_latency_s": 216.3
  },
- "functions_total": 1056,
+ "functions_total": 1057,
  "subsystems": [
   {
    "name": "App/v8datamodel",
    "matched": 392,
-   "functions": 393,
-   "bytes": 14659
+   "functions": 394,
+   "bytes": 14688
   },
   {
    "name": "Rendering/g3d",
@@ -1311,11 +1311,11 @@
    "address": "0x00c93a10",
    "kind": "FUNCTION",
    "name": "std::chainbuf::destroyInstance",
-   "mangled": "?destroyInstance@chainbuf@std@@SAXPAV12@@Z",
+   "mangled": "?write@chainbuf@std@@QAAXPAX@Z",
    "file": "Client/App/v8datamodel/chainbuf.cpp",
    "orig_size": 30,
-   "recomp_size": 30,
-   "match_pct": 100.0,
+   "recomp_size": 32,
+   "match_pct": 40.62,
    "matchable": true
   },
   {
@@ -1425,6 +1425,17 @@
    "file": "Client/App/v8datamodel/stream_buffer.cpp",
    "orig_size": 4,
    "recomp_size": 4,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00c7c2e0",
+   "kind": "FUNCTION",
+   "name": "sub_CF669E",
+   "mangled": "?onDestroy@chainbuf@std@@QAEXXZ",
+   "file": "Client/App/v8datamodel/chainbuf.cpp",
+   "orig_size": 59,
+   "recomp_size": 59,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3308,17 +3319,6 @@
    "recomp_size": 10,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x00b53510",
-   "kind": "FUNCTION",
-   "name": "RBX::Kernel::getSubField24_34",
-   "mangled": "?getSubField24_34@Kernel@RBX@@QBEHXZ",
-   "file": "Client/App/v8kernel/Kernel.cpp",
-   "orig_size": 7,
-   "recomp_size": 7,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -4899,9 +4899,21 @@
    "matched": 1044,
    "implemented": 1056,
    "pct": 11.1479
+  },
+  {
+   "t": "2026-11-20 07:16:29 UTC",
+   "matched": 1044,
+   "implemented": 1057,
+   "pct": 11.1479
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T07:06:40",
+   "address": "0x00c7c2e0",
+   "name": "sub_CF669E",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T07:00:11",
    "address": "0x00dc17c0",
@@ -5615,13 +5627,7 @@
    "address": "0x00a08e50",
    "name": "",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T23:57:05",
-   "address": "0x007c9470",
-   "name": "RBX::GuiImageButton::activateFromHierarchy",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 27.2
+ "match_rate_per_hour": 27.08
 }

@@ -70,6 +70,26 @@ void __cdecl chainbuf::write(void* src, void* destination)
 	sub_C70230(destination, &src);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c7c2e0
+void __stdcall sub_CF669E(void* ptr, unsigned int size, int count, void* dtor);
+void __cdecl sub_CF6522(void* ptr);
+
+struct _chainbuf_onDestroy_helper_C7C2E0
+{
+	void unlink(void* out, void* first, void* head);
+};
+
+void chainbuf::onDestroy()
+{
+	void* local;
+	sub_CF669E((char*)this + 8, 0x18u, 0x80, (void*)0x004028A0);
+
+	void* head = (void*)_vtable_or_head;
+	((_chainbuf_onDestroy_helper_C7C2E0*)this)->unlink(&local, *(void**)head, head);
+
+	sub_CF6522((void*)_vtable_or_head);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std
