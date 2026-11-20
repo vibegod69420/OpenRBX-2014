@@ -812,6 +812,20 @@ int __cdecl sp_counted_impl_p::sub_B7A2A0()
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b7a520
+void __cdecl sub_4226B0(void*);
+
+int __cdecl sp_counted_impl_p::sub_B7A520()
+{
+	void* result = ((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 1, dword_128E204);
+	void* p = *(void**)result;
+	if (p)
+	{
+		sub_4226B0((char*)p + 5);
+	}
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
