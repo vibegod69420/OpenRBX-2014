@@ -154,6 +154,8 @@ public:
 	bool initFragmentLightingEXT();
 	bool initFragmentLightingSGIX();
 	bool initFixedPointOESCore();
+	bool initGpuShader4EXT();
+	bool initGpuShader5NV();
 	// AUTO-GENERATED METHODS
 };
 

@@ -946,6 +946,62 @@ int __cdecl LuaArguments::pushVector3Sub()
 	return 1;
 }
 
+void __cdecl sub_A38FC0(void*, void*);
+void __cdecl sub_8DFAC0(void*, int);
+void __cdecl sub_A35710(void*, void*);
+void __cdecl sub_A35580(void*, void*, int);
+void __cdecl sub_A35CE0(void*, int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a40d10
+void __cdecl LuaArguments::registerObject(void* arg1, void* arg2)
+{
+	void* self = this;
+
+	sub_A38FC0(self, *(void**)0x0124EACC);
+	sub_8DFAC0(self, -1);
+
+	sub_A35710(self, (void*)0x00E53324);
+	sub_A35580(self, arg1, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00E5332C);
+	sub_A35580(self, arg2, 0);
+
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B60);
+	sub_A35580(self, (void*)0x00A3CD40, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B68);
+	sub_A35580(self, (void*)0x00A3CA10, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B70);
+	sub_A35580(self, (void*)0x00A40340, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B7C);
+	sub_A35580(self, (void*)0x00A3BD40, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B84);
+
+	sub_A35580(self, (void*)0x00A3FC50, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B8C);
+	sub_A35580(self, (void*)0x00A3EDA0, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA78F4);
+	sub_A35580(self, (void*)0x00A3ED40, 0);
+
+	sub_A35CE0(self, -3);
+	sub_A35CC0(self, -1, 1);
+	sub_A35D10(self, -2);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua
