@@ -207,6 +207,64 @@ void* UnionOperation::sub_8942A0()
 	return node;
 }
 
+namespace {
+
+typedef unsigned char (__cdecl *AssertHookFn)(const char*, const char*, int);
+void __cdecl sub_6B9770(const char*); // 0x006B9770
+
+struct OnDemandData
+{
+	char pad[0x24];
+	long touchedSlotCount; // 0x24
+};
+
+struct UnionOpOnDemandAccess
+{
+	OnDemandData* sub_7B4990(); // 0x007B4990
+	OnDemandData* sub_7B49A0(); // 0x007B49A0
+	void sub_88F3F0();          // 0x0088F3F0
+};
+
+struct InterlockedCounter
+{
+	long sub_6B97D0(); // 0x006B97D0
+};
+
+} // namespace
+
+// FUNCTION: ROBLOXSTUDIO 0x00893910
+void UnionOperation::sub_893910()
+{
+	if (((UnionOpOnDemandAccess*)this)->sub_7B4990()
+		&& ((UnionOpOnDemandAccess*)this)->sub_7B4990()->touchedSlotCount < 0)
+	{
+		AssertHookFn hook = *(AssertHookFn*)0x012DE694;
+		if (!hook || hook(
+			"!onDemandRead() || onDemandRead()->touchedSlotCount >= 0",
+			"D:\\BuildAgent\\work\\Trunk2012\\Client\\App\\v8datamodel\\PartInstance.cpp",
+			0x115) == 0)
+		{
+			sub_6B9770("!onDemandRead() || onDemandRead()->touchedSlotCount >= 0");
+		}
+	}
+
+	OnDemandData* od = ((UnionOpOnDemandAccess*)this)->sub_7B49A0();
+	if (((InterlockedCounter*)&od->touchedSlotCount)->sub_6B97D0() == 1)
+		((UnionOpOnDemandAccess*)this)->sub_88F3F0();
+
+	if (((UnionOpOnDemandAccess*)this)->sub_7B4990()->touchedSlotCount < 0)
+	{
+		AssertHookFn hook = *(AssertHookFn*)0x012DE694;
+		if (!hook || hook(
+			"onDemandRead()->touchedSlotCount >= 0",
+			"D:\\BuildAgent\\work\\Trunk2012\\Client\\App\\v8datamodel\\PartInstance.cpp",
+			0x119) == 0)
+		{
+			sub_6B9770("onDemandRead()->touchedSlotCount >= 0");
+		}
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

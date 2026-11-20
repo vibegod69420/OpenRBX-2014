@@ -141,6 +141,23 @@ void ProgramMemoryCheckerImpl::init13()
 	((ProgramMemoryCheckerTarget*)0x012DD334)->sub_664AF0(&c, &b, &a);
 }
 
+class ProgramMemoryCheckerShutdownTarget
+{
+public:
+	void sub_8325C0(const char* name, int a, int b, int c, int d);
+};
+
+int __cdecl sub_CF6609(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00dae4a0
+void ProgramMemoryCheckerImpl::init14()
+{
+	int flag[2];
+	((ProgramMemoryCheckerShutdownTarget*)0x012F8C50)->sub_8325C0(
+		"RequestShutdown", 0xCD0, 5, (*(unsigned char*)&flag[0] = 0, flag[0]), 0);
+	sub_CF6609((void*)0x00DE9FB0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
