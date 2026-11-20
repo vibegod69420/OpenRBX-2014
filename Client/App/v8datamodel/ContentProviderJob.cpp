@@ -30,6 +30,42 @@ int __cdecl ContentProviderJob::process(int a2, int a3, int a4)
 	return result;
 }
 
+struct ContentProviderJobEntry
+{
+	int data;
+	int begin;
+	int end;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00bc66d0
+int __cdecl ContentProviderJob::getData(int a2, int a3)
+{
+	int count = *(int *)((char *)this + 0x38);
+	int i = 0;
+	if (count > 0)
+	{
+		ContentProviderJobEntry *entries = *(ContentProviderJobEntry **)((char *)this + 0x18);
+		int *p = &entries[0].end;
+		do
+		{
+			if (p[-1] > a3)
+				return 0;
+
+			if (a3 < p[0])
+			{
+				--a2;
+				if (a2 == 0)
+					return entries[i].data + 0x10;
+			}
+
+			++i;
+			p += 3;
+		} while (i < count);
+	}
+
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

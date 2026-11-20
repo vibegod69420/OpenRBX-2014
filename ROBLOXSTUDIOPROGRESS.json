@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20 05:12:12 UTC",
+  "updated_at": "2026-11-20 05:21:26 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 10.8382,
-  "implemented_total": 1027,
-  "function_annotations": 1027,
+  "matchable_coverage_pct": 10.8703,
+  "implemented_total": 1030,
+  "function_annotations": 1030,
   "stub_annotations": 0,
-  "perfect_100_count": 1015,
-  "matched_real_functions": 1015,
+  "perfect_100_count": 1018,
+  "matched_real_functions": 1018,
   "average_match_pct": 99.8,
-  "overall_function_coverage_pct": 2.5024,
-  "overall_byte_coverage_pct": 0.5032,
+  "overall_function_coverage_pct": 2.5098,
+  "overall_byte_coverage_pct": 0.506,
   "usage": {
-    "calls_24h": 5518,
+    "calls_24h": 5516,
     "failures_24h": 0,
-    "completion_tokens_24h": 69206495,
-    "reasoning_tokens_24h": 67621837,
-    "avg_latency_s": 217.3
+    "completion_tokens_24h": 69208910,
+    "reasoning_tokens_24h": 67622919,
+    "avg_latency_s": 217.2
   },
   "functions": [
     {
@@ -2967,6 +2967,17 @@
       "file": "Client/Rendering/GfxRender/Material.cpp",
       "orig_size": 26,
       "recomp_size": 26,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00665360",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::MegaCluster::clear",
+      "mangled": "?clear@MegaCluster@Graphics@RBX@@QAEXXZ",
+      "file": "Client/Rendering/GfxRender/MegaCluster.cpp",
+      "orig_size": 97,
+      "recomp_size": 97,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -9571,6 +9582,17 @@
       "matchable": true
     },
     {
+      "address": "0x00bc66d0",
+      "kind": "FUNCTION",
+      "name": "RBX::ContentProviderJob::getData",
+      "mangled": "?getData@ContentProviderJob@RBX@@QAAHHH@Z",
+      "file": "Client/App/v8datamodel/ContentProviderJob.cpp",
+      "orig_size": 73,
+      "recomp_size": 73,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00bc6fc0",
       "kind": "FUNCTION",
       "name": "RBX::PolyContact::addEdge",
@@ -10194,6 +10216,17 @@
       "file": "Client/Network/Players.cpp",
       "orig_size": 57,
       "recomp_size": 40,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c286f0",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::Players::func00c286f0",
+      "mangled": "?func00c286f0@Players@Network@RBX@@QAEXXZ",
+      "file": "Client/Network/Players.cpp",
+      "orig_size": 96,
+      "recomp_size": 96,
       "match_pct": 100.0,
       "matchable": true
     },

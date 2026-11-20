@@ -92,6 +92,43 @@ Players::Players()
 	*(int*)((int*)this + 6) = 0;
 }
 
+struct PlayersListSub
+{
+	void* head;
+	int size;
+	void func00c2ce90();
+};
+
+struct PlayersStringMember
+{
+	union
+	{
+		char* ptr;
+		char buf[16];
+	};
+	unsigned int size;
+	unsigned int capacity;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c286f0
+void Players::func00c286f0()
+{
+	((PlayersListSub*)((char*)this + 0x3C))->func00c2ce90();
+	::operator delete(((PlayersListSub*)((char*)this + 0x3C))->head);
+
+	if (((PlayersStringMember*)((char*)this + 0x24))->capacity >= 0x10)
+		::operator delete(((PlayersStringMember*)((char*)this + 0x24))->ptr);
+	((PlayersStringMember*)((char*)this + 0x24))->capacity = 0x0F;
+	((PlayersStringMember*)((char*)this + 0x24))->size = 0;
+	((PlayersStringMember*)((char*)this + 0x24))->buf[0] = 0;
+
+	if (((PlayersStringMember*)((char*)this + 0x04))->capacity >= 0x10)
+		::operator delete(((PlayersStringMember*)((char*)this + 0x04))->ptr);
+	((PlayersStringMember*)((char*)this + 0x04))->capacity = 0x0F;
+	((PlayersStringMember*)((char*)this + 0x04))->size = 0;
+	((PlayersStringMember*)((char*)this + 0x04))->buf[0] = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

@@ -57,6 +57,35 @@ void MegaCluster::unload()
 	}
 }
 
+typedef void (__fastcall *MegaClusterCleanupFunc)(void*);
+static MegaClusterCleanupFunc megaClusterCleanup = 0;
+
+void __cdecl megaClusterFree(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00665360
+void MegaCluster::clear()
+{
+	if (*(void**)((char*)this + 0x0C) != 0)
+	{
+		megaClusterCleanup((char*)this + 0x0C);
+		megaClusterFree(*(void**)((char*)this + 0x0C));
+
+		*(void**)((char*)this + 0x0C) = 0;
+		*(void**)((char*)this + 0x10) = 0;
+		*(void**)((char*)this + 0x14) = 0;
+	}
+
+	if (*(void**)this != 0)
+	{
+		megaClusterCleanup(this);
+		megaClusterFree(*(void**)this);
+
+		*(void**)this = 0;
+		*(void**)((char*)this + 0x04) = 0;
+		*(void**)((char*)this + 0x08) = 0;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

@@ -22,6 +22,7 @@ public:
 	int getSize() const;
 	int getCount() const;
 	void unload();
+	void clear();
 	// AUTO-GENERATED METHODS
 };
 
