@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20 16:30:52 UTC",
+  "updated_at": "2026-11-20 16:39:17 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 16.3801,
-  "implemented_total": 1554,
-  "function_annotations": 1554,
+  "matchable_coverage_pct": 16.4442,
+  "implemented_total": 1560,
+  "function_annotations": 1560,
   "stub_annotations": 0,
-  "perfect_100_count": 1534,
-  "matched_real_functions": 1534,
+  "perfect_100_count": 1540,
+  "matched_real_functions": 1540,
   "average_match_pct": 99.46,
-  "overall_function_coverage_pct": 3.782,
-  "overall_byte_coverage_pct": 1.1326,
+  "overall_function_coverage_pct": 3.7968,
+  "overall_byte_coverage_pct": 1.1475,
   "usage": {
-    "calls_24h": 5331,
+    "calls_24h": 5310,
     "failures_24h": 0,
-    "completion_tokens_24h": 65465664,
-    "reasoning_tokens_24h": 63745288,
-    "avg_latency_s": 208.1
+    "completion_tokens_24h": 65120898,
+    "reasoning_tokens_24h": 63411829,
+    "avg_latency_s": 208.5
   },
   "functions": [
     {
@@ -3763,6 +3763,17 @@
       "matchable": true
     },
     {
+      "address": "0x005fe480",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGL::initFixedPointOESCore",
+      "mangled": "?initFixedPointOESCore@ContextGL@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
+      "orig_size": 693,
+      "recomp_size": 693,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x005fe740",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::ContextGL::initFixedPointOES",
@@ -3847,6 +3858,17 @@
       "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
       "orig_size": 54,
       "recomp_size": 54,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x005feb40",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGL::initFragmentLightingSGIX",
+      "mangled": "?initFragmentLightingSGIX@ContextGL@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
+      "orig_size": 486,
+      "recomp_size": 385,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -16527,6 +16549,50 @@
       "kind": "FUNCTION",
       "name": "ProgramMemoryCheckerImpl::init136",
       "mangled": "?init136@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00dba290",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init137",
+      "mangled": "?init137@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00dba3f0",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init138",
+      "mangled": "?init138@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00dba4b0",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init139",
+      "mangled": "?init139@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00dba580",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init140",
+      "mangled": "?init140@ProgramMemoryCheckerImpl@@QAEXXZ",
       "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
       "orig_size": 61,
       "recomp_size": 61,

@@ -152,6 +152,8 @@ public:
 	bool initSecondaryColorEXT();
 	bool initVertexAttribInteger64bitNV();
 	bool initFragmentLightingEXT();
+	bool initFragmentLightingSGIX();
+	bool initFixedPointOESCore();
 	// AUTO-GENERATED METHODS
 };
 

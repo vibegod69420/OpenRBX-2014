@@ -3891,6 +3891,266 @@ bool ContextGL::initFragmentLightingEXT()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005feb40
+bool ContextGL::initFragmentLightingSGIX()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	unsigned char missing;
+	void* proc;
+
+	proc = getProc("glFragmentColorMaterialSGIX");
+	*(void**)0x012D9EFC = proc;
+	missing = (proc == 0);
+
+	proc = getProc("glFragmentLightModelfSGIX");
+	*(void**)0x012D9F00 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glFragmentLightModelfvSGIX");
+	*(void**)0x012D9F10 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glFragmentLightModeliSGIX");
+	*(void**)0x012D9F1C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glFragmentLightModelivSGIX");
+	*(void**)0x012D9F24 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glFragmentLightfSGIX");
+	*(void**)0x012D9F38 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glFragmentLightfvSGIX");
+	*(void**)0x012D9F40 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glFragmentLightiSGIX");
+	*(void**)0x012D9F4C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glFragmentLightivSGIX");
+	*(void**)0x012D9F58 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glFragmentMaterialfSGIX");
+	*(void**)0x012D9F68 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glFragmentMaterialfvSGIX");
+	*(void**)0x012D9F74 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glFragmentMaterialiSGIX");
+	*(void**)0x012D9F78 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glFragmentMaterialivSGIX");
+	*(void**)0x012D9F88 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetFragmentLightfvSGIX");
+	*(void**)0x012D9F98 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetFragmentLightivSGIX");
+	*(void**)0x012D9FA0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetFragmentMaterialfvSGIX");
+	*(void**)0x012D9FA8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetFragmentMaterialivSGIX");
+	*(void**)0x012D9FB4 = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x005fe480
+bool ContextGL::initFixedPointOESCore()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	unsigned char missing;
+	void* proc;
+
+	proc = getProc("glAlphaFuncx");
+	*(void**)0x012D9C58 = proc;
+	missing = (proc == 0);
+
+	proc = getProc("glClearColorx");
+	*(void**)0x012D9C64 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glClearDepthx");
+	*(void**)0x012D9C6C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glColor4x");
+	*(void**)0x012D9C70 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glDepthRangex");
+	*(void**)0x012D9C7C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glFogx");
+	*(void**)0x012D9C80 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glFogxv");
+	*(void**)0x012D9C8C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glFrustumf");
+	*(void**)0x012D9C90 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glFrustumx");
+	*(void**)0x012D9C9C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glLightModelx");
+	*(void**)0x012D9CA4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glLightModelxv");
+	*(void**)0x012D9CAC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glLightx");
+	*(void**)0x012D9CB4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glLightxv");
+	*(void**)0x012D9CBC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glLineWidthx");
+	*(void**)0x012D9CC0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glLoadMatrixx");
+	*(void**)0x012D9CCC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glMaterialx");
+	*(void**)0x012D9CD0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glMaterialxv");
+	*(void**)0x012D9CDC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glMultMatrixx");
+	*(void**)0x012D9CE0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glMultiTexCoord4x");
+	*(void**)0x012D9CE8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glNormal3x");
+	*(void**)0x012D9CF0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glOrthof");
+	*(void**)0x012D9CF8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glOrthox");
+	*(void**)0x012D9D04 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPointSizex");
+	*(void**)0x012D9D0C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPolygonOffsetx");
+	*(void**)0x012D9D10 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glRotatex");
+	*(void**)0x012D9D1C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glSampleCoveragex");
+	*(void**)0x012D9D20 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glScalex");
+	*(void**)0x012D9D28 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glTexEnvx");
+	*(void**)0x012D9D30 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glTexEnvxv");
+	*(void**)0x012D9D38 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glTexParameterx");
+	*(void**)0x012D9D44 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glTranslatex");
+	*(void**)0x012D9D48 = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
