@@ -143,6 +143,29 @@ void Humanoid::func007b6760()
 	target->signal(&flag, context);
 }
 
+extern "C" void* __cdecl __RTDynamicCast(void* ptr, long vfDelta, void* srcType, void* destType, int isReference);
+
+struct HumanoidDynamicCastTarget
+{
+	bool check();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x007bce10
+bool Humanoid::func007bce10()
+{
+	void* result = __RTDynamicCast(
+		*reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 0x1A4),
+		0,
+		reinterpret_cast<void*>(0x012BDBF4),
+		reinterpret_cast<void*>(0x011ECE78),
+		0);
+
+	if (result)
+		return reinterpret_cast<HumanoidDynamicCastTarget*>(result)->check();
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

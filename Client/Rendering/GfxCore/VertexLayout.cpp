@@ -362,6 +362,27 @@ bool VertexLayout::initEXTCoordinateFrame()
 	return false;
 }
 
+extern void* g_glCullParameterdvEXT;
+extern void* g_glCullParameterfvEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f8f50
+bool VertexLayout::initEXTCullVertex()
+{
+	void* first = g_glGetProcAddress("glCullParameterdvEXT");
+	g_glCullParameterdvEXT = first;
+	unsigned char missingFirst = (first == 0);
+
+	void* second = g_glGetProcAddress("glCullParameterfvEXT");
+	g_glCullParameterfvEXT = second;
+
+	if (second == 0)
+		return true;
+	if (missingFirst)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

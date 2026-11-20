@@ -34,6 +34,7 @@ public:
 	bool initEXTColorSubtable();
 	bool initEXTCompiledVertexArray();
 	bool initEXTCoordinateFrame();
+	bool initEXTCullVertex();
 	// AUTO-GENERATED METHODS
 };
 

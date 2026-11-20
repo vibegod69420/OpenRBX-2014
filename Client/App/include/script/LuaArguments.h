@@ -31,6 +31,7 @@ public:
 	void __cdecl pushThread();
 	void __cdecl pushFunction();
 	void __cdecl pushFunctionValue();
+	void __cdecl pushString();
 	// AUTO-GENERATED METHODS
 };
 

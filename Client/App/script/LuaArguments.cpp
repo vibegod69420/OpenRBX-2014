@@ -109,6 +109,16 @@ void __cdecl LuaArguments::pushFunctionValue()
 	sub_B7ACA0(result, this);
 }
 
+void __cdecl sub_B7AD10(void* a, void* b);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a40400
+void __cdecl LuaArguments::pushString()
+{
+	typedef void* (__cdecl *SubA389C0Fn)(void*, void*, void*);
+	void* result = reinterpret_cast<SubA389C0Fn>(sub_A389C0)(this, (void*)1, *(void**)0x0124EB24);
+	sub_B7AD10(result, this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

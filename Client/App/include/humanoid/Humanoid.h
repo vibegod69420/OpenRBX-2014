@@ -39,6 +39,7 @@ public:
 	int getField298() const;
 	int getField268Or298DerefE0() const;
 	void func007b6760();
+	bool func007bce10();
 	// AUTO-GENERATED METHODS
 };
 
