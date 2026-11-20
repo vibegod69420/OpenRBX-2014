@@ -31,6 +31,7 @@ public:
 	bool initATIMapObjectBuffer();
 	bool initATIPNTriangles();
 	bool initATISeparateStencil();
+	bool initEXTColorSubtable();
 	// AUTO-GENERATED METHODS
 };
 

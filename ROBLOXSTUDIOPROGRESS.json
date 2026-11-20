@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20 04:00:00 UTC",
+  "updated_at": "2026-11-20 04:08:41 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 10.5499,
-  "implemented_total": 998,
-  "function_annotations": 998,
+  "matchable_coverage_pct": 10.5713,
+  "implemented_total": 1000,
+  "function_annotations": 1000,
   "stub_annotations": 0,
-  "perfect_100_count": 988,
-  "matched_real_functions": 988,
+  "perfect_100_count": 990,
+  "matched_real_functions": 990,
   "average_match_pct": 99.82,
-  "overall_function_coverage_pct": 2.4358,
-  "overall_byte_coverage_pct": 0.4809,
+  "overall_function_coverage_pct": 2.4408,
+  "overall_byte_coverage_pct": 0.4818,
   "usage": {
-    "calls_24h": 5634,
+    "calls_24h": 5599,
     "failures_24h": 0,
-    "completion_tokens_24h": 69672041,
-    "reasoning_tokens_24h": 68129083,
-    "avg_latency_s": 215.1
+    "completion_tokens_24h": 69509998,
+    "reasoning_tokens_24h": 67967296,
+    "avg_latency_s": 215.9
   },
   "functions": [
     {
@@ -2226,6 +2226,17 @@
       "address": "0x005f8670",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::VertexLayout::initATISeparateStencil",
+      "mangled": "?initAppleBufferExtensions@VertexLayout@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/VertexLayout.cpp",
+      "orig_size": 54,
+      "recomp_size": 54,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x005f8ce0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::VertexLayout::initEXTColorSubtable",
       "mangled": "?initAppleBufferExtensions@VertexLayout@Graphics@RBX@@QAE_NXZ",
       "file": "Client/Rendering/GfxCore/VertexLayout.cpp",
       "orig_size": 54,
@@ -5453,6 +5464,17 @@
       "file": "Client/App/v8datamodel/GameBasicSettings.cpp",
       "orig_size": 14,
       "recomp_size": 14,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x008bdb00",
+      "kind": "FUNCTION",
+      "name": "int",
+      "mangled": "?ApplySettingFromFunc@ClientAppSettings@RBX@@QAAXXZ",
+      "file": "Client/App/v8datamodel/ClientAppSettings.cpp",
+      "orig_size": 29,
+      "recomp_size": 29,
       "match_pct": 100.0,
       "matchable": true
     },

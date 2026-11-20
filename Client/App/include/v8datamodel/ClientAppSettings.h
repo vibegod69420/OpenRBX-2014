@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void __cdecl ApplySettingFromFunc();
 	// AUTO-GENERATED METHODS
 };
 

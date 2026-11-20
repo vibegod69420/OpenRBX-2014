@@ -299,6 +299,27 @@ bool VertexLayout::initATISeparateStencil()
 	return false;
 }
 
+extern void* g_glColorSubTableEXT;
+extern void* g_glCopyColorSubTableEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f8ce0
+bool VertexLayout::initEXTColorSubtable()
+{
+	void* first = g_glGetProcAddress("glColorSubTableEXT");
+	g_glColorSubTableEXT = first;
+	unsigned char missingFirst = (first == 0);
+
+	void* second = g_glGetProcAddress("glCopyColorSubTableEXT");
+	g_glCopyColorSubTableEXT = second;
+
+	if (second == 0)
+		return true;
+	if (missingFirst)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
