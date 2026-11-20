@@ -54,6 +54,8 @@ public:
 	bool initARBClearBufferObject();
 	bool initARBDrawBuffersBlend();
 	bool initARBDrawElementsBaseVertex();
+	bool initARBFramebufferNoAttachments();
+	bool initARBTextureMultisample();
 	// AUTO-GENERATED METHODS
 };
 

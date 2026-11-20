@@ -895,6 +895,70 @@ bool VertexLayout::initARBDrawElementsBaseVertex()
 	return false;
 }
 
+extern void* g_glFramebufferParameteri;
+extern void* g_glGetFramebufferParameteriv;
+extern void* g_glGetNamedFramebufferParameterivEXT;
+extern void* g_glNamedFramebufferParameteriEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f50b0
+bool VertexLayout::initARBFramebufferNoAttachments()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glFramebufferParameteri");
+	g_glFramebufferParameteri = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glGetFramebufferParameteriv");
+	g_glGetFramebufferParameteriv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetNamedFramebufferParameterivEXT");
+	g_glGetNamedFramebufferParameterivEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glNamedFramebufferParameteriEXT");
+	g_glNamedFramebufferParameteriEXT = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glGetMultisamplefv;
+extern void* g_glSampleMaski;
+extern void* g_glTexImage2DMultisample;
+extern void* g_glTexImage3DMultisample;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f6ff0
+bool VertexLayout::initARBTextureMultisample()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glGetMultisamplefv");
+	g_glGetMultisamplefv = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glSampleMaski");
+	g_glSampleMaski = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glTexImage2DMultisample");
+	g_glTexImage2DMultisample = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glTexImage3DMultisample");
+	g_glTexImage3DMultisample = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

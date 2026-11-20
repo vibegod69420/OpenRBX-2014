@@ -64,6 +64,8 @@ public:
 	static void assignIfNull_5f00(int* dst, const int* src);
 	static void assignIfNull_5f20(int* dst, const int* src);
 	static void assignIfNull_5f40(int* dst, const int* src);
+	static void assignIfNull_5f60(int* dst, const int* src);
+	static void assignIfNull_5f80(int* dst, const int* src);
 	// AUTO-GENERATED METHODS
 };
 

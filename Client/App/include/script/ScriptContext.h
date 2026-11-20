@@ -43,6 +43,8 @@ public:
 	int __cdecl reportError(float /*unused*/);
 	int __cdecl reportError(int* /*unused*/);
 	int __cdecl reportError(unsigned int* /*unused*/);
+	int __cdecl reportError(long* /*unused*/);
+	int __cdecl reportError(unsigned long* /*unused*/);
 	// AUTO-GENERATED METHODS
 };
 

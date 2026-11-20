@@ -216,6 +216,25 @@ void sp_counted_impl_p::destroySubPtr0C_fda0()
 	}
 }
 
+struct sp_counted_impl_p_map
+{
+	void __thiscall _Erase(void** out, void* left, void* head);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x009be9f0
+void sp_counted_impl_p::disposeHeldMap()
+{
+	sp_counted_impl_p_map* p = (sp_counted_impl_p_map*)ptr_000c;
+	if (p)
+	{
+		void* head = *(void**)p;
+		void* local;
+		p->_Erase(&local, *(void**)head, head);
+		rbx_free_mem(*(void**)p);
+		rbx_free_mem(p);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

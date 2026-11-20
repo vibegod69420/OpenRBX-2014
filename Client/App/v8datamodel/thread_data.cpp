@@ -88,6 +88,26 @@ void __cdecl thread_data::start(void* arg1, void* arg2, void* arg3, void* arg4)
 	sub_00775460(this, arg1, arg2, 0, 0, arg3, arg4);
 }
 
+class thread_data_base_construct_c57f00
+{
+public:
+	void construct();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c586e0
+thread_data::thread_data()
+{
+	reinterpret_cast<thread_data_base_construct_c57f00*>(this)->construct();
+
+	reinterpret_cast<unsigned char*>(this)[0x64] = 1;
+	*reinterpret_cast<unsigned int*>(reinterpret_cast<char*>(this) + 0x00) = 0x00ef32ac;
+	*reinterpret_cast<unsigned int*>(reinterpret_cast<char*>(this) + 0x04) = 0x00ef3324;
+	*reinterpret_cast<unsigned int*>(reinterpret_cast<char*>(this) + 0x18) = 0x00ef332c;
+	*reinterpret_cast<unsigned int*>(reinterpret_cast<char*>(this) + 0x1c) = 0x00ef3338;
+	*reinterpret_cast<unsigned int*>(reinterpret_cast<char*>(this) + 0x68) = 0;
+	*reinterpret_cast<unsigned int*>(reinterpret_cast<char*>(this) + 0x6c) = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace boost

@@ -38,6 +38,7 @@ public:
 	void destroySubPtr0C_5fe0();
 	void destroySubPtr0C_4330();
 	void destroySubPtr0C_fda0();
+	void disposeHeldMap();
 	// AUTO-GENERATED METHODS
 };
 

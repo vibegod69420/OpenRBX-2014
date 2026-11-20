@@ -287,6 +287,22 @@ store:
 	return 1;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a37800
+const char* __cdecl lua_exception::getString(int index)
+{
+	if (index & 0x100)
+	{
+		int idx = index & ~0x100;
+		idx += idx;
+		char* base = *(char**)((char*)this + 8);
+		if (*(int*)(base + idx * 8 + 8) == 4)
+		{
+			return *(char**)(base + idx * 8) + 0x10;
+		}
+	}
+	return (const char*)0x0101EB04;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

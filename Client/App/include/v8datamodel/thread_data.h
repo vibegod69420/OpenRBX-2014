@@ -25,6 +25,7 @@ public:
 	void onDestroy();
 	static void destroyInstance(thread_data* p);
 	void __cdecl start(void* arg1, void* arg2, void* arg3, void* arg4);
+	thread_data();
 	// AUTO-GENERATED METHODS
 };
 

@@ -35,6 +35,9 @@ public:
 	void* __cdecl fireMouseButton1Click(void* instance, void* source);
 	void* __cdecl fireMouseButton1Down(void* instance, void* source);
 	void* __cdecl fireMouseButton1Up(void* instance, void* source);
+	void* __cdecl fireMouseButton2Click(void* instance, void* source);
+	void* __cdecl fireMouseButton2Down(void* instance, void* source);
+	void* __cdecl fireMouseButton2Up(void* instance, void* source);
 	// AUTO-GENERATED METHODS
 };
 

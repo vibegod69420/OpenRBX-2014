@@ -475,6 +475,26 @@ void ContextGL::assignIfNull_5f40(int* dst, const int* src)
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00605f60
+void ContextGL::assignIfNull_5f60(int* dst, const int* src)
+{
+	if (*dst == 0) {
+		int v = *src;
+		if (v != 0)
+			*dst = v;
+	}
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00605f80
+void ContextGL::assignIfNull_5f80(int* dst, const int* src)
+{
+	if (*dst == 0) {
+		int v = *src;
+		if (v != 0)
+			*dst = v;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

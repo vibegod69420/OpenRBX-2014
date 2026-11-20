@@ -44,6 +44,7 @@ public:
 	void __cdecl checkAny(int index);
 	void __cdecl runErrorV(const char* fmt, ...);
 	int __cdecl setErrorData(int code, int level, int line);
+	const char* __cdecl getString(int index);
 	// AUTO-GENERATED METHODS
 };
 
