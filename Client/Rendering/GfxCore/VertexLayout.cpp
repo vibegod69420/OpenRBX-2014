@@ -2560,6 +2560,350 @@ bool VertexLayout::initAMDPerformanceMonitor()
 	return false;
 }
 
+extern void* g_glBeginQueryANGLE;
+extern void* g_glDeleteQueriesANGLE;
+extern void* g_glEndQueryANGLE;
+extern void* g_glGenQueriesANGLE;
+extern void* g_glGetQueryObjecti64vANGLE;
+extern void* g_glGetQueryObjectivANGLE;
+extern void* g_glGetQueryObjectui64vANGLE;
+extern void* g_glGetQueryObjectuivANGLE;
+extern void* g_glGetQueryivANGLE;
+extern void* g_glIsQueryANGLE;
+extern void* g_glQueryCounterANGLE;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f4610
+bool VertexLayout::initANGLETimerQuery()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glBeginQueryANGLE");
+	g_glBeginQueryANGLE = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glDeleteQueriesANGLE");
+	g_glDeleteQueriesANGLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glEndQueryANGLE");
+	g_glEndQueryANGLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGenQueriesANGLE");
+	g_glGenQueriesANGLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetQueryObjecti64vANGLE");
+	g_glGetQueryObjecti64vANGLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetQueryObjectivANGLE");
+	g_glGetQueryObjectivANGLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetQueryObjectui64vANGLE");
+	g_glGetQueryObjectui64vANGLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetQueryObjectuivANGLE");
+	g_glGetQueryObjectuivANGLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetQueryivANGLE");
+	g_glGetQueryivANGLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glIsQueryANGLE");
+	g_glIsQueryANGLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glQueryCounterANGLE");
+	g_glQueryCounterANGLE = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glConvolutionFilter1DEXT;
+extern void* g_glConvolutionFilter2DEXT;
+extern void* g_glConvolutionParameterfEXT;
+extern void* g_glConvolutionParameterfvEXT;
+extern void* g_glConvolutionParameteriEXT;
+extern void* g_glConvolutionParameterivEXT;
+extern void* g_glCopyConvolutionFilter1DEXT;
+extern void* g_glCopyConvolutionFilter2DEXT;
+extern void* g_glGetConvolutionFilterEXT;
+extern void* g_glGetConvolutionParameterfvEXT;
+extern void* g_glGetConvolutionParameterivEXT;
+extern void* g_glGetSeparableFilterEXT;
+extern void* g_glSeparableFilter2DEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f8d60
+bool VertexLayout::initEXTConvolution()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glConvolutionFilter1DEXT");
+	g_glConvolutionFilter1DEXT = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glConvolutionFilter2DEXT");
+	g_glConvolutionFilter2DEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glConvolutionParameterfEXT");
+	g_glConvolutionParameterfEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glConvolutionParameterfvEXT");
+	g_glConvolutionParameterfvEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glConvolutionParameteriEXT");
+	g_glConvolutionParameteriEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glConvolutionParameterivEXT");
+	g_glConvolutionParameterivEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCopyConvolutionFilter1DEXT");
+	g_glCopyConvolutionFilter1DEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCopyConvolutionFilter2DEXT");
+	g_glCopyConvolutionFilter2DEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetConvolutionFilterEXT");
+	g_glGetConvolutionFilterEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetConvolutionParameterfvEXT");
+	g_glGetConvolutionParameterfvEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetConvolutionParameterivEXT");
+	g_glGetConvolutionParameterivEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetSeparableFilterEXT");
+	g_glGetSeparableFilterEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSeparableFilter2DEXT");
+	g_glSeparableFilter2DEXT = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x005f61f0
+extern void* g_glBindSampler;
+extern void* g_glDeleteSamplers;
+extern void* g_glGenSamplers;
+extern void* g_glGetSamplerParameterIiv;
+extern void* g_glGetSamplerParameterIuiv;
+extern void* g_glGetSamplerParameterfv;
+extern void* g_glGetSamplerParameteriv;
+extern void* g_glIsSampler;
+extern void* g_glSamplerParameterIiv;
+extern void* g_glSamplerParameterIuiv;
+extern void* g_glSamplerParameterf;
+extern void* g_glSamplerParameterfv;
+extern void* g_glSamplerParameteri;
+extern void* g_glSamplerParameteriv;
+
+bool VertexLayout::initARBSamplerObjects()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glBindSampler");
+	g_glBindSampler = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glDeleteSamplers");
+	g_glDeleteSamplers = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGenSamplers");
+	g_glGenSamplers = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetSamplerParameterIiv");
+	g_glGetSamplerParameterIiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetSamplerParameterIuiv");
+	g_glGetSamplerParameterIuiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetSamplerParameterfv");
+	g_glGetSamplerParameterfv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetSamplerParameteriv");
+	g_glGetSamplerParameteriv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glIsSampler");
+	g_glIsSampler = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSamplerParameterIiv");
+	g_glSamplerParameterIiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSamplerParameterIuiv");
+	g_glSamplerParameterIuiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSamplerParameterf");
+	g_glSamplerParameterf = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSamplerParameterfv");
+	g_glSamplerParameterfv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSamplerParameteri");
+	g_glSamplerParameteri = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSamplerParameteriv");
+	g_glSamplerParameteriv = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glAlphaFragmentOp1ATI;
+extern void* g_glAlphaFragmentOp2ATI;
+extern void* g_glAlphaFragmentOp3ATI;
+extern void* g_glBeginFragmentShaderATI;
+extern void* g_glBindFragmentShaderATI;
+extern void* g_glColorFragmentOp1ATI;
+extern void* g_glColorFragmentOp2ATI;
+extern void* g_glColorFragmentOp3ATI;
+extern void* g_glDeleteFragmentShaderATI;
+extern void* g_glEndFragmentShaderATI;
+extern void* g_glGenFragmentShadersATI;
+extern void* g_glPassTexCoordATI;
+extern void* g_glSampleMapATI;
+extern void* g_glSetFragmentShaderConstantATI;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f84b0
+bool VertexLayout::initATIFragmentShader()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glAlphaFragmentOp1ATI");
+	g_glAlphaFragmentOp1ATI = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glAlphaFragmentOp2ATI");
+	g_glAlphaFragmentOp2ATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glAlphaFragmentOp3ATI");
+	g_glAlphaFragmentOp3ATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glBeginFragmentShaderATI");
+	g_glBeginFragmentShaderATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glBindFragmentShaderATI");
+	g_glBindFragmentShaderATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glColorFragmentOp1ATI");
+	g_glColorFragmentOp1ATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glColorFragmentOp2ATI");
+	g_glColorFragmentOp2ATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glColorFragmentOp3ATI");
+	g_glColorFragmentOp3ATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glDeleteFragmentShaderATI");
+	g_glDeleteFragmentShaderATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glEndFragmentShaderATI");
+	g_glEndFragmentShaderATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGenFragmentShadersATI");
+	g_glGenFragmentShadersATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glPassTexCoordATI");
+	g_glPassTexCoordATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSampleMapATI");
+	g_glSampleMapATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSetFragmentShaderConstantATI");
+	g_glSetFragmentShaderConstantATI = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

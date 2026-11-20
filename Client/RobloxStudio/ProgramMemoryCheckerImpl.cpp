@@ -1611,6 +1611,99 @@ void ProgramMemoryCheckerImpl::init93()
 	sub_CF6609((void*)0x00DE3580);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00da3330
+void ProgramMemoryCheckerImpl::init94()
+{
+	int v[2];
+	((ProgramMemoryCheckerChildRemovedTarget*)0x012E1F28)->sub_7AEE80(
+		0x517200,
+		0,
+		(const char*)0x00E553F4,
+		(const char*)0x00E552B4,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DE3640);
+}
+
+class ProgramMemoryCheckerWaitForChildTarget
+{
+public:
+	void sub_7AE9F0(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00da3710
+void ProgramMemoryCheckerImpl::init95()
+{
+	int v[2];
+	((ProgramMemoryCheckerWaitForChildTarget*)0x012E1DA8)->sub_7AE9F0(
+		0x7b6970,
+		0,
+		(const char*)0x00E5536C,
+		(const char*)0x00E55360,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DE3AD0);
+}
+
+class ProgramMemoryCheckerIsATarget
+{
+public:
+	void sub_7AE850(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00da39d0
+void ProgramMemoryCheckerImpl::init96()
+{
+	int v[2];
+	((ProgramMemoryCheckerIsATarget*)0x012E1980)->sub_7AE850(
+		0x007B3DD0,
+		0x1C,
+		(const char*)0x00E551A8,
+		(const char*)0x00E5519C,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DE3D60);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00da3a10
+void ProgramMemoryCheckerImpl::init97()
+{
+	int v[2];
+	((ProgramMemoryCheckerIsATarget*)0x012E19B8)->sub_7AE850(
+		0x007B3DD0,
+		0x1C,
+		(const char*)0x00E551AC,
+		(const char*)0x00E5519C,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DE3E10);
+}
+
+class ProgramMemoryCheckerIsAncestorOfTarget
+{
+public:
+	void sub_7AE920(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00da3a50
+void ProgramMemoryCheckerImpl::init98()
+{
+	int v[2];
+	((ProgramMemoryCheckerIsAncestorOfTarget*)0x012E1CE0)->sub_7AE920(
+		0x007B3E30,
+		0,
+		(const char*)0x00E552C0,
+		(const char*)0x00E552B4,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DE3EC0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

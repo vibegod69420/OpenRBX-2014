@@ -123,6 +123,9 @@ public:
 	bool initTransformFeedbackNV();
 	bool initReplacementCodeSUN();
 	bool initTexSubImageEXT();
+	bool initVertexWeightingEXT();
+	bool initVertexArrayEXT();
+	bool initVertexArrayListsIBM();
 	// AUTO-GENERATED METHODS
 };
 

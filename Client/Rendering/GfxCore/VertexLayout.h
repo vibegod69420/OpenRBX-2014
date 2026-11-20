@@ -93,6 +93,10 @@ public:
 	bool initARBViewportArray();
 	bool initARBVertexBufferObject();
 	bool initAMDPerformanceMonitor();
+	bool initANGLETimerQuery();
+	bool initEXTConvolution();
+	bool initARBSamplerObjects();
+	bool initATIFragmentShader();
 	// AUTO-GENERATED METHODS
 };
 

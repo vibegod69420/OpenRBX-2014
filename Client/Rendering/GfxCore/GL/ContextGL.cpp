@@ -2048,6 +2048,144 @@ bool ContextGL::initTexSubImageEXT()
 	return false;
 }
 
+extern void* glVertexWeightPointerEXT;
+extern void* glVertexWeightfEXT;
+extern void* glVertexWeightfvEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fb920
+bool ContextGL::initVertexWeightingEXT()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("glVertexWeightPointerEXT");
+	glVertexWeightPointerEXT = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glVertexWeightfEXT");
+	glVertexWeightfEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glVertexWeightfvEXT");
+	glVertexWeightfvEXT = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glArrayElementEXT;
+extern void* glColorPointerEXT;
+extern void* glDrawArraysEXT;
+extern void* glEdgeFlagPointerEXT;
+extern void* glIndexPointerEXT;
+extern void* glNormalPointerEXT;
+extern void* glTexCoordPointerEXT;
+extern void* glVertexPointerEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fb3b0
+bool ContextGL::initVertexArrayEXT()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("glArrayElementEXT");
+	glArrayElementEXT = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glColorPointerEXT");
+	glColorPointerEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glDrawArraysEXT");
+	glDrawArraysEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glEdgeFlagPointerEXT");
+	glEdgeFlagPointerEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glIndexPointerEXT");
+	glIndexPointerEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glNormalPointerEXT");
+	glNormalPointerEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glTexCoordPointerEXT");
+	glTexCoordPointerEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glVertexPointerEXT");
+	glVertexPointerEXT = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glColorPointerListIBM;
+extern void* glEdgeFlagPointerListIBM;
+extern void* glFogCoordPointerListIBM;
+extern void* glIndexPointerListIBM;
+extern void* glNormalPointerListIBM;
+extern void* glSecondaryColorPointerListIBM;
+extern void* glTexCoordPointerListIBM;
+extern void* glVertexPointerListIBM;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fbaa0
+bool ContextGL::initVertexArrayListsIBM()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("glColorPointerListIBM");
+	glColorPointerListIBM = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glEdgeFlagPointerListIBM");
+	glEdgeFlagPointerListIBM = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glFogCoordPointerListIBM");
+	glFogCoordPointerListIBM = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glIndexPointerListIBM");
+	glIndexPointerListIBM = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glNormalPointerListIBM");
+	glNormalPointerListIBM = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glSecondaryColorPointerListIBM");
+	glSecondaryColorPointerListIBM = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glTexCoordPointerListIBM");
+	glTexCoordPointerListIBM = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glVertexPointerListIBM");
+	glVertexPointerListIBM = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
