@@ -4875,6 +4875,374 @@ bool VertexLayout::initGL14()
 	return false;
 }
 
+extern void* g_glActiveShaderProgram;
+extern void* g_glBindProgramPipeline;
+extern void* g_glCreateShaderProgramv;
+extern void* g_glDeleteProgramPipelines;
+extern void* g_glGenProgramPipelines;
+extern void* g_glGetProgramPipelineInfoLog;
+extern void* g_glGetProgramPipelineiv;
+extern void* g_glIsProgramPipeline;
+extern void* g_glProgramUniform1d;
+extern void* g_glProgramUniform1dv;
+extern void* g_glProgramUniform1f;
+extern void* g_glProgramUniform1fv;
+extern void* g_glProgramUniform1i;
+extern void* g_glProgramUniform1iv;
+extern void* g_glProgramUniform1ui;
+extern void* g_glProgramUniform1uiv;
+extern void* g_glProgramUniform2d;
+extern void* g_glProgramUniform2dv;
+extern void* g_glProgramUniform2f;
+extern void* g_glProgramUniform2fv;
+extern void* g_glProgramUniform2i;
+extern void* g_glProgramUniform2iv;
+extern void* g_glProgramUniform2ui;
+extern void* g_glProgramUniform2uiv;
+extern void* g_glProgramUniform3d;
+extern void* g_glProgramUniform3dv;
+extern void* g_glProgramUniform3f;
+extern void* g_glProgramUniform3fv;
+extern void* g_glProgramUniform3i;
+extern void* g_glProgramUniform3iv;
+extern void* g_glProgramUniform3ui;
+extern void* g_glProgramUniform3uiv;
+extern void* g_glProgramUniform4d;
+extern void* g_glProgramUniform4dv;
+extern void* g_glProgramUniform4f;
+extern void* g_glProgramUniform4fv;
+extern void* g_glProgramUniform4i;
+extern void* g_glProgramUniform4iv;
+extern void* g_glProgramUniform4ui;
+extern void* g_glProgramUniform4uiv;
+extern void* g_glProgramUniformMatrix2dv;
+extern void* g_glProgramUniformMatrix2fv;
+extern void* g_glProgramUniformMatrix2x3dv;
+extern void* g_glProgramUniformMatrix2x3fv;
+extern void* g_glProgramUniformMatrix2x4dv;
+extern void* g_glProgramUniformMatrix2x4fv;
+extern void* g_glProgramUniformMatrix3dv;
+extern void* g_glProgramUniformMatrix3fv;
+extern void* g_glProgramUniformMatrix3x2dv;
+extern void* g_glProgramUniformMatrix3x2fv;
+extern void* g_glProgramUniformMatrix3x4dv;
+extern void* g_glProgramUniformMatrix3x4fv;
+extern void* g_glProgramUniformMatrix4dv;
+extern void* g_glProgramUniformMatrix4fv;
+extern void* g_glProgramUniformMatrix4x2dv;
+extern void* g_glProgramUniformMatrix4x2fv;
+extern void* g_glProgramUniformMatrix4x3dv;
+extern void* g_glProgramUniformMatrix4x3fv;
+extern void* g_glUseProgramStages;
+extern void* g_glValidateProgramPipeline;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f6330
+bool VertexLayout::initARBSeparateShaderObjects()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glActiveShaderProgram");
+	g_glActiveShaderProgram = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glBindProgramPipeline");
+	g_glBindProgramPipeline = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCreateShaderProgramv");
+	g_glCreateShaderProgramv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glDeleteProgramPipelines");
+	g_glDeleteProgramPipelines = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGenProgramPipelines");
+	g_glGenProgramPipelines = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetProgramPipelineInfoLog");
+	g_glGetProgramPipelineInfoLog = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetProgramPipelineiv");
+	g_glGetProgramPipelineiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glIsProgramPipeline");
+	g_glIsProgramPipeline = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform1d");
+	g_glProgramUniform1d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform1dv");
+	g_glProgramUniform1dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform1f");
+	g_glProgramUniform1f = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform1fv");
+	g_glProgramUniform1fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform1i");
+	g_glProgramUniform1i = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform1iv");
+	g_glProgramUniform1iv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform1ui");
+	g_glProgramUniform1ui = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform1uiv");
+	g_glProgramUniform1uiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform2d");
+	g_glProgramUniform2d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform2dv");
+	g_glProgramUniform2dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform2f");
+	g_glProgramUniform2f = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform2fv");
+	g_glProgramUniform2fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform2i");
+	g_glProgramUniform2i = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform2iv");
+	g_glProgramUniform2iv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform2ui");
+	g_glProgramUniform2ui = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform2uiv");
+	g_glProgramUniform2uiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform3d");
+	g_glProgramUniform3d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform3dv");
+	g_glProgramUniform3dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform3f");
+	g_glProgramUniform3f = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform3fv");
+	g_glProgramUniform3fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform3i");
+	g_glProgramUniform3i = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform3iv");
+	g_glProgramUniform3iv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform3ui");
+	g_glProgramUniform3ui = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform3uiv");
+	g_glProgramUniform3uiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform4d");
+	g_glProgramUniform4d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform4dv");
+	g_glProgramUniform4dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform4f");
+	g_glProgramUniform4f = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform4fv");
+	g_glProgramUniform4fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform4i");
+	g_glProgramUniform4i = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform4iv");
+	g_glProgramUniform4iv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform4ui");
+	g_glProgramUniform4ui = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniform4uiv");
+	g_glProgramUniform4uiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniformMatrix2dv");
+	g_glProgramUniformMatrix2dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniformMatrix2fv");
+	g_glProgramUniformMatrix2fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniformMatrix2x3dv");
+	g_glProgramUniformMatrix2x3dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniformMatrix2x3fv");
+	g_glProgramUniformMatrix2x3fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniformMatrix2x4dv");
+	g_glProgramUniformMatrix2x4dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniformMatrix2x4fv");
+	g_glProgramUniformMatrix2x4fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniformMatrix3dv");
+	g_glProgramUniformMatrix3dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniformMatrix3fv");
+	g_glProgramUniformMatrix3fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniformMatrix3x2dv");
+	g_glProgramUniformMatrix3x2dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniformMatrix3x2fv");
+	g_glProgramUniformMatrix3x2fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniformMatrix3x4dv");
+	g_glProgramUniformMatrix3x4dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniformMatrix3x4fv");
+	g_glProgramUniformMatrix3x4fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniformMatrix4dv");
+	g_glProgramUniformMatrix4dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniformMatrix4fv");
+	g_glProgramUniformMatrix4fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniformMatrix4x2dv");
+	g_glProgramUniformMatrix4x2dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniformMatrix4x2fv");
+	g_glProgramUniformMatrix4x2fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniformMatrix4x3dv");
+	g_glProgramUniformMatrix4x3dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniformMatrix4x3fv");
+	g_glProgramUniformMatrix4x3fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUseProgramStages");
+	g_glUseProgramStages = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glValidateProgramPipeline");
+	g_glValidateProgramPipeline = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

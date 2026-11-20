@@ -68,6 +68,8 @@ public:
 	bool __cdecl getObject(void* arg, void* out);
 	bool __cdecl getFunctions(void* arg, void* out);
 	bool __cdecl getFunction(void* arg, void* out);
+	int __cdecl pushVector3();
+	int __cdecl pushVector2Sub();
 	// AUTO-GENERATED METHODS
 };
 

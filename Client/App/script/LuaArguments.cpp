@@ -873,6 +873,53 @@ bool __cdecl LuaArguments::getFunction(void* arg, void* out)
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a40690
+int __cdecl LuaArguments::pushVector3()
+{
+	typedef void* (__cdecl *SubA389C0Fn)(void*, void*, void*);
+	void* src = reinterpret_cast<SubA389C0Fn>(sub_A389C0)(this, (void*)1, *(void**)0x0124EB14);
+
+	float v[3];
+	v[0] = -*(float*)src;
+	v[1] = -*(float*)((char*)src + 4);
+	v[2] = -*(float*)((char*)src + 8);
+
+	void* p = sub_A353E0(this, 12);
+	if (p)
+	{
+		*(int*)p = *(int*)&v[0];
+		*(int*)((char*)p + 4) = *(int*)&v[1];
+		*(int*)((char*)p + 8) = *(int*)&v[2];
+	}
+
+	sub_A35060(this, -10000, *(void**)0x0124EB14);
+	sub_A35BF0(this, -2);
+
+	return 1;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00a3fde0
+int __cdecl LuaArguments::pushVector2Sub()
+{
+	typedef void* (__cdecl *SubA389C0Fn)(void*, void*, void*);
+	void* a = reinterpret_cast<SubA389C0Fn>(sub_A389C0)(this, (void*)1, *(void**)0x0124EB20);
+	void* b = reinterpret_cast<SubA389C0Fn>(sub_A389C0)(this, (void*)2, *(void**)0x0124EB20);
+
+	float x = *(float*)a - *(float*)b;
+	float y = *(float*)((char*)a + 4) - *(float*)((char*)b + 4);
+
+	void* p = sub_A353E0(this, 8);
+	if (p)
+	{
+		*(float*)p = x;
+		*(float*)((char*)p + 4) = y;
+	}
+
+	sub_A35060(this, -10000, *(void**)0x0124EB20);
+	sub_A35BF0(this, -2);
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

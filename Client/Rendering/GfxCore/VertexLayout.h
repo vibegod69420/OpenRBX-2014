@@ -108,6 +108,7 @@ public:
 	bool initATIVertexStreams();
 	bool initGL13();
 	bool initGL14();
+	bool initARBSeparateShaderObjects();
 	// AUTO-GENERATED METHODS
 };
 

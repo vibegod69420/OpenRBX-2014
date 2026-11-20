@@ -133,6 +133,7 @@ public:
 	bool initWGLAMDgpuAssociation();
 	bool initGlobalAlphaFactorSUN();
 	bool initDXInteropNV();
+	bool initBufferRegionARB();
 	// AUTO-GENERATED METHODS
 };
 

@@ -128,6 +128,10 @@ public:
 	void init110();
 	void init111();
 	void init112();
+	void init113();
+	void init114();
+	void init115();
+	void init116();
 	// AUTO-GENERATED METHODS
 };
 

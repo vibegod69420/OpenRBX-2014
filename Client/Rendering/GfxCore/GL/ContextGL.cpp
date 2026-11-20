@@ -2529,6 +2529,36 @@ bool ContextGL::initDXInteropNV()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00603ac0
+bool ContextGL::initBufferRegionARB()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	unsigned char missing;
+	void* proc;
+
+	proc = getProc("wglCreateBufferRegionARB");
+	*(void**)0x012DB4B4 = proc;
+	missing = (proc == 0) ? 1 : 0;
+
+	proc = getProc("wglDeleteBufferRegionARB");
+	*(void**)0x012DB4B8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglRestoreBufferRegionARB");
+	*(void**)0x012DB4CC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglSaveBufferRegionARB");
+	*(void**)0x012DB4D0 = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
