@@ -1903,6 +1903,106 @@ bool VertexLayout::initARBVertexAttribBinding()
 	return false;
 }
 
+extern void* g_glCompressedTexImage1DARB;
+extern void* g_glCompressedTexImage2DARB;
+extern void* g_glCompressedTexImage3DARB;
+extern void* g_glCompressedTexSubImage1DARB;
+extern void* g_glCompressedTexSubImage2DARB;
+extern void* g_glCompressedTexSubImage3DARB;
+extern void* g_glGetCompressedTexImageARB;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f6f40
+bool VertexLayout::initARBTextureCompression()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glCompressedTexImage1DARB");
+	g_glCompressedTexImage1DARB = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glCompressedTexImage2DARB");
+	g_glCompressedTexImage2DARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCompressedTexImage3DARB");
+	g_glCompressedTexImage3DARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCompressedTexSubImage1DARB");
+	g_glCompressedTexSubImage1DARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCompressedTexSubImage2DARB");
+	g_glCompressedTexSubImage2DARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCompressedTexSubImage3DARB");
+	g_glCompressedTexSubImage3DARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetCompressedTexImageARB");
+	g_glGetCompressedTexImageARB = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glBindTransformFeedback;
+extern void* g_glDeleteTransformFeedbacks;
+extern void* g_glDrawTransformFeedback;
+extern void* g_glGenTransformFeedbacks;
+extern void* g_glIsTransformFeedback;
+extern void* g_glPauseTransformFeedback;
+extern void* g_glResumeTransformFeedback;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f71d0
+bool VertexLayout::initARBTransformFeedback()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glBindTransformFeedback");
+	g_glBindTransformFeedback = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glDeleteTransformFeedbacks");
+	g_glDeleteTransformFeedbacks = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glDrawTransformFeedback");
+	g_glDrawTransformFeedback = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGenTransformFeedbacks");
+	g_glGenTransformFeedbacks = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glIsTransformFeedback");
+	g_glIsTransformFeedback = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glPauseTransformFeedback");
+	g_glPauseTransformFeedback = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glResumeTransformFeedback");
+	g_glResumeTransformFeedback = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

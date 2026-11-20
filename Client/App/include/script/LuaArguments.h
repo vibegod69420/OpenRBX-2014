@@ -57,6 +57,7 @@ public:
 	bool __cdecl getValue(void* arg, void* out);
 	bool __cdecl getRBXScriptSignal(void* arg, void* out);
 	void __cdecl pushVector2(void* arg);
+	int __cdecl pushVector2int16();
 	// AUTO-GENERATED METHODS
 };
 

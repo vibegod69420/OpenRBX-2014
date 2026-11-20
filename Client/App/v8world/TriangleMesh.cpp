@@ -470,6 +470,24 @@ void* __cdecl TriangleMesh::func_B6AEC0()
 	return node;
 }
 
+void sub_A34E50(void*, int, int);
+void sub_A35690(void*, const char*, int);
+void sub_A35BF0(void*, int);
+void sub_A35B70(void*, int, const char*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b70830
+void __cdecl TriangleMesh::func_B70830()
+{
+	sub_A34E50(this, 0, 1);
+	sub_A35690(this, (const char*)0x00F12F2D, 0);
+	sub_A357B0(this, -2);
+	sub_A35BF0(this, -2);
+	sub_A35D10(this, -2);
+	sub_A357B0(this, -2);
+	sub_A35B70(this, -2, (const char*)0x00E53324);
+	sub_A35D10(this, -2);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

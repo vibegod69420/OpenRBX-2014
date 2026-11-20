@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20 13:54:22 UTC",
+  "updated_at": "2026-11-20 14:02:56 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,20 +16,20 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 14.6396,
-  "implemented_total": 1384,
-  "function_annotations": 1384,
+  "matchable_coverage_pct": 14.7357,
+  "implemented_total": 1393,
+  "function_annotations": 1393,
   "stub_annotations": 0,
-  "perfect_100_count": 1371,
-  "matched_real_functions": 1371,
+  "perfect_100_count": 1380,
+  "matched_real_functions": 1380,
   "average_match_pct": 99.81,
-  "overall_function_coverage_pct": 3.3801,
-  "overall_byte_coverage_pct": 0.7867,
+  "overall_function_coverage_pct": 3.4023,
+  "overall_byte_coverage_pct": 0.7989,
   "usage": {
-    "calls_24h": 5421,
+    "calls_24h": 5408,
     "failures_24h": 0,
-    "completion_tokens_24h": 66961051,
-    "reasoning_tokens_24h": 65300595,
+    "completion_tokens_24h": 66896404,
+    "reasoning_tokens_24h": 65240626,
     "avg_latency_s": 211.5
   },
   "functions": [
@@ -2553,6 +2553,17 @@
       "matchable": true
     },
     {
+      "address": "0x005f6f40",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::VertexLayout::initARBTextureCompression",
+      "mangled": "?initARBTextureCompression@VertexLayout@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/VertexLayout.cpp",
+      "orig_size": 165,
+      "recomp_size": 165,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x005f6ff0",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::VertexLayout::initARBTextureMultisample",
@@ -2593,6 +2604,17 @@
       "file": "Client/Rendering/GfxCore/VertexLayout.cpp",
       "orig_size": 77,
       "recomp_size": 77,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x005f71d0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::VertexLayout::initARBTransformFeedback",
+      "mangled": "?initARBTransformFeedback@VertexLayout@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/VertexLayout.cpp",
+      "orig_size": 165,
+      "recomp_size": 165,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -2795,6 +2817,17 @@
       "matchable": true
     },
     {
+      "address": "0x005fa260",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGL::initDrawBuffers2EXT",
+      "mangled": "?initDrawBuffers2EXT@ContextGL@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
+      "orig_size": 143,
+      "recomp_size": 143,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x005fa2f0",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::ContextGL::initDrawInstancedEXT",
@@ -2872,6 +2905,17 @@
       "matchable": true
     },
     {
+      "address": "0x005fad40",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGL::initPixelTransformEXT",
+      "mangled": "?initPixelTransformEXT@ContextGL@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
+      "orig_size": 143,
+      "recomp_size": 143,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x005fadd0",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::ContextGL::initPointParameterEXT",
@@ -2912,6 +2956,17 @@
       "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
       "orig_size": 86,
       "recomp_size": 54,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x005fb180",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGL::initExtensions",
+      "mangled": "?initDrawBuffers2EXT@ContextGL@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
+      "orig_size": 143,
+      "recomp_size": 143,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -3176,6 +3231,17 @@
       "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
       "orig_size": 54,
       "recomp_size": 54,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x005fed30",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGL::initSpriteParameterSGIX",
+      "mangled": "?initSpriteParameterSGIX@ContextGL@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
+      "orig_size": 134,
+      "recomp_size": 99,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -7349,6 +7415,17 @@
       "matchable": true
     },
     {
+      "address": "0x008ccb10",
+      "kind": "FUNCTION",
+      "name": "RBX::ScriptContext::getScriptStateNode",
+      "mangled": "?getScriptStateNode@ScriptContext@RBX@@QAAPAXXZ",
+      "file": "Client/App/script/ScriptContext.cpp",
+      "orig_size": 86,
+      "recomp_size": 86,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x008cfbc0",
       "kind": "FUNCTION",
       "name": "unlink",
@@ -10462,6 +10539,17 @@
       "matchable": true
     },
     {
+      "address": "0x00a40620",
+      "kind": "FUNCTION",
+      "name": "RBX::Lua::LuaArguments::pushVector2int16",
+      "mangled": "?pushVector2int16@LuaArguments@Lua@RBX@@QAAHXZ",
+      "file": "Client/App/script/LuaArguments.cpp",
+      "orig_size": 101,
+      "recomp_size": 101,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00a40c40",
       "kind": "FUNCTION",
       "name": "RBX::Lua::LuaArguments::pushVector2",
@@ -11888,6 +11976,17 @@
       "file": "Client/App/v8world/TriangleMesh.cpp",
       "orig_size": 21,
       "recomp_size": 21,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b70830",
+      "kind": "FUNCTION",
+      "name": "RBX::RBX::TriangleMesh::func_B70830",
+      "mangled": "?func_B70830@TriangleMesh@RBX@@QAAXXZ",
+      "file": "Client/App/v8world/TriangleMesh.cpp",
+      "orig_size": 92,
+      "recomp_size": 92,
       "match_pct": 100.0,
       "matchable": true
     },

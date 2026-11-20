@@ -59,6 +59,7 @@ public:
 	int __cdecl reportError(const __int64* /*unused*/);
 	void __cdecl releaseSharedCount(void* ptr);
 	void* __cdecl getScriptStateNode();
+	void* __cdecl getScriptStateNode(void* context);
 	// AUTO-GENERATED METHODS
 };
 

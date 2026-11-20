@@ -106,6 +106,10 @@ public:
 	bool initPointParameterEXT();
 	bool initFogCoordEXT();
 	bool initVideoCaptureNV();
+	bool initSpriteParameterSGIX();
+	bool initDrawBuffers2EXT();
+	bool initPixelTransformEXT();
+	bool initExtensions();
 	// AUTO-GENERATED METHODS
 };
 

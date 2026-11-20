@@ -1341,6 +1341,162 @@ bool ContextGL::initVideoCaptureNV()
 	return false;
 }
 
+extern void* glSpriteParameterfSGIX;
+extern void* glSpriteParameterfvSGIX;
+extern void* glSpriteParameteriSGIX;
+extern void* glSpriteParameterivSGIX;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fed30
+bool ContextGL::initSpriteParameterSGIX()
+{
+	void* (__stdcall *getProc)(const char*) = wglGetProcAddress;
+
+	void* proc = getProc("glSpriteParameterfSGIX");
+	glSpriteParameterfSGIX = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glSpriteParameterfvSGIX");
+	glSpriteParameterfvSGIX = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glSpriteParameteriSGIX");
+	glSpriteParameteriSGIX = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glSpriteParameterivSGIX");
+	glSpriteParameterivSGIX = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glColorMaskIndexedEXT;
+extern void* glDisableIndexedEXT;
+extern void* glEnableIndexedEXT;
+extern void* glGetBooleanIndexedvEXT;
+extern void* glGetIntegerIndexedvEXT;
+extern void* glIsEnabledIndexedEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fa260
+bool ContextGL::initDrawBuffers2EXT()
+{
+	void* (__stdcall *getProc)(const char*) = wglGetProcAddress;
+
+	void* proc = getProc("glColorMaskIndexedEXT");
+	glColorMaskIndexedEXT = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glDisableIndexedEXT");
+	glDisableIndexedEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glEnableIndexedEXT");
+	glEnableIndexedEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetBooleanIndexedvEXT");
+	glGetBooleanIndexedvEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetIntegerIndexedvEXT");
+	glGetIntegerIndexedvEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glIsEnabledIndexedEXT");
+	glIsEnabledIndexedEXT = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glGetPixelTransformParameterfvEXT;
+extern void* glGetPixelTransformParameterivEXT;
+extern void* glPixelTransformParameterfEXT;
+extern void* glPixelTransformParameterfvEXT;
+extern void* glPixelTransformParameteriEXT;
+extern void* glPixelTransformParameterivEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fad40
+bool ContextGL::initPixelTransformEXT()
+{
+	void* (__stdcall *getProc)(const char*) = wglGetProcAddress;
+
+	void* proc = getProc("glGetPixelTransformParameterfvEXT");
+	glGetPixelTransformParameterfvEXT = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glGetPixelTransformParameterivEXT");
+	glGetPixelTransformParameterivEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glPixelTransformParameterfEXT");
+	glPixelTransformParameterfEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glPixelTransformParameterfvEXT");
+	glPixelTransformParameterfvEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glPixelTransformParameteriEXT");
+	glPixelTransformParameteriEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glPixelTransformParameterivEXT");
+	glPixelTransformParameterivEXT = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x005fb180
+bool ContextGL::initExtensions()
+{
+    // Dispatch table pointer located at absolute address 0x00e108b8 (loaded into esi)
+    typedef bool (__stdcall *Proc)(const char*);
+    static Proc getProc = (Proc)0x00e108b8;
+
+    // Globals that receive the return values of each extension query
+    static int glClearColorIiEXTResult   = 0;
+    static int glClearColorIuiEXTResult  = 0;
+    static int glGetTexParameterIivEXTResult = 0;
+    static int glTexParameterIivEXTResult   = 0;
+    static int glTexParameterIuivEXTResult  = 0;
+
+    // --- glClearColorIiEXT -------------------------------------------------
+    glClearColorIiEXTResult = getProc("glClearColorIiEXT") ? 1 : 0;
+
+    // --- glClearColorIuiEXT -------------------------------------------------
+    glClearColorIuiEXTResult = getProc("glClearColorIuiEXT") ? 1 : 0;
+
+    // --- glGetTexParameterIivEXT -------------------------------------------
+    glGetTexParameterIivEXTResult = getProc("glGetTexParameterIivEXT") ? 1 : 0;
+
+    // --- glTexParameterIivEXT ----------------------------------------------
+    glTexParameterIivEXTResult = getProc("glTexParameterIivEXT") ? 1 : 0;
+
+    // --- glTexParameterIuivEXT ---------------------------------------------
+    glTexParameterIuivEXTResult = getProc("glTexParameterIuivEXT") ? 1 : 0;
+
+    // The original function returns true (1) if *any* of the calls succeeded
+    // (bl flag is set to 1 when a non‑zero return value is observed).
+    // It returns false (0) only when every single call returned zero.
+    return (glClearColorIiEXTResult   | 
+            glClearColorIuiEXTResult  | 
+            glGetTexParameterIivEXTResult | 
+            glTexParameterIivEXTResult   | 
+            glTexParameterIuivEXTResult) != 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

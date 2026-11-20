@@ -511,6 +511,52 @@ fail:
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008ccb10
+void* __cdecl ScriptContext::getScriptStateNode(void* context)
+{
+	ScriptContext_StateNode* self = (ScriptContext_StateNode*)context;
+	if (!self)
+		goto fail;
+
+	{
+		ScriptContext_StateNode* result;
+		ScriptContext_StateNode* p = self->next;
+		if (p)
+		{
+			ScriptContext_StateNode* p2 = p->next;
+			if (p2)
+				result = p2->getDeepest();
+			else
+				result = p;
+		}
+		else
+		{
+			result = self;
+		}
+
+		if (!result)
+			goto fail;
+
+		unsigned char* sub = (unsigned char*)result + 0x1C;
+		if (!sub)
+			goto fail;
+
+		ScriptContext_StateChecker* checker = *(ScriptContext_StateChecker**)(sub + 0x0C);
+		void* globalState = ScriptContext_GetGlobalState();
+		if (!checker->check(globalState))
+			goto fail;
+
+		ScriptContext_StateNode* target = (ScriptContext_StateNode*)(sub - 0x1C);
+		if (!target)
+			goto fail;
+
+		return target->tailTarget();
+	}
+
+fail:
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
