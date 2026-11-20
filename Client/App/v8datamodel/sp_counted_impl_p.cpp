@@ -826,6 +826,23 @@ int __cdecl sp_counted_impl_p::sub_B7A520()
 	return 0;
 }
 
+int __cdecl sub_BCAB60(void* a1, void* a2, void* a3, void* a4, int a5);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a34e90
+int __cdecl sp_counted_impl_p::sub_A34E90(void* arg2, void* arg3)
+{
+	char* p = *(char**)((char*)this + 8);
+	if (*(int*)(p - 8) == 6)
+	{
+		char* q = *(char**)(p - 0x10);
+		if (*(unsigned char*)(q + 6) == 0)
+		{
+			return sub_BCAB60(this, *(void**)(q + 0x10), arg2, arg3, 0);
+		}
+	}
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

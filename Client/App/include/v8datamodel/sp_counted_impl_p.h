@@ -90,6 +90,7 @@ public:
 	sp_counted_impl_p* __cdecl sub_77D6C0(void* arg);
 	int __cdecl sub_B7A2A0();
 	int __cdecl sub_B7A520();
+	int __cdecl sub_A34E90(void* arg2, void* arg3);
 	// AUTO-GENERATED METHODS
 };
 
