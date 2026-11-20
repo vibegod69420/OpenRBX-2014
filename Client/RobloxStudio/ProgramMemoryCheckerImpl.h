@@ -40,6 +40,7 @@ public:
 	void init22();
 	void init23();
 	void init24();
+	void init25();
 	// AUTO-GENERATED METHODS
 };
 

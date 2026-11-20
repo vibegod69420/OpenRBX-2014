@@ -39,6 +39,7 @@ public:
 	bool initARBBaseInstance();
 	bool initARBGetProgramBinary();
 	bool initARBTimerQuery();
+	bool initARBVertexShader();
 	// AUTO-GENERATED METHODS
 };
 
