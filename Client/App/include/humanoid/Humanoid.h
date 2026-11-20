@@ -42,6 +42,7 @@ public:
 	bool func007bce10();
 	float getField200XorFloat();
 	float getField204XorFloat();
+	float getField1F8XorFloat();
 	// AUTO-GENERATED METHODS
 };
 
