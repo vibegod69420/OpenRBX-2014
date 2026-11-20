@@ -19,6 +19,7 @@ public:
 	void closeState();
 	void close();
 	void __cdecl reportError();
+	void __cdecl reportError(void* /*unused*/);
 	// AUTO-GENERATED METHODS
 };
 

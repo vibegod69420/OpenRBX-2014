@@ -29,6 +29,17 @@ bool DataModel::isStateValid() const
 	return state[0] == 8 && state[1] == 2;
 }
 
+struct DataModelBdcMember
+{
+	void dispatch(int, int);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0084dd30
+void DataModel::dispatchBdcMember()
+{
+	reinterpret_cast<DataModelBdcMember*>(reinterpret_cast<char*>(this) + 0xBDC)->dispatch(0x00F12F2D, 0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

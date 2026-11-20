@@ -20,6 +20,7 @@ public:
 	static void destroyInstance(chainbuf* p);
 	void __cdecl write(void* destination);
 	void __cdecl write_ptr(void* destination);
+	void __cdecl write_ptr(void* src, void* destination);
 	// AUTO-GENERATED METHODS
 };
 

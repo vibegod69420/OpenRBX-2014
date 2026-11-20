@@ -29,6 +29,7 @@ public:
 	bool initTextureBufferRange();
 	bool initGLDrawTransformFeedbackInstanced();
 	bool initATIMapObjectBuffer();
+	bool initATIPNTriangles();
 	// AUTO-GENERATED METHODS
 };
 

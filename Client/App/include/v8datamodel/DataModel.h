@@ -21,6 +21,7 @@ public:
 	DataModel* getDataModel();
 	int getZero() const;
 	bool isStateValid() const;
+	void dispatchBdcMember();
 	// AUTO-GENERATED METHODS
 };
 

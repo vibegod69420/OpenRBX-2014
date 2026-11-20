@@ -257,6 +257,27 @@ bool VertexLayout::initATIMapObjectBuffer()
 	return false;
 }
 
+extern void* g_glPNTrianglesfATI;
+extern void* g_glPNTrianglesiATI;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f8630
+bool VertexLayout::initATIPNTriangles()
+{
+	void* first = g_glGetProcAddress("glPNTrianglesfATI");
+	g_glPNTrianglesfATI = first;
+	unsigned char missingFirst = (first == 0);
+
+	void* second = g_glGetProcAddress("glPNTrianglesiATI");
+	g_glPNTrianglesiATI = second;
+
+	if (second == 0)
+		return true;
+	if (missingFirst)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

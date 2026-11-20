@@ -134,6 +134,26 @@ char* UnionOperation::getPrimitiveDataOffset3C() const
 	return (*(UnionOpPrimitiveOwner**)((const char*)this + 0xE0))->getPrimitiveData() + 0x3C;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008940a0
+bool UnionOperation::sub_8940A0() const
+{
+	char* data = *(char**)((char*)this + 0xE0);
+	if (*(int*)(data + 0x130) != 4)
+		goto fail;
+	if (*(int*)(data + 0x134) != 0)
+		goto fail;
+	if (*(int*)(data + 0x128) != 0)
+		goto fail;
+	if (*(int*)(data + 0x12C) != 0)
+		goto fail;
+	if (*(int*)(data + 0x120) != 0)
+		goto fail;
+	return true;
+
+fail:
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
