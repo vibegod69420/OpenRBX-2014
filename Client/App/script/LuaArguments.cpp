@@ -1002,6 +1002,110 @@ void __cdecl LuaArguments::registerObject(void* arg1, void* arg2)
 	sub_A35D10(self, -2);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a410f0
+void __cdecl LuaArguments::registerFunctions(void* arg1, void* arg2)
+{
+	void* self = this;
+
+	sub_A38FC0(self, *(void**)0x0124EB20);
+	sub_8DFAC0(self, -1);
+
+	sub_A35710(self, (void*)0x00E53324);
+	sub_A35580(self, arg1, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00E5332C);
+	sub_A35580(self, arg2, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B60);
+	sub_A35580(self, (void*)0x00A3CDA0, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B68);
+	sub_A35580(self, (void*)0x00A3CB90, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B70);
+	sub_A35580(self, (void*)0x00A403D0, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B7C);
+	sub_A35580(self, (void*)0x00A3BED0, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B84);
+	sub_A35580(self, (void*)0x00A3FDE0, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B8C);
+	sub_A35580(self, (void*)0x00A3EF30, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B94);
+	sub_A35580(self, (void*)0x00A3C190, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B9C);
+	sub_A35580(self, (void*)0x00A40590, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35CC0(self, -1, 1);
+	sub_A35D10(self, -2);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00a41270
+void __cdecl LuaArguments::registerString(void* arg1, void* arg2)
+{
+	void* self = this;
+
+	sub_A38FC0(self, *(void**)0x0124EB24);
+	sub_8DFAC0(self, -1);
+
+	sub_A35710(self, (void*)0x00E53324);
+	sub_A35580(self, arg1, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00E5332C);
+	sub_A35580(self, arg2, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B60);
+	sub_A35580(self, (void*)0x00A3CDC0, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B68);
+	sub_A35580(self, (void*)0x00A3CC00, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B70);
+	sub_A35580(self, (void*)0x00A40400, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B7C);
+	sub_A35580(self, (void*)0x00A3BF60, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B84);
+	sub_A35580(self, (void*)0x00A3FE70, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B8C);
+	sub_A35580(self, (void*)0x00A3F200, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B94);
+	sub_A35580(self, (void*)0x00A3C480, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35710(self, (void*)0x00EA7B9C);
+	sub_A35580(self, (void*)0x00A40620, 0);
+	sub_A35CE0(self, -3);
+
+	sub_A35CC0(self, -1, 1);
+	sub_A35D10(self, -2);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

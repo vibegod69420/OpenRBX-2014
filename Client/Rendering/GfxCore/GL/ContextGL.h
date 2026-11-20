@@ -156,6 +156,8 @@ public:
 	bool initFixedPointOESCore();
 	bool initGpuShader4EXT();
 	bool initGpuShader5NV();
+	bool initVertexSUN();
+	bool initPathRenderingNV();
 	// AUTO-GENERATED METHODS
 };
 

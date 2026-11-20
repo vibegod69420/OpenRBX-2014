@@ -72,6 +72,8 @@ public:
 	int __cdecl pushVector2Sub();
 	int __cdecl pushVector3Sub();
 	void __cdecl registerObject(void* arg1, void* arg2);
+	void __cdecl registerFunctions(void* arg1, void* arg2);
+	void __cdecl registerString(void* arg1, void* arg2);
 	// AUTO-GENERATED METHODS
 };
 

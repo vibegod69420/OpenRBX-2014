@@ -4511,6 +4511,471 @@ bool ContextGL::initGpuShader5NV()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005ff020
+bool ContextGL::initVertexSUN()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	unsigned char missing;
+	void* proc;
+
+	proc = getProc("glColor3fVertex3fSUN");
+	*(void**)0x012DA148 = proc;
+	missing = (proc == 0) ? 1 : 0;
+
+	proc = getProc("glColor3fVertex3fvSUN");
+	*(void**)0x012DA14C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glColor4fNormal3fVertex3fSUN");
+	*(void**)0x012DA160 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glColor4fNormal3fVertex3fvSUN");
+	*(void**)0x012DA16C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glColor4ubVertex2fSUN");
+	*(void**)0x012DA174 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glColor4ubVertex2fvSUN");
+	*(void**)0x012DA184 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glColor4ubVertex3fSUN");
+	*(void**)0x012DA190 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glColor4ubVertex3fvSUN");
+	*(void**)0x012DA194 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glNormal3fVertex3fSUN");
+	*(void**)0x012DA1A0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glNormal3fVertex3fvSUN");
+	*(void**)0x012DA1AC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glReplacementCodeuiColor3fVertex3fSUN");
+	*(void**)0x012DA1BC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glReplacementCodeuiColor3fVertex3fvSUN");
+	*(void**)0x012DA1C8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glReplacementCodeuiColor4fNormal3fVertex3fSUN");
+	*(void**)0x012DA1D4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glReplacementCodeuiColor4fNormal3fVertex3fvSUN");
+	*(void**)0x012DA1DC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glReplacementCodeuiColor4ubVertex3fSUN");
+	*(void**)0x012DA1EC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glReplacementCodeuiColor4ubVertex3fvSUN");
+	*(void**)0x012DA1F4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glReplacementCodeuiNormal3fVertex3fSUN");
+	*(void**)0x012DA208 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glReplacementCodeuiNormal3fVertex3fvSUN");
+	*(void**)0x012DA210 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN");
+	*(void**)0x012DA220 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN");
+	*(void**)0x012DA224 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN");
+	*(void**)0x012DA234 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN");
+	*(void**)0x012DA244 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glReplacementCodeuiTexCoord2fVertex3fSUN");
+	*(void**)0x012DA250 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glReplacementCodeuiTexCoord2fVertex3fvSUN");
+	*(void**)0x012DA254 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glReplacementCodeuiVertex3fSUN");
+	*(void**)0x012DA260 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glReplacementCodeuiVertex3fvSUN");
+	*(void**)0x012DA270 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glTexCoord2fColor3fVertex3fSUN");
+	*(void**)0x012DA278 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glTexCoord2fColor3fVertex3fvSUN");
+	*(void**)0x012DA284 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glTexCoord2fColor4fNormal3fVertex3fSUN");
+	*(void**)0x012DA298 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glTexCoord2fColor4fNormal3fVertex3fvSUN");
+	*(void**)0x012DA2A0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glTexCoord2fColor4ubVertex3fSUN");
+	*(void**)0x012DA2A8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glTexCoord2fColor4ubVertex3fvSUN");
+	*(void**)0x012DA2B4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glTexCoord2fNormal3fVertex3fSUN");
+	*(void**)0x012DA2C8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glTexCoord2fNormal3fVertex3fvSUN");
+	*(void**)0x012DA2D4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glTexCoord2fVertex3fSUN");
+	*(void**)0x012DA2E0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glTexCoord2fVertex3fvSUN");
+	*(void**)0x012DA2EC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glTexCoord4fColor4fNormal3fVertex4fSUN");
+	*(void**)0x012DA2F0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glTexCoord4fColor4fNormal3fVertex4fvSUN");
+	*(void**)0x012DA304 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glTexCoord4fVertex4fSUN");
+	*(void**)0x012DA310 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glTexCoord4fVertex4fvSUN");
+	*(void**)0x012DA31C = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x005fcea0
+bool ContextGL::initPathRenderingNV()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	unsigned char missing;
+	void* proc;
+
+	proc = getProc("glCopyPathNV");
+	*(void**)0x012DBAC8 = proc;
+	missing = (proc == 0);
+
+	proc = getProc("glCoverFillPathInstancedNV");
+	*(void**)0x012DBACC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glCoverFillPathNV");
+	*(void**)0x012DBAD8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glCoverStrokePathInstancedNV");
+	*(void**)0x012DBAE4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glCoverStrokePathNV");
+	*(void**)0x012DBAEC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glDeletePathsNV");
+	*(void**)0x012DBAF0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGenPathsNV");
+	*(void**)0x012DBAF8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetPathColorGenfvNV");
+	*(void**)0x012DBB08 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetPathColorGenivNV");
+	*(void**)0x012DBB10 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetPathCommandsNV");
+	*(void**)0x012DBB18 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetPathCoordsNV");
+	*(void**)0x012DBB24 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetPathDashArrayNV");
+	*(void**)0x012DBB28 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetPathLengthNV");
+	*(void**)0x012DBB30 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetPathMetricRangeNV");
+	*(void**)0x012DBB3C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetPathMetricsNV");
+	*(void**)0x012DBB40 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetPathParameterfvNV");
+	*(void**)0x012DBB50 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetPathParameterivNV");
+	*(void**)0x012DBB58 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetPathSpacingNV");
+	*(void**)0x012DBB5C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetPathTexGenfvNV");
+	*(void**)0x012DBB68 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetPathTexGenivNV");
+	*(void**)0x012DBB74 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glInterpolatePathsNV");
+	*(void**)0x012DBB78 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glIsPathNV");
+	*(void**)0x012DBB84 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glIsPointInFillPathNV");
+	*(void**)0x012DBB8C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glIsPointInStrokePathNV");
+	*(void**)0x012DBB94 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPathColorGenNV");
+	*(void**)0x012DBB9C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPathCommandsNV");
+	*(void**)0x012DBBA4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPathCoordsNV");
+	*(void**)0x012DBBAC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPathCoverDepthFuncNV");
+	*(void**)0x012DBBB4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPathDashArrayNV");
+	*(void**)0x012DBBBC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPathFogGenNV");
+	*(void**)0x012DBBC4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPathGlyphRangeNV");
+	*(void**)0x012DBBD0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPathGlyphsNV");
+	*(void**)0x012DBBD4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPathParameterfNV");
+	*(void**)0x012DBBE0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPathParameterfvNV");
+	*(void**)0x012DBBE8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPathParameteriNV");
+	*(void**)0x012DBBF0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPathParameterivNV");
+	*(void**)0x012DBBF8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPathStencilDepthOffsetNV");
+	*(void**)0x012DBC00 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPathStencilFuncNV");
+	*(void**)0x012DBC04 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPathStringNV");
+	*(void**)0x012DBC0C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPathSubCommandsNV");
+	*(void**)0x012DBC18 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPathSubCoordsNV");
+	*(void**)0x012DBC1C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPathTexGenNV");
+	*(void**)0x012DBC24 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPointAlongPathNV");
+	*(void**)0x012DBC2C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glStencilFillPathInstancedNV");
+	*(void**)0x012DBC38 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glStencilFillPathNV");
+	*(void**)0x012DBC40 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glStencilStrokePathInstancedNV");
+	*(void**)0x012DBC44 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glStencilStrokePathNV");
+	*(void**)0x012DBC4C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glTransformPathNV");
+	*(void**)0x012DBC54 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWeightPathsNV");
+	*(void**)0x012DBC60 = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

@@ -2601,6 +2601,90 @@ void ProgramMemoryCheckerImpl::init144()
 	sub_CF6609((void*)0x00DF3E90);
 }
 
+class ProgramMemoryCheckerExclusiveMouseTarget
+{
+public:
+	void sub_93F7A0(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dbc080
+void ProgramMemoryCheckerImpl::init145()
+{
+	int v[2];
+	((ProgramMemoryCheckerExclusiveMouseTarget*)0x01300640)->sub_93F7A0(
+		0x00941670,
+		0,
+		(const char*)0x00E83660,
+		(const char*)0x00E83650,
+		1,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DF4360);
+}
+
+class ProgramMemoryCheckerCreateToolbarTarget
+{
+public:
+	void sub_93F430(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dbc190
+void ProgramMemoryCheckerImpl::init146()
+{
+	int v[2];
+	((ProgramMemoryCheckerCreateToolbarTarget*)0x01300678)->sub_93F430(
+		0x00942570,
+		0,
+		(const char*)0x00E83678,
+		(const char*)0x01016EB0,
+		1,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DF4440);
+}
+
+class ProgramMemoryCheckerGetSettingTarget
+{
+public:
+	void sub_93F500(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dbc310
+void ProgramMemoryCheckerImpl::init147()
+{
+	int v[2];
+	((ProgramMemoryCheckerGetSettingTarget*)0x013006E8)->sub_93F500(
+		0x00943930,
+		0,
+		(const char*)0x00E836B0,
+		(const char*)0x00E83694,
+		1,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DF46B0);
+}
+
+class ProgramMemoryCheckerSetActiveTarget
+{
+public:
+	void sub_93F360(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dbc4a0
+void ProgramMemoryCheckerImpl::init148()
+{
+	int v[2];
+	((ProgramMemoryCheckerSetActiveTarget*)0x01300818)->sub_93F360(
+		0x009446F0,
+		0,
+		(const char*)0x00E83780,
+		(const char*)0x00E83778,
+		1,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DF4830);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
