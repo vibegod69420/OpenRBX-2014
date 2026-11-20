@@ -246,6 +246,11 @@ public:
 	void init229();
 	void init230();
 	void init231();
+	void init232();
+	void init233();
+	void init234();
+	void init235();
+	void init236();
 	// AUTO-GENERATED METHODS
 };
 
