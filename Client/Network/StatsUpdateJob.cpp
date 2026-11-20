@@ -40,6 +40,24 @@ StatsUpdateJob& __cdecl StatsUpdateJob::reserve(unsigned int bits)
 	return *this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c6de60
+void sub_c6d640(StatsUpdateJob* job, const void* field);
+
+StatsUpdateJob& __cdecl StatsUpdateJob::writeStats(const void* source)
+{
+	const char* p = reinterpret_cast<const char*>(source) + 4;
+	sub_c6d640(this, p);
+	sub_c6d640(this, p + 4);
+	sub_c6d640(this, p + 8);
+
+	p = reinterpret_cast<const char*>(source) + 0x10;
+	sub_c6d640(this, p);
+	sub_c6d640(this, p + 4);
+	sub_c6d640(this, p + 8);
+
+	return *this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

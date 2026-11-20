@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20 00:45:43 UTC",
+  "updated_at": "2026-11-20 00:54:21 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 10.0801,
-  "implemented_total": 951,
-  "function_annotations": 951,
+  "matchable_coverage_pct": 10.1014,
+  "implemented_total": 953,
+  "function_annotations": 953,
   "stub_annotations": 0,
-  "perfect_100_count": 944,
-  "matched_real_functions": 944,
+  "perfect_100_count": 946,
+  "matched_real_functions": 946,
   "average_match_pct": 99.84,
-  "overall_function_coverage_pct": 2.3274,
-  "overall_byte_coverage_pct": 0.4054,
+  "overall_function_coverage_pct": 2.3323,
+  "overall_byte_coverage_pct": 0.4073,
   "usage": {
-    "calls_24h": 5864,
+    "calls_24h": 5883,
     "failures_24h": 0,
-    "completion_tokens_24h": 70823491,
-    "reasoning_tokens_24h": 69334400,
-    "avg_latency_s": 211.4
+    "completion_tokens_24h": 71148033,
+    "reasoning_tokens_24h": 69649417,
+    "avg_latency_s": 211.7
   },
   "functions": [
     {
@@ -3978,6 +3978,17 @@
       "mangled": "?getCurrentEntryByte@ViewBase@RBX@@QAE_NXZ",
       "file": "Client/Rendering/GfxBase/ViewBase.cpp",
       "orig_size": 17,
+      "recomp_size": 17,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0076f3f0",
+      "kind": "FUNCTION",
+      "name": "RBX::ViewBase::getCurrentEntryInt3",
+      "mangled": "?getCurrentEntryInt3@ViewBase@RBX@@QAEHXZ",
+      "file": "Client/Rendering/GfxBase/ViewBase.cpp",
+      "orig_size": 97,
       "recomp_size": 17,
       "match_pct": 100.0,
       "matchable": true
@@ -9710,6 +9721,17 @@
       "file": "Client/Network/StatsUpdateJob.cpp",
       "orig_size": 31,
       "recomp_size": 31,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c6de60",
+      "kind": "FUNCTION",
+      "name": "sub_c6d640",
+      "mangled": "?writeStats@StatsUpdateJob@Network@RBX@@QAAAAV123@PBX@Z",
+      "file": "Client/Network/StatsUpdateJob.cpp",
+      "orig_size": 82,
+      "recomp_size": 82,
       "match_pct": 100.0,
       "matchable": true
     },

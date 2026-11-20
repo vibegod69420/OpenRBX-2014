@@ -115,6 +115,15 @@ void ViewBase::updateViewData()
 	*reinterpret_cast<int*>(base + 0x8C) = *reinterpret_cast<int*>(0x011DDD08);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0076f3f0
+int ViewBase::getCurrentEntryInt3()
+{
+	const char* base = reinterpret_cast<const char*>(this);
+	unsigned int index = *reinterpret_cast<const unsigned int*>(base + 0x28);
+	const char* arrayBase = *reinterpret_cast<const char* const*>(base + 0x148);
+	return *reinterpret_cast<const int*>(arrayBase + (index << 6) + 0x2C);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

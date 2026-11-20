@@ -23,6 +23,7 @@ public:
 	bool getCurrentEntryByte();
 	int getCurrentEntryInt2();
 	void updateViewData();
+	int getCurrentEntryInt3();
 	// AUTO-GENERATED METHODS
 };
 

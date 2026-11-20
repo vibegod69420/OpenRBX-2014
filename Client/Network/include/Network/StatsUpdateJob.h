@@ -19,6 +19,7 @@ public:
 
 	void appendBit();
 	StatsUpdateJob& __cdecl reserve(unsigned int bits);
+	StatsUpdateJob& __cdecl writeStats(const void* source);
 	// AUTO-GENERATED METHODS
 };
 
