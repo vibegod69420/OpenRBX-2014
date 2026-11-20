@@ -93,6 +93,10 @@ public:
 	bool initRegisterCombiners2NV();
 	bool initProgramBufferParametersNV();
 	bool initDrawInstancedEXT();
+	bool initColorTableEXT();
+	bool initBindImageTextureAndMemoryBarrier();
+	bool initConditionalRenderNV();
+	bool initExtensionQueryREGAL();
 	// AUTO-GENERATED METHODS
 };
 

@@ -52,6 +52,8 @@ public:
 	int __cdecl orderError(void* p1, void* p2);
 	int __cdecl findLocal(void* ci, int n);
 	void* __cdecl sub_A3AFF0(int value);
+	void __cdecl setTop(int n);
+	void* __cdecl sub_A3B450(float arg1, float arg2);
 	// AUTO-GENERATED METHODS
 };
 

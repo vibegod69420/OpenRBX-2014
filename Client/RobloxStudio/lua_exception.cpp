@@ -426,6 +426,41 @@ void* __cdecl lua_exception::sub_A3AFF0(int value)
 	return p;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a35d10
+void __cdecl lua_exception::setTop(int n)
+{
+	if (n >= 0)
+	{
+		while (*(char**)((char*)this + 8) < *(char**)((char*)this + 0x0C) + n * 16)
+		{
+			*(int*)(*(char**)((char*)this + 8) + 8) = 0;
+			*(char**)((char*)this + 8) += 16;
+		}
+
+		*(char**)((char*)this + 8) = *(char**)((char*)this + 0x0C) + n * 16;
+	}
+	else
+	{
+		*(char**)((char*)this + 8) += n * 16 + 16;
+	}
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00a3b450
+void* __cdecl lua_exception::sub_A3B450(float arg1, float arg2)
+{
+	lua_exception* L = this;
+	void* p = sub_A353E0(L, 8);
+	if (p)
+	{
+		*(float*)p = arg1;
+		*((float*)p + 1) = arg2;
+	}
+
+	sub_A35060(L, -10000, *(int*)0x0124EB20);
+	sub_A35BF0(L, -2);
+	return p;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

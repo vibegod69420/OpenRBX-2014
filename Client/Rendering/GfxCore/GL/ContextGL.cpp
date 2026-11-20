@@ -988,6 +988,88 @@ bool ContextGL::initDrawInstancedEXT()
 	return false;
 }
 
+extern void* glColorTableEXT;
+extern void* glGetColorTableEXT;
+extern void* glGetColorTableParameterfvEXT;
+extern void* glGetColorTableParameterivEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005facd0
+bool ContextGL::initColorTableEXT()
+{
+	void* (__stdcall *getProc)(const char*) = wglGetProcAddress;
+
+	void* proc = getProc("glColorTableEXT");
+	glColorTableEXT = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glGetColorTableEXT");
+	glGetColorTableEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetColorTableParameterfvEXT");
+	glGetColorTableParameterfvEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetColorTableParameterivEXT");
+	glGetColorTableParameterivEXT = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x005fb070
+extern void* glBindImageTextureEXT;
+extern void* glMemoryBarrierEXT;
+
+bool ContextGL::initBindImageTextureAndMemoryBarrier()
+{
+    void* proc1 = wglGetProcAddress("glBindImageTextureEXT");
+    glBindImageTextureEXT = proc1;
+
+    void* proc2 = wglGetProcAddress("glMemoryBarrierEXT");
+    glMemoryBarrierEXT = proc2;
+
+    if (proc1 == 0 || proc2 == 0)
+        return true;
+    return false;
+}
+
+extern void* glBeginConditionalRenderNV;
+extern void* glEndConditionalRenderNV;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fc200
+bool ContextGL::initConditionalRenderNV()
+{
+	void* proc = wglGetProcAddress("glBeginConditionalRenderNV");
+	glBeginConditionalRenderNV = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glEndConditionalRenderNV");
+	glEndConditionalRenderNV = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glGetExtensionREGAL;
+extern void* glIsSupportedREGAL;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fe890
+bool ContextGL::initExtensionQueryREGAL()
+{
+	void* proc = wglGetProcAddress("glGetExtensionREGAL");
+	glGetExtensionREGAL = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glIsSupportedREGAL");
+	glIsSupportedREGAL = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

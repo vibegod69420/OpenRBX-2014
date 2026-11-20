@@ -1575,6 +1575,144 @@ bool VertexLayout::initARBSync()
 	return false;
 }
 
+extern void* g_glDeleteFencesAPPLE;
+extern void* g_glFinishFenceAPPLE;
+extern void* g_glFinishObjectAPPLE;
+extern void* g_glGenFencesAPPLE;
+extern void* g_glIsFenceAPPLE;
+extern void* g_glSetFenceAPPLE;
+extern void* g_glTestFenceAPPLE;
+extern void* g_glTestObjectAPPLE;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f47b0
+bool VertexLayout::initAppleFence()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glDeleteFencesAPPLE");
+	g_glDeleteFencesAPPLE = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glFinishFenceAPPLE");
+	g_glFinishFenceAPPLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glFinishObjectAPPLE");
+	g_glFinishObjectAPPLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGenFencesAPPLE");
+	g_glGenFencesAPPLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glIsFenceAPPLE");
+	g_glIsFenceAPPLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSetFenceAPPLE");
+	g_glSetFenceAPPLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glTestFenceAPPLE");
+	g_glTestFenceAPPLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glTestObjectAPPLE");
+	g_glTestObjectAPPLE = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glTexStorage1D;
+extern void* g_glTexStorage2D;
+extern void* g_glTexStorage3D;
+extern void* g_glTextureStorage1DEXT;
+extern void* g_glTextureStorage2DEXT;
+extern void* g_glTextureStorage3DEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f7060
+bool VertexLayout::initARBTextureStorage()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glTexStorage1D");
+	g_glTexStorage1D = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glTexStorage2D");
+	g_glTexStorage2D = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glTexStorage3D");
+	g_glTexStorage3D = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glTextureStorage1DEXT");
+	g_glTextureStorage1DEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glTextureStorage2DEXT");
+	g_glTextureStorage2DEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glTextureStorage3DEXT");
+	g_glTextureStorage3DEXT = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glClearDepthf;
+extern void* g_glDepthRangef;
+extern void* g_glGetShaderPrecisionFormat;
+extern void* g_glReleaseShaderCompiler;
+extern void* g_glShaderBinary;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f4ab0
+bool VertexLayout::initARBES2Compatibility()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glClearDepthf");
+	g_glClearDepthf = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glDepthRangef");
+	g_glDepthRangef = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetShaderPrecisionFormat");
+	g_glGetShaderPrecisionFormat = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glReleaseShaderCompiler");
+	g_glReleaseShaderCompiler = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glShaderBinary");
+	g_glShaderBinary = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

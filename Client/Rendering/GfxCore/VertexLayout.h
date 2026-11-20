@@ -73,6 +73,9 @@ public:
 	bool initARBComputeShader();
 	bool initAppleVertexProgramEvaluators();
 	bool initARBSync();
+	bool initAppleFence();
+	bool initARBTextureStorage();
+	bool initARBES2Compatibility();
 	// AUTO-GENERATED METHODS
 };
 
