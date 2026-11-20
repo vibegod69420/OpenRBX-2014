@@ -4085,6 +4085,93 @@ void ProgramMemoryCheckerImpl::init226()
 	sub_CF6609((void*)0x00E03590);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00dcf310
+void ProgramMemoryCheckerImpl::init227()
+{
+	int v[2];
+	((ProgramMemoryCheckerSetBestFriendUrlTarget*)0x0130C920)->sub_AF1BF0(
+		0x00A5D6F0,
+		0,
+		(const char*)0x00EC0478,
+		(const char*)0x00EC046C,
+		3,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00E03640);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00dcf350
+void ProgramMemoryCheckerImpl::init228()
+{
+	int v[2];
+	((ProgramMemoryCheckerSetBestFriendUrlTarget*)0x0130CA00)->sub_AF1BF0(
+		0x00AF2AF0,
+		0,
+		(const char*)0x00EC04DC,
+		(const char*)0x00EC04C4,
+		3,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00E036F0);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00dcf390
+void ProgramMemoryCheckerImpl::init229()
+{
+	int v[2];
+	((ProgramMemoryCheckerSetBestFriendUrlTarget*)0x0130C9C8)->sub_AF1BF0(
+		0x00AF2B50,
+		0,
+		(const char*)0x00EC04D0,
+		(const char*)0x00EC04C4,
+		3,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00E037A0);
+}
+
+class ProgramMemoryCheckerInit230Target
+{
+public:
+	void sub_AF2FB0(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dcf3d0
+void ProgramMemoryCheckerImpl::init230()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit230Target*)0x0130CB18)->sub_AF2FB0(
+		0x00AF3AA0,
+		0,
+		(const char*)0x00EC07FC,
+		(const char*)0x00E73878,
+		5,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00E03850);
+}
+
+class ProgramMemoryCheckerInit231Target
+{
+public:
+	void sub_AF3080(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dcf410
+void ProgramMemoryCheckerImpl::init231()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit231Target*)0x0130CB50)->sub_AF3080(
+		0x00AF3F50,
+		0,
+		(const char*)0x00EC081C,
+		(const char*)0x00E5E0C8,
+		5,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00E03920);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

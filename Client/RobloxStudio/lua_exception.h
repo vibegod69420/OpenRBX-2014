@@ -67,6 +67,7 @@ public:
 	void* __cdecl sub_A353E0(lua_exception* L, int size);
 	void __cdecl sub_A377A0();
 	void __cdecl sub_A384B0(const char* src, int len);
+	const char* __cdecl tolstring(int index, int* len);
 	// AUTO-GENERATED METHODS
 };
 

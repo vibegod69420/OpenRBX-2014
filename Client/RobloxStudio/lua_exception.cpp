@@ -719,6 +719,40 @@ void __cdecl lua_exception::sub_A384B0(const char* src, int len)
 	}
 }
 
+void* __cdecl index2adr(int state, int index);
+void __cdecl luaC_step(lua_exception* L);
+int __cdecl sub_BCC960(lua_exception* L, void* o);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a35e70
+const char* __cdecl lua_exception::tolstring(int index, int* len)
+{
+	void* o = index2adr((int)this, index);
+	if (*(int*)((char*)o + 8) != 4)
+	{
+		if (!sub_BCC960(this, o))
+		{
+			if (len)
+				*len = 0;
+			return 0;
+		}
+
+		char* g = *(char**)((char*)this + 0x10);
+		if (*(unsigned int*)(g + 0x44) >= *(unsigned int*)(g + 0x40))
+		{
+			luaC_step(this);
+		}
+
+		o = index2adr((int)this, index);
+	}
+
+	if (len)
+	{
+		*len = *(int*)(*(char**)o + 0x0C);
+	}
+
+	return *(char**)o + 0x10;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

@@ -582,6 +582,47 @@ sp_counted_impl_p* __cdecl sp_counted_impl_p::sub_77D480(void* a, void* b)
 	return this;
 }
 
+struct sp_counted_impl_p_sub_7818B0
+{
+	void __thiscall sub_7818B0(void* a, void* b);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0077d670
+sp_counted_impl_p* __cdecl sp_counted_impl_p::sub_77D670(void* a, void* b)
+{
+	volatile int local = 0;
+	((sp_counted_impl_p_sub_7818B0*)this)->sub_7818B0(a, b);
+	return this;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x0077d840
+sp_counted_impl_p* __cdecl sp_counted_impl_p::sub_77D840(void* /*unused*/, const char* str)
+{
+	const char* begin = str;
+	const char* end = str;
+	while (*end != '\0')
+	{
+		++end;
+	}
+
+	*(const char**)this = begin;
+	*(const char**)((char*)this + 4) = end;
+	return this;
+}
+
+struct sp_counted_impl_p_sub_77FD10
+{
+	void __thiscall sub_77FD10(void* a, void* b);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0077e780
+sp_counted_impl_p* __cdecl sp_counted_impl_p::sub_77E780(void* a, void* b)
+{
+	volatile int local = 0;
+	((sp_counted_impl_p_sub_77FD10*)a)->sub_77FD10(this, b);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
