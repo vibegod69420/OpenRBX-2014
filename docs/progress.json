@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 05:21:26 UTC",
+ "updated_at": "2026-11-20 05:30:52 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 10.8703,
- "implemented_total": 1030,
- "function_annotations": 1030,
+ "matchable_coverage_pct": 10.8809,
+ "implemented_total": 1031,
+ "function_annotations": 1031,
  "stub_annotations": 0,
- "perfect_100_count": 1018,
- "matched_real_functions": 1018,
+ "perfect_100_count": 1019,
+ "matched_real_functions": 1019,
  "average_match_pct": 99.8,
- "overall_function_coverage_pct": 2.5098,
- "overall_byte_coverage_pct": 0.506,
+ "overall_function_coverage_pct": 2.5123,
+ "overall_byte_coverage_pct": 0.5062,
  "usage": {
-  "calls_24h": 5516,
+  "calls_24h": 5506,
   "failures_24h": 0,
-  "completion_tokens_24h": 69208910,
-  "reasoning_tokens_24h": 67622919,
-  "avg_latency_s": 217.2
+  "completion_tokens_24h": 69106159,
+  "reasoning_tokens_24h": 67515973,
+  "avg_latency_s": 217.1
  },
- "functions_total": 1030,
+ "functions_total": 1031,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -54,9 +54,9 @@
   },
   {
    "name": "Rendering/GfxCore",
-   "matched": 69,
-   "functions": 69,
-   "bytes": 2808
+   "matched": 70,
+   "functions": 70,
+   "bytes": 2832
   },
   {
    "name": "App/v8kernel",
@@ -4845,9 +4845,21 @@
    "matched": 1018,
    "implemented": 1030,
    "pct": 10.8703
+  },
+  {
+   "t": "2026-11-20 05:30:52 UTC",
+   "matched": 1019,
+   "implemented": 1031,
+   "pct": 10.8809
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T05:27:08",
+   "address": "0x00605c00",
+   "name": "RBX::Graphics::ContextGL::assignIfNull_5c00",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T05:16:36",
    "address": "0x00c286f0",
@@ -5561,13 +5573,7 @@
    "address": "0x009d86d0",
    "name": "RBX::Humanoid::getField270DerefE0",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T22:32:52",
-   "address": "0x006d14e0",
-   "name": "RBX::CircleRadialNormal::getOneNormal",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 27.79
+ "match_rate_per_hour": 27.7
 }
