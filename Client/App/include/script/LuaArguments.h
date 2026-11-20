@@ -32,6 +32,7 @@ public:
 	void __cdecl pushFunction();
 	void __cdecl pushFunctionValue();
 	void __cdecl pushString();
+	void __cdecl pushUserdata();
 	// AUTO-GENERATED METHODS
 };
 

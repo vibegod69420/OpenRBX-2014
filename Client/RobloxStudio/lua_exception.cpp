@@ -127,6 +127,15 @@ const char* __cdecl lua_exception::getTypeName(int type)
 	return ((const char**)0x00EE1BC0)[type];
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a35560
+void __cdecl lua_exception::pushBoolean(int value)
+{
+	char* top = *(char**)((char*)this + 8);
+	*(int*)(top + 8) = 1;
+	*(int*)top = (value != 0);
+	*(char**)((char*)this + 8) += 16;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

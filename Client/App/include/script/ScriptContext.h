@@ -23,6 +23,7 @@ public:
 	void __cdecl reportError(struct lua_State* /*unused*/);
 	void __cdecl reportError(int /*unused*/);
 	void __cdecl reportError(unsigned int /*unused*/);
+	void __cdecl reportError(unsigned long /*unused*/);
 	// AUTO-GENERATED METHODS
 };
 

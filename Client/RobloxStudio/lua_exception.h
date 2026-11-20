@@ -32,6 +32,7 @@ public:
 	void __cdecl pushValue(int value);
 	void __cdecl setStackTag(int index, unsigned char tag);
 	const char* __cdecl getTypeName(int type);
+	void __cdecl pushBoolean(int value);
 	// AUTO-GENERATED METHODS
 };
 
