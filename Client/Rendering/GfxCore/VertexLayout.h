@@ -32,6 +32,7 @@ public:
 	bool initATIPNTriangles();
 	bool initATISeparateStencil();
 	bool initEXTColorSubtable();
+	bool initEXTCompiledVertexArray();
 	// AUTO-GENERATED METHODS
 };
 

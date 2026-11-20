@@ -320,6 +320,27 @@ bool VertexLayout::initEXTColorSubtable()
 	return false;
 }
 
+extern void* g_glLockArraysEXT;
+extern void* g_glUnlockArraysEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f8d20
+bool VertexLayout::initEXTCompiledVertexArray()
+{
+	void* first = g_glGetProcAddress("glLockArraysEXT");
+	g_glLockArraysEXT = first;
+	unsigned char missingFirst = (first == 0);
+
+	void* second = g_glGetProcAddress("glUnlockArraysEXT");
+	g_glUnlockArraysEXT = second;
+
+	if (second == 0)
+		return true;
+	if (missingFirst)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

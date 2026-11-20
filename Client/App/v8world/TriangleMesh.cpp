@@ -132,6 +132,17 @@ int __cdecl TriangleMesh::checkCondition()
 	return 1;
 }
 
+void sub_B6ECF0(void*);
+void sub_A39240(void*, const char*, void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b6f170
+int __cdecl TriangleMesh::openCoroutine()
+{
+	sub_B6ECF0(this);
+	sub_A39240(this, "coroutine", reinterpret_cast<void*>(0x00ED0EF0));
+	return 2;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

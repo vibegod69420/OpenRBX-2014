@@ -108,6 +108,16 @@ void __cdecl lua_exception::pushValue(int value)
 	*(char**)((char*)this + 8) += 16;
 }
 
+// Forward declaration for callee at 0x00a34c10
+void* __cdecl index2adr(int state, int index);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a35cc0
+void __cdecl lua_exception::setStackTag(int index, unsigned char tag)
+{
+	void** slot = (void**)index2adr((int)this, index);
+	*((unsigned char*)*slot + 7) = tag;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

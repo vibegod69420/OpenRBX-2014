@@ -27,6 +27,7 @@ public:
 	void __cdecl checkStack();
 	int __cdecl getOptInt3();
 	int __cdecl checkCondition();
+	int __cdecl openCoroutine();
 	// AUTO-GENERATED METHODS
 };
 

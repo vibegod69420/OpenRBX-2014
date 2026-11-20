@@ -22,6 +22,7 @@ public:
 	int getZero() const;
 	bool isStateValid() const;
 	void dispatchBdcMember();
+	void __cdecl initData();
 	// AUTO-GENERATED METHODS
 };
 

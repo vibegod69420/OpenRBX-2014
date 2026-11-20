@@ -40,6 +40,16 @@ void DataModel::dispatchBdcMember()
 	reinterpret_cast<DataModelBdcMember*>(reinterpret_cast<char*>(this) + 0xBDC)->dispatch(0x00F12F2D, 0);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0085ac00
+void __cdecl DataModel::initData()
+{
+	int* data = reinterpret_cast<int*>(this);
+	data[0] = 0;
+	data[1] = 0;
+	data[2] = 0;
+	data[3] = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

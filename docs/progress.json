@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 04:26:18 UTC",
+ "updated_at": "2026-11-20 04:34:59 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 10.6247,
- "implemented_total": 1005,
- "function_annotations": 1005,
+ "matchable_coverage_pct": 10.6994,
+ "implemented_total": 1013,
+ "function_annotations": 1013,
  "stub_annotations": 0,
- "perfect_100_count": 995,
- "matched_real_functions": 995,
- "average_match_pct": 99.82,
- "overall_function_coverage_pct": 2.4531,
- "overall_byte_coverage_pct": 0.4934,
+ "perfect_100_count": 1002,
+ "matched_real_functions": 1002,
+ "average_match_pct": 99.81,
+ "overall_function_coverage_pct": 2.4704,
+ "overall_byte_coverage_pct": 0.496,
  "usage": {
-  "calls_24h": 5587,
+  "calls_24h": 5579,
   "failures_24h": 0,
-  "completion_tokens_24h": 69560410,
-  "reasoning_tokens_24h": 67999321,
+  "completion_tokens_24h": 69529846,
+  "reasoning_tokens_24h": 67965483,
   "avg_latency_s": 216.1
  },
- "functions_total": 1005,
+ "functions_total": 1013,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 384,
-   "functions": 385,
-   "bytes": 13415
+   "matched": 386,
+   "functions": 387,
+   "bytes": 13479
   },
   {
    "name": "Rendering/g3d",
@@ -48,15 +48,15 @@
   },
   {
    "name": "App/v8world",
-   "matched": 107,
-   "functions": 107,
-   "bytes": 5970
+   "matched": 108,
+   "functions": 108,
+   "bytes": 6009
   },
   {
    "name": "Rendering/GfxCore",
-   "matched": 65,
-   "functions": 65,
-   "bytes": 2652
+   "matched": 67,
+   "functions": 67,
+   "bytes": 2730
   },
   {
    "name": "App/v8kernel",
@@ -78,9 +78,9 @@
   },
   {
    "name": "App/script",
-   "matched": 38,
-   "functions": 38,
-   "bytes": 1328
+   "matched": 39,
+   "functions": 39,
+   "bytes": 1361
   },
   {
    "name": "RobloxStudio/SoundServiceStatsItem.cpp",
@@ -125,16 +125,16 @@
    "bytes": 401
   },
   {
+   "name": "RobloxStudio/lua_exception.cpp",
+   "matched": 15,
+   "functions": 15,
+   "bytes": 322
+  },
+  {
    "name": "Rendering/GfxBase",
    "matched": 10,
    "functions": 10,
    "bytes": 321
-  },
-  {
-   "name": "RobloxStudio/lua_exception.cpp",
-   "matched": 14,
-   "functions": 14,
-   "bytes": 295
   },
   {
    "name": "RobloxStudio/RobloxObjectBrowserDoc.cpp",
@@ -145,7 +145,7 @@
   {
    "name": "Network/PersistentDataStore.cpp",
    "matched": 8,
-   "functions": 17,
+   "functions": 18,
    "bytes": 256
   },
   {
@@ -2903,6 +2903,17 @@
    "matchable": true
   },
   {
+   "address": "0x00b6f170",
+   "kind": "FUNCTION",
+   "name": "RBX::TriangleMesh::openCoroutine",
+   "mangled": "?openCoroutine@TriangleMesh@RBX@@QAAHXZ",
+   "file": "Client/App/v8world/TriangleMesh.cpp",
+   "orig_size": 39,
+   "recomp_size": 39,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00b6ebf0",
    "kind": "FUNCTION",
    "name": "RBX::TriangleMesh::checkCondition",
@@ -3306,17 +3317,6 @@
    "file": "Client/App/v8datamodel/CustomStatsGuiJSON.cpp",
    "orig_size": 45,
    "recomp_size": 45,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00b2d3c0",
-   "kind": "FUNCTION",
-   "name": "?unbindAllActions@ContextActionService@RBX@@QAEXXZ",
-   "mangled": "?unbindAllActions@ContextActionService@RBX@@QAEXXZ",
-   "file": "Client/App/v8datamodel/ContextActionService.cpp",
-   "orig_size": 92,
-   "recomp_size": 92,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -4809,9 +4809,63 @@
    "matched": 995,
    "implemented": 1005,
    "pct": 10.6247
+  },
+  {
+   "t": "2026-11-20 04:34:59 UTC",
+   "matched": 1002,
+   "implemented": 1013,
+   "pct": 10.6994
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T04:31:30",
+   "address": "0x0085ac00",
+   "name": "RBX::DataModel::initData",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T04:29:42",
+   "address": "0x005f8d20",
+   "name": "RBX::Graphics::VertexLayout::initEXTCompiledVertexArray",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T04:29:14",
+   "address": "0x00a35cc0",
+   "name": "lua_exception::setStackTag",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T04:29:10",
+   "address": "0x00b6f170",
+   "name": "RBX::TriangleMesh::openCoroutine",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T04:28:50",
+   "address": "0x00a403a0",
+   "name": "RBX::Lua::LuaArguments::pushFunction",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T04:28:36",
+   "address": "0x0094b1b0",
+   "name": "RBX::Network::PersistentDataStore::sub_94b1b0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T04:27:17",
+   "address": "0x008bdb20",
+   "name": "RBX::ClientAppSettings::ApplySettingFromFunc_E105F4",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T04:26:39",
+   "address": "0x00605bc0",
+   "name": "RBX::Graphics::ContextGL::assignIfNull_5bc0",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T04:21:19",
    "address": "0x00c17ef0",
@@ -5483,55 +5537,7 @@
    "address": "0x00cb9510",
    "name": "RBX::Network::ServerReplicator::releaseSharedInstance",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T21:03:37",
-   "address": "0x00cf4f20",
-   "name": "std::basic_altstringbuf::Create",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T21:02:05",
-   "address": "0x0076ef40",
-   "name": "RBX::ViewBase::updateViewData",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T20:57:05",
-   "address": "0x0094b0b0",
-   "name": "RBX::Network::PersistentDataStore::sub_94b0b0",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T20:56:49",
-   "address": "0x00b6e380",
-   "name": "RBX::TriangleMesh::getOptInt3",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T20:55:27",
-   "address": "0x00a3cd80",
-   "name": "lua_exception::dispatchGlobalState",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T20:54:11",
-   "address": "0x009d8ed0",
-   "name": "RBX::Humanoid::getField268Or298",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T20:54:09",
-   "address": "0x006d8660",
-   "name": "G3D::Random::initialize",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T20:53:53",
-   "address": "0x00605ac0",
-   "name": "RBX::Graphics::ContextGL::assignIfNull_5ac0",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 27.86
+ "match_rate_per_hour": 27.94
 }

@@ -17,6 +17,7 @@ public:
 	};
 
 	void __cdecl ApplySettingFromFunc();
+	void __cdecl ApplySettingFromFunc_E105F4();
 	// AUTO-GENERATED METHODS
 };
 
