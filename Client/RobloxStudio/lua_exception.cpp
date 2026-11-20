@@ -156,6 +156,19 @@ int __cdecl lua_exception::getStackType(int index)
 	return *(int*)(o + 8);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a35780
+int __cdecl lua_exception::pushThread()
+{
+	char* top = *(char**)((char*)this + 8);
+	*(int*)top = (int)this;
+	*(int*)(top + 8) = 8;
+
+	char* g = *(char**)((char*)this + 0x10);
+	*(char**)((char*)this + 8) += 16;
+
+	return *(void**)(g + 0x70) == this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

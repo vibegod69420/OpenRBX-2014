@@ -35,6 +35,7 @@ public:
 	void __cdecl pushBoolean(int value);
 	int __cdecl popError(int* pPair, int* outCode);
 	int __cdecl getStackType(int index);
+	int __cdecl pushThread();
 	// AUTO-GENERATED METHODS
 };
 
