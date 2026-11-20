@@ -44,6 +44,8 @@ public:
 	bool initATIVertexArrayObject();
 	bool initAMDSparseTexture();
 	bool initARBBufferStorage();
+	bool initARBClearTexture();
+	bool initGLMultiDrawIndirect();
 	// AUTO-GENERATED METHODS
 };
 

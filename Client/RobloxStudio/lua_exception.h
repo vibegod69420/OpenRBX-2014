@@ -40,6 +40,7 @@ public:
 	void* __cdecl luaL_newstate();
 	void __cdecl setTable(int index);
 	void __cdecl pushValueAtIndex(int index);
+	void __cdecl call(int a, int b);
 	// AUTO-GENERATED METHODS
 };
 

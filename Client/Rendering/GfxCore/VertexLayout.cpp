@@ -607,6 +607,49 @@ bool VertexLayout::initARBBufferStorage()
 	return false;
 }
 
+extern void* g_glClearTexImage;
+extern void* g_glClearTexSubImage;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f4e00
+bool VertexLayout::initARBClearTexture()
+{
+	void* first = g_glGetProcAddress("glClearTexImage");
+	g_glClearTexImage = first;
+	unsigned char bl = (first == 0);
+
+	void* second = g_glGetProcAddress("glClearTexSubImage");
+	g_glClearTexSubImage = second;
+
+	if (second == 0)
+		return true;
+
+	if (bl)
+		return true;
+
+	return false;
+}
+
+extern void* g_glMultiDrawArraysIndirect;
+extern void* g_glMultiDrawElementsIndirect;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f5af0
+bool VertexLayout::initGLMultiDrawIndirect()
+{
+	void* multiDrawArraysProc = g_glGetProcAddress("glMultiDrawArraysIndirect");
+	g_glMultiDrawArraysIndirect = multiDrawArraysProc;
+	bool missingMultiDrawArrays = (multiDrawArraysProc == 0);
+
+	void* multiDrawElementsProc = g_glGetProcAddress("glMultiDrawElementsIndirect");
+	g_glMultiDrawElementsIndirect = multiDrawElementsProc;
+
+	if (multiDrawElementsProc == 0)
+		return true;
+	if (missingMultiDrawArrays)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

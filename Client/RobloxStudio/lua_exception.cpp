@@ -221,6 +221,21 @@ void __cdecl lua_exception::pushValueAtIndex(int index)
 	*(char**)((char*)this + 8) += 16;
 }
 
+// Forward declarations for callees
+void __cdecl luaC_step(lua_exception* L);
+void __cdecl luaD_call(lua_exception* L, int a, int b);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a357e0
+void __cdecl lua_exception::call(int a, int b)
+{
+	char* g = *(char**)((char*)this + 0x10);
+	if (*(unsigned int*)(g + 0x44) >= *(unsigned int*)(g + 0x40))
+	{
+		luaC_step(this);
+	}
+	luaD_call(this, a, b);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

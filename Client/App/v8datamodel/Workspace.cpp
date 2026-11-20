@@ -88,6 +88,44 @@ void Workspace::method_009a11a0()
 	((WorkspaceCallee007c4b50*)this)->method_007c4b50(&local);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0096bbd0
+struct Workspace_method_0096d160 { void method_0096d160(); };
+extern "C" void __cdecl rbx_sub_006B9740(int, const char*);
+typedef unsigned char (__cdecl *WorkspaceAssertCallback_t)(const char*, const char*, int);
+
+void Workspace::method_0096bbd0()
+{
+	((Workspace_method_0096d160*)this)->method_0096d160();
+
+	unsigned char flag = *(unsigned char*)0x012DE657;
+	char* world = *(char**)((char*)this + 0x148);
+
+	if (flag != 0)
+	{
+		if (*(unsigned char*)(world + 0x30) != 0)
+		{
+			WorkspaceAssertCallback_t callback = *(WorkspaceAssertCallback_t*)0x012DE694;
+
+			if (callback == 0)
+				goto L_fail;
+
+			if (callback("!inStepCode",
+				"D:\\BuildAgent\\work\\Trunk2012\\Client\\App\\include\\V8World/World.h",
+				0xB2) != 0)
+				goto L_end;
+
+			flag = *(unsigned char*)0x012DE657;
+
+		L_fail:
+			rbx_sub_006B9740(flag,
+				"!inStepCode file: D:\\BuildAgent\\work\\Trunk2012\\Client\\App\\include\\V8World/World.h line: 178");
+		}
+	}
+
+L_end:
+	*(int*)(world + 0x38) = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

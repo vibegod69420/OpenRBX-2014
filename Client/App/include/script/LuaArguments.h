@@ -44,6 +44,7 @@ public:
 	void __cdecl pushGlobalFunctions();
 	void __cdecl pushGlobalThreads();
 	void __cdecl pushGlobalFunction();
+	void __cdecl pushGlobalFunctionValue();
 	// AUTO-GENERATED METHODS
 };
 

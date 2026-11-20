@@ -34,6 +34,7 @@ public:
 	int __cdecl func_B6E300();
 	int __cdecl func_B6F130();
 	int __cdecl func_B6F060();
+	int __cdecl func_B6E340();
 	// AUTO-GENERATED METHODS
 };
 
