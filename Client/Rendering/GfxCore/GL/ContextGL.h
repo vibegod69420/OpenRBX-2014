@@ -127,6 +127,7 @@ public:
 	bool initVertexArrayEXT();
 	bool initVertexArrayListsIBM();
 	bool initColorTableSGI();
+	bool initDisplayColorTableEXT();
 	// AUTO-GENERATED METHODS
 };
 

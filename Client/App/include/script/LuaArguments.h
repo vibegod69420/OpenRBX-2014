@@ -63,6 +63,9 @@ public:
 	bool __cdecl getScriptShared(void* arg, void* out);
 	bool __cdecl getGlobal(void* arg, void* out);
 	bool __cdecl getResult(void* arg, void* out);
+	bool __cdecl getValues(void* arg, void* out);
+	bool __cdecl getEvent(void* arg, void* out);
+	bool __cdecl getObject(void* arg, void* out);
 	// AUTO-GENERATED METHODS
 };
 

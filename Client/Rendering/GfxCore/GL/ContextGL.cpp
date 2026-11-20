@@ -2236,6 +2236,38 @@ bool ContextGL::initColorTableSGI()
 	return false;
 }
 
+extern void* wglBindDisplayColorTableEXT;
+extern void* wglCreateDisplayColorTableEXT;
+extern void* wglDestroyDisplayColorTableEXT;
+extern void* wglLoadDisplayColorTableEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x00603cd0
+bool ContextGL::initDisplayColorTableEXT()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("wglBindDisplayColorTableEXT");
+	wglBindDisplayColorTableEXT = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("wglCreateDisplayColorTableEXT");
+	wglCreateDisplayColorTableEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglDestroyDisplayColorTableEXT");
+	wglDestroyDisplayColorTableEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglLoadDisplayColorTableEXT");
+	wglLoadDisplayColorTableEXT = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

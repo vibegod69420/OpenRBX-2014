@@ -103,6 +103,8 @@ public:
 	bool initGL15();
 	bool initGL30();
 	bool initARBRobustness();
+	bool initARBMultitexture();
+	bool initARBVertexType2101010Rev();
 	// AUTO-GENERATED METHODS
 };
 
