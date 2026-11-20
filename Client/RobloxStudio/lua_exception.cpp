@@ -136,6 +136,17 @@ void __cdecl lua_exception::pushBoolean(int value)
 	*(char**)((char*)this + 8) += 16;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a38320
+int __cdecl lua_exception::popError(int* pPair, int* outCode)
+{
+	if (pPair[1] == 0)
+		return 0;
+
+	*outCode = pPair[1];
+	pPair[1] = 0;
+	return pPair[0];
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

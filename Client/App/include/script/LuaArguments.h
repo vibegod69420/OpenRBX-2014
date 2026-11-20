@@ -33,6 +33,7 @@ public:
 	void __cdecl pushFunctionValue();
 	void __cdecl pushString();
 	void __cdecl pushUserdata();
+	void __cdecl pushRBXScriptSignal();
 	// AUTO-GENERATED METHODS
 };
 

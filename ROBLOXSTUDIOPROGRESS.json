@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20 06:32:51 UTC",
+  "updated_at": "2026-11-20 06:42:43 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 11.0411,
-  "implemented_total": 1046,
-  "function_annotations": 1046,
+  "matchable_coverage_pct": 11.0945,
+  "implemented_total": 1051,
+  "function_annotations": 1051,
   "stub_annotations": 0,
-  "perfect_100_count": 1034,
-  "matched_real_functions": 1034,
+  "perfect_100_count": 1039,
+  "matched_real_functions": 1039,
   "average_match_pct": 99.81,
-  "overall_function_coverage_pct": 2.5492,
-  "overall_byte_coverage_pct": 0.5212,
+  "overall_function_coverage_pct": 2.5616,
+  "overall_byte_coverage_pct": 0.5234,
   "usage": {
-    "calls_24h": 5434,
+    "calls_24h": 5430,
     "failures_24h": 0,
-    "completion_tokens_24h": 68213139,
-    "reasoning_tokens_24h": 66631254,
-    "avg_latency_s": 217.0
+    "completion_tokens_24h": 68136714,
+    "reasoning_tokens_24h": 66558981,
+    "avg_latency_s": 216.9
   },
   "functions": [
     {
@@ -5941,6 +5941,17 @@
       "matchable": true
     },
     {
+      "address": "0x008ddb10",
+      "kind": "FUNCTION",
+      "name": "RBX::ScriptContext::reportError",
+      "mangled": "?reportError@ScriptContext@RBX@@QAAXXZ",
+      "file": "Client/App/script/ScriptContext.cpp",
+      "orig_size": 47,
+      "recomp_size": 47,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x008e3c90",
       "kind": "FUNCTION",
       "name": "RBX::Lua::LuaArguments::size",
@@ -6476,6 +6487,17 @@
       "file": "Client/Network/PersistentDataStore.cpp",
       "orig_size": 32,
       "recomp_size": 32,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0094afa0",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::PersistentDataStore::sub_94aff0",
+      "mangled": "?sub_94aff0@PersistentDataStore@Network@RBX@@QAAPAV123@PAX0@Z",
+      "file": "Client/Network/PersistentDataStore.cpp",
+      "orig_size": 35,
+      "recomp_size": 35,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -7965,6 +7987,17 @@
       "matchable": true
     },
     {
+      "address": "0x00a38320",
+      "kind": "FUNCTION",
+      "name": "lua_exception::popError",
+      "mangled": "?popError@lua_exception@@QAAHPAH0@Z",
+      "file": "Client/RobloxStudio/lua_exception.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00a38660",
       "kind": "FUNCTION",
       "name": "lua_exception::initContext",
@@ -8112,6 +8145,17 @@
       "kind": "FUNCTION",
       "name": "RBX::Lua::LuaArguments::pushUserdata",
       "mangled": "?pushUserdata@LuaArguments@Lua@RBX@@QAAXXZ",
+      "file": "Client/App/script/LuaArguments.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00a40460",
+      "kind": "FUNCTION",
+      "name": "RBX::Lua::LuaArguments::pushRBXScriptSignal",
+      "mangled": "?pushRBXScriptSignal@LuaArguments@Lua@RBX@@QAAXXZ",
       "file": "Client/App/script/LuaArguments.cpp",
       "orig_size": 33,
       "recomp_size": 33,
@@ -11511,6 +11555,17 @@
       "kind": "FUNCTION",
       "name": "ProgramMemoryCheckerImpl::init17",
       "mangled": "?init17@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 56,
+      "recomp_size": 56,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00db4390",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init18",
+      "mangled": "?init18@ProgramMemoryCheckerImpl@@QAEXXZ",
       "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
       "orig_size": 56,
       "recomp_size": 56,
