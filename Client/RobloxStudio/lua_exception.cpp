@@ -147,6 +147,15 @@ int __cdecl lua_exception::popError(int* pPair, int* outCode)
 	return pPair[0];
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a360d0
+int __cdecl lua_exception::getStackType(int index)
+{
+	char* o = (char*)index2adr((int)this, index);
+	if (o == (char*)0x00EA7E68)
+		return -1;
+	return *(int*)(o + 8);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

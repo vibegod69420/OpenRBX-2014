@@ -40,6 +40,7 @@ public:
 	int getField268Or298DerefE0() const;
 	void func007b6760();
 	bool func007bce10();
+	float getField200XorFloat();
 	// AUTO-GENERATED METHODS
 };
 

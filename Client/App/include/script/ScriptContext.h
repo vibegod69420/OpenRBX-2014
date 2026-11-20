@@ -25,6 +25,7 @@ public:
 	void __cdecl reportError(unsigned int /*unused*/);
 	void __cdecl reportError(unsigned long /*unused*/);
 	void __cdecl reportError(long /*unused*/);
+	void __cdecl reportError(const void* /*unused*/);
 	// AUTO-GENERATED METHODS
 };
 
