@@ -180,6 +180,34 @@ void* BallBallContact::allocateFromNewPage()
 	return node;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a4fb20
+void* BallBallContact::allocateFromNewList()
+{
+	BallBallContactPool* pool = getBallBallContactPool();
+	pool->acquire();
+
+	void* node = pool->freeList.head;
+	if (node)
+	{
+		pool->freeList.head = *(void**)node;
+	}
+	else
+	{
+		node = pool->freeList.allocate();
+	}
+
+	long oldState = _InterlockedExchangeAdd(&pool->state, 0x80000000);
+	if (!(oldState & 0x40000000) && oldState > (long)0x80000000)
+	{
+		if (!_interlockedbittestandset(&pool->state, 30))
+		{
+			SetEvent(pool->getWakeEvent());
+		}
+	}
+
+	return node;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

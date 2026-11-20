@@ -57,6 +57,17 @@ void __cdecl ScriptContext::reportError(void* /*unused*/)
 	scriptContextReportError(ud, msg, L);
 }
 
+struct lua_State;
+
+// FUNCTION: ROBLOXSTUDIO 0x008dd9f0
+void __cdecl ScriptContext::reportError(struct lua_State* /*unused*/)
+{
+	lua_State* L = (lua_State*)this;
+	const char* msg = lua_tostring(L, 2);
+	void* ud = luaL_checkudata(L, 1, gScriptContextTypeName);
+	scriptContextReportError(ud, msg, L);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

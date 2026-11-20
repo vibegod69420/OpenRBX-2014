@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20 03:25:14 UTC",
+  "updated_at": "2026-11-20 03:34:47 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 10.4325,
-  "implemented_total": 987,
-  "function_annotations": 987,
+  "matchable_coverage_pct": 10.4859,
+  "implemented_total": 992,
+  "function_annotations": 992,
   "stub_annotations": 0,
-  "perfect_100_count": 977,
-  "matched_real_functions": 977,
+  "perfect_100_count": 982,
+  "matched_real_functions": 982,
   "average_match_pct": 99.82,
-  "overall_function_coverage_pct": 2.4087,
-  "overall_byte_coverage_pct": 0.4342,
+  "overall_function_coverage_pct": 2.421,
+  "overall_byte_coverage_pct": 0.4373,
   "usage": {
-    "calls_24h": 5597,
+    "calls_24h": 5598,
     "failures_24h": 0,
-    "completion_tokens_24h": 69186149,
-    "reasoning_tokens_24h": 67660351,
-    "avg_latency_s": 215.0
+    "completion_tokens_24h": 69154250,
+    "reasoning_tokens_24h": 67628468,
+    "avg_latency_s": 214.8
   },
   "functions": [
     {
@@ -5281,6 +5281,17 @@
       "matchable": true
     },
     {
+      "address": "0x008942a0",
+      "kind": "FUNCTION",
+      "name": "RBX::UnionOperation::sub_8942A0",
+      "mangled": "?sub_8942A0@UnionOperation@RBX@@QAEPAXXZ",
+      "file": "Client/App/v8datamodel/UnionOperation.cpp",
+      "orig_size": 89,
+      "recomp_size": 89,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00894960",
       "kind": "FUNCTION",
       "name": "RBX::UnionOperation::sub_894960",
@@ -5612,6 +5623,17 @@
     },
     {
       "address": "0x008dd9c0",
+      "kind": "FUNCTION",
+      "name": "RBX::ScriptContext::reportError",
+      "mangled": "?reportError@ScriptContext@RBX@@QAAXXZ",
+      "file": "Client/App/script/ScriptContext.cpp",
+      "orig_size": 47,
+      "recomp_size": 47,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x008dd9f0",
       "kind": "FUNCTION",
       "name": "RBX::ScriptContext::reportError",
       "mangled": "?reportError@ScriptContext@RBX@@QAAXXZ",
@@ -7646,6 +7668,17 @@
       "matchable": true
     },
     {
+      "address": "0x00a40340",
+      "kind": "FUNCTION",
+      "name": "RBX::Lua::LuaArguments::pushObject",
+      "mangled": "?pushObject@LuaArguments@Lua@RBX@@QAAXXZ",
+      "file": "Client/App/script/LuaArguments.cpp",
+      "orig_size": 33,
+      "recomp_size": 33,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00a45db0",
       "kind": "FUNCTION",
       "name": "RBX::ScriptService::Info::destroyInstance",
@@ -7716,6 +7749,17 @@
       "kind": "FUNCTION",
       "name": "RBX::RBX::BallBallContact::allocateFromNewPage",
       "mangled": "?allocateFromNewPage@BallBallContact@RBX@@QAEPAXXZ",
+      "file": "Client/App/v8world/BallBallContact.cpp",
+      "orig_size": 89,
+      "recomp_size": 89,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00a4fb20",
+      "kind": "FUNCTION",
+      "name": "RBX::RBX::BallBallContact::allocateFromNewList",
+      "mangled": "?allocateFromNewList@BallBallContact@RBX@@QAEPAXXZ",
       "file": "Client/App/v8world/BallBallContact.cpp",
       "orig_size": 89,
       "recomp_size": 89,
@@ -10089,6 +10133,17 @@
     },
     {
       "address": "0x00c79580",
+      "kind": "FUNCTION",
+      "name": "std::chainbuf::write_ptr",
+      "mangled": "?write_ptr@chainbuf@std@@QAAXPAX@Z",
+      "file": "Client/App/v8datamodel/chainbuf.cpp",
+      "orig_size": 37,
+      "recomp_size": 37,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c79690",
       "kind": "FUNCTION",
       "name": "std::chainbuf::write_ptr",
       "mangled": "?write_ptr@chainbuf@std@@QAAXPAX@Z",

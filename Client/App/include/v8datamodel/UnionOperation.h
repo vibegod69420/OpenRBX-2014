@@ -28,6 +28,7 @@ public:
 	int getConst2500() const;
 	char*getPrimitiveDataOffset3C() const;
 	bool sub_8940A0() const;
+	void*sub_8942A0();
 	// AUTO-GENERATED METHODS
 };
 

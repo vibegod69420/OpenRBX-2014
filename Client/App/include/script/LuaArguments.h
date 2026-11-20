@@ -27,6 +27,7 @@ public:
 	void __cdecl pushAllThreads(void* arg);
 	void __cdecl pushAllFunctions(void* arg);
 	void __cdecl pushAllUserdatas(void* arg);
+	void __cdecl pushObject();
 	// AUTO-GENERATED METHODS
 };
 

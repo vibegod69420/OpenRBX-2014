@@ -154,6 +154,59 @@ fail:
 	return false;
 }
 
+#if defined(_MSC_VER)
+extern "C" long _InterlockedExchangeAdd(long volatile* Addend, long Value);
+extern "C" unsigned char _interlockedbittestandset(long volatile* a, long b);
+#pragma intrinsic(_InterlockedExchangeAdd)
+#pragma intrinsic(_interlockedbittestandset)
+#endif
+
+namespace {
+
+struct UnionOpPoolAlloc
+{
+	void* head;
+	void* sub_48AF30();
+};
+
+struct UnionOpPool
+{
+	volatile long state;
+	void* field4;
+	UnionOpPoolAlloc alloc;
+
+	void sub_40ED30();
+	void* sub_40FB10();
+};
+
+UnionOpPool* sub_55A4D0();
+
+extern "C" __declspec(dllimport) int __stdcall SetEvent(void* hEvent);
+
+} // namespace
+
+// FUNCTION: ROBLOXSTUDIO 0x008942a0
+void* UnionOperation::sub_8942A0()
+{
+	UnionOpPool* pool = sub_55A4D0();
+	pool->sub_40ED30();
+
+	void* node = pool->alloc.head;
+	if (node)
+		pool->alloc.head = *(void**)node;
+	else
+		node = pool->alloc.sub_48AF30();
+
+	long oldState = _InterlockedExchangeAdd(&pool->state, (-2147483647 - 1));
+	if ((oldState & 0x40000000) == 0 && oldState > (-2147483647 - 1))
+	{
+		if (_interlockedbittestandset(&pool->state, 30) == 0)
+			SetEvent(pool->sub_40FB10());
+	}
+
+	return node;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
