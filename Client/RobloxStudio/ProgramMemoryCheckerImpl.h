@@ -167,6 +167,12 @@ public:
 	void init149();
 	void init150();
 	void init151();
+	void init152();
+	void init153();
+	void init154();
+	void init155();
+	void init156();
+	void init157();
 	// AUTO-GENERATED METHODS
 };
 
