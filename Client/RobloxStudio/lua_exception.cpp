@@ -248,6 +248,20 @@ void __cdecl lua_exception::checkAny(int index)
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a35620
+void __cdecl luaC_step(lua_exception* L);
+void __cdecl luaG_runerror(lua_exception* L, const char* fmt, void* argp);
+
+void __cdecl lua_exception::runErrorV(const char* fmt, ...)
+{
+	char* g = *(char**)((char*)this + 0x10);
+	if (*(unsigned int*)(g + 0x44) >= *(unsigned int*)(g + 0x40))
+	{
+		luaC_step(this);
+	}
+	luaG_runerror(this, fmt, (void*)(&fmt + 1));
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

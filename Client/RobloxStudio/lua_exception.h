@@ -42,6 +42,7 @@ public:
 	void __cdecl pushValueAtIndex(int index);
 	void __cdecl call(int a, int b);
 	void __cdecl checkAny(int index);
+	void __cdecl runErrorV(const char* fmt, ...);
 	// AUTO-GENERATED METHODS
 };
 

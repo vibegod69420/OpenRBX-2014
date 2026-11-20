@@ -30,6 +30,7 @@ public:
 	void __cdecl fireMouseLeaveScriptEvent(void* source, void* arg);
 	void __cdecl fireMouseMovedScriptEvent(void* source, void* arg);
 	void* __cdecl fireTriggered(void* instance, void* source);
+	void* __cdecl fireTriggeredEx(void* instance, void* source);
 	// AUTO-GENERATED METHODS
 };
 
