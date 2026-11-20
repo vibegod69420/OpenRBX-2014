@@ -62,6 +62,56 @@ int Player::getField1E4() const
 	return field_01e4;
 }
 
+typedef bool (__cdecl *FrontendProcessingAssertCallback)(const char*, const char*, int);
+
+extern unsigned char g_FrontendProcessingEnabled;
+extern FrontendProcessingAssertCallback g_FrontendProcessingAssertCallback;
+
+bool canProcessPlayerFrontend(Player* player, int flag);
+void reportFrontendProcessingFailure(int level, const char* message);
+
+struct FrontendProcessingTimestamp
+{
+	int low;
+	int high;
+};
+
+FrontendProcessingTimestamp* getFrontendProcessingTimestamp(FrontendProcessingTimestamp* out);
+
+// FUNCTION: ROBLOXSTUDIO 0x00c4f590
+void Player::frontendProcessing()
+{
+	if (g_FrontendProcessingEnabled)
+	{
+		if (!canProcessPlayerFrontend(this, 1))
+		{
+			if (g_FrontendProcessingAssertCallback)
+			{
+				if (!g_FrontendProcessingAssertCallback(
+						"Players::frontendProcessing(this)",
+						"D:\\BuildAgent\\work\\Trunk2012\\Client\\Network\\Player.cpp",
+						0x3B3))
+				{
+					reportFrontendProcessingFailure(
+						g_FrontendProcessingEnabled,
+						"Players::frontendProcessing(this) file: D:\\BuildAgent\\work\\Trunk2012\\Client\\Network\\Player.cpp line: 947");
+				}
+			}
+			else
+			{
+				reportFrontendProcessingFailure(
+					g_FrontendProcessingEnabled,
+					"Players::frontendProcessing(this) file: D:\\BuildAgent\\work\\Trunk2012\\Client\\Network\\Player.cpp line: 947");
+			}
+		}
+	}
+
+	FrontendProcessingTimestamp timestamp;
+	FrontendProcessingTimestamp* pTime = getFrontendProcessingTimestamp(&timestamp);
+	*(int*)((char*)this + 0x1D0) = pTime->low;
+	*(int*)((char*)this + 0x1D4) = pTime->high;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

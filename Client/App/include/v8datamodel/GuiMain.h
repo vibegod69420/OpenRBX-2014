@@ -20,6 +20,7 @@ public:
 	void __cdecl append(const void* data);
 	void __cdecl fireScriptEvent(void* source, void* arg);
 	void __cdecl fireTriggeredScriptEvent(void* source, void* arg);
+	void __cdecl fireMouseButton2ClickScriptEvent(void* source, void* arg);
 	// AUTO-GENERATED METHODS
 };
 

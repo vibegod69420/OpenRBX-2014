@@ -20,6 +20,7 @@ public:
 	int __cdecl getData(int a2, int a3);
 	void __cdecl relink(ContentProviderJob *a2, void *a3);
 	void __cdecl detach(ContentProviderJob *a2, void *a3);
+	void __cdecl clear();
 	// AUTO-GENERATED METHODS
 };
 

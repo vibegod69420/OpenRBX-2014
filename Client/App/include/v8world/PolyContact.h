@@ -24,6 +24,7 @@ public:
 	void* __cdecl getEdge(void* arg2, void* arg3);
 	void __cdecl updateEdges(int count);
 	void __cdecl deleteFeature(void* feature);
+	void __cdecl addEdge(void* edge);
 	// AUTO-GENERATED METHODS
 };
 

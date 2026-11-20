@@ -118,6 +118,46 @@ void __cdecl PolyContact::deleteFeature(void* feature)
 	sub_BC6400(this, feature, 0x24, 0);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00bc6ff0
+void __cdecl PolyContact_sub_BC6D00(void* contact, void* edge, void* arg3);
+
+void __cdecl PolyContact::addEdge(void* edge)
+{
+	void* face = *(void**)((char*)this + 0x10);
+
+	*(void**)edge = *(void**)((char*)face + 0x1C);
+	*(void**)((char*)face + 0x1C) = edge;
+
+	unsigned char cl = *(unsigned char*)((char*)edge + 5);
+	if ((cl & 7) == 0)
+	{
+		if (*(unsigned char*)((char*)face + 0x15) == 1)
+		{
+			void* a = *(void**)((char*)edge + 8);
+			cl |= 4;
+			*(unsigned char*)((char*)edge + 5) = cl;
+
+			if (*(int*)((char*)a + 8) >= 4)
+			{
+				void* b = *(void**)a;
+				if ((*(unsigned char*)((char*)b + 5) & 3) != 0 && (cl & 4) != 0)
+				{
+					PolyContact_sub_BC6D00(this, edge, b);
+					return;
+				}
+			}
+		}
+		else
+		{
+			unsigned char al = *(unsigned char*)((char*)face + 0x14);
+			al &= 3;
+			cl &= 0xF8;
+			al |= cl;
+			*(unsigned char*)((char*)edge + 5) = al;
+		}
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

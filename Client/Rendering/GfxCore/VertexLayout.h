@@ -38,6 +38,7 @@ public:
 	bool initAppleVertexArrayRange();
 	bool initARBBaseInstance();
 	bool initARBGetProgramBinary();
+	bool initARBTimerQuery();
 	// AUTO-GENERATED METHODS
 };
 

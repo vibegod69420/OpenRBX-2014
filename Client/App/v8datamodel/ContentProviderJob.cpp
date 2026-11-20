@@ -154,6 +154,43 @@ void __cdecl ContentProviderJob::detach(ContentProviderJob *a2, void *a3)
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00bbbfd0
+void __cdecl ContentProviderJob::clear()
+{
+	void (__cdecl *dealloc)(void *) = *(void (__cdecl **)(void *))0x00E104F4;
+	int i = 0;
+
+	if (*(int *)this > i)
+	{
+		do
+		{
+			void *p = *(void **)((char *)*(void **)((char *)this + 8) + i * 8 + 4);
+			if (p)
+			{
+				dealloc(p);
+				*(void **)((char *)*(void **)((char *)this + 8) + i * 8 + 4) = 0;
+			}
+			++i;
+		} while (i < *(int *)this);
+	}
+
+	void *p = *(void **)((char *)this + 4);
+	if (p)
+	{
+		dealloc(p);
+		*(void **)((char *)this + 4) = 0;
+	}
+
+	p = *(void **)((char *)this + 8);
+	if (p)
+	{
+		dealloc(p);
+		*(void **)((char *)this + 8) = 0;
+	}
+
+	*(int *)this = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

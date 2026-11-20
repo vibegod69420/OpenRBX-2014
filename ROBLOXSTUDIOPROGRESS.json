@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20 08:54:07 UTC",
+  "updated_at": "2026-11-20 09:03:58 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 11.543,
-  "implemented_total": 1094,
-  "function_annotations": 1094,
+  "matchable_coverage_pct": 11.6284,
+  "implemented_total": 1102,
+  "function_annotations": 1102,
   "stub_annotations": 0,
-  "perfect_100_count": 1081,
-  "matched_real_functions": 1081,
+  "perfect_100_count": 1089,
+  "matched_real_functions": 1089,
   "average_match_pct": 99.76,
-  "overall_function_coverage_pct": 2.6651,
-  "overall_byte_coverage_pct": 0.55,
+  "overall_function_coverage_pct": 2.6848,
+  "overall_byte_coverage_pct": 0.5562,
   "usage": {
-    "calls_24h": 5324,
+    "calls_24h": 5319,
     "failures_24h": 0,
-    "completion_tokens_24h": 67324105,
-    "reasoning_tokens_24h": 65696540,
-    "avg_latency_s": 218.0
+    "completion_tokens_24h": 67228504,
+    "reasoning_tokens_24h": 65602540,
+    "avg_latency_s": 218.1
   },
   "functions": [
     {
@@ -2223,6 +2223,17 @@
       "matchable": true
     },
     {
+      "address": "0x005f7180",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::VertexLayout::initARBTimerQuery",
+      "mangled": "?initARBTimerQuery@VertexLayout@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/VertexLayout.cpp",
+      "orig_size": 77,
+      "recomp_size": 77,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x005f72f0",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::VertexLayout::initGLDrawTransformFeedbackInstanced",
@@ -2623,6 +2634,17 @@
       "kind": "FUNCTION",
       "name": "RBX::Graphics::ContextGL::assignIfNull_5d00",
       "mangled": "?assignIfNull_5d00@ContextGL@Graphics@RBX@@SAXPAHPBH@Z",
+      "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00605d20",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGL::assignIfNull_5d20",
+      "mangled": "?assignIfNull_5d20@ContextGL@Graphics@RBX@@SAXPAHPBH@Z",
       "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
       "orig_size": 24,
       "recomp_size": 24,
@@ -4379,6 +4401,17 @@
       "matchable": true
     },
     {
+      "address": "0x00775320",
+      "kind": "FUNCTION",
+      "name": "boost::thread_data::getConst18739520",
+      "mangled": "?getConst18739520@thread_data@boost@@QBEHXZ",
+      "file": "Client/App/v8datamodel/thread_data.cpp",
+      "orig_size": 6,
+      "recomp_size": 6,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x007760a0",
       "kind": "FUNCTION",
       "name": "boost::thread_data::invoke",
@@ -5758,6 +5791,17 @@
       "kind": "FUNCTION",
       "name": "RBX::GuiMain::fireTriggeredScriptEvent",
       "mangled": "?fireTriggeredScriptEvent@GuiMain@RBX@@QAAXPAX0@Z",
+      "file": "Client/App/v8datamodel/GuiMain.cpp",
+      "orig_size": 121,
+      "recomp_size": 121,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x008b0a90",
+      "kind": "FUNCTION",
+      "name": "RBX::GuiMain::fireMouseButton2ClickScriptEvent",
+      "mangled": "?fireMouseButton2ClickScriptEvent@GuiMain@RBX@@QAAXPAX0@Z",
       "file": "Client/App/v8datamodel/GuiMain.cpp",
       "orig_size": 121,
       "recomp_size": 121,
@@ -8504,6 +8548,17 @@
       "matchable": true
     },
     {
+      "address": "0x00a417e0",
+      "kind": "FUNCTION",
+      "name": "RBX::Lua::LuaArguments::pushGlobalArgs",
+      "mangled": "?pushGlobalArgs@LuaArguments@Lua@RBX@@QAAXXZ",
+      "file": "Client/App/script/LuaArguments.cpp",
+      "orig_size": 48,
+      "recomp_size": 48,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00a45db0",
       "kind": "FUNCTION",
       "name": "RBX::ScriptService::Info::destroyInstance",
@@ -10132,6 +10187,17 @@
       "matchable": true
     },
     {
+      "address": "0x00bbbfd0",
+      "kind": "FUNCTION",
+      "name": "RBX::ContentProviderJob::clear",
+      "mangled": "?clear@ContentProviderJob@RBX@@QAAXXZ",
+      "file": "Client/App/v8datamodel/ContentProviderJob.cpp",
+      "orig_size": 105,
+      "recomp_size": 105,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00bc6400",
       "kind": "FUNCTION",
       "name": "RBX::ContentProviderJob::process",
@@ -10161,6 +10227,17 @@
       "file": "Client/App/v8world/PolyContact.cpp",
       "orig_size": 37,
       "recomp_size": 37,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00bc6ff0",
+      "kind": "FUNCTION",
+      "name": "PolyContact_sub_BC6D00",
+      "mangled": "?addEdge@PolyContact@RBX@@QAAXPAX@Z",
+      "file": "Client/App/v8world/PolyContact.cpp",
+      "orig_size": 96,
+      "recomp_size": 96,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -10876,6 +10953,17 @@
       "file": "Client/Network/PersistentDataStore.cpp",
       "orig_size": 22,
       "recomp_size": 22,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c4f590",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::Player::frontendProcessing",
+      "mangled": "?frontendProcessing@Player@Network@RBX@@QAEXXZ",
+      "file": "Client/Network/Player.cpp",
+      "orig_size": 121,
+      "recomp_size": 121,
       "match_pct": 100.0,
       "matchable": true
     },

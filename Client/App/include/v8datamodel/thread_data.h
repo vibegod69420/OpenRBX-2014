@@ -21,6 +21,7 @@ public:
 	void __cdecl invoke(void* arg1, void* arg2);
 	void __cdecl do_call();
 	void run_bind();
+	int getConst18739520() const;
 	// AUTO-GENERATED METHODS
 };
 

@@ -65,6 +65,12 @@ void thread_data::run_bind()
 	self->fn(self->value, self->arg);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00775320
+int thread_data::getConst18739520() const
+{
+	return 18739520;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace boost

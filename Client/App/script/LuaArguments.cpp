@@ -188,6 +188,15 @@ void __cdecl LuaArguments::pushGlobalObjects()
 	sub_A35D10(self, -2);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a417e0
+void __cdecl LuaArguments::pushGlobalArgs()
+{
+	void* self = this;
+	sub_A39240(self, *(void**)0x0124EAC4, (void*)0x00EA71C0);
+	sub_A35CC0(self, -1, 1);
+	sub_A35D10(self, -2);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

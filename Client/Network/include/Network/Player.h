@@ -22,6 +22,7 @@ public:
 	void*getReplicator();
 	void*getServerReplicator();
 	int getField1E4() const;
+	void frontendProcessing();
 	// AUTO-GENERATED METHODS
 };
 
