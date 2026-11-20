@@ -60,6 +60,7 @@ public:
 	void __cdecl releaseSharedCount(void* ptr);
 	void* __cdecl getScriptStateNode();
 	void* __cdecl getScriptStateNode(void* context);
+	void __cdecl pushObject(void* object);
 	// AUTO-GENERATED METHODS
 };
 

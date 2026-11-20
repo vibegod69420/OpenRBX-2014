@@ -557,6 +557,73 @@ fail:
 	return 0;
 }
 
+struct lua_State;
+
+void lua_pushlightuserdata(lua_State* L, void* p);
+void lua_gettable(lua_State* L, int idx);
+int lua_isnil(lua_State* L, int idx);
+void* lua_newuserdata(lua_State* L, size_t sz);
+void lua_getfield(lua_State* L, int idx, const char* k);
+void lua_settop(lua_State* L, int idx);
+int lua_setmetatable(lua_State* L, int objindex);
+void lua_pushvalue(lua_State* L, int idx);
+void lua_settable(lua_State* L, int idx);
+void lua_remove(lua_State* L, int idx);
+
+extern unsigned char g_luaBridgeAssertEnabled;
+extern unsigned char (__cdecl* g_luaBridgeAssertCallback)(const char*, const char*, int);
+void __cdecl luaBridgeAssertReport(unsigned char level, const char* message);
+extern const char* g_luaBridgeSharedMetatable;
+
+// FUNCTION: ROBLOXSTUDIO 0x008dfe30
+void __cdecl ScriptContext::pushObject(void* object)
+{
+	lua_State* L = (lua_State*)this;
+
+	lua_pushlightuserdata(L, (void*)0x008dfe30);
+	lua_gettable(L, -10000);
+
+	if (g_luaBridgeAssertEnabled)
+	{
+		if (!lua_isnil(L, -1))
+		{
+			if (g_luaBridgeAssertCallback)
+			{
+				if (g_luaBridgeAssertCallback(
+					"!lua_isnil( L, -1 )",
+					"D:\\BuildAgent\\work\\Trunk2012\\Client\\App\\include\\Lua/LuaBridge.h",
+					250))
+				{
+					goto assert_ok;
+				}
+			}
+			luaBridgeAssertReport(
+				g_luaBridgeAssertEnabled,
+				"!lua_isnil( L, -1 ) file: D:\\BuildAgent\\work\\Trunk2012\\Client\\App\\include\\Lua/LuaBridge.h line: 250");
+		}
+	}
+assert_ok:
+	{
+		void* obj = object;
+		lua_pushlightuserdata(L, obj);
+		lua_gettable(L, -2);
+		if (!lua_isnil(L, -1))
+		{
+			lua_settop(L, -2);
+			void* ud = lua_newuserdata(L, 4);
+			if (ud)
+				*(void**)ud = obj;
+
+			lua_getfield(L, -10000, g_luaBridgeSharedMetatable);
+			lua_setmetatable(L, -2);
+			lua_pushlightuserdata(L, obj);
+			lua_pushvalue(L, -2);
+			lua_settable(L, -4);
+		}
+		lua_remove(L, -2);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

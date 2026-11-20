@@ -144,6 +144,9 @@ public:
 	bool initPbufferARB();
 	bool initHistogramEXT();
 	bool initBindlessTextureNV();
+	bool initRegisterCombinersNV();
+	bool initShaderBufferLoadNV();
+	bool initFixedPointOES();
 	// AUTO-GENERATED METHODS
 };
 

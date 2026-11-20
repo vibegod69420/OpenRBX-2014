@@ -45,6 +45,7 @@ public:
 	int getGlobal_b130() const;
 	void disposeString();
 	void disposeStringHolder();
+	void destroySubPtr0C_f5e0();
 	// AUTO-GENERATED METHODS
 };
 

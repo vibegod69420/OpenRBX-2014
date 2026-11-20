@@ -2310,6 +2310,27 @@ void ProgramMemoryCheckerImpl::init129()
 	sub_CF6609((void*)0x00DF03C0);
 }
 
+class ProgramMemoryCheckerGetPlayerPlaceInstanceAsyncTarget
+{
+public:
+	void sub_8ED0F0(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00db6a80
+void ProgramMemoryCheckerImpl::init130()
+{
+	int v[2];
+	((ProgramMemoryCheckerGetPlayerPlaceInstanceAsyncTarget*)0x012FD468)->sub_8ED0F0(
+		0x008EE010,
+		0,
+		(const char*)0x00E73844,
+		(const char*)0x00E7383C,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DF0920);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

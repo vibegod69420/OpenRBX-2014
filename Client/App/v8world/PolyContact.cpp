@@ -342,6 +342,50 @@ void __cdecl PolyContact::writeQuad(void* a, void* b, void* c, void* d)
     sub_A365B0(this, *(char**)((char*)this + 8) - 0x40, 0);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00bcae40
+void __cdecl PolyContact::writeTri(void* a, void* b, void* c, void* d)
+{
+	int* s = (int*)b;
+	int v = s[0];
+	char* dst = *(char**)((char*)this + 8);
+	int offset = (char*)a - *(char**)((char*)this + 0x20);
+	*(int*)(dst + 0x00) = v;
+	*(int*)(dst + 0x04) = s[1];
+	v = s[2];
+	s = (int*)c;
+	*(int*)(dst + 0x08) = v;
+
+	v = s[0];
+	dst = *(char**)((char*)this + 8);
+	*(int*)(dst + 0x10) = v;
+	*(int*)(dst + 0x14) = s[1];
+	v = s[2];
+	s = (int*)d;
+	*(int*)(dst + 0x18) = v;
+
+	v = s[0];
+	dst = *(char**)((char*)this + 8);
+	*(int*)(dst + 0x20) = v;
+	*(int*)(dst + 0x24) = s[1];
+	v = s[2];
+	*(int*)(dst + 0x28) = v;
+
+	if (*(char**)((char*)this + 0x1C) - *(char**)((char*)this + 8) <= 0x30)
+	{
+		sub_A36700(this, 3);
+	}
+
+	*(char**)((char*)this + 8) += 0x30;
+	sub_A365B0(this, *(char**)((char*)this + 8) - 0x30, 1);
+
+	char* base20 = *(char**)((char*)this + 0x20);
+	*(char**)((char*)this + 8) -= 0x10;
+	dst = *(char**)((char*)this + 8);
+	*(int*)(base20 + offset) = *(int*)(dst + 0x00);
+	*(int*)(base20 + offset + 4) = *(int*)(dst + 0x04);
+	*(int*)(base20 + offset + 8) = *(int*)(dst + 0x08);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

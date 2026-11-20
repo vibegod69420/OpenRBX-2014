@@ -3215,6 +3215,236 @@ bool ContextGL::initBindlessTextureNV()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005fd440
+bool ContextGL::initRegisterCombinersNV()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("glCombinerInputNV");
+	*(void**)0x012DBCC4 = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glCombinerOutputNV");
+	*(void**)0x012DBCCC = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glCombinerParameterfNV");
+	*(void**)0x012DBCD4 = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glCombinerParameterfvNV");
+	*(void**)0x012DBCE0 = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glCombinerParameteriNV");
+	*(void**)0x012DBCE8 = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glCombinerParameterivNV");
+	*(void**)0x012DBCF0 = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glFinalCombinerInputNV");
+	*(void**)0x012DBCF4 = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetCombinerInputParameterfvNV");
+	*(void**)0x012DBD00 = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetCombinerInputParameterivNV");
+	*(void**)0x012DBD08 = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetCombinerOutputParameterfvNV");
+	*(void**)0x012DBD10 = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetCombinerOutputParameterivNV");
+	*(void**)0x012DBD14 = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetFinalCombinerInputParameterfvNV");
+	*(void**)0x012DBD1C = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetFinalCombinerInputParameterivNV");
+	*(void**)0x012DBD24 = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x005fd5b0
+bool ContextGL::initShaderBufferLoadNV()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("glGetBufferParameterui64vNV");
+	*(void**)0x012DBD3C = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glGetIntegerui64vNV");
+	*(void**)0x012DBD48 = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetNamedBufferParameterui64vNV");
+	*(void**)0x012DBD4C = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glIsBufferResidentNV");
+	*(void**)0x012DBD58 = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glIsNamedBufferResidentNV");
+	*(void**)0x012DBD60 = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glMakeBufferNonResidentNV");
+	*(void**)0x012DBD68 = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glMakeBufferResidentNV");
+	*(void**)0x012DBD70 = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glMakeNamedBufferNonResidentNV");
+	*(void**)0x012DBD74 = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glMakeNamedBufferResidentNV");
+	*(void**)0x012DBD80 = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glProgramUniformui64NV");
+	*(void**)0x012DBD84 = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glProgramUniformui64vNV");
+	*(void**)0x012DBD8C = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glUniformui64NV");
+	*(void**)0x012DBD94 = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glUniformui64vNV");
+	*(void**)0x012DBD9C = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glClipPlanef;
+extern void* glClipPlanex;
+extern void* glGetClipPlanef;
+extern void* glGetClipPlanex;
+extern void* glGetFixedv;
+extern void* glGetLightxv;
+extern void* glGetMaterialxv;
+extern void* glGetTexEnvxv;
+extern void* glGetTexParameterxv;
+extern void* glPointParameterx;
+extern void* glPointParameterxv;
+extern void* glPointSizePointerOES;
+extern void* glTexParameterxv;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fe740
+bool ContextGL::initFixedPointOES()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	void* proc = getProc("glClipPlanef");
+	glClipPlanef = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glClipPlanex");
+	glClipPlanex = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetClipPlanef");
+	glGetClipPlanef = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetClipPlanex");
+	glGetClipPlanex = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetFixedv");
+	glGetFixedv = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetLightxv");
+	glGetLightxv = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetMaterialxv");
+	glGetMaterialxv = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetTexEnvxv");
+	glGetTexEnvxv = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetTexParameterxv");
+	glGetTexParameterxv = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glPointParameterx");
+	glPointParameterx = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glPointParameterxv");
+	glPointParameterxv = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glPointSizePointerOES");
+	glPointSizePointerOES = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glTexParameterxv");
+	glTexParameterxv = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

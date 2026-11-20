@@ -298,6 +298,36 @@ void sp_counted_impl_p::disposeStringHolder()
 	}
 }
 
+extern "C" long _InterlockedExchange(long volatile* Target, long Value);
+#pragma intrinsic(_InterlockedExchange)
+
+extern "C" __declspec(dllimport) void __stdcall sp_counted_impl_p_release_handle(void*);
+
+struct sp_counted_impl_p_abuse_data
+{
+	void* field_00;
+	void destroyBody();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c2f5e0
+void sp_counted_impl_p::destroySubPtr0C_f5e0()
+{
+	sp_counted_impl_p_abuse_data* p = (sp_counted_impl_p_abuse_data*)ptr_000c;
+	if (p)
+	{
+		void* old = (void*)_InterlockedExchange((long volatile*)((char*)p + 0x18), 0);
+		if (old)
+		{
+			sp_counted_impl_p_release_handle(old);
+		}
+
+		p->destroyBody();
+		rbx_free_mem(p->field_00);
+		p->field_00 = 0;
+		rbx_free_mem(p);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
