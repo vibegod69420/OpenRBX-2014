@@ -30,6 +30,7 @@ public:
 	int __cdecl openCoroutine();
 	int __cdecl openString();
 	int __cdecl mathOp();
+	int __cdecl func_B6E2C0();
 	// AUTO-GENERATED METHODS
 };
 

@@ -41,6 +41,7 @@ public:
 	bool initARBTimerQuery();
 	bool initARBVertexShader();
 	bool initATIDrawElementArray();
+	bool initATIVertexArrayObject();
 	// AUTO-GENERATED METHODS
 };
 

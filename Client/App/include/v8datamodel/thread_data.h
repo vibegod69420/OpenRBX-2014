@@ -22,6 +22,8 @@ public:
 	void __cdecl do_call();
 	void run_bind();
 	int getConst18739520() const;
+	void onDestroy();
+	static void destroyInstance(thread_data* p);
 	// AUTO-GENERATED METHODS
 };
 

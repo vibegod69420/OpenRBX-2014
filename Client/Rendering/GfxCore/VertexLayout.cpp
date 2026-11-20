@@ -539,6 +539,32 @@ bool VertexLayout::initATIDrawElementArray()
 	return false;
 }
 
+extern void* g_glGetVertexAttribArrayObjectfvATI;
+extern void* g_glGetVertexAttribArrayObjectivATI;
+extern void* g_glVertexAttribArrayObjectATI;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f87d0
+bool VertexLayout::initATIVertexArrayObject()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glGetVertexAttribArrayObjectfvATI");
+	g_glGetVertexAttribArrayObjectfvATI = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glGetVertexAttribArrayObjectivATI");
+	g_glGetVertexAttribArrayObjectivATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttribArrayObjectATI");
+	g_glVertexAttribArrayObjectATI = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
