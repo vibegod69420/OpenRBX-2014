@@ -352,6 +352,19 @@ void sp_counted_impl_p::destroySubPtr0C_6610()
 	}
 }
 
+void __stdcall sub_CF669E(void* ptr, unsigned int size, unsigned int count, void* dtor);
+
+// FUNCTION: ROBLOXSTUDIO 0x00cd40f0
+void sp_counted_impl_p::disposeNuggetHistory()
+{
+	sp_counted_impl_p* p = ptr_000c;
+	if (p)
+	{
+		sub_CF669E((char*)p + 8, 0x28, 0x28, (void*)0x00CCF490);
+		rbx_free_mem(p);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

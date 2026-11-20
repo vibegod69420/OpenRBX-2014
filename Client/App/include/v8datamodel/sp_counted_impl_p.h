@@ -47,6 +47,7 @@ public:
 	void disposeStringHolder();
 	void destroySubPtr0C_f5e0();
 	void destroySubPtr0C_6610();
+	void disposeNuggetHistory();
 	// AUTO-GENERATED METHODS
 };
 

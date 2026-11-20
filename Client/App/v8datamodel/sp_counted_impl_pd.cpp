@@ -80,6 +80,35 @@ void __cdecl sp_counted_impl_pd::get_deleter(void* arg2, void* arg3)
 	((sp_counted_impl_pd_callee*)((char*)obj + 8))->func(flag, obj, args, 0);
 }
 
+struct sp_counted_impl_pd_string
+{
+	union
+	{
+		void* ptr;
+		char buf[16];
+	};
+	unsigned int size;
+	unsigned int capacity;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x007a2910
+void sp_counted_impl_pd::sp_ms_deleter_dispose()
+{
+	if (*(unsigned char*)&member_0010)
+	{
+		sp_counted_impl_pd_string* s = (sp_counted_impl_pd_string*)((char*)this + 0x14);
+		if (s->capacity >= 0x10)
+		{
+			::operator delete(s->ptr);
+		}
+
+		s->capacity = 0xF;
+		s->size = 0;
+		s->buf[0] = 0;
+		*(unsigned char*)&member_0010 = 0;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
