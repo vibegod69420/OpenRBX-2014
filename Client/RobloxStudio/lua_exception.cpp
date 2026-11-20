@@ -181,6 +181,21 @@ void __cdecl lua_exception::runError(const char* fmt, ...)
 	luaG_errormsg(this);
 }
 
+// Forward declarations for callees
+void* __cdecl lua_newstate(void* f, void* ud);
+void* __cdecl lua_atpanic(void* L, void* panicf);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a39020
+void* __cdecl lua_exception::luaL_newstate()
+{
+	void* L = lua_newstate((void*)0x00A38350, 0);
+	if (L)
+	{
+		lua_atpanic(L, (void*)0x00A39370);
+	}
+	return L;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

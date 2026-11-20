@@ -37,6 +37,7 @@ public:
 	void __cdecl pushGlobal();
 	void __cdecl pushGlobalResults();
 	void __cdecl pushGlobalValues();
+	void __cdecl pushGlobalEvents();
 	// AUTO-GENERATED METHODS
 };
 

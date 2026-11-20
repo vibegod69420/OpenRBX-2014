@@ -37,6 +37,7 @@ public:
 	int __cdecl getStackType(int index);
 	int __cdecl pushThread();
 	void __cdecl runError(const char* fmt, ...);
+	void* __cdecl luaL_newstate();
 	// AUTO-GENERATED METHODS
 };
 

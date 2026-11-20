@@ -52,6 +52,62 @@ void __cdecl GuiMain::append(const void* data)
 	buffer->size += 12;
 }
 
+struct GuiMainScriptEvent
+{
+	void* instance;
+	void* descriptor;
+	void fire(void* arg);
+};
+
+class GuiMainInstance
+{
+public:
+	unsigned char isMemberOf(void* descriptor);
+};
+
+extern unsigned char g_RBXAssertEnabled;
+extern unsigned char (__cdecl* g_RBXAssertCallback)(const char*, const char*, int);
+void __cdecl RBXAssert(int level, const char* message);
+
+// FUNCTION: ROBLOXSTUDIO 0x008b0910
+void __cdecl GuiMain::fireScriptEvent(void* source, void* arg)
+{
+	GuiMainScriptEvent local;
+	void* descriptor;
+
+	if (source)
+		descriptor = (char*)source + 0x1C;
+	else
+		descriptor = 0;
+
+	local.instance = this;
+	local.descriptor = descriptor;
+
+	if (g_RBXAssertEnabled)
+	{
+		if (descriptor)
+		{
+			if (((GuiMainInstance*)this)->isMemberOf(descriptor) == 0)
+			{
+				unsigned char (__cdecl* callback)(const char*, const char*, int) = g_RBXAssertCallback;
+
+				if (callback == 0 ||
+					callback(
+						"!instance || descriptor.isMemberOf(instance)",
+						"d:\\buildagent\\work\\trunk2012\\client\\app\\include\\reflection\\property.h",
+						0x100) == 0)
+				{
+					RBXAssert(
+						(int)g_RBXAssertEnabled,
+						"!instance || descriptor.isMemberOf(instance) file: d:\\buildagent\\work\\trunk2012\\client\\app\\include\\reflection\\property.h line: 256");
+				}
+			}
+		}
+	}
+
+	local.fire(arg);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
