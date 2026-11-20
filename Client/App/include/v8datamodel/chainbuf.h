@@ -24,6 +24,7 @@ public:
 	void __cdecl write_ptr(void* destination) const;
 	void __cdecl write(void* src, void* destination);
 	void clear();
+	void close();
 	// AUTO-GENERATED METHODS
 };
 

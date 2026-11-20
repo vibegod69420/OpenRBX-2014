@@ -100,6 +100,24 @@ void chainbuf::clear()
 	sub_CF6522((void*)_vtable_or_head);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c7c270
+void chainbuf::close()
+{
+	void* buf = *(void**)((char*)this + 0x0C);
+	if (buf)
+	{
+		sub_CF6522(buf);
+		*(void**)((char*)this + 0x0C) = 0;
+		*(void**)((char*)this + 0x10) = 0;
+		*(void**)((char*)this + 0x14) = 0;
+	}
+
+	void* local;
+	void* head = (void*)_vtable_or_head;
+	((_chainbuf_onDestroy_helper_C7C2E0*)this)->unlink(&local, *(void**)head, head);
+	sub_CF6522((void*)_vtable_or_head);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

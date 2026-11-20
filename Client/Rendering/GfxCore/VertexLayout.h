@@ -50,6 +50,7 @@ public:
 	bool initGL12();
 	bool initGL31();
 	bool initAMDDebugOutput();
+	bool initAppleVertexArrayObject();
 	// AUTO-GENERATED METHODS
 };
 

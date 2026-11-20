@@ -767,6 +767,38 @@ bool VertexLayout::initAMDDebugOutput()
 	return false;
 }
 
+extern void* g_glBindVertexArrayAPPLE;
+extern void* g_glDeleteVertexArraysAPPLE;
+extern void* g_glGenVertexArraysAPPLE;
+extern void* g_glIsVertexArrayAPPLE;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f4940
+bool VertexLayout::initAppleVertexArrayObject()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glBindVertexArrayAPPLE");
+	g_glBindVertexArrayAPPLE = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glDeleteVertexArraysAPPLE");
+	g_glDeleteVertexArraysAPPLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGenVertexArraysAPPLE");
+	g_glGenVertexArraysAPPLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glIsVertexArrayAPPLE");
+	g_glIsVertexArrayAPPLE = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

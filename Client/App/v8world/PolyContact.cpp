@@ -158,6 +158,31 @@ void __cdecl PolyContact::addEdge(void* edge)
 	}
 }
 
+void __cdecl sub_BC6450(void* arg1);
+
+// FUNCTION: ROBLOXSTUDIO 0x00bc95c0
+void* __cdecl PolyContact::createFeature(void* arg2, void* arg3)
+{
+	if ((unsigned int)arg2 > 0xFFFFFFE5u)
+	{
+		sub_BC6450(this);
+	}
+
+	void* result = ((void* (__cdecl*)(void*, void*, int, int))sub_BC6400)(this, 0, 0, (int)arg2 + 0x18);
+
+	*(unsigned char*)((char*)result + 5) = *(unsigned char*)((char*)*(void**)((char*)this + 0x10) + 0x14) & 3;
+	*(void**)((char*)result + 0x10) = arg2;
+	*(unsigned char*)((char*)result + 4) = 7;
+	*(int*)((char*)result + 8) = 0;
+	*(void**)((char*)result + 0xC) = arg3;
+	*(unsigned char*)((char*)result + 0x14) = 1;
+
+	*(void**)result = *(void**)(*(void**)((char*)*(void**)((char*)this + 0x10) + 0x70));
+	*(void**)(*(void**)((char*)*(void**)((char*)this + 0x10) + 0x70)) = result;
+
+	return result;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

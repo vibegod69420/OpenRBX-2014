@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 11:12:53 UTC",
+ "updated_at": "2026-11-20 11:21:27 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 12.5467,
- "implemented_total": 1188,
- "function_annotations": 1188,
+ "matchable_coverage_pct": 12.6001,
+ "implemented_total": 1193,
+ "function_annotations": 1193,
  "stub_annotations": 0,
- "perfect_100_count": 1175,
- "matched_real_functions": 1175,
+ "perfect_100_count": 1180,
+ "matched_real_functions": 1180,
  "average_match_pct": 99.78,
- "overall_function_coverage_pct": 2.8969,
- "overall_byte_coverage_pct": 0.6179,
+ "overall_function_coverage_pct": 2.9092,
+ "overall_byte_coverage_pct": 0.6226,
  "usage": {
-  "calls_24h": 5396,
+  "calls_24h": 5359,
   "failures_24h": 0,
-  "completion_tokens_24h": 67526656,
-  "reasoning_tokens_24h": 65900932,
-  "avg_latency_s": 215.6
+  "completion_tokens_24h": 67308995,
+  "reasoning_tokens_24h": 65683116,
+  "avg_latency_s": 216.3
  },
- "functions_total": 1188,
+ "functions_total": 1193,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 419,
-   "functions": 421,
-   "bytes": 17447
+   "matched": 421,
+   "functions": 423,
+   "bytes": 17675
   },
   {
    "name": "Rendering/g3d",
@@ -48,15 +48,15 @@
   },
   {
    "name": "App/v8world",
-   "matched": 121,
-   "functions": 121,
-   "bytes": 6958
+   "matched": 122,
+   "functions": 122,
+   "bytes": 7062
   },
   {
    "name": "Rendering/GfxCore",
-   "matched": 108,
-   "functions": 108,
-   "bytes": 4680
+   "matched": 110,
+   "functions": 110,
+   "bytes": 4803
   },
   {
    "name": "App/script",
@@ -1638,6 +1638,17 @@
    "matchable": true
   },
   {
+   "address": "0x00c7c270",
+   "kind": "FUNCTION",
+   "name": "std::chainbuf::close",
+   "mangled": "?close@chainbuf@std@@QAEXXZ",
+   "file": "Client/App/v8datamodel/chainbuf.cpp",
+   "orig_size": 104,
+   "recomp_size": 75,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00c797c0",
    "kind": "FUNCTION",
    "name": "std::chainbuf::write",
@@ -2595,6 +2606,17 @@
    "matchable": true
   },
   {
+   "address": "0x00bc95c0",
+   "kind": "FUNCTION",
+   "name": "RBX::PolyContact::createFeature",
+   "mangled": "?createFeature@PolyContact@RBX@@QAAPAXPAX0@Z",
+   "file": "Client/App/v8world/PolyContact.cpp",
+   "orig_size": 104,
+   "recomp_size": 104,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00bc88e0",
    "kind": "FUNCTION",
    "name": "PolyContact_deleteEdge",
@@ -3295,28 +3317,6 @@
    "file": "Client/App/v8world/TriangleMesh.cpp",
    "orig_size": 39,
    "recomp_size": 39,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00b70040",
-   "kind": "FUNCTION",
-   "name": "RBX::TriangleMesh::stringGfindRenamed",
-   "mangled": "?stringGfindRenamed@TriangleMesh@RBX@@QAAXXZ",
-   "file": "Client/App/v8world/TriangleMesh.cpp",
-   "orig_size": 21,
-   "recomp_size": 21,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00b6ffd0",
-   "kind": "FUNCTION",
-   "name": "sub_B71570",
-   "mangled": "?getValue@TriangleMesh@RBX@@QAAHXZ",
-   "file": "Client/App/v8world/TriangleMesh.cpp",
-   "orig_size": 18,
-   "recomp_size": 18,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -5067,9 +5067,45 @@
    "matched": 1175,
    "implemented": 1188,
    "pct": 12.5467
+  },
+  {
+   "t": "2026-11-20 11:21:27 UTC",
+   "matched": 1180,
+   "implemented": 1193,
+   "pct": 12.6001
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T11:17:33",
+   "address": "0x00bc95c0",
+   "name": "RBX::PolyContact::createFeature",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T11:15:13",
+   "address": "0x00605ee0",
+   "name": "RBX::Graphics::ContextGL::assignIfNull_5ee0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T11:15:11",
+   "address": "0x008af7a0",
+   "name": "RBX::GuiMain::fireMouseButton1Click",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T11:13:14",
+   "address": "0x00c7c270",
+   "name": "std::chainbuf::close",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T11:13:07",
+   "address": "0x005f4940",
+   "name": "RBX::Graphics::VertexLayout::initAppleVertexArrayObject",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T11:08:48",
    "address": "0x00dd1f90",
@@ -5759,37 +5795,7 @@
    "address": "0x00848170",
    "name": "RBX::thread_specific_ptr::reset",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T08:00:41",
-   "address": "0x005f49b0",
-   "name": "RBX::Graphics::VertexLayout::initAppleVertexArrayRange",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T07:54:54",
-   "address": "0x008ddba0",
-   "name": "RBX::ScriptContext::reportError",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T07:53:08",
-   "address": "0x00dc1880",
-   "name": "ProgramMemoryCheckerImpl::init21",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T07:52:40",
-   "address": "0x009d90e0",
-   "name": "RBX::Humanoid::getField1F8XorFloat",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T07:46:22",
-   "address": "0x00a41720",
-   "name": "RBX::Lua::LuaArguments::pushGlobalResults",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 27.65
+ "match_rate_per_hour": 27.68
 }
