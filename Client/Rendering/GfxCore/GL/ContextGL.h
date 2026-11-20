@@ -99,6 +99,11 @@ public:
 	bool initExtensionQueryREGAL();
 	bool initParallelArraysINTEL();
 	bool initGammaTableI3D();
+	bool initImageBufferI3D();
+	bool initFrameLockI3D();
+	bool initFrameTrackingI3D();
+	bool initDepthBufferFloatNV();
+	bool initPointParameterEXT();
 	// AUTO-GENERATED METHODS
 };
 

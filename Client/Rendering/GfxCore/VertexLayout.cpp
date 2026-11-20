@@ -1783,6 +1783,82 @@ bool VertexLayout::initAMDDrawBuffersBlend()
 	return false;
 }
 
+extern void* g_glInsertEventMarkerEXT;
+extern void* g_glPopGroupMarkerEXT;
+extern void* g_glPushGroupMarkerEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f8f90
+bool VertexLayout::initEXTDebugMarker()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glInsertEventMarkerEXT");
+	g_glInsertEventMarkerEXT = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glPopGroupMarkerEXT");
+	g_glPopGroupMarkerEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glPushGroupMarkerEXT");
+	g_glPushGroupMarkerEXT = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glTessellationFactorAMD;
+extern void* g_glTessellationModeAMD;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f4540
+bool VertexLayout::initAMDVertexShaderTessellator()
+{
+	void* p = g_glGetProcAddress("glTessellationFactorAMD");
+	g_glTessellationFactorAMD = p;
+	unsigned char missing = (p == 0);
+
+	p = g_glGetProcAddress("glTessellationModeAMD");
+	g_glTessellationModeAMD = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glTexStorage2DMultisample;
+extern void* g_glTexStorage3DMultisample;
+extern void* g_glTextureStorage2DMultisampleEXT;
+extern void* g_glTextureStorage3DMultisampleEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f70f0
+bool VertexLayout::initARBTextureStorageMultisample()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glTexStorage2DMultisample");
+	g_glTexStorage2DMultisample = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glTexStorage3DMultisample");
+	g_glTexStorage3DMultisample = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glTextureStorage2DMultisampleEXT");
+	g_glTextureStorage2DMultisampleEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glTextureStorage3DMultisampleEXT");
+	g_glTextureStorage3DMultisampleEXT = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

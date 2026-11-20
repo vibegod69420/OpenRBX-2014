@@ -1132,6 +1132,141 @@ bool ContextGL::initGammaTableI3D()
 	return false;
 }
 
+extern void* wglAssociateImageBufferEventsI3D;
+extern void* wglCreateImageBufferI3D;
+extern void* wglDestroyImageBufferI3D;
+extern void* wglReleaseImageBufferEventsI3D;
+
+// FUNCTION: ROBLOXSTUDIO 0x00604080
+bool ContextGL::initImageBufferI3D()
+{
+	void* (__stdcall *getProc)(const char*) = wglGetProcAddress;
+
+	void* proc = getProc("wglAssociateImageBufferEventsI3D");
+	wglAssociateImageBufferEventsI3D = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("wglCreateImageBufferI3D");
+	wglCreateImageBufferI3D = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglDestroyImageBufferI3D");
+	wglDestroyImageBufferI3D = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglReleaseImageBufferEventsI3D");
+	wglReleaseImageBufferEventsI3D = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* wglDisableFrameLockI3D;
+extern void* wglEnableFrameLockI3D;
+extern void* wglIsEnabledFrameLockI3D;
+extern void* wglQueryFrameLockMasterI3D;
+
+// FUNCTION: ROBLOXSTUDIO 0x006040f0
+bool ContextGL::initFrameLockI3D()
+{
+	void* (__stdcall *getProc)(const char*) = wglGetProcAddress;
+
+	void* proc = getProc("wglDisableFrameLockI3D");
+	wglDisableFrameLockI3D = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("wglEnableFrameLockI3D");
+	wglEnableFrameLockI3D = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglIsEnabledFrameLockI3D");
+	wglIsEnabledFrameLockI3D = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglQueryFrameLockMasterI3D");
+	wglQueryFrameLockMasterI3D = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* wglBeginFrameTrackingI3D;
+extern void* wglEndFrameTrackingI3D;
+extern void* wglGetFrameUsageI3D;
+extern void* wglQueryFrameTrackingI3D;
+
+// FUNCTION: ROBLOXSTUDIO 0x00604160
+bool ContextGL::initFrameTrackingI3D()
+{
+	void* (__stdcall *getProc)(const char*) = wglGetProcAddress;
+
+	void* proc = getProc("wglBeginFrameTrackingI3D");
+	wglBeginFrameTrackingI3D = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("wglEndFrameTrackingI3D");
+	wglEndFrameTrackingI3D = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglGetFrameUsageI3D");
+	wglGetFrameUsageI3D = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglQueryFrameTrackingI3D");
+	wglQueryFrameTrackingI3D = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glClearDepthdNV;
+extern void* glDepthBoundsdNV;
+extern void* glDepthRangedNV;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fc260
+bool ContextGL::initDepthBufferFloatNV()
+{
+	void* (__stdcall *getProc)(const char*) = wglGetProcAddress;
+
+	void* proc = getProc("glClearDepthdNV");
+	glClearDepthdNV = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glDepthBoundsdNV");
+	glDepthBoundsdNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glDepthRangedNV");
+	glDepthRangedNV = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glPointParameterfEXT;
+extern void* glPointParameterfvEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fadd0
+bool ContextGL::initPointParameterEXT()
+{
+	void* proc = wglGetProcAddress("glPointParameterfEXT");
+	glPointParameterfEXT = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glPointParameterfvEXT");
+	glPointParameterfvEXT = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

@@ -461,6 +461,22 @@ void* __cdecl lua_exception::sub_A3B450(float arg1, float arg2)
 	return p;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a35fd0
+void* __cdecl sub_BCC910(void* o, void* n);
+
+double __cdecl lua_exception::tonumber(int index)
+{
+	void* o = index2adr((int)this, index);
+	if (*(int*)((char*)o + 8) != 3)
+	{
+		double n[2];
+		o = sub_BCC910(o, n);
+		if (!o)
+			return 0.0;
+	}
+	return *(double*)o;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

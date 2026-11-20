@@ -1259,6 +1259,94 @@ void ProgramMemoryCheckerImpl::init74()
 	sub_CF6609((void*)0x00E09100);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00dd43b0
+void ProgramMemoryCheckerImpl::init75()
+{
+	int v[2];
+	((ProgramMemoryCheckerPlayerRemovingTarget*)0x01310220)->sub_C255C0(
+		0x1A4,
+		(const char*)0x00EEEC9C,
+		(const char*)0x00E73878,
+		3,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00E091C0);
+}
+
+class ProgramMemoryCheckerCharacterAddedTarget
+{
+public:
+	void sub_C40670(int a1, const char* a2, const char* a3, int a4, int a5, int a6);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dd5410
+void ProgramMemoryCheckerImpl::init76()
+{
+	int v[2];
+	((ProgramMemoryCheckerCharacterAddedTarget*)0x0131185C)->sub_C40670(
+		0x1B0,
+		(const char*)0x00EF0870,
+		(const char*)0x00E9688C,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00E0A7D0);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00dd5450
+void ProgramMemoryCheckerImpl::init77()
+{
+	int v[2];
+	((ProgramMemoryCheckerCharacterAddedTarget*)0x01311E68)->sub_C40670(
+		0x1B4,
+		(const char*)0x00EF0880,
+		(const char*)0x00E9688C,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00E0A830);
+}
+
+class ProgramMemoryCheckerConnectionRejectedTarget
+{
+public:
+	void sub_C94C30(int, const char*, const char*, int, int, int);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dd98a0
+void ProgramMemoryCheckerImpl::init78()
+{
+	int v[2];
+	((ProgramMemoryCheckerConnectionRejectedTarget*)0x01313E58)->sub_C94C30(
+		0xB0C,
+		(const char*)0x00EFA264,
+		(const char*)0x00EF7600,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00E0DCB0);
+}
+
+class ProgramMemoryCheckerDeletingItemTarget
+{
+public:
+	void sub_CAF380(const char* a1, int a2, const char* a3, int a4, int a5, int a6);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dda560
+void ProgramMemoryCheckerImpl::init79()
+{
+	int v[2];
+	((ProgramMemoryCheckerDeletingItemTarget*)0x01314678)->sub_CAF380(
+		(const char*)0x00EFE218,
+		0x4720,
+		(const char*)0x00EFE208,
+		2,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00E0E970);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

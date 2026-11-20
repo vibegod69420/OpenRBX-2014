@@ -78,6 +78,9 @@ public:
 	bool initARBES2Compatibility();
 	bool initARBMatrixPalette();
 	bool initAMDDrawBuffersBlend();
+	bool initEXTDebugMarker();
+	bool initAMDVertexShaderTessellator();
+	bool initARBTextureStorageMultisample();
 	// AUTO-GENERATED METHODS
 };
 

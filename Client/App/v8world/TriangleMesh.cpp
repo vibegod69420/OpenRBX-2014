@@ -432,6 +432,44 @@ int __cdecl TriangleMesh::func_B6F630()
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b6aec0
+} // namespace RBX
+#include <intrin.h>
+namespace RBX {
+
+void* __cdecl sub_B6A570();
+void __fastcall sub_40ED30(void*);
+void* __fastcall sub_48AF30(void*);
+void* __fastcall sub_40FB10(void*);
+extern void (__stdcall* dword_E10198)(void*);
+
+void* __cdecl TriangleMesh::func_B6AEC0()
+{
+	void* pool = sub_B6A570();
+	sub_40ED30(pool);
+
+	void* node = *((void**)pool + 2);
+	if (node)
+	{
+		*((void**)pool + 2) = *(void**)node;
+	}
+	else
+	{
+		node = sub_48AF30((char*)pool + 8);
+	}
+
+	long old = _InterlockedExchangeAdd((long volatile*)pool, 0x80000000);
+	if ((old & 0x40000000) == 0 && old > (long)0x80000000)
+	{
+		if (_interlockedbittestandset((long volatile*)pool, 30) == 0)
+		{
+			dword_E10198(sub_40FB10(pool));
+		}
+	}
+
+	return node;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

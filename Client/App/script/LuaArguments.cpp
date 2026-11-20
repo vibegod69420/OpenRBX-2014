@@ -522,6 +522,24 @@ bool __cdecl LuaArguments::getRBXScriptSignal(void* arg, void* out)
 	return false;
 }
 
+void* __cdecl sub_A353E0(void*, int);
+void __cdecl sub_A35BF0(void*, int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a40c40
+void __cdecl LuaArguments::pushVector2(void* arg)
+{
+	float x = *(float*)arg;
+	float y = *(float*)((char*)arg + 4);
+	void* p = sub_A353E0(this, 8);
+	if (p)
+	{
+		*(float*)p = x;
+		*(float*)((char*)p + 4) = y;
+	}
+	sub_A35060(this, -10000, *(void**)0x0124EB20);
+	sub_A35BF0(this, -2);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua
