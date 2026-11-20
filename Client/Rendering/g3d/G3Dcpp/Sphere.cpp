@@ -68,6 +68,34 @@ void* Sphere::getStaticData3()
 	return reinterpret_cast<void*>(0x012DFB6C);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006e2150
+void* Sphere::getStaticData4()
+{
+	int guard = *reinterpret_cast<int*>(0x012DFC30);
+	if ((guard & 1) == 0)
+	{
+		guard |= 1;
+		*reinterpret_cast<int*>(0x012DFC30) = guard;
+		*reinterpret_cast<int*>(0x012DFBF0) = 0x3F800000;
+		*reinterpret_cast<int*>(0x012DFBF4) = 0;
+		*reinterpret_cast<int*>(0x012DFBF8) = 0;
+		*reinterpret_cast<int*>(0x012DFBFC) = 0;
+		*reinterpret_cast<int*>(0x012DFC00) = 0;
+		*reinterpret_cast<int*>(0x012DFC04) = 0x3F800000;
+		*reinterpret_cast<int*>(0x012DFC08) = 0;
+		*reinterpret_cast<int*>(0x012DFC0C) = 0;
+		*reinterpret_cast<int*>(0x012DFC10) = 0;
+		*reinterpret_cast<int*>(0x012DFC14) = 0;
+		*reinterpret_cast<int*>(0x012DFC18) = 0x3F800000;
+		*reinterpret_cast<int*>(0x012DFC1C) = 0;
+		*reinterpret_cast<int*>(0x012DFC20) = 0;
+		*reinterpret_cast<int*>(0x012DFC24) = 0;
+		*reinterpret_cast<int*>(0x012DFC28) = 0;
+		*reinterpret_cast<int*>(0x012DFC2C) = 0x3F800000;
+	}
+	return reinterpret_cast<void*>(0x012DFBF0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace G3D

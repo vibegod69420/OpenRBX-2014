@@ -108,6 +108,12 @@ int Humanoid::getField2A0DerefE0() const
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x009d90c0
+int Humanoid::getField298() const
+{
+	return field_0298;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

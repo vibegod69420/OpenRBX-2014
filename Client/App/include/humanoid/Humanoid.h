@@ -19,6 +19,7 @@ public:
 		struct { char _pad_field_0278[0x278]; int field_0278; };
 		struct { char _pad_field_0288[0x288]; int field_0288; };
 		struct { char _pad_field_0268[0x268]; int field_0268; };
+		struct { char _pad_field_0298[0x298]; int field_0298; };
 		// AUTO-GENERATED FIELDS
 	};
 
@@ -35,6 +36,7 @@ public:
 	int getField268Or298();
 	int getField270DerefE0() const;
 	int getField2A0DerefE0() const;
+	int getField298() const;
 	// AUTO-GENERATED METHODS
 };
 

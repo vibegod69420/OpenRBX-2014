@@ -23,6 +23,7 @@ public:
 	void*getStaticData();
 	void*getStaticData2();
 	void*getStaticData3();
+	void*getStaticData4();
 	// AUTO-GENERATED METHODS
 };
 
