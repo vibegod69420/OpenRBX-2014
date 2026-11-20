@@ -753,6 +753,39 @@ const char* __cdecl lua_exception::tolstring(int index, int* len)
 	return *(char**)o + 0x10;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a36e80
+void __cdecl sub_BC6470(void* L, void* p);
+void __cdecl sub_A36C90(void* L, int arg, void* p);
+void __cdecl sub_A36BB0(void* L, int n);
+
+void __cdecl lua_exception::sub_A36E80(int arg)
+{
+	void* base_ci = *(void**)((char*)this + 0x28);
+	*(void**)((char*)this + 0x14) = base_ci;
+
+	void* p = *(void**)base_ci;
+	*(void**)((char*)this + 0x0C) = p;
+
+	sub_BC6470(this, p);
+	sub_A36C90(this, arg, *(void**)((char*)this + 0x0C));
+
+	unsigned short baseCcalls = *(unsigned short*)((char*)this + 0x36);
+	*(unsigned short*)((char*)this + 0x34) = baseCcalls;
+	*(unsigned char*)((char*)this + 0x39) = 1;
+
+	if (*(int*)((char*)this + 0x30) > 0x4E20)
+	{
+		int diff = *(int*)((char*)this + 0x14) - *(int*)((char*)this + 0x28);
+		if (diff / 24 + 1 < 0x4E20)
+		{
+			sub_A36BB0(this, 0x4E20);
+		}
+	}
+
+	*(int*)((char*)this + 0x74) = 0;
+	*(int*)((char*)this + 0x70) = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
