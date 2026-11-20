@@ -51,6 +51,7 @@ public:
 	int getSubField24_94() const;
 	int getSubField24_84() const;
 	int getSubField24_A4_94_84_74() const;
+	int getAccumulatedKernelValue();
 	// AUTO-GENERATED METHODS
 };
 

@@ -112,6 +112,73 @@ bool ProfiledRakPeer::IsUnassigned() const
 	return false;
 }
 
+namespace {
+
+struct ProfiledPacketData
+{
+	~ProfiledPacketData();
+};
+
+struct ProfiledPacketEntry
+{
+	ProfiledPacketData* data;
+	int* refCount;
+	~ProfiledPacketEntry();
+};
+
+} // namespace
+
+// FUNCTION: ROBLOXSTUDIO 0x00ce8e60
+void ProfiledRakPeer::ClearProfilingData()
+{
+	char* self = (char*)this;
+	unsigned int i = 0;
+
+	if (*(unsigned int*)(self + 0x430) > 0)
+	{
+		do
+		{
+			ProfiledPacketEntry* entry = *(ProfiledPacketEntry**)(self + 0x42c) + i;
+
+			if (entry->refCount)
+			{
+				if (--(*entry->refCount) == 0)
+				{
+					ProfiledPacketData* data = entry->data;
+					if (data)
+					{
+						data->~ProfiledPacketData();
+						::operator delete(data);
+					}
+
+					if (entry->refCount)
+					{
+						::operator delete(entry->refCount);
+					}
+				}
+			}
+
+			++i;
+			entry->data = 0;
+			entry->refCount = 0;
+		}
+		while (i < *(unsigned int*)(self + 0x430));
+	}
+
+	if (*(unsigned int*)(self + 0x434) != 0)
+	{
+		ProfiledPacketEntry* data = *(ProfiledPacketEntry**)(self + 0x42c);
+		if (data)
+		{
+			delete[] data;
+		}
+
+		*(unsigned int*)(self + 0x434) = 0;
+		*(ProfiledPacketEntry**)(self + 0x42c) = 0;
+		*(unsigned int*)(self + 0x430) = 0;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

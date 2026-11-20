@@ -20,6 +20,7 @@ public:
 	bool getFlagB68() const;
 	DataModel* getDataModel();
 	int getZero() const;
+	bool isStateValid() const;
 	// AUTO-GENERATED METHODS
 };
 

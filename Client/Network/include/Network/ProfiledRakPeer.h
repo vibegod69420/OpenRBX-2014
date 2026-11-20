@@ -25,6 +25,7 @@ public:
 	int GetLeadingUnassignedAddressCount() const;
 	int GetNextSendReceipt();
 	bool IsUnassigned() const;
+	void ClearProfilingData();
 	// AUTO-GENERATED METHODS
 };
 

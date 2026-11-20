@@ -86,6 +86,23 @@ int Kernel::getSubField24_A4_94_84_74() const
 		+ ((Sub_Kernel_24_74*)p)->val;
 }
 
+extern int** g_kernelValueRangeBegin;
+extern int** g_kernelValueRangeEnd;
+
+// FUNCTION: ROBLOXSTUDIO 0x00b557c0
+int Kernel::getAccumulatedKernelValue()
+{
+    int** it = g_kernelValueRangeBegin;
+    int** end = g_kernelValueRangeEnd;
+    int sum = 0;
+    while (it != end)
+    {
+        sum += **it;
+        ++it;
+    }
+    return sum;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
