@@ -71,6 +71,14 @@ public:
 	bool initSampleMaskEXT();
 	bool initMultiModeDrawIBM();
 	bool initMultiDrawIndirectBindlessNV();
+	bool initBlendBarrierNV();
+	bool initPixelDataRangeNV();
+	bool initPointParameterNV();
+	bool initPrimitiveRestartNV();
+	bool initDetailTexFuncSGIS();
+	bool initFogFuncSGIS();
+	bool initSampleMaskSGIS();
+	bool initSharpenTexFuncSGIS();
 	// AUTO-GENERATED METHODS
 };
 

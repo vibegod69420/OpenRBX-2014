@@ -55,6 +55,7 @@ public:
 	int __cdecl reportError(const double* /*unused*/);
 	int __cdecl reportError(const float* /*unused*/);
 	int __cdecl reportError(const unsigned __int64* /*unused*/);
+	void clearState();
 	// AUTO-GENERATED METHODS
 };
 

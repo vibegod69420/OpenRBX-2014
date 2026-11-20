@@ -303,6 +303,29 @@ const char* __cdecl lua_exception::getString(int index)
 	return (const char*)0x0101EB04;
 }
 
+// Forward declaration for callee at 0x00a35690
+void __cdecl sub_A35690(void* L, void* buf, int size);
+// Forward declaration for callee at 0x00a381e0
+void __cdecl sub_A381E0(void* B);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a39110
+char* __cdecl lua_exception::prepBuffer()
+{
+	char* base = (char*)this;
+	int size = *(char**)base - base - 0x0C;
+
+	if (size != 0)
+	{
+		char* buf = base + 0x0C;
+		sub_A35690(*(void**)(base + 8), buf, size);
+		++*(int*)(base + 4);
+		*(char**)base = buf;
+		sub_A381E0(base);
+	}
+
+	return base + 0x0C;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

@@ -225,6 +225,41 @@ void __cdecl PolyContact::removeEdgeIndex(void* node, void* feature)
 	}
 }
 
+void __cdecl PolyContact_sub_C183E0(void* obj, void* arg);
+void __cdecl PolyContact_sub_C18750(void* obj, void* value, int count);
+void __cdecl PolyContact_sub_C18DD0(void* obj, void* arg, int count);
+
+// FUNCTION: ROBLOXSTUDIO 0x00bcc9d0
+void __cdecl PolyContact::updateContact(int arg2, int arg3, void* arg4)
+{
+	void* obj = *(void**)((char*)this + 0x30);
+	int diff = arg2 - arg3;
+	int tag = *(int*)arg4;
+
+	if (tag == 13 || tag == 14)
+	{
+		++diff;
+		if (diff < 0)
+			diff = 0;
+
+		PolyContact_sub_C18DD0(obj, arg4, diff);
+		if (diff > 1)
+			PolyContact_sub_C18B80(obj, diff - 1);
+	}
+	else
+	{
+		if (tag != 0)
+			PolyContact_sub_C183E0(obj, arg4);
+
+		if (diff > 0)
+		{
+			void* v24 = *(void**)((char*)obj + 0x24);
+			PolyContact_sub_C18B80(obj, diff);
+			PolyContact_sub_C18750(obj, v24, diff);
+		}
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

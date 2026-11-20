@@ -41,6 +41,9 @@ public:
 	int __cdecl func_B6FFF0();
 	int __cdecl func_B6EA30();
 	int __cdecl func_B71520(const char* s, const char* p, int what);
+	int __cdecl func_B6EB00();
+	int __cdecl func_B6E0A0();
+	int __cdecl func_B6EFF0();
 	// AUTO-GENERATED METHODS
 };
 

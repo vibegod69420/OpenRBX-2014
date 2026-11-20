@@ -321,6 +321,65 @@ int __cdecl TriangleMesh::func_B71520(const char* s, const char* p, int what)
 	return res;
 }
 
+int sub_A35350(void*);
+int sub_A35220(void*, int);
+void sub_A36120(void*, void*, int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b6eb00
+int __cdecl TriangleMesh::func_B6EB00()
+{
+	void* state = this;
+	int saved = sub_A35350(state);
+
+	if (sub_A360D0(state, 1) != 6 || sub_A35220(state, 1))
+		sub_A385A0(state, 1, "Lua function expected");
+
+	sub_A357B0(state, 1);
+	sub_A36120(state, (void*)saved, 1);
+	return 1;
+}
+
+int sub_A39050(void*, int, int);
+int sub_A35290(void*, int);
+void sub_A39300(void*, int);
+void sub_A34DD0(void*, int);
+int sub_A34ED0(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b6e0a0
+int __cdecl TriangleMesh::func_B6E0A0()
+{
+	int opt = sub_A39050(this, 2, 1);
+	sub_A35D10(this, 1);
+	if (sub_A35290(this, 1) && opt > 0)
+	{
+		sub_A39300(this, opt);
+		sub_A357B0(this, 1);
+		sub_A34DD0(this, 2);
+	}
+	return sub_A34ED0(this);
+}
+
+int sub_B6EC20(void*, void*, int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b6eff0
+int __cdecl TriangleMesh::func_B6EFF0()
+{
+	void* co = sub_A36080(this, 0xFFFFD8ED);
+	int n = sub_A35150(this);
+	int res = sub_B6EC20(this, co, n);
+	if (res >= 0)
+		return res;
+
+	if (sub_A35290(this, -1))
+	{
+		sub_A39300(this, 1);
+		sub_A351C0(this, -2);
+		sub_A34DD0(this, 2);
+	}
+	sub_A34ED0(this);
+	return res;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

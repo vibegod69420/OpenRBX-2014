@@ -582,6 +582,142 @@ bool ContextGL::initMultiDrawIndirectBindlessNV()
 	return false;
 }
 
+extern void* glBlendBarrierNV;
+extern void* glBlendParameteriNV;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fc1c0
+bool ContextGL::initBlendBarrierNV()
+{
+	void* proc = wglGetProcAddress("glBlendBarrierNV");
+	glBlendBarrierNV = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glBlendParameteriNV");
+	glBlendParameteriNV = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glFlushPixelDataRangeNV;
+extern void* glPixelDataRangeNV;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fd2f0
+bool ContextGL::initPixelDataRangeNV()
+{
+	void* proc = wglGetProcAddress("glFlushPixelDataRangeNV");
+	glFlushPixelDataRangeNV = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glPixelDataRangeNV");
+	glPixelDataRangeNV = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glPointParameteriNV;
+extern void* glPointParameterivNV;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fd330
+bool ContextGL::initPointParameterNV()
+{
+	void* proc = wglGetProcAddress("glPointParameteriNV");
+	glPointParameteriNV = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glPointParameterivNV");
+	glPointParameterivNV = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glPrimitiveRestartIndexNV;
+extern void* glPrimitiveRestartNV;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fd400
+bool ContextGL::initPrimitiveRestartNV()
+{
+	void* proc = wglGetProcAddress("glPrimitiveRestartIndexNV");
+	glPrimitiveRestartIndexNV = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glPrimitiveRestartNV");
+	glPrimitiveRestartNV = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glDetailTexFuncSGIS;
+extern void* glGetDetailTexFuncSGIS;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fe8f0
+bool ContextGL::initDetailTexFuncSGIS()
+{
+	void* proc = wglGetProcAddress("glDetailTexFuncSGIS");
+	glDetailTexFuncSGIS = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glGetDetailTexFuncSGIS");
+	glGetDetailTexFuncSGIS = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glFogFuncSGIS;
+extern void* glGetFogFuncSGIS;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fe930
+bool ContextGL::initFogFuncSGIS()
+{
+	void* proc = wglGetProcAddress("glFogFuncSGIS");
+	glFogFuncSGIS = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glGetFogFuncSGIS");
+	glGetFogFuncSGIS = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glSampleMaskSGIS;
+extern void* glSamplePatternSGIS;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fe970
+bool ContextGL::initSampleMaskSGIS()
+{
+	void* proc = wglGetProcAddress("glSampleMaskSGIS");
+	glSampleMaskSGIS = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glSamplePatternSGIS");
+	glSamplePatternSGIS = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glGetSharpenTexFuncSGIS;
+extern void* glSharpenTexFuncSGIS;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fe9b0
+bool ContextGL::initSharpenTexFuncSGIS()
+{
+	void* proc = wglGetProcAddress("glGetSharpenTexFuncSGIS");
+	glGetSharpenTexFuncSGIS = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glSharpenTexFuncSGIS");
+	glSharpenTexFuncSGIS = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

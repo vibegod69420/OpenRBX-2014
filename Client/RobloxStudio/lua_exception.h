@@ -45,6 +45,7 @@ public:
 	void __cdecl runErrorV(const char* fmt, ...);
 	int __cdecl setErrorData(int code, int level, int line);
 	const char* __cdecl getString(int index);
+	char* __cdecl prepBuffer();
 	// AUTO-GENERATED METHODS
 };
 

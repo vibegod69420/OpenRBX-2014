@@ -395,6 +395,16 @@ int __cdecl ScriptContext::reportError(const unsigned __int64* /*unused*/)
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008cfc50
+void ScriptContext::clearState()
+{
+	void* it;
+	void* state = *(void**)this;
+
+	((ScriptContextUnlinkHelper*)this)->unlink(&it, *(void**)state, state);
+	ScriptContextDeleteState(*(void**)this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

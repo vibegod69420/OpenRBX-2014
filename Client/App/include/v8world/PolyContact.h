@@ -27,6 +27,7 @@ public:
 	void __cdecl addEdge(void* edge);
 	void* __cdecl createFeature(void* arg2, void* arg3);
 	void __cdecl removeEdgeIndex(void* node, void* feature);
+	void __cdecl updateContact(int arg2, int arg3, void* arg4);
 	// AUTO-GENERATED METHODS
 };
 
