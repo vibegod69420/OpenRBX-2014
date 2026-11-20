@@ -35,6 +35,7 @@ public:
 	void __cdecl pushUserdata();
 	void __cdecl pushRBXScriptSignal();
 	void __cdecl pushGlobal();
+	void __cdecl pushGlobalResults();
 	// AUTO-GENERATED METHODS
 };
 
