@@ -53,6 +53,8 @@ public:
 	int __cdecl getCount() const;
 	int __cdecl sub_A34ED0();
 	void* __cdecl sub_A34D00(void* value);
+	int __cdecl sub_B72040();
+	void __cdecl sub_A34BF0(void* arg);
 	// AUTO-GENERATED METHODS
 };
 

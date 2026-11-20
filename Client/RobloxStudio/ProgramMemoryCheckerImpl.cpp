@@ -3122,6 +3122,129 @@ void ProgramMemoryCheckerImpl::init172()
 	sub_CF6609((void*)0x00DF8D10);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00dc1140
+void ProgramMemoryCheckerImpl::init173()
+{
+	int v[2];
+	((ProgramMemoryCheckerSetCreateFriendRequestUrlTarget*)0x01304378)->sub_9BB150(
+		0x009C19A0,
+		0,
+		(const char*)0x00E9499C,
+		(const char*)0x00E5DCF8,
+		3,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DF8DC0);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00dc1180
+void ProgramMemoryCheckerImpl::init174()
+{
+	int v[2];
+	((ProgramMemoryCheckerSetCreateFriendRequestUrlTarget*)0x01304308)->sub_9BB150(
+		0x009C1A70,
+		0,
+		(const char*)0x00E94974,
+		(const char*)0x00E5DCF8,
+		3,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DF8E70);
+}
+
+class ProgramMemoryCheckerInit175Target
+{
+public:
+	void sub_9D15F0(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dc2480
+void ProgramMemoryCheckerImpl::init175()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit175Target*)0x01305668)->sub_9D15F0(
+		0x234,
+		0,
+		(const char*)0x00E962E4,
+		(const char*)0x00E962D4,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DFA0F0);
+}
+
+class ProgramMemoryCheckerInit176Target
+{
+public:
+	void sub_9D16C0(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dc24c0
+void ProgramMemoryCheckerImpl::init176()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit176Target*)0x01305B70)->sub_9D16C0(
+		0x218,
+		0,
+		(const char*)0x00E9651C,
+		(const char*)0x00E73C50,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DFA150);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00dc2500
+void ProgramMemoryCheckerImpl::init177()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit176Target*)0x01305BA0)->sub_9D16C0(
+		0x21C,
+		0,
+		(const char*)0x00E96530,
+		(const char*)0x00E73C50,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DFA1B0);
+}
+
+class ProgramMemoryCheckerInit178Target
+{
+public:
+	void sub_9D1A80(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dc2590
+void ProgramMemoryCheckerImpl::init178()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit178Target*)0x01305758)->sub_9D1A80(
+		0x248,
+		0,
+		(const char*)0x00E9633C,
+		(const char*)0x00E83778,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DFA270);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00dc25d0
+void ProgramMemoryCheckerImpl::init179()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit178Target*)0x013056C8)->sub_9D1A80(
+		0x23C,
+		0,
+		(const char*)0x00E96318,
+		(const char*)0x00E83778,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DFA2D0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

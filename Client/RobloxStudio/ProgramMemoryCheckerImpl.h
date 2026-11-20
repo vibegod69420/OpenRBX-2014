@@ -188,6 +188,13 @@ public:
 	void init170();
 	void init171();
 	void init172();
+	void init173();
+	void init174();
+	void init175();
+	void init176();
+	void init177();
+	void init178();
+	void init179();
 	// AUTO-GENERATED METHODS
 };
 
