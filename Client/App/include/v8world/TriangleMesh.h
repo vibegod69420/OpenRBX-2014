@@ -54,6 +54,7 @@ public:
 	int __cdecl func_B6EA80();
 	int __cdecl func_B6F1A0();
 	int __cdecl func_B6F230();
+	int __cdecl func_B6EC20(void* co, int narg);
 	// AUTO-GENERATED METHODS
 };
 

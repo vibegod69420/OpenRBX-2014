@@ -634,6 +634,46 @@ int __cdecl TriangleMesh::func_B6F230()
 	return 0;
 }
 
+int sub_B6EDF0(void*, void*);
+int sub_A34D60(void*, int);
+void sub_A38A50(void*, const char*);
+int sub_A35620(void*, const char*, const char*);
+void sub_A36120(void*, void*, int);
+void sub_A35BD0(void*, void*);
+int sub_A36D80(void*, int);
+int sub_A35150(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b6ec20
+int __cdecl TriangleMesh::func_B6EC20(void* co, int narg)
+{
+	int status = sub_B6EDF0(this, co);
+	if (sub_A34D60(co, narg) == 0)
+		sub_A38A50(this, "too many arguments to resume");
+
+	if (status != 1)
+	{
+		sub_A35620(this, "cannot resume %s coroutine", reinterpret_cast<const char**>(0x00ED0EE0)[status]);
+		return -1;
+	}
+
+	sub_A36120(this, co, narg);
+	sub_A35BD0(this, co);
+
+	int res = sub_A36D80(co, narg);
+	if (res != 0 && res != 1)
+	{
+		sub_A36120(co, this, 1);
+		return -1;
+	}
+
+	int nres = sub_A35150(co);
+	if (sub_A34D60(this, nres + 1) == 0)
+		sub_A38A50(this, "too many results to resume");
+
+	sub_A36120(co, this, nres);
+	return nres;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

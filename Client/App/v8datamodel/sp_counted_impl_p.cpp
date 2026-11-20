@@ -371,6 +371,21 @@ void __cdecl sp_counted_impl_p::assign(void* src)
 	*(unsigned char*)this = *(unsigned char*)src;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0077d6a0
+void __cdecl sp_counted_impl_p::assignWord(void* src)
+{
+	*(unsigned short*)this = *(unsigned short*)src;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00a35150
+int __cdecl sp_counted_impl_p::getCount() const
+{
+	const char* base = reinterpret_cast<const char*>(this);
+	int v8 = *reinterpret_cast<const int*>(base + 8);
+	int vC = *reinterpret_cast<const int*>(base + 0xC);
+	return (v8 - vC) >> 4;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

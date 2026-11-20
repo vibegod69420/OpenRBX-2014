@@ -49,6 +49,8 @@ public:
 	void destroySubPtr0C_6610();
 	void disposeNuggetHistory();
 	void __cdecl assign(void* src);
+	void __cdecl assignWord(void* src);
+	int __cdecl getCount() const;
 	// AUTO-GENERATED METHODS
 };
 
