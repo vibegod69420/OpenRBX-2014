@@ -26,6 +26,7 @@ public:
 	int __cdecl getSeparatingEdgeCandidate();
 	void __cdecl accumulate(int value);
 	void __cdecl compute(void* param);
+	void __cdecl computePolyPoly(void* arg1, void* arg2);
 	// AUTO-GENERATED METHODS
 };
 

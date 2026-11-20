@@ -703,6 +703,38 @@ bool VertexLayout::initGL12()
 	return false;
 }
 
+extern void* g_glDrawArraysInstanced;
+extern void* g_glDrawElementsInstanced;
+extern void* g_glPrimitiveRestartIndex;
+extern void* g_glTexBuffer;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f40b0
+bool VertexLayout::initGL31()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glDrawArraysInstanced");
+	g_glDrawArraysInstanced = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glDrawElementsInstanced");
+	g_glDrawElementsInstanced = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glPrimitiveRestartIndex");
+	g_glPrimitiveRestartIndex = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glTexBuffer");
+	g_glTexBuffer = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

@@ -132,6 +132,84 @@ void __cdecl PolyPolyContact::compute(void* param)
 	}
 }
 
+void __cdecl sub_C181B0(PolyPolyContact* contact, void* edge);
+void __cdecl sub_C17D20(PolyPolyContact* contact, void* edge, int value);
+void __cdecl sub_C183E0(PolyPolyContact* contact, void* edge);
+
+// FUNCTION: ROBLOXSTUDIO 0x00c18bf0
+void __cdecl PolyPolyContact::computePolyPoly(void* arg1, void* arg2)
+{
+	int* edge = (int*)arg1;
+
+	sub_C181B0(this, arg1);
+
+	if (edge[0] == 12)
+	{
+		if (edge[4] != edge[5])
+		{
+			int c = edge[2];
+			if (c >= (int)*(unsigned char*)((char*)this + 0x32))
+				sub_C17D20(this, arg1, c);
+			else
+				sub_C183E0(this, arg1);
+		}
+	}
+	else
+	{
+		sub_C183E0(this, arg1);
+	}
+
+	if (edge[0] == 12)
+	{
+		int c = edge[2];
+		if ((c & 0x100) == 0)
+		{
+			if (c >= (int)*(unsigned char*)((char*)this + 0x32))
+				--*(int*)((char*)this + 0x24);
+		}
+	}
+
+	int oldCount = *(int*)((char*)this + 0x24);
+	{
+		unsigned char* obj = *(unsigned char**)this;
+		int limit = obj[0x4b];
+		int newCount = oldCount + 2;
+		if (newCount > limit)
+		{
+			if (newCount >= 250)
+			{
+				sub_BC88E0(*(void**)((char*)this + 0x0C), "function or expression too complex");
+			}
+			(*(unsigned char**)this)[0x4b] = (unsigned char)newCount;
+		}
+	}
+
+	*(int*)((char*)this + 0x24) += 2;
+
+	int res = sub_C18280(this, arg2);
+
+	unsigned int packed = (unsigned int)edge[2];
+	packed = (packed << 9) | (unsigned int)res;
+	packed = (packed << 8) | (unsigned int)oldCount;
+	packed = (packed << 6) | 0x0Bu;
+
+	sub_C18030(this, packed, *(void**)((char*)*(void**)((char*)this + 0x0C) + 8));
+
+	int* other = (int*)arg2;
+	if (other[0] == 12)
+	{
+		int c = other[2];
+		if ((c & 0x100) == 0)
+		{
+			if (c >= (int)*(unsigned char*)((char*)this + 0x32))
+				--*(int*)((char*)this + 0x24);
+		}
+	}
+
+	edge[2] = oldCount;
+	edge[0] = 12;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

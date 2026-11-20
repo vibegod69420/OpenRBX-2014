@@ -48,6 +48,7 @@ public:
 	bool initGLMultiDrawIndirect();
 	bool initARBTessellationShader();
 	bool initGL12();
+	bool initGL31();
 	// AUTO-GENERATED METHODS
 };
 
