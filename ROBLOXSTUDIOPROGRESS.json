@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20 03:07:58 UTC",
+  "updated_at": "2026-11-20 03:16:36 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 10.3791,
-  "implemented_total": 981,
-  "function_annotations": 981,
+  "matchable_coverage_pct": 10.4004,
+  "implemented_total": 983,
+  "function_annotations": 983,
   "stub_annotations": 0,
-  "perfect_100_count": 972,
-  "matched_real_functions": 972,
+  "perfect_100_count": 974,
+  "matched_real_functions": 974,
   "average_match_pct": 99.82,
-  "overall_function_coverage_pct": 2.3964,
-  "overall_byte_coverage_pct": 0.4323,
+  "overall_function_coverage_pct": 2.4013,
+  "overall_byte_coverage_pct": 0.4328,
   "usage": {
-    "calls_24h": 5596,
+    "calls_24h": 5586,
     "failures_24h": 0,
-    "completion_tokens_24h": 69208550,
-    "reasoning_tokens_24h": 67691489,
-    "avg_latency_s": 215.4
+    "completion_tokens_24h": 69125900,
+    "reasoning_tokens_24h": 67603277,
+    "avg_latency_s": 215.3
   },
   "functions": [
     {
@@ -2392,6 +2392,17 @@
       "kind": "FUNCTION",
       "name": "RBX::Graphics::ContextGL::assignIfNull_5b60",
       "mangled": "?assignIfNull_5b60@ContextGL@Graphics@RBX@@SAXPAHPBH@Z",
+      "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00605b80",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGL::assignIfNull_5b80",
+      "mangled": "?assignIfNull_5b80@ContextGL@Graphics@RBX@@SAXPAHPBH@Z",
       "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
       "orig_size": 24,
       "recomp_size": 24,
@@ -7444,6 +7455,17 @@
       "file": "Client/App/v8datamodel/stream_buffer.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00a34330",
+      "kind": "FUNCTION",
+      "name": "RBX::detail::sp_counted_impl_p::destroySubPtr0C_4330",
+      "mangled": "?destroySubPtr0C_4330@sp_counted_impl_p@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
+      "orig_size": 27,
+      "recomp_size": 27,
       "match_pct": 100.0,
       "matchable": true
     },
