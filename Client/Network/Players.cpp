@@ -68,6 +68,30 @@ void Players::func00c2cf10()
 	}
 }
 
+__declspec(dllimport) void* __cdecl allocationFailure();
+
+// FUNCTION: ROBLOXSTUDIO 0x00c27ce0
+Players::Players()
+{
+	*(volatile int*)((int*)this + 0) = 0;
+	*(int*)((int*)this + 1) = 0;
+	*(int*)((int*)this + 2) = 0;
+	*(int*)((int*)this + 3) = 0;
+	*(int*)((int*)this + 4) = 0;
+
+	void* head = ::operator new(8);
+	if (head == 0)
+		head = allocationFailure();
+
+	*(int*)this = (int)head;
+	*(volatile int*)head = 0;
+	*((int*)head + 1) = 0;
+	*(int*)*(int*)this = (int)this;
+
+	*(int*)((int*)this + 5) = 0;
+	*(int*)((int*)this + 6) = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

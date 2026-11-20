@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20 04:44:11 UTC",
+  "updated_at": "2026-11-20 04:52:47 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 10.7208,
-  "implemented_total": 1015,
-  "function_annotations": 1015,
+  "matchable_coverage_pct": 10.7314,
+  "implemented_total": 1016,
+  "function_annotations": 1016,
   "stub_annotations": 0,
-  "perfect_100_count": 1004,
-  "matched_real_functions": 1004,
+  "perfect_100_count": 1005,
+  "matched_real_functions": 1005,
   "average_match_pct": 99.81,
-  "overall_function_coverage_pct": 2.4753,
-  "overall_byte_coverage_pct": 0.4982,
+  "overall_function_coverage_pct": 2.4777,
+  "overall_byte_coverage_pct": 0.4991,
   "usage": {
-    "calls_24h": 5559,
+    "calls_24h": 5543,
     "failures_24h": 0,
-    "completion_tokens_24h": 69435703,
-    "reasoning_tokens_24h": 67869174,
-    "avg_latency_s": 216.7
+    "completion_tokens_24h": 69399644,
+    "reasoning_tokens_24h": 67830832,
+    "avg_latency_s": 217.2
   },
   "functions": [
     {
@@ -10062,6 +10062,17 @@
       "file": "Client/App/humanoid/RunningNoPhysics.cpp",
       "orig_size": 30,
       "recomp_size": 30,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c27ce0",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::Players::Players",
+      "mangled": "??0Players@Network@RBX@@QAE@XZ",
+      "file": "Client/Network/Players.cpp",
+      "orig_size": 94,
+      "recomp_size": 94,
       "match_pct": 100.0,
       "matchable": true
     },
