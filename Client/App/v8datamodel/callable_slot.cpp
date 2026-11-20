@@ -51,6 +51,14 @@ int callable_slot::notEmpty()
 	return value != data[4];
 }
 
+void __cdecl callable_slot_manage(void* slot, int state);
+
+// FUNCTION: ROBLOXSTUDIO 0x00966340
+void __cdecl callable_slot::clear()
+{
+	callable_slot_manage(this, 0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

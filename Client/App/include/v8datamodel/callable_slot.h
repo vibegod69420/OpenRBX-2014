@@ -21,6 +21,7 @@ public:
 	void* __cdecl get();
 	int size();
 	int notEmpty();
+	void __cdecl clear();
 	// AUTO-GENERATED METHODS
 };
 

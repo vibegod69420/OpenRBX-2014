@@ -5889,6 +5889,94 @@ void ProgramMemoryCheckerImpl::init314()
 	sub_CF6609((void*)0x00E026D0);
 }
 
+class ProgramMemoryCheckerInit315Target
+{
+public:
+	void sub_C24EA0(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7, int a8);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dd4810
+void ProgramMemoryCheckerImpl::init315()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit315Target*)0x01310590)->sub_C24EA0(
+		0x00C364C0,
+		0,
+		(const char*)0x00EEED38,
+		(const char*)0x01024CDC,
+		0,
+		1,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00E099A0);
+}
+
+class ProgramMemoryCheckerSubC3F980Target
+{
+public:
+	void sub_C3F980(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7, int a8);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dd5b90
+void ProgramMemoryCheckerImpl::init316()
+{
+	int v[2];
+	((ProgramMemoryCheckerSubC3F980Target*)0x01311168)->sub_C3F980(
+		0x00C4A3F0,
+		0,
+		(const char*)0x00EF05D8,
+		(const char*)0x00EF05CC,
+		0x32,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00E0B1D0);
+}
+
+class ProgramMemoryCheckerInit317Target
+{
+public:
+	void sub_C3F5F0(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7, int a8);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dd6340
+void ProgramMemoryCheckerImpl::init317()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit317Target*)0x013118B8)->sub_C3F5F0(
+		0x00C4D1C0,
+		0,
+		(const char*)0x00EF0368,
+		(const char*)0x00EF0360,
+		1,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00E0BCE0);
+}
+
+class ProgramMemoryCheckerInit318Target
+{
+public:
+	void sub_C79D90(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7, int a8);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dd9580
+void ProgramMemoryCheckerImpl::init318()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit318Target*)0x01313A60)->sub_C79D90(
+		0x00C85CD0,
+		0,
+		(const char*)0x00EF76C4,
+		(const char*)0x00EF76B4,
+		0,
+		1,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00E0DA50);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
