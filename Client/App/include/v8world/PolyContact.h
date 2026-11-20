@@ -31,6 +31,7 @@ public:
 	void __cdecl checkLimit(void* arg2);
 	void __cdecl writeQuad(void* a, void* b, void* c, void* d);
 	void __cdecl writeTri(void* a, void* b, void* c, void* d);
+	void __cdecl initContact(void* contact);
 	// AUTO-GENERATED METHODS
 };
 

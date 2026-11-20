@@ -386,6 +386,61 @@ void __cdecl PolyContact::writeTri(void* a, void* b, void* c, void* d)
 	*(int*)(base20 + offset + 8) = *(int*)(dst + 0x08);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00bce710
+void* __cdecl PolyContact_sub_BC67C0(void* arg);
+void* __cdecl PolyContact_sub_BC9AD0(void* arg, int a, int b);
+void __cdecl sub_A36700(void* obj, int arg);
+
+void __cdecl PolyContact::initContact(void* contact)
+{
+	void* obj34 = *(void**)((char*)this + 0x34);
+	void* v1 = PolyContact_sub_BC67C0(obj34);
+
+	*(void**)contact = v1;
+	*(void**)((char*)contact + 8) = *(void**)((char*)this + 0x30);
+	*(void**)((char*)contact + 0x0C) = this;
+	*(void**)((char*)contact + 0x10) = obj34;
+	*(void**)((char*)this + 0x30) = contact;
+
+	*(int*)((char*)contact + 0x18) = 0;
+	*(int*)((char*)contact + 0x1C) = -1;
+	*(int*)((char*)contact + 0x20) = -1;
+	*(int*)((char*)contact + 0x24) = 0;
+	*(int*)((char*)contact + 0x28) = 0;
+	*(int*)((char*)contact + 0x2C) = 0;
+	*(short*)((char*)contact + 0x30) = 0;
+	*(unsigned char*)((char*)contact + 0x32) = 0;
+	*(int*)((char*)contact + 0x14) = 0;
+
+	*(void**)((char*)v1 + 0x20) = *(void**)((char*)this + 0x40);
+	*(unsigned char*)((char*)v1 + 0x4B) = 2;
+
+	void* v2 = PolyContact_sub_BC9AD0(obj34, 0, 0);
+	*(void**)((char*)contact + 4) = v2;
+
+	void* cur = *(void**)((char*)obj34 + 8);
+	*(void**)cur = v2;
+	*(int*)((char*)cur + 8) = 5;
+
+	if (*(char**)((char*)obj34 + 0x1C) - *(char**)((char*)obj34 + 8) <= 0x10)
+	{
+		sub_A36700(obj34, 1);
+	}
+
+	*(char**)((char*)obj34 + 8) += 0x10;
+
+	cur = *(void**)((char*)obj34 + 8);
+	*(void**)cur = v1;
+	*(int*)((char*)cur + 8) = 9;
+
+	if (*(char**)((char*)obj34 + 0x1C) - *(char**)((char*)obj34 + 8) <= 0x10)
+	{
+		sub_A36700(obj34, 1);
+	}
+
+	*(char**)((char*)obj34 + 8) += 0x10;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
