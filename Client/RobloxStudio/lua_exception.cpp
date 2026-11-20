@@ -823,6 +823,45 @@ void __cdecl lua_exception::rawseti(int index, int n)
 	*(char**)((char*)this + 8) -= 0x10;
 }
 
+void* __cdecl index2adr(int state, int index);
+void __cdecl sub_A379C0(lua_exception* L, const char* fmt, ...);
+void* __cdecl sub_BC9C60(lua_exception* L, void* t, void* key);
+void __cdecl sub_BC6CE0(lua_exception* L, void* o);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a358d0
+void __cdecl lua_exception::rawset(int index)
+{
+	void** slot = (void**)index2adr((int)this, index);
+
+	if (*((unsigned char*)*slot + 7))
+	{
+		sub_A379C0(this, "Attempt to modify a readonly table");
+	}
+
+	char* top = *(char**)((char*)this + 8);
+	void* cell = sub_BC9C60(this, *slot, top - 0x20);
+
+	*(int*)cell = *(int*)(top - 0x10);
+	*((int*)cell + 1) = *(int*)(top - 0x0C);
+	*((int*)cell + 2) = *(int*)(top - 0x08);
+
+	char* curTop = *(char**)((char*)this + 8);
+	if (*(int*)(curTop - 8) >= 4)
+	{
+		void* val = *(void**)(curTop - 0x10);
+		if (*((unsigned char*)val + 5) & 3)
+		{
+			void* t = *slot;
+			if (*((unsigned char*)t + 5) & 4)
+			{
+				sub_BC6CE0(this, t);
+			}
+		}
+	}
+
+	*(char**)((char*)this + 8) += -0x20;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
