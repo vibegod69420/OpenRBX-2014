@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20 00:54:21 UTC",
+  "updated_at": "2026-11-20 01:03:15 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 10.1014,
-  "implemented_total": 953,
-  "function_annotations": 953,
+  "matchable_coverage_pct": 10.1121,
+  "implemented_total": 954,
+  "function_annotations": 954,
   "stub_annotations": 0,
-  "perfect_100_count": 946,
-  "matched_real_functions": 946,
+  "perfect_100_count": 947,
+  "matched_real_functions": 947,
   "average_match_pct": 99.84,
-  "overall_function_coverage_pct": 2.3323,
-  "overall_byte_coverage_pct": 0.4073,
+  "overall_function_coverage_pct": 2.3348,
+  "overall_byte_coverage_pct": 0.4082,
   "usage": {
-    "calls_24h": 5883,
+    "calls_24h": 5866,
     "failures_24h": 0,
-    "completion_tokens_24h": 71148033,
-    "reasoning_tokens_24h": 69649417,
-    "avg_latency_s": 211.7
+    "completion_tokens_24h": 71093210,
+    "reasoning_tokens_24h": 69591839,
+    "avg_latency_s": 212.0
   },
   "functions": [
     {
@@ -7463,6 +7463,17 @@
       "kind": "FUNCTION",
       "name": "RBX::RBX::BallBallContact::allocateFromPool",
       "mangled": "?allocateFromPool@BallBallContact@RBX@@QAEPAXXZ",
+      "file": "Client/App/v8world/BallBallContact.cpp",
+      "orig_size": 89,
+      "recomp_size": 89,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00a4fa00",
+      "kind": "FUNCTION",
+      "name": "RBX::RBX::BallBallContact::allocateFromNew",
+      "mangled": "?allocateFromNew@BallBallContact@RBX@@QAEPAXXZ",
       "file": "Client/App/v8world/BallBallContact.cpp",
       "orig_size": 89,
       "recomp_size": 89,

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 00:54:21 UTC",
+ "updated_at": "2026-11-20 01:03:15 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 10.1014,
- "implemented_total": 953,
- "function_annotations": 953,
+ "matchable_coverage_pct": 10.1121,
+ "implemented_total": 954,
+ "function_annotations": 954,
  "stub_annotations": 0,
- "perfect_100_count": 946,
- "matched_real_functions": 946,
+ "perfect_100_count": 947,
+ "matched_real_functions": 947,
  "average_match_pct": 99.84,
- "overall_function_coverage_pct": 2.3323,
- "overall_byte_coverage_pct": 0.4073,
+ "overall_function_coverage_pct": 2.3348,
+ "overall_byte_coverage_pct": 0.4082,
  "usage": {
-  "calls_24h": 5883,
+  "calls_24h": 5866,
   "failures_24h": 0,
-  "completion_tokens_24h": 71148033,
-  "reasoning_tokens_24h": 69649417,
-  "avg_latency_s": 211.7
+  "completion_tokens_24h": 71093210,
+  "reasoning_tokens_24h": 69591839,
+  "avg_latency_s": 212.0
  },
- "functions_total": 953,
+ "functions_total": 954,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8world",
-   "matched": 101,
-   "functions": 101,
-   "bytes": 5342
+   "matched": 102,
+   "functions": 102,
+   "bytes": 5431
   },
   {
    "name": "Rendering/g3d",
@@ -4695,9 +4695,21 @@
    "matched": 946,
    "implemented": 953,
    "pct": 10.1014
+  },
+  {
+   "t": "2026-11-20 01:03:15 UTC",
+   "matched": 947,
+   "implemented": 954,
+   "pct": 10.1121
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T00:59:36",
+   "address": "0x00a4fa00",
+   "name": "RBX::RBX::BallBallContact::allocateFromNew",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T00:46:59",
    "address": "0x0076f3f0",
@@ -5411,13 +5423,7 @@
    "address": "0x00a2b610",
    "name": "std::filtering_stream::sub_a2b610",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T17:21:06",
-   "address": "0x006d6760",
-   "name": "G3D::Log::getCommon",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 29.39
+ "match_rate_per_hour": 29.29
 }

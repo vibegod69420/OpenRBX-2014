@@ -19,6 +19,7 @@ public:
 	int isColliding();
 	void*allocate();
 	void*allocateFromPool();
+	void*allocateFromNew();
 	// AUTO-GENERATED METHODS
 };
 
