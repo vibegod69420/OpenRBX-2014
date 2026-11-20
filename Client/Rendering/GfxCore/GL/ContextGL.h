@@ -104,6 +104,8 @@ public:
 	bool initFrameTrackingI3D();
 	bool initDepthBufferFloatNV();
 	bool initPointParameterEXT();
+	bool initFogCoordEXT();
+	bool initVideoCaptureNV();
 	// AUTO-GENERATED METHODS
 };
 

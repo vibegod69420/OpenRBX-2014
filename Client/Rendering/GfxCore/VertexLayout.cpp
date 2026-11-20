@@ -1859,6 +1859,50 @@ bool VertexLayout::initARBTextureStorageMultisample()
 	return false;
 }
 
+extern void* g_glBindVertexBuffer;
+extern void* g_glVertexAttribBinding;
+extern void* g_glVertexAttribFormat;
+extern void* g_glVertexAttribIFormat;
+extern void* g_glVertexAttribLFormat;
+extern void* g_glVertexBindingDivisor;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f75f0
+bool VertexLayout::initARBVertexAttribBinding()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glBindVertexBuffer");
+	g_glBindVertexBuffer = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glVertexAttribBinding");
+	g_glVertexAttribBinding = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttribFormat");
+	g_glVertexAttribFormat = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttribIFormat");
+	g_glVertexAttribIFormat = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttribLFormat");
+	g_glVertexAttribLFormat = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexBindingDivisor");
+	g_glVertexBindingDivisor = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

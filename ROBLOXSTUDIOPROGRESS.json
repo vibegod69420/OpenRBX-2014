@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20 13:45:35 UTC",
+  "updated_at": "2026-11-20 13:54:22 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,20 +16,20 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 14.5435,
-  "implemented_total": 1375,
-  "function_annotations": 1375,
+  "matchable_coverage_pct": 14.6396,
+  "implemented_total": 1384,
+  "function_annotations": 1384,
   "stub_annotations": 0,
-  "perfect_100_count": 1362,
-  "matched_real_functions": 1362,
+  "perfect_100_count": 1371,
+  "matched_real_functions": 1371,
   "average_match_pct": 99.81,
-  "overall_function_coverage_pct": 3.3579,
-  "overall_byte_coverage_pct": 0.7787,
+  "overall_function_coverage_pct": 3.3801,
+  "overall_byte_coverage_pct": 0.7867,
   "usage": {
-    "calls_24h": 5426,
+    "calls_24h": 5421,
     "failures_24h": 0,
-    "completion_tokens_24h": 66970016,
-    "reasoning_tokens_24h": 65308730,
+    "completion_tokens_24h": 66961051,
+    "reasoning_tokens_24h": 65300595,
     "avg_latency_s": 211.5
   },
   "functions": [
@@ -2641,6 +2641,17 @@
       "matchable": true
     },
     {
+      "address": "0x005f75f0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::VertexLayout::initARBVertexAttribBinding",
+      "mangled": "?initARBVertexAttribBinding@VertexLayout@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/VertexLayout.cpp",
+      "orig_size": 143,
+      "recomp_size": 143,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x005f7dd0",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::VertexLayout::initARBVertexShader",
@@ -2791,6 +2802,17 @@
       "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
       "orig_size": 86,
       "recomp_size": 54,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x005fa350",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGL::initFogCoordEXT",
+      "mangled": "?initFogCoordEXT@ContextGL@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
+      "orig_size": 121,
+      "recomp_size": 121,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -3198,6 +3220,17 @@
       "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
       "orig_size": 99,
       "recomp_size": 99,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00604450",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGL::initVideoCaptureNV",
+      "mangled": "?initVideoCaptureNV@ContextGL@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
+      "orig_size": 121,
+      "recomp_size": 121,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -7305,6 +7338,17 @@
       "matchable": true
     },
     {
+      "address": "0x008ccab0",
+      "kind": "FUNCTION",
+      "name": "check",
+      "mangled": "?getScriptStateNode@ScriptContext@RBX@@QAAPAXXZ",
+      "file": "Client/App/script/ScriptContext.cpp",
+      "orig_size": 86,
+      "recomp_size": 86,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x008cfbc0",
       "kind": "FUNCTION",
       "name": "unlink",
@@ -9963,6 +10007,17 @@
       "file": "Client/RobloxStudio/lua_exception.cpp",
       "orig_size": 45,
       "recomp_size": 45,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00a35850",
+      "kind": "FUNCTION",
+      "name": "lua_exception::rawget",
+      "mangled": "?rawget@lua_exception@@QAAXH@Z",
+      "file": "Client/RobloxStudio/lua_exception.cpp",
+      "orig_size": 56,
+      "recomp_size": 56,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -14796,6 +14851,17 @@
       "matchable": true
     },
     {
+      "address": "0x00dc1ce0",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init80",
+      "mangled": "?init80@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 60,
+      "recomp_size": 60,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00dc1d20",
       "kind": "FUNCTION",
       "name": "ProgramMemoryCheckerImpl::init43",
@@ -14803,6 +14869,17 @@
       "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
       "orig_size": 57,
       "recomp_size": 57,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00dc1d60",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init81",
+      "mangled": "?init81@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 60,
+      "recomp_size": 60,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -14836,6 +14913,17 @@
       "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
       "orig_size": 57,
       "recomp_size": 57,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00dc1e60",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init82",
+      "mangled": "?init82@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 60,
+      "recomp_size": 60,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -14924,6 +15012,17 @@
       "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
       "orig_size": 56,
       "recomp_size": 56,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00dd0490",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init83",
+      "mangled": "?init83@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 60,
+      "recomp_size": 60,
       "match_pct": 100.0,
       "matchable": true
     },

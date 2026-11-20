@@ -444,6 +444,73 @@ void __cdecl ScriptContext::releaseSharedCount(void* ptr)
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008ccab0
+struct ScriptContext_StateNode;
+
+struct ScriptContext_StateChecker
+{
+	unsigned char __thiscall check(void* arg);
+};
+
+struct ScriptContext_StateNode
+{
+	unsigned char pad00[0x1C];
+	unsigned char pad1C[0x0C];
+	ScriptContext_StateChecker* checker; // 0x28
+	unsigned char pad2C[0x0C];
+	ScriptContext_StateNode* next;       // 0x38
+
+	ScriptContext_StateNode* __thiscall getDeepest();
+	void* __thiscall tailTarget();
+};
+
+void* __cdecl ScriptContext_GetGlobalState();
+
+void* __cdecl ScriptContext::getScriptStateNode()
+{
+	ScriptContext_StateNode* self = (ScriptContext_StateNode*)this;
+	if (!self)
+		goto fail;
+
+	{
+		ScriptContext_StateNode* result;
+		ScriptContext_StateNode* p = self->next;
+		if (p)
+		{
+			ScriptContext_StateNode* p2 = p->next;
+			if (p2)
+				result = p2->getDeepest();
+			else
+				result = p;
+		}
+		else
+		{
+			result = self;
+		}
+
+		if (!result)
+			goto fail;
+
+		unsigned char* sub = (unsigned char*)result + 0x1C;
+		if (!sub)
+			goto fail;
+
+		ScriptContext_StateChecker* checker = *(ScriptContext_StateChecker**)(sub + 0x0C);
+		void* globalState = ScriptContext_GetGlobalState();
+		if (!checker->check(globalState))
+			goto fail;
+
+		ScriptContext_StateNode* target = (ScriptContext_StateNode*)(sub - 0x1C);
+		if (!target)
+			goto fail;
+
+		return target->tailTarget();
+	}
+
+fail:
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

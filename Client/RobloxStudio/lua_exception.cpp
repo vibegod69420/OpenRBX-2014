@@ -477,6 +477,21 @@ double __cdecl lua_exception::tonumber(int index)
 	return *(double*)o;
 }
 
+// Forward declaration for callee at 0x00bc98e0
+void* __cdecl sub_BC98E0(void* t, void* key);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a35850
+void __cdecl lua_exception::rawget(int index)
+{
+	void* o = index2adr((int)this, index);
+	char* res = (char*)sub_BC98E0(*(void**)o, *(char**)((char*)this + 8) - 0x10);
+	char* top = *(char**)((char*)this + 8);
+
+	*(int*)(top - 0x10) = *(int*)res;
+	*(int*)(top - 0x0C) = *(int*)(res + 4);
+	*(int*)(top - 0x08) = *(int*)(res + 8);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

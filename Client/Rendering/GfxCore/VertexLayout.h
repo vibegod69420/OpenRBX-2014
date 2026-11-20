@@ -81,6 +81,7 @@ public:
 	bool initEXTDebugMarker();
 	bool initAMDVertexShaderTessellator();
 	bool initARBTextureStorageMultisample();
+	bool initARBVertexAttribBinding();
 	// AUTO-GENERATED METHODS
 };
 

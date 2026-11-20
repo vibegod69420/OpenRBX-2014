@@ -1267,6 +1267,80 @@ bool ContextGL::initPointParameterEXT()
 	return false;
 }
 
+extern void* glFogCoordPointerEXT;
+extern void* glFogCoorddEXT;
+extern void* glFogCoorddvEXT;
+extern void* glFogCoordfEXT;
+extern void* glFogCoordfvEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fa350
+bool ContextGL::initFogCoordEXT()
+{
+	void* (__stdcall *getProc)(const char*) = wglGetProcAddress;
+
+	void* proc = getProc("glFogCoordPointerEXT");
+	glFogCoordPointerEXT = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glFogCoorddEXT");
+	glFogCoorddEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glFogCoorddvEXT");
+	glFogCoorddvEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glFogCoordfEXT");
+	glFogCoordfEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glFogCoordfvEXT");
+	glFogCoordfvEXT = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* wglBindVideoCaptureDeviceNV;
+extern void* wglEnumerateVideoCaptureDevicesNV;
+extern void* wglLockVideoCaptureDeviceNV;
+extern void* wglQueryVideoCaptureDeviceNV;
+extern void* wglReleaseVideoCaptureDeviceNV;
+
+// FUNCTION: ROBLOXSTUDIO 0x00604450
+bool ContextGL::initVideoCaptureNV()
+{
+	void* (__stdcall *getProc)(const char*) = wglGetProcAddress;
+
+	void* proc = getProc("wglBindVideoCaptureDeviceNV");
+	wglBindVideoCaptureDeviceNV = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("wglEnumerateVideoCaptureDevicesNV");
+	wglEnumerateVideoCaptureDevicesNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglLockVideoCaptureDeviceNV");
+	wglLockVideoCaptureDeviceNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglQueryVideoCaptureDeviceNV");
+	wglQueryVideoCaptureDeviceNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglReleaseVideoCaptureDeviceNV");
+	wglReleaseVideoCaptureDeviceNV = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
