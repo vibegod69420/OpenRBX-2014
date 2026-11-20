@@ -235,6 +235,18 @@ void sp_counted_impl_p::disposeHeldMap()
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0077b120
+int sp_counted_impl_p::getGlobal_b120() const
+{
+	return s_value_0077b120;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x0077b130
+int sp_counted_impl_p::getGlobal_b130() const
+{
+	return s_value_0077b130;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

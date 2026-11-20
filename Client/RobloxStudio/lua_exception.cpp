@@ -395,6 +395,37 @@ int __cdecl lua_exception::orderError(void* p1, void* p2)
 	return 0;
 }
 
+// Forward declarations for callees
+int __cdecl sub_A37410(lua_exception* L, void* p, int n);
+void __cdecl sub_A34CD0(lua_exception* L, void* src);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a37b60
+int __cdecl lua_exception::findLocal(void* ci, int n)
+{
+	char* upval = (char*)*(void**)((char*)this + 0x28) + *(int*)((char*)ci + 0x60) * 24;
+	int result = sub_A37410(this, upval, n);
+	if (result)
+	{
+		sub_A34CD0(this, *(char**)upval - 16 + n * 16);
+	}
+	return result;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00a3aff0
+void* __cdecl lua_exception::sub_A3AFF0(int value)
+{
+	lua_exception* L = this;
+	void* p = sub_A353E0(L, 4);
+	if (p)
+	{
+		*(int*)p = value;
+	}
+
+	sub_A35060(L, -10000, *(int*)0x0124EAD0);
+	sub_A35BF0(L, -2);
+	return p;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

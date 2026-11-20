@@ -70,6 +70,9 @@ public:
 	bool initGL40();
 	bool initARBShadingLanguageInclude();
 	bool initGL21();
+	bool initARBComputeShader();
+	bool initAppleVertexProgramEvaluators();
+	bool initARBSync();
 	// AUTO-GENERATED METHODS
 };
 

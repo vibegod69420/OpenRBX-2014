@@ -50,6 +50,8 @@ public:
 	int __cdecl yield(int nresults);
 	void __cdecl rawgeti(int index, int n);
 	int __cdecl orderError(void* p1, void* p2);
+	int __cdecl findLocal(void* ci, int n);
+	void* __cdecl sub_A3AFF0(int value);
 	// AUTO-GENERATED METHODS
 };
 

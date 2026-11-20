@@ -879,6 +879,115 @@ bool ContextGL::initMapTexture2DINTEL()
 	return false;
 }
 
+extern void* glActiveProgramEXT;
+extern void* glCreateShaderProgramEXT;
+extern void* glUseShaderProgramEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fb020
+bool ContextGL::initSeparateShaderObjectsEXT()
+{
+	void* (__stdcall *getProc)(const char*) = wglGetProcAddress;
+
+	void* proc = getProc("glActiveProgramEXT");
+	glActiveProgramEXT = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glCreateShaderProgramEXT");
+	glCreateShaderProgramEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glUseShaderProgramEXT");
+	glUseShaderProgramEXT = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glGetMultisamplefvNV;
+extern void* glSampleMaskIndexedNV;
+extern void* glTexRenderbufferNV;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fc3b0
+bool ContextGL::initExplicitMultisampleNV()
+{
+	void* (__stdcall *getProc)(const char*) = wglGetProcAddress;
+
+	void* proc = getProc("glGetMultisamplefvNV");
+	glGetMultisamplefvNV = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glSampleMaskIndexedNV");
+	glSampleMaskIndexedNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glTexRenderbufferNV");
+	glTexRenderbufferNV = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glCombinerStageParameterfvNV;
+extern void* glGetCombinerStageParameterfvNV;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fd570
+bool ContextGL::initRegisterCombiners2NV()
+{
+	void* proc = wglGetProcAddress("glCombinerStageParameterfvNV");
+	glCombinerStageParameterfvNV = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glGetCombinerStageParameterfvNV");
+	glGetCombinerStageParameterfvNV = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glProgramBufferParametersIivNV;
+extern void* glProgramBufferParametersIuivNV;
+extern void* glProgramBufferParametersfvNV;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fce50
+bool ContextGL::initProgramBufferParametersNV()
+{
+	void* (__stdcall *getProc)(const char*) = wglGetProcAddress;
+
+	void* proc = getProc("glProgramBufferParametersIivNV");
+	glProgramBufferParametersIivNV = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glProgramBufferParametersIuivNV");
+	glProgramBufferParametersIuivNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glProgramBufferParametersfvNV");
+	glProgramBufferParametersfvNV = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glDrawArraysInstancedEXT;
+extern void* glDrawElementsInstancedEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fa2f0
+bool ContextGL::initDrawInstancedEXT()
+{
+	void* proc = wglGetProcAddress("glDrawArraysInstancedEXT");
+	glDrawArraysInstancedEXT = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glDrawElementsInstancedEXT");
+	glDrawElementsInstancedEXT = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

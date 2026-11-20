@@ -5,6 +5,8 @@
 
 namespace RBX {
 
+extern int s_value_0077b120;
+extern int s_value_0077b130;
 // AUTO-GENERATED HELPERS
 
 class sp_counted_impl_p
@@ -39,6 +41,8 @@ public:
 	void destroySubPtr0C_4330();
 	void destroySubPtr0C_fda0();
 	void disposeHeldMap();
+	int getGlobal_b120() const;
+	int getGlobal_b130() const;
 	// AUTO-GENERATED METHODS
 };
 

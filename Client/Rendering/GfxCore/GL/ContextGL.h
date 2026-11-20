@@ -88,6 +88,11 @@ public:
 	bool initLightTextureEXT();
 	bool initFramebufferTextureEXT();
 	bool initMapTexture2DINTEL();
+	bool initSeparateShaderObjectsEXT();
+	bool initExplicitMultisampleNV();
+	bool initRegisterCombiners2NV();
+	bool initProgramBufferParametersNV();
+	bool initDrawInstancedEXT();
 	// AUTO-GENERATED METHODS
 };
 

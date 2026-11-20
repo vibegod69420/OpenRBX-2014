@@ -1453,6 +1453,128 @@ bool VertexLayout::initGL21()
 	return false;
 }
 
+extern void* g_glDispatchCompute;
+extern void* g_glDispatchComputeIndirect;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f4e60
+bool VertexLayout::initARBComputeShader()
+{
+	void* first = g_glGetProcAddress("glDispatchCompute");
+	g_glDispatchCompute = first;
+	unsigned char missing = (first == 0);
+
+	void* second = g_glGetProcAddress("glDispatchComputeIndirect");
+	g_glDispatchComputeIndirect = second;
+
+	if (second == 0)
+		return true;
+
+	if (missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glDisableVertexAttribAPPLE;
+extern void* g_glEnableVertexAttribAPPLE;
+extern void* g_glIsVertexAttribEnabledAPPLE;
+extern void* g_glMapVertexAttrib1dAPPLE;
+extern void* g_glMapVertexAttrib1fAPPLE;
+extern void* g_glMapVertexAttrib2dAPPLE;
+extern void* g_glMapVertexAttrib2fAPPLE;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f4a00
+bool VertexLayout::initAppleVertexProgramEvaluators()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glDisableVertexAttribAPPLE");
+	g_glDisableVertexAttribAPPLE = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glEnableVertexAttribAPPLE");
+	g_glEnableVertexAttribAPPLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glIsVertexAttribEnabledAPPLE");
+	g_glIsVertexAttribEnabledAPPLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMapVertexAttrib1dAPPLE");
+	g_glMapVertexAttrib1dAPPLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMapVertexAttrib1fAPPLE");
+	g_glMapVertexAttrib1fAPPLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMapVertexAttrib2dAPPLE");
+	g_glMapVertexAttrib2dAPPLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMapVertexAttrib2fAPPLE");
+	g_glMapVertexAttrib2fAPPLE = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glClientWaitSync;
+extern void* g_glDeleteSync;
+extern void* g_glFenceSync;
+extern void* g_glGetInteger64v;
+extern void* g_glGetSynciv;
+extern void* g_glIsSync;
+extern void* g_glWaitSync;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f6df0
+bool VertexLayout::initARBSync()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glClientWaitSync");
+	g_glClientWaitSync = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glDeleteSync");
+	g_glDeleteSync = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glFenceSync");
+	g_glFenceSync = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetInteger64v");
+	g_glGetInteger64v = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetSynciv");
+	g_glGetSynciv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glIsSync");
+	g_glIsSync = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glWaitSync");
+	g_glWaitSync = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
