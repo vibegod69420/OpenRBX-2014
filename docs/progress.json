@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 06:07:48 UTC",
+ "updated_at": "2026-11-20 06:32:51 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 11.0304,
- "implemented_total": 1045,
- "function_annotations": 1045,
+ "matchable_coverage_pct": 11.0411,
+ "implemented_total": 1046,
+ "function_annotations": 1046,
  "stub_annotations": 0,
- "perfect_100_count": 1033,
- "matched_real_functions": 1033,
+ "perfect_100_count": 1034,
+ "matched_real_functions": 1034,
  "average_match_pct": 99.81,
- "overall_function_coverage_pct": 2.5468,
- "overall_byte_coverage_pct": 0.521,
+ "overall_function_coverage_pct": 2.5492,
+ "overall_byte_coverage_pct": 0.5212,
  "usage": {
-  "calls_24h": 5492,
+  "calls_24h": 5434,
   "failures_24h": 0,
-  "completion_tokens_24h": 68873683,
-  "reasoning_tokens_24h": 67278301,
-  "avg_latency_s": 216.6
+  "completion_tokens_24h": 68213139,
+  "reasoning_tokens_24h": 66631254,
+  "avg_latency_s": 217.0
  },
- "functions_total": 1045,
+ "functions_total": 1046,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -54,9 +54,9 @@
   },
   {
    "name": "Rendering/GfxCore",
-   "matched": 72,
-   "functions": 72,
-   "bytes": 2910
+   "matched": 73,
+   "functions": 73,
+   "bytes": 2934
   },
   {
    "name": "App/v8kernel",
@@ -4875,9 +4875,21 @@
    "matched": 1033,
    "implemented": 1045,
    "pct": 11.0304
+  },
+  {
+   "t": "2026-11-20 06:32:51 UTC",
+   "matched": 1034,
+   "implemented": 1046,
+   "pct": 11.0411
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T06:29:07",
+   "address": "0x00605c40",
+   "name": "RBX::Graphics::ContextGL::assignIfNull_5c40",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T06:03:38",
    "address": "0x00db4350",
@@ -5591,13 +5603,7 @@
    "address": "0x00a3cdc0",
    "name": "lua_exception::dispatchGlobalState3",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T23:27:36",
-   "address": "0x00b534f0",
-   "name": "RBX::Kernel::getSubField24_A4_94_84_74",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 27.61
+ "match_rate_per_hour": 27.34
 }
