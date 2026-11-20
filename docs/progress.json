@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 08:18:03 UTC",
+ "updated_at": "2026-11-20 08:27:09 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 11.3828,
- "implemented_total": 1079,
- "function_annotations": 1079,
+ "matchable_coverage_pct": 11.4042,
+ "implemented_total": 1081,
+ "function_annotations": 1081,
  "stub_annotations": 0,
- "perfect_100_count": 1066,
- "matched_real_functions": 1066,
+ "perfect_100_count": 1068,
+ "matched_real_functions": 1068,
  "average_match_pct": 99.76,
- "overall_function_coverage_pct": 2.6281,
- "overall_byte_coverage_pct": 0.5403,
+ "overall_function_coverage_pct": 2.6331,
+ "overall_byte_coverage_pct": 0.5416,
  "usage": {
-  "calls_24h": 5347,
+  "calls_24h": 5342,
   "failures_24h": 0,
-  "completion_tokens_24h": 67712680,
-  "reasoning_tokens_24h": 66093125,
-  "avg_latency_s": 218.8
+  "completion_tokens_24h": 67686544,
+  "reasoning_tokens_24h": 66061626,
+  "avg_latency_s": 218.9
  },
- "functions_total": 1079,
+ "functions_total": 1081,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -54,9 +54,9 @@
   },
   {
    "name": "Rendering/GfxCore",
-   "matched": 78,
-   "functions": 78,
-   "bytes": 3107
+   "matched": 79,
+   "functions": 79,
+   "bytes": 3184
   },
   {
    "name": "App/v8kernel",
@@ -72,9 +72,9 @@
   },
   {
    "name": "App/script",
-   "matched": 54,
-   "functions": 54,
-   "bytes": 2247
+   "matched": 55,
+   "functions": 55,
+   "bytes": 2294
   },
   {
    "name": "App/humanoid",
@@ -4947,9 +4947,27 @@
    "matched": 1066,
    "implemented": 1079,
    "pct": 11.3828
+  },
+  {
+   "t": "2026-11-20 08:27:09 UTC",
+   "matched": 1068,
+   "implemented": 1081,
+   "pct": 11.4042
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T08:20:06",
+   "address": "0x005f4b30",
+   "name": "RBX::Graphics::VertexLayout::initARBBaseInstance",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T08:18:12",
+   "address": "0x008ddbd0",
+   "name": "RBX::ScriptContext::reportError",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T08:13:59",
    "address": "0x00dc18c0",
@@ -5657,19 +5675,7 @@
    "address": "0x00c794f0",
    "name": "std::chainbuf::write_ptr",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T01:31:07",
-   "address": "0x0094b130",
-   "name": "RBX::Network::PersistentDataStore::sub_94b130",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T01:30:11",
-   "address": "0x00a3ce00",
-   "name": "lua_exception::dispatchGlobalState5",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 26.93
+ "match_rate_per_hour": 26.88
 }

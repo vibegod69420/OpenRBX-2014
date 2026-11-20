@@ -409,6 +409,32 @@ bool VertexLayout::initAppleVertexArrayRange()
 	return false;
 }
 
+extern void* g_glDrawArraysInstancedBaseInstance;
+extern void* g_glDrawElementsInstancedBaseInstance;
+extern void* g_glDrawElementsInstancedBaseVertexBaseInstance;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f4b30
+bool VertexLayout::initARBBaseInstance()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glDrawArraysInstancedBaseInstance");
+	g_glDrawArraysInstancedBaseInstance = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glDrawElementsInstancedBaseInstance");
+	g_glDrawElementsInstancedBaseInstance = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glDrawElementsInstancedBaseVertexBaseInstance");
+	g_glDrawElementsInstancedBaseVertexBaseInstance = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
