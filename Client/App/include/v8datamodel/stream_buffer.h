@@ -38,6 +38,7 @@ public:
 	void vslot22_48();
 	int getField2198() const;
 	void syncState();
+	void flush();
 	// AUTO-GENERATED METHODS
 };
 

@@ -227,6 +227,15 @@ int __cdecl TriangleMesh::func_B6E340()
 	return 1;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b6f380
+int __cdecl TriangleMesh::func_B6F380()
+{
+	sub_A38960(this, 1, 5);
+	sub_A38A50(this, "'setn' is obsolete");
+	sub_A357B0(this, 1);
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

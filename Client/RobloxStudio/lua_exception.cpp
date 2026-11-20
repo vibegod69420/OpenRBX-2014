@@ -236,6 +236,18 @@ void __cdecl lua_exception::call(int a, int b)
 	luaD_call(this, a, b);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a38710
+int __cdecl lua_type(lua_exception* L, int index);
+void __cdecl luaL_argerror(lua_exception* L, int narg, const char* extramsg);
+
+void __cdecl lua_exception::checkAny(int index)
+{
+	if (lua_type(this, index) == -1)
+	{
+		luaL_argerror(this, index, "value expected");
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

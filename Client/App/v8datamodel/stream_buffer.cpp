@@ -158,6 +158,38 @@ void stream_buffer::syncState()
 	**(int**)((char*)this + 0x2c) = 0;
 }
 
+extern "C" __declspec(dllimport) char* __fastcall stream_buffer_iat_e102fc(stream_buffer*);
+extern "C" __declspec(dllimport) char* __fastcall stream_buffer_iat_e10294(stream_buffer*);
+
+struct stream_buffer_iat_e10314
+{
+	__declspec(dllimport) void call(char* begin, char* end);
+};
+
+struct stream_buffer_sub_40f730
+{
+	void call(char* data, int count);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00a312f0
+void stream_buffer::flush()
+{
+	char* start = stream_buffer_iat_e102fc(this);
+	char* finish = stream_buffer_iat_e10294(this);
+	__int64 count = finish - start;
+
+	if (count > 0)
+	{
+		char* base = stream_buffer_iat_e102fc(this);
+		stream_buffer_sub_40f730* target = *(stream_buffer_sub_40f730**)((char*)this + 0x3c);
+		target->call(base, (int)count);
+
+		char* begin = *(char**)((char*)this + 0x48);
+		char* end = begin + *(int*)((char*)this + 0x50);
+		((stream_buffer_iat_e10314*)this)->call(begin, end);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std
