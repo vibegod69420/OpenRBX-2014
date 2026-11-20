@@ -2003,6 +2003,117 @@ bool VertexLayout::initARBTransformFeedback()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005f5e50
+extern void* g_glGenQueriesARB;
+extern void* g_glDeleteQueriesARB;
+extern void* g_glBeginQueryARB;
+extern void* g_glEndQueryARB;
+extern void* g_glGetQueryObjectivARB;
+extern void* g_glGetQueryObjectuivARB;
+extern void* g_glGetQueryivARB;
+extern void* g_glIsQueryARB;
+
+bool VertexLayout::initGLQueryObjectsARB()
+{
+    GetProcAddressFn proc = g_glGetProcAddress;
+    void* p = proc("glGenQueriesARB");
+    g_glGenQueriesARB = p;
+    unsigned char missing = (p == 0);
+
+    p = proc("glDeleteQueriesARB");
+    g_glDeleteQueriesARB = p;
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glBeginQueryARB");
+    g_glBeginQueryARB = p;
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glEndQueryARB");
+    g_glEndQueryARB = p;
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glGetQueryObjectivARB");
+    g_glGetQueryObjectivARB = p;
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glGetQueryObjectuivARB");
+    g_glGetQueryObjectuivARB = p;
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glGetQueryivARB");
+    g_glGetQueryivARB = p;
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glIsQueryARB");
+    g_glIsQueryARB = p;
+    if (p == 0 || missing)
+        missing = 1;
+
+    return (bool)missing;
+}
+
+extern void* g_glGetActiveSubroutineName;
+extern void* g_glGetActiveSubroutineUniformName;
+extern void* g_glGetActiveSubroutineUniformiv;
+extern void* g_glGetProgramStageiv;
+extern void* g_glGetSubroutineIndex;
+extern void* g_glGetSubroutineUniformLocation;
+extern void* g_glGetUniformSubroutineuiv;
+extern void* g_glUniformSubroutinesuiv;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f6c60
+bool VertexLayout::initARBShaderSubroutine()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glGetActiveSubroutineName");
+	g_glGetActiveSubroutineName = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glGetActiveSubroutineUniformName");
+	g_glGetActiveSubroutineUniformName = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetActiveSubroutineUniformiv");
+	g_glGetActiveSubroutineUniformiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetProgramStageiv");
+	g_glGetProgramStageiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetSubroutineIndex");
+	g_glGetSubroutineIndex = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetSubroutineUniformLocation");
+	g_glGetSubroutineUniformLocation = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetUniformSubroutineuiv");
+	g_glGetUniformSubroutineuiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformSubroutinesuiv");
+	g_glUniformSubroutinesuiv = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

@@ -84,6 +84,8 @@ public:
 	bool initARBVertexAttribBinding();
 	bool initARBTextureCompression();
 	bool initARBTransformFeedback();
+	bool initGLQueryObjectsARB();
+	bool initARBShaderSubroutine();
 	// AUTO-GENERATED METHODS
 };
 

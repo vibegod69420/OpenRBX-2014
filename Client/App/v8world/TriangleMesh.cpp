@@ -488,6 +488,30 @@ void __cdecl TriangleMesh::func_B70830()
 	sub_A35D10(this, -2);
 }
 
+int __cdecl sub_B6D0D0(void* a1, void* a2, void* a3, void* a4);
+void* __cdecl sub_CF6804(void* dst, int val, unsigned int size);
+
+extern void* (__cdecl* dword_E10668)(unsigned int, unsigned int);
+extern void (__cdecl* dword_E104F4)(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b6d060
+int __cdecl TriangleMesh::func_B6D060(void* a2, void* a3)
+{
+	void* block = dword_E10668(1u, 0x40008u);
+
+	sub_CF6804((char*)block + 4, 0, 0x20000u);
+	sub_CF6804((char*)block + 0x20004, 0xFF, 0x20000u);
+
+	*(void**)((char*)block + 0x40004) = this;
+	*(void**)block = this;
+
+	int result = sub_B6D0D0(block, this, a2, a3);
+
+	dword_E104F4(block);
+
+	return result;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

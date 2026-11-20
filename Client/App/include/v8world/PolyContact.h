@@ -28,6 +28,7 @@ public:
 	void* __cdecl createFeature(void* arg2, void* arg3);
 	void __cdecl removeEdgeIndex(void* node, void* feature);
 	void __cdecl updateContact(int arg2, int arg3, void* arg4);
+	void __cdecl checkLimit(void* arg2);
 	// AUTO-GENERATED METHODS
 };
 

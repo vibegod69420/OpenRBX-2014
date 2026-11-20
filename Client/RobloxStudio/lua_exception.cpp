@@ -492,6 +492,27 @@ void __cdecl lua_exception::rawget(int index)
 	*(int*)(top - 0x08) = *(int*)(res + 8);
 }
 
+// Forward declaration for callee at 0x00a34dd0
+void __cdecl sub_A34DD0(void* L, int n);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a39150
+void __cdecl lua_exception::sub_A39150()
+{
+	char* base = (char*)this;
+	int size = *(char**)base - base - 0x0C;
+
+	if (size != 0)
+	{
+		char* buf = base + 0x0C;
+		sub_A35690(*(void**)(base + 8), buf, size);
+		++*(int*)(base + 4);
+		*(char**)base = buf;
+	}
+
+	sub_A34DD0(*(void**)(base + 8), *(int*)(base + 4));
+	*(int*)(base + 4) = 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

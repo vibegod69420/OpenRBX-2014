@@ -110,6 +110,10 @@ public:
 	bool initDrawBuffers2EXT();
 	bool initPixelTransformEXT();
 	bool initExtensions();
+	bool initImageTransformHP();
+	bool initVideoQueries();
+	bool initTextureMultisampleNV();
+	bool initSinglePrecisionOES();
 	// AUTO-GENERATED METHODS
 };
 

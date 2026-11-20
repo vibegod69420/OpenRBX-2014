@@ -1497,6 +1497,155 @@ bool ContextGL::initExtensions()
             glTexParameterIuivEXTResult) != 0;
 }
 
+extern void* glGetImageTransformParameterfvHP;
+extern void* glGetImageTransformParameterivHP;
+extern void* glImageTransformParameterfHP;
+extern void* glImageTransformParameterfvHP;
+extern void* glImageTransformParameteriHP;
+extern void* glImageTransformParameterivHP;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fb9d0
+bool ContextGL::initImageTransformHP()
+{
+	void* (__stdcall *getProc)(const char*) = wglGetProcAddress;
+
+	void* proc = getProc("glGetImageTransformParameterfvHP");
+	glGetImageTransformParameterfvHP = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glGetImageTransformParameterivHP");
+	glGetImageTransformParameterivHP = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glImageTransformParameterfHP");
+	glImageTransformParameterfHP = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glImageTransformParameterfvHP");
+	glImageTransformParameterfvHP = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glImageTransformParameteriHP");
+	glImageTransformParameteriHP = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glImageTransformParameterivHP");
+	glImageTransformParameterivHP = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x005fd370
+bool ContextGL::initVideoQueries()
+{
+    typedef bool (__stdcall *Proc)(const char*);
+    static Proc getProc = (Proc)0x00e108b8;
+
+    static int r1 = 0, r2 = 0, r3 = 0, r4 = 0, r5 = 0, r6 = 0;
+
+    r1 = getProc("glGetVideoi64vNV") ? 1 : 0;
+    r2 = getProc("glGetVideoivNV") ? 1 : 0;
+    r3 = getProc("glGetVideoui64vNV") ? 1 : 0;
+    r4 = getProc("glGetVideouivNV") ? 1 : 0;
+    r5 = getProc("glPresentFrameDualFillNV") ? 1 : 0;
+    r6 = getProc("glPresentFrameKeyedNV") ? 1 : 0;
+
+    return (r1 == 0 || r2 == 0 || r3 == 0 || r4 == 0 || r5 == 0 || r6 == 0);
+}
+
+extern void* glTexImage2DMultisampleCoverageNV;
+extern void* glTexImage3DMultisampleCoverageNV;
+extern void* glTextureImage2DMultisampleCoverageNV;
+extern void* glTextureImage2DMultisampleNV;
+extern void* glTextureImage3DMultisampleCoverageNV;
+extern void* glTextureImage3DMultisampleNV;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fd700
+bool ContextGL::initTextureMultisampleNV()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("glTexImage2DMultisampleCoverageNV");
+	glTexImage2DMultisampleCoverageNV = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glTexImage3DMultisampleCoverageNV");
+	glTexImage3DMultisampleCoverageNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glTextureImage2DMultisampleCoverageNV");
+	glTextureImage2DMultisampleCoverageNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glTextureImage2DMultisampleNV");
+	glTextureImage2DMultisampleNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glTextureImage3DMultisampleCoverageNV");
+	glTextureImage3DMultisampleCoverageNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glTextureImage3DMultisampleNV");
+	glTextureImage3DMultisampleNV = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glClearDepthfOES;
+extern void* glClipPlanefOES;
+extern void* glDepthRangefOES;
+extern void* glFrustumfOES;
+extern void* glGetClipPlanefOES;
+extern void* glOrthofOES;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fe3f0
+bool ContextGL::initSinglePrecisionOES()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("glClearDepthfOES");
+	glClearDepthfOES = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glClipPlanefOES");
+	glClipPlanefOES = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glDepthRangefOES");
+	glDepthRangefOES = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glFrustumfOES");
+	glFrustumfOES = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetClipPlanefOES");
+	glGetClipPlanefOES = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glOrthofOES");
+	glOrthofOES = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

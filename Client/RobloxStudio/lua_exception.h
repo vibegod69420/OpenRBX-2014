@@ -56,6 +56,7 @@ public:
 	void* __cdecl sub_A3B450(float arg1, float arg2);
 	double __cdecl tonumber(int index);
 	void __cdecl rawget(int index);
+	void __cdecl sub_A39150();
 	// AUTO-GENERATED METHODS
 };
 

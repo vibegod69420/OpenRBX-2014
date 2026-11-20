@@ -260,6 +260,41 @@ void __cdecl PolyContact::updateContact(int arg2, int arg3, void* arg4)
 	}
 }
 
+void __cdecl sub_BCF6C0(void* arg1, void* arg2, int arg3);
+void* __cdecl sub_A457E0(void* dest, const char* fmt, ...);
+void __cdecl sub_BC8720(void* arg1, void* msg, int arg3);
+
+// FUNCTION: ROBLOXSTUDIO 0x00bce360
+void __cdecl PolyContact::checkLimit(void* arg2)
+{
+	sub_BCF6C0(this, arg2, 0);
+
+	if (*(int*)((char*)arg2 + 0x20) > 0x7FFFFFFD)
+	{
+		void* obj = *(void**)((char*)this + 0x30);
+		int line = *(int*)((char*)*(void**)obj + 0x3C);
+		void* msg;
+
+		if (line == 0)
+		{
+			msg = sub_A457E0(*(void**)((char*)obj + 0x10),
+				"main function has more than %d %s",
+				0x7FFFFFFD, "items in a constructor");
+		}
+		else
+		{
+			msg = sub_A457E0(*(void**)((char*)obj + 0x10),
+				"function at line %d has more than %d %s",
+				line, 0x7FFFFFFD, "items in a constructor");
+		}
+
+		sub_BC8720(*(void**)((char*)obj + 0x0C), msg, 0);
+	}
+
+	++*(int*)((char*)arg2 + 0x20);
+	++*(int*)((char*)arg2 + 0x24);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
