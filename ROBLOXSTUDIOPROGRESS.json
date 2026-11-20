@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20 04:08:41 UTC",
+  "updated_at": "2026-11-20 04:17:37 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 10.5713,
-  "implemented_total": 1000,
-  "function_annotations": 1000,
+  "matchable_coverage_pct": 10.6033,
+  "implemented_total": 1003,
+  "function_annotations": 1003,
   "stub_annotations": 0,
-  "perfect_100_count": 990,
-  "matched_real_functions": 990,
+  "perfect_100_count": 993,
+  "matched_real_functions": 993,
   "average_match_pct": 99.82,
-  "overall_function_coverage_pct": 2.4408,
-  "overall_byte_coverage_pct": 0.4818,
+  "overall_function_coverage_pct": 2.4482,
+  "overall_byte_coverage_pct": 0.4851,
   "usage": {
-    "calls_24h": 5599,
+    "calls_24h": 5601,
     "failures_24h": 0,
-    "completion_tokens_24h": 69509998,
-    "reasoning_tokens_24h": 67967296,
-    "avg_latency_s": 215.9
+    "completion_tokens_24h": 69664021,
+    "reasoning_tokens_24h": 68111769,
+    "avg_latency_s": 216.0
   },
   "functions": [
     {
@@ -3670,6 +3670,17 @@
       "mangled": "?getOriginNormal@CircleRadialNormal@RBX@@QAEABUVector3@2@XZ",
       "file": "Client/App/v8datamodel/CircleRadialNormal.cpp",
       "orig_size": 53,
+      "recomp_size": 53,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x006d1560",
+      "kind": "FUNCTION",
+      "name": "RBX::CircleRadialNormal::getPositiveNormal",
+      "mangled": "?getPositiveNormal@CircleRadialNormal@RBX@@QAEABUVector3@2@XZ",
+      "file": "Client/App/v8datamodel/CircleRadialNormal.cpp",
+      "orig_size": 163,
       "recomp_size": 53,
       "match_pct": 100.0,
       "matchable": true
@@ -7844,6 +7855,17 @@
       "matchable": true
     },
     {
+      "address": "0x00a4fb80",
+      "kind": "FUNCTION",
+      "name": "RBX::RBX::BallBallContact::allocateFromNewChunk",
+      "mangled": "?allocateFromNewChunk@BallBallContact@RBX@@QAEPAXXZ",
+      "file": "Client/App/v8world/BallBallContact.cpp",
+      "orig_size": 89,
+      "recomp_size": 89,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00a4fcd0",
       "kind": "FUNCTION",
       "name": "RBX::RBX::BallBallContact::isColliding",
@@ -9314,6 +9336,17 @@
       "file": "Client/App/humanoid/Dead.cpp",
       "orig_size": 53,
       "recomp_size": 53,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00bc6400",
+      "kind": "FUNCTION",
+      "name": "RBX::ContentProviderJob::process",
+      "mangled": "?process@ContentProviderJob@RBX@@QAAHHHH@Z",
+      "file": "Client/App/v8datamodel/ContentProviderJob.cpp",
+      "orig_size": 69,
+      "recomp_size": 69,
       "match_pct": 100.0,
       "matchable": true
     },

@@ -23,6 +23,7 @@ public:
 	void*allocateFromFreeList();
 	void*allocateFromNewPage();
 	void*allocateFromNewList();
+	void*allocateFromNewChunk();
 	// AUTO-GENERATED METHODS
 };
 

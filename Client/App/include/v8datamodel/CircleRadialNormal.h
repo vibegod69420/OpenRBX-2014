@@ -29,6 +29,7 @@ public:
 	const Vector3&getFullNormal();
 	const Vector3&getOneNormal();
 	const Vector3&getOriginNormal();
+	const Vector3&getPositiveNormal();
 	// AUTO-GENERATED METHODS
 };
 
