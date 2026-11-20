@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	ErrorCompPhysicsSender();
 	// AUTO-GENERATED METHODS
 };
 
