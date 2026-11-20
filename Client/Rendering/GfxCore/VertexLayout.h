@@ -42,6 +42,7 @@ public:
 	bool initARBVertexShader();
 	bool initATIDrawElementArray();
 	bool initATIVertexArrayObject();
+	bool initAMDSparseTexture();
 	// AUTO-GENERATED METHODS
 };
 

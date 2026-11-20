@@ -41,6 +41,7 @@ public:
 	void __cdecl pushGlobalObjects();
 	void __cdecl pushGlobalArgs();
 	void __cdecl pushGlobalYields();
+	void __cdecl pushGlobalFunctions();
 	// AUTO-GENERATED METHODS
 };
 

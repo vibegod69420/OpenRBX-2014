@@ -31,6 +31,7 @@ public:
 	int __cdecl openString();
 	int __cdecl mathOp();
 	int __cdecl func_B6E2C0();
+	int __cdecl func_B6E300();
 	// AUTO-GENERATED METHODS
 };
 

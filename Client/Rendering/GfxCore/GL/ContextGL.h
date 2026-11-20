@@ -50,6 +50,7 @@ public:
 	static void assignIfNull_5d40(int* dst, const int* src);
 	static void assignIfNull_5d60(int* dst, const int* src);
 	static void assignIfNull_5d80(int* dst, const int* src);
+	static void assignIfNull_5da0(int* dst, const int* src);
 	// AUTO-GENERATED METHODS
 };
 
