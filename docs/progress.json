@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 16:22:22 UTC",
+ "updated_at": "2026-11-20 16:30:52 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,35 +16,35 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 16.3267,
- "implemented_total": 1549,
- "function_annotations": 1549,
+ "matchable_coverage_pct": 16.3801,
+ "implemented_total": 1554,
+ "function_annotations": 1554,
  "stub_annotations": 0,
- "perfect_100_count": 1529,
- "matched_real_functions": 1529,
- "average_match_pct": 99.45,
- "overall_function_coverage_pct": 3.7696,
- "overall_byte_coverage_pct": 1.1207,
+ "perfect_100_count": 1534,
+ "matched_real_functions": 1534,
+ "average_match_pct": 99.46,
+ "overall_function_coverage_pct": 3.782,
+ "overall_byte_coverage_pct": 1.1326,
  "usage": {
-  "calls_24h": 5355,
+  "calls_24h": 5331,
   "failures_24h": 0,
-  "completion_tokens_24h": 65720519,
-  "reasoning_tokens_24h": 63986794,
-  "avg_latency_s": 207.5
+  "completion_tokens_24h": 65465664,
+  "reasoning_tokens_24h": 63745288,
+  "avg_latency_s": 208.1
  },
- "functions_total": 1549,
+ "functions_total": 1554,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
-   "matched": 259,
-   "functions": 259,
-   "bytes": 36813
+   "matched": 261,
+   "functions": 261,
+   "bytes": 37712
   },
   {
    "name": "App/v8datamodel",
-   "matched": 443,
-   "functions": 445,
-   "bytes": 20031
+   "matched": 444,
+   "functions": 446,
+   "bytes": 20154
   },
   {
    "name": "App/v8world",
@@ -54,9 +54,9 @@
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
-   "matched": 134,
-   "functions": 134,
-   "bytes": 7808
+   "matched": 136,
+   "functions": 136,
+   "bytes": 7930
   },
   {
    "name": "Rendering/g3d",
@@ -1161,6 +1161,28 @@
    "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
    "orig_size": 59,
    "recomp_size": 59,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00dba1d0",
+   "kind": "FUNCTION",
+   "name": "ProgramMemoryCheckerImpl::init136",
+   "mangled": "?init136@ProgramMemoryCheckerImpl@@QAEXXZ",
+   "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+   "orig_size": 61,
+   "recomp_size": 61,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00db96a0",
+   "kind": "FUNCTION",
+   "name": "ProgramMemoryCheckerImpl::init135",
+   "mangled": "?init135@ProgramMemoryCheckerImpl@@QAEXXZ",
+   "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+   "orig_size": 61,
+   "recomp_size": 61,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3090,6 +3112,17 @@
    "matchable": true
   },
   {
+   "address": "0x00c36fa0",
+   "kind": "FUNCTION",
+   "name": "boost::thread_data::construct",
+   "mangled": "?construct@thread_data@boost@@QAEPAV12@XZ",
+   "file": "Client/App/v8datamodel/thread_data.cpp",
+   "orig_size": 123,
+   "recomp_size": 123,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00c2f640",
    "kind": "FUNCTION",
    "name": "RBX::Network::ChatMessage::destroySubPtr0C",
@@ -3284,39 +3317,6 @@
    "file": "Client/App/v8world/PolyPolyContact.cpp",
    "orig_size": 59,
    "recomp_size": 59,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00c18650",
-   "kind": "FUNCTION",
-   "name": "RBX::PolyPolyContact::compute",
-   "mangled": "?compute@PolyPolyContact@RBX@@QAAXPAX0@Z",
-   "file": "Client/App/v8world/PolyPolyContact.cpp",
-   "orig_size": 31,
-   "recomp_size": 31,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00c18100",
-   "kind": "FUNCTION",
-   "name": "RBX::HUMAN::Swimming::setState",
-   "mangled": "?setState@Swimming@HUMAN@RBX@@QAAXHHH@Z",
-   "file": "Client/App/humanoid/Swimming.cpp",
-   "orig_size": 39,
-   "recomp_size": 39,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00c180d0",
-   "kind": "FUNCTION",
-   "name": "RBX::HUMAN::Swimming::setState",
-   "mangled": "?setState@Swimming@HUMAN@RBX@@QAAXHHHH@Z",
-   "file": "Client/App/humanoid/Swimming.cpp",
-   "orig_size": 45,
-   "recomp_size": 45,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -5283,9 +5283,45 @@
    "matched": 1529,
    "implemented": 1549,
    "pct": 16.3267
+  },
+  {
+   "t": "2026-11-20 16:30:52 UTC",
+   "matched": 1534,
+   "implemented": 1554,
+   "pct": 16.3801
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T16:26:35",
+   "address": "0x00dba1d0",
+   "name": "ProgramMemoryCheckerImpl::init136",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T16:25:57",
+   "address": "0x005fa3d0",
+   "name": "",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T16:25:01",
+   "address": "0x00db96a0",
+   "name": "ProgramMemoryCheckerImpl::init135",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T16:22:36",
+   "address": "0x00c36fa0",
+   "name": "boost::thread_data::construct",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T16:22:27",
+   "address": "0x005fda70",
+   "name": "RBX::Graphics::ContextGL::initVertexAttribInteger64bitNV",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T16:19:03",
    "address": "0x00db8b50",
@@ -5975,37 +6011,7 @@
    "address": "0x00b6e150",
    "name": "RBX::RBX::TriangleMesh::setMetatable",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T14:31:12",
-   "address": "0x00a40b80",
-   "name": "RBX::Lua::LuaArguments::pushVector3",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T14:30:18",
-   "address": "0x005fb0d0",
-   "name": "RBX::Graphics::ContextGL::initTexSubImageEXT",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T14:29:02",
-   "address": "0x00a42ae0",
-   "name": "RBX::Lua::LuaArguments::getScript",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T14:28:57",
-   "address": "0x005fef70",
-   "name": "RBX::Graphics::ContextGL::initReplacementCodeSUN",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T14:25:23",
-   "address": "0x00a3b400",
-   "name": "lua_exception::sub_A3B400",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 32.09
+ "match_rate_per_hour": 32.1
 }

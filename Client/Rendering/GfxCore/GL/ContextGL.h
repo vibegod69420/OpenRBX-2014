@@ -150,6 +150,8 @@ public:
 	bool initPbufferEXT();
 	bool initFramebufferObjectEXT();
 	bool initSecondaryColorEXT();
+	bool initVertexAttribInteger64bitNV();
+	bool initFragmentLightingEXT();
 	// AUTO-GENERATED METHODS
 };
 

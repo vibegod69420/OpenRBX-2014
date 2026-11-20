@@ -108,6 +108,37 @@ thread_data::thread_data()
 	*reinterpret_cast<unsigned int*>(reinterpret_cast<char*>(this) + 0x6c) = 0;
 }
 
+#pragma optimize("", off)
+
+struct thread_data_sub_0c
+{
+	void init(int);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c36fa0
+thread_data* thread_data::construct()
+{
+	*reinterpret_cast<unsigned int*>(this) = 0x00eefa90u;
+	*reinterpret_cast<unsigned int*>(reinterpret_cast<char*>(this) + 4) = 0;
+	*reinterpret_cast<unsigned int*>(reinterpret_cast<char*>(this) + 8) = 0;
+
+	reinterpret_cast<thread_data_sub_0c*>(reinterpret_cast<char*>(this) + 0x0c)->init(0);
+
+	unsigned int* p = reinterpret_cast<unsigned int*>(reinterpret_cast<char*>(this) + 0x10);
+	*p = 0;
+
+	*reinterpret_cast<unsigned char*>(reinterpret_cast<char*>(this) + 0x14) = 0;
+	*reinterpret_cast<unsigned char*>(reinterpret_cast<char*>(this) + 0x15) = 1;
+	*reinterpret_cast<unsigned int*>(reinterpret_cast<char*>(this) + 0x18) = 0;
+	*reinterpret_cast<unsigned char*>(reinterpret_cast<char*>(this) + 0x1c) = 0;
+	*reinterpret_cast<unsigned char*>(reinterpret_cast<char*>(this) + 0x1d) = 1;
+
+	*reinterpret_cast<thread_data**>(0x01310dc8) = this;
+	return this;
+}
+
+#pragma optimize("", on)
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace boost

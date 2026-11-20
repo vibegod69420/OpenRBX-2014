@@ -3670,6 +3670,227 @@ bool ContextGL::initSecondaryColorEXT()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005fda70
+bool ContextGL::initVertexAttribInteger64bitNV()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	unsigned char missing;
+	void* proc;
+
+	proc = getProc("glGetVertexAttribLi64vNV");
+	*(void**)0x012D98D4 = proc;
+	missing = (proc == 0) ? 1 : 0;
+
+	proc = getProc("glGetVertexAttribLui64vNV");
+	*(void**)0x012D98D8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVertexAttribL1i64NV");
+	*(void**)0x012D98E0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVertexAttribL1i64vNV");
+	*(void**)0x012D98E8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVertexAttribL1ui64NV");
+	*(void**)0x012D98F0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVertexAttribL1ui64vNV");
+	*(void**)0x012D98F8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVertexAttribL2i64NV");
+	*(void**)0x012D9904 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVertexAttribL2i64vNV");
+	*(void**)0x012D990C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVertexAttribL2ui64NV");
+	*(void**)0x012D9910 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVertexAttribL2ui64vNV");
+	*(void**)0x012D991C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVertexAttribL3i64NV");
+	*(void**)0x012D9920 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVertexAttribL3i64vNV");
+	*(void**)0x012D9928 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVertexAttribL3ui64NV");
+	*(void**)0x012D9930 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVertexAttribL3ui64vNV");
+	*(void**)0x012D9938 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVertexAttribL4i64NV");
+	*(void**)0x012D9944 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVertexAttribL4i64vNV");
+	*(void**)0x012D9948 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVertexAttribL4ui64NV");
+	*(void**)0x012D9950 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVertexAttribL4ui64vNV");
+	*(void**)0x012D9958 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVertexAttribLFormatNV");
+	*(void**)0x012D9960 = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x005fa3d0
+extern void* glFragmentColorMaterialEXT;
+extern void* glFragmentLightModelfEXT;
+extern void* glFragmentLightModelfvEXT;
+extern void* glFragmentLightModeliEXT;
+extern void* glFragmentLightModelivEXT;
+extern void* glFragmentLightfEXT;
+extern void* glFragmentLightfvEXT;
+extern void* glFragmentLightiEXT;
+extern void* glFragmentLightivEXT;
+extern void* glFragmentMaterialfEXT;
+extern void* glFragmentMaterialfvEXT;
+extern void* glFragmentMaterialiEXT;
+extern void* glFragmentMaterialivEXT;
+extern void* glGetFragmentLightfvEXT;
+extern void* glGetFragmentLightivEXT;
+extern void* glGetFragmentMaterialfvEXT;
+extern void* glGetFragmentMaterialivEXT;
+extern void* glLightEnviEXT;
+
+bool ContextGL::initFragmentLightingEXT()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	void* proc = getProc("glFragmentColorMaterialEXT");
+	glFragmentColorMaterialEXT = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glFragmentLightModelfEXT");
+	glFragmentLightModelfEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glFragmentLightModelfvEXT");
+	glFragmentLightModelfvEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glFragmentLightModeliEXT");
+	glFragmentLightModeliEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glFragmentLightModelivEXT");
+	glFragmentLightModelivEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glFragmentLightfEXT");
+	glFragmentLightfEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glFragmentLightfvEXT");
+	glFragmentLightfvEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glFragmentLightiEXT");
+	glFragmentLightiEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glFragmentLightivEXT");
+	glFragmentLightivEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glFragmentMaterialfEXT");
+	glFragmentMaterialfEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glFragmentMaterialfvEXT");
+	glFragmentMaterialfvEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glFragmentMaterialiEXT");
+	glFragmentMaterialiEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glFragmentMaterialivEXT");
+	glFragmentMaterialivEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetFragmentLightfvEXT");
+	glGetFragmentLightfvEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetFragmentLightivEXT");
+	glGetFragmentLightivEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetFragmentMaterialfvEXT");
+	glGetFragmentMaterialfvEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetFragmentMaterialivEXT");
+	glGetFragmentMaterialivEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glLightEnviEXT");
+	glLightEnviEXT = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
