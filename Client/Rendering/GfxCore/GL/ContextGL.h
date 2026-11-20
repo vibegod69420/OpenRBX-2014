@@ -66,6 +66,8 @@ public:
 	static void assignIfNull_5f40(int* dst, const int* src);
 	static void assignIfNull_5f60(int* dst, const int* src);
 	static void assignIfNull_5f80(int* dst, const int* src);
+	bool initMultiDraw();
+	bool initTexScissorINTEL();
 	// AUTO-GENERATED METHODS
 };
 

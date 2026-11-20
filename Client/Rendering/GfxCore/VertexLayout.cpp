@@ -1087,6 +1087,36 @@ bool VertexLayout::initARBTransposeMatrix()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005f8440
+extern void* g_glGetTexBumpParameterfvATI;
+extern void* g_glGetTexBumpParameterivATI;
+extern void* g_glTexBumpParameterfvATI;
+extern void* g_glTexBumpParameterivATI;
+
+bool VertexLayout::initATITexBump()
+{
+	void* p = g_glGetProcAddress("glGetTexBumpParameterfvATI");
+	g_glGetTexBumpParameterfvATI = p;
+	unsigned char missing = (p == 0);
+
+	p = g_glGetProcAddress("glGetTexBumpParameterivATI");
+	g_glGetTexBumpParameterivATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = g_glGetProcAddress("glTexBumpParameterfvATI");
+	g_glTexBumpParameterfvATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = g_glGetProcAddress("glTexBumpParameterivATI");
+	g_glTexBumpParameterivATI = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

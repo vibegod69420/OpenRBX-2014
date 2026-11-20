@@ -60,6 +60,7 @@ public:
 	bool initARBVertexArrayObject();
 	bool initARBGeometryShader4();
 	bool initARBTransposeMatrix();
+	bool initATITexBump();
 	// AUTO-GENERATED METHODS
 };
 

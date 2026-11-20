@@ -495,6 +495,42 @@ void ContextGL::assignIfNull_5f80(int* dst, const int* src)
 	}
 }
 
+extern "C" __declspec(dllimport) void* __stdcall wglGetProcAddress(const char*);
+
+extern void* glMultiDrawArraysEXT;
+extern void* glMultiDrawElementsEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fac50
+bool ContextGL::initMultiDraw()
+{
+	void* proc = wglGetProcAddress("glMultiDrawArraysEXT");
+	glMultiDrawArraysEXT = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glMultiDrawElementsEXT");
+	glMultiDrawElementsEXT = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glTexScissorFuncINTEL;
+extern void* glTexScissorINTEL;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fbc20
+bool ContextGL::initTexScissorINTEL()
+{
+	void* proc = wglGetProcAddress("glTexScissorFuncINTEL");
+	glTexScissorFuncINTEL = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glTexScissorINTEL");
+	glTexScissorINTEL = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
