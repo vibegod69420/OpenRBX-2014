@@ -21,6 +21,7 @@ public:
 	void*allocateFromPool();
 	void*allocateFromNew();
 	void*allocateFromFreeList();
+	void*allocateFromNewPage();
 	// AUTO-GENERATED METHODS
 };
 
