@@ -59,6 +59,10 @@ public:
 	int __cdecl sub_B7A220();
 	int __cdecl sub_B7A240();
 	int __cdecl sub_B7A3E0();
+	int __cdecl sub_B7A430();
+	int __cdecl sub_B7A450();
+	int __cdecl sub_B7A4E0();
+	int __cdecl sub_B7A500();
 	// AUTO-GENERATED METHODS
 };
 

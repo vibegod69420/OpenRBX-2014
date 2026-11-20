@@ -208,6 +208,12 @@ public:
 	void init190();
 	void init191();
 	void init192();
+	void init193();
+	void init194();
+	void init195();
+	void init196();
+	void init197();
+	void init198();
 	// AUTO-GENERATED METHODS
 };
 

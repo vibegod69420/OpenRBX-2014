@@ -683,6 +683,42 @@ void __cdecl lua_exception::sub_A377A0()
 	*(int*)((char*)this + 0x18) = 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a384b0
+void __cdecl sub_A35690(void* L, void* buf, int size);
+void __cdecl sub_A381E0(void* B);
+
+void __cdecl lua_exception::sub_A384B0(const char* src, int len)
+{
+	if (len != 0)
+	{
+		char* base = (char*)this;
+		char* limit = base + 0x20C;
+
+		do
+		{
+			char* p = *(char**)base;
+			--len;
+			if (p >= limit)
+			{
+				int size = p - base - 0x0C;
+				if (size != 0)
+				{
+					char* buf = base + 0x0C;
+					sub_A35690(*(void**)(base + 8), buf, size);
+					++*(int*)(base + 4);
+					*(char**)base = buf;
+					sub_A381E0(base);
+				}
+			}
+
+			*(*(char**)base) = *src;
+			++*(char**)base;
+			++src;
+		}
+		while (len != 0);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

@@ -66,6 +66,7 @@ public:
 	void* __cdecl sub_A3B4A0(int arg1, int arg2, int arg3);
 	void* __cdecl sub_A353E0(lua_exception* L, int size);
 	void __cdecl sub_A377A0();
+	void __cdecl sub_A384B0(const char* src, int len);
 	// AUTO-GENERATED METHODS
 };
 
