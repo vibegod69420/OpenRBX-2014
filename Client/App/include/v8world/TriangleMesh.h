@@ -52,6 +52,8 @@ public:
 	int __cdecl func_B6EB60();
 	int __cdecl setMetatable();
 	int __cdecl func_B6EA80();
+	int __cdecl func_B6F1A0();
+	int __cdecl func_B6F230();
 	// AUTO-GENERATED METHODS
 };
 

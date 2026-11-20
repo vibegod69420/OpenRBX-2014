@@ -577,6 +577,63 @@ int __cdecl TriangleMesh::func_B6EA80()
 	return res + 1;
 }
 
+void sub_A34D20(void*, int, int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b6f1a0
+int __cdecl TriangleMesh::func_B6F1A0()
+{
+	sub_A38960(this, 1, 5);
+	int v = sub_A35480(this, 1);
+	sub_A38960(this, 2, 6);
+
+	int i = 1;
+	if (v < i)
+	{
+	}
+	else
+	{
+		do
+		{
+			sub_A357B0(this, 2);
+			sub_A35650(this, i);
+			sub_A35890(this, 1, i);
+			sub_A34D20(this, 2, 1);
+			if (sub_A360D0(this, -1))
+				return 1;
+			sub_A35D10(this, -2);
+			++i;
+		}
+		while (i <= v);
+	}
+
+	return 0;
+}
+
+int sub_A35440(void*, int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b6f230
+int __cdecl TriangleMesh::func_B6F230()
+{
+	sub_A38960(this, 1, 5);
+	sub_A38960(this, 2, 6);
+	sub_A356D0(this);
+	if (sub_A35440(this, 1))
+	{
+		do
+		{
+			sub_A357B0(this, 2);
+			sub_A357B0(this, -3);
+			sub_A357B0(this, -3);
+			sub_A34D20(this, 2, 1);
+			if (sub_A360D0(this, -1))
+				return 1;
+			sub_A35D10(this, -3);
+		}
+		while (sub_A35440(this, 1));
+	}
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

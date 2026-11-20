@@ -2904,6 +2904,421 @@ bool VertexLayout::initATIFragmentShader()
 	return false;
 }
 
+extern void* g_glGetImageHandleARB;
+extern void* g_glGetTextureHandleARB;
+extern void* g_glGetTextureSamplerHandleARB;
+extern void* g_glGetVertexAttribLui64vARB;
+extern void* g_glIsImageHandleResidentARB;
+extern void* g_glIsTextureHandleResidentARB;
+extern void* g_glMakeImageHandleNonResidentARB;
+extern void* g_glMakeImageHandleResidentARB;
+extern void* g_glMakeTextureHandleNonResidentARB;
+extern void* g_glMakeTextureHandleResidentARB;
+extern void* g_glProgramUniformHandleui64ARB;
+extern void* g_glProgramUniformHandleui64vARB;
+extern void* g_glUniformHandleui64ARB;
+extern void* g_glUniformHandleui64vARB;
+extern void* g_glVertexAttribL1ui64ARB;
+extern void* g_glVertexAttribL1ui64vARB;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f4b80
+bool VertexLayout::initARBBindlessTexture()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glGetImageHandleARB");
+	g_glGetImageHandleARB = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glGetTextureHandleARB");
+	g_glGetTextureHandleARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetTextureSamplerHandleARB");
+	g_glGetTextureSamplerHandleARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetVertexAttribLui64vARB");
+	g_glGetVertexAttribLui64vARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glIsImageHandleResidentARB");
+	g_glIsImageHandleResidentARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glIsTextureHandleResidentARB");
+	g_glIsTextureHandleResidentARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMakeImageHandleNonResidentARB");
+	g_glMakeImageHandleNonResidentARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMakeImageHandleResidentARB");
+	g_glMakeImageHandleResidentARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMakeTextureHandleNonResidentARB");
+	g_glMakeTextureHandleNonResidentARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMakeTextureHandleResidentARB");
+	g_glMakeTextureHandleResidentARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniformHandleui64ARB");
+	g_glProgramUniformHandleui64ARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramUniformHandleui64vARB");
+	g_glProgramUniformHandleui64vARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformHandleui64ARB");
+	g_glUniformHandleui64ARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformHandleui64vARB");
+	g_glUniformHandleui64vARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttribL1ui64ARB");
+	g_glVertexAttribL1ui64ARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttribL1ui64vARB");
+	g_glVertexAttribL1ui64vARB = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x005f8260
+bool VertexLayout::initARBWindowPos()
+{
+    GetProcAddressFn proc = g_glGetProcAddress;
+    unsigned char missing = (proc("glWindowPos2dARB") == 0);
+
+    void* p = proc("glWindowPos2dvARB");
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glWindowPos2fARB");
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glWindowPos2fvARB");
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glWindowPos2iARB");
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glWindowPos2ivARB");
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glWindowPos2sARB");
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glWindowPos2svARB");
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glWindowPos3dARB");
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glWindowPos3dvARB");
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glWindowPos3fARB");
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glWindowPos3fvARB");
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glWindowPos3iARB");
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glWindowPos3ivARB");
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glWindowPos3sARB");
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glWindowPos3svARB");
+    if (p == 0 || missing)
+        missing = 1;
+
+    p = proc("glDrawBuffersATI");
+    if (p == 0 || missing)
+        missing = 1;
+
+    return (bool)missing;
+}
+
+extern void* g_glGetUniformdv;
+extern void* g_glUniform1d;
+extern void* g_glUniform1dv;
+extern void* g_glUniform2d;
+extern void* g_glUniform2dv;
+extern void* g_glUniform3d;
+extern void* g_glUniform3dv;
+extern void* g_glUniform4d;
+extern void* g_glUniform4dv;
+extern void* g_glUniformMatrix2dv;
+extern void* g_glUniformMatrix2x3dv;
+extern void* g_glUniformMatrix2x4dv;
+extern void* g_glUniformMatrix3dv;
+extern void* g_glUniformMatrix3x2dv;
+extern void* g_glUniformMatrix3x4dv;
+extern void* g_glUniformMatrix4dv;
+extern void* g_glUniformMatrix4x2dv;
+extern void* g_glUniformMatrix4x3dv;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f53b0
+bool VertexLayout::initARBGPUShaderFP64()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glGetUniformdv");
+	g_glGetUniformdv = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glUniform1d");
+	g_glUniform1d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform1dv");
+	g_glUniform1dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform2d");
+	g_glUniform2d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform2dv");
+	g_glUniform2dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform3d");
+	g_glUniform3d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform3dv");
+	g_glUniform3dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform4d");
+	g_glUniform4d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform4dv");
+	g_glUniform4dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformMatrix2dv");
+	g_glUniformMatrix2dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformMatrix2x3dv");
+	g_glUniformMatrix2x3dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformMatrix2x4dv");
+	g_glUniformMatrix2x4dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformMatrix3dv");
+	g_glUniformMatrix3dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformMatrix3x2dv");
+	g_glUniformMatrix3x2dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformMatrix3x4dv");
+	g_glUniformMatrix3x4dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformMatrix4dv");
+	g_glUniformMatrix4dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformMatrix4x2dv");
+	g_glUniformMatrix4x2dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformMatrix4x3dv");
+	g_glUniformMatrix4x3dv = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glBeginQuery;
+extern void* g_glBindBuffer;
+extern void* g_glBufferData;
+extern void* g_glBufferSubData;
+extern void* g_glDeleteBuffers;
+extern void* g_glDeleteQueries;
+extern void* g_glEndQuery;
+extern void* g_glGenBuffers;
+extern void* g_glGenQueries;
+extern void* g_glGetBufferParameteriv;
+extern void* g_glGetBufferPointerv;
+extern void* g_glGetBufferSubData;
+extern void* g_glGetQueryObjectiv;
+extern void* g_glGetQueryObjectuiv;
+extern void* g_glGetQueryiv;
+extern void* g_glIsBuffer;
+extern void* g_glIsQuery;
+extern void* g_glMapBuffer;
+extern void* g_glUnmapBuffer;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f3190
+bool VertexLayout::initGL15()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glBeginQuery");
+	g_glBeginQuery = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glBindBuffer");
+	g_glBindBuffer = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glBufferData");
+	g_glBufferData = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glBufferSubData");
+	g_glBufferSubData = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glDeleteBuffers");
+	g_glDeleteBuffers = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glDeleteQueries");
+	g_glDeleteQueries = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glEndQuery");
+	g_glEndQuery = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGenBuffers");
+	g_glGenBuffers = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGenQueries");
+	g_glGenQueries = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetBufferParameteriv");
+	g_glGetBufferParameteriv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetBufferPointerv");
+	g_glGetBufferPointerv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetBufferSubData");
+	g_glGetBufferSubData = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetQueryObjectiv");
+	g_glGetQueryObjectiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetQueryObjectuiv");
+	g_glGetQueryObjectuiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetQueryiv");
+	g_glGetQueryiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glIsBuffer");
+	g_glIsBuffer = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glIsQuery");
+	g_glIsQuery = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMapBuffer");
+	g_glMapBuffer = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUnmapBuffer");
+	g_glUnmapBuffer = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

@@ -97,6 +97,10 @@ public:
 	bool initEXTConvolution();
 	bool initARBSamplerObjects();
 	bool initATIFragmentShader();
+	bool initARBBindlessTexture();
+	bool initARBWindowPos();
+	bool initARBGPUShaderFP64();
+	bool initGL15();
 	// AUTO-GENERATED METHODS
 };
 
