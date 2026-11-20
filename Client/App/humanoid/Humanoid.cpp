@@ -174,6 +174,14 @@ float Humanoid::getField200XorFloat()
 	return *reinterpret_cast<float*>(&value);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x009d8820
+float Humanoid::getField204XorFloat()
+{
+	void* ptr = *reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 0x204);
+	int value = *reinterpret_cast<int*>(ptr) ^ reinterpret_cast<int>(ptr);
+	return *reinterpret_cast<float*>(&value);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -139,6 +139,19 @@ void __cdecl LuaArguments::pushRBXScriptSignal()
 	sub_B7ADF0(result, this);
 }
 
+void __cdecl sub_A39240(void*, void*, void*);
+void __cdecl sub_A35CC0(void*, int, int);
+void __cdecl sub_A35D10(void*, int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a416f0
+void __cdecl LuaArguments::pushGlobal()
+{
+	void* self = this;
+	sub_A39240(self, *(void**)0x0124EAC8, (void*)0x00EA71D0);
+	sub_A35CC0(self, -1, 1);
+	sub_A35D10(self, -2);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

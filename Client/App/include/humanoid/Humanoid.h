@@ -41,6 +41,7 @@ public:
 	void func007b6760();
 	bool func007bce10();
 	float getField200XorFloat();
+	float getField204XorFloat();
 	// AUTO-GENERATED METHODS
 };
 

@@ -29,6 +29,7 @@ public:
 	int __cdecl checkCondition();
 	int __cdecl openCoroutine();
 	int __cdecl openString();
+	int __cdecl mathOp();
 	// AUTO-GENERATED METHODS
 };
 

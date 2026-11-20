@@ -153,6 +153,17 @@ int __cdecl TriangleMesh::openString()
 	return 1;
 }
 
+double __cdecl sub_A38810(void*, int);
+extern double(__cdecl* dword_E104FC)(double);
+void __cdecl sub_A356F0(void*, double);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b71950
+int __cdecl TriangleMesh::mathOp()
+{
+	sub_A356F0(this, dword_E104FC(sub_A38810(this, 1)));
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
