@@ -84,6 +84,8 @@ public:
 	int __cdecl sub_B7A670();
 	int __cdecl sub_B7A6A0();
 	int __cdecl sub_B7AE60();
+	void sub_424450();
+	void __cdecl sub_A34CD0(void* arg);
 	// AUTO-GENERATED METHODS
 };
 

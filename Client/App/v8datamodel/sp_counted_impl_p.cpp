@@ -735,6 +735,46 @@ int __cdecl sp_counted_impl_p::sub_B7AE60()
 	return sub_B85100(result, this);
 }
 
+struct sp_counted_impl_p_node_424450
+{
+	sp_counted_impl_p_node_424450* left;
+	sp_counted_impl_p_node_424450* parent;
+	sp_counted_impl_p_node_424450* right;
+};
+
+struct sp_counted_impl_p_callee_4246A0
+{
+	void __thiscall sub_4246A0(sp_counted_impl_p_node_424450* node);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00424450
+void sp_counted_impl_p::sub_424450()
+{
+	sp_counted_impl_p_node_424450* head = *(sp_counted_impl_p_node_424450**)this;
+	((sp_counted_impl_p_callee_4246A0*)this)->sub_4246A0(head->parent);
+
+	head = *(sp_counted_impl_p_node_424450**)this;
+	head->parent = head;
+	head = *(sp_counted_impl_p_node_424450**)this;
+	head->left = head;
+	head = *(sp_counted_impl_p_node_424450**)this;
+	head->right = head;
+	*(int*)((char*)this + 4) = 0;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00a34cd0
+void __cdecl sp_counted_impl_p::sub_A34CD0(void* arg)
+{
+	int* dst = *(int**)((char*)this + 8);
+	int* src = (int*)arg;
+
+	dst[0] = src[0];
+	dst[1] = src[1];
+	dst[2] = src[2];
+
+	*(char**)((char*)this + 8) += 16;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
