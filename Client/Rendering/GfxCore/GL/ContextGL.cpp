@@ -820,6 +820,65 @@ bool ContextGL::initTexFilterFuncSGIS()
 	return false;
 }
 
+extern void* glApplyTextureEXT;
+extern void* glTextureLightEXT;
+extern void* glTextureMaterialEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fac00
+bool ContextGL::initLightTextureEXT()
+{
+	void* proc = wglGetProcAddress("glApplyTextureEXT");
+	glApplyTextureEXT = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glTextureLightEXT");
+	glTextureLightEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = wglGetProcAddress("glTextureMaterialEXT");
+	glTextureMaterialEXT = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x005fa740
+bool ContextGL::initFramebufferTextureEXT()
+{
+    void* proc1 = wglGetProcAddress("glFramebufferTextureEXT");
+    if (proc1 == 0)
+        return true;
+    void* proc2 = wglGetProcAddress("glFramebufferTextureFaceEXT");
+    // proc2 result is ignored; original always returns false when proc1 != 0
+    return false;
+}
+
+extern void* glMapTexture2DINTEL;
+extern void* glSyncTextureINTEL;
+extern void* glUnmapTexture2DINTEL;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fbb60
+bool ContextGL::initMapTexture2DINTEL()
+{
+	void* (__stdcall *getProc)(const char*) = wglGetProcAddress;
+
+	void* proc = getProc("glMapTexture2DINTEL");
+	glMapTexture2DINTEL = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glSyncTextureINTEL");
+	glSyncTextureINTEL = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glUnmapTexture2DINTEL");
+	glUnmapTexture2DINTEL = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

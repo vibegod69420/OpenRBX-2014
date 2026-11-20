@@ -48,6 +48,8 @@ public:
 	char* __cdecl prepBuffer();
 	void* __cdecl sub_A3B1D0(int value);
 	int __cdecl yield(int nresults);
+	void __cdecl rawgeti(int index, int n);
+	int __cdecl orderError(void* p1, void* p2);
 	// AUTO-GENERATED METHODS
 };
 

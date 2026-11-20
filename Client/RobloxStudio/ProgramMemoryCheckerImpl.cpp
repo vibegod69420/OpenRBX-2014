@@ -957,6 +957,106 @@ void ProgramMemoryCheckerImpl::init58()
 	sub_CF6609((void*)0x00DEC110);
 }
 
+class ProgramMemoryCheckerLightingChangedTarget
+{
+public:
+	void sub_96F4F0(int, const char*, const char*, int, int, int);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dbd590
+void ProgramMemoryCheckerImpl::init59()
+{
+	int v[2];
+	((ProgramMemoryCheckerLightingChangedTarget*)0x01301254)->sub_96F4F0(
+		0x1E8,
+		(const char*)0x00E875A4,
+		(const char*)0x00E87594,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DF5150);
+}
+
+class ProgramMemoryCheckerValueTarget17
+{
+public:
+	void sub_9C5980(int, const char*, const char*, int, int, int);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dc1940
+void ProgramMemoryCheckerImpl::init60()
+{
+	int v[2];
+	((ProgramMemoryCheckerValueTarget17*)0x013049F8)->sub_9C5980(
+		0x94,
+		(const char*)0x00E5546C,
+		(const char*)0x01024D64,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DF9420);
+}
+
+class ProgramMemoryCheckerErrorCallbackTarget
+{
+public:
+	void sub_8EB760(const char* a1, int a2, const char* a3, int a4, int a5, int a6);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00db6a40
+void ProgramMemoryCheckerImpl::init61()
+{
+	int v[2];
+	((ProgramMemoryCheckerErrorCallbackTarget*)0x012FD588)->sub_8EB760(
+		(const char*)0x00E73938,
+		0xB0,
+		(const char*)0x00E5DFD8,
+		5,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DF0890);
+}
+
+class ProgramMemoryCheckerValueTarget18
+{
+public:
+	void sub_9C5B20(int, const char*, const char*, int, int, int);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dc1980
+void ProgramMemoryCheckerImpl::init62()
+{
+	int v[2];
+	((ProgramMemoryCheckerValueTarget18*)0x01304970)->sub_9C5B20(
+		0x80,
+		(const char*)0x00E5546C,
+		(const char*)0x01024D64,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DF9480);
+}
+
+class ProgramMemoryCheckerMouseEquippedTarget
+{
+public:
+	void sub_922750(int, const char*, const char*, int, int, int);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dba840
+void ProgramMemoryCheckerImpl::init63()
+{
+	int v[2];
+	((ProgramMemoryCheckerMouseEquippedTarget*)0x012FF590)->sub_922750(
+		0x22C,
+		(const char*)0x00E7E338,
+		(const char*)0x00E7E330,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DF3280);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

@@ -49,6 +49,10 @@ public:
 	void __cdecl pushGlobalUserdata();
 	void __cdecl pushGlobalRBXScriptSignal();
 	bool __cdecl getYield(void* arg, void* out);
+	bool __cdecl getThread(void* arg, void* out);
+	bool __cdecl getUserdata(void* arg, void* out);
+	bool __cdecl getArg(void* arg, void* out);
+	bool __cdecl getString(void* arg, void* out);
 	// AUTO-GENERATED METHODS
 };
 

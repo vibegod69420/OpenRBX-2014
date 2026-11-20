@@ -85,6 +85,9 @@ public:
 	bool initTimerQueryEXT();
 	bool initConditionalRenderNVX();
 	bool initTexFilterFuncSGIS();
+	bool initLightTextureEXT();
+	bool initFramebufferTextureEXT();
+	bool initMapTexture2DINTEL();
 	// AUTO-GENERATED METHODS
 };
 

@@ -305,6 +305,130 @@ bool __cdecl LuaArguments::getYield(void* arg, void* out)
 	return false;
 }
 
+void* __cdecl sub_7D5A20();
+
+class DummySub7D0280
+{
+public:
+	void __thiscall sub_7D0280(void*);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00a43180
+bool __cdecl LuaArguments::getThread(void* arg, void* out)
+{
+	void* L = this;
+	void* tmp = sub_A360A0(L, arg);
+	if (tmp)
+	{
+		if (sub_A350C0(L, arg))
+		{
+			sub_A35060(L, -10000, *(void**)0x0124EB30);
+			if (sub_A35810(L, -1, -2))
+			{
+				sub_A35D10(L, -3);
+				*(void**)out = sub_7D5A20();
+				((DummySub7D0280*)((char*)out + 4))->sub_7D0280(tmp);
+				return true;
+			}
+			sub_A35D10(L, -3);
+		}
+	}
+	return false;
+}
+
+void* __cdecl sub_7D5BE0();
+
+class DummySub7D0510
+{
+public:
+	void __thiscall sub_7D0510(void*);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00a43380
+bool __cdecl LuaArguments::getUserdata(void* arg, void* out)
+{
+	void* L = this;
+	void* tmp = sub_A360A0(L, arg);
+	if (tmp)
+	{
+		if (sub_A350C0(L, arg))
+		{
+			sub_A35060(L, -10000, *(void**)0x0124EB14);
+			if (sub_A35810(L, -1, -2))
+			{
+				sub_A35D10(L, -3);
+				*(void**)out = sub_7D5BE0();
+				((DummySub7D0510*)((char*)out + 4))->sub_7D0510(tmp);
+				return true;
+			}
+			sub_A35D10(L, -3);
+		}
+	}
+	return false;
+}
+
+void* __cdecl sub_7D5940();
+
+class DummySub7CFEB0
+{
+public:
+	void __thiscall sub_7CFEB0(void*);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00a42f80
+bool __cdecl LuaArguments::getArg(void* arg, void* out)
+{
+	void* L = this;
+	void* tmp = sub_A360A0(L, arg);
+	if (tmp)
+	{
+		if (sub_A350C0(L, arg))
+		{
+			sub_A35060(L, -10000, *(void**)0x0124EAC4);
+			if (sub_A35810(L, -1, -2))
+			{
+				sub_A35D10(L, -3);
+				*(void**)out = sub_7D5940();
+				((DummySub7CFEB0*)((char*)out + 4))->sub_7CFEB0(tmp);
+				return true;
+			}
+			sub_A35D10(L, -3);
+		}
+	}
+	return false;
+}
+
+void* __cdecl sub_7D5B70();
+
+class DummySub7D0480
+{
+public:
+	void __thiscall sub_7D0480(void*);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00a43300
+bool __cdecl LuaArguments::getString(void* arg, void* out)
+{
+	void* L = this;
+	void* tmp = sub_A360A0(L, arg);
+	if (tmp)
+	{
+		if (sub_A350C0(L, arg))
+		{
+			sub_A35060(L, -10000, *(void**)0x0124EB24);
+			if (sub_A35810(L, -1, -2))
+			{
+				sub_A35D10(L, -3);
+				*(void**)out = sub_7D5B70();
+				((DummySub7D0480*)((char*)out + 4))->sub_7D0480(tmp);
+				return true;
+			}
+			sub_A35D10(L, -3);
+		}
+	}
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

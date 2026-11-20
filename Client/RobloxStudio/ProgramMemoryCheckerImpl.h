@@ -74,6 +74,11 @@ public:
 	void init56();
 	void init57();
 	void init58();
+	void init59();
+	void init60();
+	void init61();
+	void init62();
+	void init63();
 	// AUTO-GENERATED METHODS
 };
 

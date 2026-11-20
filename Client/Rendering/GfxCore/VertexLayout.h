@@ -66,6 +66,10 @@ public:
 	bool initEXTCopyTexture();
 	bool initARBDebugOutput();
 	bool initARBInstancedArrays();
+	bool initARBMultiBind();
+	bool initGL40();
+	bool initARBShadingLanguageInclude();
+	bool initGL21();
 	// AUTO-GENERATED METHODS
 };
 

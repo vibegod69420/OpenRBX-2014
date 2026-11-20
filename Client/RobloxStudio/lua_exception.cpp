@@ -360,6 +360,41 @@ int __cdecl lua_exception::yield(int nresults)
 	return (int)base | -1;
 }
 
+// Forward declaration for callee at 0x00bc9a00
+void* __cdecl sub_BC9A00(void* t, int n);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a35890
+void __cdecl lua_exception::rawgeti(int index, int n)
+{
+    void* o = index2adr((int)this, index);
+    char* src = (char*)sub_BC9A00(*(void**)o, n);
+    char* top = *(char**)((char*)this + 8);
+
+    *(int*)top = *(int*)src;
+    *(int*)(top + 4) = *(int*)(src + 4);
+    *(int*)(top + 8) = *(int*)(src + 8);
+
+    *(char**)((char*)this + 8) += 16;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00a37970
+int __cdecl lua_exception::orderError(void* p1, void* p2)
+{
+	const char* name1 = ((const char**)0x00EE1BC0)[*(int*)((char*)p1 + 8)];
+	const char* name2 = ((const char**)0x00EE1BC0)[*(int*)((char*)p2 + 8)];
+
+	if (name1[2] == name2[2])
+	{
+		runError("attempt to compare two %s values", name1);
+	}
+	else
+	{
+		runError("attempt to compare %s with %s", name1, name2);
+	}
+
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

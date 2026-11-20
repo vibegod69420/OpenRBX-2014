@@ -1283,6 +1283,176 @@ bool VertexLayout::initARBInstancedArrays()
 	return false;
 }
 
+extern void* g_glBindBuffersBase;
+extern void* g_glBindBuffersRange;
+extern void* g_glBindImageTextures;
+extern void* g_glBindSamplers;
+extern void* g_glBindTextures;
+extern void* g_glBindVertexBuffers;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f5a60
+bool VertexLayout::initARBMultiBind()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glBindBuffersBase");
+	g_glBindBuffersBase = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glBindBuffersRange");
+	g_glBindBuffersRange = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glBindImageTextures");
+	g_glBindImageTextures = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glBindSamplers");
+	g_glBindSamplers = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glBindTextures");
+	g_glBindTextures = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glBindVertexBuffers");
+	g_glBindVertexBuffers = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glBlendEquationSeparatei;
+extern void* g_glBlendEquationi;
+extern void* g_glBlendFuncSeparatei;
+extern void* g_glBlendFunci;
+extern void* g_glMinSampleShading;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f4190
+bool VertexLayout::initGL40()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glBlendEquationSeparatei");
+	g_glBlendEquationSeparatei = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glBlendEquationi");
+	g_glBlendEquationi = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glBlendFuncSeparatei");
+	g_glBlendFuncSeparatei = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glBlendFunci");
+	g_glBlendFunci = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMinSampleShading");
+	g_glMinSampleShading = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glCompileShaderIncludeARB;
+extern void* g_glDeleteNamedStringARB;
+extern void* g_glGetNamedStringARB;
+extern void* g_glGetNamedStringivARB;
+extern void* g_glIsNamedStringARB;
+extern void* g_glNamedStringARB;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f6d20
+bool VertexLayout::initARBShadingLanguageInclude()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glCompileShaderIncludeARB");
+	g_glCompileShaderIncludeARB = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glDeleteNamedStringARB");
+	g_glDeleteNamedStringARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetNamedStringARB");
+	g_glGetNamedStringARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetNamedStringivARB");
+	g_glGetNamedStringivARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glIsNamedStringARB");
+	g_glIsNamedStringARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glNamedStringARB");
+	g_glNamedStringARB = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glUniformMatrix2x3fv;
+extern void* g_glUniformMatrix2x4fv;
+extern void* g_glUniformMatrix3x2fv;
+extern void* g_glUniformMatrix3x4fv;
+extern void* g_glUniformMatrix4x2fv;
+extern void* g_glUniformMatrix4x3fv;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f3b50
+bool VertexLayout::initGL21()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glUniformMatrix2x3fv");
+	g_glUniformMatrix2x3fv = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glUniformMatrix2x4fv");
+	g_glUniformMatrix2x4fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformMatrix3x2fv");
+	g_glUniformMatrix3x2fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformMatrix3x4fv");
+	g_glUniformMatrix3x4fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformMatrix4x2fv");
+	g_glUniformMatrix4x2fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformMatrix4x3fv");
+	g_glUniformMatrix4x3fv = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
