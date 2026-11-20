@@ -831,6 +831,70 @@ bool VertexLayout::initARBClearBufferObject()
 	return false;
 }
 
+extern void* g_glBlendEquationSeparateiARB;
+extern void* g_glBlendEquationiARB;
+extern void* g_glBlendFuncSeparateiARB;
+extern void* g_glBlendFunciARB;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f4f90
+bool VertexLayout::initARBDrawBuffersBlend()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glBlendEquationSeparateiARB");
+	g_glBlendEquationSeparateiARB = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glBlendEquationiARB");
+	g_glBlendEquationiARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glBlendFuncSeparateiARB");
+	g_glBlendFuncSeparateiARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glBlendFunciARB");
+	g_glBlendFunciARB = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glDrawElementsBaseVertex;
+extern void* g_glDrawElementsInstancedBaseVertex;
+extern void* g_glDrawRangeElementsBaseVertex;
+extern void* g_glMultiDrawElementsBaseVertex;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f5000
+bool VertexLayout::initARBDrawElementsBaseVertex()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glDrawElementsBaseVertex");
+	g_glDrawElementsBaseVertex = p;
+	unsigned char bl = (p == 0);
+
+	p = proc("glDrawElementsInstancedBaseVertex");
+	g_glDrawElementsInstancedBaseVertex = p;
+	if (p == 0 || bl)
+		bl = 1;
+
+	p = proc("glDrawRangeElementsBaseVertex");
+	g_glDrawRangeElementsBaseVertex = p;
+	if (p == 0 || bl)
+		bl = 1;
+
+	p = proc("glMultiDrawElementsBaseVertex");
+	g_glMultiDrawElementsBaseVertex = p;
+	if (p == 0 || bl)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

@@ -52,6 +52,8 @@ public:
 	bool initAMDDebugOutput();
 	bool initAppleVertexArrayObject();
 	bool initARBClearBufferObject();
+	bool initARBDrawBuffersBlend();
+	bool initARBDrawElementsBaseVertex();
 	// AUTO-GENERATED METHODS
 };
 

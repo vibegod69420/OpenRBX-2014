@@ -191,6 +191,47 @@ void __cdecl ContentProviderJob::clear()
 	*(int *)this = 0;
 }
 
+void* __cdecl ContentProviderJob_memcpy(void* dst, const void* src, unsigned int len);
+const unsigned char* __cdecl ContentProviderJob_transform(ContentProviderJob* job, const unsigned char* data, unsigned int len);
+
+// FUNCTION: ROBLOXSTUDIO 0x00bbf840
+void __cdecl ContentProviderJob::update(const unsigned char* data, unsigned int len)
+{
+	unsigned int oldCount = *(unsigned int*)this;
+	unsigned int newCount = (oldCount + len) & 0x1FFFFFFF;
+	*(unsigned int*)this = newCount;
+
+	if (newCount < oldCount)
+		++*((unsigned int*)this + 1);
+
+	*((unsigned int*)this + 1) += len >> 29;
+
+	unsigned int index = oldCount & 0x3F;
+	if (index)
+	{
+		unsigned int partLen = 64 - index;
+		if (len < partLen)
+		{
+			ContentProviderJob_memcpy((unsigned char*)this + 0x18 + index, data, len);
+			return;
+		}
+
+		ContentProviderJob_memcpy((unsigned char*)this + 0x18 + index, data, partLen);
+		data += partLen;
+		len -= partLen;
+		ContentProviderJob_transform(this, (const unsigned char*)this + 0x18, 64);
+	}
+
+	if (len >= 64)
+	{
+		unsigned int blocksLen = len & 0xFFFFFFC0;
+		data = ContentProviderJob_transform(this, data, blocksLen);
+		len &= 0x3F;
+	}
+
+	ContentProviderJob_memcpy((unsigned char*)this + 0x18, data, len);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
