@@ -18,6 +18,9 @@ public:
 
 	int __cdecl invoke();
 	float __cdecl invoke_float();
+	void* __cdecl get();
+	int size();
+	int notEmpty();
 	// AUTO-GENERATED METHODS
 };
 
