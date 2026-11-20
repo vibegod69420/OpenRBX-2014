@@ -569,6 +569,19 @@ sp_counted_impl_p* __cdecl sp_counted_impl_p::sub_77E990(sp_counted_impl_p* self
 	return self;
 }
 
+struct sp_counted_impl_p_sub_781820
+{
+	void __thiscall sub_781820(void* a, void* b);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0077d480
+sp_counted_impl_p* __cdecl sp_counted_impl_p::sub_77D480(void* a, void* b)
+{
+	volatile int local = 0;
+	((sp_counted_impl_p_sub_781820*)this)->sub_781820(a, b);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
