@@ -311,6 +311,11 @@ public:
 	void init294();
 	void init295();
 	void init296();
+	void init297();
+	void init298();
+	void init299();
+	void init300();
+	void init301();
 	// AUTO-GENERATED METHODS
 };
 

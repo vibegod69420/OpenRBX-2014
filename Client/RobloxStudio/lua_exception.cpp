@@ -786,6 +786,43 @@ void __cdecl lua_exception::sub_A36E80(int arg)
 	*(int*)((char*)this + 0x70) = 0;
 }
 
+// Forward declarations for callees
+void* __cdecl sub_BC9CC0(lua_exception* L, void* t, int n);
+void __cdecl sub_BC6CE0(lua_exception* L, void* o);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a35950
+void __cdecl lua_exception::rawseti(int index, int n)
+{
+	void** slot = (void**)index2adr((int)this, index);
+
+	if (*((unsigned char*)*slot + 7))
+	{
+		runError("Attempt to modify a readonly table");
+	}
+
+	char* top = *(char**)((char*)this + 8);
+	void* cell = sub_BC9CC0(this, *slot, n);
+
+	*(int*)cell = *(int*)(top - 0x10);
+	*((int*)cell + 1) = *(int*)(top - 0x0C);
+	*((int*)cell + 2) = *(int*)(top - 0x08);
+
+	if (*(int*)(*(char**)((char*)this + 8) - 8) >= 4)
+	{
+		char* val = *(char**)(*(char**)((char*)this + 8) - 0x10);
+		if (*(unsigned char*)(val + 5) & 3)
+		{
+			char* table = *(char**)slot;
+			if (*(unsigned char*)(table + 5) & 4)
+			{
+				sub_BC6CE0(this, table);
+			}
+		}
+	}
+
+	*(char**)((char*)this + 8) -= 0x10;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

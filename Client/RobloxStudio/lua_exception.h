@@ -69,6 +69,7 @@ public:
 	void __cdecl sub_A384B0(const char* src, int len);
 	const char* __cdecl tolstring(int index, int* len);
 	void __cdecl sub_A36E80(int arg);
+	void __cdecl rawseti(int index, int n);
 	// AUTO-GENERATED METHODS
 };
 
