@@ -17,6 +17,7 @@ public:
 	};
 
 	~thread_specific_ptr();
+	void reset();
 	// AUTO-GENERATED METHODS
 };
 

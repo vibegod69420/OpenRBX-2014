@@ -35,6 +35,7 @@ public:
 	bool initEXTCompiledVertexArray();
 	bool initEXTCoordinateFrame();
 	bool initEXTCullVertex();
+	bool initAppleVertexArrayRange();
 	// AUTO-GENERATED METHODS
 };
 

@@ -122,6 +122,38 @@ void __cdecl ContentProviderJob::relink(ContentProviderJob *a2, void *a3)
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00bbbd50
+void __cdecl ContentProviderJob::detach(ContentProviderJob *a2, void *a3)
+{
+	(*(ContentProviderJobInternalNode **)((char *)a2 + 0x14))->field4 = 0;
+
+	ContentProviderJobInternalNode *thisNode = *(ContentProviderJobInternalNode **)((char *)this + 0x14);
+	ContentProviderJobInternalNode *a2Node = *(ContentProviderJobInternalNode **)((char *)a2 + 0x14);
+	if (thisNode == a2Node)
+		return;
+
+	a2Node->fieldC->field10 = thisNode->field8;
+
+	thisNode = *(ContentProviderJobInternalNode **)((char *)this + 0x14);
+	a2Node = *(ContentProviderJobInternalNode **)((char *)a2 + 0x14);
+	a2Node->fieldC = thisNode->fieldC;
+
+	ContentProviderJobInternalRequest *req = (ContentProviderJobInternalRequest *)a3;
+	thisNode = *(ContentProviderJobInternalNode **)((char *)this + 0x14);
+	if (req)
+	{
+		do
+		{
+			if (req->node == thisNode)
+			{
+				req->field0 = 0;
+				req->node = *(ContentProviderJobInternalNode **)((char *)a2 + 0x14);
+			}
+			req = req->next;
+		} while (req);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

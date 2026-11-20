@@ -383,6 +383,32 @@ bool VertexLayout::initEXTCullVertex()
 	return false;
 }
 
+extern void* g_glFlushVertexArrayRangeAPPLE;
+extern void* g_glVertexArrayParameteriAPPLE;
+extern void* g_glVertexArrayRangeAPPLE;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f49b0
+bool VertexLayout::initAppleVertexArrayRange()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glFlushVertexArrayRangeAPPLE");
+	g_glFlushVertexArrayRangeAPPLE = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glVertexArrayParameteriAPPLE");
+	g_glVertexArrayParameteriAPPLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexArrayRangeAPPLE");
+	g_glVertexArrayRangeAPPLE = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
