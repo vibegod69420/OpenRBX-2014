@@ -114,6 +114,15 @@ void ProgramMemoryCheckerImpl::init10()
 	((ProgramMemoryCheckerTarget*)0x012DD2E4)->sub_664AF0(&c, &b, &a);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00d9ecd0
+void ProgramMemoryCheckerImpl::init11()
+{
+	int a = 0x20002;
+	int b = 0x1f801f8;
+	int c = 0x180014c;
+	((ProgramMemoryCheckerTarget*)0x12dd354)->sub_664AF0(&c, &b, &a);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

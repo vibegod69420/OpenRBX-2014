@@ -26,6 +26,7 @@ public:
 	void init8();
 	void init9();
 	void init10();
+	void init11();
 	// AUTO-GENERATED METHODS
 };
 

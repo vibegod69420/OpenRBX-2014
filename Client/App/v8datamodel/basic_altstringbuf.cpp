@@ -94,6 +94,36 @@ void basic_altstringbuf::Close()
 	_vtable_or_head = -1;
 }
 
+unsigned char basic_altstringbuf_get_byte();
+
+// FUNCTION: ROBLOXSTUDIO 0x00cf5470
+int __cdecl basic_altstringbuf::Init(unsigned char mode, const unsigned char* src)
+{
+	if (mode == 1 || mode == 2 || mode == 3)
+	{
+		((unsigned char*)this)[0] = mode;
+
+		if (src)
+		{
+			for (int i = 0; i < 16; ++i)
+			{
+				((unsigned char*)this)[i + 1] = src[i];
+			}
+			return 1;
+		}
+		else
+		{
+			for (int i = 0; i < 16; ++i)
+			{
+				((unsigned char*)this)[i + 1] = basic_altstringbuf_get_byte();
+			}
+			return 1;
+		}
+	}
+
+	return -4;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

@@ -31,6 +31,23 @@ void ScriptContext::close()
 	ScriptContextDeleteState(*(void**)this);
 }
 
+struct lua_State;
+
+const char* lua_tostring(lua_State* L, int idx);
+void* luaL_checkudata(lua_State* L, int ud, const char* tname);
+void scriptContextReportError(void* ud, const char* msg, lua_State* L);
+
+extern const char* gScriptContextTypeName;
+
+// FUNCTION: ROBLOXSTUDIO 0x008dd990
+void __cdecl ScriptContext::reportError()
+{
+	lua_State* L = (lua_State*)this;
+	const char* msg = lua_tostring(L, 2);
+	void* ud = luaL_checkudata(L, 1, gScriptContextTypeName);
+	scriptContextReportError(ud, msg, L);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

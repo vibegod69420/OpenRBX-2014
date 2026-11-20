@@ -23,6 +23,7 @@ public:
 	void Release();
 	void Create();
 	void Close();
+	int __cdecl Init(unsigned char mode, const unsigned char* src);
 	// AUTO-GENERATED METHODS
 };
 

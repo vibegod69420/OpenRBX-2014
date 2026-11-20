@@ -28,6 +28,7 @@ public:
 	bool initARBSparseTexture();
 	bool initTextureBufferRange();
 	bool initGLDrawTransformFeedbackInstanced();
+	bool initATIMapObjectBuffer();
 	// AUTO-GENERATED METHODS
 };
 

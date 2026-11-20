@@ -236,6 +236,27 @@ bool VertexLayout::initGLDrawTransformFeedbackInstanced()
 	return false;
 }
 
+extern void* g_glMapObjectBufferATI;
+extern void* g_glUnmapObjectBufferATI;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f85f0
+bool VertexLayout::initATIMapObjectBuffer()
+{
+	void* first = g_glGetProcAddress("glMapObjectBufferATI");
+	g_glMapObjectBufferATI = first;
+	unsigned char missingFirst = (first == 0);
+
+	void* second = g_glGetProcAddress("glUnmapObjectBufferATI");
+	g_glUnmapObjectBufferATI = second;
+
+	if (second == 0)
+		return true;
+	if (missingFirst)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
