@@ -275,6 +275,10 @@ public:
 	void init258();
 	void init259();
 	void init260();
+	void init261();
+	void init262();
+	void init263();
+	void init264();
 	// AUTO-GENERATED METHODS
 };
 
