@@ -80,6 +80,10 @@ public:
 	int __cdecl sub_B7A5B0();
 	int __cdecl sub_B7A5E0();
 	int __cdecl sub_B7A610();
+	int __cdecl sub_B7A640(void* arg);
+	int __cdecl sub_B7A670();
+	int __cdecl sub_B7A6A0();
+	int __cdecl sub_B7AE60();
 	// AUTO-GENERATED METHODS
 };
 
