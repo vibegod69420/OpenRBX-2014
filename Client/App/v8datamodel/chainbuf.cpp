@@ -90,6 +90,16 @@ void chainbuf::onDestroy()
 	sub_CF6522((void*)_vtable_or_head);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c7c320
+void chainbuf::clear()
+{
+	void* local;
+	sub_CF669E((char*)this + 8, 0x1C, 0x80, (void*)0x004028A0);
+	void* head = (void*)_vtable_or_head;
+	((_chainbuf_onDestroy_helper_C7C2E0*)this)->unlink(&local, *(void**)head, head);
+	sub_CF6522((void*)_vtable_or_head);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

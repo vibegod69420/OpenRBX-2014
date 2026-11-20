@@ -56,6 +56,37 @@ void ScriptDebugger::clear()
 	}
 }
 
+struct ScriptDebuggerSession
+{
+	virtual void scalarDeletingDestructor(unsigned int flags);
+};
+
+struct ScriptDebuggerStringField
+{
+	~ScriptDebuggerStringField();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x007a85f0
+void ScriptDebugger::reset()
+{
+	ScriptDebuggerSession* session = *reinterpret_cast<ScriptDebuggerSession**>(reinterpret_cast<char*>(this) + 0x88);
+	*reinterpret_cast<ScriptDebuggerSession**>(reinterpret_cast<char*>(this) + 0x88) = 0;
+	if (session)
+		session->scalarDeletingDestructor(1);
+
+	reinterpret_cast<ScriptDebuggerStringField*>(reinterpret_cast<char*>(this) + 0xA0)->~ScriptDebuggerStringField();
+	reinterpret_cast<ScriptDebuggerStringField*>(reinterpret_cast<char*>(this) + 0xE0)->~ScriptDebuggerStringField();
+	reinterpret_cast<ScriptDebuggerStringField*>(reinterpret_cast<char*>(this) + 0xFC)->~ScriptDebuggerStringField();
+
+	*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x128) = 0;
+	*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x118) = 0;
+	*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x11C) = 0;
+	*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x120) = 0;
+	*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x124) = 0;
+	*reinterpret_cast<unsigned char*>(reinterpret_cast<char*>(this) + 0x14C) = 0;
+	*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x130) = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Scripting

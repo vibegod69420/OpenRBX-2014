@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 07:34:36 UTC",
+ "updated_at": "2026-11-20 07:43:15 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 11.2226,
- "implemented_total": 1064,
- "function_annotations": 1064,
+ "matchable_coverage_pct": 11.2547,
+ "implemented_total": 1067,
+ "function_annotations": 1067,
  "stub_annotations": 0,
- "perfect_100_count": 1051,
- "matched_real_functions": 1051,
- "average_match_pct": 99.75,
- "overall_function_coverage_pct": 2.5912,
- "overall_byte_coverage_pct": 0.5291,
+ "perfect_100_count": 1054,
+ "matched_real_functions": 1054,
+ "average_match_pct": 99.76,
+ "overall_function_coverage_pct": 2.5986,
+ "overall_byte_coverage_pct": 0.5336,
  "usage": {
-  "calls_24h": 5432,
+  "calls_24h": 5408,
   "failures_24h": 0,
-  "completion_tokens_24h": 68579018,
-  "reasoning_tokens_24h": 66971098,
-  "avg_latency_s": 218.4
+  "completion_tokens_24h": 68374286,
+  "reasoning_tokens_24h": 66766349,
+  "avg_latency_s": 218.7
  },
- "functions_total": 1064,
+ "functions_total": 1067,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 392,
-   "functions": 394,
-   "bytes": 14688
+   "matched": 394,
+   "functions": 396,
+   "bytes": 14838
   },
   {
    "name": "Rendering/g3d",
@@ -72,9 +72,9 @@
   },
   {
    "name": "App/script",
-   "matched": 50,
-   "functions": 50,
-   "bytes": 1823
+   "matched": 51,
+   "functions": 51,
+   "bytes": 2104
   },
   {
    "name": "App/humanoid",
@@ -1440,6 +1440,17 @@
    "matchable": true
   },
   {
+   "address": "0x00c7c320",
+   "kind": "FUNCTION",
+   "name": "std::chainbuf::clear",
+   "mangled": "?clear@chainbuf@std@@QAEXXZ",
+   "file": "Client/App/v8datamodel/chainbuf.cpp",
+   "orig_size": 59,
+   "recomp_size": 59,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00c7c2e0",
    "kind": "FUNCTION",
    "name": "sub_CF669E",
@@ -2441,6 +2452,17 @@
    "matchable": true
   },
   {
+   "address": "0x00bbbcf0",
+   "kind": "FUNCTION",
+   "name": "RBX::ContentProviderJob::relink",
+   "mangled": "?relink@ContentProviderJob@RBX@@QAAXPAV12@PAX@Z",
+   "file": "Client/App/v8datamodel/ContentProviderJob.cpp",
+   "orig_size": 91,
+   "recomp_size": 91,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00bbad80",
    "kind": "FUNCTION",
    "name": "RBX::HUMAN::Dead::get",
@@ -3295,28 +3317,6 @@
    "file": "Client/App/v8kernel/Kernel.cpp",
    "orig_size": 10,
    "recomp_size": 10,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00b53550",
-   "kind": "FUNCTION",
-   "name": "RBX::Kernel::getSubField24_24",
-   "mangled": "?getSubField24_24@Kernel@RBX@@QBEHXZ",
-   "file": "Client/App/v8kernel/Kernel.cpp",
-   "orig_size": 7,
-   "recomp_size": 7,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00b53540",
-   "kind": "FUNCTION",
-   "name": "RBX::Kernel::getSubField24_64",
-   "mangled": "?getSubField24_64@Kernel@RBX@@QBEHXZ",
-   "file": "Client/App/v8kernel/Kernel.cpp",
-   "orig_size": 7,
-   "recomp_size": 7,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -4917,9 +4917,33 @@
    "matched": 1051,
    "implemented": 1064,
    "pct": 11.2226
+  },
+  {
+   "t": "2026-11-20 07:43:15 UTC",
+   "matched": 1054,
+   "implemented": 1067,
+   "pct": 11.2547
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T07:35:22",
+   "address": "0x00c7c320",
+   "name": "std::chainbuf::clear",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T07:34:57",
+   "address": "0x00bbbcf0",
+   "name": "RBX::ContentProviderJob::relink",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T07:34:47",
+   "address": "0x007a85f0",
+   "name": "RBX::Scripting::ScriptDebugger::reset",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T07:29:25",
    "address": "0x00b71950",
@@ -5621,25 +5645,7 @@
    "address": "0x00d9ec10",
    "name": "ProgramMemoryCheckerImpl::init10",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T00:32:14",
-   "address": "0x0094b110",
-   "name": "RBX::Network::PersistentDataStore::sub_94b110",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T00:31:13",
-   "address": "0x00ce8e60",
-   "name": "RBX::Network::ProfiledRakPeer::ClearProfilingData",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T00:31:09",
-   "address": "0x00b557c0",
-   "name": "RBX::Kernel::getAccumulatedKernelValue",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 27.05
+ "match_rate_per_hour": 27.03
 }

@@ -19,6 +19,7 @@ public:
 
 	void close();
 	void clear();
+	void reset();
 	// AUTO-GENERATED METHODS
 };
 
