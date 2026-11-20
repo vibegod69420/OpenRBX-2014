@@ -799,6 +799,38 @@ bool VertexLayout::initAppleVertexArrayObject()
 	return false;
 }
 
+extern void* g_glClearBufferData;
+extern void* g_glClearBufferSubData;
+extern void* g_glClearNamedBufferDataEXT;
+extern void* g_glClearNamedBufferSubDataEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f4d90
+bool VertexLayout::initARBClearBufferObject()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glClearBufferData");
+	g_glClearBufferData = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glClearBufferSubData");
+	g_glClearBufferSubData = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glClearNamedBufferDataEXT");
+	g_glClearNamedBufferDataEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glClearNamedBufferSubDataEXT");
+	g_glClearNamedBufferSubDataEXT = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 11:21:27 UTC",
+ "updated_at": "2026-11-20 11:30:14 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 12.6001,
- "implemented_total": 1193,
- "function_annotations": 1193,
+ "matchable_coverage_pct": 12.6749,
+ "implemented_total": 1200,
+ "function_annotations": 1200,
  "stub_annotations": 0,
- "perfect_100_count": 1180,
- "matched_real_functions": 1180,
+ "perfect_100_count": 1187,
+ "matched_real_functions": 1187,
  "average_match_pct": 99.78,
- "overall_function_coverage_pct": 2.9092,
- "overall_byte_coverage_pct": 0.6226,
+ "overall_function_coverage_pct": 2.9265,
+ "overall_byte_coverage_pct": 0.6282,
  "usage": {
-  "calls_24h": 5359,
+  "calls_24h": 5334,
   "failures_24h": 0,
-  "completion_tokens_24h": 67308995,
-  "reasoning_tokens_24h": 65683116,
-  "avg_latency_s": 216.3
+  "completion_tokens_24h": 67128837,
+  "reasoning_tokens_24h": 65500133,
+  "avg_latency_s": 216.7
  },
- "functions_total": 1193,
+ "functions_total": 1200,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 421,
-   "functions": 423,
-   "bytes": 17675
+   "matched": 423,
+   "functions": 425,
+   "bytes": 17916
   },
   {
    "name": "Rendering/g3d",
@@ -48,21 +48,21 @@
   },
   {
    "name": "App/v8world",
-   "matched": 122,
-   "functions": 122,
-   "bytes": 7062
+   "matched": 123,
+   "functions": 123,
+   "bytes": 7129
   },
   {
    "name": "Rendering/GfxCore",
-   "matched": 110,
-   "functions": 110,
-   "bytes": 4803
+   "matched": 112,
+   "functions": 112,
+   "bytes": 4926
   },
   {
    "name": "App/script",
-   "matched": 78,
-   "functions": 78,
-   "bytes": 3400
+   "matched": 79,
+   "functions": 79,
+   "bytes": 3449
   },
   {
    "name": "App/v8kernel",
@@ -78,9 +78,9 @@
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
-   "matched": 35,
-   "functions": 35,
-   "bytes": 1885
+   "matched": 36,
+   "functions": 36,
+   "bytes": 1941
   },
   {
    "name": "App/humanoid",
@@ -578,6 +578,17 @@
    "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
    "orig_size": 36,
    "recomp_size": 36,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00dd2560",
+   "kind": "FUNCTION",
+   "name": "ProgramMemoryCheckerImpl::init36",
+   "mangled": "?init36@ProgramMemoryCheckerImpl@@QAEXXZ",
+   "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+   "orig_size": 56,
+   "recomp_size": 56,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1612,6 +1623,17 @@
    "file": "Client/App/v8datamodel/stream_buffer.cpp",
    "orig_size": 4,
    "recomp_size": 4,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00c7c360",
+   "kind": "FUNCTION",
+   "name": "std::chainbuf::~chainbuf",
+   "mangled": "??1chainbuf@std@@QAE@XZ",
+   "file": "Client/App/v8datamodel/chainbuf.cpp",
+   "orig_size": 117,
+   "recomp_size": 83,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3295,28 +3317,6 @@
    "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
    "orig_size": 26,
    "recomp_size": 26,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00b71950",
-   "kind": "FUNCTION",
-   "name": "RBX::TriangleMesh::mathOp",
-   "mangled": "?mathOp@TriangleMesh@RBX@@QAAHXZ",
-   "file": "Client/App/v8world/TriangleMesh.cpp",
-   "orig_size": 43,
-   "recomp_size": 43,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00b70a80",
-   "kind": "FUNCTION",
-   "name": "RBX::TriangleMesh::openString",
-   "mangled": "?openString@TriangleMesh@RBX@@QAAHXZ",
-   "file": "Client/App/v8world/TriangleMesh.cpp",
-   "orig_size": 39,
-   "recomp_size": 39,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -5073,9 +5073,57 @@
    "matched": 1180,
    "implemented": 1193,
    "pct": 12.6001
+  },
+  {
+   "t": "2026-11-20 11:30:14 UTC",
+   "matched": 1187,
+   "implemented": 1200,
+   "pct": 12.6749
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T11:26:13",
+   "address": "0x00605f00",
+   "name": "RBX::Graphics::ContextGL::assignIfNull_5f00",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T11:26:11",
+   "address": "0x008af820",
+   "name": "RBX::GuiMain::fireMouseButton1Down",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T11:24:44",
+   "address": "0x005f4d90",
+   "name": "RBX::Graphics::VertexLayout::initARBClearBufferObject",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T11:23:38",
+   "address": "0x00c7c360",
+   "name": "std::chainbuf::~chainbuf",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T11:22:57",
+   "address": "0x00dd2560",
+   "name": "ProgramMemoryCheckerImpl::init36",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T11:21:38",
+   "address": "0x008ddf70",
+   "name": "RBX::ScriptContext::reportError",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T11:21:33",
+   "address": "0x00b6fff0",
+   "name": "RBX::TriangleMesh::func_B6FFF0",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T11:17:33",
    "address": "0x00bc95c0",
@@ -5753,49 +5801,7 @@
    "address": "0x005f4b30",
    "name": "RBX::Graphics::VertexLayout::initARBBaseInstance",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T08:18:12",
-   "address": "0x008ddbd0",
-   "name": "RBX::ScriptContext::reportError",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T08:13:59",
-   "address": "0x00dc18c0",
-   "name": "ProgramMemoryCheckerImpl::init22",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T08:13:06",
-   "address": "0x00a379c0",
-   "name": "luaO_pushvfstring",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T08:12:23",
-   "address": "0x00a41750",
-   "name": "RBX::Lua::LuaArguments::pushGlobalValues",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T08:10:37",
-   "address": "0x00605cc0",
-   "name": "RBX::Graphics::ContextGL::assignIfNull_5cc0",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T08:03:34",
-   "address": "0x00bbbd50",
-   "name": "RBX::ContentProviderJob::detach",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T08:00:46",
-   "address": "0x00848170",
-   "name": "RBX::thread_specific_ptr::reset",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 27.68
+ "match_rate_per_hour": 27.75
 }

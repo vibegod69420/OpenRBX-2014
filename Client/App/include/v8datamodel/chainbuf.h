@@ -25,6 +25,7 @@ public:
 	void __cdecl write(void* src, void* destination);
 	void clear();
 	void close();
+	~chainbuf();
 	// AUTO-GENERATED METHODS
 };
 

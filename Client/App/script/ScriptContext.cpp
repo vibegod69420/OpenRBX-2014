@@ -255,6 +255,16 @@ int __cdecl ScriptContext::reportError(float /*unused*/)
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008ddf70
+int __cdecl ScriptContext::reportError(int* /*unused*/)
+{
+	lua_State* L = (lua_State*)this;
+	const char* msg = lua_tostring(L, 2);
+	void* ud = luaL_checkudata(L, 1, gScriptContextTypeName);
+	scriptContextReportError(ud, msg, L);
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

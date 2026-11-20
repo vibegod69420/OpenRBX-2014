@@ -51,6 +51,7 @@ public:
 	bool initGL31();
 	bool initAMDDebugOutput();
 	bool initAppleVertexArrayObject();
+	bool initARBClearBufferObject();
 	// AUTO-GENERATED METHODS
 };
 
