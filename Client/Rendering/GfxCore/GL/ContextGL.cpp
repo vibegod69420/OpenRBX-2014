@@ -2559,6 +2559,274 @@ bool ContextGL::initBufferRegionARB()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005fbc60
+bool ContextGL::initDebugKHR()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	unsigned char missing;
+	void* proc;
+
+	proc = getProc("glDebugMessageCallback");
+	*(void**)0x012DB25C = proc;
+	missing = (proc == 0) ? 1 : 0;
+
+	proc = getProc("glDebugMessageControl");
+	*(void**)0x012DB26C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glDebugMessageInsert");
+	*(void**)0x012DB274 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetDebugMessageLog");
+	*(void**)0x012DB278 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetObjectLabel");
+	*(void**)0x012DB288 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetObjectPtrLabel");
+	*(void**)0x012DB290 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glObjectLabel");
+	*(void**)0x012DB298 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glObjectPtrLabel");
+	*(void**)0x012DB29C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPopDebugGroup");
+	*(void**)0x012DB2AC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glPushDebugGroup");
+	*(void**)0x012DB2B0 = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x005fd940
+bool ContextGL::initVDPAUNV()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	unsigned char missing;
+	void* proc;
+
+	proc = getProc("glVDPAUFiniNV");
+	*(void**)0x012D9874 = proc;
+	missing = (proc == 0) ? 1 : 0;
+
+	proc = getProc("glVDPAUGetSurfaceivNV");
+	*(void**)0x012D9878 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVDPAUInitNV");
+	*(void**)0x012D9880 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVDPAUIsSurfaceNV");
+	*(void**)0x012D988C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVDPAUMapSurfacesNV");
+	*(void**)0x012D9890 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVDPAURegisterOutputSurfaceNV");
+	*(void**)0x012D989C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVDPAURegisterVideoSurfaceNV");
+	*(void**)0x012D98A4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVDPAUSurfaceAccessNV");
+	*(void**)0x012D98A8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVDPAUUnmapSurfacesNV");
+	*(void**)0x012D98B0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVDPAUUnregisterSurfaceNV");
+	*(void**)0x012D98BC = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glGetVertexAttribLdvEXT;
+extern void* glVertexArrayVertexAttribLOffsetEXT;
+extern void* glVertexAttribL1dEXT;
+extern void* glVertexAttribL1dvEXT;
+extern void* glVertexAttribL2dEXT;
+extern void* glVertexAttribL2dvEXT;
+extern void* glVertexAttribL3dEXT;
+extern void* glVertexAttribL3dvEXT;
+extern void* glVertexAttribL4dEXT;
+extern void* glVertexAttribL4dvEXT;
+extern void* glVertexAttribLPointerEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fb470
+bool ContextGL::initVertexAttrib64bitEXT()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("glGetVertexAttribLdvEXT");
+	glGetVertexAttribLdvEXT = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glVertexArrayVertexAttribLOffsetEXT");
+	glVertexArrayVertexAttribLOffsetEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glVertexAttribL1dEXT");
+	glVertexAttribL1dEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glVertexAttribL1dvEXT");
+	glVertexAttribL1dvEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glVertexAttribL2dEXT");
+	glVertexAttribL2dEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glVertexAttribL2dvEXT");
+	glVertexAttribL2dvEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glVertexAttribL3dEXT");
+	glVertexAttribL3dEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glVertexAttribL3dvEXT");
+	glVertexAttribL3dvEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glVertexAttribL4dEXT");
+	glVertexAttribL4dEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glVertexAttribL4dvEXT");
+	glVertexAttribL4dvEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glVertexAttribLPointerEXT");
+	glVertexAttribLPointerEXT = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glActiveVaryingNV;
+extern void* glBeginTransformFeedbackNV;
+extern void* glBindBufferBaseNV;
+extern void* glBindBufferOffsetNV;
+extern void* glBindBufferRangeNV;
+extern void* glEndTransformFeedbackNV;
+extern void* glGetActiveVaryingNV;
+extern void* glGetTransformFeedbackVaryingNV;
+extern void* glGetVaryingLocationNV;
+extern void* glTransformFeedbackAttribsNV;
+extern void* glTransformFeedbackVaryingsNV;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fd790
+bool ContextGL::initTransformFeedbackVaryingsNV()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("glActiveVaryingNV");
+	glActiveVaryingNV = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glBeginTransformFeedbackNV");
+	glBeginTransformFeedbackNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glBindBufferBaseNV");
+	glBindBufferBaseNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glBindBufferOffsetNV");
+	glBindBufferOffsetNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glBindBufferRangeNV");
+	glBindBufferRangeNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glEndTransformFeedbackNV");
+	glEndTransformFeedbackNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetActiveVaryingNV");
+	glGetActiveVaryingNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetTransformFeedbackVaryingNV");
+	glGetTransformFeedbackVaryingNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetVaryingLocationNV");
+	glGetVaryingLocationNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glTransformFeedbackAttribsNV");
+	glTransformFeedbackAttribsNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glTransformFeedbackVaryingsNV");
+	glTransformFeedbackVaryingsNV = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

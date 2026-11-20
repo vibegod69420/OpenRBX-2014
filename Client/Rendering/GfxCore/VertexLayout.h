@@ -109,6 +109,8 @@ public:
 	bool initGL13();
 	bool initGL14();
 	bool initARBSeparateShaderObjects();
+	bool initARBVertexProgram();
+	bool initGL20();
 	// AUTO-GENERATED METHODS
 };
 

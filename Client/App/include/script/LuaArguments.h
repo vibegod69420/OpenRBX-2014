@@ -70,6 +70,7 @@ public:
 	bool __cdecl getFunction(void* arg, void* out);
 	int __cdecl pushVector3();
 	int __cdecl pushVector2Sub();
+	int __cdecl pushVector3Sub();
 	// AUTO-GENERATED METHODS
 };
 

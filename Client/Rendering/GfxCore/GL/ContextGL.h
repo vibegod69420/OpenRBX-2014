@@ -134,6 +134,10 @@ public:
 	bool initGlobalAlphaFactorSUN();
 	bool initDXInteropNV();
 	bool initBufferRegionARB();
+	bool initDebugKHR();
+	bool initVDPAUNV();
+	bool initVertexAttrib64bitEXT();
+	bool initTransformFeedbackVaryingsNV();
 	// AUTO-GENERATED METHODS
 };
 

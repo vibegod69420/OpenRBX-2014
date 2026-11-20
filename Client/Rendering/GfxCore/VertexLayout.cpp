@@ -5243,6 +5243,952 @@ bool VertexLayout::initARBSeparateShaderObjects()
 	return false;
 }
 
+extern void* g_glBindProgramARB;
+extern void* g_glDeleteProgramsARB;
+extern void* g_glDisableVertexAttribArrayARB;
+extern void* g_glEnableVertexAttribArrayARB;
+extern void* g_glGenProgramsARB;
+extern void* g_glGetProgramEnvParameterdvARB;
+extern void* g_glGetProgramEnvParameterfvARB;
+extern void* g_glGetProgramLocalParameterdvARB;
+extern void* g_glGetProgramLocalParameterfvARB;
+extern void* g_glGetProgramStringARB;
+extern void* g_glGetProgramivARB;
+extern void* g_glGetVertexAttribPointervARB;
+extern void* g_glGetVertexAttribdvARB;
+extern void* g_glGetVertexAttribfvARB;
+extern void* g_glGetVertexAttribivARB;
+extern void* g_glIsProgramARB;
+extern void* g_glProgramEnvParameter4dARB;
+extern void* g_glProgramEnvParameter4dvARB;
+extern void* g_glProgramEnvParameter4fARB;
+extern void* g_glProgramEnvParameter4fvARB;
+extern void* g_glProgramLocalParameter4dARB;
+extern void* g_glProgramLocalParameter4dvARB;
+extern void* g_glProgramLocalParameter4fARB;
+extern void* g_glProgramLocalParameter4fvARB;
+extern void* g_glProgramStringARB;
+extern void* g_glVertexAttrib1dARB;
+extern void* g_glVertexAttrib1dvARB;
+extern void* g_glVertexAttrib1fARB;
+extern void* g_glVertexAttrib1fvARB;
+extern void* g_glVertexAttrib1sARB;
+extern void* g_glVertexAttrib1svARB;
+extern void* g_glVertexAttrib2dARB;
+extern void* g_glVertexAttrib2dvARB;
+extern void* g_glVertexAttrib2fARB;
+extern void* g_glVertexAttrib2fvARB;
+extern void* g_glVertexAttrib2sARB;
+extern void* g_glVertexAttrib2svARB;
+extern void* g_glVertexAttrib3dARB;
+extern void* g_glVertexAttrib3dvARB;
+extern void* g_glVertexAttrib3fARB;
+extern void* g_glVertexAttrib3fvARB;
+extern void* g_glVertexAttrib3sARB;
+extern void* g_glVertexAttrib3svARB;
+extern void* g_glVertexAttrib4NbvARB;
+extern void* g_glVertexAttrib4NivARB;
+extern void* g_glVertexAttrib4NsvARB;
+extern void* g_glVertexAttrib4NubARB;
+extern void* g_glVertexAttrib4NubvARB;
+extern void* g_glVertexAttrib4NuivARB;
+extern void* g_glVertexAttrib4NusvARB;
+extern void* g_glVertexAttrib4bvARB;
+extern void* g_glVertexAttrib4dARB;
+extern void* g_glVertexAttrib4dvARB;
+extern void* g_glVertexAttrib4fARB;
+extern void* g_glVertexAttrib4fvARB;
+extern void* g_glVertexAttrib4ivARB;
+extern void* g_glVertexAttrib4sARB;
+extern void* g_glVertexAttrib4svARB;
+extern void* g_glVertexAttrib4ubvARB;
+extern void* g_glVertexAttrib4uivARB;
+extern void* g_glVertexAttrib4usvARB;
+extern void* g_glVertexAttribPointerARB;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f7870
+bool VertexLayout::initARBVertexProgram()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glBindProgramARB");
+	g_glBindProgramARB = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glDeleteProgramsARB");
+	g_glDeleteProgramsARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glDisableVertexAttribArrayARB");
+	g_glDisableVertexAttribArrayARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glEnableVertexAttribArrayARB");
+	g_glEnableVertexAttribArrayARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGenProgramsARB");
+	g_glGenProgramsARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetProgramEnvParameterdvARB");
+	g_glGetProgramEnvParameterdvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetProgramEnvParameterfvARB");
+	g_glGetProgramEnvParameterfvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetProgramLocalParameterdvARB");
+	g_glGetProgramLocalParameterdvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetProgramLocalParameterfvARB");
+	g_glGetProgramLocalParameterfvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetProgramStringARB");
+	g_glGetProgramStringARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetProgramivARB");
+	g_glGetProgramivARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetVertexAttribPointervARB");
+	g_glGetVertexAttribPointervARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetVertexAttribdvARB");
+	g_glGetVertexAttribdvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetVertexAttribfvARB");
+	g_glGetVertexAttribfvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetVertexAttribivARB");
+	g_glGetVertexAttribivARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glIsProgramARB");
+	g_glIsProgramARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramEnvParameter4dARB");
+	g_glProgramEnvParameter4dARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramEnvParameter4dvARB");
+	g_glProgramEnvParameter4dvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramEnvParameter4fARB");
+	g_glProgramEnvParameter4fARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramEnvParameter4fvARB");
+	g_glProgramEnvParameter4fvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramLocalParameter4dARB");
+	g_glProgramLocalParameter4dARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramLocalParameter4dvARB");
+	g_glProgramLocalParameter4dvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramLocalParameter4fARB");
+	g_glProgramLocalParameter4fARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramLocalParameter4fvARB");
+	g_glProgramLocalParameter4fvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramStringARB");
+	g_glProgramStringARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib1dARB");
+	g_glVertexAttrib1dARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib1dvARB");
+	g_glVertexAttrib1dvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib1fARB");
+	g_glVertexAttrib1fARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib1fvARB");
+	g_glVertexAttrib1fvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib1sARB");
+	g_glVertexAttrib1sARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib1svARB");
+	g_glVertexAttrib1svARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib2dARB");
+	g_glVertexAttrib2dARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib2dvARB");
+	g_glVertexAttrib2dvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib2fARB");
+	g_glVertexAttrib2fARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib2fvARB");
+	g_glVertexAttrib2fvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib2sARB");
+	g_glVertexAttrib2sARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib2svARB");
+	g_glVertexAttrib2svARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib3dARB");
+	g_glVertexAttrib3dARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib3dvARB");
+	g_glVertexAttrib3dvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib3fARB");
+	g_glVertexAttrib3fARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib3fvARB");
+	g_glVertexAttrib3fvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib3sARB");
+	g_glVertexAttrib3sARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib3svARB");
+	g_glVertexAttrib3svARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4NbvARB");
+	g_glVertexAttrib4NbvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4NivARB");
+	g_glVertexAttrib4NivARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4NsvARB");
+	g_glVertexAttrib4NsvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4NubARB");
+	g_glVertexAttrib4NubARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4NubvARB");
+	g_glVertexAttrib4NubvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4NuivARB");
+	g_glVertexAttrib4NuivARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4NusvARB");
+	g_glVertexAttrib4NusvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4bvARB");
+	g_glVertexAttrib4bvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4dARB");
+	g_glVertexAttrib4dARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4dvARB");
+	g_glVertexAttrib4dvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4fARB");
+	g_glVertexAttrib4fARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4fvARB");
+	g_glVertexAttrib4fvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4ivARB");
+	g_glVertexAttrib4ivARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4sARB");
+	g_glVertexAttrib4sARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4svARB");
+	g_glVertexAttrib4svARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4ubvARB");
+	g_glVertexAttrib4ubvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4uivARB");
+	g_glVertexAttrib4uivARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4usvARB");
+	g_glVertexAttrib4usvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttribPointerARB");
+	g_glVertexAttribPointerARB = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glAttachShader;
+extern void* g_glBindAttribLocation;
+extern void* g_glBlendEquationSeparate;
+extern void* g_glCompileShader;
+extern void* g_glCreateProgram;
+extern void* g_glCreateShader;
+extern void* g_glDeleteProgram;
+extern void* g_glDeleteShader;
+extern void* g_glDetachShader;
+extern void* g_glDisableVertexAttribArray;
+extern void* g_glDrawBuffers;
+extern void* g_glEnableVertexAttribArray;
+extern void* g_glGetActiveAttrib;
+extern void* g_glGetActiveUniform;
+extern void* g_glGetAttachedShaders;
+extern void* g_glGetAttribLocation;
+extern void* g_glGetProgramInfoLog;
+extern void* g_glGetProgramiv;
+extern void* g_glGetShaderInfoLog;
+extern void* g_glGetShaderSource;
+extern void* g_glGetShaderiv;
+extern void* g_glGetUniformLocation;
+extern void* g_glGetUniformfv;
+extern void* g_glGetUniformiv;
+extern void* g_glGetVertexAttribPointerv;
+extern void* g_glGetVertexAttribdv;
+extern void* g_glGetVertexAttribfv;
+extern void* g_glGetVertexAttribiv;
+extern void* g_glIsProgram;
+extern void* g_glIsShader;
+extern void* g_glLinkProgram;
+extern void* g_glShaderSource;
+extern void* g_glStencilFuncSeparate;
+extern void* g_glStencilMaskSeparate;
+extern void* g_glStencilOpSeparate;
+extern void* g_glUniform1f;
+extern void* g_glUniform1fv;
+extern void* g_glUniform1i;
+extern void* g_glUniform1iv;
+extern void* g_glUniform2f;
+extern void* g_glUniform2fv;
+extern void* g_glUniform2i;
+extern void* g_glUniform2iv;
+extern void* g_glUniform3f;
+extern void* g_glUniform3fv;
+extern void* g_glUniform3i;
+extern void* g_glUniform3iv;
+extern void* g_glUniform4f;
+extern void* g_glUniform4fv;
+extern void* g_glUniform4i;
+extern void* g_glUniform4iv;
+extern void* g_glUniformMatrix2fv;
+extern void* g_glUniformMatrix3fv;
+extern void* g_glUniformMatrix4fv;
+extern void* g_glUseProgram;
+extern void* g_glValidateProgram;
+extern void* g_glVertexAttrib1d;
+extern void* g_glVertexAttrib1dv;
+extern void* g_glVertexAttrib1f;
+extern void* g_glVertexAttrib1fv;
+extern void* g_glVertexAttrib1s;
+extern void* g_glVertexAttrib1sv;
+extern void* g_glVertexAttrib2d;
+extern void* g_glVertexAttrib2dv;
+extern void* g_glVertexAttrib2f;
+extern void* g_glVertexAttrib2fv;
+extern void* g_glVertexAttrib2s;
+extern void* g_glVertexAttrib2sv;
+extern void* g_glVertexAttrib3d;
+extern void* g_glVertexAttrib3dv;
+extern void* g_glVertexAttrib3f;
+extern void* g_glVertexAttrib3fv;
+extern void* g_glVertexAttrib3s;
+extern void* g_glVertexAttrib3sv;
+extern void* g_glVertexAttrib4Nbv;
+extern void* g_glVertexAttrib4Niv;
+extern void* g_glVertexAttrib4Nsv;
+extern void* g_glVertexAttrib4Nub;
+extern void* g_glVertexAttrib4Nubv;
+extern void* g_glVertexAttrib4Nuiv;
+extern void* g_glVertexAttrib4Nusv;
+extern void* g_glVertexAttrib4bv;
+extern void* g_glVertexAttrib4d;
+extern void* g_glVertexAttrib4dv;
+extern void* g_glVertexAttrib4f;
+extern void* g_glVertexAttrib4fv;
+extern void* g_glVertexAttrib4iv;
+extern void* g_glVertexAttrib4s;
+extern void* g_glVertexAttrib4sv;
+extern void* g_glVertexAttrib4ubv;
+extern void* g_glVertexAttrib4uiv;
+extern void* g_glVertexAttrib4usv;
+extern void* g_glVertexAttribPointer;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f3340
+bool VertexLayout::initGL20()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glAttachShader");
+	g_glAttachShader = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glBindAttribLocation");
+	g_glBindAttribLocation = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glBlendEquationSeparate");
+	g_glBlendEquationSeparate = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCompileShader");
+	g_glCompileShader = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCreateProgram");
+	g_glCreateProgram = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCreateShader");
+	g_glCreateShader = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glDeleteProgram");
+	g_glDeleteProgram = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glDeleteShader");
+	g_glDeleteShader = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glDetachShader");
+	g_glDetachShader = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glDisableVertexAttribArray");
+	g_glDisableVertexAttribArray = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glDrawBuffers");
+	g_glDrawBuffers = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glEnableVertexAttribArray");
+	g_glEnableVertexAttribArray = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetActiveAttrib");
+	g_glGetActiveAttrib = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetActiveUniform");
+	g_glGetActiveUniform = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetAttachedShaders");
+	g_glGetAttachedShaders = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetAttribLocation");
+	g_glGetAttribLocation = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetProgramInfoLog");
+	g_glGetProgramInfoLog = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetProgramiv");
+	g_glGetProgramiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetShaderInfoLog");
+	g_glGetShaderInfoLog = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetShaderSource");
+	g_glGetShaderSource = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetShaderiv");
+	g_glGetShaderiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetUniformLocation");
+	g_glGetUniformLocation = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetUniformfv");
+	g_glGetUniformfv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetUniformiv");
+	g_glGetUniformiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetVertexAttribPointerv");
+	g_glGetVertexAttribPointerv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetVertexAttribdv");
+	g_glGetVertexAttribdv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetVertexAttribfv");
+	g_glGetVertexAttribfv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetVertexAttribiv");
+	g_glGetVertexAttribiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glIsProgram");
+	g_glIsProgram = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glIsShader");
+	g_glIsShader = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glLinkProgram");
+	g_glLinkProgram = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glShaderSource");
+	g_glShaderSource = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glStencilFuncSeparate");
+	g_glStencilFuncSeparate = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glStencilMaskSeparate");
+	g_glStencilMaskSeparate = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glStencilOpSeparate");
+	g_glStencilOpSeparate = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform1f");
+	g_glUniform1f = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform1fv");
+	g_glUniform1fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform1i");
+	g_glUniform1i = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform1iv");
+	g_glUniform1iv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform2f");
+	g_glUniform2f = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform2fv");
+	g_glUniform2fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform2i");
+	g_glUniform2i = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform2iv");
+	g_glUniform2iv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform3f");
+	g_glUniform3f = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform3fv");
+	g_glUniform3fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform3i");
+	g_glUniform3i = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform3iv");
+	g_glUniform3iv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform4f");
+	g_glUniform4f = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform4fv");
+	g_glUniform4fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform4i");
+	g_glUniform4i = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform4iv");
+	g_glUniform4iv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformMatrix2fv");
+	g_glUniformMatrix2fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformMatrix3fv");
+	g_glUniformMatrix3fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformMatrix4fv");
+	g_glUniformMatrix4fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUseProgram");
+	g_glUseProgram = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glValidateProgram");
+	g_glValidateProgram = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib1d");
+	g_glVertexAttrib1d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib1dv");
+	g_glVertexAttrib1dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib1f");
+	g_glVertexAttrib1f = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib1fv");
+	g_glVertexAttrib1fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib1s");
+	g_glVertexAttrib1s = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib1sv");
+	g_glVertexAttrib1sv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib2d");
+	g_glVertexAttrib2d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib2dv");
+	g_glVertexAttrib2dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib2f");
+	g_glVertexAttrib2f = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib2fv");
+	g_glVertexAttrib2fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib2s");
+	g_glVertexAttrib2s = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib2sv");
+	g_glVertexAttrib2sv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib3d");
+	g_glVertexAttrib3d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib3dv");
+	g_glVertexAttrib3dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib3f");
+	g_glVertexAttrib3f = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib3fv");
+	g_glVertexAttrib3fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib3s");
+	g_glVertexAttrib3s = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib3sv");
+	g_glVertexAttrib3sv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4Nbv");
+	g_glVertexAttrib4Nbv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4Niv");
+	g_glVertexAttrib4Niv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4Nsv");
+	g_glVertexAttrib4Nsv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4Nub");
+	g_glVertexAttrib4Nub = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4Nubv");
+	g_glVertexAttrib4Nubv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4Nuiv");
+	g_glVertexAttrib4Nuiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4Nusv");
+	g_glVertexAttrib4Nusv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4bv");
+	g_glVertexAttrib4bv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4d");
+	g_glVertexAttrib4d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4dv");
+	g_glVertexAttrib4dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4f");
+	g_glVertexAttrib4f = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4fv");
+	g_glVertexAttrib4fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4iv");
+	g_glVertexAttrib4iv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4s");
+	g_glVertexAttrib4s = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4sv");
+	g_glVertexAttrib4sv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4ubv");
+	g_glVertexAttrib4ubv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4uiv");
+	g_glVertexAttrib4uiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttrib4usv");
+	g_glVertexAttrib4usv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttribPointer");
+	g_glVertexAttribPointer = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

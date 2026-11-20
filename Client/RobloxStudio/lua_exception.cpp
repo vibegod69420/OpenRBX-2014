@@ -630,6 +630,59 @@ void* __cdecl lua_exception::sub_A3B4A0(int arg1, int arg2, int arg3)
 	return p;
 }
 
+// Forward declarations
+void __cdecl luaC_step(lua_exception* L);
+void* __cdecl sub_BC95C0(lua_exception* L, int size, void* env);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a353e0
+void* __cdecl sub_A353E0(lua_exception* L, int size)
+{
+	char* g = *(char**)((char*)L + 0x10);
+	if (*(unsigned int*)(g + 0x44) >= *(unsigned int*)(g + 0x40))
+	{
+		luaC_step(L);
+	}
+
+	void* env;
+	char* ci = *(char**)((char*)L + 0x14);
+	if (ci == *(char**)((char*)L + 0x28))
+	{
+		env = *(void**)((char*)L + 0x48);
+	}
+	else
+	{
+		env = *(void**)(*(char**)(*(void**)(ci + 4)) + 0x0C);
+	}
+
+	void* u = sub_BC95C0(L, size, env);
+	char* top = *(char**)((char*)L + 8);
+	*(void**)top = u;
+	*(int*)(top + 8) = 7;
+	*(char**)((char*)L + 8) += 16;
+	return (char*)u + 0x18;
+}
+
+void* __cdecl lua_exception::sub_A353E0(lua_exception* L, int size)
+{
+	return sub_A353E0(L, size);
+}
+
+void __cdecl sub_A45610(char* dest, const char* src, int size);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a377a0
+void __cdecl lua_exception::sub_A377A0()
+{
+	*(int*)((char*)this + 8) = 0x00F12F2D;
+	*(int*)((char*)this + 4) = 0x00F12F2D;
+	*(const char**)((char*)this + 0x0C) = "tail";
+	*(int*)((char*)this + 0x14) = -1;
+	*(int*)((char*)this + 0x1C) = -1;
+	*(int*)((char*)this + 0x20) = -1;
+	*(const char**)((char*)this + 0x10) = "=(tail call)";
+	sub_A45610((char*)this + 0x24, "=(tail call)", 0x3C);
+	*(int*)((char*)this + 0x18) = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
