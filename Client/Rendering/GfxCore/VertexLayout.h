@@ -40,6 +40,7 @@ public:
 	bool initARBGetProgramBinary();
 	bool initARBTimerQuery();
 	bool initARBVertexShader();
+	bool initATIDrawElementArray();
 	// AUTO-GENERATED METHODS
 };
 

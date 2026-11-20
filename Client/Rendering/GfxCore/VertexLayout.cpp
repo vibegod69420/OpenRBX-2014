@@ -513,6 +513,32 @@ bool VertexLayout::initARBVertexShader()
 	return false;
 }
 
+extern void* g_glDrawElementArrayATI;
+extern void* g_glDrawRangeElementArrayATI;
+extern void* g_glElementPointerATI;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f83f0
+bool VertexLayout::initATIDrawElementArray()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glDrawElementArrayATI");
+	g_glDrawElementArrayATI = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glDrawRangeElementArrayATI");
+	g_glDrawRangeElementArrayATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glElementPointerATI");
+	g_glElementPointerATI = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
