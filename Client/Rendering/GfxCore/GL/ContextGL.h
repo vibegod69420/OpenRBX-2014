@@ -158,6 +158,7 @@ public:
 	bool initGpuShader5NV();
 	bool initVertexSUN();
 	bool initPathRenderingNV();
+	bool initVertexProgramNV();
 	// AUTO-GENERATED METHODS
 };
 

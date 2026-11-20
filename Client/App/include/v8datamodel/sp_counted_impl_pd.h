@@ -22,6 +22,7 @@ public:
 	void destroy();
 	double __cdecl getDouble();
 	void __cdecl get_deleter(void* arg);
+	void __cdecl get_deleter(void* arg2, void* arg3);
 	// AUTO-GENERATED METHODS
 };
 
