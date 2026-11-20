@@ -29,6 +29,7 @@ public:
 	void __cdecl removeEdgeIndex(void* node, void* feature);
 	void __cdecl updateContact(int arg2, int arg3, void* arg4);
 	void __cdecl checkLimit(void* arg2);
+	void __cdecl writeQuad(void* a, void* b, void* c, void* d);
 	// AUTO-GENERATED METHODS
 };
 

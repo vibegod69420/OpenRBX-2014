@@ -275,6 +275,29 @@ void sp_counted_impl_p::disposeString()
 	}
 }
 
+struct sp_counted_impl_p_string_holder
+{
+	int _pad0;
+	sp_counted_impl_p_basic_string str;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00ca6000
+void sp_counted_impl_p::disposeStringHolder()
+{
+	sp_counted_impl_p_string_holder* p = (sp_counted_impl_p_string_holder*)ptr_000c;
+	if (p)
+	{
+		if (p->str.capacity >= 0x10)
+		{
+			rbx_free_mem(p->str.ptr);
+		}
+		p->str.capacity = 0x0F;
+		p->str.size = 0;
+		p->str.buf[0] = 0;
+		rbx_free_mem(p);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -2827,6 +2827,146 @@ bool ContextGL::initTransformFeedbackVaryingsNV()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005fc580
+bool ContextGL::initGpuProgram4NV()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	unsigned char missing;
+	void* proc;
+
+	proc = getProc("glProgramEnvParameterI4iNV");
+	*(void**)0x012DB644 = proc;
+	missing = (proc == 0) ? 1 : 0;
+
+	proc = getProc("glProgramEnvParameterI4ivNV");
+	*(void**)0x012DB654 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glProgramEnvParameterI4uiNV");
+	*(void**)0x012DB660 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glProgramEnvParameterI4uivNV");
+	*(void**)0x012DB668 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glProgramEnvParametersI4ivNV");
+	*(void**)0x012DB670 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glProgramEnvParametersI4uivNV");
+	*(void**)0x012DB67C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glProgramLocalParameterI4iNV");
+	*(void**)0x012DB688 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glProgramLocalParameterI4ivNV");
+	*(void**)0x012DB694 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glProgramLocalParameterI4uiNV");
+	*(void**)0x012DB6AC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glProgramLocalParameterI4uivNV");
+	*(void**)0x012DB6BC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glProgramLocalParametersI4ivNV");
+	*(void**)0x012DB6C4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glProgramLocalParametersI4uivNV");
+	*(void**)0x012DB6D0 = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x005fdc20
+bool ContextGL::initVertexBufferUnifiedMemoryNV()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	unsigned char missing;
+	void* proc;
+
+	proc = getProc("glBufferAddressRangeNV");
+	*(void**)0x012D9968 = proc;
+	missing = (proc == 0) ? 1 : 0;
+
+	proc = getProc("glColorFormatNV");
+	*(void**)0x012D9974 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glEdgeFlagFormatNV");
+	*(void**)0x012D9978 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glFogCoordFormatNV");
+	*(void**)0x012D9980 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetIntegerui64i_vNV");
+	*(void**)0x012D9988 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glIndexFormatNV");
+	*(void**)0x012D9990 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glNormalFormatNV");
+	*(void**)0x012D9998 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glSecondaryColorFormatNV");
+	*(void**)0x012D99A4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glTexCoordFormatNV");
+	*(void**)0x012D99AC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVertexAttribFormatNV");
+	*(void**)0x012D99B4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVertexAttribIFormatNV");
+	*(void**)0x012D99BC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVertexFormatNV");
+	*(void**)0x012D99C4 = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

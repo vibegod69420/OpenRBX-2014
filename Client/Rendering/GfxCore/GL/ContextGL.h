@@ -138,6 +138,8 @@ public:
 	bool initVDPAUNV();
 	bool initVertexAttrib64bitEXT();
 	bool initTransformFeedbackVaryingsNV();
+	bool initGpuProgram4NV();
+	bool initVertexBufferUnifiedMemoryNV();
 	// AUTO-GENERATED METHODS
 };
 

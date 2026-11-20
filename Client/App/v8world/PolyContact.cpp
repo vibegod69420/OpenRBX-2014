@@ -295,6 +295,53 @@ void __cdecl PolyContact::checkLimit(void* arg2)
 	++*(int*)((char*)arg2 + 0x24);
 }
 
+void __cdecl sub_A36700(void* obj, int arg);
+void __cdecl sub_A365B0(void* obj, void* ptr, int arg);
+
+// FUNCTION: ROBLOXSTUDIO 0x00bcada0
+void __cdecl PolyContact::writeQuad(void* a, void* b, void* c, void* d)
+{
+    int* s = (int*)a;
+    int v = s[0];
+    char* dst = *(char**)((char*)this + 8);
+    *(int*)(dst + 0x00) = v;
+    *(int*)(dst + 0x04) = s[1];
+    v = s[2];
+    s = (int*)b;
+    *(int*)(dst + 0x08) = v;
+
+    v = s[0];
+    dst = *(char**)((char*)this + 8);
+    *(int*)(dst + 0x10) = v;
+    *(int*)(dst + 0x14) = s[1];
+    v = s[2];
+    s = (int*)c;
+    *(int*)(dst + 0x18) = v;
+
+    v = s[0];
+    dst = *(char**)((char*)this + 8);
+    *(int*)(dst + 0x20) = v;
+    *(int*)(dst + 0x24) = s[1];
+    v = s[2];
+    s = (int*)d;
+    *(int*)(dst + 0x28) = v;
+
+    v = s[0];
+    dst = *(char**)((char*)this + 8);
+    *(int*)(dst + 0x30) = v;
+    *(int*)(dst + 0x34) = s[1];
+    v = s[2];
+    *(int*)(dst + 0x38) = v;
+
+    if (*(char**)((char*)this + 0x1C) - *(char**)((char*)this + 8) <= 0x40)
+    {
+        sub_A36700(this, 4);
+    }
+
+    *(char**)((char*)this + 8) += 0x40;
+    sub_A365B0(this, *(char**)((char*)this + 8) - 0x40, 0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
