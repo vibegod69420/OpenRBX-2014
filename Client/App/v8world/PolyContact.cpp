@@ -100,6 +100,24 @@ void __cdecl PolyContact::updateEdges(int count)
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00bc9880
+void __cdecl sub_BC6400(void* arg1, void* arg2, int arg3, int arg4);
+
+void __cdecl PolyContact::deleteFeature(void* feature)
+{
+	char* f = (char*)feature;
+	void* field14 = *(void**)(f + 0x14);
+
+	if (field14 != (void*)0x00EE1E60)
+	{
+		unsigned char shift = *(unsigned char*)(f + 8);
+		sub_BC6400(this, field14, (1 << shift) << 5, 0);
+	}
+
+	sub_BC6400(this, *(void**)(f + 0x10), *(int*)(f + 0x20) << 4, 0);
+	sub_BC6400(this, feature, 0x24, 0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

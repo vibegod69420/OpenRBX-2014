@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 05:39:27 UTC",
+ "updated_at": "2026-11-20 05:48:39 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 10.945,
- "implemented_total": 1037,
- "function_annotations": 1037,
+ "matchable_coverage_pct": 10.9557,
+ "implemented_total": 1038,
+ "function_annotations": 1038,
  "stub_annotations": 0,
- "perfect_100_count": 1025,
- "matched_real_functions": 1025,
+ "perfect_100_count": 1026,
+ "matched_real_functions": 1026,
  "average_match_pct": 99.81,
- "overall_function_coverage_pct": 2.5271,
- "overall_byte_coverage_pct": 0.509,
+ "overall_function_coverage_pct": 2.5295,
+ "overall_byte_coverage_pct": 0.5098,
  "usage": {
   "calls_24h": 5505,
   "failures_24h": 0,
-  "completion_tokens_24h": 68939857,
-  "reasoning_tokens_24h": 67349584,
-  "avg_latency_s": 216.4
+  "completion_tokens_24h": 69053720,
+  "reasoning_tokens_24h": 67456973,
+  "avg_latency_s": 216.7
  },
- "functions_total": 1037,
+ "functions_total": 1038,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -48,9 +48,9 @@
   },
   {
    "name": "App/v8world",
-   "matched": 109,
-   "functions": 109,
-   "bytes": 6048
+   "matched": 110,
+   "functions": 110,
+   "bytes": 6132
   },
   {
    "name": "Rendering/GfxCore",
@@ -2309,6 +2309,17 @@
    "matchable": true
   },
   {
+   "address": "0x00bc9880",
+   "kind": "FUNCTION",
+   "name": "sub_BC6400",
+   "mangled": "?deleteFeature@PolyContact@RBX@@QAAXPAX@Z",
+   "file": "Client/App/v8world/PolyContact.cpp",
+   "orig_size": 84,
+   "recomp_size": 84,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00bc88e0",
    "kind": "FUNCTION",
    "name": "PolyContact_deleteEdge",
@@ -3306,17 +3317,6 @@
    "file": "Client/App/v8kernel/BallBallConnector.cpp",
    "orig_size": 19,
    "recomp_size": 19,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00b4ebf0",
-   "kind": "FUNCTION",
-   "name": "RBX::BallBallConnector::getConst30",
-   "mangled": "?getConst30@BallBallConnector@RBX@@QBEHXZ",
-   "file": "Client/App/v8kernel/BallBallConnector.cpp",
-   "orig_size": 6,
-   "recomp_size": 6,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -4857,9 +4857,21 @@
    "matched": 1025,
    "implemented": 1037,
    "pct": 10.945
+  },
+  {
+   "t": "2026-11-20 05:48:39 UTC",
+   "matched": 1026,
+   "implemented": 1038,
+   "pct": 10.9557
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T05:39:36",
+   "address": "0x00bc9880",
+   "name": "sub_BC6400",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T05:36:02",
    "address": "0x007bce10",
@@ -5573,13 +5585,7 @@
    "address": "0x00c179f0",
    "name": "RBX::HUMAN::Swimming::applyState",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T22:40:26",
-   "address": "0x00c18b80",
-   "name": "RBX::PolyPolyContact::accumulate",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 27.75
+ "match_rate_per_hour": 27.66
 }
