@@ -3350,6 +3350,93 @@ void ProgramMemoryCheckerImpl::init186()
 	sub_CF6609((void*)0x00DFA570);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00dc2820
+class ProgramMemoryCheckerInit187Target
+{
+public:
+	void sub_9D19B0(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+void ProgramMemoryCheckerImpl::init187()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit187Target*)0x01305B10)->sub_9D19B0(
+		0x210,
+		0,
+		(const char*)0x00E964E0,
+		(const char*)0x00E73C50,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DFA630);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00dc2860
+void ProgramMemoryCheckerImpl::init188()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit187Target*)0x01305B40)->sub_9D19B0(
+		0x214,
+		0,
+		(const char*)0x00E964EC,
+		(const char*)0x00E73C50,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DFA690);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00dc28a0
+void ProgramMemoryCheckerImpl::init189()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit178Target*)0x01305728)->sub_9D1A80(
+		0x240,
+		0,
+		(const char*)0x00E96330,
+		(const char*)0x00E83778,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DFA6F0);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00dc28e0
+void ProgramMemoryCheckerImpl::init190()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit175Target*)0x01305818)->sub_9D15F0(
+		0x22C,
+		0,
+		(const char*)0x00E9636C,
+		(const char*)0x00E962D4,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DFA750);
+}
+
+class ProgramMemoryCheckerInit191Target
+{
+public:
+	void sub_9E4940(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dc4510
+void ProgramMemoryCheckerImpl::init191()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit191Target*)0x01305FF0)->sub_9E4940(
+		0x009EBDD0,
+		0,
+		(const char*)0x00E97E3C,
+		(const char*)0x00E97C6C,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DFB710);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
