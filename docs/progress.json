@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 10:54:26 UTC",
+ "updated_at": "2026-11-20 11:03:57 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 12.4506,
- "implemented_total": 1179,
- "function_annotations": 1179,
+ "matchable_coverage_pct": 12.4933,
+ "implemented_total": 1183,
+ "function_annotations": 1183,
  "stub_annotations": 0,
- "perfect_100_count": 1166,
- "matched_real_functions": 1166,
+ "perfect_100_count": 1170,
+ "matched_real_functions": 1170,
  "average_match_pct": 99.78,
- "overall_function_coverage_pct": 2.8747,
- "overall_byte_coverage_pct": 0.6117,
+ "overall_function_coverage_pct": 2.8845,
+ "overall_byte_coverage_pct": 0.6146,
  "usage": {
-  "calls_24h": 5389,
+  "calls_24h": 5420,
   "failures_24h": 0,
-  "completion_tokens_24h": 67171260,
-  "reasoning_tokens_24h": 65562078,
-  "avg_latency_s": 214.7
+  "completion_tokens_24h": 67575146,
+  "reasoning_tokens_24h": 65953535,
+  "avg_latency_s": 214.8
  },
- "functions_total": 1179,
+ "functions_total": 1183,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -48,21 +48,21 @@
   },
   {
    "name": "App/v8world",
-   "matched": 119,
-   "functions": 119,
-   "bytes": 6825
+   "matched": 120,
+   "functions": 120,
+   "bytes": 6891
   },
   {
    "name": "Rendering/GfxCore",
-   "matched": 106,
-   "functions": 106,
-   "bytes": 4557
+   "matched": 107,
+   "functions": 107,
+   "bytes": 4656
   },
   {
    "name": "App/script",
-   "matched": 77,
-   "functions": 77,
-   "bytes": 3351
+   "matched": 78,
+   "functions": 78,
+   "bytes": 3400
   },
   {
    "name": "App/v8kernel",
@@ -78,9 +78,9 @@
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
-   "matched": 33,
-   "functions": 33,
-   "bytes": 1773
+   "matched": 34,
+   "functions": 34,
+   "bytes": 1829
   },
   {
    "name": "App/humanoid",
@@ -578,6 +578,17 @@
    "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
    "orig_size": 36,
    "recomp_size": 36,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00dd1f50",
+   "kind": "FUNCTION",
+   "name": "ProgramMemoryCheckerImpl::init34",
+   "mangled": "?init34@ProgramMemoryCheckerImpl@@QAEXXZ",
+   "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+   "orig_size": 56,
+   "recomp_size": 56,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3308,17 +3319,6 @@
    "recomp_size": 47,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x00b6f170",
-   "kind": "FUNCTION",
-   "name": "RBX::TriangleMesh::openCoroutine",
-   "mangled": "?openCoroutine@TriangleMesh@RBX@@QAAHXZ",
-   "file": "Client/App/v8world/TriangleMesh.cpp",
-   "orig_size": 39,
-   "recomp_size": 39,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -5055,9 +5055,39 @@
    "matched": 1166,
    "implemented": 1179,
    "pct": 12.4506
+  },
+  {
+   "t": "2026-11-20 11:03:57 UTC",
+   "matched": 1170,
+   "implemented": 1183,
+   "pct": 12.4933
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T10:55:46",
+   "address": "0x005f4230",
+   "name": "RBX::Graphics::VertexLayout::initAMDDebugOutput",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T10:54:38",
+   "address": "0x00b6e5f0",
+   "name": "RBX::TriangleMesh::func_B6E5F0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T10:54:37",
+   "address": "0x008ddef0",
+   "name": "RBX::ScriptContext::reportError",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T10:54:33",
+   "address": "0x00dd1f50",
+   "name": "ProgramMemoryCheckerImpl::init34",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T10:50:28",
    "address": "0x00a35620",
@@ -5753,31 +5783,7 @@
    "address": "0x00b71950",
    "name": "RBX::TriangleMesh::mathOp",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T07:27:53",
-   "address": "0x008ddb70",
-   "name": "RBX::ScriptContext::reportError",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T07:27:45",
-   "address": "0x00dc1840",
-   "name": "ProgramMemoryCheckerImpl::init20",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T07:26:54",
-   "address": "0x009d8820",
-   "name": "RBX::Humanoid::getField204XorFloat",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T07:26:03",
-   "address": "0x00a416f0",
-   "name": "RBX::Lua::LuaArguments::pushGlobal",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 27.64
+ "match_rate_per_hour": 27.63
 }

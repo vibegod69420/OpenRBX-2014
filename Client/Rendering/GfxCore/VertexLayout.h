@@ -49,6 +49,7 @@ public:
 	bool initARBTessellationShader();
 	bool initGL12();
 	bool initGL31();
+	bool initAMDDebugOutput();
 	// AUTO-GENERATED METHODS
 };
 

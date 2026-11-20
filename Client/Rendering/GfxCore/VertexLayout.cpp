@@ -735,6 +735,38 @@ bool VertexLayout::initGL31()
 	return false;
 }
 
+extern void* g_glDebugMessageCallbackAMD;
+extern void* g_glDebugMessageEnableAMD;
+extern void* g_glDebugMessageInsertAMD;
+extern void* g_glGetDebugMessageLogAMD;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f4230
+bool VertexLayout::initAMDDebugOutput()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glDebugMessageCallbackAMD");
+	g_glDebugMessageCallbackAMD = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glDebugMessageEnableAMD");
+	g_glDebugMessageEnableAMD = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glDebugMessageInsertAMD");
+	g_glDebugMessageInsertAMD = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetDebugMessageLogAMD");
+	g_glGetDebugMessageLogAMD = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

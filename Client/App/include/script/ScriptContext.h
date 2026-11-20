@@ -40,6 +40,7 @@ public:
 	int __cdecl reportError(unsigned char /*unused*/);
 	int __cdecl reportError(wchar_t /*unused*/);
 	int __cdecl reportError(double /*unused*/);
+	int __cdecl reportError(float /*unused*/);
 	// AUTO-GENERATED METHODS
 };
 
