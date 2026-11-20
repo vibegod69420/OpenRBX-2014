@@ -183,6 +183,48 @@ void* __cdecl PolyContact::createFeature(void* arg2, void* arg3)
 	return result;
 }
 
+void __cdecl PolyContact_sub_C180D0(void* arg1, void* arg2, void* arg3, int arg4, void* arg5);
+void __cdecl PolyContact_sub_C18B80(void* arg1, int arg2);
+
+// FUNCTION: ROBLOXSTUDIO 0x00bcce50
+void __cdecl PolyContact::removeEdgeIndex(void* node, void* feature)
+{
+	void* obj = *(void**)((char*)this + 0x30);
+	int changed = 0;
+	void* replacement = *(void**)((char*)obj + 0x24);
+
+	if (node)
+	{
+		void* feat = feature;
+		do
+		{
+			if (*(int*)((char*)node + 8) == 9)
+			{
+				if (*(int*)((char*)node + 0x10) == *(int*)((char*)feat + 8))
+				{
+					changed = 1;
+					*(void**)((char*)node + 0x10) = replacement;
+				}
+
+				if (*(int*)((char*)node + 0x14) == *(int*)((char*)feat + 8))
+				{
+					changed = 1;
+					*(void**)((char*)node + 0x14) = replacement;
+				}
+			}
+
+			node = *(void**)node;
+		}
+		while (node);
+
+		if (changed)
+		{
+			PolyContact_sub_C180D0(obj, node, *(void**)((char*)obj + 0x24), *(int*)((char*)feat + 8), node);
+			PolyContact_sub_C18B80(obj, 1);
+		}
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

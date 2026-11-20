@@ -959,6 +959,70 @@ bool VertexLayout::initARBTextureMultisample()
 	return false;
 }
 
+extern void* g_glBeginQueryIndexed;
+extern void* g_glDrawTransformFeedbackStream;
+extern void* g_glEndQueryIndexed;
+extern void* g_glGetQueryIndexediv;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f7280
+bool VertexLayout::initARBTransformFeedback2()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glBeginQueryIndexed");
+	g_glBeginQueryIndexed = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glDrawTransformFeedbackStream");
+	g_glDrawTransformFeedbackStream = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glEndQueryIndexed");
+	g_glEndQueryIndexed = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetQueryIndexediv");
+	g_glGetQueryIndexediv = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glBindVertexArray;
+extern void* g_glDeleteVertexArrays;
+extern void* g_glGenVertexArrays;
+extern void* g_glIsVertexArray;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f7490
+bool VertexLayout::initARBVertexArrayObject()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glBindVertexArray");
+	g_glBindVertexArray = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glDeleteVertexArrays");
+	g_glDeleteVertexArrays = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGenVertexArrays");
+	g_glGenVertexArrays = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glIsVertexArray");
+	g_glIsVertexArray = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

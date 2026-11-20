@@ -56,6 +56,8 @@ public:
 	bool initARBDrawElementsBaseVertex();
 	bool initARBFramebufferNoAttachments();
 	bool initARBTextureMultisample();
+	bool initARBTransformFeedback2();
+	bool initARBVertexArrayObject();
 	// AUTO-GENERATED METHODS
 };
 

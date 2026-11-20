@@ -45,6 +45,8 @@ public:
 	int __cdecl reportError(unsigned int* /*unused*/);
 	int __cdecl reportError(long* /*unused*/);
 	int __cdecl reportError(unsigned long* /*unused*/);
+	int __cdecl reportError(short* /*unused*/);
+	int __cdecl reportError(unsigned short* /*unused*/);
 	// AUTO-GENERATED METHODS
 };
 
