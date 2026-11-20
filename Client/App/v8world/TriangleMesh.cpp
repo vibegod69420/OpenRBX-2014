@@ -674,6 +674,33 @@ int __cdecl TriangleMesh::func_B6EC20(void* co, int narg)
 	return nres;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b6ecf0
+void __cdecl TriangleMesh::func_B6ECF0()
+{
+	void* L = this;
+
+	sub_A357B0(L, 0xFFFFD8EE);
+	sub_A35B70(L, 0xFFFFD8EE, (const char*)0x010305E4);
+	sub_A39240(L, (const char*)0x010305E4, (void*)0x00ED0E18);
+	sub_A35690(L, (const char*)0x00ED11E0, 7);
+	sub_A35B70(L, 0xFFFFD8EE, (const char*)0x00ED11E8);
+	sub_A35580(L, (void*)0x00B6EFA0, 0);
+
+	sub_A35580(L, (void*)0x00B6F060, 1);
+	sub_A35B70(L, -2, (const char*)0x01030610);
+	sub_A35580(L, (void*)0x00B6E480, 0);
+	sub_A35580(L, (void*)0x00B6F130, 1);
+	sub_A35B70(L, -2, (const char*)0x01030618);
+	sub_A34E50(L, 0, 1);
+
+	sub_A357B0(L, -1);
+	sub_A35BF0(L, -2);
+	sub_A35690(L, (const char*)0x00ED11F4, 2);
+	sub_A35B70(L, -2, (const char*)0x00ED11F8);
+	sub_A35580(L, (void*)0x00B6F0A0, 1);
+	sub_A35B70(L, 0xFFFFD8EE, (const char*)0x00ED1200);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

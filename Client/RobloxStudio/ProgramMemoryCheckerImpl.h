@@ -201,6 +201,7 @@ public:
 	void init183();
 	void init184();
 	void init185();
+	void init186();
 	// AUTO-GENERATED METHODS
 };
 
