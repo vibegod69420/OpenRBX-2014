@@ -66,6 +66,8 @@ public:
 	bool __cdecl getValues(void* arg, void* out);
 	bool __cdecl getEvent(void* arg, void* out);
 	bool __cdecl getObject(void* arg, void* out);
+	bool __cdecl getFunctions(void* arg, void* out);
+	bool __cdecl getFunction(void* arg, void* out);
 	// AUTO-GENERATED METHODS
 };
 

@@ -4023,6 +4023,284 @@ bool VertexLayout::initARBVertexType2101010Rev()
 	return false;
 }
 
+extern void* g_glClientActiveVertexStreamATI;
+extern void* g_glNormalStream3bATI;
+extern void* g_glNormalStream3bvATI;
+extern void* g_glNormalStream3dATI;
+extern void* g_glNormalStream3dvATI;
+extern void* g_glNormalStream3fATI;
+extern void* g_glNormalStream3fvATI;
+extern void* g_glNormalStream3iATI;
+extern void* g_glNormalStream3ivATI;
+extern void* g_glNormalStream3sATI;
+extern void* g_glNormalStream3svATI;
+extern void* g_glVertexBlendEnvfATI;
+extern void* g_glVertexBlendEnviATI;
+extern void* g_glVertexStream1dATI;
+extern void* g_glVertexStream1dvATI;
+extern void* g_glVertexStream1fATI;
+extern void* g_glVertexStream1fvATI;
+extern void* g_glVertexStream1iATI;
+extern void* g_glVertexStream1ivATI;
+extern void* g_glVertexStream1sATI;
+extern void* g_glVertexStream1svATI;
+extern void* g_glVertexStream2dATI;
+extern void* g_glVertexStream2dvATI;
+extern void* g_glVertexStream2fATI;
+extern void* g_glVertexStream2fvATI;
+extern void* g_glVertexStream2iATI;
+extern void* g_glVertexStream2ivATI;
+extern void* g_glVertexStream2sATI;
+extern void* g_glVertexStream2svATI;
+extern void* g_glVertexStream3dATI;
+extern void* g_glVertexStream3dvATI;
+extern void* g_glVertexStream3fATI;
+extern void* g_glVertexStream3fvATI;
+extern void* g_glVertexStream3iATI;
+extern void* g_glVertexStream3ivATI;
+extern void* g_glVertexStream3sATI;
+extern void* g_glVertexStream3svATI;
+extern void* g_glVertexStream4dATI;
+extern void* g_glVertexStream4dvATI;
+extern void* g_glVertexStream4fATI;
+extern void* g_glVertexStream4fvATI;
+extern void* g_glVertexStream4iATI;
+extern void* g_glVertexStream4ivATI;
+extern void* g_glVertexStream4sATI;
+extern void* g_glVertexStream4svATI;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f8820
+bool VertexLayout::initATIVertexStreams()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glClientActiveVertexStreamATI");
+	g_glClientActiveVertexStreamATI = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glNormalStream3bATI");
+	g_glNormalStream3bATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glNormalStream3bvATI");
+	g_glNormalStream3bvATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glNormalStream3dATI");
+	g_glNormalStream3dATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glNormalStream3dvATI");
+	g_glNormalStream3dvATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glNormalStream3fATI");
+	g_glNormalStream3fATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glNormalStream3fvATI");
+	g_glNormalStream3fvATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glNormalStream3iATI");
+	g_glNormalStream3iATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glNormalStream3ivATI");
+	g_glNormalStream3ivATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glNormalStream3sATI");
+	g_glNormalStream3sATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glNormalStream3svATI");
+	g_glNormalStream3svATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexBlendEnvfATI");
+	g_glVertexBlendEnvfATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexBlendEnviATI");
+	g_glVertexBlendEnviATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream1dATI");
+	g_glVertexStream1dATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream1dvATI");
+	g_glVertexStream1dvATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream1fATI");
+	g_glVertexStream1fATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream1fvATI");
+	g_glVertexStream1fvATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream1iATI");
+	g_glVertexStream1iATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream1ivATI");
+	g_glVertexStream1ivATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream1sATI");
+	g_glVertexStream1sATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream1svATI");
+	g_glVertexStream1svATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream2dATI");
+	g_glVertexStream2dATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream2dvATI");
+	g_glVertexStream2dvATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream2fATI");
+	g_glVertexStream2fATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream2fvATI");
+	g_glVertexStream2fvATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream2iATI");
+	g_glVertexStream2iATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream2ivATI");
+	g_glVertexStream2ivATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream2sATI");
+	g_glVertexStream2sATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream2svATI");
+	g_glVertexStream2svATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream3dATI");
+	g_glVertexStream3dATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream3dvATI");
+	g_glVertexStream3dvATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream3fATI");
+	g_glVertexStream3fATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream3fvATI");
+	g_glVertexStream3fvATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream3iATI");
+	g_glVertexStream3iATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream3ivATI");
+	g_glVertexStream3ivATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream3sATI");
+	g_glVertexStream3sATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream3svATI");
+	g_glVertexStream3svATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream4dATI");
+	g_glVertexStream4dATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream4dvATI");
+	g_glVertexStream4dvATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream4fATI");
+	g_glVertexStream4fATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream4fvATI");
+	g_glVertexStream4fvATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream4iATI");
+	g_glVertexStream4iATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream4ivATI");
+	g_glVertexStream4ivATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream4sATI");
+	g_glVertexStream4sATI = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexStream4svATI");
+	g_glVertexStream4svATI = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

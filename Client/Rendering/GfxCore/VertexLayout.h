@@ -105,6 +105,7 @@ public:
 	bool initARBRobustness();
 	bool initARBMultitexture();
 	bool initARBVertexType2101010Rev();
+	bool initATIVertexStreams();
 	// AUTO-GENERATED METHODS
 };
 

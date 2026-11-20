@@ -806,6 +806,73 @@ bool __cdecl LuaArguments::getObject(void* arg, void* out)
 	return false;
 }
 
+void* __cdecl sub_A56540();
+
+class DummySub7D0130
+{
+public:
+	void __thiscall sub_7D0130(void*);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00a43100
+bool __cdecl LuaArguments::getFunctions(void* arg, void* out)
+{
+	void* L = this;
+	void* tmp = sub_A360A0(L, arg);
+	if (tmp)
+	{
+		if (sub_A350C0(L, arg))
+		{
+			sub_A35060(L, -10000, *(void**)0x0124EADC);
+			if (sub_A35810(L, -1, -2))
+			{
+				sub_A35D10(L, -3);
+				*(void**)out = sub_A56540();
+				((DummySub7D0130*)((char*)out + 4))->sub_7D0130(tmp);
+				return true;
+			}
+			sub_A35D10(L, -3);
+		}
+	}
+	return false;
+}
+
+void* __cdecl sub_A360A0(void*, void*);
+int __cdecl sub_A350C0(void*, void*);
+void __cdecl sub_A35060(void*, int, void*);
+int __cdecl sub_A35810(void*, int, int);
+void __cdecl sub_A35D10(void*, int);
+void* __cdecl sub_7D5A90();
+
+class DummySub7D0340
+{
+public:
+	void __thiscall sub_7D0340(void*);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00a43200
+bool __cdecl LuaArguments::getFunction(void* arg, void* out)
+{
+	void* L = this;
+	void* tmp = sub_A360A0(L, arg);
+	if (tmp)
+	{
+		if (sub_A350C0(L, arg))
+		{
+			sub_A35060(L, -10000, *(void**)0x0124EB2C);
+			if (sub_A35810(L, -1, -2))
+			{
+				sub_A35D10(L, -3);
+				*(void**)out = sub_7D5A90();
+				((DummySub7D0340*)((char*)out + 4))->sub_7D0340(tmp);
+				return true;
+			}
+			sub_A35D10(L, -3);
+		}
+	}
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

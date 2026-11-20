@@ -2268,6 +2268,106 @@ bool ContextGL::initDisplayColorTableEXT()
 	return false;
 }
 
+extern void* wglCreateAffinityDCNV;
+extern void* wglDeleteDCNV;
+extern void* wglEnumGpuDevicesNV;
+extern void* wglEnumGpusFromAffinityDCNV;
+extern void* wglEnumGpusNV;
+
+// FUNCTION: ROBLOXSTUDIO 0x006042b0
+bool ContextGL::initGpuAffinityNV()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("wglCreateAffinityDCNV");
+	wglCreateAffinityDCNV = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("wglDeleteDCNV");
+	wglDeleteDCNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglEnumGpuDevicesNV");
+	wglEnumGpuDevicesNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglEnumGpusFromAffinityDCNV");
+	wglEnumGpusFromAffinityDCNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglEnumGpusNV");
+	wglEnumGpusNV = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glEvalMapsNV;
+extern void* glGetMapAttribParameterfvNV;
+extern void* glGetMapAttribParameterivNV;
+extern void* glGetMapControlPointsNV;
+extern void* glGetMapParameterfvNV;
+extern void* glGetMapParameterivNV;
+extern void* glMapControlPointsNV;
+extern void* glMapParameterfvNV;
+extern void* glMapParameterivNV;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fc2d0
+bool ContextGL::initEvaluatorsNV()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("glEvalMapsNV");
+	glEvalMapsNV = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glGetMapAttribParameterfvNV");
+	glGetMapAttribParameterfvNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetMapAttribParameterivNV");
+	glGetMapAttribParameterivNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetMapControlPointsNV");
+	glGetMapControlPointsNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetMapParameterfvNV");
+	glGetMapParameterfvNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetMapParameterivNV");
+	glGetMapParameterivNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glMapControlPointsNV");
+	glMapControlPointsNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glMapParameterfvNV");
+	glMapParameterfvNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glMapParameterivNV");
+	glMapParameterivNV = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

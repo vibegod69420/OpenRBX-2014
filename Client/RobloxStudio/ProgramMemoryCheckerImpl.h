@@ -123,6 +123,9 @@ public:
 	void init105();
 	void init106();
 	void init107();
+	void init108();
+	void init109();
+	void init110();
 	// AUTO-GENERATED METHODS
 };
 

@@ -128,6 +128,8 @@ public:
 	bool initVertexArrayListsIBM();
 	bool initColorTableSGI();
 	bool initDisplayColorTableEXT();
+	bool initGpuAffinityNV();
+	bool initEvaluatorsNV();
 	// AUTO-GENERATED METHODS
 };
 
