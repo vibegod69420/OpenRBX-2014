@@ -3245,6 +3245,96 @@ void ProgramMemoryCheckerImpl::init179()
 	sub_CF6609((void*)0x00DFA2D0);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00dc2610
+void ProgramMemoryCheckerImpl::init180()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit178Target*)0x013056F8)->sub_9D1A80(
+		0x244,
+		0,
+		(const char*)0x00E96324,
+		(const char*)0x00E83778,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DFA330);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00dc2650
+void ProgramMemoryCheckerImpl::init181()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit175Target*)0x013058E8)->sub_9D15F0(
+		0x25C,
+		0,
+		(const char*)0x00E963E8,
+		(const char*)0x00E963E0,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DFA390);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00dc2690
+void ProgramMemoryCheckerImpl::init182()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit178Target*)0x01305698)->sub_9D1A80(
+		0x238,
+		0,
+		(const char*)0x00E96310,
+		(const char*)0x00E83778,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DFA3F0);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00dc26d0
+void ProgramMemoryCheckerImpl::init183()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit178Target*)0x013057E8)->sub_9D1A80(
+		0x254,
+		0,
+		(const char*)0x00E96358,
+		(const char*)0x00E83778,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DFA450);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00dc2710
+void ProgramMemoryCheckerImpl::init184()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit178Target*)0x01305788)->sub_9D1A80(
+		0x24C,
+		0,
+		(const char*)0x00E96348,
+		(const char*)0x00E83778,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DFA4B0);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00dc2750
+void ProgramMemoryCheckerImpl::init185()
+{
+	int v[2];
+	((ProgramMemoryCheckerInit175Target*)0x01305638)->sub_9D15F0(
+		0x230,
+		0,
+		(const char*)0x00E962DC,
+		(const char*)0x00E962D4,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DFA510);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
