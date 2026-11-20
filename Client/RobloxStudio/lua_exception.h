@@ -29,6 +29,7 @@ public:
 	int __cdecl dispatchGlobalState3();
 	int __cdecl dispatchGlobalState4();
 	int __cdecl dispatchGlobalState5();
+	void __cdecl pushValue(int value);
 	// AUTO-GENERATED METHODS
 };
 

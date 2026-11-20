@@ -30,6 +30,7 @@ public:
 	bool initGLDrawTransformFeedbackInstanced();
 	bool initATIMapObjectBuffer();
 	bool initATIPNTriangles();
+	bool initATISeparateStencil();
 	// AUTO-GENERATED METHODS
 };
 

@@ -278,6 +278,27 @@ bool VertexLayout::initATIPNTriangles()
 	return false;
 }
 
+extern void* g_glStencilFuncSeparateATI;
+extern void* g_glStencilOpSeparateATI;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f8670
+bool VertexLayout::initATISeparateStencil()
+{
+	void* first = g_glGetProcAddress("glStencilFuncSeparateATI");
+	g_glStencilFuncSeparateATI = first;
+	unsigned char missingFirst = (first == 0);
+
+	void* second = g_glGetProcAddress("glStencilOpSeparateATI");
+	g_glStencilOpSeparateATI = second;
+
+	if (second == 0)
+		return true;
+	if (missingFirst)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

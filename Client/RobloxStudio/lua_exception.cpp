@@ -99,6 +99,15 @@ int __cdecl lua_exception::dispatchGlobalState5()
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a35670
+void __cdecl lua_exception::pushValue(int value)
+{
+	char* top = *(char**)((char*)this + 8);
+	*(int*)top = value;
+	*(int*)(top + 8) = 2;
+	*(char**)((char*)this + 8) += 16;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
