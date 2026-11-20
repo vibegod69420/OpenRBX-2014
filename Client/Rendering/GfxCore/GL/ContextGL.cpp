@@ -531,6 +531,57 @@ bool ContextGL::initTexScissorINTEL()
 	return false;
 }
 
+extern void* glSampleMaskEXT;
+extern void* glSamplePatternEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fac90
+bool ContextGL::initSampleMaskEXT()
+{
+	void* proc = wglGetProcAddress("glSampleMaskEXT");
+	glSampleMaskEXT = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glSamplePatternEXT");
+	glSamplePatternEXT = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x005fba60
+extern void* glMultiModeDrawArraysIBM;
+extern void* glMultiModeDrawElementsIBM;
+
+bool ContextGL::initMultiModeDrawIBM()
+{
+	void* proc = wglGetProcAddress("glMultiModeDrawArraysIBM");
+	glMultiModeDrawArraysIBM = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glMultiModeDrawElementsIBM");
+	glMultiModeDrawElementsIBM = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glMultiDrawArraysIndirectBindlessNV;
+extern void* glMultiDrawElementsIndirectBindlessNV;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fc050
+bool ContextGL::initMultiDrawIndirectBindlessNV()
+{
+	void* proc = wglGetProcAddress("glMultiDrawArraysIndirectBindlessNV");
+	glMultiDrawArraysIndirectBindlessNV = proc;
+	bool missing = (proc == 0);
+
+	proc = wglGetProcAddress("glMultiDrawElementsIndirectBindlessNV");
+	glMultiDrawElementsIndirectBindlessNV = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

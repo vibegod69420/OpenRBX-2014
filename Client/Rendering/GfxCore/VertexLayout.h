@@ -61,6 +61,7 @@ public:
 	bool initARBGeometryShader4();
 	bool initARBTransposeMatrix();
 	bool initATITexBump();
+	bool initGL32();
 	// AUTO-GENERATED METHODS
 };
 

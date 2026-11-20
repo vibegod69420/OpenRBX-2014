@@ -1117,6 +1117,32 @@ bool VertexLayout::initATITexBump()
 	return false;
 }
 
+extern void* g_glFramebufferTexture;
+extern void* g_glGetBufferParameteri64v;
+extern void* g_glGetInteger64i_v;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f4120
+bool VertexLayout::initGL32()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glFramebufferTexture");
+	g_glFramebufferTexture = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glGetBufferParameteri64v");
+	g_glGetBufferParameteri64v = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetInteger64i_v");
+	g_glGetInteger64i_v = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

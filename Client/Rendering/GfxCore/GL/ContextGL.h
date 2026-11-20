@@ -68,6 +68,9 @@ public:
 	static void assignIfNull_5f80(int* dst, const int* src);
 	bool initMultiDraw();
 	bool initTexScissorINTEL();
+	bool initSampleMaskEXT();
+	bool initMultiModeDrawIBM();
+	bool initMultiDrawIndirectBindlessNV();
 	// AUTO-GENERATED METHODS
 };
 

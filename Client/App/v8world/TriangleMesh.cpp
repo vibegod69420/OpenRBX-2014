@@ -297,6 +297,30 @@ int __cdecl TriangleMesh::func_B6EA30()
 	return 1;
 }
 
+int sub_B70AB0(void*, const char*, const char*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b71520
+int __cdecl TriangleMesh::func_B71520(const char* s, const char* p, int what)
+{
+	int level = *reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x0C);
+	if (level >= 32)
+	{
+		sub_A38A50(*reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 0x08), "too many captures");
+	}
+
+	*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x14 + level * 8) = what;
+	*reinterpret_cast<const char**>(reinterpret_cast<char*>(this) + 0x10 + level * 8) = s;
+	*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x0C) = level + 1;
+
+	int res = sub_B70AB0(this, s, p);
+	if (res == 0)
+	{
+		--(*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x0C));
+	}
+
+	return res;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

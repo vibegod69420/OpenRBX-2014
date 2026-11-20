@@ -52,6 +52,9 @@ public:
 	int __cdecl reportError(wchar_t* /*unused*/);
 	int __cdecl reportError(float* /*unused*/);
 	int __cdecl reportError(double* /*unused*/);
+	int __cdecl reportError(const double* /*unused*/);
+	int __cdecl reportError(const float* /*unused*/);
+	int __cdecl reportError(const unsigned __int64* /*unused*/);
 	// AUTO-GENERATED METHODS
 };
 

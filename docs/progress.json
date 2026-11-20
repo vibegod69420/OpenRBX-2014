@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 12:23:47 UTC",
+ "updated_at": "2026-11-20 12:32:36 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 13.2088,
- "implemented_total": 1250,
- "function_annotations": 1250,
+ "matchable_coverage_pct": 13.3155,
+ "implemented_total": 1260,
+ "function_annotations": 1260,
  "stub_annotations": 0,
- "perfect_100_count": 1237,
- "matched_real_functions": 1237,
+ "perfect_100_count": 1247,
+ "matched_real_functions": 1247,
  "average_match_pct": 99.79,
- "overall_function_coverage_pct": 3.0497,
- "overall_byte_coverage_pct": 0.6704,
+ "overall_function_coverage_pct": 3.0744,
+ "overall_byte_coverage_pct": 0.6767,
  "usage": {
-  "calls_24h": 5340,
+  "calls_24h": 5349,
   "failures_24h": 0,
-  "completion_tokens_24h": 67090804,
-  "reasoning_tokens_24h": 65423182,
-  "avg_latency_s": 215.9
+  "completion_tokens_24h": 67011210,
+  "reasoning_tokens_24h": 65341773,
+  "avg_latency_s": 215.2
  },
- "functions_total": 1250,
+ "functions_total": 1260,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -48,27 +48,27 @@
   },
   {
    "name": "App/v8world",
-   "matched": 125,
-   "functions": 125,
-   "bytes": 7313
+   "matched": 126,
+   "functions": 126,
+   "bytes": 7389
   },
   {
    "name": "Rendering/GfxCore",
-   "matched": 127,
-   "functions": 127,
-   "bytes": 6021
+   "matched": 131,
+   "functions": 131,
+   "bytes": 6285
   },
   {
    "name": "App/script",
-   "matched": 89,
-   "functions": 89,
-   "bytes": 3939
+   "matched": 92,
+   "functions": 92,
+   "bytes": 4086
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
-   "matched": 46,
-   "functions": 46,
-   "bytes": 2512
+   "matched": 48,
+   "functions": 48,
+   "bytes": 2628
   },
   {
    "name": "App/v8kernel",
@@ -725,6 +725,17 @@
    "matchable": true
   },
   {
+   "address": "0x00dc1ee0",
+   "kind": "FUNCTION",
+   "name": "ProgramMemoryCheckerImpl::init47",
+   "mangled": "?init47@ProgramMemoryCheckerImpl@@QAEXXZ",
+   "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+   "orig_size": 57,
+   "recomp_size": 57,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00dc1ea0",
    "kind": "FUNCTION",
    "name": "ProgramMemoryCheckerImpl::init44",
@@ -941,6 +952,17 @@
    "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
    "orig_size": 56,
    "recomp_size": 56,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00da2090",
+   "kind": "FUNCTION",
+   "name": "ProgramMemoryCheckerImpl::init48",
+   "mangled": "?init48@ProgramMemoryCheckerImpl@@QAEXXZ",
+   "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+   "orig_size": 59,
+   "recomp_size": 59,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3297,28 +3319,6 @@
    "recomp_size": 120,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x00b97910",
-   "kind": "FUNCTION",
-   "name": "RBX::AdvRotateTool::isEnabled",
-   "mangled": "?isEnabled@AdvRotateTool@RBX@@QAE_NXZ",
-   "file": "Client/App/tool/AdvRotateTool.cpp",
-   "orig_size": 120,
-   "recomp_size": 120,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00b97890",
-   "kind": "FUNCTION",
-   "name": "RBX::AdvMoveTool::isEnabled",
-   "mangled": "?isEnabled@AdvMoveTool@RBX@@QAE_NXZ",
-   "file": "Client/App/tool/AdvMoveTool.cpp",
-   "orig_size": 120,
-   "recomp_size": 120,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -5115,9 +5115,75 @@
    "matched": 1237,
    "implemented": 1250,
    "pct": 13.2088
+  },
+  {
+   "t": "2026-11-20 12:32:36 UTC",
+   "matched": 1247,
+   "implemented": 1260,
+   "pct": 13.3155
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T12:29:05",
+   "address": "0x008de2b0",
+   "name": "RBX::ScriptContext::reportError",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T12:28:45",
+   "address": "0x00da2090",
+   "name": "ProgramMemoryCheckerImpl::init48",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T12:28:36",
+   "address": "0x005fc050",
+   "name": "RBX::Graphics::ContextGL::initMultiDrawIndirectBindlessNV",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T12:27:48",
+   "address": "0x005fba60",
+   "name": "RBX::Graphics::ContextGL::initMultiModeDrawIBM",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T12:27:44",
+   "address": "0x00b71520",
+   "name": "RBX::TriangleMesh::func_B71520",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T12:27:21",
+   "address": "0x008de270",
+   "name": "RBX::ScriptContext::reportError",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T12:26:45",
+   "address": "0x005f4120",
+   "name": "RBX::Graphics::VertexLayout::initGL32",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T12:26:21",
+   "address": "0x008de1f0",
+   "name": "RBX::ScriptContext::reportError",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T12:25:15",
+   "address": "0x00dc1ee0",
+   "name": "ProgramMemoryCheckerImpl::init47",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T12:25:14",
+   "address": "0x005fac90",
+   "name": "RBX::Graphics::ContextGL::initSampleMaskEXT",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T12:18:37",
    "address": "0x005fbc20",
@@ -5777,67 +5843,7 @@
    "address": "0x0096bbd0",
    "name": "method_0096d160",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T09:49:02",
-   "address": "0x008ddd70",
-   "name": "RBX::ScriptContext::reportError",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T09:44:19",
-   "address": "0x00b6f060",
-   "name": "RBX::TriangleMesh::func_B6F060",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T09:43:31",
-   "address": "0x00a357b0",
-   "name": "lua_exception::pushValueAtIndex",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T09:43:24",
-   "address": "0x00a418d0",
-   "name": "RBX::Lua::LuaArguments::pushGlobalFunction",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T09:42:35",
-   "address": "0x005f4d30",
-   "name": "RBX::Graphics::VertexLayout::initARBBufferStorage",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T09:42:09",
-   "address": "0x00605dc0",
-   "name": "RBX::Graphics::ContextGL::assignIfNull_5dc0",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T09:42:01",
-   "address": "0x008b0d10",
-   "name": "RBX::GuiMain::fireMouseButton2UpScriptEvent",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T09:41:52",
-   "address": "0x008ddd30",
-   "name": "RBX::ScriptContext::reportError",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T09:41:49",
-   "address": "0x00dc7b80",
-   "name": "ProgramMemoryCheckerImpl::init29",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T09:40:40",
-   "address": "0x00a418a0",
-   "name": "RBX::Lua::LuaArguments::pushGlobalThreads",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 28.32
+ "match_rate_per_hour": 28.46
 }
