@@ -78,6 +78,13 @@ ret0:
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00873bc0
+bool GuiImageButton::isDownOffState() const
+{
+	return *(const int*)((const char*)this + 0x68) == 2
+		&& *(const int*)((const char*)this + 0x64) == 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

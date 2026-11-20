@@ -60,6 +60,39 @@ void Assembly::putInKernel()
 	((AssemblyStageHelper*)this)->putInStage(*reinterpret_cast<IStage**>(reinterpret_cast<char*>(this) + 4));
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b5b980
+Assembly* Assembly::getRootAssembly()
+{
+	void* const ownerData = *reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 0x28);
+	void* const link = *reinterpret_cast<void**>(reinterpret_cast<char*>(ownerData) + 0x20);
+	Assembly* answer;
+
+	if (link != 0)
+		answer = reinterpret_cast<Assembly*>(reinterpret_cast<char*>(link) - 8);
+	else
+		answer = 0;
+
+	unsigned char flag = *reinterpret_cast<unsigned char*>(0x012DE657);
+	if (flag)
+	{
+		if (answer == 0)
+		{
+			typedef bool (__cdecl *AssertHook)(const char*, const char*, int);
+			AssertHook hook = *reinterpret_cast<AssertHook*>(0x012DE694);
+			if (hook != 0)
+			{
+				if (hook("answer", "D:\\BuildAgent\\work\\Trunk2012\\Client\\App\\v8world\\Assembly.cpp", 107))
+					goto done;
+				flag = *reinterpret_cast<unsigned char*>(0x012DE657);
+			}
+			AssemblyAssertFailure(flag, "answer file: D:\\BuildAgent\\work\\Trunk2012\\Client\\App\\v8world\\Assembly.cpp line: 107");
+		}
+	}
+
+done:
+	return answer;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

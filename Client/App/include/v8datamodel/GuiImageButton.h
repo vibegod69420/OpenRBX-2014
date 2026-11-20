@@ -25,6 +25,7 @@ public:
 	bool isHoverState() const;
 	bool isDownState() const;
 	int activateFromHierarchy();
+	bool isDownOffState() const;
 	// AUTO-GENERATED METHODS
 };
 

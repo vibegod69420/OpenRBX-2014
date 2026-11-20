@@ -23,6 +23,7 @@ public:
 	void __cdecl accumulate(int delta);
 	void __cdecl accumulate(int* event);
 	int __cdecl applyState(int a, int b, int c, int d);
+	int __cdecl processEvent(int arg1, int* arg2, int* arg3);
 	// AUTO-GENERATED METHODS
 };
 
