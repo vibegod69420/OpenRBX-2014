@@ -306,6 +306,7 @@ public:
 	void init289();
 	void init290();
 	void init291();
+	void init292();
 	// AUTO-GENERATED METHODS
 };
 
