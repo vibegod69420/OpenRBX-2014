@@ -255,6 +255,10 @@ public:
 	void init238();
 	void init239();
 	void init240();
+	void init241();
+	void init242();
+	void init243();
+	void init244();
 	// AUTO-GENERATED METHODS
 };
 
