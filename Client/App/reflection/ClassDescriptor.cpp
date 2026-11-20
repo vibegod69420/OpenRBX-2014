@@ -34,6 +34,40 @@ void* __cdecl ClassDescriptor::ensureOnceEvent(unsigned long value)
 	return OpenEventA(0x100002, 0, reinterpret_cast<const char*>(this));
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x004117e0
+void ClassDescriptor::clear()
+{
+	typedef void (__cdecl *DeallocFunc)(void*);
+	DeallocFunc dealloc = *reinterpret_cast<DeallocFunc*>(0x00E10508);
+
+	void* p = *(void**)((char*)this + 0x24);
+	if (p)
+	{
+		dealloc(p);
+		*(void**)((char*)this + 0x24) = 0;
+		*(void**)((char*)this + 0x28) = 0;
+		*(void**)((char*)this + 0x2C) = 0;
+	}
+
+	p = *(void**)((char*)this + 0x0C);
+	if (p)
+	{
+		dealloc(p);
+		*(void**)((char*)this + 0x0C) = 0;
+		*(void**)((char*)this + 0x10) = 0;
+		*(void**)((char*)this + 0x14) = 0;
+	}
+
+	p = *(void**)((char*)this + 0x00);
+	if (p)
+	{
+		dealloc(p);
+		*(void**)((char*)this + 0x00) = 0;
+		*(void**)((char*)this + 0x04) = 0;
+		*(void**)((char*)this + 0x08) = 0;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Reflection
