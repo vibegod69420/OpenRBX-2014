@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 08:09:24 UTC",
+ "updated_at": "2026-11-20 08:18:03 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 11.3401,
- "implemented_total": 1075,
- "function_annotations": 1075,
+ "matchable_coverage_pct": 11.3828,
+ "implemented_total": 1079,
+ "function_annotations": 1079,
  "stub_annotations": 0,
- "perfect_100_count": 1062,
- "matched_real_functions": 1062,
+ "perfect_100_count": 1066,
+ "matched_real_functions": 1066,
  "average_match_pct": 99.76,
- "overall_function_coverage_pct": 2.6183,
- "overall_byte_coverage_pct": 0.5386,
+ "overall_function_coverage_pct": 2.6281,
+ "overall_byte_coverage_pct": 0.5403,
  "usage": {
-  "calls_24h": 5359,
+  "calls_24h": 5347,
   "failures_24h": 0,
-  "completion_tokens_24h": 67835573,
-  "reasoning_tokens_24h": 66219552,
-  "avg_latency_s": 218.7
+  "completion_tokens_24h": 67712680,
+  "reasoning_tokens_24h": 66093125,
+  "avg_latency_s": 218.8
  },
- "functions_total": 1075,
+ "functions_total": 1079,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -54,9 +54,9 @@
   },
   {
    "name": "Rendering/GfxCore",
-   "matched": 77,
-   "functions": 77,
-   "bytes": 3083
+   "matched": 78,
+   "functions": 78,
+   "bytes": 3107
   },
   {
    "name": "App/v8kernel",
@@ -72,9 +72,9 @@
   },
   {
    "name": "App/script",
-   "matched": 53,
-   "functions": 53,
-   "bytes": 2199
+   "matched": 54,
+   "functions": 54,
+   "bytes": 2247
   },
   {
    "name": "App/humanoid",
@@ -84,9 +84,9 @@
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
-   "matched": 21,
-   "functions": 21,
-   "bytes": 1101
+   "matched": 22,
+   "functions": 22,
+   "bytes": 1157
   },
   {
    "name": "RobloxStudio/SoundServiceStatsItem.cpp",
@@ -101,16 +101,16 @@
    "bytes": 558
   },
   {
+   "name": "RobloxStudio/lua_exception.cpp",
+   "matched": 21,
+   "functions": 21,
+   "bytes": 522
+  },
+  {
    "name": "Network/InstancePacketCache.cpp",
    "matched": 1,
    "functions": 1,
    "bytes": 494
-  },
-  {
-   "name": "RobloxStudio/lua_exception.cpp",
-   "matched": 20,
-   "functions": 20,
-   "bytes": 483
   },
   {
    "name": "App/tool",
@@ -578,6 +578,17 @@
    "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
    "orig_size": 36,
    "recomp_size": 36,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00dc18c0",
+   "kind": "FUNCTION",
+   "name": "ProgramMemoryCheckerImpl::init22",
+   "mangled": "?init22@ProgramMemoryCheckerImpl@@QAEXXZ",
+   "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+   "orig_size": 56,
+   "recomp_size": 56,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3308,17 +3319,6 @@
    "recomp_size": 7,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x00b53580",
-   "kind": "FUNCTION",
-   "name": "RBX::Kernel::getSubField24_54",
-   "mangled": "?getSubField24_54@Kernel@RBX@@QBEHXZ",
-   "file": "Client/App/v8kernel/Kernel.cpp",
-   "orig_size": 7,
-   "recomp_size": 7,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -4941,9 +4941,39 @@
    "matched": 1062,
    "implemented": 1075,
    "pct": 11.3401
+  },
+  {
+   "t": "2026-11-20 08:18:03 UTC",
+   "matched": 1066,
+   "implemented": 1079,
+   "pct": 11.3828
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T08:13:59",
+   "address": "0x00dc18c0",
+   "name": "ProgramMemoryCheckerImpl::init22",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T08:13:06",
+   "address": "0x00a379c0",
+   "name": "luaO_pushvfstring",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T08:12:23",
+   "address": "0x00a41750",
+   "name": "RBX::Lua::LuaArguments::pushGlobalValues",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T08:10:37",
+   "address": "0x00605cc0",
+   "name": "RBX::Graphics::ContextGL::assignIfNull_5cc0",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T08:03:34",
    "address": "0x00bbbd50",
@@ -5638,30 +5668,6 @@
    "ts": "2026-11-20T01:30:11",
    "address": "0x00a3ce00",
    "name": "lua_exception::dispatchGlobalState5",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T01:29:33",
-   "address": "0x00b55350",
-   "name": "RBX::Kernel::getKernelEndStateCountValid",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T01:25:31",
-   "address": "0x00605b40",
-   "name": "RBX::Graphics::ContextGL::assignIfNull_5b40",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T01:25:29",
-   "address": "0x009d90c0",
-   "name": "RBX::Humanoid::getField298",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T01:22:15",
-   "address": "0x006e2150",
-   "name": "G3D::Sphere::getStaticData4",
    "pct": 100.0
   }
  ],

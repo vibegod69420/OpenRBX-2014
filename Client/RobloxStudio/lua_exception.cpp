@@ -169,6 +169,18 @@ int __cdecl lua_exception::pushThread()
 	return *(void**)(g + 0x70) == this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a379c0
+const char* __cdecl luaO_pushvfstring(lua_exception* L, const char* fmt, char* argp);
+void __cdecl luaG_addinfo(lua_exception* L, const char* msg);
+void __cdecl luaG_errormsg(lua_exception* L);
+
+void __cdecl lua_exception::runError(const char* fmt, ...)
+{
+	const char* msg = luaO_pushvfstring(this, fmt, (char*)(&fmt + 1));
+	luaG_addinfo(this, msg);
+	luaG_errormsg(this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
