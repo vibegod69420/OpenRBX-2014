@@ -19,6 +19,7 @@ public:
 	void onDestroy();
 	static void destroyInstance(chainbuf* p);
 	void __cdecl write(void* destination);
+	void __cdecl write_ptr(void* destination);
 	// AUTO-GENERATED METHODS
 };
 

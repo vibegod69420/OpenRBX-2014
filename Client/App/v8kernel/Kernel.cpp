@@ -103,6 +103,26 @@ int Kernel::getAccumulatedKernelValue()
     return sum;
 }
 
+struct KernelStateView_00B55350
+{
+	char pad[0xF0];
+	int m_f0;
+	int m_f4;
+	int m_f8;
+	int m_fC;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00b55350
+int Kernel::getKernelEndStateCountValid() const
+{
+	KernelStateView_00B55350* view = (KernelStateView_00B55350*)this;
+	int count = (view->m_fC >= 0);
+	count += (view->m_f8 >= 0);
+	count += (view->m_f4 >= 0);
+	count += (view->m_f0 >= 0);
+	return count <= 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

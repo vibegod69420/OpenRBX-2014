@@ -28,6 +28,7 @@ public:
 	int __cdecl dispatchGlobalState2();
 	int __cdecl dispatchGlobalState3();
 	int __cdecl dispatchGlobalState4();
+	int __cdecl dispatchGlobalState5();
 	// AUTO-GENERATED METHODS
 };
 

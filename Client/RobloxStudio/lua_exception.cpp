@@ -92,6 +92,13 @@ int __cdecl lua_exception::dispatchGlobalState4()
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a3ce00
+int __cdecl lua_exception::dispatchGlobalState5()
+{
+	lua_exception_dispatchGlobal((int)this, 1, *(int*)0x0124EB18);
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

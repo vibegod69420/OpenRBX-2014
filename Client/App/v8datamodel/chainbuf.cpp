@@ -29,6 +29,16 @@ void __cdecl chainbuf::write(void* destination)
 	sub_C70230(destination, descriptor);
 }
 
+void* __cdecl sub_7D0950(void*);
+void __cdecl sub_C70010(void*, void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00c794f0
+void __cdecl chainbuf::write_ptr(void* destination)
+{
+	void* value = *(void**)sub_7D0950((char*)this + 4);
+	sub_C70010(destination, &value);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

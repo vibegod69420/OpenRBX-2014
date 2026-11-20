@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 01:29:24 UTC",
+ "updated_at": "2026-11-20 01:38:06 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 10.1548,
- "implemented_total": 958,
- "function_annotations": 958,
+ "matchable_coverage_pct": 10.1869,
+ "implemented_total": 962,
+ "function_annotations": 962,
  "stub_annotations": 0,
- "perfect_100_count": 951,
- "matched_real_functions": 951,
- "average_match_pct": 99.84,
- "overall_function_coverage_pct": 2.3446,
- "overall_byte_coverage_pct": 0.4175,
+ "perfect_100_count": 954,
+ "matched_real_functions": 954,
+ "average_match_pct": 99.83,
+ "overall_function_coverage_pct": 2.352,
+ "overall_byte_coverage_pct": 0.4187,
  "usage": {
-  "calls_24h": 5847,
+  "calls_24h": 5828,
   "failures_24h": 0,
-  "completion_tokens_24h": 70951778,
-  "reasoning_tokens_24h": 69458940,
-  "avg_latency_s": 212.2
+  "completion_tokens_24h": 70958800,
+  "reasoning_tokens_24h": 69457510,
+  "avg_latency_s": 212.7
  },
- "functions_total": 958,
+ "functions_total": 962,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 370,
-   "functions": 371,
-   "bytes": 12576
+   "matched": 371,
+   "functions": 372,
+   "bytes": 12613
   },
   {
    "name": "App/v8world",
@@ -60,9 +60,9 @@
   },
   {
    "name": "App/v8kernel",
-   "matched": 71,
-   "functions": 71,
-   "bytes": 2261
+   "matched": 72,
+   "functions": 72,
+   "bytes": 2320
   },
   {
    "name": "Rendering/GfxRender",
@@ -131,6 +131,12 @@
    "bytes": 321
   },
   {
+   "name": "RobloxStudio/lua_exception.cpp",
+   "matched": 13,
+   "functions": 13,
+   "bytes": 268
+  },
+  {
    "name": "RobloxStudio/RobloxObjectBrowserDoc.cpp",
    "matched": 4,
    "functions": 4,
@@ -143,15 +149,9 @@
    "bytes": 249
   },
   {
-   "name": "RobloxStudio/lua_exception.cpp",
-   "matched": 12,
-   "functions": 12,
-   "bytes": 242
-  },
-  {
    "name": "Network/PersistentDataStore.cpp",
    "matched": 7,
-   "functions": 13,
+   "functions": 14,
    "bytes": 225
   },
   {
@@ -1304,6 +1304,17 @@
    "file": "Client/App/v8datamodel/stream_buffer.cpp",
    "orig_size": 4,
    "recomp_size": 4,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00c794f0",
+   "kind": "FUNCTION",
+   "name": "std::chainbuf::write_ptr",
+   "mangled": "?write_ptr@chainbuf@std@@QAAXPAX@Z",
+   "file": "Client/App/v8datamodel/chainbuf.cpp",
+   "orig_size": 37,
+   "recomp_size": 37,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -2914,6 +2925,17 @@
    "matchable": true
   },
   {
+   "address": "0x00b55350",
+   "kind": "FUNCTION",
+   "name": "RBX::Kernel::getKernelEndStateCountValid",
+   "mangled": "?getKernelEndStateCountValid@Kernel@RBX@@QBEHXZ",
+   "file": "Client/App/v8kernel/Kernel.cpp",
+   "orig_size": 59,
+   "recomp_size": 59,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00b535b0",
    "kind": "FUNCTION",
    "name": "RBX::Kernel::getSubField24_74",
@@ -3295,28 +3317,6 @@
    "file": "Client/App/v8world/Motor6DJoint.cpp",
    "orig_size": 48,
    "recomp_size": 48,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00af1120",
-   "kind": "FUNCTION",
-   "name": "RBX::MultiJoint::getJointType",
-   "mangled": "?getJointType@MultiJoint@RBX@@QBEHXZ",
-   "file": "Client/App/v8world/MultiJoint.cpp",
-   "orig_size": 68,
-   "recomp_size": 68,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00ad18c0",
-   "kind": "FUNCTION",
-   "name": "animatorPreClear",
-   "mangled": "?clear@Animator@RBX@@QAEXXZ",
-   "file": "Client/App/v8datamodel/Animator.cpp",
-   "orig_size": 58,
-   "recomp_size": 58,
    "match_pct": 100.0,
    "matchable": true
   }
@@ -4719,9 +4719,39 @@
    "matched": 951,
    "implemented": 958,
    "pct": 10.1548
+  },
+  {
+   "t": "2026-11-20 01:38:06 UTC",
+   "matched": 954,
+   "implemented": 962,
+   "pct": 10.1869
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T01:33:33",
+   "address": "0x00c794f0",
+   "name": "std::chainbuf::write_ptr",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T01:31:07",
+   "address": "0x0094b130",
+   "name": "RBX::Network::PersistentDataStore::sub_94b130",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T01:30:11",
+   "address": "0x00a3ce00",
+   "name": "lua_exception::dispatchGlobalState5",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T01:29:33",
+   "address": "0x00b55350",
+   "name": "RBX::Kernel::getKernelEndStateCountValid",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T01:25:31",
    "address": "0x00605b40",
@@ -5417,31 +5447,7 @@
    "address": "0x00a2da80",
    "name": "std::sp_counted_impl_p::destroySubPtr0C_da80",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T18:11:33",
-   "address": "0x00605a80",
-   "name": "RBX::Graphics::ContextGL::assignIfNull_5a80",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T18:08:25",
-   "address": "0x009d8ad0",
-   "name": "RBX::Humanoid::getField288",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T17:52:34",
-   "address": "0x0042bd50",
-   "name": "RBX::DS::CVideoStream::sub_42BD50",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T17:48:37",
-   "address": "0x008930f0",
-   "name": "RBX::UnionOperation::getPrimitiveDataOffset3C",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 29.02
+ "match_rate_per_hour": 28.99
 }

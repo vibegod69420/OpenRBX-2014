@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20 01:29:24 UTC",
+  "updated_at": "2026-11-20 01:38:06 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 10.1548,
-  "implemented_total": 958,
-  "function_annotations": 958,
+  "matchable_coverage_pct": 10.1869,
+  "implemented_total": 962,
+  "function_annotations": 962,
   "stub_annotations": 0,
-  "perfect_100_count": 951,
-  "matched_real_functions": 951,
-  "average_match_pct": 99.84,
-  "overall_function_coverage_pct": 2.3446,
-  "overall_byte_coverage_pct": 0.4175,
+  "perfect_100_count": 954,
+  "matched_real_functions": 954,
+  "average_match_pct": 99.83,
+  "overall_function_coverage_pct": 2.352,
+  "overall_byte_coverage_pct": 0.4187,
   "usage": {
-    "calls_24h": 5847,
+    "calls_24h": 5828,
     "failures_24h": 0,
-    "completion_tokens_24h": 70951778,
-    "reasoning_tokens_24h": 69458940,
-    "avg_latency_s": 212.2
+    "completion_tokens_24h": 70958800,
+    "reasoning_tokens_24h": 69457510,
+    "avg_latency_s": 212.7
   },
   "functions": [
     {
@@ -6150,6 +6150,17 @@
       "matchable": true
     },
     {
+      "address": "0x0094b130",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::PersistentDataStore::sub_94b130",
+      "mangled": "?sub_94b130@PersistentDataStore@Network@RBX@@QAAPAV123@PAXH@Z",
+      "file": "Client/Network/PersistentDataStore.cpp",
+      "orig_size": 31,
+      "recomp_size": 31,
+      "match_pct": 90.32,
+      "matchable": true
+    },
+    {
       "address": "0x00953980",
       "kind": "FUNCTION",
       "name": "boost::unknown_exception::add_ref",
@@ -7459,6 +7470,17 @@
       "matchable": true
     },
     {
+      "address": "0x00a3ce00",
+      "kind": "FUNCTION",
+      "name": "lua_exception::dispatchGlobalState5",
+      "mangled": "?dispatchGlobalState5@lua_exception@@QAAHXZ",
+      "file": "Client/RobloxStudio/lua_exception.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00a45db0",
       "kind": "FUNCTION",
       "name": "RBX::ScriptService::Info::destroyInstance",
@@ -8225,6 +8247,17 @@
       "file": "Client/App/v8kernel/Kernel.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b55350",
+      "kind": "FUNCTION",
+      "name": "RBX::Kernel::getKernelEndStateCountValid",
+      "mangled": "?getKernelEndStateCountValid@Kernel@RBX@@QBEHXZ",
+      "file": "Client/App/v8kernel/Kernel.cpp",
+      "orig_size": 59,
+      "recomp_size": 59,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -9831,6 +9864,17 @@
       "file": "Client/App/v8datamodel/chainbuf.cpp",
       "orig_size": 32,
       "recomp_size": 32,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c794f0",
+      "kind": "FUNCTION",
+      "name": "std::chainbuf::write_ptr",
+      "mangled": "?write_ptr@chainbuf@std@@QAAXPAX@Z",
+      "file": "Client/App/v8datamodel/chainbuf.cpp",
+      "orig_size": 37,
+      "recomp_size": 37,
       "match_pct": 100.0,
       "matchable": true
     },
