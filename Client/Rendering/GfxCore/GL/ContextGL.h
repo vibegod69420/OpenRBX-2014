@@ -130,6 +130,9 @@ public:
 	bool initDisplayColorTableEXT();
 	bool initGpuAffinityNV();
 	bool initEvaluatorsNV();
+	bool initWGLAMDgpuAssociation();
+	bool initGlobalAlphaFactorSUN();
+	bool initDXInteropNV();
 	// AUTO-GENERATED METHODS
 };
 

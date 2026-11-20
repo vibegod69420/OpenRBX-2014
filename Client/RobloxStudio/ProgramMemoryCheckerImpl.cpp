@@ -1949,6 +1949,48 @@ void ProgramMemoryCheckerImpl::init110()
 	sub_CF6609((void*)0x00DE95B0);
 }
 
+class ProgramMemoryCheckerHttpTarget
+{
+public:
+	void sub_842AD0(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dadc50
+void ProgramMemoryCheckerImpl::init111()
+{
+	int v[2];
+	((ProgramMemoryCheckerHttpTarget*)0x012F8770)->sub_842AD0(
+		0x00852130,
+		0,
+		(const char*)0x00E5DCFC,
+		(const char*)0x00E5DCF8,
+		3,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DE9730);
+}
+
+class ProgramMemoryCheckerHttpGetAsyncTarget
+{
+public:
+	void sub_843780(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dadeb0
+void ProgramMemoryCheckerImpl::init112()
+{
+	int v[2];
+	((ProgramMemoryCheckerHttpGetAsyncTarget*)0x012F89C8)->sub_843780(
+		0x00856BD0,
+		0,
+		(const char*)0x00E5DE08,
+		(const char*)0x00E5DCF8,
+		5,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DE9A80);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

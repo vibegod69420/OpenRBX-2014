@@ -2368,6 +2368,167 @@ bool ContextGL::initEvaluatorsNV()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006039e0
+bool ContextGL::initWGLAMDgpuAssociation()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	unsigned char missing;
+	void* proc;
+
+	proc = getProc("wglBlitContextFramebufferAMD");
+	*(void**)0x012DB43C = proc;
+	missing = (proc == 0) ? 1 : 0;
+
+	proc = getProc("wglCreateAssociatedContextAMD");
+	*(void**)0x012DB448 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglCreateAssociatedContextAttribsAMD");
+	*(void**)0x012DB458 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglDeleteAssociatedContextAMD");
+	*(void**)0x012DB460 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglGetContextGPUIDAMD");
+	*(void**)0x012DB46C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglGetCurrentAssociatedContextAMD");
+	*(void**)0x012DB47C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglGetGPUIDsAMD");
+	*(void**)0x012DB488 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglGetGPUInfoAMD");
+	*(void**)0x012DB494 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglMakeAssociatedContextCurrentAMD");
+	*(void**)0x012DB4A4 = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glGlobalAlphaFactorbSUN;
+extern void* glGlobalAlphaFactordSUN;
+extern void* glGlobalAlphaFactorfSUN;
+extern void* glGlobalAlphaFactoriSUN;
+extern void* glGlobalAlphaFactorsSUN;
+extern void* glGlobalAlphaFactorubSUN;
+extern void* glGlobalAlphaFactoruiSUN;
+extern void* glGlobalAlphaFactorusSUN;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fee90
+bool ContextGL::initGlobalAlphaFactorSUN()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("glGlobalAlphaFactorbSUN");
+	glGlobalAlphaFactorbSUN = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glGlobalAlphaFactordSUN");
+	glGlobalAlphaFactordSUN = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGlobalAlphaFactorfSUN");
+	glGlobalAlphaFactorfSUN = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGlobalAlphaFactoriSUN");
+	glGlobalAlphaFactoriSUN = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGlobalAlphaFactorsSUN");
+	glGlobalAlphaFactorsSUN = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGlobalAlphaFactorubSUN");
+	glGlobalAlphaFactorubSUN = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGlobalAlphaFactoruiSUN");
+	glGlobalAlphaFactoruiSUN = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGlobalAlphaFactorusSUN");
+	glGlobalAlphaFactorusSUN = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x006041d0
+bool ContextGL::initDXInteropNV()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	unsigned char missing;
+	void* proc;
+
+	proc = getProc("wglDXCloseDeviceNV");
+	*(void**)0x012DB7E0 = proc;
+	missing = (proc == 0) ? 1 : 0;
+
+	proc = getProc("wglDXLockObjectsNV");
+	*(void**)0x012DB7EC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglDXObjectAccessNV");
+	*(void**)0x012DB7FC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglDXOpenDeviceNV");
+	*(void**)0x012DB80C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglDXRegisterObjectNV");
+	*(void**)0x012DB818 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglDXSetResourceShareHandleNV");
+	*(void**)0x012DB820 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglDXUnlockObjectsNV");
+	*(void**)0x012DB82C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglDXUnregisterObjectNV");
+	*(void**)0x012DB834 = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

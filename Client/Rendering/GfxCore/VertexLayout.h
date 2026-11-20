@@ -106,6 +106,8 @@ public:
 	bool initARBMultitexture();
 	bool initARBVertexType2101010Rev();
 	bool initATIVertexStreams();
+	bool initGL13();
+	bool initGL14();
 	// AUTO-GENERATED METHODS
 };
 

@@ -4301,6 +4301,580 @@ bool VertexLayout::initATIVertexStreams()
 	return false;
 }
 
+extern void* g_glActiveTexture;
+extern void* g_glClientActiveTexture;
+extern void* g_glCompressedTexImage1D;
+extern void* g_glCompressedTexImage2D;
+extern void* g_glCompressedTexImage3D;
+extern void* g_glCompressedTexSubImage1D;
+extern void* g_glCompressedTexSubImage2D;
+extern void* g_glCompressedTexSubImage3D;
+extern void* g_glGetCompressedTexImage;
+extern void* g_glLoadTransposeMatrixd;
+extern void* g_glLoadTransposeMatrixf;
+extern void* g_glMultTransposeMatrixd;
+extern void* g_glMultTransposeMatrixf;
+extern void* g_glMultiTexCoord1d;
+extern void* g_glMultiTexCoord1dv;
+extern void* g_glMultiTexCoord1f;
+extern void* g_glMultiTexCoord1fv;
+extern void* g_glMultiTexCoord1i;
+extern void* g_glMultiTexCoord1iv;
+extern void* g_glMultiTexCoord1s;
+extern void* g_glMultiTexCoord1sv;
+extern void* g_glMultiTexCoord2d;
+extern void* g_glMultiTexCoord2dv;
+extern void* g_glMultiTexCoord2f;
+extern void* g_glMultiTexCoord2fv;
+extern void* g_glMultiTexCoord2i;
+extern void* g_glMultiTexCoord2iv;
+extern void* g_glMultiTexCoord2s;
+extern void* g_glMultiTexCoord2sv;
+extern void* g_glMultiTexCoord3d;
+extern void* g_glMultiTexCoord3dv;
+extern void* g_glMultiTexCoord3f;
+extern void* g_glMultiTexCoord3fv;
+extern void* g_glMultiTexCoord3i;
+extern void* g_glMultiTexCoord3iv;
+extern void* g_glMultiTexCoord3s;
+extern void* g_glMultiTexCoord3sv;
+extern void* g_glMultiTexCoord4d;
+extern void* g_glMultiTexCoord4dv;
+extern void* g_glMultiTexCoord4f;
+extern void* g_glMultiTexCoord4fv;
+extern void* g_glMultiTexCoord4i;
+extern void* g_glMultiTexCoord4iv;
+extern void* g_glMultiTexCoord4s;
+extern void* g_glMultiTexCoord4sv;
+extern void* g_glSampleCoverage;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f2970
+bool VertexLayout::initGL13()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glActiveTexture");
+	g_glActiveTexture = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glClientActiveTexture");
+	g_glClientActiveTexture = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCompressedTexImage1D");
+	g_glCompressedTexImage1D = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCompressedTexImage2D");
+	g_glCompressedTexImage2D = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCompressedTexImage3D");
+	g_glCompressedTexImage3D = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCompressedTexSubImage1D");
+	g_glCompressedTexSubImage1D = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCompressedTexSubImage2D");
+	g_glCompressedTexSubImage2D = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCompressedTexSubImage3D");
+	g_glCompressedTexSubImage3D = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetCompressedTexImage");
+	g_glGetCompressedTexImage = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glLoadTransposeMatrixd");
+	g_glLoadTransposeMatrixd = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glLoadTransposeMatrixf");
+	g_glLoadTransposeMatrixf = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultTransposeMatrixd");
+	g_glMultTransposeMatrixd = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultTransposeMatrixf");
+	g_glMultTransposeMatrixf = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord1d");
+	g_glMultiTexCoord1d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord1dv");
+	g_glMultiTexCoord1dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord1f");
+	g_glMultiTexCoord1f = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord1fv");
+	g_glMultiTexCoord1fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord1i");
+	g_glMultiTexCoord1i = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord1iv");
+	g_glMultiTexCoord1iv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord1s");
+	g_glMultiTexCoord1s = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord1sv");
+	g_glMultiTexCoord1sv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord2d");
+	g_glMultiTexCoord2d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord2dv");
+	g_glMultiTexCoord2dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord2f");
+	g_glMultiTexCoord2f = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord2fv");
+	g_glMultiTexCoord2fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord2i");
+	g_glMultiTexCoord2i = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord2iv");
+	g_glMultiTexCoord2iv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord2s");
+	g_glMultiTexCoord2s = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord2sv");
+	g_glMultiTexCoord2sv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord3d");
+	g_glMultiTexCoord3d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord3dv");
+	g_glMultiTexCoord3dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord3f");
+	g_glMultiTexCoord3f = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord3fv");
+	g_glMultiTexCoord3fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord3i");
+	g_glMultiTexCoord3i = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord3iv");
+	g_glMultiTexCoord3iv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord3s");
+	g_glMultiTexCoord3s = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord3sv");
+	g_glMultiTexCoord3sv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord4d");
+	g_glMultiTexCoord4d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord4dv");
+	g_glMultiTexCoord4dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord4f");
+	g_glMultiTexCoord4f = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord4fv");
+	g_glMultiTexCoord4fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord4i");
+	g_glMultiTexCoord4i = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord4iv");
+	g_glMultiTexCoord4iv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord4s");
+	g_glMultiTexCoord4s = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiTexCoord4sv");
+	g_glMultiTexCoord4sv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSampleCoverage");
+	g_glSampleCoverage = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glBlendColor;
+extern void* g_glBlendEquation;
+extern void* g_glBlendFuncSeparate;
+extern void* g_glFogCoordPointer;
+extern void* g_glFogCoordd;
+extern void* g_glFogCoorddv;
+extern void* g_glFogCoordf;
+extern void* g_glFogCoordfv;
+extern void* g_glMultiDrawArrays;
+extern void* g_glMultiDrawElements;
+extern void* g_glPointParameterf;
+extern void* g_glPointParameterfv;
+extern void* g_glPointParameteri;
+extern void* g_glPointParameteriv;
+extern void* g_glSecondaryColor3b;
+extern void* g_glSecondaryColor3bv;
+extern void* g_glSecondaryColor3d;
+extern void* g_glSecondaryColor3dv;
+extern void* g_glSecondaryColor3f;
+extern void* g_glSecondaryColor3fv;
+extern void* g_glSecondaryColor3i;
+extern void* g_glSecondaryColor3iv;
+extern void* g_glSecondaryColor3s;
+extern void* g_glSecondaryColor3sv;
+extern void* g_glSecondaryColor3ub;
+extern void* g_glSecondaryColor3ubv;
+extern void* g_glSecondaryColor3ui;
+extern void* g_glSecondaryColor3uiv;
+extern void* g_glSecondaryColor3us;
+extern void* g_glSecondaryColor3usv;
+extern void* g_glSecondaryColorPointer;
+extern void* g_glWindowPos2d;
+extern void* g_glWindowPos2dv;
+extern void* g_glWindowPos2f;
+extern void* g_glWindowPos2fv;
+extern void* g_glWindowPos2i;
+extern void* g_glWindowPos2iv;
+extern void* g_glWindowPos2s;
+extern void* g_glWindowPos2sv;
+extern void* g_glWindowPos3d;
+extern void* g_glWindowPos3dv;
+extern void* g_glWindowPos3f;
+extern void* g_glWindowPos3fv;
+extern void* g_glWindowPos3i;
+extern void* g_glWindowPos3iv;
+extern void* g_glWindowPos3s;
+extern void* g_glWindowPos3sv;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f2d70
+bool VertexLayout::initGL14()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glBlendColor");
+	g_glBlendColor = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glBlendEquation");
+	g_glBlendEquation = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glBlendFuncSeparate");
+	g_glBlendFuncSeparate = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glFogCoordPointer");
+	g_glFogCoordPointer = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glFogCoordd");
+	g_glFogCoordd = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glFogCoorddv");
+	g_glFogCoorddv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glFogCoordf");
+	g_glFogCoordf = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glFogCoordfv");
+	g_glFogCoordfv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiDrawArrays");
+	g_glMultiDrawArrays = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiDrawElements");
+	g_glMultiDrawElements = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glPointParameterf");
+	g_glPointParameterf = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glPointParameterfv");
+	g_glPointParameterfv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glPointParameteri");
+	g_glPointParameteri = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glPointParameteriv");
+	g_glPointParameteriv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSecondaryColor3b");
+	g_glSecondaryColor3b = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSecondaryColor3bv");
+	g_glSecondaryColor3bv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSecondaryColor3d");
+	g_glSecondaryColor3d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSecondaryColor3dv");
+	g_glSecondaryColor3dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSecondaryColor3f");
+	g_glSecondaryColor3f = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSecondaryColor3fv");
+	g_glSecondaryColor3fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSecondaryColor3i");
+	g_glSecondaryColor3i = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSecondaryColor3iv");
+	g_glSecondaryColor3iv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSecondaryColor3s");
+	g_glSecondaryColor3s = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSecondaryColor3sv");
+	g_glSecondaryColor3sv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSecondaryColor3ub");
+	g_glSecondaryColor3ub = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSecondaryColor3ubv");
+	g_glSecondaryColor3ubv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSecondaryColor3ui");
+	g_glSecondaryColor3ui = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSecondaryColor3uiv");
+	g_glSecondaryColor3uiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSecondaryColor3us");
+	g_glSecondaryColor3us = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSecondaryColor3usv");
+	g_glSecondaryColor3usv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glSecondaryColorPointer");
+	g_glSecondaryColorPointer = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glWindowPos2d");
+	g_glWindowPos2d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glWindowPos2dv");
+	g_glWindowPos2dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glWindowPos2f");
+	g_glWindowPos2f = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glWindowPos2fv");
+	g_glWindowPos2fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glWindowPos2i");
+	g_glWindowPos2i = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glWindowPos2iv");
+	g_glWindowPos2iv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glWindowPos2s");
+	g_glWindowPos2s = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glWindowPos2sv");
+	g_glWindowPos2sv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glWindowPos3d");
+	g_glWindowPos3d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glWindowPos3dv");
+	g_glWindowPos3dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glWindowPos3f");
+	g_glWindowPos3f = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glWindowPos3fv");
+	g_glWindowPos3fv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glWindowPos3i");
+	g_glWindowPos3i = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glWindowPos3iv");
+	g_glWindowPos3iv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glWindowPos3s");
+	g_glWindowPos3s = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glWindowPos3sv");
+	g_glWindowPos3sv = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
