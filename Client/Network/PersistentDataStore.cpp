@@ -207,6 +207,19 @@ PersistentDataStore* __cdecl PersistentDataStore::sub_94b170(void* arg, int flag
 	return (PersistentDataStore*)arg;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0094b190
+struct _PDSCall94EA90
+{
+	void sub_94ea90(void* arg, int flag);
+};
+
+PersistentDataStore* __cdecl PersistentDataStore::sub_94b190(void* arg)
+{
+	volatile int local = 0;
+	((_PDSCall94EA90*)this)->sub_94ea90(arg, 1);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

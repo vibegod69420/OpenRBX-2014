@@ -127,6 +127,22 @@ int Humanoid::getField268Or298DerefE0() const
 	return *reinterpret_cast<int*>(reinterpret_cast<char*>(obj) + 0xE0);
 }
 
+struct HumanoidSignalTarget
+{
+	void signal(unsigned char* flag, void* context);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x007b6760
+void Humanoid::func007b6760()
+{
+	unsigned char flag;
+	void* context = reinterpret_cast<char*>(this) + 0x48;
+	HumanoidSignalTarget* target = reinterpret_cast<HumanoidSignalTarget*>(
+		reinterpret_cast<char*>(*reinterpret_cast<void**>(context)) + 0x18);
+	flag = 0;
+	target->signal(&flag, context);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
