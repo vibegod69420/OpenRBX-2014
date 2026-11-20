@@ -501,6 +501,16 @@ int __cdecl sp_counted_impl_p::sub_B7A500()
 	return 0;
 }
 
+void* __cdecl sub_A38740(void* arg, int flag);
+extern void (__cdecl *dword_E106FC)(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b71e40
+int __cdecl sp_counted_impl_p::sub_B71E40()
+{
+	dword_E106FC(sub_A38740(this, 1));
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
