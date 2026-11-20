@@ -23,6 +23,8 @@ public:
 	int notEmpty();
 	void __cdecl clear();
 	bool hasValue();
+	void __cdecl dispatch(int arg1, int arg2);
+	void*resolve();
 	// AUTO-GENERATED METHODS
 };
 

@@ -69,6 +69,28 @@ bool callable_slot::hasValue()
 	return *(int*)((char*)this + 0x990) != result;
 }
 
+__declspec(dllimport) void __stdcall callable_slot_dispatch(void* slot, int arg2, int flags, void* pArg1, int size);
+
+// FUNCTION: ROBLOXSTUDIO 0x00cc4c40
+void __cdecl callable_slot::dispatch(int arg1, int arg2)
+{
+	callable_slot_dispatch(this, arg2, 14, &arg1, 4);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00b19460
+void* callable_slot::resolve()
+{
+	void** vtable = *(void***)this;
+	void* entry = vtable[7];
+	if (entry)
+	{
+		*(void**)this = (char*)entry - 0x1c;
+		return this;
+	}
+	*(void**)this = 0;
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
