@@ -415,6 +415,35 @@ int __cdecl ScriptContext::reportError(const __int64* /*unused*/)
 	return 0;
 }
 
+#include <intrin.h>
+
+struct ScriptContextSharedCount
+{
+	virtual void scalarDeletingDestructor(unsigned int flags);
+	virtual void dispose();
+	virtual void destroy();
+
+	volatile long useCount;
+	volatile long weakCount;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x008e0bd0
+void __cdecl ScriptContext::releaseSharedCount(void* ptr)
+{
+	if (ptr)
+	{
+		ScriptContextSharedCount* count = static_cast<ScriptContextSharedCount*>(ptr);
+		if (_InterlockedDecrement(&count->useCount) == 0)
+		{
+			count->dispose();
+			if (_InterlockedDecrement(&count->weakCount) == 0)
+			{
+				count->destroy();
+			}
+		}
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -57,6 +57,7 @@ public:
 	int __cdecl reportError(const unsigned __int64* /*unused*/);
 	void clearState();
 	int __cdecl reportError(const __int64* /*unused*/);
+	void __cdecl releaseSharedCount(void* ptr);
 	// AUTO-GENERATED METHODS
 };
 
