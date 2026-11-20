@@ -252,6 +252,20 @@ int __cdecl TriangleMesh::func_B6E5F0()
 	return 2;
 }
 
+int sub_A38740(void*, int);
+void sub_A35890(void*, int, int);
+int sub_A360D0(void*, int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b6efa0
+int __cdecl TriangleMesh::func_B6EFA0()
+{
+	int idx = sub_A38740(this, 2) + 1;
+	sub_A38960(this, 1, 5);
+	sub_A35650(this, idx);
+	sub_A35890(this, 1, idx);
+	return sub_A360D0(this, -1) != 0 ? 2 : 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

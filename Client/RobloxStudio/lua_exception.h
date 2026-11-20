@@ -43,6 +43,7 @@ public:
 	void __cdecl call(int a, int b);
 	void __cdecl checkAny(int index);
 	void __cdecl runErrorV(const char* fmt, ...);
+	int __cdecl setErrorData(int code, int level, int line);
 	// AUTO-GENERATED METHODS
 };
 

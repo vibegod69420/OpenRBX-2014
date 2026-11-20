@@ -262,6 +262,31 @@ void __cdecl lua_exception::runErrorV(const char* fmt, ...)
 	luaG_runerror(this, fmt, (void*)(&fmt + 1));
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a37c30
+int __cdecl lua_exception::setErrorData(int code, int level, int line)
+{
+	int resultCode = code;
+	int resultLevel;
+
+	if (resultCode == 0)
+		goto clear;
+
+	resultLevel = level;
+	if (resultLevel != 0)
+		goto store;
+
+clear:
+	resultLevel = 0;
+	resultCode = 0;
+
+store:
+	*(int*)((char*)this + 0x44) = resultCode;
+	*(int*)((char*)this + 0x3C) = line;
+	*(int*)((char*)this + 0x40) = line;
+	*(unsigned char*)((char*)this + 0x38) = (unsigned char)resultLevel;
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

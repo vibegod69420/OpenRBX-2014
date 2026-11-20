@@ -528,6 +528,20 @@ void ProgramMemoryCheckerImpl::init34()
 	sub_CF6609((void*)0x00E06A40);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00dd1f90
+void ProgramMemoryCheckerImpl::init35()
+{
+	int v[2];
+	((ProgramMemoryCheckerToolEquippedTarget*)0x0130E610)->sub_B2C640(
+		0x70,
+		(const char*)0x00EC7158,
+		(const char*)0x00EC7148,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00E06AA0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
