@@ -24,6 +24,7 @@ public:
 	int getFieldA0() const;
 	bool isHoverState() const;
 	bool isDownState() const;
+	int activateFromHierarchy();
 	// AUTO-GENERATED METHODS
 };
 
