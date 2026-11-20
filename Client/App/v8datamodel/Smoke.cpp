@@ -44,6 +44,51 @@ void __cdecl Smoke::sub_A08E00(void* arg1, void* arg2)
     sub_A0A250(arg1, &local);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a08e50
+struct SmokeInitData
+{
+	unsigned char flag;
+	char pad[3];
+	int contentRef;
+	int field8;
+	float opacity;
+	int field10;
+	int field14;
+	int field18;
+	int field1c;
+	int field20;
+	int field24;
+};
+
+Smoke* Smoke::sub_A08E50()
+{
+	extern char byte_F12E90;
+	extern char byte_F12F28;
+	void* __cdecl sub_403110(void* start, void* end, int* out, int value);
+
+	SmokeInitData* self = (SmokeInitData*)this;
+	int local;
+
+	self->flag = 0;
+	local = 11;
+
+	void* result = sub_403110(&byte_F12E90, &byte_F12F28, &local, 0);
+	if (result == &byte_F12F28)
+		result = (char*)result - 4;
+
+	self->contentRef = *(int*)result;
+	self->field8 = 0;
+	self->opacity = 1.0f;
+	self->field10 = 0;
+	self->field14 = 0;
+	self->field18 = 0;
+	self->field1c = 0;
+	self->field20 = 0;
+	self->field24 = 0;
+
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
