@@ -277,6 +277,102 @@ PersistentDataStore* __cdecl PersistentDataStore::sub_94aff0(void* arg1, void* a
 	return this;
 }
 
+extern "C" __declspec(dllimport) void* __cdecl realloc(void* ptr, unsigned int size);
+
+struct PDSStreamBuf946260
+{
+	int unk0;
+	int unk4;
+	char* base;
+	char* cur;
+	char* end;
+	unsigned int cap;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00946260
+void PersistentDataStore::sub_946260()
+{
+	PDSStreamBuf946260* b;
+	char* cur;
+	unsigned int offset;
+
+	b = *(PDSStreamBuf946260**)this;
+	cur = b->cur;
+	if (cur + 1 >= b->end)
+	{
+		offset = (unsigned int)(cur - b->base);
+		unsigned int newCap = b->cap * 2;
+		unsigned int needed = offset + 1;
+		if (newCap < needed)
+			newCap = needed;
+		char* newBase = (char*)realloc(b->base, newCap);
+		b->base = newBase;
+		b->cap = newCap;
+		b->cur = newBase + offset;
+		b->end = newBase + newCap;
+	}
+	cur = b->cur;
+	b->cur = cur + 1;
+	*cur = 'n';
+
+	b = *(PDSStreamBuf946260**)this;
+	cur = b->cur;
+	if (cur + 1 >= b->end)
+	{
+		offset = (unsigned int)(cur - b->base);
+		unsigned int newCap = b->cap * 2;
+		unsigned int needed = offset + 1;
+		if (newCap < needed)
+			newCap = needed;
+		char* newBase = (char*)realloc(b->base, newCap);
+		b->base = newBase;
+		b->cap = newCap;
+		b->cur = newBase + offset;
+		b->end = newBase + newCap;
+	}
+	cur = b->cur;
+	b->cur = cur + 1;
+	*cur = 'u';
+
+	b = *(PDSStreamBuf946260**)this;
+	cur = b->cur;
+	if (cur + 1 >= b->end)
+	{
+		offset = (unsigned int)(cur - b->base);
+		unsigned int newCap = b->cap * 2;
+		unsigned int needed = offset + 1;
+		if (newCap < needed)
+			newCap = needed;
+		char* newBase = (char*)realloc(b->base, newCap);
+		b->base = newBase;
+		b->cap = newCap;
+		b->cur = newBase + offset;
+		b->end = newBase + newCap;
+	}
+	cur = b->cur;
+	b->cur = cur + 1;
+	*cur = 'l';
+
+	b = *(PDSStreamBuf946260**)this;
+	cur = b->cur;
+	if (cur + 1 >= b->end)
+	{
+		unsigned int offset4 = (unsigned int)(cur - b->base);
+		unsigned int newCap = b->cap * 2;
+		unsigned int needed = offset4 + 1;
+		if (newCap < needed)
+			newCap = needed;
+		char* newBase = (char*)realloc(b->base, newCap);
+		b->base = newBase;
+		b->cap = newCap;
+		b->cur = newBase + offset4;
+		b->end = newBase + newCap;
+	}
+	cur = b->cur;
+	b->cur = cur + 1;
+	*cur = 'l';
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

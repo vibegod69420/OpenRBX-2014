@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20 10:07:08 UTC",
+  "updated_at": "2026-11-20 10:16:09 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 12.2798,
-  "implemented_total": 1163,
-  "function_annotations": 1163,
+  "matchable_coverage_pct": 12.3011,
+  "implemented_total": 1165,
+  "function_annotations": 1165,
   "stub_annotations": 0,
-  "perfect_100_count": 1150,
-  "matched_real_functions": 1150,
+  "perfect_100_count": 1152,
+  "matched_real_functions": 1152,
   "average_match_pct": 99.78,
-  "overall_function_coverage_pct": 2.8352,
-  "overall_byte_coverage_pct": 0.5975,
+  "overall_function_coverage_pct": 2.8402,
+  "overall_byte_coverage_pct": 0.6013,
   "usage": {
-    "calls_24h": 5373,
+    "calls_24h": 5361,
     "failures_24h": 0,
-    "completion_tokens_24h": 67182970,
-    "reasoning_tokens_24h": 65562222,
-    "avg_latency_s": 215.6
+    "completion_tokens_24h": 67078695,
+    "reasoning_tokens_24h": 65462812,
+    "avg_latency_s": 215.7
   },
   "functions": [
     {
@@ -6601,6 +6601,17 @@
       "matchable": true
     },
     {
+      "address": "0x008dde70",
+      "kind": "FUNCTION",
+      "name": "RBX::ScriptContext::reportError",
+      "mangled": "?reportError@ScriptContext@RBX@@QAAH_N@Z",
+      "file": "Client/App/script/ScriptContext.cpp",
+      "orig_size": 49,
+      "recomp_size": 49,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x008e3c90",
       "kind": "FUNCTION",
       "name": "RBX::Lua::LuaArguments::size",
@@ -7103,6 +7114,17 @@
       "file": "Client/App/v8datamodel/Toolbar.cpp",
       "orig_size": 38,
       "recomp_size": 38,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00946260",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::PersistentDataStore::sub_946260",
+      "mangled": "?sub_946260@PersistentDataStore@Network@RBX@@QAEXXZ",
+      "file": "Client/Network/PersistentDataStore.cpp",
+      "orig_size": 315,
+      "recomp_size": 315,
       "match_pct": 100.0,
       "matchable": true
     },

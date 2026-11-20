@@ -38,6 +38,7 @@ public:
 	int __cdecl reportError(char /*unused*/);
 	int __cdecl reportError(signed char /*unused*/);
 	int __cdecl reportError(unsigned char /*unused*/);
+	int __cdecl reportError(wchar_t /*unused*/);
 	// AUTO-GENERATED METHODS
 };
 
