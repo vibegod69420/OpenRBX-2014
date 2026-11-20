@@ -242,6 +242,33 @@ void __cdecl LuaArguments::pushGlobalFunctionValue()
 	sub_A35D10(self, -2);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a41930
+void __cdecl LuaArguments::pushGlobalString()
+{
+	void* self = this;
+	sub_A39240(self, *(void**)0x0124EB24, (void*)0x00EA72F8);
+	sub_A35CC0(self, -1, 1);
+	sub_A35D10(self, -2);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00a41960
+void __cdecl LuaArguments::pushGlobalUserdata()
+{
+	void* self = this;
+	sub_A39240(self, *(void**)0x0124EB14, (void*)0x00EA72A8);
+	sub_A35CC0(self, -1, 1);
+	sub_A35D10(self, -2);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00a41990
+void __cdecl LuaArguments::pushGlobalRBXScriptSignal()
+{
+	void* self = this;
+	sub_A39240(self, *(void**)0x0124EB18, (void*)0x00EA72C8);
+	sub_A35CC0(self, -1, 1);
+	sub_A35D10(self, -2);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

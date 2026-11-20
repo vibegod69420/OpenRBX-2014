@@ -68,6 +68,61 @@ int DataModel::getNetworkStatsTotal()
 	return total + stats->getNetworkStats3();
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0085d450
+struct DataModelIntrusiveNode
+{
+	void* prev;   // 0x00
+	int* count;   // 0x04
+	void* next;   // 0x08
+
+	bool isLinked();
+};
+
+extern unsigned char gDataModelAssertEnabled; // 0x012DE657
+typedef unsigned char (__cdecl *DataModelAssertCallback)(const char*, const char*, int);
+extern DataModelAssertCallback gDataModelAssertCallback; // 0x012DE694
+void __cdecl RBXAssert(int, const char*); // 0x006B9740
+
+void DataModel::unlinkIntrusive()
+{
+	DataModelIntrusiveNode* node = reinterpret_cast<DataModelIntrusiveNode*>(this);
+	if (!node->isLinked())
+		return;
+
+	unsigned char flag = gDataModelAssertEnabled;
+	if (flag)
+	{
+		if (node->next == 0 && node->prev == 0)
+		{
+			DataModelAssertCallback cb = gDataModelAssertCallback;
+			if (cb)
+			{
+				if (cb(
+						"prev!=0 || Set::NextRef::next!=0",
+						"D:\\BuildAgent\\work\\Trunk2012\\Client\\Base\\include\\RBX/Intrusive/Set.h",
+						72))
+					goto skipAssert;
+				flag = gDataModelAssertEnabled;
+			}
+			RBXAssert(flag, "prev!=0 || Set::NextRef::next!=0 file: D:\\BuildAgent\\work\\Trunk2012\\Client\\Base\\include\\RBX/Intrusive/Set.h line: 72");
+		skipAssert:
+			;
+		}
+	}
+
+	if (node->next)
+		*(void**)node->next = node->prev;
+
+	if (node->prev)
+		*(void**)((char*)node->prev + 0xD0) = node->next;
+
+	--(*node->count);
+
+	node->prev = 0;
+	node->next = 0;
+	node->count = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

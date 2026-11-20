@@ -27,6 +27,9 @@ public:
 	void __cdecl fireMouseButton2DownScriptEvent(void* source, void* arg);
 	void __cdecl fireMouseButton2UpScriptEvent(void* source, void* arg);
 	void __cdecl fireMouseEnterScriptEvent(void* source, void* arg);
+	void __cdecl fireMouseLeaveScriptEvent(void* source, void* arg);
+	void __cdecl fireMouseMovedScriptEvent(void* source, void* arg);
+	void* __cdecl fireTriggered(void* instance, void* source);
 	// AUTO-GENERATED METHODS
 };
 

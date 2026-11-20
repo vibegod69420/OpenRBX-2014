@@ -45,6 +45,9 @@ public:
 	void __cdecl pushGlobalThreads();
 	void __cdecl pushGlobalFunction();
 	void __cdecl pushGlobalFunctionValue();
+	void __cdecl pushGlobalString();
+	void __cdecl pushGlobalUserdata();
+	void __cdecl pushGlobalRBXScriptSignal();
 	// AUTO-GENERATED METHODS
 };
 

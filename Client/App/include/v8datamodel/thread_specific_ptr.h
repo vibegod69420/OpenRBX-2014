@@ -18,6 +18,7 @@ public:
 
 	~thread_specific_ptr();
 	void reset();
+	void clear();
 	// AUTO-GENERATED METHODS
 };
 

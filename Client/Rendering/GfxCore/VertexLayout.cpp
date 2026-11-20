@@ -650,6 +650,27 @@ bool VertexLayout::initGLMultiDrawIndirect()
 	return false;
 }
 
+extern void* g_glPatchParameterfv;
+extern void* g_glPatchParameteri;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f6ea0
+bool VertexLayout::initARBTessellationShader()
+{
+	void* first = g_glGetProcAddress("glPatchParameterfv");
+	g_glPatchParameterfv = first;
+	unsigned char missingFirst = (first == 0);
+
+	void* second = g_glGetProcAddress("glPatchParameteri");
+	g_glPatchParameteri = second;
+
+	if (second == 0)
+		return true;
+	if (missingFirst)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

@@ -24,6 +24,7 @@ public:
 	void dispatchBdcMember();
 	void __cdecl initData();
 	int getNetworkStatsTotal();
+	void unlinkIntrusive();
 	// AUTO-GENERATED METHODS
 };
 

@@ -51,6 +51,37 @@ void thread_specific_ptr::reset()
 	data->first.buf[0] = 0;
 }
 
+struct thread_specific_ptr_storage
+{
+	thread_specific_ptr_string first;
+	thread_specific_ptr_string second;
+	thread_specific_ptr_string third;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x008481c0
+void thread_specific_ptr::clear()
+{
+	thread_specific_ptr_storage* data = reinterpret_cast<thread_specific_ptr_storage*>(this);
+
+	if (data->third.capacity >= 0x10)
+		delete data->third.ptr;
+	data->third.capacity = 0x0F;
+	data->third.size = 0;
+	data->third.buf[0] = 0;
+
+	if (data->second.capacity >= 0x10)
+		delete data->second.ptr;
+	data->second.capacity = 0x0F;
+	data->second.size = 0;
+	data->second.buf[0] = 0;
+
+	if (data->first.capacity >= 0x10)
+		delete data->first.ptr;
+	data->first.capacity = 0x0F;
+	data->first.size = 0;
+	data->first.buf[0] = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

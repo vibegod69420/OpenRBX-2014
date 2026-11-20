@@ -46,6 +46,7 @@ public:
 	bool initARBBufferStorage();
 	bool initARBClearTexture();
 	bool initGLMultiDrawIndirect();
+	bool initARBTessellationShader();
 	// AUTO-GENERATED METHODS
 };
 

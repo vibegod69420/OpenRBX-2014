@@ -420,6 +420,124 @@ void __cdecl GuiMain::fireMouseEnterScriptEvent(void* source, void* arg)
 	local.fire(arg);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008b0e10
+void __cdecl GuiMain::fireMouseLeaveScriptEvent(void* source, void* arg)
+{
+	GuiMainScriptEvent local;
+	void* descriptor;
+
+	if (source)
+		descriptor = (char*)source + 0x1C;
+	else
+		descriptor = 0;
+
+	local.instance = this;
+	local.descriptor = descriptor;
+
+	if (g_RBXAssertEnabled)
+	{
+		if (descriptor)
+		{
+			if (((GuiMainInstance*)this)->isMemberOf(descriptor) == 0)
+			{
+				unsigned char (__cdecl* callback)(const char*, const char*, int) = g_RBXAssertCallback;
+
+				if (callback == 0 ||
+					callback(
+						"!instance || descriptor.isMemberOf(instance)",
+						"d:\\buildagent\\work\\trunk2012\\client\\app\\include\\reflection\\property.h",
+						0x100) == 0)
+				{
+					RBXAssert(
+						(int)g_RBXAssertEnabled,
+						"!instance || descriptor.isMemberOf(instance) file: d:\\buildagent\\work\\trunk2012\\client\\app\\include\\reflection\\property.h line: 256");
+				}
+			}
+		}
+	}
+
+	local.fire(arg);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x008b0e90
+void __cdecl GuiMain::fireMouseMovedScriptEvent(void* source, void* arg)
+{
+	GuiMainScriptEvent local;
+	void* descriptor;
+
+	if (source)
+		descriptor = (char*)source + 0x1C;
+	else
+		descriptor = 0;
+
+	local.instance = this;
+	local.descriptor = descriptor;
+
+	if (g_RBXAssertEnabled)
+	{
+		if (descriptor)
+		{
+			if (((GuiMainInstance*)this)->isMemberOf(descriptor) == 0)
+			{
+				unsigned char (__cdecl* callback)(const char*, const char*, int) = g_RBXAssertCallback;
+
+				if (callback == 0 ||
+					callback(
+						"!instance || descriptor.isMemberOf(instance)",
+						"d:\\buildagent\\work\\trunk2012\\client\\app\\include\\reflection\\property.h",
+						0x100) == 0)
+				{
+					RBXAssert(
+						(int)g_RBXAssertEnabled,
+						"!instance || descriptor.isMemberOf(instance) file: d:\\buildagent\\work\\trunk2012\\client\\app\\include\\reflection\\property.h line: 256");
+				}
+			}
+		}
+	}
+
+	local.fire(arg);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x008af590
+void* __cdecl GuiMain::fireTriggered(void* instance, void* source)
+{
+	GuiMainScriptEvent local;
+	void* descriptor;
+
+	if (source)
+		descriptor = (char*)source + 0x1C;
+	else
+		descriptor = 0;
+
+	local.instance = instance;
+	local.descriptor = descriptor;
+
+	if (g_RBXAssertEnabled)
+	{
+		if (descriptor)
+		{
+			if (((GuiMainInstance*)instance)->isMemberOf(descriptor) == 0)
+			{
+				unsigned char (__cdecl* callback)(const char*, const char*, int) = g_RBXAssertCallback;
+
+				if (callback == 0 ||
+					callback(
+						"!instance || descriptor.isMemberOf(instance)",
+						"d:\\buildagent\\work\\trunk2012\\client\\app\\include\\reflection\\property.h",
+						0x100) == 0)
+				{
+					RBXAssert(
+						(int)g_RBXAssertEnabled,
+						"!instance || descriptor.isMemberOf(instance) file: d:\\buildagent\\work\\trunk2012\\client\\app\\include\\reflection\\property.h line: 256");
+				}
+			}
+		}
+	}
+
+	local.fire(this);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
