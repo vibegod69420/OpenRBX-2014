@@ -247,6 +247,34 @@ int sp_counted_impl_p::getGlobal_b130() const
 	return s_value_0077b130;
 }
 
+struct sp_counted_impl_p_basic_string
+{
+	union
+	{
+		char* ptr;
+		char buf[16];
+	};
+	unsigned int size;
+	unsigned int capacity;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x008f67f0
+void sp_counted_impl_p::disposeString()
+{
+	sp_counted_impl_p_basic_string* s = (sp_counted_impl_p_basic_string*)ptr_000c;
+	if (s)
+	{
+		if (s->capacity >= 0x10)
+		{
+			rbx_free_mem(s->ptr);
+		}
+		s->capacity = 0x0F;
+		s->size = 0;
+		s->buf[0] = 0;
+		rbx_free_mem(s);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

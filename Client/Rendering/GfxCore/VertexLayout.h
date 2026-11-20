@@ -101,6 +101,8 @@ public:
 	bool initARBWindowPos();
 	bool initARBGPUShaderFP64();
 	bool initGL15();
+	bool initGL30();
+	bool initARBRobustness();
 	// AUTO-GENERATED METHODS
 };
 

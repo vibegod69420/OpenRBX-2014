@@ -613,6 +613,23 @@ void* __cdecl lua_exception::sub_A3B350(int arg1, int arg2, int arg3)
 	return p;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a3b4a0
+void* __cdecl lua_exception::sub_A3B4A0(int arg1, int arg2, int arg3)
+{
+	lua_exception* L = this;
+	void* p = sub_A353E0(L, 12);
+	if (p)
+	{
+		*(int*)p = arg1;
+		*((int*)p + 1) = arg2;
+		*((int*)p + 2) = arg3;
+	}
+
+	sub_A35060(L, -10000, *(int*)0x0124EB14);
+	sub_A35BF0(L, -2);
+	return p;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

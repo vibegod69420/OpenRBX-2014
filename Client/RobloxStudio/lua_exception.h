@@ -63,6 +63,7 @@ public:
 	int __cdecl equal(int index1, int index2);
 	void* __cdecl sub_A3B400(int arg1, int arg2);
 	void* __cdecl sub_A3B350(int arg1, int arg2, int arg3);
+	void* __cdecl sub_A3B4A0(int arg1, int arg2, int arg3);
 	// AUTO-GENERATED METHODS
 };
 

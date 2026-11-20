@@ -126,6 +126,7 @@ public:
 	bool initVertexWeightingEXT();
 	bool initVertexArrayEXT();
 	bool initVertexArrayListsIBM();
+	bool initColorTableSGI();
 	// AUTO-GENERATED METHODS
 };
 

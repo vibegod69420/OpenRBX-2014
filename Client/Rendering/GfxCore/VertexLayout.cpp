@@ -3319,6 +3319,262 @@ bool VertexLayout::initGL15()
 	return false;
 }
 
+extern void* g_glBindFramebuffer;
+extern void* g_glBindRenderbuffer;
+extern void* g_glBlitFramebuffer;
+extern void* g_glCheckFramebufferStatus;
+extern void* g_glDeleteFramebuffers;
+extern void* g_glDeleteRenderbuffers;
+extern void* g_glFramebufferRenderbuffer;
+extern void* g_glFramebufferTexture1D;
+extern void* g_glFramebufferTexture2D;
+extern void* g_glFramebufferTexture3D;
+extern void* g_glFramebufferTextureLayer;
+extern void* g_glGenFramebuffers;
+extern void* g_glGenRenderbuffers;
+extern void* g_glGenerateMipmap;
+extern void* g_glGetFramebufferAttachmentParameteriv;
+extern void* g_glGetRenderbufferParameteriv;
+extern void* g_glIsFramebuffer;
+extern void* g_glIsRenderbuffer;
+extern void* g_glRenderbufferStorage;
+extern void* g_glRenderbufferStorageMultisample;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f5120
+bool VertexLayout::initGL30()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glBindFramebuffer");
+	g_glBindFramebuffer = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glBindRenderbuffer");
+	g_glBindRenderbuffer = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glBlitFramebuffer");
+	g_glBlitFramebuffer = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCheckFramebufferStatus");
+	g_glCheckFramebufferStatus = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glDeleteFramebuffers");
+	g_glDeleteFramebuffers = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glDeleteRenderbuffers");
+	g_glDeleteRenderbuffers = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glFramebufferRenderbuffer");
+	g_glFramebufferRenderbuffer = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glFramebufferTexture1D");
+	g_glFramebufferTexture1D = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glFramebufferTexture2D");
+	g_glFramebufferTexture2D = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glFramebufferTexture3D");
+	g_glFramebufferTexture3D = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glFramebufferTextureLayer");
+	g_glFramebufferTextureLayer = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGenFramebuffers");
+	g_glGenFramebuffers = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGenRenderbuffers");
+	g_glGenRenderbuffers = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGenerateMipmap");
+	g_glGenerateMipmap = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetFramebufferAttachmentParameteriv");
+	g_glGetFramebufferAttachmentParameteriv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetRenderbufferParameteriv");
+	g_glGetRenderbufferParameteriv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glIsFramebuffer");
+	g_glIsFramebuffer = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glIsRenderbuffer");
+	g_glIsRenderbuffer = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glRenderbufferStorage");
+	g_glRenderbufferStorage = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glRenderbufferStorageMultisample");
+	g_glRenderbufferStorageMultisample = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glGetGraphicsResetStatusARB;
+extern void* g_glGetnColorTableARB;
+extern void* g_glGetnCompressedTexImageARB;
+extern void* g_glGetnConvolutionFilterARB;
+extern void* g_glGetnHistogramARB;
+extern void* g_glGetnMapdvARB;
+extern void* g_glGetnMapfvARB;
+extern void* g_glGetnMapivARB;
+extern void* g_glGetnMinmaxARB;
+extern void* g_glGetnPixelMapfvARB;
+extern void* g_glGetnPixelMapuivARB;
+extern void* g_glGetnPixelMapusvARB;
+extern void* g_glGetnPolygonStippleARB;
+extern void* g_glGetnSeparableFilterARB;
+extern void* g_glGetnTexImageARB;
+extern void* g_glGetnUniformdvARB;
+extern void* g_glGetnUniformfvARB;
+extern void* g_glGetnUniformivARB;
+extern void* g_glGetnUniformuivARB;
+extern void* g_glReadnPixelsARB;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f6000
+bool VertexLayout::initARBRobustness()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glGetGraphicsResetStatusARB");
+	g_glGetGraphicsResetStatusARB = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glGetnColorTableARB");
+	g_glGetnColorTableARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetnCompressedTexImageARB");
+	g_glGetnCompressedTexImageARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetnConvolutionFilterARB");
+	g_glGetnConvolutionFilterARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetnHistogramARB");
+	g_glGetnHistogramARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetnMapdvARB");
+	g_glGetnMapdvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetnMapfvARB");
+	g_glGetnMapfvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetnMapivARB");
+	g_glGetnMapivARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetnMinmaxARB");
+	g_glGetnMinmaxARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetnPixelMapfvARB");
+	g_glGetnPixelMapfvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetnPixelMapuivARB");
+	g_glGetnPixelMapuivARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetnPixelMapusvARB");
+	g_glGetnPixelMapusvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetnPolygonStippleARB");
+	g_glGetnPolygonStippleARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetnSeparableFilterARB");
+	g_glGetnSeparableFilterARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetnTexImageARB");
+	g_glGetnTexImageARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetnUniformdvARB");
+	g_glGetnUniformdvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetnUniformfvARB");
+	g_glGetnUniformfvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetnUniformivARB");
+	g_glGetnUniformivARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetnUniformuivARB");
+	g_glGetnUniformuivARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glReadnPixelsARB");
+	g_glReadnPixelsARB = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

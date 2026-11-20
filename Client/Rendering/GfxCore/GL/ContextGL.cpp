@@ -2186,6 +2186,56 @@ bool ContextGL::initVertexArrayListsIBM()
 	return false;
 }
 
+extern void* glColorTableParameterfvSGI;
+extern void* glColorTableParameterivSGI;
+extern void* glColorTableSGI;
+extern void* glCopyColorTableSGI;
+extern void* glGetColorTableParameterfvSGI;
+extern void* glGetColorTableParameterivSGI;
+extern void* glGetColorTableSGI;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fedc0
+bool ContextGL::initColorTableSGI()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("glColorTableParameterfvSGI");
+	glColorTableParameterfvSGI = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glColorTableParameterivSGI");
+	glColorTableParameterivSGI = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glColorTableSGI");
+	glColorTableSGI = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glCopyColorTableSGI");
+	glCopyColorTableSGI = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetColorTableParameterfvSGI");
+	glGetColorTableParameterfvSGI = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetColorTableParameterivSGI");
+	glGetColorTableParameterivSGI = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetColorTableSGI");
+	glGetColorTableSGI = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

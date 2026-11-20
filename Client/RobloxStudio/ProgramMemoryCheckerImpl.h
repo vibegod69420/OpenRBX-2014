@@ -115,6 +115,10 @@ public:
 	void init97();
 	void init98();
 	void init99();
+	void init100();
+	void init101();
+	void init102();
+	void init103();
 	// AUTO-GENERATED METHODS
 };
 

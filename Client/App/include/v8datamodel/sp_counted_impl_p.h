@@ -43,6 +43,7 @@ public:
 	void disposeHeldMap();
 	int getGlobal_b120() const;
 	int getGlobal_b130() const;
+	void disposeString();
 	// AUTO-GENERATED METHODS
 };
 

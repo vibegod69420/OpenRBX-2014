@@ -60,6 +60,9 @@ public:
 	int __cdecl pushVector2int16();
 	bool __cdecl getScript(void* arg, void* out);
 	void __cdecl pushVector3(void* arg);
+	bool __cdecl getScriptShared(void* arg, void* out);
+	bool __cdecl getGlobal(void* arg, void* out);
+	bool __cdecl getResult(void* arg, void* out);
 	// AUTO-GENERATED METHODS
 };
 

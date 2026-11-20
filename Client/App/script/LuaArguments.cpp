@@ -620,6 +620,99 @@ void __cdecl LuaArguments::pushVector3(void* arg)
 	sub_A35BF0(this, -2);
 }
 
+void* __cdecl sub_7D5710();
+
+class DummySub788700
+{
+public:
+	void __thiscall sub_788700(void*);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00a42c80
+bool __cdecl LuaArguments::getScriptShared(void* arg, void* out)
+{
+	void* L = this;
+	void* tmp = sub_A360A0(L, arg);
+	if (tmp)
+	{
+		if (sub_A350C0(L, arg))
+		{
+			sub_A35060(L, -10000, *(void**)0x0128D3B4);
+			if (sub_A35810(L, -1, -2))
+			{
+				sub_A35D10(L, -3);
+				*(void**)out = sub_7D5710();
+				((DummySub788700*)((char*)out + 4))->sub_788700(tmp);
+				return true;
+			}
+			sub_A35D10(L, -3);
+		}
+	}
+	return false;
+}
+
+void* __cdecl sub_7D6030();
+
+class DummySub7CFCA0
+{
+public:
+	void __thiscall sub_7CFCA0(void*);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00a42d00
+bool __cdecl LuaArguments::getGlobal(void* arg, void* out)
+{
+	void* L = this;
+	void* tmp = sub_A360A0(L, arg);
+	if (tmp)
+	{
+		if (sub_A350C0(L, arg))
+		{
+			sub_A35060(L, -10000, *(void**)0x0124EAC8);
+			if (sub_A35810(L, -1, -2))
+			{
+				sub_A35D10(L, -3);
+				*(void**)out = sub_7D6030();
+				((DummySub7CFCA0*)((char*)out + 4))->sub_7CFCA0(tmp);
+				return true;
+			}
+			sub_A35D10(L, -3);
+		}
+	}
+	return false;
+}
+
+void* __cdecl sub_7D57F0();
+
+class DummySub7CFE20
+{
+public:
+	void __thiscall sub_7CFE20(void*);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00a42d80
+bool __cdecl LuaArguments::getResult(void* arg, void* out)
+{
+	void* L = this;
+	void* tmp = sub_A360A0(L, arg);
+	if (tmp)
+	{
+		if (sub_A350C0(L, arg))
+		{
+			sub_A35060(L, -10000, *(void**)0x0124EAD0);
+			if (sub_A35810(L, -1, -2))
+			{
+				sub_A35D10(L, -3);
+				*(void**)out = sub_7D57F0();
+				((DummySub7CFE20*)((char*)out + 4))->sub_7CFE20(tmp);
+				return true;
+			}
+			sub_A35D10(L, -3);
+		}
+	}
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua
