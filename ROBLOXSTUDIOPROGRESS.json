@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20 15:56:17 UTC",
+  "updated_at": "2026-11-20 16:04:51 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 16.0705,
-  "implemented_total": 1525,
-  "function_annotations": 1525,
+  "matchable_coverage_pct": 16.1559,
+  "implemented_total": 1533,
+  "function_annotations": 1533,
   "stub_annotations": 0,
-  "perfect_100_count": 1505,
-  "matched_real_functions": 1505,
+  "perfect_100_count": 1513,
+  "matched_real_functions": 1513,
   "average_match_pct": 99.45,
-  "overall_function_coverage_pct": 3.7105,
-  "overall_byte_coverage_pct": 1.0758,
+  "overall_function_coverage_pct": 3.7302,
+  "overall_byte_coverage_pct": 1.0904,
   "usage": {
-    "calls_24h": 5388,
+    "calls_24h": 5376,
     "failures_24h": 0,
-    "completion_tokens_24h": 66369632,
-    "reasoning_tokens_24h": 64626098,
-    "avg_latency_s": 208.2
+    "completion_tokens_24h": 66166139,
+    "reasoning_tokens_24h": 64425701,
+    "avg_latency_s": 207.9
   },
   "functions": [
     {
@@ -3158,6 +3158,17 @@
       "matchable": true
     },
     {
+      "address": "0x005faad0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGL::initHistogramEXT",
+      "mangled": "?initHistogramEXT@ContextGL@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
+      "orig_size": 294,
+      "recomp_size": 231,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x005fac00",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::ContextGL::initLightTextureEXT",
@@ -3440,6 +3451,17 @@
       "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
       "orig_size": 54,
       "recomp_size": 54,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x005fc090",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGL::initBindlessTextureNV",
+      "mangled": "?initBindlessTextureNV@ContextGL@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
+      "orig_size": 297,
+      "recomp_size": 297,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -3818,6 +3840,17 @@
       "matchable": true
     },
     {
+      "address": "0x00603bb0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGL::initPbufferARB",
+      "mangled": "?initPbufferARB@ContextGL@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
+      "orig_size": 285,
+      "recomp_size": 121,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00603cd0",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::ContextGL::initDisplayColorTableEXT",
@@ -3836,6 +3869,17 @@
       "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
       "orig_size": 99,
       "recomp_size": 99,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00603f60",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGL::initGenlockI3D",
+      "mangled": "?initGenlockI3D@ContextGL@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
+      "orig_size": 275,
+      "recomp_size": 275,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -16160,6 +16204,28 @@
       "matchable": true
     },
     {
+      "address": "0x00db2ee0",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init126",
+      "mangled": "?init126@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00db2f20",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init127",
+      "mangled": "?init127@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00db2f60",
       "kind": "FUNCTION",
       "name": "ProgramMemoryCheckerImpl::init53",
@@ -16193,6 +16259,17 @@
       "matchable": true
     },
     {
+      "address": "0x00db43d0",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init128",
+      "mangled": "?init128@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00db5d10",
       "kind": "FUNCTION",
       "name": "ProgramMemoryCheckerImpl::init54",
@@ -16200,6 +16277,17 @@
       "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
       "orig_size": 59,
       "recomp_size": 59,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00db6620",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init129",
+      "mangled": "?init129@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 61,
+      "recomp_size": 61,
       "match_pct": 100.0,
       "matchable": true
     },

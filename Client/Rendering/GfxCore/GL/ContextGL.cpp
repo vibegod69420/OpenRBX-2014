@@ -2967,6 +2967,254 @@ bool ContextGL::initVertexBufferUnifiedMemoryNV()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00603f60
+bool ContextGL::initGenlockI3D()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	unsigned char missing;
+	void* proc;
+
+	proc = getProc("wglDisableGenlockI3D");
+	*(void**)0x012DB6C0 = proc;
+	missing = (proc == 0);
+
+	proc = getProc("wglEnableGenlockI3D");
+	*(void**)0x012DB6CC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglGenlockSampleRateI3D");
+	*(void**)0x012DB6E0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglGenlockSourceDelayI3D");
+	*(void**)0x012DB6E4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglGenlockSourceEdgeI3D");
+	*(void**)0x012DB6F8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglGenlockSourceI3D");
+	*(void**)0x012DB6FC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglGetGenlockSampleRateI3D");
+	*(void**)0x012DB708 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglGetGenlockSourceDelayI3D");
+	*(void**)0x012DB714 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglGetGenlockSourceEdgeI3D");
+	*(void**)0x012DB728 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglGetGenlockSourceI3D");
+	*(void**)0x012DB72C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglIsEnabledGenlockI3D");
+	*(void**)0x012DB740 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglQueryGenlockMaxSourceDelayI3D");
+	*(void**)0x012DB744 = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00603bb0
+bool ContextGL::initPbufferARB()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	unsigned char missing;
+	void* proc;
+
+	proc = getProc("wglCreatePbufferARB");
+	*(void**)0x012DB518 = proc;
+	missing = (proc == 0) ? 1 : 0;
+
+	proc = getProc("wglDestroyPbufferARB");
+	*(void**)0x012DB520 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglGetPbufferDCARB");
+	*(void**)0x012DB534 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglQueryPbufferARB");
+	*(void**)0x012DB544 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("wglReleasePbufferDCARB");
+	*(void**)0x012DB54C = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glGetHistogramEXT;
+extern void* glGetHistogramParameterfvEXT;
+extern void* glGetHistogramParameterivEXT;
+extern void* glGetMinmaxEXT;
+extern void* glGetMinmaxParameterfvEXT;
+extern void* glGetMinmaxParameterivEXT;
+extern void* glHistogramEXT;
+extern void* glMinmaxEXT;
+extern void* glResetHistogramEXT;
+extern void* glResetMinmaxEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005faad0
+bool ContextGL::initHistogramEXT()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("glGetHistogramEXT");
+	glGetHistogramEXT = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glGetHistogramParameterfvEXT");
+	glGetHistogramParameterfvEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetHistogramParameterivEXT");
+	glGetHistogramParameterivEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetMinmaxEXT");
+	glGetMinmaxEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetMinmaxParameterfvEXT");
+	glGetMinmaxParameterfvEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glGetMinmaxParameterivEXT");
+	glGetMinmaxParameterivEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glHistogramEXT");
+	glHistogramEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glMinmaxEXT");
+	glMinmaxEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glResetHistogramEXT");
+	glResetHistogramEXT = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glResetMinmaxEXT");
+	glResetMinmaxEXT = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x005fc090
+bool ContextGL::initBindlessTextureNV()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	unsigned char missing;
+	void* proc;
+
+	proc = getProc("glGetImageHandleNV");
+	*(void**)0x012DB3E8 = proc;
+	missing = (proc == 0) ? 1 : 0;
+
+	proc = getProc("glGetTextureHandleNV");
+	*(void**)0x012DB3F4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetTextureSamplerHandleNV");
+	*(void**)0x012DB400 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glIsImageHandleResidentNV");
+	*(void**)0x012DB404 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glIsTextureHandleResidentNV");
+	*(void**)0x012DB414 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glMakeImageHandleNonResidentNV");
+	*(void**)0x012DB41C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glMakeImageHandleResidentNV");
+	*(void**)0x012DB420 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glMakeTextureHandleNonResidentNV");
+	*(void**)0x012DB42C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glMakeTextureHandleResidentNV");
+	*(void**)0x012DB434 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glProgramUniformHandleui64NV");
+	*(void**)0x012DB444 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glProgramUniformHandleui64vNV");
+	*(void**)0x012DB450 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glUniformHandleui64NV");
+	*(void**)0x012DB464 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glUniformHandleui64vNV");
+	*(void**)0x012DB470 = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

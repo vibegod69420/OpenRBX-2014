@@ -140,6 +140,10 @@ public:
 	bool initTransformFeedbackVaryingsNV();
 	bool initGpuProgram4NV();
 	bool initVertexBufferUnifiedMemoryNV();
+	bool initGenlockI3D();
+	bool initPbufferARB();
+	bool initHistogramEXT();
+	bool initBindlessTextureNV();
 	// AUTO-GENERATED METHODS
 };
 
