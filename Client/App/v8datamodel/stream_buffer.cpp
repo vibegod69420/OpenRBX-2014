@@ -118,6 +118,12 @@ void stream_buffer::vslot22_48()
 	stream_buffer_iat_e102e8(p, p, p);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c862e0
+int stream_buffer::getField2198() const
+{
+	return field_2198;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

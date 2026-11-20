@@ -14,6 +14,7 @@ public:
 	{
 		int _vtable_or_head;
 		struct { char _pad_flag_0058[0x58]; bool flag_0058; };
+		struct { char _pad_field_2198[0x2198]; int field_2198; };
 		// AUTO-GENERATED FIELDS
 	};
 
@@ -35,6 +36,7 @@ public:
 	void vslot22_d8();
 	void vslot22_50();
 	void vslot22_48();
+	int getField2198() const;
 	// AUTO-GENERATED METHODS
 };
 
