@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20 10:16:09 UTC",
+  "updated_at": "2026-11-20 10:19:32 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 12.3011,
-  "implemented_total": 1165,
-  "function_annotations": 1165,
+  "matchable_coverage_pct": 12.3118,
+  "implemented_total": 1166,
+  "function_annotations": 1166,
   "stub_annotations": 0,
-  "perfect_100_count": 1152,
-  "matched_real_functions": 1152,
+  "perfect_100_count": 1153,
+  "matched_real_functions": 1153,
   "average_match_pct": 99.78,
-  "overall_function_coverage_pct": 2.8402,
-  "overall_byte_coverage_pct": 0.6013,
+  "overall_function_coverage_pct": 2.8426,
+  "overall_byte_coverage_pct": 0.6015,
   "usage": {
-    "calls_24h": 5361,
+    "calls_24h": 5365,
     "failures_24h": 0,
-    "completion_tokens_24h": 67078695,
-    "reasoning_tokens_24h": 65462812,
-    "avg_latency_s": 215.7
+    "completion_tokens_24h": 66975137,
+    "reasoning_tokens_24h": 65363398,
+    "avg_latency_s": 215.1
   },
   "functions": [
     {
@@ -2832,6 +2832,17 @@
       "kind": "FUNCTION",
       "name": "RBX::Graphics::ContextGL::assignIfNull_5e40",
       "mangled": "?assignIfNull_5e40@ContextGL@Graphics@RBX@@SAXPAHPBH@Z",
+      "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00605e60",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGL::assignIfNull_5e60",
+      "mangled": "?assignIfNull_5e60@ContextGL@Graphics@RBX@@SAXPAHPBH@Z",
       "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
       "orig_size": 24,
       "recomp_size": 24,
