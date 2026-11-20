@@ -671,6 +671,38 @@ bool VertexLayout::initARBTessellationShader()
 	return false;
 }
 
+extern void* g_glCopyTexSubImage3D;
+extern void* g_glDrawRangeElements;
+extern void* g_glTexImage3D;
+extern void* g_glTexSubImage3D;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f2900
+bool VertexLayout::initGL12()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glCopyTexSubImage3D");
+	g_glCopyTexSubImage3D = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glDrawRangeElements");
+	g_glDrawRangeElements = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glTexImage3D");
+	g_glTexImage3D = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glTexSubImage3D");
+	g_glTexSubImage3D = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

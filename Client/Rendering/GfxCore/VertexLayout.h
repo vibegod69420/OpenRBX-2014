@@ -47,6 +47,7 @@ public:
 	bool initARBClearTexture();
 	bool initGLMultiDrawIndirect();
 	bool initARBTessellationShader();
+	bool initGL12();
 	// AUTO-GENERATED METHODS
 };
 
