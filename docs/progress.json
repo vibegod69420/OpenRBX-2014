@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 03:34:47 UTC",
+ "updated_at": "2026-11-20 03:51:08 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 10.4859,
- "implemented_total": 992,
- "function_annotations": 992,
+ "matchable_coverage_pct": 10.4965,
+ "implemented_total": 993,
+ "function_annotations": 993,
  "stub_annotations": 0,
- "perfect_100_count": 982,
- "matched_real_functions": 982,
+ "perfect_100_count": 983,
+ "matched_real_functions": 983,
  "average_match_pct": 99.82,
- "overall_function_coverage_pct": 2.421,
- "overall_byte_coverage_pct": 0.4373,
+ "overall_function_coverage_pct": 2.4235,
+ "overall_byte_coverage_pct": 0.4793,
  "usage": {
-  "calls_24h": 5598,
+  "calls_24h": 5645,
   "failures_24h": 0,
-  "completion_tokens_24h": 69154250,
-  "reasoning_tokens_24h": 67628468,
+  "completion_tokens_24h": 69745352,
+  "reasoning_tokens_24h": 68202012,
   "avg_latency_s": 214.8
  },
- "functions_total": 992,
+ "functions_total": 993,
  "subsystems": [
   {
    "name": "App/v8datamodel",
@@ -41,16 +41,16 @@
    "bytes": 13117
   },
   {
+   "name": "Rendering/g3d",
+   "matched": 32,
+   "functions": 32,
+   "bytes": 7680
+  },
+  {
    "name": "App/v8world",
    "matched": 106,
    "functions": 106,
    "bytes": 5881
-  },
-  {
-   "name": "Rendering/g3d",
-   "matched": 31,
-   "functions": 31,
-   "bytes": 3658
   },
   {
    "name": "Rendering/GfxCore",
@@ -4779,9 +4779,21 @@
    "matched": 982,
    "implemented": 992,
    "pct": 10.4859
+  },
+  {
+   "t": "2026-11-20 03:51:08 UTC",
+   "matched": 983,
+   "implemented": 993,
+   "pct": 10.4965
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T03:47:15",
+   "address": "0x006f67e0",
+   "name": "G3D::Table::getInitData",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T03:29:23",
    "address": "0x008942a0",
@@ -5495,13 +5507,7 @@
    "address": "0x00c18820",
    "name": "RBX::PolyPolyContact::matchSeparatingEdge",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-19T19:41:13",
-   "address": "0x00cf4fc0",
-   "name": "std::basic_altstringbuf::Release",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 28.17
+ "match_rate_per_hour": 27.98
 }

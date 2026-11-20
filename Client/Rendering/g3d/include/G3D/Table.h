@@ -5,6 +5,7 @@
 
 namespace G3D {
 
+class TableInitData;
 // AUTO-GENERATED HELPERS
 
 class Table
@@ -16,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	TableInitData*getInitData();
 	// AUTO-GENERATED METHODS
 };
 
