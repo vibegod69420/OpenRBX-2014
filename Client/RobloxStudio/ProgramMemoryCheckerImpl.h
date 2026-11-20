@@ -326,6 +326,10 @@ public:
 	void init308();
 	void init309();
 	void init310();
+	void init311();
+	void init312();
+	void init313();
+	void init314();
 	// AUTO-GENERATED METHODS
 };
 
