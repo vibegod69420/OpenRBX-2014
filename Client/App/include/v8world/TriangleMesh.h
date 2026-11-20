@@ -28,6 +28,7 @@ public:
 	int __cdecl getOptInt3();
 	int __cdecl checkCondition();
 	int __cdecl openCoroutine();
+	int __cdecl openString();
 	// AUTO-GENERATED METHODS
 };
 

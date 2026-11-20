@@ -21,6 +21,7 @@ public:
 	void __cdecl reportError();
 	void __cdecl reportError(void* /*unused*/);
 	void __cdecl reportError(struct lua_State* /*unused*/);
+	void __cdecl reportError(int /*unused*/);
 	// AUTO-GENERATED METHODS
 };
 

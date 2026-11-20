@@ -118,6 +118,15 @@ void __cdecl lua_exception::setStackTag(int index, unsigned char tag)
 	*((unsigned char*)*slot + 7) = tag;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a36100
+const char* __cdecl lua_exception::getTypeName(int type)
+{
+	if (type == -1)
+		return (const char*)0x00EA6EA0;
+
+	return ((const char**)0x00EE1BC0)[type];
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

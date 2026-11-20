@@ -20,6 +20,12 @@ void __cdecl ClientAppSettings::ApplySettingFromFunc_E105F4()
     *(int*)((char*)g_ClientAppSettingsInstance_12FC984 + 0x94) = g_ClientAppSettingsFunc_E105F4(this);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008bde70
+int ClientAppSettings::getConst19909520() const
+{
+	return 19909520;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

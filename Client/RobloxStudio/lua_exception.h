@@ -31,6 +31,7 @@ public:
 	int __cdecl dispatchGlobalState5();
 	void __cdecl pushValue(int value);
 	void __cdecl setStackTag(int index, unsigned char tag);
+	const char* __cdecl getTypeName(int type);
 	// AUTO-GENERATED METHODS
 };
 

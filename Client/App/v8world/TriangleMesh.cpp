@@ -143,6 +143,16 @@ int __cdecl TriangleMesh::openCoroutine()
 	return 2;
 }
 
+void sub_B70830(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b70a80
+int __cdecl TriangleMesh::openString()
+{
+	sub_A39240(this, "string", reinterpret_cast<void*>(0x00ED1330));
+	sub_B70830(this);
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

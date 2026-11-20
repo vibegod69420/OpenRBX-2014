@@ -50,6 +50,24 @@ void __cdecl DataModel::initData()
 	data[3] = 0;
 }
 
+struct DataModelNetworkStats
+{
+	int getNetworkStats0();
+	int getNetworkStats1();
+	int getNetworkStats2();
+	int getNetworkStats3();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0085ac30
+int DataModel::getNetworkStatsTotal()
+{
+	DataModelNetworkStats* stats = reinterpret_cast<DataModelNetworkStats*>(this);
+	int total = stats->getNetworkStats0();
+	total += stats->getNetworkStats1();
+	total += stats->getNetworkStats2();
+	return total + stats->getNetworkStats3();
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

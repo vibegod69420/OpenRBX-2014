@@ -33,6 +33,7 @@ public:
 	bool initATISeparateStencil();
 	bool initEXTColorSubtable();
 	bool initEXTCompiledVertexArray();
+	bool initEXTCoordinateFrame();
 	// AUTO-GENERATED METHODS
 };
 

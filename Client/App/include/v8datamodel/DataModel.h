@@ -23,6 +23,7 @@ public:
 	bool isStateValid() const;
 	void dispatchBdcMember();
 	void __cdecl initData();
+	int getNetworkStatsTotal();
 	// AUTO-GENERATED METHODS
 };
 

@@ -30,6 +30,7 @@ public:
 	void init12();
 	void init13();
 	void init14();
+	void init15();
 	// AUTO-GENERATED METHODS
 };
 
