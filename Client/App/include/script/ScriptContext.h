@@ -35,6 +35,7 @@ public:
 	void __cdecl reportError(unsigned short /*unused*/);
 	void __cdecl reportError(short /*unused*/);
 	int __cdecl reportError(bool /*unused*/);
+	int __cdecl reportError(char /*unused*/);
 	// AUTO-GENERATED METHODS
 };
 

@@ -586,6 +586,27 @@ bool VertexLayout::initAMDSparseTexture()
 	return false;
 }
 
+extern void* g_glBufferStorage;
+extern void* g_glNamedBufferStorageEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f4d30
+bool VertexLayout::initARBBufferStorage()
+{
+	void* bufferStorageProc = g_glGetProcAddress("glBufferStorage");
+	g_glBufferStorage = bufferStorageProc;
+	bool missingBufferStorage = (bufferStorageProc == 0);
+
+	void* namedBufferStorageProc = g_glGetProcAddress("glNamedBufferStorageEXT");
+	g_glNamedBufferStorageEXT = namedBufferStorageProc;
+
+	if (namedBufferStorageProc == 0)
+		return true;
+	if (missingBufferStorage)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

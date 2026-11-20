@@ -43,6 +43,7 @@ public:
 	bool initATIDrawElementArray();
 	bool initATIVertexArrayObject();
 	bool initAMDSparseTexture();
+	bool initARBBufferStorage();
 	// AUTO-GENERATED METHODS
 };
 

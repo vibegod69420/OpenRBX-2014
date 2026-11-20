@@ -38,6 +38,8 @@ public:
 	int __cdecl pushThread();
 	void __cdecl runError(const char* fmt, ...);
 	void* __cdecl luaL_newstate();
+	void __cdecl setTable(int index);
+	void __cdecl pushValueAtIndex(int index);
 	// AUTO-GENERATED METHODS
 };
 

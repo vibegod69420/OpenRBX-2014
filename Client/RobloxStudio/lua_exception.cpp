@@ -196,6 +196,31 @@ void* __cdecl lua_exception::luaL_newstate()
 	return L;
 }
 
+// Forward declaration for callee at 0x00bcc7e0
+void __cdecl luaV_settable(lua_exception* L, void* t, void* key, void* val);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a35ce0
+void __cdecl lua_exception::setTable(int index)
+{
+	void* t = index2adr((int)this, index);
+	char* top = *(char**)((char*)this + 8);
+	luaV_settable(this, t, top - 0x20, top - 0x10);
+	*(char**)((char*)this + 8) += -0x20;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00a357b0
+void __cdecl lua_exception::pushValueAtIndex(int index)
+{
+	char* src = (char*)index2adr((int)this, index);
+	char* top = *(char**)((char*)this + 8);
+
+	*(int*)top = *(int*)src;
+	*(int*)(top + 4) = *(int*)(src + 4);
+	*(int*)(top + 8) = *(int*)(src + 8);
+
+	*(char**)((char*)this + 8) += 16;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

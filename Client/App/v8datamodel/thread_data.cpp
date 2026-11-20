@@ -80,6 +80,14 @@ void thread_data::destroyInstance(thread_data* p)
 	}
 }
 
+void __cdecl sub_00775460(void*, void*, void*, void*, void*, void*, void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00775a30
+void __cdecl thread_data::start(void* arg1, void* arg2, void* arg3, void* arg4)
+{
+	sub_00775460(this, arg1, arg2, 0, 0, arg3, arg4);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace boost
