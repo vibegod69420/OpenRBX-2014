@@ -86,6 +86,9 @@ public:
 	bool initARBTransformFeedback();
 	bool initGLQueryObjectsARB();
 	bool initARBShaderSubroutine();
+	bool initEXTBindableUniform();
+	bool initARBUniformBufferObject();
+	bool initARBVertexAttrib64bit();
 	// AUTO-GENERATED METHODS
 };
 

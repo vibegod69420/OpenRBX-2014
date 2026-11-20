@@ -513,6 +513,58 @@ void __cdecl lua_exception::sub_A39150()
 	*(int*)(base + 4) = 1;
 }
 
+// Forward declarations for callees
+void* __cdecl index2adr(int state, int index);
+int __cdecl sub_A45B00(void* p1, void* p2);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a35810
+int __cdecl lua_exception::rawequal(int index1, int index2)
+{
+	void* o1 = index2adr((int)this, index1);
+	void* o2 = index2adr((int)this, index2);
+
+	if (o1 == (void*)0x00EA7E68 || o2 == (void*)0x00EA7E68)
+		return 0;
+
+	return sub_A45B00(o1, o2);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00a3afb0
+void* __cdecl lua_exception::sub_A3AFB0(int value)
+{
+	lua_exception* L = this;
+	void* p = sub_A353E0(L, 4);
+	if (p)
+	{
+		*(int*)p = value;
+	}
+
+	sub_A35060(L, -10000, *(int*)0x0124EAC8);
+	sub_A35BF0(L, -2);
+	return p;
+}
+
+void* __cdecl index2adr(int state, int index);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a359d0
+void __cdecl lua_exception::remove(int index)
+{
+	char* src = (char*)index2adr((int)this, index) + 0x10;
+	if (src < *(char**)((char*)this + 8))
+	{
+		char* dst = src - 0x10;
+		do
+		{
+			*(int*)dst = *(int*)src;
+			*(int*)(dst + 4) = *(int*)(src + 4);
+			*(int*)(dst + 8) = *(int*)(dst + 0x18);
+			src += 0x10;
+			dst += 0x10;
+		} while (src < *(char**)((char*)this + 8));
+	}
+	*(char**)((char*)this + 8) -= 0x10;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

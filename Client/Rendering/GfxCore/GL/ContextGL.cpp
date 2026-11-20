@@ -1646,6 +1646,132 @@ bool ContextGL::initSinglePrecisionOES()
 	return false;
 }
 
+extern void* wglBindVideoImageNV;
+extern void* wglGetVideoDeviceNV;
+extern void* wglGetVideoInfoNV;
+extern void* wglReleaseVideoDeviceNV;
+extern void* wglReleaseVideoImageNV;
+extern void* wglSendPbufferToVideoNV;
+
+// FUNCTION: ROBLOXSTUDIO 0x006044d0
+bool ContextGL::initVideoOutputNV()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("wglBindVideoImageNV");
+	wglBindVideoImageNV = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("wglGetVideoDeviceNV");
+	wglGetVideoDeviceNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglGetVideoInfoNV");
+	wglGetVideoInfoNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglReleaseVideoDeviceNV");
+	wglReleaseVideoDeviceNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglReleaseVideoImageNV");
+	wglReleaseVideoImageNV = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglSendPbufferToVideoNV");
+	wglSendPbufferToVideoNV = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* wglGetMscRateOML;
+extern void* wglGetSyncValuesOML;
+extern void* wglSwapBuffersMscOML;
+extern void* wglSwapLayerBuffersMscOML;
+extern void* wglWaitForMscOML;
+extern void* wglWaitForSbcOML;
+
+// FUNCTION: ROBLOXSTUDIO 0x00604560
+bool ContextGL::initSyncControlOML()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("wglGetMscRateOML");
+	wglGetMscRateOML = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("wglGetSyncValuesOML");
+	wglGetSyncValuesOML = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglSwapBuffersMscOML");
+	wglSwapBuffersMscOML = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglSwapLayerBuffersMscOML");
+	wglSwapLayerBuffersMscOML = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglWaitForMscOML");
+	wglWaitForMscOML = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglWaitForSbcOML");
+	wglWaitForSbcOML = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* glBufferRegionEnabled;
+extern void* glDeleteBufferRegion;
+extern void* glDrawBufferRegion;
+extern void* glNewBufferRegion;
+extern void* glReadBufferRegion;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fbd50
+bool ContextGL::initBufferRegionEXT()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00e108b8;
+
+	void* proc = getProc("glBufferRegionEnabled");
+	glBufferRegionEnabled = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glDeleteBufferRegion");
+	glDeleteBufferRegion = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glDrawBufferRegion");
+	glDrawBufferRegion = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glNewBufferRegion");
+	glNewBufferRegion = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glReadBufferRegion");
+	glReadBufferRegion = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

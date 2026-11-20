@@ -49,6 +49,7 @@ public:
 	void* __cdecl func_B6AEC0();
 	void __cdecl func_B70830();
 	int __cdecl func_B6D060(void* a2, void* a3);
+	int __cdecl func_B6EB60();
 	// AUTO-GENERATED METHODS
 };
 

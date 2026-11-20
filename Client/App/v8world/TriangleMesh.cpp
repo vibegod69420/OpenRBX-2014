@@ -512,6 +512,21 @@ int __cdecl TriangleMesh::func_B6D060(void* a2, void* a3)
 	return result;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b6eb60
+int __cdecl TriangleMesh::func_B6EB60()
+{
+	void* state = this;
+	int saved = sub_A35350(state);
+
+	if (sub_A360D0(state, 1) != 6 || sub_A35220(state, 1))
+		sub_A385A0(state, 1, "Lua function expected");
+
+	sub_A357B0(state, 1);
+	sub_A36120(state, (void*)saved, 1);
+	sub_A35580(state, reinterpret_cast<void*>(0x00B6EFF0), 1);
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -1485,6 +1485,90 @@ void ProgramMemoryCheckerImpl::init87()
 	sub_CF6609((void*)0x00DE1D50);
 }
 
+class ProgramMemoryCheckerAddDebuggerTarget
+{
+public:
+	void sub_79D2B0(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00da2250
+void ProgramMemoryCheckerImpl::init88()
+{
+	int v[2];
+	((ProgramMemoryCheckerAddDebuggerTarget*)0x012E0EE8)->sub_79D2B0(
+		0x007A1550,
+		0,
+		(const char*)0x00E52CE0,
+		(const char*)0x01032EB8,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DE25F0);
+}
+
+class ProgramMemoryCheckerAddWatchTarget
+{
+public:
+	void sub_79D570(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00da2290
+void ProgramMemoryCheckerImpl::init89()
+{
+	int v[2];
+	((ProgramMemoryCheckerAddWatchTarget*)0x012E1158)->sub_79D570(
+		0x007A18B0,
+		0,
+		(const char*)0x00E52E44,
+		(const char*)0x00E52E38,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DE26C0);
+}
+
+class ProgramMemoryCheckerGetWatchValueTarget
+{
+public:
+	void sub_79D640(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00da2650
+void ProgramMemoryCheckerImpl::init90()
+{
+	int v[2];
+	((ProgramMemoryCheckerGetWatchValueTarget*)0x012E11C0)->sub_79D640(
+		0x007A5250,
+		0,
+		(const char*)0x00E52E70,
+		(const char*)0x00E52E68,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DE2A90);
+}
+
+class ProgramMemoryCheckerSetBreakpointTarget
+{
+public:
+	void sub_79D4A0(int a1, int a2, const char* a3, const char* a4, int a5, int a6, int a7);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00da2810
+void ProgramMemoryCheckerImpl::init91()
+{
+	int v[2];
+	((ProgramMemoryCheckerSetBreakpointTarget*)0x012E10F0)->sub_79D4A0(
+		0x007AA4D0,
+		0,
+		(const char*)0x00E52E00,
+		(const char*)0x00E52DF8,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DE2C80);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

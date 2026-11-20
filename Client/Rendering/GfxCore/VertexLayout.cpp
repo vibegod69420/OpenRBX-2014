@@ -2114,6 +2114,168 @@ bool VertexLayout::initARBShaderSubroutine()
 	return false;
 }
 
+extern void* g_glGetUniformBufferSizeEXT;
+extern void* g_glGetUniformOffsetEXT;
+extern void* g_glUniformBufferEXT;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f8c10
+bool VertexLayout::initEXTBindableUniform()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glGetUniformBufferSizeEXT");
+	g_glGetUniformBufferSizeEXT = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glGetUniformOffsetEXT");
+	g_glGetUniformOffsetEXT = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformBufferEXT");
+	g_glUniformBufferEXT = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glBindBufferBase;
+extern void* g_glBindBufferRange;
+extern void* g_glGetActiveUniformBlockName;
+extern void* g_glGetActiveUniformBlockiv;
+extern void* g_glGetActiveUniformName;
+extern void* g_glGetActiveUniformsiv;
+extern void* g_glGetIntegeri_v;
+extern void* g_glGetUniformBlockIndex;
+extern void* g_glGetUniformIndices;
+extern void* g_glUniformBlockBinding;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f73a0
+bool VertexLayout::initARBUniformBufferObject()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glBindBufferBase");
+	g_glBindBufferBase = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glBindBufferRange");
+	g_glBindBufferRange = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetActiveUniformBlockName");
+	g_glGetActiveUniformBlockName = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetActiveUniformBlockiv");
+	g_glGetActiveUniformBlockiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetActiveUniformName");
+	g_glGetActiveUniformName = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetActiveUniformsiv");
+	g_glGetActiveUniformsiv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetIntegeri_v");
+	g_glGetIntegeri_v = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetUniformBlockIndex");
+	g_glGetUniformBlockIndex = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetUniformIndices");
+	g_glGetUniformIndices = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformBlockBinding");
+	g_glUniformBlockBinding = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glGetVertexAttribLdv;
+extern void* g_glVertexAttribL1d;
+extern void* g_glVertexAttribL1dv;
+extern void* g_glVertexAttribL2d;
+extern void* g_glVertexAttribL2dv;
+extern void* g_glVertexAttribL3d;
+extern void* g_glVertexAttribL3dv;
+extern void* g_glVertexAttribL4d;
+extern void* g_glVertexAttribL4dv;
+extern void* g_glVertexAttribLPointer;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f7500
+bool VertexLayout::initARBVertexAttrib64bit()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glGetVertexAttribLdv");
+	g_glGetVertexAttribLdv = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glVertexAttribL1d");
+	g_glVertexAttribL1d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttribL1dv");
+	g_glVertexAttribL1dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttribL2d");
+	g_glVertexAttribL2d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttribL2dv");
+	g_glVertexAttribL2dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttribL3d");
+	g_glVertexAttribL3d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttribL3dv");
+	g_glVertexAttribL3dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttribL4d");
+	g_glVertexAttribL4d = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttribL4dv");
+	g_glVertexAttribL4dv = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttribLPointer");
+	g_glVertexAttribLPointer = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

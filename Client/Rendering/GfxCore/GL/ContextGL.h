@@ -114,6 +114,9 @@ public:
 	bool initVideoQueries();
 	bool initTextureMultisampleNV();
 	bool initSinglePrecisionOES();
+	bool initVideoOutputNV();
+	bool initSyncControlOML();
+	bool initBufferRegionEXT();
 	// AUTO-GENERATED METHODS
 };
 
