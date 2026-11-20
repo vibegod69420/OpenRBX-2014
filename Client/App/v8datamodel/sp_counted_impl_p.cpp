@@ -511,6 +511,25 @@ int __cdecl sp_counted_impl_p::sub_B71E40()
 	return 0;
 }
 
+void __cdecl sub_425FE0(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00424710
+sp_counted_impl_p* __cdecl sp_counted_impl_p::sub_424710()
+{
+	volatile int unused = 0;
+	sub_425FE0(this);
+	return this;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00b740c0
+void sp_counted_impl_p::destroyInstance(sp_counted_impl_p* p)
+{
+	if (p) {
+		p->onDestroy();
+		rbx_free_mem(p);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
