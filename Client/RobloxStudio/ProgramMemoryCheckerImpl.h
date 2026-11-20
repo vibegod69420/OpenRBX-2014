@@ -222,6 +222,10 @@ public:
 	void init205();
 	void init206();
 	void init207();
+	void init208();
+	void init209();
+	void init210();
+	void init211();
 	// AUTO-GENERATED METHODS
 };
 

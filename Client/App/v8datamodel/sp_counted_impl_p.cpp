@@ -530,6 +530,19 @@ void sp_counted_impl_p::destroyInstance(sp_counted_impl_p* p)
 	}
 }
 
+struct sp_counted_impl_p_sub_4B2610
+{
+	void __thiscall sub_4B2610(void* arg, int flag);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x004b1d10
+sp_counted_impl_p* __cdecl sp_counted_impl_p::sub_4B1D10(void* arg)
+{
+	volatile int local = 0;
+	((sp_counted_impl_p_sub_4B2610*)this)->sub_4B2610(arg, 1);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -66,6 +66,7 @@ public:
 	int __cdecl sub_B71E40();
 	sp_counted_impl_p* __cdecl sub_424710();
 	static void destroyInstance(sp_counted_impl_p* p);
+	sp_counted_impl_p* __cdecl sub_4B1D10(void* arg);
 	// AUTO-GENERATED METHODS
 };
 
