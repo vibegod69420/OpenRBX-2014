@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20 08:36:03 UTC",
+ "updated_at": "2026-11-20 08:45:08 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 11.4576,
- "implemented_total": 1086,
- "function_annotations": 1086,
+ "matchable_coverage_pct": 11.5003,
+ "implemented_total": 1090,
+ "function_annotations": 1090,
  "stub_annotations": 0,
- "perfect_100_count": 1073,
- "matched_real_functions": 1073,
+ "perfect_100_count": 1077,
+ "matched_real_functions": 1077,
  "average_match_pct": 99.76,
- "overall_function_coverage_pct": 2.6454,
- "overall_byte_coverage_pct": 0.5446,
+ "overall_function_coverage_pct": 2.6553,
+ "overall_byte_coverage_pct": 0.5481,
  "usage": {
-  "calls_24h": 5336,
+  "calls_24h": 5317,
   "failures_24h": 0,
-  "completion_tokens_24h": 67543451,
-  "reasoning_tokens_24h": 65917707,
-  "avg_latency_s": 218.6
+  "completion_tokens_24h": 67221182,
+  "reasoning_tokens_24h": 65597127,
+  "avg_latency_s": 218.2
  },
- "functions_total": 1086,
+ "functions_total": 1090,
  "subsystems": [
   {
    "name": "App/v8datamodel",
-   "matched": 397,
-   "functions": 399,
-   "bytes": 15123
+   "matched": 399,
+   "functions": 401,
+   "bytes": 15336
   },
   {
    "name": "Rendering/g3d",
@@ -54,15 +54,15 @@
   },
   {
    "name": "Rendering/GfxCore",
-   "matched": 80,
-   "functions": 80,
-   "bytes": 3208
+   "matched": 81,
+   "functions": 81,
+   "bytes": 3285
   },
   {
    "name": "App/script",
-   "matched": 56,
-   "functions": 56,
-   "bytes": 2342
+   "matched": 57,
+   "functions": 57,
+   "bytes": 2389
   },
   {
    "name": "App/v8kernel",
@@ -1370,6 +1370,17 @@
    "file": "Client/Network/SharedStringProtectedDictionary.cpp",
    "orig_size": 89,
    "recomp_size": 89,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00c86400",
+   "kind": "FUNCTION",
+   "name": "std::stream_buffer::syncState",
+   "mangled": "?syncState@stream_buffer@std@@QAEXXZ",
+   "file": "Client/App/v8datamodel/stream_buffer.cpp",
+   "orig_size": 92,
+   "recomp_size": 92,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3308,17 +3319,6 @@
    "recomp_size": 7,
    "match_pct": 100.0,
    "matchable": true
-  },
-  {
-   "address": "0x00b535a0",
-   "kind": "FUNCTION",
-   "name": "RBX::Kernel::getSubField24_84",
-   "mangled": "?getSubField24_84@Kernel@RBX@@QBEHXZ",
-   "file": "Client/App/v8kernel/Kernel.cpp",
-   "orig_size": 10,
-   "recomp_size": 10,
-   "match_pct": 100.0,
-   "matchable": true
   }
  ],
  "history": [
@@ -4959,9 +4959,39 @@
    "matched": 1073,
    "implemented": 1086,
    "pct": 11.4576
+  },
+  {
+   "t": "2026-11-20 08:45:08 UTC",
+   "matched": 1077,
+   "implemented": 1090,
+   "pct": 11.5003
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-20T08:39:08",
+   "address": "0x008b0a10",
+   "name": "RBX::GuiMain::fireTriggeredScriptEvent",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T08:37:58",
+   "address": "0x005f5360",
+   "name": "RBX::Graphics::VertexLayout::initARBGetProgramBinary",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T08:36:22",
+   "address": "0x00c86400",
+   "name": "std::stream_buffer::syncState",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-20T08:36:05",
+   "address": "0x008ddc00",
+   "name": "RBX::ScriptContext::reportError",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-20T08:32:01",
    "address": "0x00dc1900",
@@ -5657,31 +5687,7 @@
    "address": "0x00d9ed10",
    "name": "ProgramMemoryCheckerImpl::init12",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T02:40:52",
-   "address": "0x0094b150",
-   "name": "RBX::Network::PersistentDataStore::sub_94b150",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T02:40:50",
-   "address": "0x00c862e0",
-   "name": "std::stream_buffer::getField2198",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T02:36:43",
-   "address": "0x00605b60",
-   "name": "RBX::Graphics::ContextGL::assignIfNull_5b60",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T01:50:19",
-   "address": "0x00a4fa60",
-   "name": "RBX::RBX::BallBallContact::allocateFromFreeList",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 26.91
+ "match_rate_per_hour": 26.9
 }

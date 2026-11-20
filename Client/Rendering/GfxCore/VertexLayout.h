@@ -37,6 +37,7 @@ public:
 	bool initEXTCullVertex();
 	bool initAppleVertexArrayRange();
 	bool initARBBaseInstance();
+	bool initARBGetProgramBinary();
 	// AUTO-GENERATED METHODS
 };
 

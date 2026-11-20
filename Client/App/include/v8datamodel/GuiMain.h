@@ -19,6 +19,7 @@ public:
 	void removeNode();
 	void __cdecl append(const void* data);
 	void __cdecl fireScriptEvent(void* source, void* arg);
+	void __cdecl fireTriggeredScriptEvent(void* source, void* arg);
 	// AUTO-GENERATED METHODS
 };
 

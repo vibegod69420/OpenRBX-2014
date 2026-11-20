@@ -124,6 +124,40 @@ int stream_buffer::getField2198() const
 	return field_2198;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c86400
+void stream_buffer::syncState()
+{
+	char* v50 = *(char**)((char*)this + 0x50);
+	char* v54 = *(char**)((char*)this + 0x54);
+
+	**(char***)((char*)this + 0x10) = v50;
+	**(char***)((char*)this + 0x20) = v50;
+	**(int**)((char*)this + 0x30) = v54 - v50;
+
+	char* v48 = *(char**)((char*)this + 0x48);
+	if (!v48)
+		return;
+
+	char* v50b = *(char**)((char*)this + 0x50);
+	if (!v50b)
+		return;
+
+	if (v48 != v50b)
+		return;
+
+	char* v1c = **(char***)((char*)this + 0x1c);
+	if (!v1c)
+		return;
+
+	int delta = v1c - v48;
+	**(int**)((char*)this + 0x30) -= delta;
+	**(char***)((char*)this + 0x20) += delta;
+
+	**(int**)((char*)this + 0x0c) = 0;
+	**(char***)((char*)this + 0x1c) = 0;
+	**(int**)((char*)this + 0x2c) = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

@@ -435,6 +435,32 @@ bool VertexLayout::initARBBaseInstance()
 	return false;
 }
 
+extern void* g_glGetProgramBinary;
+extern void* g_glProgramBinary;
+extern void* g_glProgramParameteri;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f5360
+bool VertexLayout::initARBGetProgramBinary()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glGetProgramBinary");
+	g_glGetProgramBinary = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glProgramBinary");
+	g_glProgramBinary = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramParameteri");
+	g_glProgramParameteri = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
