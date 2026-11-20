@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	Replicator& __cdecl writeFields(const void* data);
 	// AUTO-GENERATED METHODS
 };
 

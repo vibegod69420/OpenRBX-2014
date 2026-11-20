@@ -27,6 +27,7 @@ public:
 	bool initGLShaderImageLoadStore();
 	bool initARBSparseTexture();
 	bool initTextureBufferRange();
+	bool initGLDrawTransformFeedbackInstanced();
 	// AUTO-GENERATED METHODS
 };
 

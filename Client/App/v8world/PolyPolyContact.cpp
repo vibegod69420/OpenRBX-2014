@@ -106,6 +106,32 @@ void __cdecl PolyPolyContact::accumulate(int value)
 	*(int*)((char*)this + 0x24) += v;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c18d70
+void __cdecl PolyPolyContact::compute(void* param)
+{
+	int* feature = (int*)param;
+	int type = feature[0];
+
+	if (type == 13)
+	{
+		int index = feature[2];
+		feature[0] = 12;
+
+		void* obj = *(void**)this;
+		unsigned int* data = *(unsigned int**)((char*)obj + 0x0C);
+		feature[2] = (data[index] >> 6) & 0xFFu;
+	}
+	else if (type == 14)
+	{
+		int index = feature[2];
+		void* obj = *(void**)this;
+		unsigned int* data = *(unsigned int**)((char*)obj + 0x0C);
+
+		data[index] = (data[index] & 0x007FFFFFu) | 0x01000000u;
+		feature[0] = 11;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

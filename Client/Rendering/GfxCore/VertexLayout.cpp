@@ -215,6 +215,27 @@ bool VertexLayout::initTextureBufferRange()
 	return false;
 }
 
+extern void* g_glDrawTransformFeedbackInstanced;
+extern void* g_glDrawTransformFeedbackStreamInstanced;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f72f0
+bool VertexLayout::initGLDrawTransformFeedbackInstanced()
+{
+	void* first = g_glGetProcAddress("glDrawTransformFeedbackInstanced");
+	g_glDrawTransformFeedbackInstanced = first;
+	unsigned char missingFirst = (first == 0);
+
+	void* second = g_glGetProcAddress("glDrawTransformFeedbackStreamInstanced");
+	g_glDrawTransformFeedbackStreamInstanced = second;
+
+	if (second == 0)
+		return true;
+	if (missingFirst)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

@@ -25,6 +25,7 @@ public:
 	void __cdecl matchSeparatingEdge(int featureId, int separatingEdge);
 	int __cdecl getSeparatingEdgeCandidate();
 	void __cdecl accumulate(int value);
+	void __cdecl compute(void* param);
 	// AUTO-GENERATED METHODS
 };
 
