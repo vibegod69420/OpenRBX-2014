@@ -20,6 +20,7 @@ public:
 	void reset();
 	void clear();
 	void release();
+	void destroy();
 	// AUTO-GENERATED METHODS
 };
 

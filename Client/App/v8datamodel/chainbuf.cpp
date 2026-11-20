@@ -131,6 +131,52 @@ chainbuf::~chainbuf()
 	sub_CF6522((void*)_vtable_or_head);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c7c610
+void chainbuf::purge()
+{
+	while (*(void**)((char*)this + 0x0C))
+	{
+		void* node = *(void**)((char*)this + 0x0C);
+		void* link = *(void**)((char*)node + 0x30);
+		void* next;
+
+		if (link)
+			next = (char*)link - 0x30;
+		else
+			next = 0;
+		*(void**)((char*)this + 0x0C) = next;
+
+		void* buf = *(void**)((char*)node + 0x20);
+		if (buf)
+		{
+			sub_CF6522(buf);
+			*(void**)((char*)node + 0x20) = 0;
+			*(void**)((char*)node + 0x24) = 0;
+			*(void**)((char*)node + 0x28) = 0;
+		}
+
+		sub_CF6522(node);
+	}
+
+	void* node2 = *(void**)((char*)this + 4);
+	if (node2)
+	{
+		if (*(unsigned char*)((char*)this + 9))
+		{
+			void* buf = *(void**)((char*)node2 + 0x20);
+			if (buf)
+			{
+				sub_CF6522(buf);
+				*(void**)((char*)node2 + 0x20) = 0;
+				*(void**)((char*)node2 + 0x24) = 0;
+				*(void**)((char*)node2 + 0x28) = 0;
+			}
+		}
+
+		sub_CF6522(*(void**)((char*)this + 4));
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

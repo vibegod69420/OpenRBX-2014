@@ -325,6 +325,26 @@ int __cdecl ScriptContext::reportError(__int64* /*unused*/)
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008de070
+int __cdecl ScriptContext::reportError(unsigned __int64* /*unused*/)
+{
+	lua_State* L = (lua_State*)this;
+	const char* msg = lua_tostring(L, 2);
+	void* ud = luaL_checkudata(L, 1, gScriptContextTypeName);
+	scriptContextReportError(ud, msg, L);
+	return 0;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x008de130
+int __cdecl ScriptContext::reportError(wchar_t* /*unused*/)
+{
+	lua_State* L = (lua_State*)this;
+	const char* msg = lua_tostring(L, 2);
+	void* ud = luaL_checkudata(L, 1, gScriptContextTypeName);
+	scriptContextReportError(ud, msg, L);
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

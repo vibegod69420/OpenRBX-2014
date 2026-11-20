@@ -1023,6 +1023,70 @@ bool VertexLayout::initARBVertexArrayObject()
 	return false;
 }
 
+extern void* g_glFramebufferTextureARB;
+extern void* g_glFramebufferTextureFaceARB;
+extern void* g_glFramebufferTextureLayerARB;
+extern void* g_glProgramParameteriARB;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f52f0
+bool VertexLayout::initARBGeometryShader4()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glFramebufferTextureARB");
+	g_glFramebufferTextureARB = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glFramebufferTextureFaceARB");
+	g_glFramebufferTextureFaceARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glFramebufferTextureLayerARB");
+	g_glFramebufferTextureLayerARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glProgramParameteriARB");
+	g_glProgramParameteriARB = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
+extern void* g_glLoadTransposeMatrixdARB;
+extern void* g_glLoadTransposeMatrixfARB;
+extern void* g_glMultTransposeMatrixdARB;
+extern void* g_glMultTransposeMatrixfARB;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f7330
+bool VertexLayout::initARBTransposeMatrix()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glLoadTransposeMatrixdARB");
+	g_glLoadTransposeMatrixdARB = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glLoadTransposeMatrixfARB");
+	g_glLoadTransposeMatrixfARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultTransposeMatrixdARB");
+	g_glMultTransposeMatrixdARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultTransposeMatrixfARB");
+	g_glMultTransposeMatrixfARB = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

@@ -58,6 +58,8 @@ public:
 	bool initARBTextureMultisample();
 	bool initARBTransformFeedback2();
 	bool initARBVertexArrayObject();
+	bool initARBGeometryShader4();
+	bool initARBTransposeMatrix();
 	// AUTO-GENERATED METHODS
 };
 

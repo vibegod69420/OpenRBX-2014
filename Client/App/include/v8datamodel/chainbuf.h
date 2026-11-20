@@ -26,6 +26,7 @@ public:
 	void clear();
 	void close();
 	~chainbuf();
+	void purge();
 	// AUTO-GENERATED METHODS
 };
 
