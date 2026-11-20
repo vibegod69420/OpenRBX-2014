@@ -412,6 +412,26 @@ const char* __cdecl TriangleMesh::func_B70F70(const char* s, const char* p)
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b6f630
+int sub_A35480(void*, int);
+void sub_A38930(void*, int, const char*);
+void sub_B6F690(void*, int, int);
+
+int __cdecl TriangleMesh::func_B6F630()
+{
+	void* state = this;
+	sub_A38960(state, 1, 5);
+	int v = sub_A35480(state, 1);
+	sub_A38930(state, 40, (const char*)0x00F12F2D);
+	if (sub_A360D0(state, 2) > 0)
+	{
+		sub_A38960(state, 2, 6);
+	}
+	sub_A35D10(state, 2);
+	sub_B6F690(state, 1, v);
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

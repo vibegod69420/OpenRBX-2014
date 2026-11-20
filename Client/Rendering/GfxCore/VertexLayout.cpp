@@ -1713,6 +1713,76 @@ bool VertexLayout::initARBES2Compatibility()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005f59e0
+extern void* g_glCurrentPaletteMatrixARB;
+extern void* g_glMatrixIndexPointerARB;
+extern void* g_glMatrixIndexubvARB;
+extern void* g_glMatrixIndexuivARB;
+extern void* g_glMatrixIndexusvARB;
+
+bool VertexLayout::initARBMatrixPalette()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glCurrentPaletteMatrixARB");
+	g_glCurrentPaletteMatrixARB = p;
+	unsigned char bl = (p == 0);
+
+	p = proc("glMatrixIndexPointerARB");
+	g_glMatrixIndexPointerARB = p;
+	if (p == 0 || bl)
+		bl = 1;
+
+	p = proc("glMatrixIndexubvARB");
+	g_glMatrixIndexubvARB = p;
+	if (p == 0 || bl)
+		bl = 1;
+
+	p = proc("glMatrixIndexuivARB");
+	g_glMatrixIndexuivARB = p;
+	if (p == 0 || bl)
+		bl = 1;
+
+	p = proc("glMatrixIndexusvARB");
+	g_glMatrixIndexusvARB = p;
+	if (p == 0 || bl)
+		return true;
+
+	return false;
+}
+
+extern void* g_glBlendEquationIndexedAMD;
+extern void* g_glBlendEquationSeparateIndexedAMD;
+extern void* g_glBlendFuncIndexedAMD;
+extern void* g_glBlendFuncSeparateIndexedAMD;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f42a0
+bool VertexLayout::initAMDDrawBuffersBlend()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glBlendEquationIndexedAMD");
+	g_glBlendEquationIndexedAMD = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glBlendEquationSeparateIndexedAMD");
+	g_glBlendEquationSeparateIndexedAMD = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glBlendFuncIndexedAMD");
+	g_glBlendFuncIndexedAMD = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glBlendFuncSeparateIndexedAMD");
+	g_glBlendFuncSeparateIndexedAMD = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

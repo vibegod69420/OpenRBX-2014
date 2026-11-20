@@ -1070,6 +1070,68 @@ bool ContextGL::initExtensionQueryREGAL()
 	return false;
 }
 
+extern void* glColorPointervINTEL;
+extern void* glNormalPointervINTEL;
+extern void* glTexCoordPointervINTEL;
+extern void* glVertexPointervINTEL;
+
+// FUNCTION: ROBLOXSTUDIO 0x005fbbb0
+bool ContextGL::initParallelArraysINTEL()
+{
+	void* (__stdcall *getProc)(const char*) = wglGetProcAddress;
+
+	void* proc = getProc("glColorPointervINTEL");
+	glColorPointervINTEL = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("glNormalPointervINTEL");
+	glNormalPointervINTEL = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glTexCoordPointervINTEL");
+	glTexCoordPointervINTEL = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("glVertexPointervINTEL");
+	glVertexPointervINTEL = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
+extern void* wglGetGammaTableI3D;
+extern void* wglGetGammaTableParametersI3D;
+extern void* wglSetGammaTableI3D;
+extern void* wglSetGammaTableParametersI3D;
+
+// FUNCTION: ROBLOXSTUDIO 0x00603ef0
+bool ContextGL::initGammaTableI3D()
+{
+	void* (__stdcall *getProc)(const char*) = wglGetProcAddress;
+
+	void* proc = getProc("wglGetGammaTableI3D");
+	wglGetGammaTableI3D = proc;
+	bool missing = (proc == 0);
+
+	proc = getProc("wglGetGammaTableParametersI3D");
+	wglGetGammaTableParametersI3D = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglSetGammaTableI3D");
+	wglSetGammaTableI3D = proc;
+	if (proc == 0 || missing)
+		missing = true;
+
+	proc = getProc("wglSetGammaTableParametersI3D");
+	wglSetGammaTableParametersI3D = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

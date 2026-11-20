@@ -97,6 +97,8 @@ public:
 	bool initBindImageTextureAndMemoryBarrier();
 	bool initConditionalRenderNV();
 	bool initExtensionQueryREGAL();
+	bool initParallelArraysINTEL();
+	bool initGammaTableI3D();
 	// AUTO-GENERATED METHODS
 };
 

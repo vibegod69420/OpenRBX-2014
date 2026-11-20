@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20 13:15:28 UTC",
+  "updated_at": "2026-11-20 13:24:58 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 14.2766,
-  "implemented_total": 1350,
-  "function_annotations": 1350,
+  "matchable_coverage_pct": 14.3513,
+  "implemented_total": 1357,
+  "function_annotations": 1357,
   "stub_annotations": 0,
-  "perfect_100_count": 1337,
-  "matched_real_functions": 1337,
+  "perfect_100_count": 1344,
+  "matched_real_functions": 1344,
   "average_match_pct": 99.81,
-  "overall_function_coverage_pct": 3.2963,
-  "overall_byte_coverage_pct": 0.7558,
+  "overall_function_coverage_pct": 3.3135,
+  "overall_byte_coverage_pct": 0.7628,
   "usage": {
-    "calls_24h": 5430,
+    "calls_24h": 5436,
     "failures_24h": 0,
-    "completion_tokens_24h": 67181082,
-    "reasoning_tokens_24h": 65508711,
-    "avg_latency_s": 212.4
+    "completion_tokens_24h": 67239360,
+    "reasoning_tokens_24h": 65568615,
+    "avg_latency_s": 212.2
   },
   "functions": [
     {
@@ -2146,6 +2146,17 @@
       "matchable": true
     },
     {
+      "address": "0x005f42a0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::VertexLayout::initAMDDrawBuffersBlend",
+      "mangled": "?initAMDDrawBuffersBlend@VertexLayout@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/VertexLayout.cpp",
+      "orig_size": 134,
+      "recomp_size": 99,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x005f44e0",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::VertexLayout::initAMDSparseTexture",
@@ -2417,6 +2428,17 @@
       "file": "Client/Rendering/GfxCore/VertexLayout.cpp",
       "orig_size": 54,
       "recomp_size": 54,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x005f59e0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::VertexLayout::initARBMatrixPalette",
+      "mangled": "?initARBMatrixPalette@VertexLayout@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/VertexLayout.cpp",
+      "orig_size": 121,
+      "recomp_size": 121,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -2861,6 +2883,17 @@
       "matchable": true
     },
     {
+      "address": "0x005fbbb0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGL::initParallelArraysINTEL",
+      "mangled": "?initParallelArraysINTEL@ContextGL@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
+      "orig_size": 99,
+      "recomp_size": 99,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x005fbc20",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::ContextGL::initTexScissorINTEL",
@@ -3066,6 +3099,17 @@
       "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
       "orig_size": 54,
       "recomp_size": 54,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00603ef0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGL::initGammaTableI3D",
+      "mangled": "?initGammaTableI3D@ContextGL@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
+      "orig_size": 99,
+      "recomp_size": 99,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -11617,6 +11661,17 @@
       "matchable": true
     },
     {
+      "address": "0x00b6f630",
+      "kind": "FUNCTION",
+      "name": "sub_A35480",
+      "mangled": "?func_B6F630@TriangleMesh@RBX@@QAAHXZ",
+      "file": "Client/App/v8world/TriangleMesh.cpp",
+      "orig_size": 95,
+      "recomp_size": 95,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00b6ffd0",
       "kind": "FUNCTION",
       "name": "sub_B71570",
@@ -14858,6 +14913,28 @@
       "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
       "orig_size": 56,
       "recomp_size": 56,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00dd42b0",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init72",
+      "mangled": "?init72@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 59,
+      "recomp_size": 59,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00dd42f0",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init73",
+      "mangled": "?init73@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 59,
+      "recomp_size": 59,
       "match_pct": 100.0,
       "matchable": true
     },

@@ -76,6 +76,8 @@ public:
 	bool initAppleFence();
 	bool initARBTextureStorage();
 	bool initARBES2Compatibility();
+	bool initARBMatrixPalette();
+	bool initAMDDrawBuffersBlend();
 	// AUTO-GENERATED METHODS
 };
 
