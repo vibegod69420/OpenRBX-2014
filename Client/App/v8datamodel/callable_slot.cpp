@@ -59,6 +59,16 @@ void __cdecl callable_slot::clear()
 	callable_slot_manage(this, 0);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00cbf3c0
+bool callable_slot::hasValue()
+{
+	if (*(unsigned int*)((char*)this + 0x878) > 0)
+		return true;
+
+	int result = 0;
+	return *(int*)((char*)this + 0x990) != result;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

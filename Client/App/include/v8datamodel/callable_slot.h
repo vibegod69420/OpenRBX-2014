@@ -22,6 +22,7 @@ public:
 	int size();
 	int notEmpty();
 	void __cdecl clear();
+	bool hasValue();
 	// AUTO-GENERATED METHODS
 };
 
