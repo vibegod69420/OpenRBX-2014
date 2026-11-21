@@ -1289,6 +1289,38 @@ void __cdecl sp_counted_impl_p::sub_A34DD0(int arg)
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a349d0
+void __cdecl sp_counted_impl_p::sub_A349D0(void* arg)
+{
+	void* p14 = ((void* (__cdecl*)(void*, void*, unsigned int, int))sub_BC6400)(arg, 0, 0, 0xC0);
+	char* self = (char*)this;
+	*(void**)(self + 0x28) = p14;
+	*(void**)(self + 0x14) = p14;
+	*(int*)(self + 0x30) = 8;
+	*(void**)(self + 0x24) = (char*)p14 + 0xA8;
+
+	void* p8 = ((void* (__cdecl*)(void*, void*, unsigned int, int))sub_BC6400)(arg, 0, 0, 0x2D0);
+	*(void**)(self + 8) = p8;
+	*(void**)(self + 0x1C) = (char*)p8 + 0x270;
+	{
+		char* t14 = *(char**)(self + 0x14);
+		*(void**)(self + 0x20) = p8;
+		*(int*)(self + 0x2C) = 0x2D;
+		*(void**)(t14 + 4) = p8;
+	}
+
+	*(int*)((char*)*(void**)(self + 8) + 8) = 0;
+	*(char**)(self + 8) += 0x10;
+
+	{
+		char* t14 = *(char**)(self + 0x14);
+		*(void**)t14 = *(void**)(self + 8);
+		t14 = *(char**)(self + 0x14);
+		*(void**)(self + 0xC) = *(void**)t14;
+		*(char**)(t14 + 8) = *(char**)(self + 8) + 0x140;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
