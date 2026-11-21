@@ -382,6 +382,45 @@ int callable_slot::count()
 	return data[2] - data[1];
 }
 
+struct callable_slot_grow_helper
+{
+	void __thiscall doGrow(unsigned int n);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00a69820
+void callable_slot::grow()
+{
+	int diff = *(int*)((char*)this + 4) - *(int*)((char*)this + 0);
+	unsigned int count = (unsigned int)(diff / 40);
+	unsigned int field10 = *(unsigned int*)((char*)this + 0x10);
+
+	if (count / 3 >= field10)
+	{
+		unsigned int field1c = *(unsigned int*)((char*)this + 0x1c);
+		for (;;)
+		{
+			count >>= 1;
+			if (count <= field1c)
+			{
+				count = field1c;
+				break;
+			}
+			if (count / 3 >= field10)
+				continue;
+			break;
+		}
+	}
+
+	unsigned int v = count / 5 + field10;
+	if (v >= count)
+		count += count;
+
+	if (count > *(unsigned int*)((char*)this + 0x18))
+		count = *(unsigned int*)((char*)this + 0x18);
+
+	((callable_slot_grow_helper*)this)->doGrow(count);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
