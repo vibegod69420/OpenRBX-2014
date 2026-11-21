@@ -417,6 +417,12 @@ public:
 	void init_dcda60();
 	void init_dce510();
 	void init_dd2310();
+	void init_dd4480();
+	void init_da28a0();
+	void init_da28f0();
+	void init_dbb950();
+	void init_daf500();
+	void init_daf550();
 	// AUTO-GENERATED METHODS
 };
 
