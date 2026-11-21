@@ -423,6 +423,9 @@ public:
 	void init_dbb950();
 	void init_daf500();
 	void init_daf550();
+	void init_daf5a0();
+	void init_dd4210();
+	void init_dd9ad0();
 	// AUTO-GENERATED METHODS
 };
 
