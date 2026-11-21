@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-21 01:50:19 UTC",
+  "updated_at": "2026-11-21 01:58:35 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 19.8932,
-  "implemented_total": 1885,
-  "function_annotations": 1885,
+  "matchable_coverage_pct": 19.9573,
+  "implemented_total": 1891,
+  "function_annotations": 1891,
   "stub_annotations": 0,
-  "perfect_100_count": 1863,
-  "matched_real_functions": 1863,
+  "perfect_100_count": 1869,
+  "matched_real_functions": 1869,
   "average_match_pct": 99.54,
-  "overall_function_coverage_pct": 4.5931,
-  "overall_byte_coverage_pct": 1.4126,
+  "overall_function_coverage_pct": 4.6079,
+  "overall_byte_coverage_pct": 1.4165,
   "usage": {
-    "calls_24h": 4305,
+    "calls_24h": 4287,
     "failures_24h": 0,
-    "completion_tokens_24h": 49787852,
-    "reasoning_tokens_24h": 48359846,
-    "avg_latency_s": 197.2
+    "completion_tokens_24h": 49426822,
+    "reasoning_tokens_24h": 48004569,
+    "avg_latency_s": 196.4
   },
   "functions": [
     {
@@ -16127,6 +16127,17 @@
       "matchable": true
     },
     {
+      "address": "0x00c97430",
+      "kind": "FUNCTION",
+      "name": "RBX::sp_counted_impl_pd::getDoubleValue",
+      "mangled": "?getDoubleValue@sp_counted_impl_pd@RBX@@QAANXZ",
+      "file": "Client/App/v8datamodel/sp_counted_impl_pd.cpp",
+      "orig_size": 36,
+      "recomp_size": 36,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00c9b2f0",
       "kind": "FUNCTION",
       "name": "RBX::Network::Server::sub_c9b2f0",
@@ -17029,6 +17040,28 @@
       "matchable": true
     },
     {
+      "address": "0x00da33b0",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init_da33b0",
+      "mangled": "?init_da33b0@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 68,
+      "recomp_size": 68,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00da3400",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init_da3400",
+      "mangled": "?init_da3400@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 68,
+      "recomp_size": 68,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00da3710",
       "kind": "FUNCTION",
       "name": "ProgramMemoryCheckerImpl::init95",
@@ -17282,6 +17315,17 @@
       "matchable": true
     },
     {
+      "address": "0x00dadef0",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init_dadef0",
+      "mangled": "?init_dadef0@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 68,
+      "recomp_size": 68,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00dae060",
       "kind": "FUNCTION",
       "name": "ProgramMemoryCheckerImpl::init113",
@@ -17377,6 +17421,28 @@
       "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
       "orig_size": 61,
       "recomp_size": 61,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00dae780",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init_dae780",
+      "mangled": "?init_dae780@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 68,
+      "recomp_size": 68,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00dae7d0",
+      "kind": "FUNCTION",
+      "name": "ProgramMemoryCheckerImpl::init_dae7d0",
+      "mangled": "?init_dae7d0@ProgramMemoryCheckerImpl@@QAEXXZ",
+      "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+      "orig_size": 68,
+      "recomp_size": 68,
       "match_pct": 100.0,
       "matchable": true
     },

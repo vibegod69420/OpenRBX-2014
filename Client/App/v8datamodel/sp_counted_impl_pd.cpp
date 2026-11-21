@@ -159,6 +159,30 @@ void* __cdecl sp_counted_impl_pd::dispatch(void* arg1, void* arg2, void* arg3)
 	return this;
 }
 
+struct sp_counted_impl_pd_target_c97430
+{
+	double get_c6a740();
+};
+
+struct sp_counted_impl_pd_node_c97430
+{
+	char pad[0xAB8];
+	sp_counted_impl_pd_target_c97430* target;
+};
+
+sp_counted_impl_pd_node_c97430* sp_counted_impl_pd_call_c96fc0(void* arg, int flag);
+
+// FUNCTION: ROBLOXSTUDIO 0x00c97430
+double __cdecl sp_counted_impl_pd::getDoubleValue()
+{
+	sp_counted_impl_pd_node_c97430* result = sp_counted_impl_pd_call_c96fc0(this, 1);
+	if (result)
+	{
+		return result->target->get_c6a740();
+	}
+	return 0.0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

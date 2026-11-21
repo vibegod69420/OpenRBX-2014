@@ -31,6 +31,7 @@ public:
 	static int derefInt_8910(const int* p);
 	void __cdecl get_deleter(const void* arg1, void* arg2);
 	void* __cdecl dispatch(void* arg1, void* arg2, void* arg3);
+	double __cdecl getDoubleValue();
 	// AUTO-GENERATED METHODS
 };
 
