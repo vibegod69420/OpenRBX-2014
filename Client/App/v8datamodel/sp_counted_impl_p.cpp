@@ -1392,6 +1392,42 @@ void __cdecl sp_counted_impl_p::sub_77DDA0(int hole, int bottom, void* val)
 	base[2 * hole + 1] = v[1];
 }
 
+extern void* dword_128D3B4;
+
+void __cdecl sub_A38FC0(void*, void*);
+void __cdecl sub_8DFAC0(void*, int);
+void __cdecl sub_A35710(void*, const char*);
+void __cdecl sub_A35580(void*, void*, int);
+void __cdecl sub_A35CE0(void*, int);
+void __cdecl sub_A35CC0(void*, int, int);
+void __cdecl sub_A35D10(void*, int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b7b4b0
+void __cdecl sp_counted_impl_p::sub_B7B4B0(void* arg2, void* arg3)
+{
+	sub_A38FC0(this, dword_128D3B4);
+	sub_8DFAC0(this, -1);
+
+	sub_A35710(this, "__index");
+	sub_A35580(this, arg2, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__newindex");
+	sub_A35580(this, arg3, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__gc");
+	sub_A35580(this, (void*)0x00B7A370, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__tostring");
+	sub_A35580(this, (void*)0x00B7A6A0, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35CC0(this, -1, 1);
+	sub_A35D10(this, -2);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

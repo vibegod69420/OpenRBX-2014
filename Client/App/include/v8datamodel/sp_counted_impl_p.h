@@ -118,6 +118,7 @@ public:
 	void __cdecl sub_A349D0(void* arg);
 	void __cdecl sub_A342A0();
 	void __cdecl sub_77DDA0(int hole, int bottom, void* val);
+	void __cdecl sub_B7B4B0(void* arg2, void* arg3);
 	// AUTO-GENERATED METHODS
 };
 
