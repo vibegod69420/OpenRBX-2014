@@ -37,6 +37,7 @@ public:
 	void*allocate3();
 	int count();
 	void grow();
+	void clearFocus();
 	// AUTO-GENERATED METHODS
 };
 

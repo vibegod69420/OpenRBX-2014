@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21 08:38:50 UTC",
+ "updated_at": "2026-11-21 09:30:40 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 20.5873,
- "implemented_total": 1950,
- "function_annotations": 1950,
+ "matchable_coverage_pct": 20.598,
+ "implemented_total": 1951,
+ "function_annotations": 1951,
  "stub_annotations": 0,
- "perfect_100_count": 1928,
- "matched_real_functions": 1928,
+ "perfect_100_count": 1929,
+ "matched_real_functions": 1929,
  "average_match_pct": 99.56,
- "overall_function_coverage_pct": 4.7533,
- "overall_byte_coverage_pct": 1.4661,
+ "overall_function_coverage_pct": 4.7558,
+ "overall_byte_coverage_pct": 1.4673,
  "usage": {
-  "calls_24h": 3301,
+  "calls_24h": 3115,
   "failures_24h": 0,
-  "completion_tokens_24h": 36588944,
-  "reasoning_tokens_24h": 35487808,
-  "avg_latency_s": 187.6
+  "completion_tokens_24h": 34331448,
+  "reasoning_tokens_24h": 33284126,
+  "avg_latency_s": 187.0
  },
- "functions_total": 1950,
+ "functions_total": 1951,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -48,9 +48,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 538,
-   "functions": 542,
-   "bytes": 24665
+   "matched": 539,
+   "functions": 543,
+   "bytes": 24781
   },
   {
    "name": "App/v8world",
@@ -5799,9 +5799,21 @@
    "matched": 1928,
    "implemented": 1950,
    "pct": 20.5873
+  },
+  {
+   "t": "2026-11-21 09:30:40 UTC",
+   "matched": 1929,
+   "implemented": 1951,
+   "pct": 20.598
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-21T09:27:29",
+   "address": "0x00966120",
+   "name": "RBX::callable_slot::clearFocus",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-21T08:35:35",
    "address": "0x00a348d0",
@@ -6515,13 +6527,7 @@
    "address": "0x00db8b90",
    "name": "ProgramMemoryCheckerImpl::init_db8b90",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T00:27:42",
-   "address": "0x00b79b80",
-   "name": "RBX::detail::sp_counted_impl_p::sub_B79B80",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 30.16
+ "match_rate_per_hour": 29.77
 }

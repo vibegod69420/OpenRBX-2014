@@ -421,6 +421,91 @@ void callable_slot::grow()
 	((callable_slot_grow_helper*)this)->doGrow(count);
 }
 
+struct callable_slot_966120_climb
+{
+	char pad[0x38];
+	callable_slot_966120_climb* field_38;
+	callable_slot_966120_climb* __thiscall climb_43EE40();
+};
+
+struct callable_slot_966120_check
+{
+	char pad[0x0C];
+	int field_0C;
+	char pad2[0x114];
+	callable_slot_966120_check* field_124;
+	bool __thiscall check_7CD560(void* arg);
+};
+
+struct callable_slot_966120_sub
+{
+	char pad[0x0C];
+	callable_slot_966120_check* field_0C;
+};
+
+struct callable_slot_966120_target
+{
+	char pad[0x7E];
+	unsigned char field_7E;
+	char pad2[0xA1];
+	int field_120;
+	void __thiscall set_97E940(int v);
+};
+
+struct callable_slot_966120_root
+{
+	char pad[0x1C];
+	callable_slot_966120_sub sub;
+	callable_slot_966120_target* __thiscall get_4C92A0();
+};
+
+void* __cdecl sub_43EC00();
+
+// FUNCTION: ROBLOXSTUDIO 0x00966120
+void callable_slot::clearFocus()
+{
+	char* self = (char*)this;
+	callable_slot_966120_climb* parent = *(callable_slot_966120_climb**)(self + 0x38);
+	*(unsigned char*)(self + 0x1D5) = 0;
+
+	callable_slot_966120_climb* root;
+	if (parent)
+	{
+		callable_slot_966120_climb* gp = parent->field_38;
+		if (gp)
+			root = gp->climb_43EE40();
+		else
+			root = parent;
+	}
+	else
+	{
+		root = (callable_slot_966120_climb*)this;
+	}
+
+	if (!root)
+		return;
+
+	callable_slot_966120_sub* sub = &((callable_slot_966120_root*)root)->sub;
+	if (!sub)
+		return;
+
+	callable_slot_966120_check* obj = sub->field_0C;
+	if (obj->check_7CD560(sub_43EC00()))
+	{
+		callable_slot_966120_root* rc = (callable_slot_966120_root*)((char*)sub - 0x1C);
+		if (rc)
+		{
+			callable_slot_966120_target* target = rc->get_4C92A0();
+			if (target)
+			{
+				target->set_97E940(0);
+				if (*(unsigned char*)(self + 0x1D4) == 0)
+					target->field_120 = 0;
+			}
+		}
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
