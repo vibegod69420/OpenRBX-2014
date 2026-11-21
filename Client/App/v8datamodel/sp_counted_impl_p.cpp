@@ -876,6 +876,65 @@ void __cdecl sp_counted_impl_p::sub_6A3E50()
 	}
 }
 
+void __cdecl sub_BC7100(void* arg);
+void* __cdecl sub_BC9AD0(void* arg0, void* arg1, void* arg2);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a34e50
+void __cdecl sp_counted_impl_p::sub_A34E50(void* arg2, void* arg3)
+{
+	char* p10 = *(char**)((char*)this + 0x10);
+	if (*(unsigned int*)(p10 + 0x44) >= *(unsigned int*)(p10 + 0x40))
+	{
+		sub_BC7100(this);
+	}
+
+	char* slot = *(char**)((char*)this + 8);
+	*(void**)slot = sub_BC9AD0(this, arg2, arg3);
+	*(int*)(slot + 8) = 5;
+	*(char**)((char*)this + 8) += 0x10;
+}
+
+extern void* dword_128DC80;
+
+// FUNCTION: ROBLOXSTUDIO 0x00b7a470
+int __cdecl sp_counted_impl_p::sub_B7A470()
+{
+	sp_counted_impl_p_basic_string* s =
+		(sp_counted_impl_p_basic_string*)((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 1, dword_128DC80);
+
+	if (s->capacity >= 0x10)
+	{
+		rbx_free_mem(s->ptr);
+	}
+	s->capacity = 0x0F;
+	s->size = 0;
+	s->buf[0] = 0;
+
+	return 0;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00b79b30
+int __cdecl sp_counted_impl_p::sub_B79B30()
+{
+	extern void __cdecl sub_A35560(void* a, int b);
+
+	int* r1 = (int*)((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 1, dword_128DC74);
+	int* r2 = (int*)((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 2, dword_128DC74);
+	sub_A35560(this, *r1 == *r2);
+	return 1;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00b79b80
+int __cdecl sp_counted_impl_p::sub_B79B80()
+{
+	extern void __cdecl sub_A35560(void* a, int b);
+
+	int* r1 = (int*)((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 1, dword_128DC78);
+	int* r2 = (int*)((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 2, dword_128DC78);
+	sub_A35560(this, *r1 == *r2);
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

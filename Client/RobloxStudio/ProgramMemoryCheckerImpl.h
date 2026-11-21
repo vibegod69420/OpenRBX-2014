@@ -342,6 +342,10 @@ public:
 	void init_db4510();
 	void init_db5d50();
 	void init_db67e0();
+	void init_db6830();
+	void init_db6880();
+	void init_db6ba0();
+	void init_db7200();
 	// AUTO-GENERATED METHODS
 };
 

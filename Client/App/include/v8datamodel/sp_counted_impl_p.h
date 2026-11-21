@@ -93,6 +93,10 @@ public:
 	int __cdecl sub_A34E90(void* arg2, void* arg3);
 	void __cdecl sub_A34D20(int arg2, int arg3);
 	void __cdecl sub_6A3E50();
+	void __cdecl sub_A34E50(void* arg2, void* arg3);
+	int __cdecl sub_B7A470();
+	int __cdecl sub_B79B30();
+	int __cdecl sub_B79B80();
 	// AUTO-GENERATED METHODS
 };
 

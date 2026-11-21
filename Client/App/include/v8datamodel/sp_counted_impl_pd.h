@@ -14,6 +14,7 @@ public:
 	{
 		int _vtable_or_head;
 		struct { char _pad_member_0010[0x10]; int member_0010; };
+		struct { char _pad_field_0148[0x148]; int field_0148; };
 		// AUTO-GENERATED FIELDS
 	};
 
@@ -25,6 +26,9 @@ public:
 	void __cdecl get_deleter(void* arg2, void* arg3);
 	void sp_ms_deleter_dispose();
 	void __cdecl get_deleter(void* arg2, void* arg3) const;
+	int getField148() const;
+	static int derefInt(const int* p);
+	static int derefInt_8910(const int* p);
 	// AUTO-GENERATED METHODS
 };
 

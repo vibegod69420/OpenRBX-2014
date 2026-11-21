@@ -121,6 +121,24 @@ void __cdecl sp_counted_impl_pd::get_deleter(void* arg2, void* arg3) const
 	((sp_counted_impl_pd_callee*)((char*)obj + 8))->func(flag, obj, args, 0);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0067e450
+int sp_counted_impl_pd::getField148() const
+{
+	return field_0148;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00678900
+int sp_counted_impl_pd::derefInt(const int* p)
+{
+	return *p;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00678910
+int sp_counted_impl_pd::derefInt_8910(const int* p)
+{
+	return *p;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
