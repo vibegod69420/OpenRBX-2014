@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21 16:26:38 UTC",
+ "updated_at": "2026-11-21 16:35:26 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 20.7261,
- "implemented_total": 1963,
- "function_annotations": 1963,
+ "matchable_coverage_pct": 20.7368,
+ "implemented_total": 1964,
+ "function_annotations": 1964,
  "stub_annotations": 0,
- "perfect_100_count": 1941,
- "matched_real_functions": 1941,
+ "perfect_100_count": 1942,
+ "matched_real_functions": 1942,
  "average_match_pct": 99.56,
- "overall_function_coverage_pct": 4.7854,
- "overall_byte_coverage_pct": 1.4818,
+ "overall_function_coverage_pct": 4.7879,
+ "overall_byte_coverage_pct": 1.4837,
  "usage": {
-  "calls_24h": 1772,
+  "calls_24h": 1746,
   "failures_24h": 0,
-  "completion_tokens_24h": 19518623,
-  "reasoning_tokens_24h": 18953966,
+  "completion_tokens_24h": 19215772,
+  "reasoning_tokens_24h": 18661285,
   "avg_latency_s": 180.2
  },
- "functions_total": 1963,
+ "functions_total": 1964,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -41,16 +41,16 @@
    "bytes": 43835
   },
   {
+   "name": "App/v8datamodel",
+   "matched": 547,
+   "functions": 551,
+   "bytes": 25956
+  },
+  {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
    "matched": 417,
    "functions": 417,
    "bytes": 25841
-  },
-  {
-   "name": "App/v8datamodel",
-   "matched": 546,
-   "functions": 550,
-   "bytes": 25770
   },
   {
    "name": "App/v8world",
@@ -5865,9 +5865,21 @@
    "matched": 1941,
    "implemented": 1963,
    "pct": 20.7261
+  },
+  {
+   "t": "2026-11-21 16:35:26 UTC",
+   "matched": 1942,
+   "implemented": 1964,
+   "pct": 20.7368
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-21T16:32:19",
+   "address": "0x00a345e0",
+   "name": "RBX::detail::sp_counted_impl_p::sub_A345E0",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-21T16:23:26",
    "address": "0x00b7b4b0",
@@ -6581,13 +6593,7 @@
    "address": "0x00dc4550",
    "name": "ProgramMemoryCheckerImpl::init_dc4550",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T00:42:23",
-   "address": "0x00b79d10",
-   "name": "RBX::detail::sp_counted_impl_p::sub_B79D10",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 27.06
+ "match_rate_per_hour": 27.02
 }

@@ -119,6 +119,7 @@ public:
 	void __cdecl sub_A342A0();
 	void __cdecl sub_77DDA0(int hole, int bottom, void* val);
 	void __cdecl sub_B7B4B0(void* arg2, void* arg3);
+	sp_counted_impl_p* __cdecl sub_A345E0();
 	// AUTO-GENERATED METHODS
 };
 

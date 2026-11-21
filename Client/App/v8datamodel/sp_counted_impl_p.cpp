@@ -1428,6 +1428,48 @@ void __cdecl sp_counted_impl_p::sub_B7B4B0(void* arg2, void* arg3)
 	sub_A35D10(this, -2);
 }
 
+void __cdecl sub_BC6FC0(void* ctx, void* node, int flag);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a345e0
+sp_counted_impl_p* __cdecl sp_counted_impl_p::sub_A345E0()
+{
+	char* self = (char*)this;
+	char* edi = (char*)((void* (__cdecl*)(void*, void*, unsigned int, int))sub_BC6400)(self, 0, 0, 0xA4) + 0x2C;
+
+	sub_BC6FC0(self, edi, 8);
+	*(void**)(edi + 0x10) = *(void**)(self + 0x10);
+
+	int zero = 0;
+	*(int*)(edi + 0x20) = 0;
+	*(int*)(edi + 0x2C) = 0;
+	*(int*)(edi + 0x70) = 0;
+	*(int*)(edi + 0x44) = 0;
+	*(int*)(edi + 0x36) = 0x01000000;
+	*(int*)(edi + 0x3C) = 0;
+	*(int*)(edi + 0x40) = 0;
+	*(int*)(edi + 0x68) = 0;
+	*(int*)(edi + 0x30) = 0;
+	*(short*)(edi + 0x34) = (short)zero;
+	*(char*)(edi + 0x06) = (char)zero;
+	*(int*)(edi + 0x14) = zero;
+	*(int*)(edi + 0x28) = zero;
+	*(int*)(edi + 0x18) = zero;
+	*(int*)(edi + 0x74) = zero;
+	*(int*)(edi + 0x50) = zero;
+
+	((sp_counted_impl_p*)edi)->sub_A349D0(self);
+
+	*(void**)(edi + 0x48) = *(void**)(self + 0x48);
+	*(void**)(edi + 0x4C) = *(void**)(self + 0x4C);
+	*(void**)(edi + 0x50) = *(void**)(self + 0x50);
+	*(char*)(edi + 0x38) = *(char*)(self + 0x38);
+	*(void**)(edi + 0x3C) = *(void**)(self + 0x3C);
+	*(void**)(edi + 0x44) = *(void**)(self + 0x44);
+	*(void**)(edi + 0x40) = *(void**)(edi + 0x3C);
+
+	return (sp_counted_impl_p*)edi;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
