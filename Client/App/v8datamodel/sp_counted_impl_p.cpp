@@ -1107,6 +1107,26 @@ void __cdecl sp_counted_impl_p::sub_A351C0(int arg)
 	*(int*)(insertPos + 8) = *(int*)(cur + 8);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00779b50
+void sp_counted_impl_p::sub_779B50()
+{
+	char* p = (char*)this;
+	*(short*)(p + 0x1226) = 0;
+	*(int*)(p + 0x1228) = -1;
+	*(int*)(p + 0x122C) = 0;
+	*(int*)(p + 0x1230) = 0;
+	*(int*)(p + 0x1234) = 0;
+	*(int*)(p + 0x123C) = 0;
+	*(int*)(p + 0x1238) = 0;
+	*(int*)(p + 0x1240) = 0;
+	p[0x00] = 0;
+	p[0x21] = 0;
+	p[0x122] = 0;
+	p[0x1A3] = 0;
+	p[0x224] = 0;
+	p[0xA25] = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
