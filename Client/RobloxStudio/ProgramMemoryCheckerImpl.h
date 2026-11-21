@@ -410,6 +410,9 @@ public:
 	void init_dd5170();
 	void init_dd51c0();
 	void init_db65d0();
+	void init_dbc0c0();
+	void init_dca850();
+	void init_dcd9c0();
 	// AUTO-GENERATED METHODS
 };
 
