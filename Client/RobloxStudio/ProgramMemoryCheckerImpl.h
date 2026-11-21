@@ -416,6 +416,7 @@ public:
 	void init_dcda10();
 	void init_dcda60();
 	void init_dce510();
+	void init_dd2310();
 	// AUTO-GENERATED METHODS
 };
 
