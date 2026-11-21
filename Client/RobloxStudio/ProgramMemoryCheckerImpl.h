@@ -426,6 +426,7 @@ public:
 	void init_daf5a0();
 	void init_dd4210();
 	void init_dd9ad0();
+	void init_dcfaa0();
 	// AUTO-GENERATED METHODS
 };
 
