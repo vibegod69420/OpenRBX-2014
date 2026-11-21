@@ -357,6 +357,11 @@ public:
 	void init_dc4550();
 	void init_dc45e0();
 	void init_dc7560();
+	void init_dc77b0();
+	void init_dc8560();
+	void init_dcc8b0();
+	void init_dcc900();
+	void init_dcd220();
 	// AUTO-GENERATED METHODS
 };
 

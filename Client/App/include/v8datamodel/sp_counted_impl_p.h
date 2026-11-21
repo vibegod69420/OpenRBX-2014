@@ -103,6 +103,7 @@ public:
 	int __cdecl sub_B79D10();
 	int __cdecl sub_B79D60();
 	int __cdecl sub_B79DB0();
+	int __cdecl sub_B79F10();
 	// AUTO-GENERATED METHODS
 };
 

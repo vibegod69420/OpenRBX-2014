@@ -147,6 +147,18 @@ void __cdecl sp_counted_impl_pd::get_deleter(const void* arg1, void* arg2)
 	sp_counted_impl_pd_get_deleter_impl(this, arg1, &arg2);
 }
 
+struct sp_counted_impl_pd_dispatch_callee
+{
+	void __thiscall call(void* arg0, void* arg2, void* arg3);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x007a5eb0
+void* __cdecl sp_counted_impl_pd::dispatch(void* arg1, void* arg2, void* arg3)
+{
+	((sp_counted_impl_pd_dispatch_callee*)arg1)->call(this, arg2, arg3);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
