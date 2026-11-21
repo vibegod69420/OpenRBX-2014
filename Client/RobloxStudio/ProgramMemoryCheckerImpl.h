@@ -428,6 +428,9 @@ public:
 	void init_dd9ad0();
 	void init_dcfaa0();
 	void init_dd22c0();
+	void init_dbdc70();
+	void init_dbdcc0();
+	void init_dbdd10();
 	// AUTO-GENERATED METHODS
 };
 

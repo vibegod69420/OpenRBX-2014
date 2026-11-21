@@ -8064,6 +8064,78 @@ void ProgramMemoryCheckerImpl::init_dd22c0()
 	sub_CF6609((void*)0x00E06E30);
 }
 
+class ProgramMemoryCheckerSub9738B0Target_dbdc70
+{
+public:
+	void sub_9738B0(int a1, const char* a2, const char* a3, const char* a4, const char* a5, const char* a6, const char* a7, int a8, int a9, int a10);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dbdc70
+void ProgramMemoryCheckerImpl::init_dbdc70()
+{
+	int v[2];
+	((ProgramMemoryCheckerSub9738B0Target_dbdc70*)0x01301958)->sub_9738B0(
+		0x340,
+		(const char*)0x00E62730,
+		(const char*)0x00E62618,
+		(const char*)0x00E6271C,
+		(const char*)0x00E62654,
+		(const char*)0x00E50278,
+		(const char*)0x00E87D3C,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DF57F0);
+}
+
+class ProgramMemoryCheckerSub973600Target_dbdcc0
+{
+public:
+	void sub_973600(int a1, const char* a2, const char* a3, const char* a4, const char* a5, const char* a6, const char* a7, int a8, int a9, int a10);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dbdcc0
+void ProgramMemoryCheckerImpl::init_dbdcc0()
+{
+	int v[2];
+	((ProgramMemoryCheckerSub973600Target_dbdcc0*)0x013018A8)->sub_973600(
+		0x330,
+		(const char*)0x00E62668,
+		(const char*)0x00E62618,
+		(const char*)0x00E62660,
+		(const char*)0x00E62654,
+		(const char*)0x00E50278,
+		(const char*)0x00E87D3C,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DF5850);
+}
+
+class ProgramMemoryCheckerSub973600Target_dbdd10
+{
+public:
+	void sub_973600(int a1, const char* a2, const char* a3, const char* a4, const char* a5, const char* a6, const char* a7, int a8, int a9, int a10);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dbdd10
+void ProgramMemoryCheckerImpl::init_dbdd10()
+{
+	int v[2];
+	((ProgramMemoryCheckerSub973600Target_dbdd10*)0x0130192C)->sub_973600(
+		0x33C,
+		(const char*)0x00E626F0,
+		(const char*)0x00E62618,
+		(const char*)0x00E4690C,
+		(const char*)0x00E62654,
+		(const char*)0x00E50278,
+		(const char*)0x00E87D3C,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DF58B0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
