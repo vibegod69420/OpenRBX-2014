@@ -73,6 +73,7 @@ public:
 	void __cdecl rawset(int index);
 	void __cdecl sub_A35580(int arg2, int arg3);
 	void __cdecl sub_A378D0();
+	void __cdecl sub_A37320(void* p);
 	// AUTO-GENERATED METHODS
 };
 

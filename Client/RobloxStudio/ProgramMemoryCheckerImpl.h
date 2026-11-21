@@ -403,6 +403,10 @@ public:
 	void init_db6530();
 	void init_db6580();
 	void init_db69f0();
+	void init_dbdd60();
+	void init_dcc7d0();
+	void init_dd4260();
+	void init_dd5120();
 	// AUTO-GENERATED METHODS
 };
 

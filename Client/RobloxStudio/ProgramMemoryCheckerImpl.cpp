@@ -7496,6 +7496,94 @@ void ProgramMemoryCheckerImpl::init_db69f0()
 	sub_CF6609((void*)0x00DF0800);
 }
 
+class ProgramMemoryCheckerSub9740B0Target
+{
+public:
+	void sub_9740B0(int a1, const char* a2, const char* a3, const char* a4, const char* a5, int a6, int a7, int a8);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dbdd60
+void ProgramMemoryCheckerImpl::init_dbdd60()
+{
+	int v[2];
+	((ProgramMemoryCheckerSub9740B0Target*)0x013018D4)->sub_9740B0(
+		0x334,
+		(const char*)0x00E626B4,
+		(const char*)0x00E626A4,
+		(const char*)0x00E62694,
+		(const char*)0x00E87D3C,
+		0,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00DF5910);
+}
+
+class ProgramMemoryCheckerSubAA4CA0Target_dcc7d0
+{
+public:
+	void sub_AA4CA0(int a1, int a2, const char* a3, const char* a4, const char* a5, int a6, int a7, int a8);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dcc7d0
+void ProgramMemoryCheckerImpl::init_dcc7d0()
+{
+	int v[2];
+	((ProgramMemoryCheckerSubAA4CA0Target_dcc7d0*)0x0130B280)->sub_AA4CA0(
+		0x27C,
+		0,
+		(const char*)0x00EB776C,
+		(const char*)0x00E7BAAC,
+		(const char*)0x00EB7754,
+		0,
+		(*(unsigned char*)&v[0] = 1, v[0]),
+		0x0130B250);
+	sub_CF6609((void*)0x00E00FE0);
+}
+
+class ProgramMemoryCheckerSubC253E0Target_dd4260
+{
+public:
+	void sub_C253E0(int a1, const char* a2, const char* a3, const char* a4, const char* a5, int a6, int a7, int a8);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dd4260
+void ProgramMemoryCheckerImpl::init_dd4260()
+{
+	int v[2];
+	((ProgramMemoryCheckerSubC253E0Target_dd4260*)0x013106A8)->sub_C253E0(
+		0x194,
+		(const char*)0x00E94C20,
+		(const char*)0x00E73878,
+		(const char*)0x00E73878,
+		(const char*)0x00EEEC38,
+		5,
+		(*(unsigned char*)&v[0] = 0, v[0]),
+		0);
+	sub_CF6609((void*)0x00E08FE0);
+}
+
+class ProgramMemoryCheckerSubC3F120Target_dd5120
+{
+public:
+	void sub_C3F120(int a1, int a2, const char* a3, const char* a4, const char* a5, int a6, int a7, int a8);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00dd5120
+void ProgramMemoryCheckerImpl::init_dd5120()
+{
+	int v[2];
+	((ProgramMemoryCheckerSubC3F120Target_dd5120*)0x013113B0)->sub_C3F120(
+		0x00C50600,
+		0,
+		(const char*)0x00EF02EC,
+		(const char*)0x00E83694,
+		(const char*)0x01024D64,
+		0,
+		(*(unsigned char*)&v[0] = 1, v[0]),
+		0x01311FA0);
+	sub_CF6609((void*)0x00E0A500);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

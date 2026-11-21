@@ -959,6 +959,52 @@ void __cdecl lua_exception::sub_A378D0()
     sub_A36D10(this, 2);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a37320
+void* __cdecl sub_BC9AD0(lua_exception* L, int narray, int nhash);
+void* __cdecl sub_BC9CC0(lua_exception* L, void* t, int n);
+void __cdecl sub_A36700(lua_exception* L, int n);
+
+void __cdecl lua_exception::sub_A37320(void* p)
+{
+    if (p != 0 && *(unsigned char*)((char*)p + 6) == 0)
+    {
+        void* table = sub_BC9AD0(this, 0, 0);
+        void* proto = *(void**)((char*)p + 0x10);
+        int* arr = *(int**)((char*)proto + 0x14);
+        int i = 0;
+
+        if (i < *(int*)((char*)proto + 0x30))
+        {
+            do
+            {
+                void* cell = sub_BC9CC0(this, table, arr[i]);
+                *(int*)cell = 1;
+                *(int*)((char*)cell + 8) = 1;
+                ++i;
+                proto = *(void**)((char*)p + 0x10);
+            }
+            while (i < *(int*)((char*)proto + 0x30));
+        }
+
+        {
+            char* top = *(char**)((char*)this + 8);
+            *(void**)top = table;
+            *(int*)(top + 8) = 5;
+        }
+    }
+    else
+    {
+        *(int*)(*(char**)((char*)this + 8) + 8) = 0;
+    }
+
+    if (*(char**)((char*)this + 0x1C) - *(char**)((char*)this + 8) <= 16)
+    {
+        sub_A36700(this, 1);
+    }
+
+    *(char**)((char*)this + 8) += 16;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
