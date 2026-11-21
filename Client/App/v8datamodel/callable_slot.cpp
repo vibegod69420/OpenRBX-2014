@@ -537,6 +537,77 @@ void callable_slot::resetReliabilityLayer()
 	*(unsigned int*)((char*)this + 0xF20) = 0;
 }
 
+void __cdecl callable_slot_free_0xcf6698(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00cc0390
+void callable_slot::clearReliabilityBuffers()
+{
+	char* self = (char*)this;
+	unsigned int cap;
+
+	cap = *(unsigned int*)(self + 0xEEC);
+	if (cap != 0)
+	{
+		if (cap > 0x200)
+		{
+			callable_slot_free_0xcf6698(*(void**)(self + 0xEE4));
+			*(unsigned int*)(self + 0xEEC) = 0;
+			*(void**)(self + 0xEE4) = 0;
+		}
+		*(unsigned int*)(self + 0xEE8) = 0;
+	}
+
+	cap = *(unsigned int*)(self + 0xEF8);
+	if (cap != 0)
+	{
+		if (cap > 0x200)
+		{
+			callable_slot_free_0xcf6698(*(void**)(self + 0xEF0));
+			*(unsigned int*)(self + 0xEF8) = 0;
+			*(void**)(self + 0xEF0) = 0;
+		}
+		*(unsigned int*)(self + 0xEF4) = 0;
+	}
+
+	cap = *(unsigned int*)(self + 0xF04);
+	if (cap != 0)
+	{
+		if (cap > 0x200)
+		{
+			callable_slot_free_0xcf6698(*(void**)(self + 0xEFC));
+			*(unsigned int*)(self + 0xF04) = 0;
+			*(void**)(self + 0xEFC) = 0;
+		}
+		*(unsigned int*)(self + 0xF00) = 0;
+	}
+
+	cap = *(unsigned int*)(self + 0xF10);
+	if (cap != 0)
+	{
+		if (cap > 0x200)
+		{
+			callable_slot_free_0xcf6698(*(void**)(self + 0xF08));
+			*(unsigned int*)(self + 0xF10) = 0;
+			*(void**)(self + 0xF08) = 0;
+		}
+		*(unsigned int*)(self + 0xF0C) = 0;
+	}
+
+	cap = *(unsigned int*)(self + 0xF1C);
+	if (cap != 0)
+	{
+		if (cap > 0x200)
+		{
+			callable_slot_free_0xcf6698(*(void**)(self + 0xF14));
+			*(unsigned int*)(self + 0xF1C) = 0;
+			*(void**)(self + 0xF14) = 0;
+		}
+		*(unsigned int*)(self + 0xF18) = 0;
+	}
+
+	*(unsigned int*)(self + 0xF20) = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

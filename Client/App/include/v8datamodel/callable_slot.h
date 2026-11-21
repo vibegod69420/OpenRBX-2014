@@ -39,6 +39,7 @@ public:
 	void grow();
 	void clearFocus();
 	void resetReliabilityLayer();
+	void clearReliabilityBuffers();
 	// AUTO-GENERATED METHODS
 };
 
