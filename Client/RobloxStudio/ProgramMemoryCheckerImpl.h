@@ -379,6 +379,12 @@ public:
 	void init_dd2780();
 	void init_dd39d0();
 	void init_dd3a20();
+	void init_dd4430();
+	void init_dd5f50();
+	void init_dd6020();
+	void init_dd60f0();
+	void init_dd6140();
+	void init_dd9940();
 	// AUTO-GENERATED METHODS
 };
 

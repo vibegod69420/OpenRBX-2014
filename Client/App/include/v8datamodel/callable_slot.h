@@ -26,6 +26,7 @@ public:
 	void __cdecl dispatch(int arg1, int arg2);
 	void*resolve();
 	int __cdecl compare(void* arg);
+	bool __cdecl isReachable();
 	// AUTO-GENERATED METHODS
 };
 

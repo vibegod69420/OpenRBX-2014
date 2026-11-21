@@ -105,6 +105,33 @@ int __cdecl callable_slot::compare(void* arg)
 	return left != right;
 }
 
+class callable_slot_node
+{
+public:
+	char pad[0x38];
+	callable_slot_node* field_38;
+
+	bool __thiscall sub_532480(callable_slot_node* target);
+};
+
+callable_slot_node* __cdecl sub_865D20(callable_slot_node* node);
+
+// FUNCTION: ROBLOXSTUDIO 0x0076fb00
+bool __cdecl callable_slot::isReachable()
+{
+	callable_slot_node* node = (callable_slot_node*)this;
+	callable_slot_node* target = sub_865D20(node);
+
+	if (target)
+	{
+		callable_slot_node* parent = node->field_38;
+		if (target == parent || (parent && parent->sub_532480(target)))
+			return true;
+	}
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
