@@ -129,6 +129,12 @@ public:
 	void __cdecl sub_B7B570(void* arg2, void* arg3);
 	void __cdecl sub_B7B650(void* arg2, void* arg3);
 	void __cdecl sub_B7B730(void* arg2, void* arg3);
+	void __cdecl sub_B7B810(void* arg2, void* arg3);
+	void __cdecl sub_B7B8F0(void* arg2, void* arg3);
+	void __cdecl sub_B7B9D0(void* arg2, void* arg3);
+	void __cdecl sub_B7BAB0(void* arg2, void* arg3);
+	void __cdecl sub_B7BB90(void* arg2, void* arg3);
+	void __cdecl sub_B7BC70(void* arg2, void* arg3);
 	// AUTO-GENERATED METHODS
 };
 

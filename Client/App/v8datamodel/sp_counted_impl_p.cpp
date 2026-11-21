@@ -1748,6 +1748,196 @@ void __cdecl sp_counted_impl_p::sub_B7B730(void* arg2, void* arg3)
 	sub_A35D10(this, -2);
 }
 
+extern void* dword_124EB28;
+
+// FUNCTION: ROBLOXSTUDIO 0x00b7b810
+void __cdecl sp_counted_impl_p::sub_B7B810(void* arg2, void* arg3)
+{
+	sub_A38FC0(this, dword_124EB28);
+	sub_8DFAC0(this, -1);
+
+	sub_A35710(this, "__index");
+	sub_A35580(this, arg2, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__newindex");
+	sub_A35580(this, arg3, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__gc");
+	sub_A35580(this, (void*)0x00B7A430, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__eq");
+	sub_A35580(this, (void*)0x00B79E90, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__tostring");
+	sub_A35580(this, (void*)0x00B7A850, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35CC0(this, -1, 1);
+	sub_A35D10(this, -2);
+}
+
+extern void* dword_124EAC4;
+
+// FUNCTION: ROBLOXSTUDIO 0x00b7b8f0
+void __cdecl sp_counted_impl_p::sub_B7B8F0(void* arg2, void* arg3)
+{
+	sub_A38FC0(this, dword_124EAC4);
+	sub_8DFAC0(this, -1);
+
+	sub_A35710(this, "__index");
+	sub_A35580(this, arg2, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__newindex");
+	sub_A35580(this, arg3, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__gc");
+	sub_A35580(this, (void*)0x00B7A450, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__eq");
+	sub_A35580(this, (void*)0x00B79F10, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__tostring");
+	sub_A35580(this, (void*)0x00B7A940, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35CC0(this, -1, 1);
+	sub_A35D10(this, -2);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00b7b9d0
+void __cdecl sp_counted_impl_p::sub_B7B9D0(void* arg2, void* arg3)
+{
+	sub_A38FC0(this, dword_128DC80);
+	sub_8DFAC0(this, -1);
+
+	sub_A35710(this, "__index");
+	sub_A35580(this, arg2, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__newindex");
+	sub_A35580(this, arg3, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__gc");
+	sub_A35580(this, (void*)0x00B7A470, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__eq");
+	sub_A35580(this, (void*)0x00B79F60, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__tostring");
+	sub_A35580(this, (void*)0x00B7A9C0, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35CC0(this, -1, 1);
+	sub_A35D10(this, -2);
+}
+
+extern void* dword_124EB1C;
+
+// FUNCTION: ROBLOXSTUDIO 0x00b7bab0
+void __cdecl sp_counted_impl_p::sub_B7BAB0(void* arg2, void* arg3)
+{
+	sub_A38FC0(this, dword_124EB1C);
+	sub_8DFAC0(this, -1);
+
+	sub_A35710(this, "__index");
+	sub_A35580(this, arg2, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__newindex");
+	sub_A35580(this, arg3, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__gc");
+	sub_A35580(this, (void*)0x00B7A4B0, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__eq");
+	sub_A35580(this, (void*)0x00B79FC0, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__tostring");
+	sub_A35580(this, (void*)0x00B7AA40, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35CC0(this, -1, 1);
+	sub_A35D10(this, -2);
+}
+
+extern void* dword_124EAD8;
+
+// FUNCTION: ROBLOXSTUDIO 0x00b7bb90
+void __cdecl sp_counted_impl_p::sub_B7BB90(void* arg2, void* arg3)
+{
+	sub_A38FC0(this, dword_124EAD8);
+	sub_8DFAC0(this, -1);
+
+	sub_A35710(this, "__index");
+	sub_A35580(this, arg2, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__newindex");
+	sub_A35580(this, arg3, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__gc");
+	sub_A35580(this, (void*)0x00B7A4E0, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__eq");
+	sub_A35580(this, (void*)0x00B7A070, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__tostring");
+	sub_A35580(this, (void*)0x00B7AAC0, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35CC0(this, -1, 1);
+	sub_A35D10(this, -2);
+}
+
+extern void* dword_124EADC;
+
+// FUNCTION: ROBLOXSTUDIO 0x00b7bc70
+void __cdecl sp_counted_impl_p::sub_B7BC70(void* arg2, void* arg3)
+{
+	sub_A38FC0(this, dword_124EADC);
+	sub_8DFAC0(this, -1);
+
+	sub_A35710(this, "__index");
+	sub_A35580(this, arg2, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__newindex");
+	sub_A35580(this, arg3, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__gc");
+	sub_A35580(this, (void*)0x00B7A500, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__eq");
+	sub_A35580(this, (void*)0x00B7A120, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__tostring");
+	sub_A35580(this, (void*)0x00B7AB40, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35CC0(this, -1, 1);
+	sub_A35D10(this, -2);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
