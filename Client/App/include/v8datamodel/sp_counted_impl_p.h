@@ -111,6 +111,7 @@ public:
 	void sub_779B50();
 	void sub_426140();
 	int __cdecl sub_B79F60();
+	void __cdecl sub_A34580(void* arg);
 	// AUTO-GENERATED METHODS
 };
 
