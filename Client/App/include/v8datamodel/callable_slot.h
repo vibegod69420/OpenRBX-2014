@@ -25,6 +25,7 @@ public:
 	bool hasValue();
 	void __cdecl dispatch(int arg1, int arg2);
 	void*resolve();
+	int __cdecl compare(void* arg);
 	// AUTO-GENERATED METHODS
 };
 

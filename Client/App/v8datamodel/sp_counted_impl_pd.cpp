@@ -139,6 +139,14 @@ int sp_counted_impl_pd::derefInt_8910(const int* p)
 	return *p;
 }
 
+void __cdecl sp_counted_impl_pd_get_deleter_impl(sp_counted_impl_pd* self, const void* arg1, void* arg2);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a457e0
+void __cdecl sp_counted_impl_pd::get_deleter(const void* arg1, void* arg2)
+{
+	sp_counted_impl_pd_get_deleter_impl(this, arg1, &arg2);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

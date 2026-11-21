@@ -91,6 +91,20 @@ void* callable_slot::resolve()
 	return this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00cc0fc0
+int __cdecl callable_slot::compare(void* arg)
+{
+	unsigned short left = *(unsigned short*)this;
+	void* ptr = *(void**)arg;
+	ptr = *(void**)((char*)ptr + 8);
+	ptr = *(void**)ptr;
+	unsigned short right = *(unsigned short*)((char*)ptr + 0xE);
+
+	if (left < right)
+		return -1;
+	return left != right;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

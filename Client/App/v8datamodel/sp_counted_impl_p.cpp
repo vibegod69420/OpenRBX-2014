@@ -948,6 +948,66 @@ int __cdecl sp_counted_impl_p::sub_B79BD0()
 	return 1;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b79c70
+int __cdecl sp_counted_impl_p::sub_B79C70()
+{
+	extern void __cdecl sub_A35560(void* a, int b);
+	extern void* dword_12105E0;
+
+	void* r2 = ((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 2, dword_12105E0);
+	void* r1 = ((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 1, dword_12105E0);
+	sub_A35560(this, (*((int*)r1) == *((int*)r2)) ? 1 : 0);
+	return 1;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00b79cc0
+int __cdecl sp_counted_impl_p::sub_B79CC0()
+{
+	extern void __cdecl sub_A35560(void* a, int b);
+	extern void* dword_12105E4;
+
+	void* r2 = ((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 2, dword_12105E4);
+	void* r1 = ((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 1, dword_12105E4);
+	sub_A35560(this, (*((int*)r1) == *((int*)r2)) ? 1 : 0);
+	return 1;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00b79d10
+int __cdecl sp_counted_impl_p::sub_B79D10()
+{
+	extern void __cdecl sub_A35560(void* a, int b);
+	extern void* dword_12105E8;
+
+	void* r2 = ((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 2, dword_12105E8);
+	void* r1 = ((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 1, dword_12105E8);
+	sub_A35560(this, (*((int*)r1) == *((int*)r2)) ? 1 : 0);
+	return 1;
+}
+
+extern void* dword_124EAC8;
+
+// FUNCTION: ROBLOXSTUDIO 0x00b79d60
+int __cdecl sp_counted_impl_p::sub_B79D60()
+{
+	extern void __cdecl sub_A35560(void* a, int b);
+
+	void* r2 = ((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 2, dword_124EAC8);
+	void* r1 = ((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 1, dword_124EAC8);
+	sub_A35560(this, (*((int*)r1) == *((int*)r2)) ? 1 : 0);
+	return 1;
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00b79db0
+int __cdecl sp_counted_impl_p::sub_B79DB0()
+{
+	extern void __cdecl sub_A35560(void* a, int b);
+
+	void* r2 = ((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 2, dword_124EAD0);
+	void* r1 = ((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 1, dword_124EAD0);
+	sub_A35560(this, (*((int*)r1) == *((int*)r2)) ? 1 : 0);
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
