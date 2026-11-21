@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-21 03:50:05 UTC",
+  "updated_at": "2026-11-21 04:28:00 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 20.299,
-  "implemented_total": 1923,
-  "function_annotations": 1923,
+  "matchable_coverage_pct": 20.3097,
+  "implemented_total": 1924,
+  "function_annotations": 1924,
   "stub_annotations": 0,
-  "perfect_100_count": 1901,
-  "matched_real_functions": 1901,
+  "perfect_100_count": 1902,
+  "matched_real_functions": 1902,
   "average_match_pct": 99.55,
-  "overall_function_coverage_pct": 4.6868,
-  "overall_byte_coverage_pct": 1.4426,
+  "overall_function_coverage_pct": 4.6892,
+  "overall_byte_coverage_pct": 1.4435,
   "usage": {
-    "calls_24h": 4071,
+    "calls_24h": 3945,
     "failures_24h": 0,
-    "completion_tokens_24h": 46409317,
-    "reasoning_tokens_24h": 45052650,
-    "avg_latency_s": 193.5
+    "completion_tokens_24h": 44918199,
+    "reasoning_tokens_24h": 43596225,
+    "avg_latency_s": 193.7
   },
   "functions": [
     {
@@ -5519,6 +5519,17 @@
       "file": "Client/Rendering/GfxRender/SceneUpdater.cpp",
       "orig_size": 10,
       "recomp_size": 10,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0068b4e0",
+      "kind": "FUNCTION",
+      "name": "RBX::callable_slot::allocate",
+      "mangled": "?allocate@callable_slot@RBX@@QAEPAXXZ",
+      "file": "Client/App/v8datamodel/callable_slot.cpp",
+      "orig_size": 89,
+      "recomp_size": 89,
       "match_pct": 100.0,
       "matchable": true
     },

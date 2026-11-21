@@ -259,6 +259,57 @@ int __cdecl callable_slot::process(char* a2, void* a3, void* a4)
 	return result;
 }
 
+extern "C" long _InterlockedExchangeAdd(long volatile* Addend, long Value);
+extern "C" unsigned char _interlockedbittestandset(long volatile* a, long b);
+#pragma intrinsic(_InterlockedExchangeAdd, _interlockedbittestandset)
+
+__declspec(dllimport) void __stdcall callable_slot_signal(void*);
+
+struct callable_slot_pool
+{
+	volatile long state;
+	void* field4;
+	void* freeList;
+
+	void __thiscall sub_40ED30();
+	void* __thiscall sub_40FB10();
+};
+
+struct callable_slot_alloc
+{
+	void* __thiscall sub_68B610();
+};
+
+callable_slot_pool* __cdecl sub_68B320();
+
+// FUNCTION: ROBLOXSTUDIO 0x0068b4e0
+void* callable_slot::allocate()
+{
+	callable_slot_pool* pool = sub_68B320();
+	pool->sub_40ED30();
+
+	void* node = pool->freeList;
+	if (node)
+	{
+		pool->freeList = *(void**)node;
+	}
+	else
+	{
+		node = ((callable_slot_alloc*)&pool->freeList)->sub_68B610();
+	}
+
+	long oldState = _InterlockedExchangeAdd(&pool->state, 0x80000000);
+	if (!(oldState & 0x40000000) && oldState > (long)0x80000000)
+	{
+		if (!_interlockedbittestandset(&pool->state, 30))
+		{
+			callable_slot_signal(pool->sub_40FB10());
+		}
+	}
+
+	return node;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

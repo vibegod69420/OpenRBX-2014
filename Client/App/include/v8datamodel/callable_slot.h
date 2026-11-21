@@ -32,6 +32,7 @@ public:
 	void destroyElements();
 	void destroyEntries();
 	int __cdecl process(char* a2, void* a3, void* a4);
+	void*allocate();
 	// AUTO-GENERATED METHODS
 };
 
