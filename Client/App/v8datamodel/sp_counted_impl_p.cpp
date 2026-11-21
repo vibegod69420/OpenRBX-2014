@@ -1261,6 +1261,34 @@ bool __cdecl sp_counted_impl_p::sub_B74210(int arg2, void* arg3)
 	return false;
 }
 
+void __cdecl sub_BC7100(void* arg);
+void __cdecl sub_BCB120(void* arg0, int arg1, int arg2);
+void* __cdecl sub_BC9420(void* arg0, int arg1, int arg2);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a34dd0
+void __cdecl sp_counted_impl_p::sub_A34DD0(int arg)
+{
+	if (arg >= 2)
+	{
+		char* p10 = *(char**)((char*)this + 0x10);
+		if (*(unsigned int*)(p10 + 0x44) >= *(unsigned int*)(p10 + 0x40))
+		{
+			sub_BC7100(this);
+		}
+
+		int count = ((*(char**)((char*)this + 8) - *(char**)((char*)this + 0xC)) >> 4) - 1;
+		sub_BCB120(this, arg, count);
+		*(char**)((char*)this + 8) += 0x10 - (arg << 4);
+	}
+	else if (arg == 0)
+	{
+		char* slot = *(char**)((char*)this + 8);
+		*(void**)slot = sub_BC9420(this, 0x00F12F2D, 0);
+		*(int*)(slot + 8) = 4;
+		*(char**)((char*)this + 8) += 0x10;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
