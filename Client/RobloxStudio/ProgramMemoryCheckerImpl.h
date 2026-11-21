@@ -407,6 +407,8 @@ public:
 	void init_dcc7d0();
 	void init_dd4260();
 	void init_dd5120();
+	void init_dd5170();
+	void init_dd51c0();
 	// AUTO-GENERATED METHODS
 };
 
