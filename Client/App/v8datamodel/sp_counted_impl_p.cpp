@@ -935,6 +935,19 @@ int __cdecl sp_counted_impl_p::sub_B79B80()
 	return 1;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b79bd0
+extern void* dword_128DC7C;
+
+int __cdecl sp_counted_impl_p::sub_B79BD0()
+{
+	extern void __cdecl sub_A35560(void* a, int b);
+
+	int* r1 = (int*)((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 1, dword_128DC7C);
+	int* r2 = (int*)((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 2, dword_128DC7C);
+	sub_A35560(this, (*r1 == *r2) ? 1 : 0);
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

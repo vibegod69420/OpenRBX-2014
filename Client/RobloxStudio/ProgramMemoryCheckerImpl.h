@@ -346,6 +346,12 @@ public:
 	void init_db6880();
 	void init_db6ba0();
 	void init_db7200();
+	void init_db8b90();
+	void init_dbb3e0();
+	void init_dc06e0();
+	void init_dc0730();
+	void init_dc0db0();
+	void init_dc2540();
 	// AUTO-GENERATED METHODS
 };
 
