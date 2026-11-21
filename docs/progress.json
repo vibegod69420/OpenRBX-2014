@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21 11:32:26 UTC",
+ "updated_at": "2026-11-21 11:49:10 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 20.6514,
- "implemented_total": 1956,
- "function_annotations": 1956,
+ "matchable_coverage_pct": 20.662,
+ "implemented_total": 1957,
+ "function_annotations": 1957,
  "stub_annotations": 0,
- "perfect_100_count": 1934,
- "matched_real_functions": 1934,
+ "perfect_100_count": 1935,
+ "matched_real_functions": 1935,
  "average_match_pct": 99.56,
- "overall_function_coverage_pct": 4.7681,
- "overall_byte_coverage_pct": 1.4715,
+ "overall_function_coverage_pct": 4.7706,
+ "overall_byte_coverage_pct": 1.4727,
  "usage": {
-  "calls_24h": 2778,
+  "calls_24h": 2709,
   "failures_24h": 0,
-  "completion_tokens_24h": 30206495,
-  "reasoning_tokens_24h": 29280755,
-  "avg_latency_s": 183.0
+  "completion_tokens_24h": 29451929,
+  "reasoning_tokens_24h": 28548085,
+  "avg_latency_s": 182.8
  },
- "functions_total": 1956,
+ "functions_total": 1957,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -48,9 +48,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 539,
-   "functions": 543,
-   "bytes": 24781
+   "matched": 540,
+   "functions": 544,
+   "bytes": 24897
   },
   {
    "name": "App/v8world",
@@ -5823,9 +5823,21 @@
    "matched": 1934,
    "implemented": 1956,
    "pct": 20.6514
+  },
+  {
+   "t": "2026-11-21 11:49:10 UTC",
+   "matched": 1935,
+   "implemented": 1957,
+   "pct": 20.662
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-21T11:45:59",
+   "address": "0x00b74210",
+   "name": "RBX::detail::sp_counted_impl_p::sub_B74210",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-21T11:29:11",
    "address": "0x00dcfbb0",
@@ -6539,13 +6551,7 @@
    "address": "0x00dc2540",
    "name": "ProgramMemoryCheckerImpl::init_dc2540",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T00:35:16",
-   "address": "0x00dc0db0",
-   "name": "ProgramMemoryCheckerImpl::init_dc0db0",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 28.94
+ "match_rate_per_hour": 28.84
 }
