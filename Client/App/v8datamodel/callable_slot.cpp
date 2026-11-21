@@ -310,6 +310,71 @@ void* callable_slot::allocate()
 	return node;
 }
 
+callable_slot_pool* __cdecl sub_68B390();
+
+// FUNCTION: ROBLOXSTUDIO 0x0068b540
+void* callable_slot::allocate2()
+{
+	callable_slot_pool* pool = sub_68B390();
+	pool->sub_40ED30();
+
+	void* node = pool->freeList;
+	if (node)
+	{
+		pool->freeList = *(void**)node;
+	}
+	else
+	{
+		node = ((callable_slot_alloc*)&pool->freeList)->sub_68B610();
+	}
+
+	long oldState = _InterlockedExchangeAdd(&pool->state, 0x80000000);
+	if (!(oldState & 0x40000000) && oldState > (long)0x80000000)
+	{
+		if (!_interlockedbittestandset(&pool->state, 30))
+		{
+			callable_slot_signal(pool->sub_40FB10());
+		}
+	}
+
+	return node;
+}
+
+callable_slot_pool* __cdecl sub_8A3D90();
+
+struct callable_slot_alloc_48AF30
+{
+	void* __thiscall sub_48AF30();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00b65350
+void* callable_slot::allocate3()
+{
+	callable_slot_pool* pool = sub_8A3D90();
+	pool->sub_40ED30();
+
+	void* node = pool->freeList;
+	if (node)
+	{
+		pool->freeList = *(void**)node;
+	}
+	else
+	{
+		node = ((callable_slot_alloc_48AF30*)&pool->freeList)->sub_48AF30();
+	}
+
+	long oldState = _InterlockedExchangeAdd(&pool->state, 0x80000000);
+	if (!(oldState & 0x40000000) && oldState > (long)0x80000000)
+	{
+		if (!_interlockedbittestandset(&pool->state, 30))
+		{
+			callable_slot_signal(pool->sub_40FB10());
+		}
+	}
+
+	return node;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

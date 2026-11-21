@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-21 04:28:00 UTC",
+  "updated_at": "2026-11-21 04:37:18 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 20.3097,
-  "implemented_total": 1924,
-  "function_annotations": 1924,
+  "matchable_coverage_pct": 20.3417,
+  "implemented_total": 1927,
+  "function_annotations": 1927,
   "stub_annotations": 0,
-  "perfect_100_count": 1902,
-  "matched_real_functions": 1902,
+  "perfect_100_count": 1905,
+  "matched_real_functions": 1905,
   "average_match_pct": 99.55,
-  "overall_function_coverage_pct": 4.6892,
-  "overall_byte_coverage_pct": 1.4435,
+  "overall_function_coverage_pct": 4.6966,
+  "overall_byte_coverage_pct": 1.4474,
   "usage": {
-    "calls_24h": 3945,
+    "calls_24h": 3914,
     "failures_24h": 0,
-    "completion_tokens_24h": 44918199,
-    "reasoning_tokens_24h": 43596225,
-    "avg_latency_s": 193.7
+    "completion_tokens_24h": 44506741,
+    "reasoning_tokens_24h": 43190441,
+    "avg_latency_s": 193.5
   },
   "functions": [
     {
@@ -5527,6 +5527,17 @@
       "kind": "FUNCTION",
       "name": "RBX::callable_slot::allocate",
       "mangled": "?allocate@callable_slot@RBX@@QAEPAXXZ",
+      "file": "Client/App/v8datamodel/callable_slot.cpp",
+      "orig_size": 89,
+      "recomp_size": 89,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0068b540",
+      "kind": "FUNCTION",
+      "name": "RBX::callable_slot::allocate2",
+      "mangled": "?allocate2@callable_slot@RBX@@QAEPAXXZ",
       "file": "Client/App/v8datamodel/callable_slot.cpp",
       "orig_size": 89,
       "recomp_size": 89,
@@ -11518,6 +11529,17 @@
       "matchable": true
     },
     {
+      "address": "0x00a35a20",
+      "kind": "FUNCTION",
+      "name": "index2adr",
+      "mangled": "?replace@lua_exception@@QAAXH@Z",
+      "file": "Client/RobloxStudio/lua_exception.cpp",
+      "orig_size": 200,
+      "recomp_size": 200,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00a35cc0",
       "kind": "FUNCTION",
       "name": "lua_exception::setStackTag",
@@ -13483,6 +13505,17 @@
       "file": "Client/App/v8world/MegaClusterPoly.cpp",
       "orig_size": 4,
       "recomp_size": 4,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b65350",
+      "kind": "FUNCTION",
+      "name": "RBX::callable_slot::allocate3",
+      "mangled": "?allocate3@callable_slot@RBX@@QAEPAXXZ",
+      "file": "Client/App/v8datamodel/callable_slot.cpp",
+      "orig_size": 89,
+      "recomp_size": 89,
       "match_pct": 100.0,
       "matchable": true
     },

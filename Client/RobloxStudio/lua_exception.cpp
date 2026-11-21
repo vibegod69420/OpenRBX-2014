@@ -1005,6 +1005,63 @@ void __cdecl lua_exception::sub_A37320(void* p)
     *(char**)((char*)this + 8) += 16;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a35a20
+void* __cdecl index2adr(int state, int index);
+void __cdecl sub_A379C0(lua_exception* L, const char* fmt, ...);
+void __cdecl sub_BC6D00(lua_exception* L, void* o, void* v);
+
+void __cdecl lua_exception::replace(int idx)
+{
+	if (idx == -10001 && *(void**)((char*)this + 0x14) == *(void**)((char*)this + 0x28))
+		sub_A379C0(this, "no calling environment");
+
+	void* ra = index2adr((int)this, idx);
+
+	if (idx == -10001)
+	{
+		void* cl = *(void**)(*(char**)(*(char**)((char*)this + 0x14) + 4));
+		*(void**)((char*)cl + 0x0C) = *(void**)(*(char**)((char*)this + 8) - 0x10);
+
+		char* top = *(char**)((char*)this + 8);
+		if (*(int*)(top - 8) >= 4)
+		{
+			void* val = *(void**)(top - 0x10);
+			if (*(unsigned char*)((char*)val + 5) & 3)
+			{
+				if (*(unsigned char*)((char*)cl + 5) & 4)
+				{
+					sub_BC6D00(this, cl, val);
+					*(char**)((char*)this + 8) += -0x10;
+					return;
+				}
+			}
+		}
+	}
+	else
+	{
+		char* top = *(char**)((char*)this + 8);
+		*(int*)ra = *(int*)(top - 0x10);
+		*(int*)((char*)ra + 4) = *(int*)(top - 0x0C);
+		*(int*)((char*)ra + 8) = *(int*)(top - 0x08);
+
+		if (idx < -10002)
+		{
+			if (*(int*)(*(char**)((char*)this + 8) - 8) >= 4)
+			{
+				void* val = *(void**)(*(char**)((char*)this + 8) - 0x10);
+				if (*(unsigned char*)((char*)val + 5) & 3)
+				{
+					void* cl = *(void**)(*(char**)(*(char**)((char*)this + 0x14) + 4));
+					if (*(unsigned char*)((char*)cl + 5) & 4)
+						sub_BC6D00(this, cl, val);
+				}
+			}
+		}
+	}
+
+	*(char**)((char*)this + 8) += -0x10;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
