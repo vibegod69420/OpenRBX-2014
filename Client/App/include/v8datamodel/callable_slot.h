@@ -28,6 +28,7 @@ public:
 	int __cdecl compare(void* arg);
 	bool __cdecl isReachable();
 	int __cdecl runSlot();
+	bool __cdecl getEffectId(int* out);
 	// AUTO-GENERATED METHODS
 };
 

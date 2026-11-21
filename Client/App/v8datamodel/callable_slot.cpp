@@ -149,6 +149,27 @@ int __cdecl callable_slot::runSlot()
 	return 0;
 }
 
+struct callable_slot_string_cmp
+{
+	int __thiscall compare(const char* str, int pos, int len);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x009d62c0
+bool __cdecl callable_slot::getEffectId(int* out)
+{
+	if (((callable_slot_string_cmp*)this)->compare("Poison", 0, 6))
+	{
+		*out = 0;
+		return true;
+	}
+	if (((callable_slot_string_cmp*)this)->compare("Confusion", 0, 9))
+	{
+		*out = 1;
+		return true;
+	}
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
