@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21 00:56:52 UTC",
+ "updated_at": "2026-11-21 01:05:24 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 19.5942,
- "implemented_total": 1857,
- "function_annotations": 1857,
+ "matchable_coverage_pct": 19.6476,
+ "implemented_total": 1862,
+ "function_annotations": 1862,
  "stub_annotations": 0,
- "perfect_100_count": 1835,
- "matched_real_functions": 1835,
- "average_match_pct": 99.53,
- "overall_function_coverage_pct": 4.5241,
- "overall_byte_coverage_pct": 1.3933,
+ "perfect_100_count": 1840,
+ "matched_real_functions": 1840,
+ "average_match_pct": 99.54,
+ "overall_function_coverage_pct": 4.5364,
+ "overall_byte_coverage_pct": 1.3967,
  "usage": {
-  "calls_24h": 4421,
+  "calls_24h": 4394,
   "failures_24h": 0,
-  "completion_tokens_24h": 51537883,
-  "reasoning_tokens_24h": 50068449,
-  "avg_latency_s": 198.1
+  "completion_tokens_24h": 51157832,
+  "reasoning_tokens_24h": 49696098,
+  "avg_latency_s": 198.0
  },
- "functions_total": 1857,
+ "functions_total": 1862,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -48,9 +48,9 @@
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
-   "matched": 346,
-   "functions": 346,
-   "bytes": 20905
+   "matched": 351,
+   "functions": 351,
+   "bytes": 21235
   },
   {
    "name": "App/v8world",
@@ -1374,6 +1374,17 @@
    "matchable": true
   },
   {
+   "address": "0x00dd1100",
+   "kind": "FUNCTION",
+   "name": "ProgramMemoryCheckerImpl::init_dd1100",
+   "mangled": "?init_dd1100@ProgramMemoryCheckerImpl@@QAEXXZ",
+   "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+   "orig_size": 66,
+   "recomp_size": 66,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00dd10c0",
    "kind": "FUNCTION",
    "name": "ProgramMemoryCheckerImpl::init254",
@@ -1535,6 +1546,17 @@
    "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
    "orig_size": 61,
    "recomp_size": 61,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00dd0260",
+   "kind": "FUNCTION",
+   "name": "ProgramMemoryCheckerImpl::init_dd0260",
+   "mangled": "?init_dd0260@ProgramMemoryCheckerImpl@@QAEXXZ",
+   "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+   "orig_size": 66,
+   "recomp_size": 66,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -1825,6 +1847,17 @@
    "matchable": true
   },
   {
+   "address": "0x00dce810",
+   "kind": "FUNCTION",
+   "name": "ProgramMemoryCheckerImpl::init_dce810",
+   "mangled": "?init_dce810@ProgramMemoryCheckerImpl@@QAEXXZ",
+   "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+   "orig_size": 66,
+   "recomp_size": 66,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
    "address": "0x00dce560",
    "kind": "FUNCTION",
    "name": "ProgramMemoryCheckerImpl::init218",
@@ -1887,6 +1920,28 @@
    "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
    "orig_size": 61,
    "recomp_size": 61,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00dcd970",
+   "kind": "FUNCTION",
+   "name": "ProgramMemoryCheckerImpl::init_dcd970",
+   "mangled": "?init_dcd970@ProgramMemoryCheckerImpl@@QAEXXZ",
+   "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+   "orig_size": 66,
+   "recomp_size": 66,
+   "match_pct": 100.0,
+   "matchable": true
+  },
+  {
+   "address": "0x00dcd760",
+   "kind": "FUNCTION",
+   "name": "sub_AB5580",
+   "mangled": "?init_dcd760@ProgramMemoryCheckerImpl@@QAEXXZ",
+   "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
+   "orig_size": 66,
+   "recomp_size": 66,
    "match_pct": 100.0,
    "matchable": true
   },
@@ -3259,61 +3314,6 @@
    "kind": "FUNCTION",
    "name": "ProgramMemoryCheckerImpl::init138",
    "mangled": "?init138@ProgramMemoryCheckerImpl@@QAEXXZ",
-   "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
-   "orig_size": 61,
-   "recomp_size": 61,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00dba290",
-   "kind": "FUNCTION",
-   "name": "ProgramMemoryCheckerImpl::init137",
-   "mangled": "?init137@ProgramMemoryCheckerImpl@@QAEXXZ",
-   "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
-   "orig_size": 61,
-   "recomp_size": 61,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00dba1d0",
-   "kind": "FUNCTION",
-   "name": "ProgramMemoryCheckerImpl::init136",
-   "mangled": "?init136@ProgramMemoryCheckerImpl@@QAEXXZ",
-   "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
-   "orig_size": 61,
-   "recomp_size": 61,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00db96a0",
-   "kind": "FUNCTION",
-   "name": "ProgramMemoryCheckerImpl::init135",
-   "mangled": "?init135@ProgramMemoryCheckerImpl@@QAEXXZ",
-   "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
-   "orig_size": 61,
-   "recomp_size": 61,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00db8b90",
-   "kind": "FUNCTION",
-   "name": "ProgramMemoryCheckerImpl::init_db8b90",
-   "mangled": "?init_db8b90@ProgramMemoryCheckerImpl@@QAEXXZ",
-   "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
-   "orig_size": 66,
-   "recomp_size": 66,
-   "match_pct": 100.0,
-   "matchable": true
-  },
-  {
-   "address": "0x00db8b50",
-   "kind": "FUNCTION",
-   "name": "ProgramMemoryCheckerImpl::init134",
-   "mangled": "?init134@ProgramMemoryCheckerImpl@@QAEXXZ",
    "file": "Client/RobloxStudio/ProgramMemoryCheckerImpl.cpp",
    "orig_size": 61,
    "recomp_size": 61,
@@ -5613,9 +5613,45 @@
    "matched": 1835,
    "implemented": 1857,
    "pct": 19.5942
+  },
+  {
+   "t": "2026-11-21 01:05:24 UTC",
+   "matched": 1840,
+   "implemented": 1862,
+   "pct": 19.6476
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-21T01:01:19",
+   "address": "0x00dd1100",
+   "name": "ProgramMemoryCheckerImpl::init_dd1100",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-21T01:00:13",
+   "address": "0x00dd0260",
+   "name": "ProgramMemoryCheckerImpl::init_dd0260",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-21T00:59:13",
+   "address": "0x00dce810",
+   "name": "ProgramMemoryCheckerImpl::init_dce810",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-21T00:58:00",
+   "address": "0x00dcd970",
+   "name": "ProgramMemoryCheckerImpl::init_dcd970",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-21T00:56:54",
+   "address": "0x00dcd760",
+   "name": "sub_AB5580",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-21T00:52:58",
    "address": "0x00dcd220",
@@ -6304,36 +6340,6 @@
    "ts": "2026-11-20T21:26:16",
    "address": "0x00dd1f10",
    "name": "ProgramMemoryCheckerImpl::init267",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T21:25:28",
-   "address": "0x00dd1e80",
-   "name": "ProgramMemoryCheckerImpl::init266",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T21:24:27",
-   "address": "0x00dd1e40",
-   "name": "ProgramMemoryCheckerImpl::init265",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T21:20:30",
-   "address": "0x00dd1db0",
-   "name": "ProgramMemoryCheckerImpl::init264",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T21:19:28",
-   "address": "0x00dd1700",
-   "name": "ProgramMemoryCheckerImpl::init263",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T21:18:11",
-   "address": "0x0077d620",
-   "name": "RBX::detail::sp_counted_impl_p::sub_77D620",
    "pct": 100.0
   }
  ],

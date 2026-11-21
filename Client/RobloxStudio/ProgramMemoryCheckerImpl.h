@@ -362,6 +362,11 @@ public:
 	void init_dcc8b0();
 	void init_dcc900();
 	void init_dcd220();
+	void init_dcd760();
+	void init_dcd970();
+	void init_dce810();
+	void init_dd0260();
+	void init_dd1100();
 	// AUTO-GENERATED METHODS
 };
 
