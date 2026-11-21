@@ -375,6 +375,13 @@ void* callable_slot::allocate3()
 	return node;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b653b0
+int callable_slot::count()
+{
+	int** data = (int**)this;
+	return data[2] - data[1];
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

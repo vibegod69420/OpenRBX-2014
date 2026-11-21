@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21 07:09:33 UTC",
+ "updated_at": "2026-11-21 07:19:51 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 20.5553,
- "implemented_total": 1947,
- "function_annotations": 1947,
+ "matchable_coverage_pct": 20.5659,
+ "implemented_total": 1948,
+ "function_annotations": 1948,
  "stub_annotations": 0,
- "perfect_100_count": 1925,
- "matched_real_functions": 1925,
+ "perfect_100_count": 1926,
+ "matched_real_functions": 1926,
  "average_match_pct": 99.56,
- "overall_function_coverage_pct": 4.7459,
- "overall_byte_coverage_pct": 1.4628,
+ "overall_function_coverage_pct": 4.7484,
+ "overall_byte_coverage_pct": 1.4639,
  "usage": {
-  "calls_24h": 3526,
+  "calls_24h": 3506,
   "failures_24h": 0,
-  "completion_tokens_24h": 39516489,
-  "reasoning_tokens_24h": 38329870,
-  "avg_latency_s": 190.9
+  "completion_tokens_24h": 39230209,
+  "reasoning_tokens_24h": 38049631,
+  "avg_latency_s": 190.4
  },
- "functions_total": 1947,
+ "functions_total": 1948,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -48,9 +48,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 535,
-   "functions": 539,
-   "bytes": 24355
+   "matched": 536,
+   "functions": 540,
+   "bytes": 24456
   },
   {
    "name": "App/v8world",
@@ -5781,9 +5781,21 @@
    "matched": 1925,
    "implemented": 1947,
    "pct": 20.5553
+  },
+  {
+   "t": "2026-11-21 07:19:51 UTC",
+   "matched": 1926,
+   "implemented": 1948,
+   "pct": 20.5659
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-21T07:12:44",
+   "address": "0x00b653b0",
+   "name": "RBX::callable_slot::count",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-21T07:04:30",
    "address": "0x00a34580",
@@ -6497,13 +6509,7 @@
    "address": "0x00678900",
    "name": "RBX::sp_counted_impl_pd::derefInt",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T00:27:14",
-   "address": "0x0067e450",
-   "name": "RBX::sp_counted_impl_pd::getField148",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 30.83
+ "match_rate_per_hour": 30.76
 }

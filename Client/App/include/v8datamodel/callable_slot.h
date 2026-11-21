@@ -35,6 +35,7 @@ public:
 	void*allocate();
 	void*allocate2();
 	void*allocate3();
+	int count();
 	// AUTO-GENERATED METHODS
 };
 
