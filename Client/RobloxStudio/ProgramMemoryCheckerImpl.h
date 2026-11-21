@@ -339,6 +339,9 @@ public:
 	void init321();
 	void init322();
 	void init323();
+	void init_db4510();
+	void init_db5d50();
+	void init_db67e0();
 	// AUTO-GENERATED METHODS
 };
 

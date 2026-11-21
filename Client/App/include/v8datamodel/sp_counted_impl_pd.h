@@ -24,6 +24,7 @@ public:
 	void __cdecl get_deleter(void* arg);
 	void __cdecl get_deleter(void* arg2, void* arg3);
 	void sp_ms_deleter_dispose();
+	void __cdecl get_deleter(void* arg2, void* arg3) const;
 	// AUTO-GENERATED METHODS
 };
 

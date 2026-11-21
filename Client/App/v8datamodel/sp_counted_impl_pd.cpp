@@ -109,6 +109,18 @@ void sp_counted_impl_pd::sp_ms_deleter_dispose()
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00bea370
+void __cdecl sp_counted_impl_pd::get_deleter(void* arg2, void* arg3) const
+{
+	void* obj = *(void**)this;
+	void* args[2];
+	args[0] = (void*)&arg2;
+	args[1] = (void*)&arg3;
+	int flag;
+	*(unsigned char*)&flag = 0;
+	((sp_counted_impl_pd_callee*)((char*)obj + 8))->func(flag, obj, args, 0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
