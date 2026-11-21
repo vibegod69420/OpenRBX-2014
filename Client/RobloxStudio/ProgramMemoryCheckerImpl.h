@@ -432,6 +432,7 @@ public:
 	void init_dbdcc0();
 	void init_dbdd10();
 	void init_dadaa0();
+	void init_dcfbb0();
 	// AUTO-GENERATED METHODS
 };
 
