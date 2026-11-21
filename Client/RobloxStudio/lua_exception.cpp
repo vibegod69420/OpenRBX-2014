@@ -862,6 +862,58 @@ void __cdecl lua_exception::rawset(int index)
 	*(char**)((char*)this + 8) += -0x20;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a35580
+void __cdecl luaC_step(lua_exception* L);
+void* __cdecl sub_BC6720(lua_exception* L, int nup, void* env);
+
+void __cdecl lua_exception::sub_A35580(int arg2, int arg3)
+{
+	char* g = *(char**)((char*)this + 0x10);
+	if (*(unsigned int*)(g + 0x44) >= *(unsigned int*)(g + 0x40))
+	{
+		luaC_step(this);
+	}
+
+	void* env;
+	char* ci = *(char**)((char*)this + 0x14);
+	if (ci == *(char**)((char*)this + 0x28))
+	{
+		env = *(void**)((char*)this + 0x48);
+	}
+	else
+	{
+		env = *(void**)(*(char**)(*(void**)(ci + 4)) + 0x0C);
+	}
+
+	void* cl = sub_BC6720(this, arg3, env);
+	*(int*)((char*)cl + 0x10) = arg2;
+
+	int nbytes = arg3 << 4;
+	*(char**)((char*)this + 8) -= nbytes;
+
+	if (arg3)
+	{
+		char* dest = (char*)cl + nbytes + 0x18;
+		int baseAdj = -0x18 - (int)cl;
+		int n = arg3;
+		do
+		{
+			char* top = *(char**)((char*)this + 8);
+			dest -= 0x10;
+			char* src = (char*)((int)top + baseAdj + (int)dest);
+			*(int*)dest = *(int*)src;
+			*(int*)(dest + 4) = *(int*)(src + 4);
+			*(int*)(dest + 8) = *(int*)(src + 8);
+			--n;
+		} while (n != 0);
+	}
+
+	char* top = *(char**)((char*)this + 8);
+	*(void**)top = cl;
+	*(int*)(top + 8) = 6;
+	*(char**)((char*)this + 8) += 16;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

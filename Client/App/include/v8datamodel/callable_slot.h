@@ -27,6 +27,7 @@ public:
 	void*resolve();
 	int __cdecl compare(void* arg);
 	bool __cdecl isReachable();
+	int __cdecl runSlot();
 	// AUTO-GENERATED METHODS
 };
 

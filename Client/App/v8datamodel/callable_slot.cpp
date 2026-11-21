@@ -132,6 +132,23 @@ bool __cdecl callable_slot::isReachable()
 	return false;
 }
 
+__declspec(dllimport) void* __stdcall callable_slot_resolve(void* slot);
+__declspec(dllimport) int __stdcall callable_slot_execute(void* value);
+
+// FUNCTION: ROBLOXSTUDIO 0x00cc47e0
+int __cdecl callable_slot::runSlot()
+{
+	void* p = callable_slot_resolve(this);
+	if (p)
+	{
+		void* v = *(void**)((char*)p + 0x0C);
+		v = *(void**)v;
+		if (v)
+			return callable_slot_execute(*(void**)v);
+	}
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

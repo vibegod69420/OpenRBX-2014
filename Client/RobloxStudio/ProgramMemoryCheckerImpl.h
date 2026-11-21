@@ -398,6 +398,11 @@ public:
 	void init_dcd920();
 	void init_dd0110();
 	void init_dd1d60();
+	void init_dd3980();
+	void init_dd6380();
+	void init_db6530();
+	void init_db6580();
+	void init_db69f0();
 	// AUTO-GENERATED METHODS
 };
 
