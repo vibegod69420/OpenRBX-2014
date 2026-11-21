@@ -170,6 +170,40 @@ bool __cdecl callable_slot::getEffectId(int* out)
 	return false;
 }
 
+struct callable_slot_element_40
+{
+	char pad[0x40];
+	void __thiscall destroy();
+};
+
+__declspec(dllimport) void __cdecl callable_slot_guard_0xe10268();
+void __cdecl callable_slot_free_0xcf6522(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00658710
+void callable_slot::destroyElements()
+{
+	if (*(char**)this == 0)
+		return;
+
+	callable_slot_guard_0xe10268();
+
+	char* end = *(char**)((char*)this + 4);
+	char* it = *(char**)this;
+	if (it != end)
+	{
+		do
+		{
+			((callable_slot_element_40*)it)->destroy();
+			it += 0x40;
+		} while (it != end);
+	}
+
+	callable_slot_free_0xcf6522(*(void**)this);
+	*(void**)this = 0;
+	*(void**)((char*)this + 4) = 0;
+	*(void**)((char*)this + 8) = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -29,6 +29,7 @@ public:
 	bool __cdecl isReachable();
 	int __cdecl runSlot();
 	bool __cdecl getEffectId(int* out);
+	void destroyElements();
 	// AUTO-GENERATED METHODS
 };
 
