@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21 14:15:12 UTC",
+ "updated_at": "2026-11-21 15:49:17 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 20.7048,
- "implemented_total": 1961,
- "function_annotations": 1961,
+ "matchable_coverage_pct": 20.7154,
+ "implemented_total": 1962,
+ "function_annotations": 1962,
  "stub_annotations": 0,
- "perfect_100_count": 1939,
- "matched_real_functions": 1939,
+ "perfect_100_count": 1940,
+ "matched_real_functions": 1940,
  "average_match_pct": 99.56,
- "overall_function_coverage_pct": 4.7805,
- "overall_byte_coverage_pct": 1.4782,
+ "overall_function_coverage_pct": 4.7829,
+ "overall_byte_coverage_pct": 1.4799,
  "usage": {
-  "calls_24h": 2163,
+  "calls_24h": 1855,
   "failures_24h": 0,
-  "completion_tokens_24h": 23797859,
-  "reasoning_tokens_24h": 23063316,
+  "completion_tokens_24h": 20422970,
+  "reasoning_tokens_24h": 19829464,
   "avg_latency_s": 181.1
  },
- "functions_total": 1961,
+ "functions_total": 1962,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -48,9 +48,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 544,
-   "functions": 548,
-   "bytes": 25425
+   "matched": 545,
+   "functions": 549,
+   "bytes": 25589
   },
   {
    "name": "App/v8world",
@@ -5853,9 +5853,21 @@
    "matched": 1939,
    "implemented": 1961,
    "pct": 20.7048
+  },
+  {
+   "t": "2026-11-21 15:49:17 UTC",
+   "matched": 1940,
+   "implemented": 1962,
+   "pct": 20.7154
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-21T15:46:06",
+   "address": "0x0077dda0",
+   "name": "RBX::detail::sp_counted_impl_p::sub_77DDA0",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-21T14:06:40",
    "address": "0x00a342a0",
@@ -6569,13 +6581,7 @@
    "address": "0x00dc4220",
    "name": "ProgramMemoryCheckerImpl::init_dc4220",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T00:41:17",
-   "address": "0x00b79cc0",
-   "name": "RBX::detail::sp_counted_impl_p::sub_B79CC0",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 27.89
+ "match_rate_per_hour": 27.29
 }

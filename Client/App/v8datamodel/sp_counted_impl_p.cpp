@@ -1348,6 +1348,50 @@ void __cdecl sp_counted_impl_p::sub_A342A0()
 		*(void**)(edi + 0x10), self - 0x2C, 0x1A4u, 0);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0077dda0
+void __cdecl sp_counted_impl_p::sub_77DDA0(int hole, int bottom, void* val)
+{
+	unsigned int* base = (unsigned int*)this;
+	int top = hole;
+	int child = 2 * hole + 2;
+
+	while (child < bottom)
+	{
+		if (base[2 * child] < base[2 * child - 2])
+			--child;
+		base[2 * hole] = base[2 * child];
+		base[2 * hole + 1] = base[2 * child + 1];
+		hole = child;
+		child = 2 * child + 2;
+	}
+
+	if (child == bottom)
+	{
+		base[2 * hole] = base[2 * (bottom - 1)];
+		base[2 * hole + 1] = base[2 * (bottom - 1) + 1];
+		hole = bottom - 1;
+	}
+
+	int parent = (hole - 1) / 2;
+	unsigned int* v = (unsigned int*)val;
+	if (top < hole)
+	{
+		do
+		{
+			if (base[2 * parent] >= v[0])
+				break;
+			base[2 * hole] = base[2 * parent];
+			base[2 * hole + 1] = base[2 * parent + 1];
+			hole = parent;
+			parent = (parent - 1) / 2;
+		}
+		while (top < hole);
+	}
+
+	base[2 * hole] = v[0];
+	base[2 * hole + 1] = v[1];
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
