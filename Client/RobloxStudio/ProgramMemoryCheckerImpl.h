@@ -395,6 +395,9 @@ public:
 	void init_dbc3d0();
 	void init_dc0900();
 	void init_dc4270();
+	void init_dcd920();
+	void init_dd0110();
+	void init_dd1d60();
 	// AUTO-GENERATED METHODS
 };
 
