@@ -367,6 +367,11 @@ public:
 	void init_dce810();
 	void init_dd0260();
 	void init_dd1100();
+	void init_dd1150();
+	void init_dd1df0();
+	void init_dd1ec0();
+	void init_dd1fd0();
+	void init_dd2020();
 	// AUTO-GENERATED METHODS
 };
 
