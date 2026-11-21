@@ -105,6 +105,8 @@ public:
 	int __cdecl sub_B79DB0();
 	int __cdecl sub_B79F10();
 	sp_counted_impl_p*sub_778FA0();
+	int __cdecl sub_B79C20();
+	int __cdecl sub_B7A1B0();
 	// AUTO-GENERATED METHODS
 };
 

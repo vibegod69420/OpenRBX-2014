@@ -1042,6 +1042,42 @@ sp_counted_impl_p* sp_counted_impl_p::sub_778FA0()
 	return this;
 }
 
+struct sp_counted_impl_p_sub_B79A40
+{
+	bool __thiscall sub_B79A40(void* arg);
+};
+
+extern void* dword_128E200;
+
+// FUNCTION: ROBLOXSTUDIO 0x00b79c20
+int __cdecl sp_counted_impl_p::sub_B79C20()
+{
+	extern void __cdecl sub_A35560(void* a, int b);
+
+	void* r2 = ((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 2, dword_128E200);
+	void* r1 = ((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 1, dword_128E200);
+	sub_A35560(this, ((sp_counted_impl_p_sub_B79A40*)r1)->sub_B79A40(r2));
+	return 1;
+}
+
+struct sp_counted_impl_p_sub_6B9BC0
+{
+	bool __thiscall sub_6B9BC0(void* arg);
+};
+
+extern void* dword_128E204;
+
+// FUNCTION: ROBLOXSTUDIO 0x00b7a1b0
+int __cdecl sp_counted_impl_p::sub_B7A1B0()
+{
+	extern void __cdecl sub_A35560(void* a, int b);
+
+	void* r2 = ((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 2, dword_128E204);
+	void* r1 = ((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 1, dword_128E204);
+	sub_A35560(this, ((sp_counted_impl_p_sub_6B9BC0*)r1)->sub_6B9BC0(r2));
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
