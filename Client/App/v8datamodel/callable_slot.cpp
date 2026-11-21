@@ -506,6 +506,37 @@ void callable_slot::clearFocus()
 	}
 }
 
+struct callable_slot_cbfba0_dword_queue
+{
+	void __thiscall push(const void* data, const char* file, unsigned int line);
+};
+
+struct callable_slot_cbfba0_byte_queue
+{
+	void __thiscall push(const void* data, const char* file, unsigned int line);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00cbfba0
+void callable_slot::resetReliabilityLayer()
+{
+	unsigned int tmp;
+	unsigned char b;
+
+	if (*(unsigned int*)((char*)this + 0xF20) <= 0)
+		return;
+
+	tmp = *(unsigned int*)((char*)this + 0xEE8);
+	((callable_slot_cbfba0_dword_queue*)((char*)this + 0xEFC))->push(&tmp, (const char*)0x00EFF248, 0xD36);
+
+	b = 0;
+	((callable_slot_cbfba0_byte_queue*)((char*)this + 0xF08))->push(&b, (const char*)0x00EFF248, 0xD37);
+
+	tmp = (*(unsigned int*)((char*)this + 0xF20) + 7) >> 3;
+	((callable_slot_cbfba0_dword_queue*)((char*)this + 0xF14))->push(&tmp, (const char*)0x00EFF248, 0xD39);
+
+	*(unsigned int*)((char*)this + 0xF20) = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

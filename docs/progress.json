@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21 12:00:36 UTC",
+ "updated_at": "2026-11-21 12:16:18 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 20.6727,
- "implemented_total": 1958,
- "function_annotations": 1958,
+ "matchable_coverage_pct": 20.6834,
+ "implemented_total": 1959,
+ "function_annotations": 1959,
  "stub_annotations": 0,
- "perfect_100_count": 1936,
- "matched_real_functions": 1936,
+ "perfect_100_count": 1937,
+ "matched_real_functions": 1937,
  "average_match_pct": 99.56,
- "overall_function_coverage_pct": 4.7731,
- "overall_byte_coverage_pct": 1.4739,
+ "overall_function_coverage_pct": 4.7755,
+ "overall_byte_coverage_pct": 1.4753,
  "usage": {
-  "calls_24h": 2671,
+  "calls_24h": 2617,
   "failures_24h": 0,
-  "completion_tokens_24h": 28995223,
-  "reasoning_tokens_24h": 28102230,
-  "avg_latency_s": 182.3
+  "completion_tokens_24h": 28328337,
+  "reasoning_tokens_24h": 27460969,
+  "avg_latency_s": 181.0
  },
- "functions_total": 1958,
+ "functions_total": 1959,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -48,9 +48,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 541,
-   "functions": 545,
-   "bytes": 25014
+   "matched": 542,
+   "functions": 546,
+   "bytes": 25150
   },
   {
    "name": "App/v8world",
@@ -5835,9 +5835,21 @@
    "matched": 1936,
    "implemented": 1958,
    "pct": 20.6727
+  },
+  {
+   "t": "2026-11-21 12:16:18 UTC",
+   "matched": 1937,
+   "implemented": 1959,
+   "pct": 20.6834
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-21T12:13:08",
+   "address": "0x00cbfba0",
+   "name": "RBX::callable_slot::resetReliabilityLayer",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-21T11:51:36",
    "address": "0x00a34dd0",
@@ -6551,13 +6563,7 @@
    "address": "0x00b79c70",
    "name": "RBX::detail::sp_counted_impl_p::sub_B79C70",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T00:39:57",
-   "address": "0x00a457e0",
-   "name": "RBX::sp_counted_impl_pd::get_deleter",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 28.77
+ "match_rate_per_hour": 28.68
 }

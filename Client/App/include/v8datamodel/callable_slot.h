@@ -38,6 +38,7 @@ public:
 	int count();
 	void grow();
 	void clearFocus();
+	void resetReliabilityLayer();
 	// AUTO-GENERATED METHODS
 };
 
