@@ -391,6 +391,10 @@ public:
 	void init_dadef0();
 	void init_dae780();
 	void init_dae7d0();
+	void init_dbb900();
+	void init_dbc3d0();
+	void init_dc0900();
+	void init_dc4270();
 	// AUTO-GENERATED METHODS
 };
 
