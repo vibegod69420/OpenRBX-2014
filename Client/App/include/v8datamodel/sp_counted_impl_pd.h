@@ -32,6 +32,8 @@ public:
 	void __cdecl get_deleter(const void* arg1, void* arg2);
 	void* __cdecl dispatch(void* arg1, void* arg2, void* arg3);
 	double __cdecl getDoubleValue();
+	sp_counted_impl_pd* __cdecl init();
+	void* __cdecl get_deleter(const void* arg);
 	// AUTO-GENERATED METHODS
 };
 

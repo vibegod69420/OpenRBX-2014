@@ -183,6 +183,39 @@ double __cdecl sp_counted_impl_pd::getDoubleValue()
 	return 0.0;
 }
 
+void __cdecl sp_counted_impl_pd_init_4115f0(void*, void*);
+void __cdecl sp_counted_impl_pd_init_942cf0(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x009448f0
+sp_counted_impl_pd* __cdecl sp_counted_impl_pd::init()
+{
+	volatile int state = 0;
+	sp_counted_impl_pd_init_4115f0((void*)0x01300904, (void*)0x00943E50);
+	sp_counted_impl_pd_init_942cf0(this);
+	return this;
+}
+
+void* __cdecl sp_counted_impl_pd_get_825140();
+
+struct sp_counted_impl_pd_typeinfo_checker
+{
+	unsigned char __thiscall check(void* arg);
+};
+
+void* __cdecl sp_counted_impl_pd_call_a43960(sp_counted_impl_pd* self, void* arg);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a455e0
+void* __cdecl sp_counted_impl_pd::get_deleter(const void* arg)
+{
+	void* context = sp_counted_impl_pd_get_825140();
+	sp_counted_impl_pd_typeinfo_checker* obj = *(sp_counted_impl_pd_typeinfo_checker**)this;
+	if (obj->check(context))
+	{
+		return 0;
+	}
+	return sp_counted_impl_pd_call_a43960(this, (void*)arg);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

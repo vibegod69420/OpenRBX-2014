@@ -914,6 +914,51 @@ void __cdecl lua_exception::sub_A35580(int arg2, int arg3)
 	*(char**)((char*)this + 8) += 16;
 }
 
+void __cdecl sub_A36630(lua_exception* L, int a, int b);
+void __cdecl sub_A36D10(lua_exception* L, int a);
+void __cdecl sub_A36700(lua_exception* L, int n);
+void __cdecl sub_A365B0(lua_exception* L, void* p, int n);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a378d0
+void __cdecl lua_exception::sub_A378D0()
+{
+    if (*(unsigned char*)((char*)this + 0x38) & 0x20)
+    {
+        sub_A36630(this, 5, -1);
+    }
+
+    int errfunc = *(int*)((char*)this + 0x74);
+    if (errfunc)
+    {
+        char* edi = *(char**)((char*)this + 0x20) + errfunc;
+        if (*(int*)(edi + 8) != 6)
+        {
+            sub_A36D10(this, 5);
+        }
+
+        char* top = *(char**)((char*)this + 8);
+        *(int*)top = *(int*)(top - 0x10);
+        *(int*)(top + 4) = *(int*)(top - 0x0C);
+        *(int*)(top + 8) = *(int*)(top - 0x08);
+
+        top = *(char**)((char*)this + 8);
+        *(int*)(top - 0x10) = *(int*)edi;
+        *(int*)(top - 0x0C) = *(int*)(edi + 4);
+        *(int*)(top - 0x08) = *(int*)(edi + 8);
+
+        int space = *(int*)((char*)this + 0x1C) - *(int*)((char*)this + 0x08);
+        if (space <= 0x10)
+        {
+            sub_A36700(this, 1);
+        }
+
+        *(char**)((char*)this + 8) += 0x10;
+        sub_A365B0(this, *(char**)((char*)this + 8) - 0x20, 1);
+    }
+
+    sub_A36D10(this, 2);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
