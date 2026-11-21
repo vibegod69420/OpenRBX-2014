@@ -1321,6 +1321,33 @@ void __cdecl sp_counted_impl_p::sub_A349D0(void* arg)
 	}
 }
 
+void __cdecl sub_BC6E50(void* arg);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a342a0
+void __cdecl sp_counted_impl_p::sub_A342A0()
+{
+	char* self = (char*)this;
+	char* edi = *(char**)(self + 0x10);
+
+	sub_BC6470(self, *(void**)(self + 0x20));
+	sub_BC6E50(self);
+
+	{
+		char* ecx = *(char**)(self + 0x10);
+		sub_BC6400(self, *(void**)ecx, *(unsigned int*)(ecx + 8) * 4u, 0);
+	}
+
+	*(void**)(edi + 0x34) = ((void* (__cdecl*)(void*, void*, unsigned int, int))sub_BC6400)(
+		self, *(void**)(edi + 0x34), *(unsigned int*)(edi + 0x3C), 0);
+	*(int*)(edi + 0x3C) = 0;
+
+	sub_BC6400(self, *(void**)(self + 0x28), *(unsigned int*)(self + 0x30) * 24u, 0);
+	sub_BC6400(self, *(void**)(self + 0x20), *(unsigned int*)(self + 0x2C) * 16u, 0);
+
+	(*(void (__cdecl**)(void*, void*, unsigned int, int))(edi + 0xC))(
+		*(void**)(edi + 0x10), self - 0x2C, 0x1A4u, 0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
