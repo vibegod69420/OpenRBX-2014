@@ -1470,6 +1470,160 @@ sp_counted_impl_p* __cdecl sp_counted_impl_p::sub_A345E0()
 	return (sp_counted_impl_p*)edi;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b7ae90
+void __cdecl sp_counted_impl_p::sub_B7AE90(void* arg2, void* arg3)
+{
+	sub_A38FC0(this, dword_128DC74);
+	sub_8DFAC0(this, -1);
+
+	sub_A35710(this, "__index");
+	sub_A35580(this, arg2, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__newindex");
+	sub_A35580(this, arg3, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__gc");
+	sub_A35580(this, (void*)0x00B7A200, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__eq");
+	sub_A35580(this, (void*)0x00B79B30, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__tostring");
+	sub_A35580(this, (void*)0x00B7A550, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35CC0(this, -1, 1);
+	sub_A35D10(this, -2);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00b7af70
+void __cdecl sp_counted_impl_p::sub_B7AF70(void* arg2, void* arg3)
+{
+	extern void* dword_128DC78;
+
+	sub_A38FC0(this, dword_128DC78);
+	sub_8DFAC0(this, -1);
+
+	sub_A35710(this, "__index");
+	sub_A35580(this, arg2, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__newindex");
+	sub_A35580(this, arg3, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__gc");
+	sub_A35580(this, (void*)0x00B7A220, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__eq");
+	sub_A35580(this, (void*)0x00B79B80, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__tostring");
+	sub_A35580(this, (void*)0x00B7A580, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35CC0(this, -1, 1);
+	sub_A35D10(this, -2);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00b7b050
+void __cdecl sp_counted_impl_p::sub_B7B050(void* arg2, void* arg3)
+{
+	extern void* dword_128DC7C;
+
+	sub_A38FC0(this, dword_128DC7C);
+	sub_8DFAC0(this, -1);
+
+	sub_A35710(this, "__index");
+	sub_A35580(this, arg2, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__newindex");
+	sub_A35580(this, arg3, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__gc");
+	sub_A35580(this, (void*)0x00B7A240, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__eq");
+	sub_A35580(this, (void*)0x00B79BD0, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__tostring");
+	sub_A35580(this, (void*)0x00B7A5B0, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35CC0(this, -1, 1);
+	sub_A35D10(this, -2);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00b7b130
+void __cdecl sp_counted_impl_p::sub_B7B130(void* arg2, void* arg3)
+{
+	sub_A38FC0(this, dword_128E200);
+	sub_8DFAC0(this, -1);
+
+	sub_A35710(this, "__index");
+	sub_A35580(this, arg2, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__newindex");
+	sub_A35580(this, arg3, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__gc");
+	sub_A35580(this, (void*)0x00B7A260, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__eq");
+	sub_A35580(this, (void*)0x00B79C20, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__tostring");
+	sub_A35580(this, (void*)0x00B7A5E0, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35CC0(this, -1, 1);
+	sub_A35D10(this, -2);
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00b7b210
+void __cdecl sp_counted_impl_p::sub_B7B210(void* arg2, void* arg3)
+{
+	sub_A38FC0(this, dword_12105E0);
+	sub_8DFAC0(this, -1);
+
+	sub_A35710(this, "__index");
+	sub_A35580(this, arg2, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__newindex");
+	sub_A35580(this, arg3, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__gc");
+	sub_A35580(this, (void*)0x00B7A2A0, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__eq");
+	sub_A35580(this, (void*)0x00B79C70, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35710(this, "__tostring");
+	sub_A35580(this, (void*)0x00B7A610, 0);
+	sub_A35CE0(this, -3);
+
+	sub_A35CC0(this, -1, 1);
+	sub_A35D10(this, -2);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
