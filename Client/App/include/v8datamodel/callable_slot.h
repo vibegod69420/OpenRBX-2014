@@ -30,6 +30,8 @@ public:
 	int __cdecl runSlot();
 	bool __cdecl getEffectId(int* out);
 	void destroyElements();
+	void destroyEntries();
+	int __cdecl process(char* a2, void* a3, void* a4);
 	// AUTO-GENERATED METHODS
 };
 

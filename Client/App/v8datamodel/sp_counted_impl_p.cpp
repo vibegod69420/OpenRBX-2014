@@ -1127,6 +1127,62 @@ void sp_counted_impl_p::sub_779B50()
 	p[0xA25] = 0;
 }
 
+extern void (__cdecl *dword_E10508)(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00426140
+void sp_counted_impl_p::sub_426140()
+{
+	if (*(unsigned char*)((char*)this + 0x3C) & 1)
+	{
+		dword_E10508(**(void***)((char*)this + 0x0C));
+	}
+
+	**(int***)((char*)this + 0x0C) = 0;
+	**(int***)((char*)this + 0x1C) = 0;
+	**(int***)((char*)this + 0x2C) = 0;
+	**(int***)((char*)this + 0x10) = 0;
+	**(int***)((char*)this + 0x20) = 0;
+	**(int***)((char*)this + 0x30) = 0;
+
+	*(int*)((char*)this + 0x3C) &= ~1;
+	*(int*)((char*)this + 0x38) = 0;
+}
+
+struct sp_counted_impl_p_basic_string_cmp
+{
+	union
+	{
+		char* ptr;
+		char buf[16];
+	};
+	unsigned int size;
+	unsigned int capacity;
+
+	int __thiscall compare(unsigned int pos, unsigned int n1, const char* ptr, unsigned int n2);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00b79f60
+int __cdecl sp_counted_impl_p::sub_B79F60()
+{
+	extern void __cdecl sub_A35560(void* a, int b);
+	extern void* dword_128DC80;
+
+	sp_counted_impl_p_basic_string_cmp* r2 =
+		(sp_counted_impl_p_basic_string_cmp*)((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 2, dword_128DC80);
+	sp_counted_impl_p_basic_string_cmp* r1 =
+		(sp_counted_impl_p_basic_string_cmp*)((void* (__cdecl*)(void*, int, void*))sub_A389C0)(this, 1, dword_128DC80);
+
+	unsigned int r2size = r2->size;
+	const char* r2data;
+	if (r2->capacity < 0x10)
+		r2data = r2->buf;
+	else
+		r2data = r2->ptr;
+
+	sub_A35560(this, r1->compare(0, r1->size, r2data, r2size) == 0);
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

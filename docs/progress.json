@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21 03:38:28 UTC",
+ "updated_at": "2026-11-21 03:50:05 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 20.2563,
- "implemented_total": 1919,
- "function_annotations": 1919,
+ "matchable_coverage_pct": 20.299,
+ "implemented_total": 1923,
+ "function_annotations": 1923,
  "stub_annotations": 0,
- "perfect_100_count": 1897,
- "matched_real_functions": 1897,
+ "perfect_100_count": 1901,
+ "matched_real_functions": 1901,
  "average_match_pct": 99.55,
- "overall_function_coverage_pct": 4.6769,
- "overall_byte_coverage_pct": 1.439,
+ "overall_function_coverage_pct": 4.6868,
+ "overall_byte_coverage_pct": 1.4426,
  "usage": {
-  "calls_24h": 4109,
+  "calls_24h": 4071,
   "failures_24h": 0,
-  "completion_tokens_24h": 46929339,
-  "reasoning_tokens_24h": 45558685,
-  "avg_latency_s": 193.8
+  "completion_tokens_24h": 46409317,
+  "reasoning_tokens_24h": 45052650,
+  "avg_latency_s": 193.5
  },
- "functions_total": 1919,
+ "functions_total": 1923,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -48,9 +48,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 527,
-   "functions": 531,
-   "bytes": 23653
+   "matched": 531,
+   "functions": 535,
+   "bytes": 23993
   },
   {
    "name": "App/v8world",
@@ -5715,9 +5715,39 @@
    "matched": 1897,
    "implemented": 1919,
    "pct": 20.2563
+  },
+  {
+   "t": "2026-11-21 03:50:05 UTC",
+   "matched": 1901,
+   "implemented": 1923,
+   "pct": 20.299
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-21T03:46:53",
+   "address": "0x00cc4bf0",
+   "name": "RBX::callable_slot::process",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-21T03:41:48",
+   "address": "0x00b79f60",
+   "name": "RBX::detail::sp_counted_impl_p::sub_B79F60",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-21T03:41:12",
+   "address": "0x008d2730",
+   "name": "RBX::callable_slot::destroyEntries",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-21T03:38:30",
+   "address": "0x00426140",
+   "name": "RBX::detail::sp_counted_impl_p::sub_426140",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-21T03:35:17",
    "address": "0x00658710",
@@ -6413,31 +6443,7 @@
    "address": "0x00dd5b90",
    "name": "ProgramMemoryCheckerImpl::init316",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T23:27:06",
-   "address": "0x00966340",
-   "name": "RBX::callable_slot::clear",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T23:27:04",
-   "address": "0x00dd4810",
-   "name": "ProgramMemoryCheckerImpl::init315",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T23:21:19",
-   "address": "0x00dce4d0",
-   "name": "ProgramMemoryCheckerImpl::init314",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-20T23:20:26",
-   "address": "0x00dce3d0",
-   "name": "ProgramMemoryCheckerImpl::init313",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 32.2
+ "match_rate_per_hour": 32.16
 }

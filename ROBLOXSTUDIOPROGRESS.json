@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-21 03:38:28 UTC",
+  "updated_at": "2026-11-21 03:50:05 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 20.2563,
-  "implemented_total": 1919,
-  "function_annotations": 1919,
+  "matchable_coverage_pct": 20.299,
+  "implemented_total": 1923,
+  "function_annotations": 1923,
   "stub_annotations": 0,
-  "perfect_100_count": 1897,
-  "matched_real_functions": 1897,
+  "perfect_100_count": 1901,
+  "matched_real_functions": 1901,
   "average_match_pct": 99.55,
-  "overall_function_coverage_pct": 4.6769,
-  "overall_byte_coverage_pct": 1.439,
+  "overall_function_coverage_pct": 4.6868,
+  "overall_byte_coverage_pct": 1.4426,
   "usage": {
-    "calls_24h": 4109,
+    "calls_24h": 4071,
     "failures_24h": 0,
-    "completion_tokens_24h": 46929339,
-    "reasoning_tokens_24h": 45558685,
-    "avg_latency_s": 193.8
+    "completion_tokens_24h": 46409317,
+    "reasoning_tokens_24h": 45052650,
+    "avg_latency_s": 193.5
   },
   "functions": [
     {
@@ -239,6 +239,17 @@
       "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
       "orig_size": 29,
       "recomp_size": 29,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00426140",
+      "kind": "FUNCTION",
+      "name": "RBX::detail::sp_counted_impl_p::sub_426140",
+      "mangled": "?sub_426140@sp_counted_impl_p@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
+      "orig_size": 90,
+      "recomp_size": 90,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -8592,6 +8603,17 @@
       "matchable": true
     },
     {
+      "address": "0x008d2730",
+      "kind": "FUNCTION",
+      "name": "RBX::callable_slot::destroyEntries",
+      "mangled": "?destroyEntries@callable_slot@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/callable_slot.cpp",
+      "orig_size": 80,
+      "recomp_size": 80,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x008d5490",
       "kind": "FUNCTION",
       "name": "RBX::ScriptStats::freeMember0C",
@@ -14015,6 +14037,17 @@
       "matchable": true
     },
     {
+      "address": "0x00b79f60",
+      "kind": "FUNCTION",
+      "name": "RBX::detail::sp_counted_impl_p::sub_B79F60",
+      "mangled": "?sub_B79F60@sp_counted_impl_p@RBX@@QAAHXZ",
+      "file": "Client/App/v8datamodel/sp_counted_impl_p.cpp",
+      "orig_size": 90,
+      "recomp_size": 90,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00b7a1b0",
       "kind": "FUNCTION",
       "name": "RBX::detail::sp_counted_impl_p::sub_B7A1B0",
@@ -16486,6 +16519,17 @@
       "file": "Client/App/v8datamodel/callable_slot.cpp",
       "orig_size": 53,
       "recomp_size": 39,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00cc4bf0",
+      "kind": "FUNCTION",
+      "name": "RBX::callable_slot::process",
+      "mangled": "?process@callable_slot@RBX@@QAAHPADPAX1@Z",
+      "file": "Client/App/v8datamodel/callable_slot.cpp",
+      "orig_size": 80,
+      "recomp_size": 80,
       "match_pct": 100.0,
       "matchable": true
     },

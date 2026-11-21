@@ -204,6 +204,61 @@ void callable_slot::destroyElements()
 	*(void**)((char*)this + 8) = 0;
 }
 
+struct callable_slot_element_70
+{
+	char pad[0x70];
+	void __thiscall destroy();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x008d2730
+void callable_slot::destroyEntries()
+{
+	if (*(void**)this == 0)
+		return;
+
+	callable_slot_guard_0xe10268();
+
+	char* end = *(char**)((char*)this + 4);
+	char* it = *(char**)this;
+	if (it != end)
+	{
+		do
+		{
+			((callable_slot_element_70*)it)->destroy();
+			it += 0x70;
+		} while (it != end);
+	}
+
+	callable_slot_free_0xcf6522(*(void**)this);
+	*(void**)this = 0;
+	*(void**)((char*)this + 4) = 0;
+	*(void**)((char*)this + 8) = 0;
+}
+
+__declspec(dllimport) int __stdcall callable_slot_primary(void* a1, char* a2, void* a3, int a4, void* a5, int a6);
+__declspec(dllimport) void __cdecl callable_slot_error(const char* a1, int a2, int a3, void* a4);
+
+// FUNCTION: ROBLOXSTUDIO 0x00cc4bf0
+int __cdecl callable_slot::process(char* a2, void* a3, void* a4)
+{
+	int result = 0;
+
+	do
+	{
+		if (*(short*)a4 == 2)
+		{
+			result = callable_slot_primary(this, a2, a3, 0, a4, 0x10);
+		}
+
+		if (result < 0)
+		{
+			callable_slot_error((const char*)0x00eff680, result, (int)(signed char)*a2, a3);
+		}
+	} while (result == 0);
+
+	return result;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
