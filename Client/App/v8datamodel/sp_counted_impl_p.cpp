@@ -1078,6 +1078,35 @@ int __cdecl sp_counted_impl_p::sub_B7A1B0()
 	return 1;
 }
 
+void* __cdecl sub_A34C10(void* self, int arg);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a351c0
+void __cdecl sp_counted_impl_p::sub_A351C0(int arg)
+{
+	char* insertPos = (char*)sub_A34C10(this, arg);
+	char* end = *(char**)((char*)this + 8);
+
+	if (end > insertPos)
+	{
+		char* src = end - 0x10;
+		do
+		{
+			*(int*)end = *(int*)src;
+			*(int*)(end + 4) = *(int*)(src + 4);
+			int val = *(int*)(src + 8);
+			end -= 0x10;
+			*(int*)(src + 0x18) = val;
+			src -= 0x10;
+		}
+		while (end > insertPos);
+	}
+
+	char* cur = *(char**)((char*)this + 8);
+	*(int*)insertPos = *(int*)cur;
+	*(int*)(insertPos + 4) = *(int*)(cur + 4);
+	*(int*)(insertPos + 8) = *(int*)(cur + 8);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
