@@ -608,6 +608,20 @@ void callable_slot::clearReliabilityBuffers()
 	*(unsigned int*)(self + 0xF20) = 0;
 }
 
+struct callable_slot_list_ops
+{
+	void __thiscall unlinkNode(void* out, void* next, void* node);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00689bb0
+void callable_slot::removeFrontNode()
+{
+	void* local;
+	void* node = *(void**)this;
+	((callable_slot_list_ops*)this)->unlinkNode(&local, *(void**)node, node);
+	callable_slot_free_0xcf6522(*(void**)this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

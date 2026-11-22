@@ -40,6 +40,7 @@ public:
 	void clearFocus();
 	void resetReliabilityLayer();
 	void clearReliabilityBuffers();
+	void removeFrontNode();
 	// AUTO-GENERATED METHODS
 };
 
