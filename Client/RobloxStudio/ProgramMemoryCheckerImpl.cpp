@@ -8213,6 +8213,34 @@ void ProgramMemoryCheckerImpl::init_dd98e0()
 	sub_CF6609((void*)0x00E0DD10);
 }
 
+class ProgramMemoryCheckerDea870Guard
+{
+public:
+	char dummy;
+	void sub_403A00(void* p);
+};
+
+void __fastcall sub_403A30(ProgramMemoryCheckerDea870Guard* p);
+void __fastcall sub_C7FC70(void* p);
+void __cdecl sub_CF6522(void* p);
+
+__declspec(dllimport) void __fastcall dea870_call_e10338(void* p);
+__declspec(dllimport) void __fastcall dea870_call_e1033c(void* p);
+
+// FUNCTION: ROBLOXSTUDIO 0x00dea870
+void ProgramMemoryCheckerImpl::init_dea870()
+{
+	ProgramMemoryCheckerDea870Guard guard;
+
+	sub_C7FC70((void*)0x012F9438);
+	sub_403A30(&guard);
+	dea870_call_e10338((void*)0x012F9438);
+	guard.sub_403A00(*(void**)0x012F9438);
+	sub_CF6522(*(void**)0x012F9438);
+	*(void**)0x012F9438 = 0;
+	dea870_call_e1033c((void*)0x012F9438);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
