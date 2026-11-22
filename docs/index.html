@@ -658,6 +658,15 @@
 <div id="toasts" aria-live="polite"></div>
 
 <script>
+  const RAW_DOCS_BASE = "https://raw.githubusercontent.com/vibegod69420/OpenRBX-2014/main/docs";
+  async function fetchLiveDoc(file) {
+    const bust = `?ts=${Date.now()}`;
+    try {
+      const r = await fetch(`${RAW_DOCS_BASE}/${file}${bust}`, { cache: "no-store" });
+      if (r.ok) return r;
+    } catch (_) {}
+    return await fetch(`${file}${bust}`, { cache: "no-store" });
+  }
 (() => {
   "use strict";
 
@@ -983,7 +992,7 @@
     const btn = $("loadAll");
     btn.disabled = true; btn.textContent = "Loading…";
     try {
-      const res = await fetch(`functions.json?ts=${Date.now()}`, { cache: "no-store" });
+      const res = await fetchLiveDoc("functions.json");
       if (!res.ok) throw new Error("HTTP " + res.status);
       state.all = (await res.json()).functions || [];
       renderTable();
@@ -1076,7 +1085,7 @@
   // on a page that only counts verified matches.
   async function refreshWorker() {
     try {
-      const res = await fetch(`worker.json?ts=${Date.now()}`, { cache: "no-store" });
+      const res = await fetchLiveDoc("worker.json");
       if (!res.ok) throw new Error("HTTP " + res.status);
       const w = await res.json();
       const box = $("workerLine");
@@ -1100,14 +1109,14 @@
   async function refresh(initial = false) {
     if (state.paused && !initial) return;
     try {
-      const res = await fetch(`progress.json?ts=${Date.now()}`, { cache: "no-store" });
+      const res = await fetchLiveDoc("progress.json");
       if (!res.ok) throw new Error("HTTP " + res.status);
       const p = await res.json();
       state.p = p;
       state.lastSync = Date.now();
       detectNew(p);
       if (state.all && p.functions_total !== state.all.length) {
-        const fresh = await fetch(`functions.json?ts=${Date.now()}`, { cache: "no-store" });
+        const fresh = await fetchLiveDoc("functions.json");
         if (fresh.ok) state.all = (await fresh.json()).functions || state.all;
       }
       render();
