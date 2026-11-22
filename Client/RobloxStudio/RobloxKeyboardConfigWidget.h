@@ -5,6 +5,7 @@
 
 
 
+class QMetaObject;
 // AUTO-GENERATED HELPERS
 
 class RobloxKeyboardConfigWidget
@@ -16,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	const QMetaObject *metaObject() const;
 	// AUTO-GENERATED METHODS
 };
 
