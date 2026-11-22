@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void *getUiField18();
 	// AUTO-GENERATED METHODS
 };
 
