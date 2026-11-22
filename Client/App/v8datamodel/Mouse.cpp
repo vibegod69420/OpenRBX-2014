@@ -96,6 +96,18 @@ Mouse::Mouse()
 	*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x1C) = 0x00EC5638;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b0b950
+int Mouse::getX()
+{
+	reinterpret_cast<MouseVt*>(this)->v42();
+
+	void* object = *reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 0xB0);
+	if (object)
+		return static_cast<int>(*reinterpret_cast<float*>(reinterpret_cast<char*>(object) + 0x6C));
+
+	return -1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

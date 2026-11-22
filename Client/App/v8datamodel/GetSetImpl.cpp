@@ -18,6 +18,13 @@ void __cdecl GetSetImpl::set(void* arg) const
 	(*(SetFunc*)this)(*((void**)this + 1), arg);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0057df60
+void __cdecl GetSetImpl::get(void* arg) const
+{
+	typedef void (__cdecl *GetFunc)(void*);
+	(*(GetFunc*)this)(arg);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

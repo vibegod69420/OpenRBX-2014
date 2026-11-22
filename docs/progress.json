@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22 22:45:38 UTC",
+ "updated_at": "2026-11-22 22:54:27 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,35 +16,35 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 20.9503,
- "implemented_total": 1984,
- "function_annotations": 1984,
+ "matchable_coverage_pct": 21.0251,
+ "implemented_total": 1991,
+ "function_annotations": 1991,
  "stub_annotations": 0,
- "perfect_100_count": 1962,
- "matched_real_functions": 1962,
- "average_match_pct": 99.56,
- "overall_function_coverage_pct": 4.8372,
- "overall_byte_coverage_pct": 1.5282,
+ "perfect_100_count": 1969,
+ "matched_real_functions": 1969,
+ "average_match_pct": 99.57,
+ "overall_function_coverage_pct": 4.8544,
+ "overall_byte_coverage_pct": 1.5299,
  "usage": {
-  "calls_24h": 318,
+  "calls_24h": 360,
   "failures_24h": 0,
-  "completion_tokens_24h": 3949677,
-  "reasoning_tokens_24h": 3875986,
-  "avg_latency_s": 206.5
+  "completion_tokens_24h": 4202989,
+  "reasoning_tokens_24h": 4125359,
+  "avg_latency_s": 195.0
  },
- "functions_total": 1984,
+ "functions_total": 1991,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
-   "matched": 268,
-   "functions": 268,
-   "bytes": 43835
+   "matched": 269,
+   "functions": 269,
+   "bytes": 43860
   },
   {
    "name": "App/v8datamodel",
-   "matched": 565,
-   "functions": 569,
-   "bytes": 30045
+   "matched": 570,
+   "functions": 574,
+   "bytes": 30156
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -108,9 +108,9 @@
   },
   {
    "name": "App/reflection",
-   "matched": 9,
-   "functions": 9,
-   "bytes": 558
+   "matched": 10,
+   "functions": 10,
+   "bytes": 583
   },
   {
    "name": "Network/InstancePacketCache.cpp",
@@ -5919,9 +5919,57 @@
    "matched": 1962,
    "implemented": 1984,
    "pct": 20.9503
+  },
+  {
+   "t": "2026-11-22 22:54:27 UTC",
+   "matched": 1969,
+   "implemented": 1991,
+   "pct": 21.0251
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-22T22:49:12",
+   "address": "0x00690730",
+   "name": "RBX::Graphics::ShaderProgram::func690730",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-22T22:48:57",
+   "address": "0x00b0b950",
+   "name": "RBX::Mouse::getX",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-22T22:48:15",
+   "address": "0x00471b70",
+   "name": "BrickColorPropertyItem::isModified",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-22T22:47:58",
+   "address": "0x0082e850",
+   "name": "RBX::CameraTiltUpCommand::execute",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-22T22:45:54",
+   "address": "0x00be8140",
+   "name": "RBX::DataStore::EventSlot::dispose",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-22T22:45:52",
+   "address": "0x0057df60",
+   "name": "RBX::GetSetImpl::get",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-22T22:45:42",
+   "address": "0x00cc2d30",
+   "name": "RBX::callable_slot::invokeBound",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-22T22:42:33",
    "address": "0x0067e4f0",
@@ -6599,49 +6647,7 @@
    "address": "0x00dd2780",
    "name": "ProgramMemoryCheckerImpl::init_dd2780",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T01:22:38",
-   "address": "0x00dd2270",
-   "name": "ProgramMemoryCheckerImpl::init_dd2270",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T01:18:44",
-   "address": "0x00dd2220",
-   "name": "ProgramMemoryCheckerImpl::init_dd2220",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T01:15:19",
-   "address": "0x00dd2140",
-   "name": "ProgramMemoryCheckerImpl::init_dd2140",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T01:14:02",
-   "address": "0x00dd20f0",
-   "name": "ProgramMemoryCheckerImpl::init_dd20f0",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T01:09:55",
-   "address": "0x00dd2020",
-   "name": "ProgramMemoryCheckerImpl::init_dd2020",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T01:08:50",
-   "address": "0x00dd1fd0",
-   "name": "ProgramMemoryCheckerImpl::init_dd1fd0",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T01:07:50",
-   "address": "0x00dd1ec0",
-   "name": "ProgramMemoryCheckerImpl::init_dd1ec0",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 19.23
+ "match_rate_per_hour": 19.27
 }

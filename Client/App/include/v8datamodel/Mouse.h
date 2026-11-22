@@ -19,6 +19,7 @@ public:
 	bool isTargetFilterActive();
 	int getY();
 	Mouse();
+	int getX();
 	// AUTO-GENERATED METHODS
 };
 

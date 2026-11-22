@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-22 22:45:38 UTC",
+  "updated_at": "2026-11-22 22:54:27 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 20.9503,
-  "implemented_total": 1984,
-  "function_annotations": 1984,
+  "matchable_coverage_pct": 21.0251,
+  "implemented_total": 1991,
+  "function_annotations": 1991,
   "stub_annotations": 0,
-  "perfect_100_count": 1962,
-  "matched_real_functions": 1962,
-  "average_match_pct": 99.56,
-  "overall_function_coverage_pct": 4.8372,
-  "overall_byte_coverage_pct": 1.5282,
+  "perfect_100_count": 1969,
+  "matched_real_functions": 1969,
+  "average_match_pct": 99.57,
+  "overall_function_coverage_pct": 4.8544,
+  "overall_byte_coverage_pct": 1.5299,
   "usage": {
-    "calls_24h": 318,
+    "calls_24h": 360,
     "failures_24h": 0,
-    "completion_tokens_24h": 3949677,
-    "reasoning_tokens_24h": 3875986,
-    "avg_latency_s": 206.5
+    "completion_tokens_24h": 4202989,
+    "reasoning_tokens_24h": 4125359,
+    "avg_latency_s": 195.0
   },
   "functions": [
     {
@@ -591,6 +591,17 @@
       "file": "Client/App/reflection/ContentPropertyItem.cpp",
       "orig_size": 63,
       "recomp_size": 63,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00471b70",
+      "kind": "FUNCTION",
+      "name": "BrickColorPropertyItem::isModified",
+      "mangled": "?isModified@BrickColorPropertyItem@@QAE_NXZ",
+      "file": "Client/App/reflection/BrickColorPropertyItem.cpp",
+      "orig_size": 25,
+      "recomp_size": 25,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -1438,6 +1449,17 @@
       "file": "Client/RobloxStudio/RobloxPluginHost.cpp",
       "orig_size": 26,
       "recomp_size": 26,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0057df60",
+      "kind": "FUNCTION",
+      "name": "RBX::GetSetImpl::get",
+      "mangled": "?get@GetSetImpl@RBX@@QBAXPAX@Z",
+      "file": "Client/App/v8datamodel/GetSetImpl.cpp",
+      "orig_size": 18,
+      "recomp_size": 18,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -5567,6 +5589,17 @@
       "matchable": true
     },
     {
+      "address": "0x00690730",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ShaderProgram::func690730",
+      "mangled": "?func690730@ShaderProgram@Graphics@RBX@@QAAPAV123@PAX0H@Z",
+      "file": "Client/Rendering/GfxCore/ShaderProgram.cpp",
+      "orig_size": 25,
+      "recomp_size": 25,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00693720",
       "kind": "FUNCTION",
       "name": "RBX::Sky::derefInt",
@@ -7376,6 +7409,17 @@
       "name": "RBX::CameraTiltDownCommand::execute",
       "mangled": "?execute@CameraTiltDownCommand@RBX@@QAEXXZ",
       "file": "Client/App/v8datamodel/CameraTiltDownCommand.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0082e850",
+      "kind": "FUNCTION",
+      "name": "RBX::CameraTiltUpCommand::execute",
+      "mangled": "?execute@CameraTiltUpCommand@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/CameraTiltUpCommand.cpp",
       "orig_size": 24,
       "recomp_size": 24,
       "match_pct": 100.0,
@@ -13157,6 +13201,17 @@
       "matchable": true
     },
     {
+      "address": "0x00b0b950",
+      "kind": "FUNCTION",
+      "name": "RBX::Mouse::getX",
+      "mangled": "?getX@Mouse@RBX@@QAEHXZ",
+      "file": "Client/App/v8datamodel/Mouse.cpp",
+      "orig_size": 32,
+      "recomp_size": 32,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00b0b970",
       "kind": "FUNCTION",
       "name": "RBX::Mouse::getY",
@@ -15599,6 +15654,17 @@
       "matchable": true
     },
     {
+      "address": "0x00be8140",
+      "kind": "FUNCTION",
+      "name": "RBX::DataStore::EventSlot::dispose",
+      "mangled": "?dispose@EventSlot@DataStore@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/EventSlot.cpp",
+      "orig_size": 23,
+      "recomp_size": 23,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00be8170",
       "kind": "FUNCTION",
       "name": "RBX::Lua::WeakFunctionRef::dispose",
@@ -16893,6 +16959,17 @@
       "file": "Client/App/v8datamodel/callable_slot.cpp",
       "orig_size": 43,
       "recomp_size": 43,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00cc2d30",
+      "kind": "FUNCTION",
+      "name": "RBX::callable_slot::invokeBound",
+      "mangled": "?invokeBound@callable_slot@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/callable_slot.cpp",
+      "orig_size": 14,
+      "recomp_size": 14,
       "match_pct": 100.0,
       "matchable": true
     },

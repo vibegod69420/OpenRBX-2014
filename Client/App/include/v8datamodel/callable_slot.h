@@ -41,6 +41,7 @@ public:
 	void resetReliabilityLayer();
 	void clearReliabilityBuffers();
 	void removeFrontNode();
+	void invokeBound();
 	// AUTO-GENERATED METHODS
 };
 

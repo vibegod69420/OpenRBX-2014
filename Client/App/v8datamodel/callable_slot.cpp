@@ -622,6 +622,21 @@ void callable_slot::removeFrontNode()
 	callable_slot_free_0xcf6522(*(void**)this);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00cc2d30
+void callable_slot::invokeBound()
+{
+	struct callable_data
+	{
+		char pad[0x0C];
+		void(__thiscall* func)(void*, void*);
+		void* obj;
+		void* arg;
+	};
+
+	callable_data* data = (callable_data*)this;
+	data->func(data->obj, data->arg);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

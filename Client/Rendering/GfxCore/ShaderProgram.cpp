@@ -24,6 +24,19 @@ void ShaderProgram::popLastString()
 	*((char**)this + 1) -= 24;
 }
 
+class ShaderProgramCallee690730
+{
+public:
+	void call(void* a1, void* a2, int a3);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00690730
+ShaderProgram* __cdecl ShaderProgram::func690730(void* a1, void* a2, int a3)
+{
+	((ShaderProgramCallee690730*)a1)->call(this, a2, a3);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
