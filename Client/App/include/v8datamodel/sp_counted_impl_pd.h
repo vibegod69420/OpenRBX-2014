@@ -34,6 +34,7 @@ public:
 	double __cdecl getDoubleValue();
 	sp_counted_impl_pd* __cdecl init();
 	void* __cdecl get_deleter(const void* arg);
+	unsigned char __cdecl getByte();
 	// AUTO-GENERATED METHODS
 };
 

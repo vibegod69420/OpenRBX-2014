@@ -216,6 +216,19 @@ void* __cdecl sp_counted_impl_pd::get_deleter(const void* arg)
 	return sp_counted_impl_pd_call_a43960(this, (void*)arg);
 }
 
+struct sp_counted_impl_pd_byte_getter
+{
+	unsigned char* (*func)(void*);
+	void* arg;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0067e4f0
+unsigned char __cdecl sp_counted_impl_pd::getByte()
+{
+	sp_counted_impl_pd_byte_getter* getter = (sp_counted_impl_pd_byte_getter*)this;
+	return *getter->func(getter->arg);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
