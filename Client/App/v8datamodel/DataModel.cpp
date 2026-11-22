@@ -123,6 +123,15 @@ void DataModel::unlinkIntrusive()
 	node->count = 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00857950
+void __cdecl DataModel::dispatchGetImpl()
+{
+	char* obj = *(char**)this;
+	unsigned char flag = *(unsigned char*)(obj + 0x30);
+	char* target = obj + 8;
+	(*(void (__cdecl **)(char*, int, unsigned char))obj)(target, *(int*)(target + 0x20), flag);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
