@@ -17,6 +17,7 @@ public:
 	};
 
 	int __cdecl release();
+	void clear();
 	// AUTO-GENERATED METHODS
 };
 

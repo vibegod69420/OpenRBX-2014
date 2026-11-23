@@ -17,6 +17,7 @@ public:
 	};
 
 	RobloxTaskScheduler* __fastcall initialize(void* arg);
+	void sub_533210();
 	// AUTO-GENERATED METHODS
 };
 
