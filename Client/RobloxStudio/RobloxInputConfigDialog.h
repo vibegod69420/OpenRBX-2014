@@ -17,6 +17,7 @@ public:
 	};
 
 	void *getUiField18();
+	RobloxInputConfigDialog *clearShortcut();
 	// AUTO-GENERATED METHODS
 };
 

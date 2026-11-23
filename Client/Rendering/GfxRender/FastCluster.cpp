@@ -54,6 +54,20 @@ int FastCluster::derefInt_2470(const int* p)
 	return *p;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00622430
+void* FastCluster::getEntityBuffer()
+{
+	char* base = *(char**)((char*)*(void**)((char*)this + 0x38) + 0x1C8);
+
+	if (*(int*)((char*)this + 0xC4) != 0)
+		return base + 0xB4;
+
+	if (*(unsigned char*)((char*)this + 0xCC) != 0)
+		return base + 0xAC;
+
+	return base + 0xA4;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

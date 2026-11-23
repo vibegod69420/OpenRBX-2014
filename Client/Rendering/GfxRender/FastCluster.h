@@ -21,6 +21,7 @@ public:
 	void invalidateEntity();
 	static int derefInt(const int* p);
 	static int derefInt_2470(const int* p);
+	void*getEntityBuffer();
 	// AUTO-GENERATED METHODS
 };
 

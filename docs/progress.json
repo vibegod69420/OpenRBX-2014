@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23 05:17:19 UTC",
+ "updated_at": "2026-11-23 05:26:07 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 21.9007,
- "implemented_total": 2074,
- "function_annotations": 2074,
+ "matchable_coverage_pct": 21.9221,
+ "implemented_total": 2076,
+ "function_annotations": 2076,
  "stub_annotations": 0,
- "perfect_100_count": 2051,
- "matched_real_functions": 2051,
+ "perfect_100_count": 2053,
+ "matched_real_functions": 2053,
  "average_match_pct": 99.59,
- "overall_function_coverage_pct": 5.0566,
- "overall_byte_coverage_pct": 1.5653,
+ "overall_function_coverage_pct": 5.0615,
+ "overall_byte_coverage_pct": 1.5662,
  "usage": {
-  "calls_24h": 1440,
+  "calls_24h": 1467,
   "failures_24h": 0,
-  "completion_tokens_24h": 15561791,
-  "reasoning_tokens_24h": 15262859,
-  "avg_latency_s": 170.5
+  "completion_tokens_24h": 15852015,
+  "reasoning_tokens_24h": 15548976,
+  "avg_latency_s": 170.7
  },
- "functions_total": 2074,
+ "functions_total": 2076,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -77,15 +77,15 @@
    "bytes": 3089
   },
   {
+   "name": "Rendering/GfxRender",
+   "matched": 58,
+   "functions": 58,
+   "bytes": 2411
+  },
+  {
    "name": "App/v8kernel",
    "matched": 73,
    "functions": 73,
-   "bytes": 2366
-  },
-  {
-   "name": "Rendering/GfxRender",
-   "matched": 57,
-   "functions": 57,
    "bytes": 2366
   },
   {
@@ -251,6 +251,12 @@
    "bytes": 123
   },
   {
+   "name": "RobloxStudio/RobloxInputConfigDialog.cpp",
+   "matched": 2,
+   "functions": 2,
+   "bytes": 119
+  },
+  {
    "name": "App/gui",
    "matched": 3,
    "functions": 3,
@@ -324,12 +330,6 @@
   },
   {
    "name": "RobloxStudio/BreakpointsWidget.cpp",
-   "matched": 1,
-   "functions": 1,
-   "bytes": 79
-  },
-  {
-   "name": "RobloxStudio/RobloxInputConfigDialog.cpp",
    "matched": 1,
    "functions": 1,
    "bytes": 79
@@ -6177,9 +6177,27 @@
    "matched": 2051,
    "implemented": 2074,
    "pct": 21.9007
+  },
+  {
+   "t": "2026-11-23 05:26:07 UTC",
+   "matched": 2053,
+   "implemented": 2076,
+   "pct": 21.9221
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-23T05:20:54",
+   "address": "0x00622430",
+   "name": "RBX::Graphics::FastCluster::getEntityBuffer",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T05:19:01",
+   "address": "0x004d2cb0",
+   "name": "RobloxInputConfigDialog::clearShortcut",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-23T05:10:10",
    "address": "0x009977d0",
@@ -6887,19 +6905,7 @@
    "address": "0x00b74210",
    "name": "RBX::detail::sp_counted_impl_p::sub_B74210",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T11:29:11",
-   "address": "0x00dcfbb0",
-   "name": "ProgramMemoryCheckerImpl::init_dcfbb0",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T10:36:18",
-   "address": "0x00dadaa0",
-   "name": "ProgramMemoryCheckerImpl::init_dadaa0",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 18.89
+ "match_rate_per_hour": 18.88
 }

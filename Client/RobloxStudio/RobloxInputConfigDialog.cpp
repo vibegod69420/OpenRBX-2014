@@ -33,6 +33,20 @@ void *RobloxInputConfigDialog::getUiField18()
 	return (void *)0x012BFF38;
 }
 
+class RobloxInputConfigDialog_ClearShortcutTarget
+{
+public:
+	__declspec(dllimport) void clearShortcut(RobloxInputConfigDialog *dialog, const char *text, int flag);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x004d2cb0
+RobloxInputConfigDialog *RobloxInputConfigDialog::clearShortcut()
+{
+	volatile int local = 0;
+	((RobloxInputConfigDialog_ClearShortcutTarget *)0x012BFF48)->clearShortcut(this, "Clear Shortcut", 0);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
