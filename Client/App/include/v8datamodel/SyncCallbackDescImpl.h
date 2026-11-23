@@ -17,6 +17,7 @@ public:
 	};
 
 	SyncCallbackDescImpl();
+	void __cdecl registerTeleport();
 	// AUTO-GENERATED METHODS
 };
 

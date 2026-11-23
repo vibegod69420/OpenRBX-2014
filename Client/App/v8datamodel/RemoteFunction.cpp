@@ -12,6 +12,12 @@ void __cdecl RemoteFunction::sub_9f0f30()
 	sub_774920("Game", "RemoteFunction", this, 0, 0);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x009f0f10
+void __cdecl RemoteFunction::sub_9f0f10()
+{
+	sub_774920("Game", "RemoteEvent", this, 0, 0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

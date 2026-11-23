@@ -69,6 +69,18 @@ void Item::update()
     }
 }
 
+struct ItemInitHelper
+{
+	void init();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00464ce0
+Item::Item()
+{
+	volatile int state = 0;
+	((ItemInitHelper*)this)->init();
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Stats

@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	bool isA() const;
 	// AUTO-GENERATED METHODS
 };
 

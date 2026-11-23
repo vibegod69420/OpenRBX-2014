@@ -19,6 +19,7 @@ public:
 
 	int __cdecl execute(void* L);
 	int __cdecl executeConnection(void* L);
+	int __cdecl executeWeakThreadRef(void* L);
 	// AUTO-GENERATED METHODS
 };
 

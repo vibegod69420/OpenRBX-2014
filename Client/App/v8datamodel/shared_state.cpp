@@ -18,6 +18,19 @@ void* shared_state::get()
 	return *(void**)((char*)this + 0x88);
 }
 
+class shared_state_init_helper
+{
+public:
+	__declspec(dllimport) void __thiscall init(int, int);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00955550
+shared_state* __cdecl shared_state::init()
+{
+	((shared_state_init_helper*)this)->init(0x800, 0xe00);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

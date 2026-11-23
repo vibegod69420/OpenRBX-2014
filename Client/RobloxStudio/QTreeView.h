@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	QTreeView*sub_4D63F0();
 	// AUTO-GENERATED METHODS
 };
 

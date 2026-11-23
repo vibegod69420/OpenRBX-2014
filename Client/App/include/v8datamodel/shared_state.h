@@ -17,6 +17,7 @@ public:
 	};
 
 	void* get();
+	shared_state* __cdecl init();
 	// AUTO-GENERATED METHODS
 };
 

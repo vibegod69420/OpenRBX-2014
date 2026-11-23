@@ -19,6 +19,14 @@ SyncCallbackDescImpl::SyncCallbackDescImpl()
 	*(int*)((char*)this + 4) = sub_6BC950(&unk_12FD634);
 }
 
+void __cdecl sub_774920(const char*, const char*, void*, int, int);
+
+// FUNCTION: ROBLOXSTUDIO 0x008f1c80
+void __cdecl SyncCallbackDescImpl::registerTeleport()
+{
+	sub_774920("Game", "Teleport", this, 0, 0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

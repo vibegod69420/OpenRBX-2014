@@ -18,6 +18,7 @@ public:
 
 	void unk_7C8C20();
 	void unk_7C8BF0();
+	bool unk_7C8250();
 	// AUTO-GENERATED METHODS
 };
 

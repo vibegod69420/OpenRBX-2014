@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	bool sub_44DB50();
 	// AUTO-GENERATED METHODS
 };
 

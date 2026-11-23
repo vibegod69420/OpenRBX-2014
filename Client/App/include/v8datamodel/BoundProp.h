@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	bool isDefault();
 	// AUTO-GENERATED METHODS
 };
 

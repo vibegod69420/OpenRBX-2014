@@ -17,6 +17,7 @@ public:
 	};
 
 	void __cdecl sub_9f0f30();
+	void __cdecl sub_9f0f10();
 	// AUTO-GENERATED METHODS
 };
 

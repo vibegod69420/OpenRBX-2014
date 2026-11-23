@@ -4,6 +4,22 @@
 
 
 
+struct QComboBoxSlotTarget
+{
+	__declspec(dllimport) bool check(void* slot);
+};
+
+extern QComboBoxSlotTarget g_QComboBoxSlotTarget;
+
+// FUNCTION: ROBLOXSTUDIO 0x0044db50
+bool QComboBox::sub_44DB50()
+{
+	void* slot = (*(void***)this)[4];
+	if (slot == (void*)&g_QComboBoxSlotTarget)
+		return true;
+	return g_QComboBoxSlotTarget.check(slot);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

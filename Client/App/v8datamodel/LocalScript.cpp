@@ -31,6 +31,20 @@ void LocalScript::unk_7C8BF0()
 	*(char*)this = 0;
 }
 
+struct LocalScript_IsADesc
+{
+	__declspec(dllimport) bool isA(LocalScript_IsADesc* desc);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x007c8250
+bool LocalScript::unk_7C8250()
+{
+	LocalScript_IsADesc* desc = *(LocalScript_IsADesc**)((char*)*(void**)this + 0x10);
+	if (desc == (LocalScript_IsADesc*)0x011EF0A4)
+		return true;
+	return ((LocalScript_IsADesc*)0x011EF0A4)->isA(desc);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
