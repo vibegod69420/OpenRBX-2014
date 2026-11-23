@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23 03:09:06 UTC",
+ "updated_at": "2026-11-23 03:17:41 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 21.527,
- "implemented_total": 2038,
- "function_annotations": 2038,
+ "matchable_coverage_pct": 21.5483,
+ "implemented_total": 2040,
+ "function_annotations": 2040,
  "stub_annotations": 0,
- "perfect_100_count": 2016,
- "matched_real_functions": 2016,
+ "perfect_100_count": 2018,
+ "matched_real_functions": 2018,
  "average_match_pct": 99.58,
- "overall_function_coverage_pct": 4.9703,
- "overall_byte_coverage_pct": 1.5527,
+ "overall_function_coverage_pct": 4.9752,
+ "overall_byte_coverage_pct": 1.5536,
  "usage": {
-  "calls_24h": 1063,
+  "calls_24h": 1092,
   "failures_24h": 0,
-  "completion_tokens_24h": 12005205,
-  "reasoning_tokens_24h": 11772519,
+  "completion_tokens_24h": 12294752,
+  "reasoning_tokens_24h": 12058514,
   "avg_latency_s": 178.8
  },
- "functions_total": 2038,
+ "functions_total": 2040,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -77,16 +77,16 @@
    "bytes": 3067
   },
   {
+   "name": "App/v8kernel",
+   "matched": 73,
+   "functions": 73,
+   "bytes": 2366
+  },
+  {
    "name": "Rendering/GfxRender",
    "matched": 56,
    "functions": 56,
    "bytes": 2349
-  },
-  {
-   "name": "App/v8kernel",
-   "matched": 72,
-   "functions": 72,
-   "bytes": 2320
   },
   {
    "name": "App/humanoid",
@@ -435,6 +435,12 @@
    "matched": 1,
    "functions": 1,
    "bytes": 47
+  },
+  {
+   "name": "RobloxStudio/QSpinBox.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 40
   },
   {
    "name": "RobloxStudio/PickerFrame.cpp",
@@ -6081,9 +6087,27 @@
    "matched": 2016,
    "implemented": 2038,
    "pct": 21.527
+  },
+  {
+   "t": "2026-11-23 03:17:41 UTC",
+   "matched": 2018,
+   "implemented": 2040,
+   "pct": 21.5483
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-23T03:11:22",
+   "address": "0x009fb9b0",
+   "name": "RBX::BodyColors::initBodyColors",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T03:10:51",
+   "address": "0x00478cb0",
+   "name": "QSpinBox::QSpinBox",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-23T03:04:24",
    "address": "0x00b1acd0",
@@ -6790,18 +6814,6 @@
    "ts": "2026-11-21T03:41:12",
    "address": "0x008d2730",
    "name": "RBX::callable_slot::destroyEntries",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T03:38:30",
-   "address": "0x00426140",
-   "name": "RBX::detail::sp_counted_impl_p::sub_426140",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T03:35:17",
-   "address": "0x00658710",
-   "name": "RBX::callable_slot::destroyElements",
    "pct": 100.0
   }
  ],

@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	QSpinBox();
 	// AUTO-GENERATED METHODS
 };
 

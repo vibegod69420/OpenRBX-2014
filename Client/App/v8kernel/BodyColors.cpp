@@ -59,6 +59,19 @@ BodyColors::BodyColors()
 	*(int*)((char*)this + 0x64) = 0x00E9ADCC;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x009fb9b0
+BodyColors* BodyColors::initBodyColors()
+{
+	((BodyColorsBase*)this)->init();
+
+	*(int*)this = 0x00E9AB84;
+	*(int*)((char*)this + 4) = 0x00E9AC08;
+	*(int*)((char*)this + 0x18) = 0x00E9AC10;
+	*(int*)((char*)this + 0x1C) = 0x00E9AC1C;
+	*(int*)((char*)this + 0x64) = 0x00E9AC2C;
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

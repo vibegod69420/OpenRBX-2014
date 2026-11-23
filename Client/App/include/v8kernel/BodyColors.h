@@ -22,6 +22,7 @@ public:
 	BodyColorsGlobal*getContextOwner();
 	BodyColorsGlobal*getContextOwner() const;
 	BodyColors();
+	BodyColors*initBodyColors();
 	// AUTO-GENERATED METHODS
 };
 
