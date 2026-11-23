@@ -37,6 +37,14 @@ const QMetaObject *RobloxKeyboardConfigWidget::metaObject() const
 	return &staticMetaObject;
 }
 
+__declspec(dllimport) void __cdecl QMetaObject_activate(void *sender, const QMetaObject *meta, int local_signal_index, void **argv);
+
+// FUNCTION: ROBLOXSTUDIO 0x0046bfe0
+void RobloxKeyboardConfigWidget::qt_signal_0()
+{
+	QMetaObject_activate(this, &staticMetaObject, 0, 0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

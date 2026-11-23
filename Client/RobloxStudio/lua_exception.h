@@ -75,6 +75,7 @@ public:
 	void __cdecl sub_A378D0();
 	void __cdecl sub_A37320(void* p);
 	void __cdecl replace(int idx);
+	void __cdecl pushNil();
 	// AUTO-GENERATED METHODS
 };
 

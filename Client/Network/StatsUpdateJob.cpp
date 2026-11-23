@@ -70,6 +70,15 @@ StatsUpdateJob& __cdecl StatsUpdateJob::writeField(const void* field)
 	return *this;
 }
 
+void __cdecl sub_c6d460(StatsUpdateJob* job, const void* field);
+
+// FUNCTION: ROBLOXSTUDIO 0x00c6dda0
+StatsUpdateJob& __cdecl StatsUpdateJob::writeFieldValue(const void* field)
+{
+	sub_c6d460(this, field);
+	return *this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

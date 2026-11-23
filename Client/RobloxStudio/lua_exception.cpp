@@ -1062,6 +1062,14 @@ void __cdecl lua_exception::replace(int idx)
 	*(char**)((char*)this + 8) += -0x10;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a356d0
+void __cdecl lua_exception::pushNil()
+{
+	char* top = *(char**)((char*)this + 8);
+	*(int*)(top + 8) = 0;
+	*(char**)((char*)this + 8) += 16;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

@@ -18,6 +18,7 @@ public:
 	};
 
 	const QMetaObject *metaObject() const;
+	void qt_signal_0();
 	// AUTO-GENERATED METHODS
 };
 

@@ -946,6 +946,12 @@ void __cdecl GuiMain::fireEvent(void* arg)
 	GuiMain_FireScriptEvent_008b2870(this, 0, arg);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008b1ee0
+void __cdecl GuiMain::fireEvent(int mode)
+{
+	GuiMain_FireScriptEvent_008b2870(this, mode, 0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
