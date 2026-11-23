@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void* __cdecl alloc(void* ptr, unsigned int osize, unsigned int nsize);
 	// AUTO-GENERATED METHODS
 };
 

@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	unsigned int getSizeInBytes() const;
 	// AUTO-GENERATED METHODS
 };
 

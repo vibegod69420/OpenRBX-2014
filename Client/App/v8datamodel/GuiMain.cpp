@@ -938,6 +938,14 @@ void* __cdecl GuiMain::fireMouseLeave(void* instance, void* source)
 	return this;
 }
 
+void __cdecl GuiMain_FireScriptEvent_008b2870(void* instance, int mode, void* arg);
+
+// FUNCTION: ROBLOXSTUDIO 0x008b1ec0
+void __cdecl GuiMain::fireEvent(void* arg)
+{
+	GuiMain_FireScriptEvent_008b2870(this, 0, arg);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

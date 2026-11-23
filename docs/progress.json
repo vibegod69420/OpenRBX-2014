@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23 02:15:00 UTC",
+ "updated_at": "2026-11-23 02:23:52 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 21.2173,
- "implemented_total": 2009,
- "function_annotations": 2009,
+ "matchable_coverage_pct": 21.292,
+ "implemented_total": 2016,
+ "function_annotations": 2016,
  "stub_annotations": 0,
- "perfect_100_count": 1987,
- "matched_real_functions": 1987,
+ "perfect_100_count": 1994,
+ "matched_real_functions": 1994,
  "average_match_pct": 99.57,
- "overall_function_coverage_pct": 4.8988,
- "overall_byte_coverage_pct": 1.5444,
+ "overall_function_coverage_pct": 4.9161,
+ "overall_byte_coverage_pct": 1.5459,
  "usage": {
-  "calls_24h": 836,
+  "calls_24h": 877,
   "failures_24h": 0,
-  "completion_tokens_24h": 9944906,
-  "reasoning_tokens_24h": 9734921,
-  "avg_latency_s": 188.8
+  "completion_tokens_24h": 10259392,
+  "reasoning_tokens_24h": 10046306,
+  "avg_latency_s": 185.7
  },
- "functions_total": 2009,
+ "functions_total": 2016,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 578,
-   "functions": 582,
-   "bytes": 30806
+   "matched": 580,
+   "functions": 584,
+   "bytes": 30843
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -60,9 +60,9 @@
   },
   {
    "name": "App/script",
-   "matched": 126,
-   "functions": 126,
-   "bytes": 9433
+   "matched": 128,
+   "functions": 128,
+   "bytes": 9476
   },
   {
    "name": "Rendering/g3d",
@@ -179,6 +179,12 @@
    "bytes": 216
   },
   {
+   "name": "Network/StatsUpdateJob.cpp",
+   "matched": 4,
+   "functions": 4,
+   "bytes": 179
+  },
+  {
    "name": "RobloxStudio/ToggleLocalSpaceVerb.cpp",
    "matched": 1,
    "functions": 1,
@@ -189,12 +195,6 @@
    "matched": 2,
    "functions": 2,
    "bytes": 162
-  },
-  {
-   "name": "Network/StatsUpdateJob.cpp",
-   "matched": 3,
-   "functions": 3,
-   "bytes": 160
   },
   {
    "name": "Network/ReferencePropertyChangedItem.cpp",
@@ -407,6 +407,12 @@
    "bytes": 56
   },
   {
+   "name": "Network/ClientReplicator.cpp",
+   "matched": 3,
+   "functions": 3,
+   "bytes": 55
+  },
+  {
    "name": "Network/Item.cpp",
    "matched": 1,
    "functions": 1,
@@ -465,12 +471,6 @@
    "matched": 1,
    "functions": 1,
    "bytes": 36
-  },
-  {
-   "name": "Network/ClientReplicator.cpp",
-   "matched": 2,
-   "functions": 2,
-   "bytes": 34
   },
   {
    "name": "RobloxStudio/PublishSelectionToRobloxVerb.cpp",
@@ -536,6 +536,12 @@
    "name": "RobloxStudio/RobloxTreeWidget.cpp",
    "matched": 2,
    "functions": 2,
+   "bytes": 19
+  },
+  {
+   "name": "Network/MarkerItem.cpp",
+   "matched": 1,
+   "functions": 1,
    "bytes": 19
   },
   {
@@ -6027,9 +6033,57 @@
    "matched": 1987,
    "implemented": 2009,
    "pct": 21.2173
+  },
+  {
+   "t": "2026-11-23 02:23:52 UTC",
+   "matched": 1994,
+   "implemented": 2016,
+   "pct": 21.292
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-23T02:18:34",
+   "address": "0x00cad990",
+   "name": "getReplicationDataSize",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T02:18:16",
+   "address": "0x0043f020",
+   "name": "RBX::Lua::WeakThreadRef::dispatch",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T02:17:52",
+   "address": "0x00b82c10",
+   "name": "RBX::LuaAllocator::alloc",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T02:16:50",
+   "address": "0x008b1ec0",
+   "name": "RBX::GuiMain::fireEvent",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T02:15:21",
+   "address": "0x00c7df90",
+   "name": "std::chainbuf::read",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T02:15:11",
+   "address": "0x00c6d440",
+   "name": "RBX::Network::StatsUpdateJob::writeField",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T02:15:04",
+   "address": "0x00cc95e0",
+   "name": "RBX::Network::MarkerItem::getSizeInBytes",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-23T02:09:13",
    "address": "0x007b56c0",
@@ -6707,49 +6761,7 @@
    "address": "0x00dd0110",
    "name": "sub_B01130",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T02:07:12",
-   "address": "0x00dcd920",
-   "name": "ProgramMemoryCheckerImpl::init_dcd920",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T02:03:32",
-   "address": "0x00dc4270",
-   "name": "ProgramMemoryCheckerImpl::init_dc4270",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T02:02:12",
-   "address": "0x00dc0900",
-   "name": "ProgramMemoryCheckerImpl::init_dc0900",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T02:01:03",
-   "address": "0x00dbc3d0",
-   "name": "ProgramMemoryCheckerImpl::init_dbc3d0",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T01:59:55",
-   "address": "0x00dbb900",
-   "name": "ProgramMemoryCheckerImpl::init_dbb900",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T01:55:24",
-   "address": "0x00dae7d0",
-   "name": "ProgramMemoryCheckerImpl::init_dae7d0",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T01:54:30",
-   "address": "0x00dae780",
-   "name": "ProgramMemoryCheckerImpl::init_dae780",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 18.83
+ "match_rate_per_hour": 18.87
 }

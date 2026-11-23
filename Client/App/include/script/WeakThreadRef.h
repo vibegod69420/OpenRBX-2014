@@ -19,6 +19,7 @@ public:
 
 	void removeRef();
 	void update();
+	void __cdecl dispatch();
 	// AUTO-GENERATED METHODS
 };
 

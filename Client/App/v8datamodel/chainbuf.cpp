@@ -177,6 +177,17 @@ void chainbuf::purge()
 	}
 }
 
+struct _chainbuf_read_helper_C7DF90
+{
+	void call(void* arg);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c7df90
+void __cdecl chainbuf::read(void* destination)
+{
+	((_chainbuf_read_helper_C7DF90*)destination)->call(this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

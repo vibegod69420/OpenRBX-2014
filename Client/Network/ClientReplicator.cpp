@@ -35,6 +35,14 @@ int ClientReplicator::getDataPing()
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00cad990
+int getReplicationDataSize(ClientReplicator* replicator);
+
+void __cdecl ClientReplicator::addReplicationDataSize(int* dataSize)
+{
+	*dataSize += getReplicationDataSize(this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

@@ -50,6 +50,21 @@ void WeakThreadRef::update()
 	self->slot->update(context);
 }
 
+class WeakThreadRefDispatch
+{
+public:
+	virtual void dispatch();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0043f020
+void __cdecl WeakThreadRef::dispatch()
+{
+	if (*(int*)((char*)this + 0x10) != 0)
+	{
+		((WeakThreadRefDispatch*)((char*)this + 8))->dispatch();
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

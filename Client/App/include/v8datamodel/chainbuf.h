@@ -27,6 +27,7 @@ public:
 	void close();
 	~chainbuf();
 	void purge();
+	void __cdecl read(void* destination);
 	// AUTO-GENERATED METHODS
 };
 

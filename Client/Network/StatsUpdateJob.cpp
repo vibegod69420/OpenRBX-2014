@@ -58,6 +58,18 @@ StatsUpdateJob& __cdecl StatsUpdateJob::writeStats(const void* source)
 	return *this;
 }
 
+struct StatsUpdateJobWriteFieldThunk
+{
+	void __thiscall call(const void* field);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c6d440
+StatsUpdateJob& __cdecl StatsUpdateJob::writeField(const void* field)
+{
+	reinterpret_cast<StatsUpdateJobWriteFieldThunk*>(this)->call(field);
+	return *this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network
