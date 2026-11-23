@@ -61,6 +61,22 @@ void __cdecl PluginInterface2::Sub_CC7750(int value)
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00cc6590
+void __cdecl PluginInterface2::Sub_CC6590()
+{
+	char* p = (char*)this;
+	if (*(unsigned int*)(p + 0x14) < 0x10)
+	{
+		*(unsigned int*)(p + 0x10) = 0;
+		*p = 0;
+	}
+	else
+	{
+		*(unsigned int*)(p + 0x10) = 0;
+		**(char**)p = 0;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RakNet

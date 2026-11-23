@@ -18,6 +18,18 @@ void __cdecl lock_error::dispatch(int arg1, int arg2)
 	}
 }
 
+struct lock_error_init
+{
+	void __thiscall ctor(int, char const*);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0040f710
+lock_error::lock_error()
+{
+	((lock_error_init*)this)->ctor(11, "boost::thread_resource_error");
+	*(unsigned int*)this = 0x00E1826Cu;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace boost

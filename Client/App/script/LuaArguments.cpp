@@ -1210,6 +1210,13 @@ void __cdecl LuaArguments::registerRBXScriptSignal(void* arg1, void* arg2)
 	sub_A35D10(self, -2);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008d8cd0
+void* __cdecl LuaArguments::getFunction(void* arg)
+{
+	typedef void* (__cdecl *SubA389C0Fn)(void*, void*, void*);
+	return reinterpret_cast<SubA389C0Fn>(sub_A389C0)(this, arg, *(void**)0x0124EB2C);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

@@ -17,6 +17,7 @@ public:
 	};
 
 	~QDockWidget();
+	void __cdecl getLocation(int* out) const;
 	// AUTO-GENERATED METHODS
 };
 
