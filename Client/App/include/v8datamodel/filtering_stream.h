@@ -21,6 +21,7 @@ public:
 	filtering_stream();
 	filtering_stream*sub_a2b610();
 	void sub_a2cb90();
+	filtering_stream*sub_a2b5a0();
 	// AUTO-GENERATED METHODS
 };
 

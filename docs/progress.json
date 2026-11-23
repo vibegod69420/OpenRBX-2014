@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23 11:23:24 UTC",
+ "updated_at": "2026-11-23 11:32:28 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 22.3919,
- "implemented_total": 2120,
- "function_annotations": 2120,
+ "matchable_coverage_pct": 22.4026,
+ "implemented_total": 2121,
+ "function_annotations": 2121,
  "stub_annotations": 0,
- "perfect_100_count": 2097,
- "matched_real_functions": 2097,
+ "perfect_100_count": 2098,
+ "matched_real_functions": 2098,
  "average_match_pct": 99.6,
- "overall_function_coverage_pct": 5.17,
- "overall_byte_coverage_pct": 1.5903,
+ "overall_function_coverage_pct": 5.1725,
+ "overall_byte_coverage_pct": 1.5913,
  "usage": {
-  "calls_24h": 2503,
+  "calls_24h": 2525,
   "failures_24h": 0,
-  "completion_tokens_24h": 27503909,
-  "reasoning_tokens_24h": 26989585,
-  "avg_latency_s": 175.1
+  "completion_tokens_24h": 27718564,
+  "reasoning_tokens_24h": 27199076,
+  "avg_latency_s": 175.0
  },
- "functions_total": 2120,
+ "functions_total": 2121,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 625,
-   "functions": 629,
-   "bytes": 32680
+   "matched": 626,
+   "functions": 630,
+   "bytes": 32780
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -6327,9 +6327,21 @@
    "matched": 2097,
    "implemented": 2120,
    "pct": 22.3919
+  },
+  {
+   "t": "2026-11-23 11:32:28 UTC",
+   "matched": 2098,
+   "implemented": 2121,
+   "pct": 22.4026
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-23T11:28:42",
+   "address": "0x00a2b5a0",
+   "name": "std::filtering_stream::sub_a2b5a0",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-23T11:16:42",
    "address": "0x008bfc00",
@@ -7043,13 +7055,7 @@
    "address": "0x00b98090",
    "name": "RBX::MaterialTool::isChecked",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T00:55:56",
-   "address": "0x00b98210",
-   "name": "char",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 18.29
+ "match_rate_per_hour": 18.27
 }

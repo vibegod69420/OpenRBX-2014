@@ -129,6 +129,27 @@ void filtering_stream::sub_a2cb90()
 	}
 }
 
+__declspec(dllimport) void __cdecl rbxi_fs_ctor_0xe1031c();
+
+// FUNCTION: ROBLOXSTUDIO 0x00a2b5a0
+filtering_stream* filtering_stream::sub_a2b5a0()
+{
+	rbxi_fs_ctor_0xe1031c();
+
+	*(int*)((char*)this + 0x38) = 0;
+	*(int*)this = 0x00EA60F4;
+	*((unsigned char*)this + 0x7c) = 0;
+	*(int*)((char*)this + 0x80) = 0;
+	*(int*)((char*)this + 0x88) = 0;
+	*(int*)((char*)this + 0x90) = 0;
+	*(int*)((char*)this + 0x94) = 0;
+	*(int*)((char*)this + 0x98) = 0;
+	*(int*)((char*)this + 0x9c) = 0;
+	*(int*)((char*)this + 0xa0) = 4;
+
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std
