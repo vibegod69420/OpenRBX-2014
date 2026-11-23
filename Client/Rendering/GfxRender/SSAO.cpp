@@ -103,6 +103,36 @@ int SSAO::getUnk3C_74d0()
 	return 0;
 }
 
+extern "C" void* __cdecl memset(void*, int, unsigned int);
+
+struct SSAO_BufferEntry
+{
+	char* begin;
+	char* end;
+	int unk8;
+
+	void ensureSize(int size);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00695f20
+void SSAO::clearBufferData()
+{
+	int i = 0;
+	SSAO_BufferEntry* entry = (SSAO_BufferEntry*)((char*)this + 0x30);
+
+	do
+	{
+		entry->ensureSize(0x10000 >> i);
+
+		char* begin = entry->begin;
+		memset(begin, 0, (unsigned int)(entry->end - begin) & 0xFFFFFFF8u);
+
+		++i;
+		++entry;
+	}
+	while (i < 4);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

@@ -33,6 +33,27 @@ ChangeHistoryService* ChangeHistoryService::getChangeHistoryService()
 	return 0;
 }
 
+__declspec(dllimport) __declspec(noreturn) void __cdecl _Xbad_alloc();
+
+// FUNCTION: ROBLOXSTUDIO 0x0078c430
+void* ChangeHistoryService::create()
+{
+	void* mem = ::operator new(0x58);
+	if (mem == 0)
+		_Xbad_alloc();
+
+	int* p = (int*)((char*)mem + 4);
+	*(int*)mem = *(int*)this;
+	if (p)
+		*p = *(int*)this;
+
+	p = (int*)((char*)mem + 8);
+	if (p)
+		*p = *(int*)this;
+
+	return mem;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

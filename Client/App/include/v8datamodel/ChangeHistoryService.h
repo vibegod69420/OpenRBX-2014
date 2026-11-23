@@ -19,6 +19,7 @@ public:
 	int IsRecording();
 	int IsPlaying();
 	ChangeHistoryService*getChangeHistoryService();
+	void*create();
 	// AUTO-GENERATED METHODS
 };
 
