@@ -232,6 +232,17 @@ void __cdecl ContentProviderJob::update(const unsigned char* data, unsigned int 
 	ContentProviderJob_memcpy((unsigned char*)this + 0x18, data, len);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00bc6ce0
+void __cdecl ContentProviderJob::addRequest(void* request)
+{
+	char* req = (char*)request;
+	char* data = *(char**)((char*)this + 0x10);
+
+	req[5] &= (char)0xFB;
+	*(void**)(req + 0x1C) = *(void**)(data + 0x28);
+	*(void**)(data + 0x28) = req;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

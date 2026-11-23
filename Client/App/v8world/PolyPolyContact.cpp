@@ -216,6 +216,14 @@ void __cdecl PolyPolyContact::commitSeparatingEdge()
 	*(int*)((char*)this + 0x1C) = *(int*)((char*)this + 0x18);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c184d0
+void __cdecl PolyPolyContact::compute(int value)
+{
+	int index = *(int*)((char*)this + 0x18);
+	int* arr = *(int**)((char*)*(void**)this + 0x14);
+	arr[index - 1] = value;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

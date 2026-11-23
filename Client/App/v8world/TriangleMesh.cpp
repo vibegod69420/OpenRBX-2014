@@ -717,6 +717,15 @@ int TriangleMesh::getGridIndex() const
 	return 0;
 }
 
+int __cdecl sub_A384B0(int, int, int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b71710
+int __cdecl TriangleMesh::func_B71710(int a, int b, int c)
+{
+	sub_A384B0(c, a, b);
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

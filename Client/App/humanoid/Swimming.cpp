@@ -233,6 +233,14 @@ tail:
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c17640
+void __cdecl Swimming::initialize()
+{
+	*(int*)((char*)this + 0) = 0x61754C1B;
+	*(int*)((char*)this + 4) = 0x04010051;
+	*(int*)((char*)this + 8) = 0x00080404;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace HUMAN

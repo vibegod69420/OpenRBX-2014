@@ -17,6 +17,7 @@ public:
 	};
 
 	http_status_error();
+	void destroy();
 	// AUTO-GENERATED METHODS
 };
 

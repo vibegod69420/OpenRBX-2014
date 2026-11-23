@@ -25,6 +25,7 @@ public:
 	int __cdecl applyState(int a, int b, int c, int d);
 	int __cdecl processEvent(int arg1, int* arg2, int* arg3);
 	int __cdecl fireEvent(int* event, int arg3);
+	void __cdecl initialize();
 	// AUTO-GENERATED METHODS
 };
 

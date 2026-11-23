@@ -58,6 +58,7 @@ public:
 	void __cdecl func_B6ECF0();
 	int __cdecl func_B6FFB0();
 	int getGridIndex() const;
+	int __cdecl func_B71710(int a, int b, int c);
 	// AUTO-GENERATED METHODS
 };
 

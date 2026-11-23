@@ -29,6 +29,7 @@ public:
 	void purge();
 	void __cdecl read(void* destination);
 	void __cdecl write_float(void* destination);
+	void __cdecl write_double(void* destination);
 	// AUTO-GENERATED METHODS
 };
 

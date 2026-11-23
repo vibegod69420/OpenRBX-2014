@@ -28,6 +28,7 @@ public:
 	void __cdecl compute(void* param);
 	void __cdecl computePolyPoly(void* arg1, void* arg2);
 	void __cdecl commitSeparatingEdge();
+	void __cdecl compute(int value);
 	// AUTO-GENERATED METHODS
 };
 

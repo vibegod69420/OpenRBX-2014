@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23 09:01:42 UTC",
+  "updated_at": "2026-11-23 09:10:31 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 22.1463,
-  "implemented_total": 2097,
-  "function_annotations": 2097,
+  "matchable_coverage_pct": 22.2317,
+  "implemented_total": 2105,
+  "function_annotations": 2105,
   "stub_annotations": 0,
-  "perfect_100_count": 2074,
-  "matched_real_functions": 2074,
+  "perfect_100_count": 2082,
+  "matched_real_functions": 2082,
   "average_match_pct": 99.59,
-  "overall_function_coverage_pct": 5.1133,
-  "overall_byte_coverage_pct": 1.5793,
+  "overall_function_coverage_pct": 5.133,
+  "overall_byte_coverage_pct": 1.5816,
   "usage": {
-    "calls_24h": 2074,
+    "calls_24h": 2114,
     "failures_24h": 0,
-    "completion_tokens_24h": 22842348,
-    "reasoning_tokens_24h": 22406232,
-    "avg_latency_s": 174.9
+    "completion_tokens_24h": 23193123,
+    "reasoning_tokens_24h": 22752466,
+    "avg_latency_s": 173.8
   },
   "functions": [
     {
@@ -5809,6 +5809,17 @@
       "matchable": true
     },
     {
+      "address": "0x0067aa90",
+      "kind": "FUNCTION",
+      "name": "RBX::TypedStatsItem::getOrCreateChild",
+      "mangled": "?getOrCreateChild@TypedStatsItem@RBX@@QAAPAV12@PBD@Z",
+      "file": "Client/App/v8datamodel/TypedStatsItem.cpp",
+      "orig_size": 31,
+      "recomp_size": 31,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0067e190",
       "kind": "FUNCTION",
       "name": "RBX::FormFactorPart::getField110",
@@ -8024,6 +8035,17 @@
       "kind": "FUNCTION",
       "name": "RBX::PVInstance::getTopLevelPVInstanceEx",
       "mangled": "?getTopLevelPVInstanceEx@PVInstance@RBX@@QAAPAV12@PAX@Z",
+      "file": "Client/App/v8datamodel/PVInstance.cpp",
+      "orig_size": 31,
+      "recomp_size": 31,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0083aef0",
+      "kind": "FUNCTION",
+      "name": "RBX::PVInstance::getTopLevelPVInstance2",
+      "mangled": "?getTopLevelPVInstance2@PVInstance@RBX@@QAAPAV12@PAX@Z",
       "file": "Client/App/v8datamodel/PVInstance.cpp",
       "orig_size": 31,
       "recomp_size": 31,
@@ -14961,6 +14983,17 @@
       "matchable": true
     },
     {
+      "address": "0x00b71710",
+      "kind": "FUNCTION",
+      "name": "RBX::RBX::TriangleMesh::func_B71710",
+      "mangled": "?func_B71710@TriangleMesh@RBX@@QAAHHHH@Z",
+      "file": "Client/App/v8world/TriangleMesh.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00b71950",
       "kind": "FUNCTION",
       "name": "RBX::RBX::TriangleMesh::mathOp",
@@ -16314,6 +16347,17 @@
       "matchable": true
     },
     {
+      "address": "0x00bc6ce0",
+      "kind": "FUNCTION",
+      "name": "RBX::ContentProviderJob::addRequest",
+      "mangled": "?addRequest@ContentProviderJob@RBX@@QAAXPAX@Z",
+      "file": "Client/App/v8datamodel/ContentProviderJob.cpp",
+      "orig_size": 27,
+      "recomp_size": 27,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00bc6fc0",
       "kind": "FUNCTION",
       "name": "RBX::PolyContact::addEdge",
@@ -16886,6 +16930,17 @@
       "matchable": true
     },
     {
+      "address": "0x00c17640",
+      "kind": "FUNCTION",
+      "name": "RBX::HUMAN::Swimming::initialize",
+      "mangled": "?initialize@Swimming@HUMAN@RBX@@QAAXXZ",
+      "file": "Client/App/humanoid/Swimming.cpp",
+      "orig_size": 28,
+      "recomp_size": 28,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00c17750",
       "kind": "FUNCTION",
       "name": "RBX::HUMAN::Swimming::processEvent",
@@ -16970,6 +17025,17 @@
       "file": "Client/App/humanoid/Swimming.cpp",
       "orig_size": 39,
       "recomp_size": 39,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c184d0",
+      "kind": "FUNCTION",
+      "name": "RBX::PolyPolyContact::compute",
+      "mangled": "?compute@PolyPolyContact@RBX@@QAAXH@Z",
+      "file": "Client/App/v8world/PolyPolyContact.cpp",
+      "orig_size": 23,
+      "recomp_size": 23,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -17524,6 +17590,17 @@
       "matchable": true
     },
     {
+      "address": "0x00c792a0",
+      "kind": "FUNCTION",
+      "name": "std::chainbuf::write_double",
+      "mangled": "?write_double@chainbuf@std@@QAAXPAX@Z",
+      "file": "Client/App/v8datamodel/chainbuf.cpp",
+      "orig_size": 30,
+      "recomp_size": 30,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00c793b0",
       "kind": "FUNCTION",
       "name": "std::chainbuf::write",
@@ -17769,11 +17846,11 @@
       "address": "0x00c93a10",
       "kind": "FUNCTION",
       "name": "std::chainbuf::destroyInstance",
-      "mangled": "?write@chainbuf@std@@QAAXPAX@Z",
+      "mangled": "?write_double@chainbuf@std@@QAAXPAX@Z",
       "file": "Client/App/v8datamodel/chainbuf.cpp",
       "orig_size": 30,
-      "recomp_size": 32,
-      "match_pct": 40.62,
+      "recomp_size": 30,
+      "match_pct": 43.33,
       "matchable": true
     },
     {
@@ -18477,6 +18554,17 @@
       "file": "Client/App/v8datamodel/http_status_error.cpp",
       "orig_size": 37,
       "recomp_size": 37,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00d03370",
+      "kind": "FUNCTION",
+      "name": "RBX::http_status_error::destroy",
+      "mangled": "?destroy@http_status_error@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/http_status_error.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
       "match_pct": 100.0,
       "matchable": true
     },

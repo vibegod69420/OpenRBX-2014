@@ -23,6 +23,7 @@ public:
 	int checkField17C() const;
 	TypedStatsItem();
 	TypedStatsItem* __cdecl getOrCreateChildItem(const char* name);
+	TypedStatsItem* __cdecl getOrCreateChild(const char* name);
 	// AUTO-GENERATED METHODS
 };
 

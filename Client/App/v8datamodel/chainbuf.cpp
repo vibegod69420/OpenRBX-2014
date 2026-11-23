@@ -201,6 +201,19 @@ void __cdecl chainbuf::write_float(void* destination)
 	sub_C703B0(destination, ((_chainbuf_write_float_helper_8AFD20*)this)->get());
 }
 
+struct _chainbuf_write_double_helper_8AFD90
+{
+	double get();
+};
+
+void __cdecl sub_C70440(void* destination, double value);
+
+// FUNCTION: ROBLOXSTUDIO 0x00c792a0
+void __cdecl chainbuf::write_double(void* destination)
+{
+	sub_C70440(destination, ((_chainbuf_write_double_helper_8AFD90*)this)->get());
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std
