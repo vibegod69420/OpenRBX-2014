@@ -35,6 +35,19 @@ void Counter::destroyInstance(Counter* p)
 	}
 }
 
+extern "C" __declspec(dllimport) int __stdcall CloseHandle(HANDLE hObject);
+void onDestroyCloseHandleFailure();
+
+// FUNCTION: ROBLOXSTUDIO 0x006bca40
+void Counter::onDestroy()
+{
+	if (_vtable_or_head)
+	{
+		if (!CloseHandle((HANDLE)_vtable_or_head))
+			onDestroyCloseHandleFailure();
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Limits

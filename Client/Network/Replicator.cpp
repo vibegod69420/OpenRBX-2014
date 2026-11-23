@@ -39,6 +39,18 @@ Replicator& __cdecl Replicator::writeProperty(const void* data)
 	return *this;
 }
 
+struct ReplicatorBitStream
+{
+	void __thiscall writeBits(const void* data, unsigned int bitCount, int flag);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c70300
+Replicator& __cdecl Replicator::writeByte(unsigned char value)
+{
+	((ReplicatorBitStream*)this)->writeBits(&value, 8, 1);
+	return *this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

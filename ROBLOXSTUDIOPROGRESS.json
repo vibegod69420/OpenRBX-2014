@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23 21:26:08 UTC",
+  "updated_at": "2026-11-23 21:35:18 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 22.7122,
-  "implemented_total": 2150,
-  "function_annotations": 2150,
+  "matchable_coverage_pct": 22.7549,
+  "implemented_total": 2155,
+  "function_annotations": 2155,
   "stub_annotations": 0,
-  "perfect_100_count": 2127,
-  "matched_real_functions": 2127,
-  "average_match_pct": 99.6,
-  "overall_function_coverage_pct": 5.244,
-  "overall_byte_coverage_pct": 1.6103,
+  "perfect_100_count": 2131,
+  "matched_real_functions": 2131,
+  "average_match_pct": 99.57,
+  "overall_function_coverage_pct": 5.2538,
+  "overall_byte_coverage_pct": 1.6114,
   "usage": {
-    "calls_24h": 3521,
+    "calls_24h": 3557,
     "failures_24h": 0,
-    "completion_tokens_24h": 39682936,
-    "reasoning_tokens_24h": 38840903,
-    "avg_latency_s": 183.3
+    "completion_tokens_24h": 40001651,
+    "reasoning_tokens_24h": 39155357,
+    "avg_latency_s": 182.7
   },
   "functions": [
     {
@@ -5985,6 +5985,17 @@
       "matchable": true
     },
     {
+      "address": "0x0067aad0",
+      "kind": "FUNCTION",
+      "name": "RBX::TypedStatsItem::getOrCreateTypedChild",
+      "mangled": "?getOrCreateTypedChild@TypedStatsItem@RBX@@QAAPAV12@PBD@Z",
+      "file": "Client/App/v8datamodel/TypedStatsItem.cpp",
+      "orig_size": 31,
+      "recomp_size": 31,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0067e190",
       "kind": "FUNCTION",
       "name": "RBX::FormFactorPart::getField110",
@@ -6502,6 +6513,17 @@
       "matchable": true
     },
     {
+      "address": "0x006bca40",
+      "kind": "FUNCTION",
+      "name": "RBX::Limits::RBX::Limits::Counter::onDestroy",
+      "mangled": "?onDestroy@Counter@Limits@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/Counter.cpp",
+      "orig_size": 22,
+      "recomp_size": 22,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x006bca60",
       "kind": "FUNCTION",
       "name": "RBX::Limits::RBX::Limits::Counter::wait",
@@ -6519,8 +6541,8 @@
       "mangled": "?destroyInstance@Counter@Limits@RBX@@SAXPAV123@@Z",
       "file": "Client/App/v8datamodel/Counter.cpp",
       "orig_size": 30,
-      "recomp_size": 30,
-      "match_pct": 100.0,
+      "recomp_size": 45,
+      "match_pct": 35.56,
       "matchable": true
     },
     {
@@ -9402,6 +9424,17 @@
       "file": "Client/App/v8datamodel/GameBasicSettings.cpp",
       "orig_size": 14,
       "recomp_size": 14,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x008bd840",
+      "kind": "FUNCTION",
+      "name": "RBX::ClientAppSettings::ApplySettingFromFunc_5C",
+      "mangled": "?ApplySettingFromFunc_5C@ClientAppSettings@RBX@@QAAXXZ",
+      "file": "Client/App/v8datamodel/ClientAppSettings.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -18041,6 +18074,17 @@
       "matchable": true
     },
     {
+      "address": "0x00c70300",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::Replicator::writeByte",
+      "mangled": "?writeByte@Replicator@Network@RBX@@QAAAAV123@E@Z",
+      "file": "Client/Network/Replicator.cpp",
+      "orig_size": 24,
+      "recomp_size": 24,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00c72990",
       "kind": "FUNCTION",
       "name": "RBX::network_stream_exception::what",
@@ -19038,6 +19082,17 @@
       "file": "Client/App/v8datamodel/basic_altstringbuf.cpp",
       "orig_size": 88,
       "recomp_size": 88,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00cf6269",
+      "kind": "FUNCTION",
+      "name": "std::basic_altstringbuf::CheckedAdd",
+      "mangled": "?CheckedAdd@basic_altstringbuf@std@@QAAHII@Z",
+      "file": "Client/App/v8datamodel/basic_altstringbuf.cpp",
+      "orig_size": 36,
+      "recomp_size": 36,
       "match_pct": 100.0,
       "matchable": true
     },

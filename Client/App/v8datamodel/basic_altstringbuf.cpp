@@ -131,6 +131,16 @@ unsigned int __cdecl basic_altstringbuf::CalcBufferSize()
 	return (value >> 3) + value;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00cf6269
+int __cdecl basic_altstringbuf::CheckedAdd(unsigned int a, unsigned int b)
+{
+	if (0xFFFFFFFFu - a < b)
+		return (int)0x80070216;
+
+	_vtable_or_head = (int)(a + b);
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std
