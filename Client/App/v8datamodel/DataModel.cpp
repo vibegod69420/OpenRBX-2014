@@ -132,6 +132,35 @@ void __cdecl DataModel::dispatchGetImpl()
 	(*(void (__cdecl **)(char*, int, unsigned char))obj)(target, *(int*)(target + 0x20), flag);
 }
 
+} // namespace RBX
+#include <new>
+namespace RBX {
+
+struct DataModelLocalString
+{
+	union
+	{
+		char buf[16];
+		char* ptr;
+	};
+	unsigned int size;
+	unsigned int capacity;
+};
+
+struct DataModelGetImplStringHelper
+{
+	void get(DataModelLocalString* out);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x008578f0
+void __cdecl DataModel::dispatchGetImplString()
+{
+	DataModelLocalString s;
+	(*(DataModelGetImplStringHelper**)this)->get(&s);
+	if (s.capacity >= 0x10)
+		::operator delete(s.ptr);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

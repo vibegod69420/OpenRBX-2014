@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23 08:16:27 UTC",
+  "updated_at": "2026-11-23 08:42:57 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 22.0715,
-  "implemented_total": 2090,
-  "function_annotations": 2090,
+  "matchable_coverage_pct": 22.0822,
+  "implemented_total": 2091,
+  "function_annotations": 2091,
   "stub_annotations": 0,
-  "perfect_100_count": 2067,
-  "matched_real_functions": 2067,
+  "perfect_100_count": 2068,
+  "matched_real_functions": 2068,
   "average_match_pct": 99.59,
-  "overall_function_coverage_pct": 5.096,
-  "overall_byte_coverage_pct": 1.5767,
+  "overall_function_coverage_pct": 5.0985,
+  "overall_byte_coverage_pct": 1.5772,
   "usage": {
-    "calls_24h": 1937,
+    "calls_24h": 1999,
     "failures_24h": 0,
-    "completion_tokens_24h": 21401682,
-    "reasoning_tokens_24h": 20994470,
-    "avg_latency_s": 176.2
+    "completion_tokens_24h": 22230241,
+    "reasoning_tokens_24h": 21806933,
+    "avg_latency_s": 177.4
   },
   "functions": [
     {
@@ -6933,7 +6933,7 @@
     {
       "address": "0x007453c0",
       "kind": "FUNCTION",
-      "name": "RBX::DataModel::getZero",
+      "name": "RBX::RBX::DataModel::getZero",
       "mangled": "?getZero@DataModel@RBX@@QBEHXZ",
       "file": "Client/App/v8datamodel/DataModel.cpp",
       "orig_size": 17,
@@ -8110,7 +8110,7 @@
     {
       "address": "0x0084dd30",
       "kind": "FUNCTION",
-      "name": "RBX::DataModel::dispatchBdcMember",
+      "name": "RBX::RBX::DataModel::dispatchBdcMember",
       "mangled": "?dispatchBdcMember@DataModel@RBX@@QAEXXZ",
       "file": "Client/App/v8datamodel/DataModel.cpp",
       "orig_size": 19,
@@ -8154,7 +8154,7 @@
     {
       "address": "0x00856210",
       "kind": "FUNCTION",
-      "name": "RBX::DataModel::getDataModel",
+      "name": "RBX::RBX::DataModel::getDataModel",
       "mangled": "?getDataModel@DataModel@RBX@@QAEPAV12@XZ",
       "file": "Client/App/v8datamodel/DataModel.cpp",
       "orig_size": 13,
@@ -8163,9 +8163,20 @@
       "matchable": true
     },
     {
+      "address": "0x008578f0",
+      "kind": "FUNCTION",
+      "name": "RBX::RBX::DataModel::dispatchGetImplString",
+      "mangled": "?dispatchGetImplString@DataModel@RBX@@QAAXXZ",
+      "file": "Client/App/v8datamodel/DataModel.cpp",
+      "orig_size": 41,
+      "recomp_size": 41,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00857950",
       "kind": "FUNCTION",
-      "name": "RBX::DataModel::dispatchGetImpl",
+      "name": "RBX::RBX::DataModel::dispatchGetImpl",
       "mangled": "?dispatchGetImpl@DataModel@RBX@@QAAXXZ",
       "file": "Client/App/v8datamodel/DataModel.cpp",
       "orig_size": 29,
@@ -8176,7 +8187,7 @@
     {
       "address": "0x00857ca0",
       "kind": "FUNCTION",
-      "name": "RBX::DataModel::getFlagB68",
+      "name": "RBX::RBX::DataModel::getFlagB68",
       "mangled": "?getFlagB68@DataModel@RBX@@QBE_NXZ",
       "file": "Client/App/v8datamodel/DataModel.cpp",
       "orig_size": 7,
@@ -8187,7 +8198,7 @@
     {
       "address": "0x00857d10",
       "kind": "FUNCTION",
-      "name": "RBX::DataModel::isStateValid",
+      "name": "RBX::RBX::DataModel::isStateValid",
       "mangled": "?isStateValid@DataModel@RBX@@QBE_NXZ",
       "file": "Client/App/v8datamodel/DataModel.cpp",
       "orig_size": 18,
@@ -8198,7 +8209,7 @@
     {
       "address": "0x0085ac00",
       "kind": "FUNCTION",
-      "name": "RBX::DataModel::initData",
+      "name": "RBX::RBX::DataModel::initData",
       "mangled": "?initData@DataModel@RBX@@QAAXXZ",
       "file": "Client/App/v8datamodel/DataModel.cpp",
       "orig_size": 35,
@@ -8209,7 +8220,7 @@
     {
       "address": "0x0085ac30",
       "kind": "FUNCTION",
-      "name": "RBX::DataModel::getNetworkStatsTotal",
+      "name": "RBX::RBX::DataModel::getNetworkStatsTotal",
       "mangled": "?getNetworkStatsTotal@DataModel@RBX@@QAEHXZ",
       "file": "Client/App/v8datamodel/DataModel.cpp",
       "orig_size": 41,

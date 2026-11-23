@@ -26,6 +26,7 @@ public:
 	int getNetworkStatsTotal();
 	void unlinkIntrusive();
 	void __cdecl dispatchGetImpl();
+	void __cdecl dispatchGetImplString();
 	// AUTO-GENERATED METHODS
 };
 
