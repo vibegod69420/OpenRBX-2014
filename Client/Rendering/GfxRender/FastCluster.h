@@ -22,6 +22,7 @@ public:
 	static int derefInt(const int* p);
 	static int derefInt_2470(const int* p);
 	void*getEntityBuffer();
+	void __cdecl pushHeapHole(int hole, int top, void** value);
 	// AUTO-GENERATED METHODS
 };
 

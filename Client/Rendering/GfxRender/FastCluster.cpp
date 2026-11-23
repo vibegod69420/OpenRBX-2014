@@ -68,6 +68,32 @@ void* FastCluster::getEntityBuffer()
 	return base + 0xA4;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00623850
+void __cdecl FastCluster::pushHeapHole(int hole, int top, void** value)
+{
+	void** arr = reinterpret_cast<void**>(this);
+	int parent = (hole - 1) / 2;
+
+	if (top < hole)
+	{
+		do
+		{
+			void* parentFirst = arr[parent * 2];
+			unsigned int valueFlags = *(unsigned int*)((char*)value[0] + 0x14) & 4;
+			unsigned int parentFlags = *(unsigned int*)((char*)parentFirst + 0x14) & 4;
+			if (parentFlags <= valueFlags)
+				break;
+			arr[hole * 2] = parentFirst;
+			arr[hole * 2 + 1] = arr[parent * 2 + 1];
+			hole = parent;
+			parent = (hole - 1) / 2;
+		} while (top < hole);
+	}
+
+	arr[hole * 2] = value[0];
+	arr[hole * 2 + 1] = value[1];
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
