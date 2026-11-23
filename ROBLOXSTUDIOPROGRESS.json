@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23 21:07:45 UTC",
+  "updated_at": "2026-11-23 21:17:11 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 22.6909,
-  "implemented_total": 2148,
-  "function_annotations": 2148,
+  "matchable_coverage_pct": 22.7015,
+  "implemented_total": 2149,
+  "function_annotations": 2149,
   "stub_annotations": 0,
-  "perfect_100_count": 2125,
-  "matched_real_functions": 2125,
+  "perfect_100_count": 2126,
+  "matched_real_functions": 2126,
   "average_match_pct": 99.6,
-  "overall_function_coverage_pct": 5.239,
-  "overall_byte_coverage_pct": 1.6098,
+  "overall_function_coverage_pct": 5.2415,
+  "overall_byte_coverage_pct": 1.6099,
   "usage": {
-    "calls_24h": 3469,
+    "calls_24h": 3495,
     "failures_24h": 0,
-    "completion_tokens_24h": 39176904,
-    "reasoning_tokens_24h": 38342505,
-    "avg_latency_s": 183.8
+    "completion_tokens_24h": 39420894,
+    "reasoning_tokens_24h": 38583090,
+    "avg_latency_s": 183.5
   },
   "functions": [
     {
@@ -10227,6 +10227,17 @@
       "file": "Client/App/v8datamodel/TeleportService.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x008eef30",
+      "kind": "FUNCTION",
+      "name": "RBX::TeleportService::setUnk012FD420",
+      "mangled": "?setUnk012FD420@TeleportService@RBX@@QAAXXZ",
+      "file": "Client/App/v8datamodel/TeleportService.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
       "match_pct": 100.0,
       "matchable": true
     },

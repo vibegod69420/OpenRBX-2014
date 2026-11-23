@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23 21:07:45 UTC",
+ "updated_at": "2026-11-23 21:17:11 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 22.6909,
- "implemented_total": 2148,
- "function_annotations": 2148,
+ "matchable_coverage_pct": 22.7015,
+ "implemented_total": 2149,
+ "function_annotations": 2149,
  "stub_annotations": 0,
- "perfect_100_count": 2125,
- "matched_real_functions": 2125,
+ "perfect_100_count": 2126,
+ "matched_real_functions": 2126,
  "average_match_pct": 99.6,
- "overall_function_coverage_pct": 5.239,
- "overall_byte_coverage_pct": 1.6098,
+ "overall_function_coverage_pct": 5.2415,
+ "overall_byte_coverage_pct": 1.6099,
  "usage": {
-  "calls_24h": 3469,
+  "calls_24h": 3495,
   "failures_24h": 0,
-  "completion_tokens_24h": 39176904,
-  "reasoning_tokens_24h": 38342505,
-  "avg_latency_s": 183.8
+  "completion_tokens_24h": 39420894,
+  "reasoning_tokens_24h": 38583090,
+  "avg_latency_s": 183.5
  },
- "functions_total": 2148,
+ "functions_total": 2149,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 637,
-   "functions": 641,
-   "bytes": 33213
+   "matched": 638,
+   "functions": 642,
+   "bytes": 33226
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-18 17:42:17 UTC",
-   "matched": 48,
-   "implemented": 48,
-   "pct": 0.5125
-  },
-  {
    "t": "2026-11-18 17:43:10 UTC",
    "matched": 58,
    "implemented": 58,
@@ -6393,9 +6387,21 @@
    "matched": 2125,
    "implemented": 2148,
    "pct": 22.6909
+  },
+  {
+   "t": "2026-11-23 21:17:11 UTC",
+   "matched": 2126,
+   "implemented": 2149,
+   "pct": 22.7015
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-23T21:13:22",
+   "address": "0x008eef30",
+   "name": "RBX::TeleportService::setUnk012FD420",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-23T21:03:27",
    "address": "0x0045f640",
@@ -7109,13 +7115,7 @@
    "address": "0x006868c0",
    "name": "RBX::Graphics::SceneUpdater::getRenderNodeId",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T02:37:05",
-   "address": "0x008f1c80",
-   "name": "RBX::SyncCallbackDescImpl::registerTeleport",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 16.83
+ "match_rate_per_hour": 16.74
 }

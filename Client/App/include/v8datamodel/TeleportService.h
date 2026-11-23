@@ -18,6 +18,7 @@ public:
 
 	int getConst18957256() const;
 	static int derefInt(const int* p);
+	void __cdecl setUnk012FD420();
 	// AUTO-GENERATED METHODS
 };
 

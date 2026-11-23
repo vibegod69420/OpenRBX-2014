@@ -16,6 +16,12 @@ int TeleportService::derefInt(const int* p)
 	return *p;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008eef30
+void __cdecl TeleportService::setUnk012FD420()
+{
+	*(TeleportService**)0x012FD420 = this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
