@@ -161,6 +161,15 @@ void __cdecl DataModel::dispatchGetImplString()
 		::operator delete(s.ptr);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00857920
+void __cdecl DataModel::dispatchGetImplStringValue()
+{
+	DataModelLocalString s;
+	(*(DataModelGetImplStringHelper**)this)->get(&s);
+	if (s.capacity >= 0x10)
+		::operator delete(s.ptr);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

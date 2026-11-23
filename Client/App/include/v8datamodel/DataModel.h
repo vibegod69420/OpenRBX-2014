@@ -27,6 +27,7 @@ public:
 	void unlinkIntrusive();
 	void __cdecl dispatchGetImpl();
 	void __cdecl dispatchGetImplString();
+	void __cdecl dispatchGetImplStringValue();
 	// AUTO-GENERATED METHODS
 };
 
