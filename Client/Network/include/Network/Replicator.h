@@ -21,6 +21,7 @@ public:
 	Replicator& __cdecl write(const void* data);
 	Replicator& __cdecl writeProperty(const void* data);
 	Replicator& __cdecl writeByte(unsigned char value);
+	void __cdecl sendPendingReplication(void* writer);
 	// AUTO-GENERATED METHODS
 };
 

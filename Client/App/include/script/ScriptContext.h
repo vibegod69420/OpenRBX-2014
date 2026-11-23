@@ -63,6 +63,7 @@ public:
 	void __cdecl pushObject(void* object);
 	void releaseState();
 	void __cdecl lockMetatable(int idx);
+	void __cdecl reportError(bool* /*unused*/);
 	// AUTO-GENERATED METHODS
 };
 

@@ -24,6 +24,7 @@ public:
 	void unload();
 	void clear();
 	int __cdecl getTableValue();
+	int __cdecl getData(void* param, int index);
 	// AUTO-GENERATED METHODS
 };
 

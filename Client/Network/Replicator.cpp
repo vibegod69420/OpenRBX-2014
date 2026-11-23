@@ -51,6 +51,24 @@ Replicator& __cdecl Replicator::writeByte(unsigned char value)
 	return *this;
 }
 
+struct ReplicatorPendingReader
+{
+	void* __thiscall readPending(void* out);
+};
+
+struct ReplicatorPendingWriter
+{
+	void __thiscall writePending(void* data);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c6f3b0
+void __cdecl Replicator::sendPendingReplication(void* writer)
+{
+	void* local;
+	void* data = ((ReplicatorPendingReader*)this)->readPending(&local);
+	((ReplicatorPendingWriter*)writer)->writePending(data);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

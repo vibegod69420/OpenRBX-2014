@@ -92,6 +92,26 @@ int __cdecl MegaCluster::getTableValue()
 	return ((int*)0x00E39C4C)[*(int*)this];
 }
 
+struct MegaClusterTerrainQuery
+{
+	int f0;
+	int f4;
+	int result;
+	MegaCluster* owner;
+	void execute(void* p);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00662ed0
+int __cdecl MegaCluster::getData(void* param, int index)
+{
+	MegaClusterTerrainQuery q;
+	q.f0 = index;
+	q.result = 0;
+	q.owner = this;
+	q.execute(param);
+	return q.result;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

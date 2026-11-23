@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23 22:12:33 UTC",
+  "updated_at": "2026-11-23 22:21:41 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 22.787,
-  "implemented_total": 2158,
-  "function_annotations": 2158,
+  "matchable_coverage_pct": 22.819,
+  "implemented_total": 2161,
+  "function_annotations": 2161,
   "stub_annotations": 0,
-  "perfect_100_count": 2134,
-  "matched_real_functions": 2134,
+  "perfect_100_count": 2137,
+  "matched_real_functions": 2137,
   "average_match_pct": 99.57,
-  "overall_function_coverage_pct": 5.2612,
-  "overall_byte_coverage_pct": 1.6125,
+  "overall_function_coverage_pct": 5.2686,
+  "overall_byte_coverage_pct": 1.6138,
   "usage": {
-    "calls_24h": 3647,
+    "calls_24h": 3682,
     "failures_24h": 0,
-    "completion_tokens_24h": 40893358,
-    "reasoning_tokens_24h": 40034580,
-    "avg_latency_s": 182.3
+    "completion_tokens_24h": 41132968,
+    "reasoning_tokens_24h": 40270526,
+    "avg_latency_s": 181.8
   },
   "functions": [
     {
@@ -5765,6 +5765,17 @@
       "matchable": true
     },
     {
+      "address": "0x00662ed0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::MegaCluster::getData",
+      "mangled": "?getData@MegaCluster@Graphics@RBX@@QAAHPAXH@Z",
+      "file": "Client/Rendering/GfxRender/MegaCluster.cpp",
+      "orig_size": 43,
+      "recomp_size": 43,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00665360",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::MegaCluster::clear",
@@ -9820,6 +9831,17 @@
       "file": "Client/App/v8datamodel/sp_counted_impl_pd.cpp",
       "orig_size": 41,
       "recomp_size": 41,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x008dd840",
+      "kind": "FUNCTION",
+      "name": "RBX::ScriptContext::reportError",
+      "mangled": "?reportError@ScriptContext@RBX@@QAAXXZ",
+      "file": "Client/App/script/ScriptContext.cpp",
+      "orig_size": 47,
+      "recomp_size": 47,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -18070,6 +18092,17 @@
       "file": "Client/Network/StatsUpdateJob.cpp",
       "orig_size": 47,
       "recomp_size": 47,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c6f3b0",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::Replicator::sendPendingReplication",
+      "mangled": "?sendPendingReplication@Replicator@Network@RBX@@QAAXPAX@Z",
+      "file": "Client/Network/Replicator.cpp",
+      "orig_size": 29,
+      "recomp_size": 29,
       "match_pct": 100.0,
       "matchable": true
     },
