@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23 15:29:55 UTC",
+  "updated_at": "2026-11-23 15:39:16 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 22.5734,
-  "implemented_total": 2137,
-  "function_annotations": 2137,
+  "matchable_coverage_pct": 22.6268,
+  "implemented_total": 2142,
+  "function_annotations": 2142,
   "stub_annotations": 0,
-  "perfect_100_count": 2114,
-  "matched_real_functions": 2114,
+  "perfect_100_count": 2119,
+  "matched_real_functions": 2119,
   "average_match_pct": 99.6,
-  "overall_function_coverage_pct": 5.2119,
-  "overall_byte_coverage_pct": 1.6019,
+  "overall_function_coverage_pct": 5.2242,
+  "overall_byte_coverage_pct": 1.6039,
   "usage": {
-    "calls_24h": 2928,
+    "calls_24h": 2968,
     "failures_24h": 0,
-    "completion_tokens_24h": 32272234,
-    "reasoning_tokens_24h": 31633748,
-    "avg_latency_s": 181.9
+    "completion_tokens_24h": 32598171,
+    "reasoning_tokens_24h": 31948992,
+    "avg_latency_s": 181.2
   },
   "functions": [
     {
@@ -1420,6 +1420,17 @@
       "matchable": true
     },
     {
+      "address": "0x004fa790",
+      "kind": "FUNCTION",
+      "name": "call",
+      "mangled": "?firePropertyChange@PropertyTreeWidget@@QAEXXZ",
+      "file": "Client/App/reflection/PropertyTreeWidget.cpp",
+      "orig_size": 37,
+      "recomp_size": 37,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00500320",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::CullableSceneNode::getConst1",
@@ -1592,6 +1603,17 @@
       "file": "Client/App/v8datamodel/Animation.cpp",
       "orig_size": 30,
       "recomp_size": 30,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0052e280",
+      "kind": "FUNCTION",
+      "name": "modelInstance_clearElements",
+      "mangled": "?modelInstance_clearElements@RBX@@YAXPAXH@Z",
+      "file": "Client/App/v8datamodel/ModelInstance.cpp",
+      "orig_size": 37,
+      "recomp_size": 37,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -6425,6 +6447,17 @@
       "matchable": true
     },
     {
+      "address": "0x006b98c0",
+      "kind": "FUNCTION",
+      "name": "RBX::EditSelectionVerb::sub_006B98C0",
+      "mangled": "?sub_006B98C0@EditSelectionVerb@RBX@@QAAPAV12@HH@Z",
+      "file": "Client/App/v8datamodel/EditSelectionVerb.cpp",
+      "orig_size": 36,
+      "recomp_size": 36,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x006bba60",
       "kind": "FUNCTION",
       "name": "RBX::worker_thread::data::dispose",
@@ -10084,6 +10117,17 @@
       "file": "Client/App/script/ScriptContext.cpp",
       "orig_size": 49,
       "recomp_size": 49,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x008dfac0",
+      "kind": "FUNCTION",
+      "name": "RBX::ScriptContext::lockMetatable",
+      "mangled": "?lockMetatable@ScriptContext@RBX@@QAAXH@Z",
+      "file": "Client/App/script/ScriptContext.cpp",
+      "orig_size": 39,
+      "recomp_size": 39,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -16024,6 +16068,17 @@
       "file": "Client/App/v8world/Assembly.cpp",
       "orig_size": 158,
       "recomp_size": 158,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b8c920",
+      "kind": "FUNCTION",
+      "name": "RBX::RotatePJoint::inKernel",
+      "mangled": "?inKernel@RotatePJoint@RBX@@QAE_NXZ",
+      "file": "Client/App/v8world/RotatePJoint.cpp",
+      "orig_size": 39,
+      "recomp_size": 39,
       "match_pct": 100.0,
       "matchable": true
     },

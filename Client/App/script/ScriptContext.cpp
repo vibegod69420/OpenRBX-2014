@@ -634,6 +634,18 @@ void ScriptContext::releaseState()
 	ScriptContextDeleteState(*(void**)this);
 }
 
+struct lua_State;
+void lua_pushstring(lua_State* L, const char* s);
+void lua_setfield(lua_State* L, int idx, const char* k);
+
+// FUNCTION: ROBLOXSTUDIO 0x008dfac0
+void __cdecl ScriptContext::lockMetatable(int idx)
+{
+	lua_State* L = (lua_State*)this;
+	lua_pushstring(L, "The metatable is locked");
+	lua_setfield(L, idx - 1, "__metatable");
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -20,6 +20,7 @@ public:
 	int getConst7() const;
 	void removeChild();
 	void* __cdecl getBodyFromId(int* id);
+	bool inKernel();
 	// AUTO-GENERATED METHODS
 };
 

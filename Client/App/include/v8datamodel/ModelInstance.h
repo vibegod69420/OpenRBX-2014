@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void clearElements(void* elements, int count);
 	// AUTO-GENERATED METHODS
 };
 

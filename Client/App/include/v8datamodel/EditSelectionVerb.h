@@ -20,6 +20,7 @@ public:
 	int addRef();
 	void __cdecl setActive();
 	void setVtableOrHead(int value);
+	EditSelectionVerb* __cdecl sub_006B98C0(int a2, int a3);
 	// AUTO-GENERATED METHODS
 };
 

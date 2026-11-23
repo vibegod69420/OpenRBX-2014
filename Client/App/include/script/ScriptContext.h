@@ -62,6 +62,7 @@ public:
 	void* __cdecl getScriptStateNode(void* context);
 	void __cdecl pushObject(void* object);
 	void releaseState();
+	void __cdecl lockMetatable(int idx);
 	// AUTO-GENERATED METHODS
 };
 

@@ -34,6 +34,16 @@ void EditSelectionVerb::setVtableOrHead(int value)
     _vtable_or_head = value;
 }
 
+void __cdecl sub_006B99C0(EditSelectionVerb* self, int a2, int* a3);
+
+// FUNCTION: ROBLOXSTUDIO 0x006b98c0
+EditSelectionVerb* __cdecl EditSelectionVerb::sub_006B98C0(int a2, int a3)
+{
+	volatile int local;
+	sub_006B99C0((local = 0, this), a2, &a3);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

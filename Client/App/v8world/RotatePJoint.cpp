@@ -115,6 +115,29 @@ void* __cdecl RotatePJoint::getBodyFromId(int* id)
 	return self->bodies[index];
 }
 
+struct RotatePJoint_GetBodyVf
+{
+	virtual void vf0();
+	virtual void vf1();
+	virtual void vf2();
+	virtual void vf3();
+	virtual void vf4();
+	virtual void* getBody(int index);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00b8c920
+bool RotatePJoint::inKernel()
+{
+	for (int i = 0; i < 2; ++i)
+	{
+		void* body = reinterpret_cast<RotatePJoint_GetBodyVf*>(this)->getBody(i);
+		if (body && *reinterpret_cast<RotatePJoint**>(reinterpret_cast<char*>(body) + 0x28) == this)
+			return true;
+	}
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
