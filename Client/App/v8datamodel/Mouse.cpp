@@ -140,6 +140,30 @@ int Mouse::getViewSizeX()
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b0b8f0
+int Mouse::getViewSizeY()
+{
+	reinterpret_cast<MouseVt*>(this)->v42();
+
+	if (*reinterpret_cast<unsigned char*>(0x127c0f8))
+	{
+		MouseViewTarget* target = getMouseViewTarget(*reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 0x8C));
+		if (target)
+		{
+			float out[2];
+			return static_cast<int>(target->getViewCoord(out)[1]);
+		}
+	}
+	else
+	{
+		void* object = *reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 0xB0);
+		if (object)
+			return static_cast<int>(*reinterpret_cast<short*>(reinterpret_cast<char*>(object) + 0x8A));
+	}
+
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

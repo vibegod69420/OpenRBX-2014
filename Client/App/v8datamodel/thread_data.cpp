@@ -139,6 +139,27 @@ thread_data* thread_data::construct()
 
 #pragma optimize("", on)
 
+struct thread_data_run_callee_0c63d90
+{
+	void __thiscall dispatch(void*, void*, void*);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c63d90
+void __cdecl thread_data::run_entry()
+{
+	struct layout
+	{
+		void (thread_data_run_callee_0c63d90::*fn)(void*, void*, void*);
+		thread_data_run_callee_0c63d90* obj;
+		char pad[0x18];
+		void* arg20;
+		void* arg24;
+	};
+
+	layout* p = *reinterpret_cast<layout**>(this);
+	(p->obj->*p->fn)(&p->pad, p->arg20, p->arg24);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace boost
