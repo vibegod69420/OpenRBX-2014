@@ -19,6 +19,7 @@ public:
 	int release();
 	int addRef();
 	void __cdecl setActive();
+	void setVtableOrHead(int value);
 	// AUTO-GENERATED METHODS
 };
 

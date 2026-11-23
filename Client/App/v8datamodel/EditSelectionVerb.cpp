@@ -28,6 +28,12 @@ void __cdecl EditSelectionVerb::setActive()
 	g_activeEditSelectionVerb = this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006b9720
+void EditSelectionVerb::setVtableOrHead(int value)
+{
+    _vtable_or_head = value;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
