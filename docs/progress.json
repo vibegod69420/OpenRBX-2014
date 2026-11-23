@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23 09:29:29 UTC",
+ "updated_at": "2026-11-23 09:39:42 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,29 +16,29 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 22.3171,
- "implemented_total": 2113,
- "function_annotations": 2113,
+ "matchable_coverage_pct": 22.3278,
+ "implemented_total": 2114,
+ "function_annotations": 2114,
  "stub_annotations": 0,
- "perfect_100_count": 2090,
- "matched_real_functions": 2090,
+ "perfect_100_count": 2091,
+ "matched_real_functions": 2091,
  "average_match_pct": 99.6,
- "overall_function_coverage_pct": 5.1527,
- "overall_byte_coverage_pct": 1.5845,
+ "overall_function_coverage_pct": 5.1552,
+ "overall_byte_coverage_pct": 1.5851,
  "usage": {
-  "calls_24h": 2187,
+  "calls_24h": 2220,
   "failures_24h": 0,
-  "completion_tokens_24h": 23893066,
-  "reasoning_tokens_24h": 23440554,
+  "completion_tokens_24h": 24256451,
+  "reasoning_tokens_24h": 23798516,
   "avg_latency_s": 172.6
  },
- "functions_total": 2113,
+ "functions_total": 2114,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
-   "matched": 271,
-   "functions": 271,
-   "bytes": 43952
+   "matched": 272,
+   "functions": 272,
+   "bytes": 44006
   },
   {
    "name": "App/v8datamodel",
@@ -6291,9 +6291,21 @@
    "matched": 2090,
    "implemented": 2113,
    "pct": 22.3171
+  },
+  {
+   "t": "2026-11-23 09:39:42 UTC",
+   "matched": 2091,
+   "implemented": 2114,
+   "pct": 22.3278
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-23T09:35:50",
+   "address": "0x005f4330",
+   "name": "RBX::Graphics::VertexLayout::initAMDMultiDrawIndirect",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-23T09:20:32",
    "address": "0x00533210",
@@ -7007,13 +7019,7 @@
    "address": "0x0046bee0",
    "name": "RobloxKeyboardConfigWidget::metaObject",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-22T23:37:34",
-   "address": "0x0046b9d0",
-   "name": "RobloxInputConfigDialog::getUiField18",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 18.53
+ "match_rate_per_hour": 18.51
 }

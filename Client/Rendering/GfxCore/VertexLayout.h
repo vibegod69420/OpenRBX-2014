@@ -111,6 +111,7 @@ public:
 	bool initARBSeparateShaderObjects();
 	bool initARBVertexProgram();
 	bool initGL20();
+	bool initAMDMultiDrawIndirect();
 	// AUTO-GENERATED METHODS
 };
 

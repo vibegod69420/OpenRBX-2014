@@ -6189,6 +6189,26 @@ bool VertexLayout::initGL20()
 	return false;
 }
 
+extern void* g_glMultiDrawArraysIndirectAMD;
+extern void* g_glMultiDrawElementsIndirectAMD;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f4330
+bool VertexLayout::initAMDMultiDrawIndirect()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glMultiDrawArraysIndirectAMD");
+	g_glMultiDrawArraysIndirectAMD = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glMultiDrawElementsIndirectAMD");
+	g_glMultiDrawElementsIndirectAMD = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
