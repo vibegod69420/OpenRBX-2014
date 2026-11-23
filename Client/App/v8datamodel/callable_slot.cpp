@@ -637,6 +637,15 @@ void callable_slot::invokeBound()
 	data->func(data->obj, data->arg);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00ae1d00
+void __cdecl callable_slot::invoke(unsigned short a1, unsigned short a2, unsigned short a3, unsigned short a4)
+{
+	typedef void(__thiscall* Invoker)(void*, unsigned short*, unsigned short*, unsigned short*, unsigned short*);
+	Invoker invoker = *(Invoker*)this;
+	void* bound = (void*)((char*)*(int*)((char*)this + 4) + *(int*)((char*)this + 8));
+	invoker(bound, &a1, &a2, &a3, &a4);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

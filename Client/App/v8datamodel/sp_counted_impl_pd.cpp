@@ -229,6 +229,19 @@ unsigned char __cdecl sp_counted_impl_pd::getByte()
 	return *getter->func(getter->arg);
 }
 
+void __cdecl sp_counted_impl_pd_dispose_helper_7b4ec0(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x0040df80
+void sp_counted_impl_pd::dispose_managed()
+{
+	void* px = *(void**)((char*)this + 0xC);
+	sp_counted_impl_pd_dispose_helper_7b4ec0(px);
+	if (px)
+	{
+		((sp_counted_impl_pd_scalar_deleting_dtor*)((char*)px + 0x18))->destroy(1);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

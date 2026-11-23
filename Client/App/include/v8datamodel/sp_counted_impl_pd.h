@@ -35,6 +35,7 @@ public:
 	sp_counted_impl_pd* __cdecl init();
 	void* __cdecl get_deleter(const void* arg);
 	unsigned char __cdecl getByte();
+	void dispose_managed();
 	// AUTO-GENERATED METHODS
 };
 

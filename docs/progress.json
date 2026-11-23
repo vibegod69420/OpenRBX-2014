@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23 15:02:39 UTC",
+ "updated_at": "2026-11-23 15:11:30 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 22.4453,
- "implemented_total": 2125,
- "function_annotations": 2125,
+ "matchable_coverage_pct": 22.4773,
+ "implemented_total": 2128,
+ "function_annotations": 2128,
  "stub_annotations": 0,
- "perfect_100_count": 2102,
- "matched_real_functions": 2102,
+ "perfect_100_count": 2105,
+ "matched_real_functions": 2105,
  "average_match_pct": 99.6,
- "overall_function_coverage_pct": 5.1823,
- "overall_byte_coverage_pct": 1.5976,
+ "overall_function_coverage_pct": 5.1897,
+ "overall_byte_coverage_pct": 1.5993,
  "usage": {
-  "calls_24h": 2838,
+  "calls_24h": 2863,
   "failures_24h": 0,
-  "completion_tokens_24h": 31406719,
-  "reasoning_tokens_24h": 30785802,
+  "completion_tokens_24h": 31678610,
+  "reasoning_tokens_24h": 31049315,
   "avg_latency_s": 182.8
  },
- "functions_total": 2125,
+ "functions_total": 2128,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 627,
-   "functions": 631,
-   "bytes": 32821
+   "matched": 630,
+   "functions": 634,
+   "bytes": 32979
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -6357,9 +6357,33 @@
    "matched": 2102,
    "implemented": 2125,
    "pct": 22.4453
+  },
+  {
+   "t": "2026-11-23 15:11:30 UTC",
+   "matched": 2105,
+   "implemented": 2128,
+   "pct": 22.4773
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-23T15:06:33",
+   "address": "0x00894980",
+   "name": "RBX::UnionOperation::sub_894980",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T15:04:55",
+   "address": "0x00ae1d00",
+   "name": "RBX::callable_slot::invoke",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T15:02:41",
+   "address": "0x0040df80",
+   "name": "RBX::sp_counted_impl_pd::dispose_managed",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-23T14:58:52",
    "address": "0x00857920",
@@ -7060,24 +7084,6 @@
    "ts": "2026-11-23T02:09:13",
    "address": "0x007b56c0",
    "name": "RBX::GlobalAdvancedSettings::registerGlobalAdvancedSettingsItemFromFactory",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T02:08:43",
-   "address": "0x00b6ffb0",
-   "name": "RBX::RBX::TriangleMesh::func_B6FFB0",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T02:07:55",
-   "address": "0x00cf4080",
-   "name": "TagItemWrite",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T02:02:15",
-   "address": "0x006b9580",
-   "name": "RBX::EditSelectionVerb::setActive",
    "pct": 100.0
   }
  ],

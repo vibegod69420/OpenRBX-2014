@@ -265,6 +265,43 @@ void UnionOperation::sub_893910()
 	}
 }
 
+namespace {
+
+void __cdecl sub_6B9740(int flag, const char* msg); // 0x006B9740
+
+struct UnionOpSlotDC_894980
+{
+	void sub_99E490(void* arg); // 0x0099e490
+};
+
+} // namespace
+
+// FUNCTION: ROBLOXSTUDIO 0x00894980
+void UnionOperation::sub_894980()
+{
+	unsigned char debugFlag = *(unsigned char*)0x012DE657;
+	if (debugFlag)
+	{
+		if (*(int*)(*(char**)((char*)this + 0x44) + 0x4C) != 0)
+		{
+			AssertHookFn hook = *(AssertHookFn*)0x012DE694;
+			if (hook)
+			{
+				if (hook(
+					"!fw()->myWorld.get()",
+					"D:\\BuildAgent\\work\\Trunk2012\\Client\\App\\v8datamodel\\PartInstance.cpp",
+					0x1BB) != 0)
+					goto tail;
+				debugFlag = *(unsigned char*)0x012DE657;
+			}
+			sub_6B9740((int)debugFlag, "!fw()->myWorld.get() file: D:\\BuildAgent\\work\\Trunk2012\\Client\\App\\v8datamodel\\PartInstance.cpp line: 443");
+		}
+	}
+
+tail:
+	(*(UnionOpSlotDC_894980**)((char*)this + 0xDC))->sub_99E490((char*)this + 0xC);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
