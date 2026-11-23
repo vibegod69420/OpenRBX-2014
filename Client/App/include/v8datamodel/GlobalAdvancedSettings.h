@@ -18,6 +18,7 @@ public:
 
 	void registerGlobalAdvancedSettingsItem();
 	void registerGlobalAdvancedSettingsItemFromFactory();
+	GlobalAdvancedSettings* __cdecl initSingleton();
 	// AUTO-GENERATED METHODS
 };
 
