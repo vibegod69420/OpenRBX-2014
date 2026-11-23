@@ -28,6 +28,7 @@ public:
 	~chainbuf();
 	void purge();
 	void __cdecl read(void* destination);
+	void __cdecl write_float(void* destination);
 	// AUTO-GENERATED METHODS
 };
 
