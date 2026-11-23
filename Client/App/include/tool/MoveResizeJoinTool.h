@@ -17,6 +17,7 @@ public:
 	};
 
 	const float*getSnapValues();
+	bool isEnabled();
 	// AUTO-GENERATED METHODS
 };
 
