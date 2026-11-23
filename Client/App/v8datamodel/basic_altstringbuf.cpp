@@ -124,6 +124,13 @@ int __cdecl basic_altstringbuf::Init(unsigned char mode, const unsigned char* sr
 	return -4;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00cf4e30
+unsigned int __cdecl basic_altstringbuf::CalcBufferSize()
+{
+	unsigned int value = static_cast<unsigned int>(_vtable_or_head);
+	return (value >> 3) + value;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

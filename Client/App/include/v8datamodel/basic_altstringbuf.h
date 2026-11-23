@@ -24,6 +24,7 @@ public:
 	void Create();
 	void Close();
 	int __cdecl Init(unsigned char mode, const unsigned char* src);
+	unsigned int __cdecl CalcBufferSize();
 	// AUTO-GENERATED METHODS
 };
 

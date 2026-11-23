@@ -23,6 +23,13 @@ Replicator& __cdecl Replicator::writeFields(const void* data)
 	return *this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c702e0
+Replicator& __cdecl Replicator::write(const void* data)
+{
+	reinterpret_cast<ReplicatorFieldWriter*>(this)->writeField(data);
+	return *this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

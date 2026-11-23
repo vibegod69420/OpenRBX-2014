@@ -20,6 +20,7 @@ public:
 	void onDestroy();
 	static void destroyInstance(CameraZoomOutCommand* p);
 	static void destroyInstance_49e0(CameraZoomOutCommand* p);
+	unsigned char isEnabled();
 	// AUTO-GENERATED METHODS
 };
 
