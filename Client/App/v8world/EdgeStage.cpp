@@ -26,6 +26,22 @@ void* EdgeStage::allocateEdge()
 	return edge;
 }
 
+extern char EdgeStage_vftable[];
+
+struct EdgeStageEdgeList
+{
+	void construct();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c11270
+EdgeStage::EdgeStage()
+{
+	EdgeStageEdgeList* list = (EdgeStageEdgeList*)((char*)this + 4);
+	*(void**)this = EdgeStage_vftable;
+	list->construct();
+	*(int*)((char*)this + 0x14) = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

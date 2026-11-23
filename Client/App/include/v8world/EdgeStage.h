@@ -17,6 +17,7 @@ public:
 	};
 
 	void*allocateEdge();
+	EdgeStage();
 	// AUTO-GENERATED METHODS
 };
 

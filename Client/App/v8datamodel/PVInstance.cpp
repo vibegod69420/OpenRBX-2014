@@ -26,6 +26,20 @@ PVInstance* PVInstance::getAncestorPVInstance()
 	return 0;
 }
 
+class PVInstanceHelper0x8449A0
+{
+public:
+	void fn(void* arg, int flag);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0083aeb0
+PVInstance* __cdecl PVInstance::getTopLevelPVInstance(void* arg)
+{
+	volatile int local = 0;
+	((PVInstanceHelper0x8449A0*)this)->fn(arg, 1);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
