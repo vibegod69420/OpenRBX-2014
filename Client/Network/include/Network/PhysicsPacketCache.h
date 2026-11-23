@@ -18,6 +18,7 @@ public:
 	};
 
 	void acquire();
+	void release();
 	// AUTO-GENERATED METHODS
 };
 
