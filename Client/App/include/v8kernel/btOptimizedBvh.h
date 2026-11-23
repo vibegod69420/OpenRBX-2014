@@ -17,6 +17,7 @@ public:
 	};
 
 	int getConst84() const;
+	btOptimizedBvh**createStaticInstance();
 	// AUTO-GENERATED METHODS
 };
 
