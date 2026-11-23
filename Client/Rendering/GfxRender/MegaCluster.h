@@ -23,6 +23,7 @@ public:
 	int getCount() const;
 	void unload();
 	void clear();
+	int __cdecl getTableValue();
 	// AUTO-GENERATED METHODS
 };
 

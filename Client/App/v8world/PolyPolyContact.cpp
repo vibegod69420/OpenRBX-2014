@@ -210,6 +210,12 @@ void __cdecl PolyPolyContact::computePolyPoly(void* arg1, void* arg2)
 	edge[0] = 12;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c184f0
+void __cdecl PolyPolyContact::commitSeparatingEdge()
+{
+	*(int*)((char*)this + 0x1C) = *(int*)((char*)this + 0x18);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

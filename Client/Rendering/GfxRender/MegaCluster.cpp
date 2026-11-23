@@ -86,6 +86,12 @@ void MegaCluster::clear()
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00662b60
+int __cdecl MegaCluster::getTableValue()
+{
+	return ((int*)0x00E39C4C)[*(int*)this];
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

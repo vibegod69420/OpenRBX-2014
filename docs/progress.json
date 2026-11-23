@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23 04:23:26 UTC",
+ "updated_at": "2026-11-23 04:32:07 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 21.6337,
- "implemented_total": 2048,
- "function_annotations": 2048,
+ "matchable_coverage_pct": 21.6551,
+ "implemented_total": 2050,
+ "function_annotations": 2050,
  "stub_annotations": 0,
- "perfect_100_count": 2026,
- "matched_real_functions": 2026,
+ "perfect_100_count": 2028,
+ "matched_real_functions": 2028,
  "average_match_pct": 99.59,
- "overall_function_coverage_pct": 4.9949,
- "overall_byte_coverage_pct": 1.5579,
+ "overall_function_coverage_pct": 4.9999,
+ "overall_byte_coverage_pct": 1.5582,
  "usage": {
-  "calls_24h": 1240,
+  "calls_24h": 1267,
   "failures_24h": 0,
-  "completion_tokens_24h": 13895217,
-  "reasoning_tokens_24h": 13621910,
-  "avg_latency_s": 177.6
+  "completion_tokens_24h": 14123862,
+  "reasoning_tokens_24h": 13845812,
+  "avg_latency_s": 176.2
  },
- "functions_total": 2048,
+ "functions_total": 2050,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -54,9 +54,9 @@
   },
   {
    "name": "App/v8world",
-   "matched": 150,
-   "functions": 150,
-   "bytes": 10204
+   "matched": 151,
+   "functions": 151,
+   "bytes": 10218
   },
   {
    "name": "App/script",
@@ -84,9 +84,9 @@
   },
   {
    "name": "Rendering/GfxRender",
-   "matched": 56,
-   "functions": 56,
-   "bytes": 2349
+   "matched": 57,
+   "functions": 57,
+   "bytes": 2366
   },
   {
    "name": "App/humanoid",
@@ -6123,9 +6123,27 @@
    "matched": 2026,
    "implemented": 2048,
    "pct": 21.6337
+  },
+  {
+   "t": "2026-11-23 04:32:07 UTC",
+   "matched": 2028,
+   "implemented": 2050,
+   "pct": 21.6551
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-23T04:28:26",
+   "address": "0x00662b60",
+   "name": "RBX::Graphics::MegaCluster::getTableValue",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T04:24:36",
+   "address": "0x00c184f0",
+   "name": "RBX::PolyPolyContact::commitSeparatingEdge",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-23T04:19:44",
    "address": "0x006b9720",
@@ -6833,19 +6851,7 @@
    "address": "0x00dcd9c0",
    "name": "ProgramMemoryCheckerImpl::init_dcd9c0",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T05:13:12",
-   "address": "0x00dca850",
-   "name": "ProgramMemoryCheckerImpl::init_dca850",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T05:11:17",
-   "address": "0x00dbc0c0",
-   "name": "ProgramMemoryCheckerImpl::init_dbc0c0",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 18.82
+ "match_rate_per_hour": 18.81
 }
