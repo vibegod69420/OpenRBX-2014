@@ -646,6 +646,22 @@ void __cdecl callable_slot::invoke(unsigned short a1, unsigned short a2, unsigne
 	invoker(bound, &a1, &a2, &a3, &a4);
 }
 
+struct callable_slot_8738b0_target
+{
+	char pad[8];
+	void __thiscall sub_863530(int a1, void* a2, void* a3, int a4);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x008738b0
+void __cdecl callable_slot::invokeSlot()
+{
+	void* local;
+	void* p = *(void**)*(void**)((char*)&local + 12);
+	*(unsigned char*)((char*)&local + 12) = 0;
+	((callable_slot_8738b0_target*)((char*)p + 8))->sub_863530(
+		*(int*)((char*)&local + 12), p, &local, 0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
