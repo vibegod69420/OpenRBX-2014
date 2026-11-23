@@ -19,6 +19,7 @@ public:
 
 	void acquire();
 	void release();
+	void releaseAll();
 	// AUTO-GENERATED METHODS
 };
 
