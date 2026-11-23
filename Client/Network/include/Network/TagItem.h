@@ -21,6 +21,7 @@ public:
 	void dispatch();
 	void send();
 	TagItem*read();
+	void __cdecl write();
 	// AUTO-GENERATED METHODS
 };
 

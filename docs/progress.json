@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23 02:05:56 UTC",
+ "updated_at": "2026-11-23 02:15:00 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 21.1853,
- "implemented_total": 2006,
- "function_annotations": 2006,
+ "matchable_coverage_pct": 21.2173,
+ "implemented_total": 2009,
+ "function_annotations": 2009,
  "stub_annotations": 0,
- "perfect_100_count": 1984,
- "matched_real_functions": 1984,
+ "perfect_100_count": 1987,
+ "matched_real_functions": 1987,
  "average_match_pct": 99.57,
- "overall_function_coverage_pct": 4.8914,
- "overall_byte_coverage_pct": 1.5439,
+ "overall_function_coverage_pct": 4.8988,
+ "overall_byte_coverage_pct": 1.5444,
  "usage": {
-  "calls_24h": 793,
+  "calls_24h": 836,
   "failures_24h": 0,
-  "completion_tokens_24h": 9628569,
-  "reasoning_tokens_24h": 9422402,
-  "avg_latency_s": 192.8
+  "completion_tokens_24h": 9944906,
+  "reasoning_tokens_24h": 9734921,
+  "avg_latency_s": 188.8
  },
- "functions_total": 2006,
+ "functions_total": 2009,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 577,
-   "functions": 581,
-   "bytes": 30788
+   "matched": 578,
+   "functions": 582,
+   "bytes": 30806
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -54,9 +54,9 @@
   },
   {
    "name": "App/v8world",
-   "matched": 148,
-   "functions": 148,
-   "bytes": 10158
+   "matched": 149,
+   "functions": 149,
+   "bytes": 10176
   },
   {
    "name": "App/script",
@@ -413,6 +413,12 @@
    "bytes": 50
   },
   {
+   "name": "Network/TagItem.cpp",
+   "matched": 5,
+   "functions": 5,
+   "bytes": 49
+  },
+  {
    "name": "Network/Replicator.cpp",
    "matched": 1,
    "functions": 1,
@@ -459,12 +465,6 @@
    "matched": 1,
    "functions": 1,
    "bytes": 36
-  },
-  {
-   "name": "Network/TagItem.cpp",
-   "matched": 4,
-   "functions": 4,
-   "bytes": 35
   },
   {
    "name": "Network/ClientReplicator.cpp",
@@ -6021,9 +6021,33 @@
    "matched": 1984,
    "implemented": 2006,
    "pct": 21.1853
+  },
+  {
+   "t": "2026-11-23 02:15:00 UTC",
+   "matched": 1987,
+   "implemented": 2009,
+   "pct": 21.2173
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-23T02:09:13",
+   "address": "0x007b56c0",
+   "name": "RBX::GlobalAdvancedSettings::registerGlobalAdvancedSettingsItemFromFactory",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T02:08:43",
+   "address": "0x00b6ffb0",
+   "name": "RBX::RBX::TriangleMesh::func_B6FFB0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T02:07:55",
+   "address": "0x00cf4080",
+   "name": "TagItemWrite",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-23T02:02:15",
    "address": "0x006b9580",
@@ -6724,24 +6748,6 @@
    "ts": "2026-11-21T01:54:30",
    "address": "0x00dae780",
    "name": "ProgramMemoryCheckerImpl::init_dae780",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T01:53:29",
-   "address": "0x00c97430",
-   "name": "RBX::sp_counted_impl_pd::getDoubleValue",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T01:53:26",
-   "address": "0x00dadef0",
-   "name": "ProgramMemoryCheckerImpl::init_dadef0",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T01:52:26",
-   "address": "0x00da3400",
-   "name": "ProgramMemoryCheckerImpl::init_da3400",
    "pct": 100.0
   }
  ],

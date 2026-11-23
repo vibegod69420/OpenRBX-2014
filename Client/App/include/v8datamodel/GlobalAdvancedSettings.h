@@ -17,6 +17,7 @@ public:
 	};
 
 	void registerGlobalAdvancedSettingsItem();
+	void registerGlobalAdvancedSettingsItemFromFactory();
 	// AUTO-GENERATED METHODS
 };
 

@@ -16,6 +16,17 @@ void GlobalAdvancedSettings::registerGlobalAdvancedSettingsItem()
 	((GlobalAdvancedSettingsCallee*)this)->registerGlobalAdvancedSettingsItem(&item);
 }
 
+struct GlobalAdvancedSettingsFactory
+{
+	static void** getItem();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x007b56c0
+void GlobalAdvancedSettings::registerGlobalAdvancedSettingsItemFromFactory()
+{
+	((GlobalAdvancedSettingsCallee*)this)->registerGlobalAdvancedSettingsItem(GlobalAdvancedSettingsFactory::getItem());
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

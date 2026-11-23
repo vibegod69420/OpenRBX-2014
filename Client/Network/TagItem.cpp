@@ -36,6 +36,14 @@ TagItem* TagItem::read()
 	return this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00cf4080
+__declspec(dllimport) void __stdcall TagItemWrite(TagItem*);
+
+void __cdecl TagItem::write()
+{
+	TagItemWrite(this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network
