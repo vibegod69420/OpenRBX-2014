@@ -18,6 +18,7 @@ public:
 
 	void clear();
 	void clearLists();
+	void clearList();
 	// AUTO-GENERATED METHODS
 };
 

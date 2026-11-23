@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void dtor_body();
 	// AUTO-GENERATED METHODS
 };
 
