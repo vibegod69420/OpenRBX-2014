@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	PointLight();
 	// AUTO-GENERATED METHODS
 };
 
