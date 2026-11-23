@@ -112,6 +112,7 @@ public:
 	bool initARBVertexProgram();
 	bool initGL20();
 	bool initAMDMultiDrawIndirect();
+	bool initAMDNameGenDelete();
 	// AUTO-GENERATED METHODS
 };
 

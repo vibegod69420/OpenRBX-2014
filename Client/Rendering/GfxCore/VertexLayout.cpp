@@ -6209,6 +6209,32 @@ bool VertexLayout::initAMDMultiDrawIndirect()
 	return false;
 }
 
+extern void* g_glDeleteNamesAMD;
+extern void* g_glGenNamesAMD;
+extern void* g_glIsNameAMD;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f4370
+bool VertexLayout::initAMDNameGenDelete()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glDeleteNamesAMD");
+	g_glDeleteNamesAMD = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glGenNamesAMD");
+	g_glGenNamesAMD = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glIsNameAMD");
+	g_glIsNameAMD = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
