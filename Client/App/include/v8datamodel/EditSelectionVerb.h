@@ -18,6 +18,7 @@ public:
 
 	int release();
 	int addRef();
+	void __cdecl setActive();
 	// AUTO-GENERATED METHODS
 };
 

@@ -20,6 +20,14 @@ int EditSelectionVerb::addRef()
     return _InterlockedIncrement(reinterpret_cast<long volatile*>(&_vtable_or_head));
 }
 
+static EditSelectionVerb* g_activeEditSelectionVerb;
+
+// FUNCTION: ROBLOXSTUDIO 0x006b9580
+void __cdecl EditSelectionVerb::setActive()
+{
+	g_activeEditSelectionVerb = this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
