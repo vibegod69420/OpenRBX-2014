@@ -624,6 +624,16 @@ assert_ok:
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008cfbf0
+void ScriptContext::releaseState()
+{
+	void* it;
+	void* state = *(void**)this;
+
+	((ScriptContextUnlinkHelper*)this)->unlink(&it, *(void**)state, state);
+	ScriptContextDeleteState(*(void**)this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

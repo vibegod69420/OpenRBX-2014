@@ -43,6 +43,22 @@ void* Primitive::getAssemblyPrimitive()
 	return 0;
 }
 
+struct PrimitiveSetClumpHelper
+{
+	void setClump(void*);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0099ccf0
+void Primitive::setClumpFromAssembly()
+{
+	void* arg;
+	if (*(int*)((char*)this + 0xc0) > 0)
+		arg = **(void***)((char*)this + 0xbc);
+	else
+		arg = 0;
+	((PrimitiveSetClumpHelper*)this)->setClump(arg);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

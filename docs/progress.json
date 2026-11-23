@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23 09:10:31 UTC",
+ "updated_at": "2026-11-23 09:20:08 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 22.2317,
- "implemented_total": 2105,
- "function_annotations": 2105,
+ "matchable_coverage_pct": 22.2958,
+ "implemented_total": 2111,
+ "function_annotations": 2111,
  "stub_annotations": 0,
- "perfect_100_count": 2082,
- "matched_real_functions": 2082,
+ "perfect_100_count": 2088,
+ "matched_real_functions": 2088,
  "average_match_pct": 99.59,
- "overall_function_coverage_pct": 5.133,
- "overall_byte_coverage_pct": 1.5816,
+ "overall_function_coverage_pct": 5.1478,
+ "overall_byte_coverage_pct": 1.5838,
  "usage": {
-  "calls_24h": 2114,
+  "calls_24h": 2152,
   "failures_24h": 0,
-  "completion_tokens_24h": 23193123,
-  "reasoning_tokens_24h": 22752466,
-  "avg_latency_s": 173.8
+  "completion_tokens_24h": 23521821,
+  "reasoning_tokens_24h": 23074772,
+  "avg_latency_s": 173.0
  },
- "functions_total": 2105,
+ "functions_total": 2111,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -54,15 +54,15 @@
   },
   {
    "name": "App/v8world",
-   "matched": 157,
-   "functions": 157,
-   "bytes": 10514
+   "matched": 159,
+   "functions": 159,
+   "bytes": 10582
   },
   {
    "name": "App/script",
-   "matched": 134,
-   "functions": 134,
-   "bytes": 9667
+   "matched": 135,
+   "functions": 135,
+   "bytes": 9703
   },
   {
    "name": "Rendering/g3d",
@@ -167,6 +167,12 @@
    "bytes": 249
   },
   {
+   "name": "Network/StatsUpdateJob.cpp",
+   "matched": 6,
+   "functions": 6,
+   "bytes": 237
+  },
+  {
    "name": "Network/Server.cpp",
    "matched": 2,
    "functions": 2,
@@ -179,22 +185,16 @@
    "bytes": 216
   },
   {
-   "name": "Network/StatsUpdateJob.cpp",
-   "matched": 5,
-   "functions": 5,
-   "bytes": 201
+   "name": "RobloxStudio/QDockWidget.cpp",
+   "matched": 4,
+   "functions": 4,
+   "bytes": 212
   },
   {
    "name": "App/v8tree",
    "matched": 8,
    "functions": 8,
    "bytes": 193
-  },
-  {
-   "name": "RobloxStudio/QDockWidget.cpp",
-   "matched": 3,
-   "functions": 3,
-   "bytes": 176
   },
   {
    "name": "RobloxStudio/ToggleLocalSpaceVerb.cpp",
@@ -455,6 +455,12 @@
    "bytes": 49
   },
   {
+   "name": "RobloxStudio/RobloxIDEDoc.cpp",
+   "matched": 2,
+   "functions": 2,
+   "bytes": 44
+  },
+  {
    "name": "RobloxStudio/QSpinBox.cpp",
    "matched": 1,
    "functions": 1,
@@ -603,12 +609,6 @@
    "matched": 1,
    "functions": 1,
    "bytes": 10
-  },
-  {
-   "name": "RobloxStudio/RobloxIDEDoc.cpp",
-   "matched": 1,
-   "functions": 1,
-   "bytes": 7
   },
   {
    "name": "RobloxStudio/ThreadLogManager.cpp",
@@ -6279,9 +6279,51 @@
    "matched": 2082,
    "implemented": 2105,
    "pct": 22.2317
+  },
+  {
+   "t": "2026-11-23 09:20:08 UTC",
+   "matched": 2088,
+   "implemented": 2111,
+   "pct": 22.2958
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-23T09:16:21",
+   "address": "0x004b6bf0",
+   "name": "fn",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T09:15:27",
+   "address": "0x0043fba0",
+   "name": "QDockWidget::init",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T09:14:43",
+   "address": "0x00af1250",
+   "name": "RBX::RotatePJoint::getBodyFromId",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T09:14:26",
+   "address": "0x00c6dfa0",
+   "name": "RBX::Network::StatsUpdateJob::reservePair",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T09:12:54",
+   "address": "0x008cfbf0",
+   "name": "RBX::ScriptContext::releaseState",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T09:12:52",
+   "address": "0x0099ccf0",
+   "name": "RBX::Primitive::setClumpFromAssembly",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-23T09:05:46",
    "address": "0x0083aef0",
@@ -6965,43 +7007,7 @@
    "address": "0x00857950",
    "name": "RBX::DataModel::dispatchGetImpl",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-22T22:49:12",
-   "address": "0x00690730",
-   "name": "RBX::Graphics::ShaderProgram::func690730",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-22T22:48:57",
-   "address": "0x00b0b950",
-   "name": "RBX::Mouse::getX",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-22T22:48:15",
-   "address": "0x00471b70",
-   "name": "BrickColorPropertyItem::isModified",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-22T22:47:58",
-   "address": "0x0082e850",
-   "name": "RBX::CameraTiltUpCommand::execute",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-22T22:45:54",
-   "address": "0x00be8140",
-   "name": "RBX::DataStore::EventSlot::dispose",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-22T22:45:52",
-   "address": "0x0057df60",
-   "name": "RBX::GetSetImpl::get",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 18.51
+ "match_rate_per_hour": 18.54
 }

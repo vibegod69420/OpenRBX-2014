@@ -61,6 +61,7 @@ public:
 	void* __cdecl getScriptStateNode();
 	void* __cdecl getScriptStateNode(void* context);
 	void __cdecl pushObject(void* object);
+	void releaseState();
 	// AUTO-GENERATED METHODS
 };
 

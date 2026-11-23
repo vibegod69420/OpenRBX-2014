@@ -34,6 +34,22 @@ void __cdecl QDockWidget::getLocation(void* out) const
 	}
 }
 
+class QDockWidgetInitHelper
+{
+public:
+	__declspec(dllimport) void init(QDockWidget* dock, void* arg, int flag);
+};
+
+extern QDockWidgetInitHelper g_qDockWidgetInitHelper;
+
+// FUNCTION: ROBLOXSTUDIO 0x0043fba0
+QDockWidget* __fastcall QDockWidget::init(void* arg)
+{
+	volatile int local = 0;
+	g_qDockWidgetInitHelper.init(this, arg, 0);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

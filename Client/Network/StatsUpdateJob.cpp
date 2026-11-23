@@ -79,6 +79,15 @@ StatsUpdateJob& __cdecl StatsUpdateJob::writeFieldValue(const void* field)
 	return *this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c6dfa0
+StatsUpdateJob& __cdecl StatsUpdateJob::reservePair(unsigned int bits)
+{
+	StatsUpdateJobLayout* self = reinterpret_cast<StatsUpdateJobLayout*>(this);
+	self->reserve(bits);
+	self->reserve(bits + 2);
+	return *this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

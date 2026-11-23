@@ -18,6 +18,7 @@ public:
 	};
 
 	int getField80() const;
+	void releaseData();
 	// AUTO-GENERATED METHODS
 };
 
