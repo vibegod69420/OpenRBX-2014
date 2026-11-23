@@ -159,6 +159,7 @@ public:
 	bool initVertexSUN();
 	bool initPathRenderingNV();
 	bool initVertexProgramNV();
+	bool initProgramParametersEXT();
 	// AUTO-GENERATED METHODS
 };
 

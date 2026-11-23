@@ -5306,6 +5306,18 @@ bool ContextGL::initVertexProgramNV()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005fa790
+bool ContextGL::initProgramParametersEXT()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	void* proc1 = getProc("glProgramEnvParameters4fvEXT");
+	void* proc2 = getProc("glProgramLocalParameters4fvEXT");
+
+	return (proc1 == 0) || (proc2 == 0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

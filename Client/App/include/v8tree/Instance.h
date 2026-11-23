@@ -25,6 +25,7 @@ public:
 	Instance();
 	void fetchContextId();
 	void*getStaticSingleton();
+	void* __cdecl sub_6B7370(void** in);
 	// AUTO-GENERATED METHODS
 };
 

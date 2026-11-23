@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23 03:17:41 UTC",
+  "updated_at": "2026-11-23 03:26:13 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 21.5483,
-  "implemented_total": 2040,
-  "function_annotations": 2040,
+  "matchable_coverage_pct": 21.5697,
+  "implemented_total": 2042,
+  "function_annotations": 2042,
   "stub_annotations": 0,
-  "perfect_100_count": 2018,
-  "matched_real_functions": 2018,
+  "perfect_100_count": 2020,
+  "matched_real_functions": 2020,
   "average_match_pct": 99.58,
-  "overall_function_coverage_pct": 4.9752,
-  "overall_byte_coverage_pct": 1.5536,
+  "overall_function_coverage_pct": 4.9802,
+  "overall_byte_coverage_pct": 1.5547,
   "usage": {
-    "calls_24h": 1092,
+    "calls_24h": 1119,
     "failures_24h": 0,
-    "completion_tokens_24h": 12294752,
-    "reasoning_tokens_24h": 12058514,
-    "avg_latency_s": 178.8
+    "completion_tokens_24h": 12600196,
+    "reasoning_tokens_24h": 12359879,
+    "avg_latency_s": 179.1
   },
   "functions": [
     {
@@ -3422,6 +3422,17 @@
       "matchable": true
     },
     {
+      "address": "0x005fa790",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGL::initProgramParametersEXT",
+      "mangled": "?initMultiDraw@ContextGL@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
+      "orig_size": 54,
+      "recomp_size": 54,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x005fa7d0",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::ContextGL::initGpuShader4EXT",
@@ -5992,6 +6003,17 @@
       "file": "Client/RobloxStudio/windows_file_codecvt.cpp",
       "orig_size": 112,
       "recomp_size": 112,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x006b7370",
+      "kind": "FUNCTION",
+      "name": "RBX::Instance::sub_6B7370",
+      "mangled": "?sub_6B7370@Instance@RBX@@QAAPAXPAPAX@Z",
+      "file": "Client/App/v8tree/Instance.cpp",
+      "orig_size": 49,
+      "recomp_size": 49,
       "match_pct": 100.0,
       "matchable": true
     },

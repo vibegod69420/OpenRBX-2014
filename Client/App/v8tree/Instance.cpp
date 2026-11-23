@@ -63,6 +63,25 @@ void* Instance::getStaticSingleton()
 	return &instance;
 }
 
+__declspec(dllimport) void __stdcall sub_E10114(void*);
+extern int dword_12DE61C;
+extern int dword_12DE620;
+
+// FUNCTION: ROBLOXSTUDIO 0x006b7370
+void* __cdecl Instance::sub_6B7370(void** in)
+{
+	void* p = *in;
+	if (p)
+	{
+		sub_E10114(p);
+		*in = 0;
+	}
+
+	((int*)this)[0] = dword_12DE61C;
+	((int*)this)[1] = dword_12DE620;
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
