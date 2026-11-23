@@ -56,6 +56,32 @@ BodyAngularVelocity::BodyAngularVelocity()
 	*(int*)((char*)this + 0x158) = 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a946a0
+BodyAngularVelocity* BodyAngularVelocity::reset()
+{
+	((BodyAngularVelocity_BaseCtor*)this)->ctor("BodyAngularVelocity");
+
+	*(int*)((char*)this + 0x00) = 0x00EB4524;
+	*(int*)((char*)this + 0x04) = 0x00EB45A4;
+	*(int*)((char*)this + 0x18) = 0x00EB45AC;
+	*(int*)((char*)this + 0x1C) = 0x00EB45B8;
+	*(int*)((char*)this + 0x64) = 0x00EB45CC;
+	*(int*)((char*)this + 0x80) = 0x00EB461C;
+	*(int*)((char*)this + 0xF8) = 0x00EB4638;
+	*(float*)((char*)this + 0x134) = 1250.0f;
+	*(float*)((char*)this + 0x138) = 4000.0f;
+	*(float*)((char*)this + 0x13C) = 4000.0f;
+	*(float*)((char*)this + 0x140) = 4000.0f;
+	*(int*)((char*)this + 0x144) = 0;
+	*(float*)((char*)this + 0x148) = 2.0f;
+	*(int*)((char*)this + 0x14C) = 0;
+	*(int*)((char*)this + 0x150) = 0;
+	*(int*)((char*)this + 0x154) = 0;
+	*(int*)((char*)this + 0x158) = 0;
+
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -18,6 +18,7 @@ public:
 
 	void update();
 	BodyAngularVelocity();
+	BodyAngularVelocity*reset();
 	// AUTO-GENERATED METHODS
 };
 
