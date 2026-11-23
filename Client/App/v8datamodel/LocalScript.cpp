@@ -45,6 +45,15 @@ bool LocalScript::unk_7C8250()
 	return ((LocalScript_IsADesc*)0x011EF0A4)->isA(desc);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x007c8270
+bool LocalScript::unk_7C8270()
+{
+	LocalScript_IsADesc* desc = *(LocalScript_IsADesc**)((char*)*(void**)this + 0x10);
+	if (desc == (LocalScript_IsADesc*)0x011EF0C0)
+		return true;
+	return ((LocalScript_IsADesc*)0x011EF0C0)->isA(desc);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

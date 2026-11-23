@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	RobloxTaskScheduler* __fastcall initialize(void* arg);
 	// AUTO-GENERATED METHODS
 };
 

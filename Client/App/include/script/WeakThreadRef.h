@@ -20,6 +20,7 @@ public:
 	void removeRef();
 	void update();
 	void __cdecl dispatch();
+	WeakThreadRef* __cdecl create(int arg);
 	// AUTO-GENERATED METHODS
 };
 

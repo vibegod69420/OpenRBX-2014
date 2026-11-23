@@ -25,6 +25,7 @@ public:
 	int sub_997830() const;
 	void*sub_997800() const;
 	int sub_997D00() const;
+	void*sub_9977D0() const;
 	// AUTO-GENERATED METHODS
 };
 

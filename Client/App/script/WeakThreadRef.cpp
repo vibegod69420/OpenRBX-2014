@@ -65,6 +65,16 @@ void __cdecl WeakThreadRef::dispatch()
 	}
 }
 
+extern void __cdecl weakThreadRefInit(WeakThreadRef* self, int arg);
+
+// FUNCTION: ROBLOXSTUDIO 0x008c27a0
+WeakThreadRef* __cdecl WeakThreadRef::create(int arg)
+{
+	volatile int local;
+	weakThreadRefInit((local = 0, this), arg);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

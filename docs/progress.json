@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23 05:08:23 UTC",
+ "updated_at": "2026-11-23 05:17:19 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 21.8473,
- "implemented_total": 2069,
- "function_annotations": 2069,
+ "matchable_coverage_pct": 21.9007,
+ "implemented_total": 2074,
+ "function_annotations": 2074,
  "stub_annotations": 0,
- "perfect_100_count": 2046,
- "matched_real_functions": 2046,
+ "perfect_100_count": 2051,
+ "matched_real_functions": 2051,
  "average_match_pct": 99.59,
- "overall_function_coverage_pct": 5.0443,
- "overall_byte_coverage_pct": 1.5634,
+ "overall_function_coverage_pct": 5.0566,
+ "overall_byte_coverage_pct": 1.5653,
  "usage": {
-  "calls_24h": 1406,
+  "calls_24h": 1440,
   "failures_24h": 0,
-  "completion_tokens_24h": 15263488,
-  "reasoning_tokens_24h": 14968355,
-  "avg_latency_s": 171.7
+  "completion_tokens_24h": 15561791,
+  "reasoning_tokens_24h": 15262859,
+  "avg_latency_s": 170.5
  },
- "functions_total": 2069,
+ "functions_total": 2074,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 603,
-   "functions": 607,
-   "bytes": 31649
+   "matched": 606,
+   "functions": 610,
+   "bytes": 31761
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -60,9 +60,9 @@
   },
   {
    "name": "App/script",
-   "matched": 132,
-   "functions": 132,
-   "bytes": 9590
+   "matched": 133,
+   "functions": 133,
+   "bytes": 9622
   },
   {
    "name": "Rendering/g3d",
@@ -483,6 +483,12 @@
    "matched": 1,
    "functions": 1,
    "bytes": 38
+  },
+  {
+   "name": "RobloxStudio/RobloxTaskScheduler.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 36
   },
   {
    "name": "RobloxStudio/QDebuggerClient.cpp",
@@ -6165,9 +6171,45 @@
    "matched": 2046,
    "implemented": 2069,
    "pct": 21.8473
+  },
+  {
+   "t": "2026-11-23 05:17:19 UTC",
+   "matched": 2051,
+   "implemented": 2074,
+   "pct": 21.9007
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-23T05:10:10",
+   "address": "0x009977d0",
+   "name": "RBX::Soundscape::SoundId::sub_9977D0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T05:09:19",
+   "address": "0x007c8270",
+   "name": "RBX::LocalScript::unk_7C8270",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T05:08:42",
+   "address": "0x00534470",
+   "name": "RobloxTaskScheduler::initialize",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T05:08:38",
+   "address": "0x00985e50",
+   "name": "eraseRange",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T05:08:35",
+   "address": "0x008c27a0",
+   "name": "RBX::Lua::WeakThreadRef::create",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-23T05:04:33",
    "address": "0x00478580",
@@ -6857,37 +6899,7 @@
    "address": "0x00dadaa0",
    "name": "ProgramMemoryCheckerImpl::init_dadaa0",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T09:32:29",
-   "address": "0x00dbdd10",
-   "name": "ProgramMemoryCheckerImpl::init_dbdd10",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T09:31:58",
-   "address": "0x00dbdcc0",
-   "name": "ProgramMemoryCheckerImpl::init_dbdcc0",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T09:30:42",
-   "address": "0x00dbdc70",
-   "name": "ProgramMemoryCheckerImpl::init_dbdc70",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T09:27:29",
-   "address": "0x00966120",
-   "name": "RBX::callable_slot::clearFocus",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T08:35:35",
-   "address": "0x00a348d0",
-   "name": "RBX::detail::sp_counted_impl_p::sub_A348D0",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 18.87
+ "match_rate_per_hour": 18.89
 }
