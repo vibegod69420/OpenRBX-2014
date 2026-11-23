@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23 13:11:02 UTC",
+ "updated_at": "2026-11-23 14:02:26 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 22.4239,
- "implemented_total": 2123,
- "function_annotations": 2123,
+ "matchable_coverage_pct": 22.4346,
+ "implemented_total": 2124,
+ "function_annotations": 2124,
  "stub_annotations": 0,
- "perfect_100_count": 2100,
- "matched_real_functions": 2100,
+ "perfect_100_count": 2101,
+ "matched_real_functions": 2101,
  "average_match_pct": 99.6,
- "overall_function_coverage_pct": 5.1774,
- "overall_byte_coverage_pct": 1.5945,
+ "overall_function_coverage_pct": 5.1799,
+ "overall_byte_coverage_pct": 1.5972,
  "usage": {
-  "calls_24h": 2740,
+  "calls_24h": 2809,
   "failures_24h": 0,
-  "completion_tokens_24h": 30210403,
-  "reasoning_tokens_24h": 29624642,
-  "avg_latency_s": 179.8
+  "completion_tokens_24h": 31106578,
+  "reasoning_tokens_24h": 30498664,
+  "avg_latency_s": 182.8
  },
- "functions_total": 2123,
+ "functions_total": 2124,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -78,9 +78,9 @@
   },
   {
    "name": "App/v8kernel",
-   "matched": 75,
-   "functions": 75,
-   "bytes": 2620
+   "matched": 76,
+   "functions": 76,
+   "bytes": 2873
   },
   {
    "name": "Rendering/GfxRender",
@@ -6345,9 +6345,21 @@
    "matched": 2100,
    "implemented": 2123,
    "pct": 22.4239
+  },
+  {
+   "t": "2026-11-23 14:02:26 UTC",
+   "matched": 2101,
+   "implemented": 2124,
+   "pct": 22.4346
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-23T13:58:37",
+   "address": "0x00a981f0",
+   "name": "RBX::BodyForce::getMass",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-23T13:07:15",
    "address": "0x00a946a0",
@@ -7061,13 +7073,7 @@
    "address": "0x00b97f10",
    "name": "RBX::InletTool::isEnabled",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T01:00:59",
-   "address": "0x00b98110",
-   "name": "RBX::MoveResizeJoinTool::isEnabled",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 18.03
+ "match_rate_per_hour": 17.91
 }

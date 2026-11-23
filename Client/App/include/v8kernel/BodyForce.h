@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	float getMass();
 	// AUTO-GENERATED METHODS
 };
 
