@@ -15,6 +15,19 @@ void* __cdecl LuaAllocator::alloc(void* ptr, unsigned int osize, unsigned int ns
 	return ((LuaAllocatorVtbl*)this)->slot0(ptr, osize, nsize);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b81c20
+void __cdecl luaAllocatorSub_A35670(void* L, void* p);
+void __cdecl luaAllocatorSub_A34E50(void* L, int a, int b);
+void __cdecl luaAllocatorSub_A358D0(void* L, int code);
+
+void __cdecl LuaAllocator::allocationError()
+{
+	void* L = this;
+	luaAllocatorSub_A35670(L, (void*)0x00B81C20);
+	luaAllocatorSub_A34E50(L, 0, 0);
+	luaAllocatorSub_A358D0(L, -10000);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

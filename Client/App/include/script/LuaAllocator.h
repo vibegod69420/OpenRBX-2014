@@ -17,6 +17,7 @@ public:
 	};
 
 	void* __cdecl alloc(void* ptr, unsigned int osize, unsigned int nsize);
+	void __cdecl allocationError();
 	// AUTO-GENERATED METHODS
 };
 
