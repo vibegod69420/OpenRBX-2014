@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	CoreScript();
 	// AUTO-GENERATED METHODS
 };
 

@@ -17,6 +17,7 @@ public:
 	};
 
 	RobloxSettings* __fastcall sub_515360(void* arg);
+	RobloxSettings*sub_515260();
 	// AUTO-GENERATED METHODS
 };
 

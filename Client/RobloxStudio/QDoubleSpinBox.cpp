@@ -29,6 +29,17 @@ bool QDoubleSpinBox::isMetaObjectMatch() const
 	return unk_00E10524(&unk_012C6C78, vfunc);
 }
 
+extern "C" char unk_012C6C60;
+
+// FUNCTION: ROBLOXSTUDIO 0x00478580
+bool QDoubleSpinBox::isMetaObjectMatch2() const
+{
+	void* vfunc = (*(void***)this)[4];
+	if (vfunc == &unk_012C6C60)
+		return true;
+	return unk_00E10524(&unk_012C6C60, vfunc);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

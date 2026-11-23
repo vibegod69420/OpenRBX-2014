@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	bool updateDebuggerState();
 	// AUTO-GENERATED METHODS
 };
 

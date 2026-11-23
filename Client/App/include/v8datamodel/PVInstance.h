@@ -18,6 +18,7 @@ public:
 
 	PVInstance*getAncestorPVInstance();
 	PVInstance* __cdecl getTopLevelPVInstance(void* arg);
+	PVInstance* __cdecl getTopLevelPVInstanceEx(void* arg);
 	// AUTO-GENERATED METHODS
 };
 

@@ -22,6 +22,7 @@ public:
 	static int derefInt_01e0(const int* p);
 	int checkField17C() const;
 	TypedStatsItem();
+	TypedStatsItem* __cdecl getOrCreateChildItem(const char* name);
 	// AUTO-GENERATED METHODS
 };
 

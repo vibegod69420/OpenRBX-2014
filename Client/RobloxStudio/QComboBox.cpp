@@ -20,6 +20,17 @@ bool QComboBox::sub_44DB50()
 	return g_QComboBoxSlotTarget.check(slot);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0044da30
+void __cdecl QComboBox::sub_44DA30(int* dst)
+{
+	if (dst)
+	{
+		dst[0] = ((int*)this)[0];
+		dst[1] = ((int*)this)[1];
+		dst[2] = ((int*)this)[2];
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

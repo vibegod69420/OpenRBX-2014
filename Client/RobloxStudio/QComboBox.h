@@ -17,6 +17,7 @@ public:
 	};
 
 	bool sub_44DB50();
+	void __cdecl sub_44DA30(int* dst);
 	// AUTO-GENERATED METHODS
 };
 

@@ -129,6 +129,19 @@ TypedStatsItem::TypedStatsItem()
 	p[100] = 0;
 }
 
+struct TypedStatsItemInitHelper
+{
+	void init(const char* name, int flag);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0067aa70
+TypedStatsItem* __cdecl TypedStatsItem::getOrCreateChildItem(const char* name)
+{
+	volatile int local = 0;
+	reinterpret_cast<TypedStatsItemInitHelper*>(this)->init(name, 1);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
