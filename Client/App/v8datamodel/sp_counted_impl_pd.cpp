@@ -242,6 +242,18 @@ void sp_counted_impl_pd::dispose_managed()
 	}
 }
 
+extern "C" __declspec(dllimport) void* __stdcall GetProcessHeap();
+extern "C" __declspec(dllimport) int __stdcall HeapFree(void* hHeap, unsigned long dwFlags, void* lpMem);
+
+// FUNCTION: ROBLOXSTUDIO 0x0045f640
+void sp_counted_impl_pd::dispose_heap()
+{
+	sp_counted_impl_pd_scalar_deleting_dtor* p =
+		*(sp_counted_impl_pd_scalar_deleting_dtor**)((char*)this + 0xC);
+	p->destroy(0);
+	HeapFree(GetProcessHeap(), 0, p);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

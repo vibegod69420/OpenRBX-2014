@@ -36,6 +36,7 @@ public:
 	void* __cdecl get_deleter(const void* arg);
 	unsigned char __cdecl getByte();
 	void dispose_managed();
+	void dispose_heap();
 	// AUTO-GENERATED METHODS
 };
 
