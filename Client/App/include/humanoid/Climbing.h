@@ -18,6 +18,7 @@ public:
 	};
 
 	bool computeClimb();
+	bool isClimbValid();
 	// AUTO-GENERATED METHODS
 };
 

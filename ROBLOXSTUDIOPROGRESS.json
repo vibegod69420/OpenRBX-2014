@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23 08:05:05 UTC",
+  "updated_at": "2026-11-23 08:16:27 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 22.0609,
-  "implemented_total": 2089,
-  "function_annotations": 2089,
+  "matchable_coverage_pct": 22.0715,
+  "implemented_total": 2090,
+  "function_annotations": 2090,
   "stub_annotations": 0,
-  "perfect_100_count": 2066,
-  "matched_real_functions": 2066,
+  "perfect_100_count": 2067,
+  "matched_real_functions": 2067,
   "average_match_pct": 99.59,
-  "overall_function_coverage_pct": 5.0936,
-  "overall_byte_coverage_pct": 1.5757,
+  "overall_function_coverage_pct": 5.096,
+  "overall_byte_coverage_pct": 1.5767,
   "usage": {
-    "calls_24h": 1907,
+    "calls_24h": 1937,
     "failures_24h": 0,
-    "completion_tokens_24h": 21031016,
-    "reasoning_tokens_24h": 20632238,
-    "avg_latency_s": 175.8
+    "completion_tokens_24h": 21401682,
+    "reasoning_tokens_24h": 20994470,
+    "avg_latency_s": 176.2
   },
   "functions": [
     {
@@ -16145,6 +16145,17 @@
       "file": "Client/App/v8world/CornerWedgeMesh.cpp",
       "orig_size": 28,
       "recomp_size": 28,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00bb67b0",
+      "kind": "FUNCTION",
+      "name": "RBX::HUMAN::Climbing::isClimbValid",
+      "mangled": "?isClimbValid@Climbing@HUMAN@RBX@@QAE_NXZ",
+      "file": "Client/App/humanoid/Climbing.cpp",
+      "orig_size": 100,
+      "recomp_size": 100,
       "match_pct": 100.0,
       "matchable": true
     },

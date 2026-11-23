@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23 08:05:05 UTC",
+ "updated_at": "2026-11-23 08:16:27 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 22.0609,
- "implemented_total": 2089,
- "function_annotations": 2089,
+ "matchable_coverage_pct": 22.0715,
+ "implemented_total": 2090,
+ "function_annotations": 2090,
  "stub_annotations": 0,
- "perfect_100_count": 2066,
- "matched_real_functions": 2066,
+ "perfect_100_count": 2067,
+ "matched_real_functions": 2067,
  "average_match_pct": 99.59,
- "overall_function_coverage_pct": 5.0936,
- "overall_byte_coverage_pct": 1.5757,
+ "overall_function_coverage_pct": 5.096,
+ "overall_byte_coverage_pct": 1.5767,
  "usage": {
-  "calls_24h": 1907,
+  "calls_24h": 1937,
   "failures_24h": 0,
-  "completion_tokens_24h": 21031016,
-  "reasoning_tokens_24h": 20632238,
-  "avg_latency_s": 175.8
+  "completion_tokens_24h": 21401682,
+  "reasoning_tokens_24h": 20994470,
+  "avg_latency_s": 176.2
  },
- "functions_total": 2089,
+ "functions_total": 2090,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -90,9 +90,9 @@
   },
   {
    "name": "App/humanoid",
-   "matched": 41,
-   "functions": 41,
-   "bytes": 1685
+   "matched": 42,
+   "functions": 42,
+   "bytes": 1785
   },
   {
    "name": "RobloxStudio/SoundServiceStatsItem.cpp",
@@ -6249,9 +6249,21 @@
    "matched": 2066,
    "implemented": 2089,
    "pct": 22.0609
+  },
+  {
+   "t": "2026-11-23 08:16:27 UTC",
+   "matched": 2067,
+   "implemented": 2090,
+   "pct": 22.0715
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-23T08:12:48",
+   "address": "0x00bb67b0",
+   "name": "RBX::HUMAN::Climbing::isClimbValid",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-23T07:59:34",
    "address": "0x0085fc00",
@@ -6965,13 +6977,7 @@
    "address": "0x00b7b570",
    "name": "RBX::detail::sp_counted_impl_p::sub_B7B570",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T16:45:49",
-   "address": "0x00b7b2f0",
-   "name": "RBX::detail::sp_counted_impl_p::sub_B7B2F0",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 18.55
+ "match_rate_per_hour": 18.53
 }
