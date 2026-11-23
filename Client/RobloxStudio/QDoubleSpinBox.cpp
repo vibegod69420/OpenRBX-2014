@@ -16,6 +16,19 @@ void __cdecl QDoubleSpinBox::copyInternalData(void* target)
 	}
 }
 
+extern "C" char unk_012C6C78;
+typedef bool (__thiscall *unk_00E10524_t)(void*, void*);
+extern "C" unk_00E10524_t unk_00E10524;
+
+// FUNCTION: ROBLOXSTUDIO 0x004780c0
+bool QDoubleSpinBox::isMetaObjectMatch() const
+{
+	void* vfunc = (*(void***)this)[4];
+	if (vfunc == &unk_012C6C78)
+		return true;
+	return unk_00E10524(&unk_012C6C78, vfunc);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

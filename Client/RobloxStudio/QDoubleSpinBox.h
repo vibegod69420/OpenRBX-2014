@@ -17,6 +17,7 @@ public:
 	};
 
 	void __cdecl copyInternalData(void* target);
+	bool isMetaObjectMatch() const;
 	// AUTO-GENERATED METHODS
 };
 

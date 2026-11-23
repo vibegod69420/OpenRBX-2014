@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	float getLength();
 	// AUTO-GENERATED METHODS
 };
 

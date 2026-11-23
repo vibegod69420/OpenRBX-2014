@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	PluginMouse();
 	// AUTO-GENERATED METHODS
 };
 
