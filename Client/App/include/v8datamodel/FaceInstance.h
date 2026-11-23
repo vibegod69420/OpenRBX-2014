@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	FaceInstance();
 	// AUTO-GENERATED METHODS
 };
 
