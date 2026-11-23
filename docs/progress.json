@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23 05:35:00 UTC",
+ "updated_at": "2026-11-23 05:43:40 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 21.9327,
- "implemented_total": 2077,
- "function_annotations": 2077,
+ "matchable_coverage_pct": 21.9434,
+ "implemented_total": 2078,
+ "function_annotations": 2078,
  "stub_annotations": 0,
- "perfect_100_count": 2054,
- "matched_real_functions": 2054,
+ "perfect_100_count": 2055,
+ "matched_real_functions": 2055,
  "average_match_pct": 99.59,
- "overall_function_coverage_pct": 5.064,
- "overall_byte_coverage_pct": 1.5667,
+ "overall_function_coverage_pct": 5.0664,
+ "overall_byte_coverage_pct": 1.5672,
  "usage": {
-  "calls_24h": 1500,
+  "calls_24h": 1536,
   "failures_24h": 0,
-  "completion_tokens_24h": 16184948,
-  "reasoning_tokens_24h": 15876627,
-  "avg_latency_s": 170.3
+  "completion_tokens_24h": 16475111,
+  "reasoning_tokens_24h": 16161444,
+  "avg_latency_s": 169.4
  },
- "functions_total": 2077,
+ "functions_total": 2078,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 606,
-   "functions": 610,
-   "bytes": 31761
+   "matched": 607,
+   "functions": 611,
+   "bytes": 31814
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -6189,9 +6189,21 @@
    "matched": 2054,
    "implemented": 2077,
    "pct": 21.9327
+  },
+  {
+   "t": "2026-11-23 05:43:40 UTC",
+   "matched": 2055,
+   "implemented": 2078,
+   "pct": 21.9434
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-23T05:36:04",
+   "address": "0x006d13e0",
+   "name": "RBX::CircleRadialNormal::getHalfCrossUpNormal",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-23T05:26:18",
    "address": "0x00b81c20",
@@ -6905,13 +6917,7 @@
    "address": "0x00cbfba0",
    "name": "RBX::callable_slot::resetReliabilityLayer",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-21T11:51:36",
-   "address": "0x00a34dd0",
-   "name": "RBX::detail::sp_counted_impl_p::sub_A34DD0",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 18.87
+ "match_rate_per_hour": 18.85
 }

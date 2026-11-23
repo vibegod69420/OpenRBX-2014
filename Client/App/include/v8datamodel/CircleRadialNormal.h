@@ -30,6 +30,7 @@ public:
 	const Vector3&getOneNormal();
 	const Vector3&getOriginNormal();
 	const Vector3&getPositiveNormal();
+	const Vector3&getHalfCrossUpNormal();
 	// AUTO-GENERATED METHODS
 };
 
