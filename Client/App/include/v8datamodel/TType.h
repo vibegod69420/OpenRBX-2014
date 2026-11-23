@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	TType();
 	// AUTO-GENERATED METHODS
 };
 

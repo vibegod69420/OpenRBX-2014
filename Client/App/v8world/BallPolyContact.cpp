@@ -50,6 +50,28 @@ void* BallPolyContact::allocateContact()
 	return node;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00bd0ca0
+void* BallPolyContact::allocate()
+{
+	BallPolyContactPool* pool = BallPolyContact_getPool();
+	BallPolyContact_lockPool(pool);
+
+	void* node = pool->head;
+	if (node)
+		pool->head = *(void**)node;
+	else
+		node = BallPolyContact_allocFromPool(&pool->head);
+
+	long oldState = _InterlockedExchangeAdd(&pool->state, 0x80000000);
+	if ((oldState & 0x40000000) == 0 && oldState > (long)0x80000000)
+	{
+		if (_interlockedbittestandset(&pool->state, 30) == 0)
+			SetEvent(BallPolyContact_waitPool(pool));
+	}
+
+	return node;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

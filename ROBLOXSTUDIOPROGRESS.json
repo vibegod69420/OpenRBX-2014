@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23 11:12:56 UTC",
+  "updated_at": "2026-11-23 11:23:24 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 22.3705,
-  "implemented_total": 2118,
-  "function_annotations": 2118,
+  "matchable_coverage_pct": 22.3919,
+  "implemented_total": 2120,
+  "function_annotations": 2120,
   "stub_annotations": 0,
-  "perfect_100_count": 2095,
-  "matched_real_functions": 2095,
+  "perfect_100_count": 2097,
+  "matched_real_functions": 2097,
   "average_match_pct": 99.6,
-  "overall_function_coverage_pct": 5.1651,
-  "overall_byte_coverage_pct": 1.5884,
+  "overall_function_coverage_pct": 5.17,
+  "overall_byte_coverage_pct": 1.5903,
   "usage": {
-    "calls_24h": 2475,
+    "calls_24h": 2503,
     "failures_24h": 0,
-    "completion_tokens_24h": 27271250,
-    "reasoning_tokens_24h": 26763877,
-    "avg_latency_s": 175.2
+    "completion_tokens_24h": 27503909,
+    "reasoning_tokens_24h": 26989585,
+    "avg_latency_s": 175.1
   },
   "functions": [
     {
@@ -9285,6 +9285,17 @@
       "matchable": true
     },
     {
+      "address": "0x008bfc00",
+      "kind": "FUNCTION",
+      "name": "RBX::TType::TType",
+      "mangled": "??0TType@RBX@@QAE@XZ",
+      "file": "Client/App/v8datamodel/TType.cpp",
+      "orig_size": 89,
+      "recomp_size": 89,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x008c19c0",
       "kind": "FUNCTION",
       "name": "RBX::Lua::WeakThreadRef::removeRef",
@@ -16681,6 +16692,17 @@
       "kind": "FUNCTION",
       "name": "RBX::BallPolyContact::allocateContact",
       "mangled": "?allocateContact@BallPolyContact@RBX@@QAEPAXXZ",
+      "file": "Client/App/v8world/BallPolyContact.cpp",
+      "orig_size": 89,
+      "recomp_size": 89,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00bd0ca0",
+      "kind": "FUNCTION",
+      "name": "RBX::BallPolyContact::allocate",
+      "mangled": "?allocate@BallPolyContact@RBX@@QAEPAXXZ",
       "file": "Client/App/v8world/BallPolyContact.cpp",
       "orig_size": 89,
       "recomp_size": 89,

@@ -18,6 +18,7 @@ public:
 
 	int getFirstField();
 	void*allocateContact();
+	void*allocate();
 	// AUTO-GENERATED METHODS
 };
 

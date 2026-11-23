@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23 11:12:56 UTC",
+ "updated_at": "2026-11-23 11:23:24 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 22.3705,
- "implemented_total": 2118,
- "function_annotations": 2118,
+ "matchable_coverage_pct": 22.3919,
+ "implemented_total": 2120,
+ "function_annotations": 2120,
  "stub_annotations": 0,
- "perfect_100_count": 2095,
- "matched_real_functions": 2095,
+ "perfect_100_count": 2097,
+ "matched_real_functions": 2097,
  "average_match_pct": 99.6,
- "overall_function_coverage_pct": 5.1651,
- "overall_byte_coverage_pct": 1.5884,
+ "overall_function_coverage_pct": 5.17,
+ "overall_byte_coverage_pct": 1.5903,
  "usage": {
-  "calls_24h": 2475,
+  "calls_24h": 2503,
   "failures_24h": 0,
-  "completion_tokens_24h": 27271250,
-  "reasoning_tokens_24h": 26763877,
-  "avg_latency_s": 175.2
+  "completion_tokens_24h": 27503909,
+  "reasoning_tokens_24h": 26989585,
+  "avg_latency_s": 175.1
  },
- "functions_total": 2118,
+ "functions_total": 2120,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 624,
-   "functions": 628,
-   "bytes": 32591
+   "matched": 625,
+   "functions": 629,
+   "bytes": 32680
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -54,9 +54,9 @@
   },
   {
    "name": "App/v8world",
-   "matched": 159,
-   "functions": 159,
-   "bytes": 10582
+   "matched": 160,
+   "functions": 160,
+   "bytes": 10671
   },
   {
    "name": "App/script",
@@ -6321,9 +6321,27 @@
    "matched": 2095,
    "implemented": 2118,
    "pct": 22.3705
+  },
+  {
+   "t": "2026-11-23 11:23:24 UTC",
+   "matched": 2097,
+   "implemented": 2120,
+   "pct": 22.3919
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-23T11:16:42",
+   "address": "0x008bfc00",
+   "name": "RBX::TType::TType",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-23T11:15:06",
+   "address": "0x00bd0ca0",
+   "name": "RBX::BallPolyContact::allocate",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-23T11:08:38",
    "address": "0x009a3d00",
@@ -7031,19 +7049,7 @@
    "address": "0x00b98210",
    "name": "char",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T00:52:20",
-   "address": "0x00b97990",
-   "name": "char",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T00:27:42",
-   "address": "0x00955b30",
-   "name": "do_release",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 18.3
+ "match_rate_per_hour": 18.29
 }
