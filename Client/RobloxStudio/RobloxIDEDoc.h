@@ -19,6 +19,7 @@ public:
 
 	int getField80() const;
 	void releaseData();
+	void clearField4Node();
 	// AUTO-GENERATED METHODS
 };
 

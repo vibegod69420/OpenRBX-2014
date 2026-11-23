@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23 15:39:16 UTC",
+ "updated_at": "2026-11-23 15:48:45 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 22.6268,
- "implemented_total": 2142,
- "function_annotations": 2142,
+ "matchable_coverage_pct": 22.6375,
+ "implemented_total": 2143,
+ "function_annotations": 2143,
  "stub_annotations": 0,
- "perfect_100_count": 2119,
- "matched_real_functions": 2119,
+ "perfect_100_count": 2120,
+ "matched_real_functions": 2120,
  "average_match_pct": 99.6,
- "overall_function_coverage_pct": 5.2242,
- "overall_byte_coverage_pct": 1.6039,
+ "overall_function_coverage_pct": 5.2267,
+ "overall_byte_coverage_pct": 1.6044,
  "usage": {
-  "calls_24h": 2968,
+  "calls_24h": 2997,
   "failures_24h": 0,
-  "completion_tokens_24h": 32598171,
-  "reasoning_tokens_24h": 31948992,
-  "avg_latency_s": 181.2
+  "completion_tokens_24h": 32905795,
+  "reasoning_tokens_24h": 32252128,
+  "avg_latency_s": 181.1
  },
- "functions_total": 2142,
+ "functions_total": 2143,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -299,6 +299,12 @@
    "bytes": 91
   },
   {
+   "name": "RobloxStudio/RobloxIDEDoc.cpp",
+   "matched": 3,
+   "functions": 3,
+   "bytes": 90
+  },
+  {
    "name": "RobloxStudio/DocTabManager.cpp",
    "matched": 1,
    "functions": 1,
@@ -459,12 +465,6 @@
    "matched": 5,
    "functions": 5,
    "bytes": 49
-  },
-  {
-   "name": "RobloxStudio/RobloxIDEDoc.cpp",
-   "matched": 2,
-   "functions": 2,
-   "bytes": 44
   },
   {
    "name": "RobloxStudio/QSpinBox.cpp",
@@ -6381,9 +6381,21 @@
    "matched": 2119,
    "implemented": 2142,
    "pct": 22.6268
+  },
+  {
+   "t": "2026-11-23 15:48:45 UTC",
+   "matched": 2120,
+   "implemented": 2143,
+   "pct": 22.6375
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-23T15:39:35",
+   "address": "0x0049b8a0",
+   "name": "RobloxIDEDoc::clearField4Node",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-23T15:34:19",
    "address": "0x006b98c0",
@@ -7097,13 +7109,7 @@
    "address": "0x00955550",
    "name": "std::shared_state::init",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T02:33:41",
-   "address": "0x00410b90",
-   "name": "bool",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 17.82
+ "match_rate_per_hour": 17.8
 }
