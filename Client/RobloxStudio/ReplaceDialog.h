@@ -17,6 +17,7 @@ public:
 	};
 
 	void* getReplaceValue();
+	void updateReplaceEnabledState();
 	// AUTO-GENERATED METHODS
 };
 

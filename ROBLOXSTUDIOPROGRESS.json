@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23 00:07:22 UTC",
+  "updated_at": "2026-11-23 00:16:21 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 21.0892,
-  "implemented_total": 1997,
-  "function_annotations": 1997,
+  "matchable_coverage_pct": 21.0998,
+  "implemented_total": 1998,
+  "function_annotations": 1998,
   "stub_annotations": 0,
-  "perfect_100_count": 1975,
-  "matched_real_functions": 1975,
+  "perfect_100_count": 1976,
+  "matched_real_functions": 1976,
   "average_match_pct": 99.57,
-  "overall_function_coverage_pct": 4.8692,
-  "overall_byte_coverage_pct": 1.5342,
+  "overall_function_coverage_pct": 4.8717,
+  "overall_byte_coverage_pct": 1.5351,
   "usage": {
-    "calls_24h": 618,
+    "calls_24h": 645,
     "failures_24h": 0,
-    "completion_tokens_24h": 7167989,
-    "reasoning_tokens_24h": 7037231,
-    "avg_latency_s": 189.9
+    "completion_tokens_24h": 7498884,
+    "reasoning_tokens_24h": 7362153,
+    "avg_latency_s": 190.7
   },
   "functions": [
     {
@@ -503,6 +503,17 @@
       "file": "Client/App/v8datamodel/FileWatcherWin32.cpp",
       "orig_size": 20,
       "recomp_size": 20,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00453eb0",
+      "kind": "FUNCTION",
+      "name": "ReplaceDialog::updateReplaceEnabledState",
+      "mangled": "?updateReplaceEnabledState@ReplaceDialog@@QAEXXZ",
+      "file": "Client/RobloxStudio/ReplaceDialog.cpp",
+      "orig_size": 83,
+      "recomp_size": 83,
       "match_pct": 100.0,
       "matchable": true
     },
