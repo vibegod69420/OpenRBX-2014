@@ -25,6 +25,7 @@ public:
 	void*getReplicator() const;
 	void*getReplicator();
 	void releaseSharedInstance();
+	void popHead();
 	// AUTO-GENERATED METHODS
 };
 

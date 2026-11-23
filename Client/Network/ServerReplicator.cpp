@@ -82,6 +82,20 @@ void ServerReplicator::releaseSharedInstance()
 	g_serverReplicatorSharedObject = 0;
 }
 
+struct ServerReplicatorListOps
+{
+	void eraseNode(void* out, void* next, void* node);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00ca35f0
+void ServerReplicator::popHead()
+{
+	void* local;
+	void* head = *(void**)this;
+	((ServerReplicatorListOps*)this)->eraseNode(&local, *(void**)head, head);
+	::operator delete(*(void**)this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

@@ -20,6 +20,7 @@ public:
 	void __cdecl getLocation(int* out) const;
 	void __cdecl getLocation(void* out) const;
 	QDockWidget* __fastcall init(void* arg);
+	QDockWidget* __fastcall init2(void* arg);
 	// AUTO-GENERATED METHODS
 };
 

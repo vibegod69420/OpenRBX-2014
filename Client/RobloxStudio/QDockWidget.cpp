@@ -50,6 +50,14 @@ QDockWidget* __fastcall QDockWidget::init(void* arg)
 	return this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0043fbd0
+QDockWidget* __fastcall QDockWidget::init2(void* arg)
+{
+	volatile int local = 0;
+	g_qDockWidgetInitHelper.init(this, arg, 0);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
