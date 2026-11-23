@@ -17,6 +17,7 @@ public:
 	};
 
 	int getFirstField();
+	void*allocateContact();
 	// AUTO-GENERATED METHODS
 };
 

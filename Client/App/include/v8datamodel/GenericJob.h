@@ -19,6 +19,7 @@ public:
 
 	void setProgress();
 	void __cdecl initializeState();
+	unsigned int getDataModelProgress();
 	// AUTO-GENERATED METHODS
 };
 
