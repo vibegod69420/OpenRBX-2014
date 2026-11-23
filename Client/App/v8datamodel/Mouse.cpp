@@ -108,6 +108,38 @@ int Mouse::getX()
 	return -1;
 }
 
+class MouseViewTarget
+{
+public:
+	float* getViewCoord(void* out);
+};
+
+MouseViewTarget* getMouseViewTarget(void* object);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b0b890
+int Mouse::getViewSizeX()
+{
+	reinterpret_cast<MouseVt*>(this)->v42();
+
+	if (*reinterpret_cast<unsigned char*>(0x127c0f8))
+	{
+		MouseViewTarget* target = getMouseViewTarget(*reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 0x8C));
+		if (target)
+		{
+			float out[2];
+			return static_cast<int>(*target->getViewCoord(out));
+		}
+	}
+	else
+	{
+		void* object = *reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 0xB0);
+		if (object)
+			return static_cast<int>(*reinterpret_cast<short*>(reinterpret_cast<char*>(object) + 0x88));
+	}
+
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

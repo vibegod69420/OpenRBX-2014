@@ -18,6 +18,7 @@ public:
 
 	void clear();
 	MouseCommand* __cdecl create(void* a1, void* a2, void* a3);
+	void capture();
 	// AUTO-GENERATED METHODS
 };
 

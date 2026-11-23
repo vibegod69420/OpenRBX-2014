@@ -20,6 +20,7 @@ public:
 	int getY();
 	Mouse();
 	int getX();
+	int getViewSizeX();
 	// AUTO-GENERATED METHODS
 };
 

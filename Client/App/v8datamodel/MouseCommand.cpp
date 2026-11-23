@@ -38,6 +38,42 @@ MouseCommand* __cdecl MouseCommand::create(void* a1, void* a2, void* a3)
 	return this;
 }
 
+struct MouseCommandWorkspace
+{
+	MouseCommand* getCurrentMouseCommand();
+};
+
+extern unsigned char rbxs_assertEnabled;
+extern unsigned char (__cdecl* rbxs_assertHook)(const char*, const char*, int);
+void __cdecl rbxs_assertCrash(int, const char*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00933550
+void MouseCommand::capture()
+{
+	if (rbxs_assertEnabled)
+	{
+		MouseCommandWorkspace* workspace = *(MouseCommandWorkspace**)((char*)this + 0x2C);
+		MouseCommand* current = workspace->getCurrentMouseCommand();
+		if (*(unsigned char*)((char*)current + 0x28))
+		{
+			if (rbxs_assertHook)
+			{
+				if (rbxs_assertHook(
+					"!workspace->getCurrentMouseCommand()->captured()",
+					"D:\\BuildAgent\\work\\Trunk2012\\Client\\App\\v8datamodel\\MouseCommand.cpp",
+					63))
+				{
+					goto done;
+				}
+			}
+			rbxs_assertCrash(rbxs_assertEnabled, "!workspace->getCurrentMouseCommand()->captured() file: D:\\BuildAgent\\work\\Trunk2012\\Client\\App\\v8datamodel\\MouseCommand.cpp line: 63");
+		}
+	}
+
+done:
+	*(unsigned char*)((char*)this + 0x28) = 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

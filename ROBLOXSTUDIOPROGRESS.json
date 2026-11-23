@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23 03:52:40 UTC",
+  "updated_at": "2026-11-23 04:01:44 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 21.591,
-  "implemented_total": 2044,
-  "function_annotations": 2044,
+  "matchable_coverage_pct": 21.6231,
+  "implemented_total": 2047,
+  "function_annotations": 2047,
   "stub_annotations": 0,
-  "perfect_100_count": 2022,
-  "matched_real_functions": 2022,
-  "average_match_pct": 99.58,
-  "overall_function_coverage_pct": 4.9851,
-  "overall_byte_coverage_pct": 1.5554,
+  "perfect_100_count": 2025,
+  "matched_real_functions": 2025,
+  "average_match_pct": 99.59,
+  "overall_function_coverage_pct": 4.9925,
+  "overall_byte_coverage_pct": 1.5578,
   "usage": {
-    "calls_24h": 1196,
+    "calls_24h": 1221,
     "failures_24h": 0,
-    "completion_tokens_24h": 13309974,
-    "reasoning_tokens_24h": 13058817,
-    "avg_latency_s": 177.3
+    "completion_tokens_24h": 13609467,
+    "reasoning_tokens_24h": 13350013,
+    "avg_latency_s": 177.2
   },
   "functions": [
     {
@@ -8350,6 +8350,17 @@
       "matchable": true
     },
     {
+      "address": "0x00892900",
+      "kind": "FUNCTION",
+      "name": "RBX::FlagStand::getMinimumSize",
+      "mangled": "?getMinimumSize@FlagStand@RBX@@QBEABUVector3@2@XZ",
+      "file": "Client/App/v8datamodel/FlagStand.cpp",
+      "orig_size": 53,
+      "recomp_size": 53,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00892990",
       "kind": "FUNCTION",
       "name": "RBX::SkateboardPlatform::getFlag0078",
@@ -10000,6 +10011,17 @@
       "matchable": true
     },
     {
+      "address": "0x00933550",
+      "kind": "FUNCTION",
+      "name": "RBX::MouseCommand::capture",
+      "mangled": "?capture@MouseCommand@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/MouseCommand.cpp",
+      "orig_size": 83,
+      "recomp_size": 83,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00933ec0",
       "kind": "FUNCTION",
       "name": "RBX::MouseCommand::create",
@@ -10014,11 +10036,11 @@
       "address": "0x00933ef0",
       "kind": "FUNCTION",
       "name": "MouseCommand_createImpl",
-      "mangled": "?create@MouseCommand@RBX@@QAAPAV12@PAX00@Z",
+      "mangled": "?capture@MouseCommand@RBX@@QAEXXZ",
       "file": "Client/App/v8datamodel/MouseCommand.cpp",
       "orig_size": 164,
-      "recomp_size": 41,
-      "match_pct": 4.88,
+      "recomp_size": 83,
+      "match_pct": 21.34,
       "matchable": false
     },
     {
@@ -13571,6 +13593,17 @@
       "file": "Client/App/v8datamodel/CharacterAppearance.cpp",
       "orig_size": 141,
       "recomp_size": 141,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b0b890",
+      "kind": "FUNCTION",
+      "name": "RBX::Mouse::getViewSizeX",
+      "mangled": "?getViewSizeX@Mouse@RBX@@QAEHXZ",
+      "file": "Client/App/v8datamodel/Mouse.cpp",
+      "orig_size": 93,
+      "recomp_size": 93,
       "match_pct": 100.0,
       "matchable": true
     },

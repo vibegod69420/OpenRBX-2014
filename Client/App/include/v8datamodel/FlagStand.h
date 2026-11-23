@@ -5,6 +5,8 @@
 
 namespace RBX {
 
+class Vector3;
+class minSize;
 // AUTO-GENERATED HELPERS
 
 class FlagStand
@@ -16,6 +18,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	const Vector3&getMinimumSize() const;
 	// AUTO-GENERATED METHODS
 };
 
