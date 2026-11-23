@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23 09:39:42 UTC",
+  "updated_at": "2026-11-23 10:07:40 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 22.3278,
-  "implemented_total": 2114,
-  "function_annotations": 2114,
+  "matchable_coverage_pct": 22.3385,
+  "implemented_total": 2115,
+  "function_annotations": 2115,
   "stub_annotations": 0,
-  "perfect_100_count": 2091,
-  "matched_real_functions": 2091,
+  "perfect_100_count": 2092,
+  "matched_real_functions": 2092,
   "average_match_pct": 99.6,
-  "overall_function_coverage_pct": 5.1552,
-  "overall_byte_coverage_pct": 1.5851,
+  "overall_function_coverage_pct": 5.1577,
+  "overall_byte_coverage_pct": 1.5858,
   "usage": {
-    "calls_24h": 2220,
+    "calls_24h": 2301,
     "failures_24h": 0,
-    "completion_tokens_24h": 24256451,
-    "reasoning_tokens_24h": 23798516,
-    "avg_latency_s": 172.6
+    "completion_tokens_24h": 25193809,
+    "reasoning_tokens_24h": 24722033,
+    "avg_latency_s": 173.2
   },
   "functions": [
     {
@@ -7499,6 +7499,17 @@
       "file": "Client/App/script/DebuggerBreakpoint.cpp",
       "orig_size": 27,
       "recomp_size": 27,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0079ea20",
+      "kind": "FUNCTION",
+      "name": "RBX::Scripting::DebuggerBreakpoint::sub_79EA20",
+      "mangled": "?sub_79EA20@DebuggerBreakpoint@Scripting@RBX@@QAEPAV123@XZ",
+      "file": "Client/App/script/DebuggerBreakpoint.cpp",
+      "orig_size": 71,
+      "recomp_size": 71,
       "match_pct": 100.0,
       "matchable": true
     },

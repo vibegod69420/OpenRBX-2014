@@ -19,6 +19,7 @@ public:
 
 	DebuggerBreakpoint();
 	void sub_79F500();
+	DebuggerBreakpoint*sub_79EA20();
 	// AUTO-GENERATED METHODS
 };
 
