@@ -22,6 +22,17 @@ void EventSlot::dispose()
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00bea2d0
+void __cdecl EventSlot::slotThunk(void* a1, void* a2)
+{
+	typedef void (__thiscall *SlotThunkFn)(void*, void*, void*);
+	char* self = reinterpret_cast<char*>(this);
+	(*reinterpret_cast<SlotThunkFn*>(self))(
+		reinterpret_cast<char*>(*reinterpret_cast<void**>(self + 8)) + *reinterpret_cast<int*>(self + 4),
+		a1,
+		a2);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace DataStore

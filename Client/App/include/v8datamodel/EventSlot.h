@@ -18,6 +18,7 @@ public:
 	};
 
 	void dispose();
+	void __cdecl slotThunk(void* a1, void* a2);
 	// AUTO-GENERATED METHODS
 };
 
