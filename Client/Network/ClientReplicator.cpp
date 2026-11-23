@@ -43,6 +43,14 @@ void __cdecl ClientReplicator::addReplicationDataSize(int* dataSize)
 	*dataSize += getReplicationDataSize(this);
 }
 
+int getReplicationDataSize(void* item);
+
+// FUNCTION: ROBLOXSTUDIO 0x00cad9b0
+void __cdecl ClientReplicator::addReplicationDataSizeForItem(int* dataSize)
+{
+	*dataSize += getReplicationDataSize(reinterpret_cast<char*>(this) + 0x18);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

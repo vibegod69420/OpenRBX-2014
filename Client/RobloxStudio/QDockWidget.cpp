@@ -23,6 +23,17 @@ void __cdecl QDockWidget::getLocation(int* out) const
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0044d0f0
+void __cdecl QDockWidget::getLocation(void* out) const
+{
+	if (out)
+	{
+		*reinterpret_cast<int*>(out) = *reinterpret_cast<const int*>(this);
+		*reinterpret_cast<short*>(reinterpret_cast<char*>(out) + 4) =
+			*reinterpret_cast<const short*>(reinterpret_cast<const char*>(this) + 4);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

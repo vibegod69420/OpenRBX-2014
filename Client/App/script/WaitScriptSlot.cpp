@@ -28,6 +28,13 @@ int __cdecl WaitScriptSlot::executeWeakThreadRef(void* L)
 	return 1;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b850c0
+int __cdecl WaitScriptSlot::executeGenericFunction(void* L)
+{
+	waitScriptSlotAux(L, "GenericFunction", 15);
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

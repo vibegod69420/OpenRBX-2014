@@ -26,6 +26,14 @@ int ClientAppSettings::getConst19909520() const
 	return 19909520;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008bd880
+extern bool __cdecl StringToBool_D02EE0(const char*);
+
+void __cdecl ClientAppSettings::ApplySettingFromFunc_D02EE0()
+{
+	*(bool*)((char*)g_ClientAppSettingsInstance_12FC984 + 0x15) = StringToBool_D02EE0((const char*)this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

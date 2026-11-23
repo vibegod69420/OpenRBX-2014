@@ -20,6 +20,7 @@ public:
 	void sendDataOutStep();
 	int getDataPing();
 	void __cdecl addReplicationDataSize(int* dataSize);
+	void __cdecl addReplicationDataSizeForItem(int* dataSize);
 	// AUTO-GENERATED METHODS
 };
 
