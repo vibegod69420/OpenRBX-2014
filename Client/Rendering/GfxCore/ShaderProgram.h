@@ -19,6 +19,7 @@ public:
 
 	void popLastString();
 	ShaderProgram* __cdecl func690730(void* a1, void* a2, int a3);
+	unsigned char __cdecl func6106c0();
 	// AUTO-GENERATED METHODS
 };
 

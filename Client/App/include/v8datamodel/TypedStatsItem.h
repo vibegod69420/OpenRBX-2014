@@ -24,6 +24,7 @@ public:
 	TypedStatsItem();
 	TypedStatsItem* __cdecl getOrCreateChildItem(const char* name);
 	TypedStatsItem* __cdecl getOrCreateChild(const char* name);
+	TypedStatsItem* __cdecl getOrCreateTypedChildItem(const char* name);
 	// AUTO-GENERATED METHODS
 };
 

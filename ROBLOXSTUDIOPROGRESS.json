@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23 15:11:30 UTC",
+  "updated_at": "2026-11-23 15:20:57 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 22.4773,
-  "implemented_total": 2128,
-  "function_annotations": 2128,
+  "matchable_coverage_pct": 22.5414,
+  "implemented_total": 2134,
+  "function_annotations": 2134,
   "stub_annotations": 0,
-  "perfect_100_count": 2105,
-  "matched_real_functions": 2105,
+  "perfect_100_count": 2111,
+  "matched_real_functions": 2111,
   "average_match_pct": 99.6,
-  "overall_function_coverage_pct": 5.1897,
-  "overall_byte_coverage_pct": 1.5993,
+  "overall_function_coverage_pct": 5.2045,
+  "overall_byte_coverage_pct": 1.6009,
   "usage": {
-    "calls_24h": 2863,
+    "calls_24h": 2901,
     "failures_24h": 0,
-    "completion_tokens_24h": 31678610,
-    "reasoning_tokens_24h": 31049315,
-    "avg_latency_s": 182.8
+    "completion_tokens_24h": 31978010,
+    "reasoning_tokens_24h": 31342924,
+    "avg_latency_s": 182.0
   },
   "functions": [
     {
@@ -5270,6 +5270,17 @@
       "matchable": true
     },
     {
+      "address": "0x006106c0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ShaderProgram::func6106c0",
+      "mangled": "?func6106c0@ShaderProgram@Graphics@RBX@@QAAEXZ",
+      "file": "Client/Rendering/GfxCore/ShaderProgram.cpp",
+      "orig_size": 15,
+      "recomp_size": 15,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00613570",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::AdornRender::getMemberPtr24",
@@ -5890,6 +5901,17 @@
       "kind": "FUNCTION",
       "name": "RBX::TypedStatsItem::getOrCreateChild",
       "mangled": "?getOrCreateChild@TypedStatsItem@RBX@@QAAPAV12@PBD@Z",
+      "file": "Client/App/v8datamodel/TypedStatsItem.cpp",
+      "orig_size": 31,
+      "recomp_size": 31,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0067aab0",
+      "kind": "FUNCTION",
+      "name": "RBX::TypedStatsItem::getOrCreateTypedChildItem",
+      "mangled": "?getOrCreateTypedChildItem@TypedStatsItem@RBX@@QAAPAV12@PBD@Z",
       "file": "Client/App/v8datamodel/TypedStatsItem.cpp",
       "orig_size": 31,
       "recomp_size": 31,
@@ -8141,6 +8163,17 @@
       "matchable": true
     },
     {
+      "address": "0x0083af10",
+      "kind": "FUNCTION",
+      "name": "RBX::PVInstance::getTopLevelPVInstance3",
+      "mangled": "?getTopLevelPVInstance3@PVInstance@RBX@@QAAPAV12@PAX@Z",
+      "file": "Client/App/v8datamodel/PVInstance.cpp",
+      "orig_size": 31,
+      "recomp_size": 31,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0083b190",
       "kind": "FUNCTION",
       "name": "RBX::PVInstance::getAncestorPVInstance",
@@ -9303,6 +9336,17 @@
       "file": "Client/App/v8datamodel/ClientAppSettings.cpp",
       "orig_size": 29,
       "recomp_size": 29,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x008bde20",
+      "kind": "FUNCTION",
+      "name": "RBX::ClientAppSettings::ApplySettingFromFunc_58",
+      "mangled": "?ApplySettingFromFunc_58@ClientAppSettings@RBX@@QAAXXZ",
+      "file": "Client/App/v8datamodel/ClientAppSettings.cpp",
+      "orig_size": 25,
+      "recomp_size": 25,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -15115,6 +15159,17 @@
       "matchable": true
     },
     {
+      "address": "0x00b6fa80",
+      "kind": "FUNCTION",
+      "name": "RBX::RBX::TriangleMesh::openTable",
+      "mangled": "?openTable@TriangleMesh@RBX@@QAAHXZ",
+      "file": "Client/App/v8world/TriangleMesh.cpp",
+      "orig_size": 31,
+      "recomp_size": 31,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00b6ffb0",
       "kind": "FUNCTION",
       "name": "RBX::RBX::TriangleMesh::func_B6FFB0",
@@ -17795,6 +17850,17 @@
       "file": "Client/Network/Replicator.cpp",
       "orig_size": 47,
       "recomp_size": 47,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c6fe80",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::Replicator::writeProperty",
+      "mangled": "?writeProperty@Replicator@Network@RBX@@QAAAAV123@PBX@Z",
+      "file": "Client/Network/Replicator.cpp",
+      "orig_size": 22,
+      "recomp_size": 22,
       "match_pct": 100.0,
       "matchable": true
     },

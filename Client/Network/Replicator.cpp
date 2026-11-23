@@ -30,6 +30,15 @@ Replicator& __cdecl Replicator::write(const void* data)
 	return *this;
 }
 
+void __cdecl replicatorWriteProperty(Replicator*, const void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00c6fe80
+Replicator& __cdecl Replicator::writeProperty(const void* data)
+{
+	replicatorWriteProperty(this, data);
+	return *this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

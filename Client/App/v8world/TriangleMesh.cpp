@@ -726,6 +726,13 @@ int __cdecl TriangleMesh::func_B71710(int a, int b, int c)
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b6fa80
+int __cdecl TriangleMesh::openTable()
+{
+	sub_A39240(this, "table", reinterpret_cast<void*>(0x00ED1218));
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

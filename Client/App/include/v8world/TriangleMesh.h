@@ -59,6 +59,7 @@ public:
 	int __cdecl func_B6FFB0();
 	int getGridIndex() const;
 	int __cdecl func_B71710(int a, int b, int c);
+	int __cdecl openTable();
 	// AUTO-GENERATED METHODS
 };
 
