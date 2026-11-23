@@ -28,6 +28,18 @@ void __cdecl LuaAllocator::allocationError()
 	luaAllocatorSub_A358D0(L, -10000);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b81780
+void __cdecl LuaAllocator::raiseAllocationError()
+{
+	void* L = this;
+	luaAllocatorSub_A35670(L, (void*)0x00B81410);
+	luaAllocatorSub_A34E50(L, 0, 0);
+	luaAllocatorSub_A358D0(L, -10000);
+	luaAllocatorSub_A35670(L, (void*)0x00B81C20);
+	luaAllocatorSub_A34E50(L, 0, 0);
+	luaAllocatorSub_A358D0(L, -10000);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

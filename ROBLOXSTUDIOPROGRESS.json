@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23 15:58:30 UTC",
+  "updated_at": "2026-11-23 16:17:15 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 22.6482,
-  "implemented_total": 2144,
-  "function_annotations": 2144,
+  "matchable_coverage_pct": 22.6588,
+  "implemented_total": 2145,
+  "function_annotations": 2145,
   "stub_annotations": 0,
-  "perfect_100_count": 2121,
-  "matched_real_functions": 2121,
+  "perfect_100_count": 2122,
+  "matched_real_functions": 2122,
   "average_match_pct": 99.6,
-  "overall_function_coverage_pct": 5.2292,
-  "overall_byte_coverage_pct": 1.6049,
+  "overall_function_coverage_pct": 5.2316,
+  "overall_byte_coverage_pct": 1.6057,
   "usage": {
-    "calls_24h": 3025,
+    "calls_24h": 3085,
     "failures_24h": 0,
-    "completion_tokens_24h": 33227207,
-    "reasoning_tokens_24h": 32568550,
-    "avg_latency_s": 180.9
+    "completion_tokens_24h": 33994499,
+    "reasoning_tokens_24h": 33325226,
+    "avg_latency_s": 181.4
   },
   "functions": [
     {
@@ -15969,6 +15969,17 @@
       "file": "Client/App/v8datamodel/LibraryStateObject.cpp",
       "orig_size": 72,
       "recomp_size": 72,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b81780",
+      "kind": "FUNCTION",
+      "name": "RBX::LuaAllocator::raiseAllocationError",
+      "mangled": "?raiseAllocationError@LuaAllocator@RBX@@QAAXXZ",
+      "file": "Client/App/script/LuaAllocator.cpp",
+      "orig_size": 77,
+      "recomp_size": 77,
       "match_pct": 100.0,
       "matchable": true
     },
