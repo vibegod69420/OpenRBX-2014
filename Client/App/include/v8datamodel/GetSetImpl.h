@@ -19,6 +19,7 @@ public:
 	void __cdecl get(int* out) const;
 	void __cdecl set(void* arg) const;
 	void __cdecl get(void* arg) const;
+	void __cdecl initStringArray(unsigned int count);
 	// AUTO-GENERATED METHODS
 };
 

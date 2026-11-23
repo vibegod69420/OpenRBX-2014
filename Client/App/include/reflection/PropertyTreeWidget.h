@@ -17,6 +17,7 @@ public:
 	};
 
 	void firePropertyChange();
+	void firePropertyChange2();
 	// AUTO-GENERATED METHODS
 };
 

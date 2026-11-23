@@ -25,6 +25,27 @@ void __cdecl GetSetImpl::get(void* arg) const
 	(*(GetFunc*)this)(arg);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0040d1d0
+void __cdecl GetSetImpl::initStringArray(unsigned int count)
+{
+	if (count != 0)
+	{
+		char* p = reinterpret_cast<char*>(this);
+		do
+		{
+			if (p)
+			{
+				*(unsigned int*)(p + 0x14) = 15;
+				*(unsigned int*)(p + 0x10) = 0;
+				*p = 0;
+			}
+			p += 0x18;
+			--count;
+		}
+		while (count != 0);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
