@@ -68,6 +68,24 @@ void ClassDescriptor::clear()
 	}
 }
 
+__declspec(dllimport) void* __stdcall CreateEventA(void* lpEventAttributes, int bManualReset, int bInitialState, const char* lpName);
+
+// FUNCTION: ROBLOXSTUDIO 0x00411590
+void* __cdecl ClassDescriptor::createOnceEvent(unsigned long value)
+{
+	if (*reinterpret_cast<char*>(this) == 0)
+	{
+		static const char kOnceFlagName[] = "Local\\{C15730E2-145C-4c5e-B005-3BC753F42475}-once-flag";
+		struct OnceFlagBuf { char data[55]; };
+		*reinterpret_cast<OnceFlagBuf*>(this) = *reinterpret_cast<const OnceFlagBuf*>(kOnceFlagName);
+
+		sub_4114B0(value, reinterpret_cast<char*>(this) + 0x36);
+		sub_411520(GetCurrentProcessId(), reinterpret_cast<char*>(this) + 0x3e);
+	}
+
+	return CreateEventA(0, 1, 0, reinterpret_cast<const char*>(this));
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Reflection

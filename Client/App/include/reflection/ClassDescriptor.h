@@ -20,6 +20,7 @@ public:
 	int __cdecl is(const ClassDescriptor* target) const;
 	void* __cdecl ensureOnceEvent(unsigned long value);
 	void clear();
+	void* __cdecl createOnceEvent(unsigned long value);
 	// AUTO-GENERATED METHODS
 };
 
