@@ -89,6 +89,12 @@ void* Body::allocateFromPool()
 	return node;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00ba92b0
+int Body::getNextStateIndex()
+{
+	return ++s_nextStateIndex;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

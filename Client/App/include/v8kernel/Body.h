@@ -19,6 +19,7 @@ public:
 	void advanceStateIndex();
 	void*allocFromPool();
 	void*allocateFromPool();
+	int getNextStateIndex();
 	// AUTO-GENERATED METHODS
 };
 
