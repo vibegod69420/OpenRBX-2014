@@ -17,6 +17,7 @@ public:
 	};
 
 	void step();
+	void notifyMoved();
 	// AUTO-GENERATED METHODS
 };
 
