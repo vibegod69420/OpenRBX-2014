@@ -102,6 +102,17 @@ bool StatsUpdateJob::readBit()
 	return result;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c6df40
+StatsUpdateJob& __cdecl StatsUpdateJob::writeFieldEntry(const void* field)
+{
+	const void* originalField = field;
+	sub_c6d640(this, originalField);
+	sub_c6d460(this, &field);
+	*reinterpret_cast<unsigned short*>(reinterpret_cast<unsigned char*>(const_cast<void*>(originalField)) + 4) =
+		*reinterpret_cast<const unsigned short*>(&field);
+	return *this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

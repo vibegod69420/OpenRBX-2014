@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24 03:33:12 UTC",
+ "updated_at": "2026-11-24 03:42:43 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 23.0219,
- "implemented_total": 2180,
- "function_annotations": 2180,
+ "matchable_coverage_pct": 23.0646,
+ "implemented_total": 2184,
+ "function_annotations": 2184,
  "stub_annotations": 0,
- "perfect_100_count": 2156,
- "matched_real_functions": 2156,
+ "perfect_100_count": 2160,
+ "matched_real_functions": 2160,
  "average_match_pct": 99.58,
- "overall_function_coverage_pct": 5.3155,
- "overall_byte_coverage_pct": 1.6286,
+ "overall_function_coverage_pct": 5.3253,
+ "overall_byte_coverage_pct": 1.6309,
  "usage": {
-  "calls_24h": 3295,
+  "calls_24h": 3289,
   "failures_24h": 0,
-  "completion_tokens_24h": 37959443,
-  "reasoning_tokens_24h": 37140646,
-  "avg_latency_s": 188.3
+  "completion_tokens_24h": 37948509,
+  "reasoning_tokens_24h": 37129355,
+  "avg_latency_s": 188.5
  },
- "functions_total": 2180,
+ "functions_total": 2184,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 651,
-   "functions": 656,
-   "bytes": 33872
+   "matched": 653,
+   "functions": 658,
+   "bytes": 33999
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -60,9 +60,9 @@
   },
   {
    "name": "App/script",
-   "matched": 140,
-   "functions": 140,
-   "bytes": 9984
+   "matched": 141,
+   "functions": 141,
+   "bytes": 10031
   },
   {
    "name": "Rendering/g3d",
@@ -143,6 +143,12 @@
    "bytes": 401
   },
   {
+   "name": "Network/StatsUpdateJob.cpp",
+   "matched": 8,
+   "functions": 8,
+   "bytes": 326
+  },
+  {
    "name": "Rendering/GfxBase",
    "matched": 10,
    "functions": 10,
@@ -153,12 +159,6 @@
    "matched": 4,
    "functions": 4,
    "bytes": 308
-  },
-  {
-   "name": "Network/StatsUpdateJob.cpp",
-   "matched": 7,
-   "functions": 7,
-   "bytes": 281
   },
   {
    "name": "Network/Player.cpp",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-18 19:00:43 UTC",
-   "matched": 143,
-   "implemented": 143,
-   "pct": 1.527
-  },
-  {
    "t": "2026-11-18 19:02:00 UTC",
    "matched": 144,
    "implemented": 144,
@@ -6393,9 +6387,33 @@
    "matched": 2156,
    "implemented": 2180,
    "pct": 23.0219
+  },
+  {
+   "t": "2026-11-24 03:42:43 UTC",
+   "matched": 2160,
+   "implemented": 2184,
+   "pct": 23.0646
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-24T03:38:50",
+   "address": "0x00cfdd50",
+   "name": "RBX::http_status_error::transfer",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T03:37:45",
+   "address": "0x008dd8a0",
+   "name": "RBX::ScriptContext::reportError",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T03:36:13",
+   "address": "0x00bbf800",
+   "name": "RBX::ContentProviderJob::init",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-24T03:29:28",
    "address": "0x008bdc80",
@@ -7097,25 +7115,7 @@
    "address": "0x0083aed0",
    "name": "RBX::PVInstance::getTopLevelPVInstanceEx",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T04:59:06",
-   "address": "0x0044da30",
-   "name": "QComboBox::sub_44DA30",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T04:59:01",
-   "address": "0x00515260",
-   "name": "RobloxSettings::sub_515260",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T04:54:06",
-   "address": "0x004f5b20",
-   "name": "RobloxNetworkReply::reportError",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 15.66
+ "match_rate_per_hour": 15.67
 }

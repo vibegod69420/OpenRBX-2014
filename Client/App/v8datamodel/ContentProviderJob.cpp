@@ -243,6 +243,17 @@ void __cdecl ContentProviderJob::addRequest(void* request)
 	*(void**)(data + 0x28) = req;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00bbf800
+void __cdecl ContentProviderJob::init()
+{
+	*((unsigned int *)this + 2) = 0x67452301;
+	*((unsigned int *)this + 3) = 0xEFCDAB89;
+	*((unsigned int *)this + 4) = 0x98BADCFE;
+	*((unsigned int *)this + 5) = 0x10325476;
+	*(unsigned int *)this = 0;
+	*((unsigned int *)this + 1) = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -23,6 +23,7 @@ public:
 	void __cdecl clear();
 	void __cdecl update(const unsigned char* data, unsigned int len);
 	void __cdecl addRequest(void* request);
+	void __cdecl init();
 	// AUTO-GENERATED METHODS
 };
 
