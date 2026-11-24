@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24 02:42:57 UTC",
+  "updated_at": "2026-11-24 02:52:14 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 22.9792,
-  "implemented_total": 2176,
-  "function_annotations": 2176,
+  "matchable_coverage_pct": 22.9899,
+  "implemented_total": 2177,
+  "function_annotations": 2177,
   "stub_annotations": 0,
-  "perfect_100_count": 2152,
-  "matched_real_functions": 2152,
+  "perfect_100_count": 2153,
+  "matched_real_functions": 2153,
   "average_match_pct": 99.58,
-  "overall_function_coverage_pct": 5.3056,
-  "overall_byte_coverage_pct": 1.6237,
+  "overall_function_coverage_pct": 5.3081,
+  "overall_byte_coverage_pct": 1.6253,
   "usage": {
-    "calls_24h": 3401,
+    "calls_24h": 3383,
     "failures_24h": 0,
-    "completion_tokens_24h": 38879971,
-    "reasoning_tokens_24h": 38058039,
-    "avg_latency_s": 186.8
+    "completion_tokens_24h": 38811175,
+    "reasoning_tokens_24h": 37988689,
+    "avg_latency_s": 187.6
   },
   "functions": [
     {
@@ -7928,6 +7928,17 @@
       "file": "Client/App/v8datamodel/Camera.cpp",
       "orig_size": 103,
       "recomp_size": 54,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x007bc660",
+      "kind": "FUNCTION",
+      "name": "RBX::Camera::getCameraSubject",
+      "mangled": "?getCameraSubject@Camera@RBX@@QBEPAXXZ",
+      "file": "Client/App/v8datamodel/Camera.cpp",
+      "orig_size": 147,
+      "recomp_size": 114,
       "match_pct": 100.0,
       "matchable": true
     },

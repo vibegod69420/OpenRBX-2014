@@ -17,6 +17,7 @@ public:
 	};
 
 	void*findAncestorCast() const;
+	void*getCameraSubject() const;
 	// AUTO-GENERATED METHODS
 };
 
