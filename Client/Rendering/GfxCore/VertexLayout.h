@@ -114,6 +114,7 @@ public:
 	bool initAMDMultiDrawIndirect();
 	bool initAMDNameGenDelete();
 	bool initANGLEInstancedArrays();
+	bool initAppleObjectPurgeable();
 	// AUTO-GENERATED METHODS
 };
 

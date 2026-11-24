@@ -6261,6 +6261,32 @@ bool VertexLayout::initANGLEInstancedArrays()
 	return false;
 }
 
+extern void* g_glGetObjectParameterivAPPLE;
+extern void* g_glObjectPurgeableAPPLE;
+extern void* g_glObjectUnpurgeableAPPLE;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f48b0
+bool VertexLayout::initAppleObjectPurgeable()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glGetObjectParameterivAPPLE");
+	g_glGetObjectParameterivAPPLE = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glObjectPurgeableAPPLE");
+	g_glObjectPurgeableAPPLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glObjectUnpurgeableAPPLE");
+	g_glObjectUnpurgeableAPPLE = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

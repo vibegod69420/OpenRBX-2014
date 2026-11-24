@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24 03:42:43 UTC",
+  "updated_at": "2026-11-24 03:52:12 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 23.0646,
-  "implemented_total": 2184,
-  "function_annotations": 2184,
+  "matchable_coverage_pct": 23.0753,
+  "implemented_total": 2185,
+  "function_annotations": 2185,
   "stub_annotations": 0,
-  "perfect_100_count": 2160,
-  "matched_real_functions": 2160,
+  "perfect_100_count": 2161,
+  "matched_real_functions": 2161,
   "average_match_pct": 99.58,
-  "overall_function_coverage_pct": 5.3253,
-  "overall_byte_coverage_pct": 1.6309,
+  "overall_function_coverage_pct": 5.3278,
+  "overall_byte_coverage_pct": 1.6317,
   "usage": {
-    "calls_24h": 3289,
+    "calls_24h": 3299,
     "failures_24h": 0,
-    "completion_tokens_24h": 37948509,
-    "reasoning_tokens_24h": 37129355,
-    "avg_latency_s": 188.5
+    "completion_tokens_24h": 38061036,
+    "reasoning_tokens_24h": 37237290,
+    "avg_latency_s": 187.6
   },
   "functions": [
     {
@@ -2857,6 +2857,17 @@
       "file": "Client/Rendering/GfxCore/VertexLayout.cpp",
       "orig_size": 54,
       "recomp_size": 54,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x005f48b0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::VertexLayout::initAppleObjectPurgeable",
+      "mangled": "?initAppleObjectPurgeable@VertexLayout@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/VertexLayout.cpp",
+      "orig_size": 77,
+      "recomp_size": 77,
       "match_pct": 100.0,
       "matchable": true
     },
