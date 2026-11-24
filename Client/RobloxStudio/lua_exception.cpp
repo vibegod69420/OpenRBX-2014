@@ -1138,6 +1138,38 @@ void __cdecl lua_exception::getTable(int index)
 	}
 }
 
+void __cdecl luaC_step(lua_exception* L);
+void* __cdecl sub_BC9420(void* L, void* s, int l);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a35690
+void __cdecl sub_A35690(void* L, void* buf, int size)
+{
+	char* g = *(char**)((char*)L + 0x10);
+	if (*(unsigned int*)(g + 0x44) >= *(unsigned int*)(g + 0x40))
+	{
+		luaC_step((lua_exception*)L);
+	}
+
+	char* top = *(char**)((char*)L + 8);
+	*(void**)top = sub_BC9420(L, buf, size);
+	*(int*)(top + 8) = 4;
+	*(char**)((char*)L + 8) += 16;
+}
+
+void __cdecl lua_exception::sub_A35690(void* L, void* buf, int size)
+{
+	char* g = *(char**)((char*)L + 0x10);
+	if (*(unsigned int*)(g + 0x44) >= *(unsigned int*)(g + 0x40))
+	{
+		luaC_step((lua_exception*)L);
+	}
+
+	char* top = *(char**)((char*)L + 8);
+	*(void**)top = sub_BC9420(L, buf, size);
+	*(int*)(top + 8) = 4;
+	*(char**)((char*)L + 8) += 16;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

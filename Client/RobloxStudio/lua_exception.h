@@ -80,6 +80,7 @@ public:
 	int __cdecl toboolean(int index);
 	void* __cdecl touserdata(int index);
 	void __cdecl getTable(int index);
+	void __cdecl sub_A35690(void* L, void* buf, int size);
 	// AUTO-GENERATED METHODS
 };
 
