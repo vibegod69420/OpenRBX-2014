@@ -72,6 +72,7 @@ public:
 	void __cdecl reportError(unsigned char** /*unused*/);
 	void __cdecl reportError(const struct lua_State* /*unused*/);
 	int __cdecl reportError(__int64 /*unused*/);
+	int __cdecl reportError(unsigned __int64 /*unused*/);
 	// AUTO-GENERATED METHODS
 };
 

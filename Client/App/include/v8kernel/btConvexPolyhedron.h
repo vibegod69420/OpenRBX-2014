@@ -19,6 +19,7 @@ public:
 	void*initialize();
 	void*initializeFaces();
 	void*initializeEdges();
+	void destroy();
 	// AUTO-GENERATED METHODS
 };
 

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24 10:43:18 UTC",
+ "updated_at": "2026-11-24 10:52:36 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 23.5985,
- "implemented_total": 2234,
- "function_annotations": 2234,
+ "matchable_coverage_pct": 23.6199,
+ "implemented_total": 2236,
+ "function_annotations": 2236,
  "stub_annotations": 0,
- "perfect_100_count": 2210,
- "matched_real_functions": 2210,
+ "perfect_100_count": 2212,
+ "matched_real_functions": 2212,
  "average_match_pct": 99.59,
- "overall_function_coverage_pct": 5.4486,
- "overall_byte_coverage_pct": 1.6592,
+ "overall_function_coverage_pct": 5.4535,
+ "overall_byte_coverage_pct": 1.6604,
  "usage": {
-  "calls_24h": 2827,
+  "calls_24h": 2831,
   "failures_24h": 0,
-  "completion_tokens_24h": 33528881,
-  "reasoning_tokens_24h": 32756871,
-  "avg_latency_s": 194.6
+  "completion_tokens_24h": 33582986,
+  "reasoning_tokens_24h": 32809670,
+  "avg_latency_s": 194.0
  },
- "functions_total": 2234,
+ "functions_total": 2236,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -60,9 +60,9 @@
   },
   {
    "name": "App/script",
-   "matched": 149,
-   "functions": 149,
-   "bytes": 10397
+   "matched": 150,
+   "functions": 150,
+   "bytes": 10446
   },
   {
    "name": "Rendering/g3d",
@@ -72,9 +72,9 @@
   },
   {
    "name": "App/v8kernel",
-   "matched": 78,
-   "functions": 78,
-   "bytes": 3185
+   "matched": 79,
+   "functions": 79,
+   "bytes": 3254
   },
   {
    "name": "Rendering/GfxRender",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-18 20:17:10 UTC",
-   "matched": 232,
-   "implemented": 232,
-   "pct": 2.4773
-  },
-  {
    "t": "2026-11-18 20:23:48 UTC",
    "matched": 248,
    "implemented": 248,
@@ -6393,9 +6387,27 @@
    "matched": 2210,
    "implemented": 2234,
    "pct": 23.5985
+  },
+  {
+   "t": "2026-11-24 10:52:36 UTC",
+   "matched": 2212,
+   "implemented": 2236,
+   "pct": 23.6199
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-24T10:48:10",
+   "address": "0x005d5420",
+   "name": "btConvexPolyhedron::destroy",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T10:44:37",
+   "address": "0x008ddf30",
+   "name": "RBX::ScriptContext::reportError",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-24T10:34:44",
    "address": "0x008bdae0",
@@ -7103,19 +7115,7 @@
    "address": "0x005e84a0",
    "name": "RBX::Graphics::FragmentShaderD3D9::unload",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T10:16:48",
-   "address": "0x00939b10",
-   "name": "init",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T10:03:36",
-   "address": "0x0079ea20",
-   "name": "RBX::Scripting::DebuggerBreakpoint::sub_79EA20",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 14.71
+ "match_rate_per_hour": 14.6
 }

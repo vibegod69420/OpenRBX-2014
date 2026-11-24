@@ -76,6 +76,29 @@ void* btConvexPolyhedron::initializeEdges()
 	return p;
 }
 
+extern int btConvexPolyhedron_deleteCounter;
+extern void (__cdecl* btConvexPolyhedron_free)(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x005d5420
+void btConvexPolyhedron::destroy()
+{
+	while (*(void**)this)
+	{
+		void* node = *(void**)this;
+		*(void**)this = *(void**)((char*)node + 8);
+
+		void* child = *(void**)node;
+		if (child)
+		{
+			++btConvexPolyhedron_deleteCounter;
+			btConvexPolyhedron_free(child);
+		}
+
+		++btConvexPolyhedron_deleteCounter;
+		btConvexPolyhedron_free(node);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
