@@ -997,6 +997,40 @@ void __cdecl GuiMain::clear(void* end)
 	} while (p != e);
 }
 
+void __cdecl GuiMain_PushHeap_008aeea0(void* arr, int hole, int top, void* val, void* pred);
+
+// FUNCTION: ROBLOXSTUDIO 0x008ae0e0
+void __cdecl GuiMain::adjustHeap(int hole, int bottom, void* val, void* pred)
+{
+	void** arr = (void**)this;
+	int top = hole;
+	int child = hole * 2 + 2;
+
+	if (child < bottom)
+	{
+		do
+		{
+			int* leftKey = *(int**)((char*)arr[child - 1] + 0x0C);
+			int* rightKey = *(int**)((char*)arr[child] + 0x0C);
+			if (*rightKey < *leftKey)
+				--child;
+
+			arr[hole] = arr[child];
+			hole = child;
+			child = child * 2 + 2;
+		}
+		while (child < bottom);
+	}
+
+	if (child == bottom)
+	{
+		arr[hole] = arr[bottom - 1];
+		hole = bottom - 1;
+	}
+
+	GuiMain_PushHeap_008aeea0(arr, hole, top, val, pred);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

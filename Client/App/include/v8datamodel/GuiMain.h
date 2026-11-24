@@ -44,6 +44,7 @@ public:
 	void __cdecl fireEvent(int mode);
 	GuiMain();
 	void __cdecl clear(void* end);
+	void __cdecl adjustHeap(int hole, int bottom, void* val, void* pred);
 	// AUTO-GENERATED METHODS
 };
 

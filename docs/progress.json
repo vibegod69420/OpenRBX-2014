@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24 19:13:37 UTC",
+ "updated_at": "2026-11-24 19:22:26 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 23.9616,
- "implemented_total": 2268,
- "function_annotations": 2268,
+ "matchable_coverage_pct": 23.9722,
+ "implemented_total": 2269,
+ "function_annotations": 2269,
  "stub_annotations": 0,
- "perfect_100_count": 2244,
- "matched_real_functions": 2244,
+ "perfect_100_count": 2245,
+ "matched_real_functions": 2245,
  "average_match_pct": 99.59,
- "overall_function_coverage_pct": 5.5324,
- "overall_byte_coverage_pct": 1.702,
+ "overall_function_coverage_pct": 5.5349,
+ "overall_byte_coverage_pct": 1.7032,
  "usage": {
-  "calls_24h": 2595,
+  "calls_24h": 2594,
   "failures_24h": 0,
-  "completion_tokens_24h": 30927658,
-  "reasoning_tokens_24h": 30176412,
-  "avg_latency_s": 195.3
+  "completion_tokens_24h": 30888139,
+  "reasoning_tokens_24h": 30138900,
+  "avg_latency_s": 195.7
  },
- "functions_total": 2268,
+ "functions_total": 2269,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 688,
-   "functions": 693,
-   "bytes": 35590
+   "matched": 689,
+   "functions": 694,
+   "bytes": 35698
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-18 22:32:55 UTC",
-   "matched": 318,
-   "implemented": 318,
-   "pct": 3.3956
-  },
-  {
    "t": "2026-11-18 22:39:20 UTC",
    "matched": 319,
    "implemented": 319,
@@ -6393,9 +6387,21 @@
    "matched": 2244,
    "implemented": 2268,
    "pct": 23.9616
+  },
+  {
+   "t": "2026-11-24 19:22:26 UTC",
+   "matched": 2245,
+   "implemented": 2269,
+   "pct": 23.9722
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-24T19:13:41",
+   "address": "0x008ae0e0",
+   "name": "RBX::GuiMain::adjustHeap",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-24T19:08:50",
    "address": "0x00db6e80",
@@ -7108,12 +7114,6 @@
    "ts": "2026-11-23T21:17:28",
    "address": "0x008738b0",
    "name": "RBX::callable_slot::invokeSlot",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T21:13:22",
-   "address": "0x008eef30",
-   "name": "RBX::TeleportService::setUnk012FD420",
    "pct": 100.0
   }
  ],
