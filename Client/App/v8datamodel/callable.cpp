@@ -34,6 +34,15 @@ bool callable::isDefaultVFunc6() const
 	return callable_checkVFunc4((void*)0x012C3884, vfunc);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0044ae80
+bool callable::isDefaultVFunc7() const
+{
+	void* vfunc = (*(void***)this)[4];
+	if (vfunc == (void*)0x012C3744)
+		return true;
+	return callable_checkVFunc4((void*)0x012C3744, vfunc);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
