@@ -44,6 +44,20 @@ unsigned char __cdecl ShaderProgram::func6106c0()
 	return ((unsigned char*)0x00E32ABA)[index + index * 2];
 }
 
+class ShaderProgramCallee690700
+{
+public:
+	void func(void* a1, int a3);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00690700
+ShaderProgram* __cdecl ShaderProgram::func690700(void* a2, int a3)
+{
+	volatile int local = 0;
+	(*(ShaderProgramCallee690700**)a2)->func(this, a3);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

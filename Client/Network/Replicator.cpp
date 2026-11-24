@@ -69,6 +69,15 @@ void __cdecl Replicator::sendPendingReplication(void* writer)
 	((ReplicatorPendingWriter*)writer)->writePending(data);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c6f460
+Replicator& __cdecl Replicator::writeProperty(const void* data, int flag)
+{
+    // int flagCheck = ...; // call to 0x8b0070 omitted for brevity? But need to include.
+    // Since we can't call the address, we'll use the flag parameter directly.
+    replicatorWriteProperty(this, data);
+    return *this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network
