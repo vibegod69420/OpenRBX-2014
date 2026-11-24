@@ -26,6 +26,7 @@ public:
 	int GetNextSendReceipt();
 	bool IsUnassigned() const;
 	void ClearProfilingData();
+	bool IsDefault() const;
 	// AUTO-GENERATED METHODS
 };
 

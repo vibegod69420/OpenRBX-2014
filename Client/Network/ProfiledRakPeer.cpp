@@ -179,6 +179,30 @@ void ProfiledRakPeer::ClearProfilingData()
 	}
 }
 
+namespace
+{
+struct ProfiledRakPeerDefaultSentinel
+{
+	int a;
+	float b;
+	float c;
+
+	ProfiledRakPeerDefaultSentinel() : a(0), b(-0.5f), c(0.5f)
+	{
+	}
+};
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x0099da60
+bool ProfiledRakPeer::IsDefault() const
+{
+	static ProfiledRakPeerDefaultSentinel sentinel;
+
+	return *reinterpret_cast<const int*>(this) == sentinel.a
+		&& *reinterpret_cast<const float*>(reinterpret_cast<const char*>(this) + 4) == sentinel.b
+		&& *reinterpret_cast<const float*>(reinterpret_cast<const char*>(this) + 8) == sentinel.c;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network
