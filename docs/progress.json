@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24 21:54:14 UTC",
+ "updated_at": "2026-11-24 22:05:50 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 24.047,
- "implemented_total": 2276,
- "function_annotations": 2276,
+ "matchable_coverage_pct": 24.0577,
+ "implemented_total": 2277,
+ "function_annotations": 2277,
  "stub_annotations": 0,
- "perfect_100_count": 2252,
- "matched_real_functions": 2252,
+ "perfect_100_count": 2253,
+ "matched_real_functions": 2253,
  "average_match_pct": 99.6,
- "overall_function_coverage_pct": 5.5521,
- "overall_byte_coverage_pct": 1.7177,
+ "overall_function_coverage_pct": 5.5546,
+ "overall_byte_coverage_pct": 1.7189,
  "usage": {
-  "calls_24h": 2584,
+  "calls_24h": 2590,
   "failures_24h": 0,
-  "completion_tokens_24h": 30926544,
-  "reasoning_tokens_24h": 30207656,
-  "avg_latency_s": 198.7
+  "completion_tokens_24h": 31005918,
+  "reasoning_tokens_24h": 30283962,
+  "avg_latency_s": 198.6
  },
- "functions_total": 2276,
+ "functions_total": 2277,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 691,
-   "functions": 696,
-   "bytes": 35934
+   "matched": 692,
+   "functions": 697,
+   "bytes": 36052
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-18 23:19:56 UTC",
-   "matched": 326,
-   "implemented": 326,
-   "pct": 3.481
-  },
-  {
    "t": "2026-11-18 23:26:33 UTC",
    "matched": 328,
    "implemented": 328,
@@ -6393,9 +6387,21 @@
    "matched": 2252,
    "implemented": 2276,
    "pct": 24.047
+  },
+  {
+   "t": "2026-11-24 22:05:50 UTC",
+   "matched": 2253,
+   "implemented": 2277,
+   "pct": 24.0577
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-24T22:01:58",
+   "address": "0x008af510",
+   "name": "RBX::GuiMain::fireMouseButton1ClickBase",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-24T21:50:09",
    "address": "0x00bc8900",
@@ -7109,13 +7115,7 @@
    "address": "0x008bd860",
    "name": "RBX::ClientAppSettings::ApplySettingFromFunc_18",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T21:39:24",
-   "address": "0x0040d1d0",
-   "name": "RBX::GetSetImpl::initStringArray",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 13.51
+ "match_rate_per_hour": 13.49
 }
