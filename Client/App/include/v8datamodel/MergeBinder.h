@@ -18,6 +18,7 @@ public:
 
 	int __cdecl release();
 	void clear();
+	void destroyMembers();
 	// AUTO-GENERATED METHODS
 };
 

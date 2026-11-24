@@ -113,6 +113,7 @@ public:
 	bool initGL20();
 	bool initAMDMultiDrawIndirect();
 	bool initAMDNameGenDelete();
+	bool initANGLEInstancedArrays();
 	// AUTO-GENERATED METHODS
 };
 

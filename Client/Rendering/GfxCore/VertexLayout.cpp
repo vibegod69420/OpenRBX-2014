@@ -6235,6 +6235,32 @@ bool VertexLayout::initAMDNameGenDelete()
 	return false;
 }
 
+extern void* g_glDrawArraysInstancedANGLE;
+extern void* g_glDrawElementsInstancedANGLE;
+extern void* g_glVertexAttribDivisorANGLE;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f45c0
+bool VertexLayout::initANGLEInstancedArrays()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glDrawArraysInstancedANGLE");
+	g_glDrawArraysInstancedANGLE = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glDrawElementsInstancedANGLE");
+	g_glDrawElementsInstancedANGLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glVertexAttribDivisorANGLE");
+	g_glVertexAttribDivisorANGLE = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

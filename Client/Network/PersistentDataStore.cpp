@@ -386,6 +386,43 @@ PersistentDataStore* __cdecl PersistentDataStore::sub_94afd0(void* arg, int flag
 	return (PersistentDataStore*)arg;
 }
 
+struct _PDSBuf945800
+{
+	int unk0;
+	int unk4;
+	char* base;
+	char* cur;
+	char* end;
+	unsigned int cap;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00945800
+char* PersistentDataStore::sub_945800()
+{
+	_PDSBuf945800* b = (_PDSBuf945800*)this;
+	char* cur = b->cur;
+	if (cur + 1 >= b->end)
+	{
+		char* base = b->base;
+		unsigned int offset = (unsigned int)(cur - base);
+		unsigned int newCap = b->cap * 2;
+		unsigned int needed = offset + 1;
+		if (newCap < needed)
+			newCap = needed;
+		char* newBase = (char*)realloc(base, newCap);
+		char* newCur = newBase + offset;
+		b->base = newBase;
+		b->cap = newCap;
+		b->cur = newCur;
+		b->end = newBase + newCap;
+	}
+	cur = b->cur;
+	b->cur = cur + 1;
+	*cur = 0;
+	--b->cur;
+	return b->base;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network
