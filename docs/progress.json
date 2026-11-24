@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24 07:45:56 UTC",
+ "updated_at": "2026-11-24 08:16:10 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 23.4597,
- "implemented_total": 2221,
- "function_annotations": 2221,
+ "matchable_coverage_pct": 23.4704,
+ "implemented_total": 2222,
+ "function_annotations": 2222,
  "stub_annotations": 0,
- "perfect_100_count": 2197,
- "matched_real_functions": 2197,
+ "perfect_100_count": 2198,
+ "matched_real_functions": 2198,
  "average_match_pct": 99.59,
- "overall_function_coverage_pct": 5.4165,
- "overall_byte_coverage_pct": 1.6518,
+ "overall_function_coverage_pct": 5.419,
+ "overall_byte_coverage_pct": 1.6528,
  "usage": {
-  "calls_24h": 3050,
+  "calls_24h": 3041,
   "failures_24h": 0,
-  "completion_tokens_24h": 35461667,
-  "reasoning_tokens_24h": 34664535,
-  "avg_latency_s": 189.2
+  "completion_tokens_24h": 35210476,
+  "reasoning_tokens_24h": 34422773,
+  "avg_latency_s": 189.0
  },
- "functions_total": 2221,
+ "functions_total": 2222,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -54,9 +54,9 @@
   },
   {
    "name": "App/v8world",
-   "matched": 164,
-   "functions": 164,
-   "bytes": 10918
+   "matched": 165,
+   "functions": 165,
+   "bytes": 11007
   },
   {
    "name": "App/script",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-18 19:26:34 UTC",
-   "matched": 176,
-   "implemented": 176,
-   "pct": 1.8793
-  },
-  {
    "t": "2026-11-18 19:29:56 UTC",
    "matched": 179,
    "implemented": 179,
@@ -6393,9 +6387,21 @@
    "matched": 2197,
    "implemented": 2221,
    "pct": 23.4597
+  },
+  {
+   "t": "2026-11-24 08:16:10 UTC",
+   "matched": 2198,
+   "implemented": 2222,
+   "pct": 23.4704
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-24T08:11:53",
+   "address": "0x0099daf0",
+   "name": "RBX::Ball::allocateFromPool",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-24T07:41:55",
    "address": "0x00b4d6c0",
@@ -7109,13 +7115,7 @@
    "address": "0x00c792a0",
    "name": "std::chainbuf::write_double",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T09:03:25",
-   "address": "0x00c17640",
-   "name": "RBX::HUMAN::Swimming::initialize",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 15.27
+ "match_rate_per_hour": 15.21
 }

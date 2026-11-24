@@ -19,6 +19,7 @@ public:
 
 	float getGridVolume() const;
 	Primitive*getPrimitive() const;
+	void*allocateFromPool();
 	// AUTO-GENERATED METHODS
 };
 
