@@ -37,6 +37,7 @@ public:
 	unsigned char __cdecl getByte();
 	void dispose_managed();
 	void dispose_heap();
+	void __cdecl get_deleter_b8a470();
 	// AUTO-GENERATED METHODS
 };
 

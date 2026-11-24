@@ -254,6 +254,16 @@ void sp_counted_impl_pd::dispose_heap()
 	HeapFree(GetProcessHeap(), 0, p);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b8a470
+void __cdecl sp_counted_impl_pd::get_deleter_b8a470()
+{
+	void* obj = *(void**)this;
+	void* pArg;
+	int flag;
+	*(unsigned char*)&flag = 0;
+	((sp_counted_impl_pd_callee*)((char*)obj + 8))->func(flag, obj, &pArg, 0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
