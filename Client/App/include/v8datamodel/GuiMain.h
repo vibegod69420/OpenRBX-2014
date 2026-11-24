@@ -46,6 +46,7 @@ public:
 	void __cdecl clear(void* end);
 	void __cdecl adjustHeap(int hole, int bottom, void* val, void* pred);
 	void __cdecl fireTriggeredBase(void* source);
+	void __cdecl fireRightMouseClickBase(void* source);
 	// AUTO-GENERATED METHODS
 };
 

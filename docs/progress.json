@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24 20:57:49 UTC",
+ "updated_at": "2026-11-24 21:23:57 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 24.0149,
- "implemented_total": 2273,
- "function_annotations": 2273,
+ "matchable_coverage_pct": 24.0256,
+ "implemented_total": 2274,
+ "function_annotations": 2274,
  "stub_annotations": 0,
- "perfect_100_count": 2249,
- "matched_real_functions": 2249,
+ "perfect_100_count": 2250,
+ "matched_real_functions": 2250,
  "average_match_pct": 99.6,
- "overall_function_coverage_pct": 5.5447,
- "overall_byte_coverage_pct": 1.715,
+ "overall_function_coverage_pct": 5.5472,
+ "overall_byte_coverage_pct": 1.7162,
  "usage": {
-  "calls_24h": 2631,
+  "calls_24h": 2625,
   "failures_24h": 0,
-  "completion_tokens_24h": 31170556,
-  "reasoning_tokens_24h": 30445801,
-  "avg_latency_s": 196.2
+  "completion_tokens_24h": 31193302,
+  "reasoning_tokens_24h": 30477584,
+  "avg_latency_s": 197.1
  },
- "functions_total": 2273,
+ "functions_total": 2274,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 690,
-   "functions": 695,
-   "bytes": 35816
+   "matched": 691,
+   "functions": 696,
+   "bytes": 35934
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-18 22:59:15 UTC",
-   "matched": 323,
-   "implemented": 323,
-   "pct": 3.449
-  },
-  {
    "t": "2026-11-18 23:06:16 UTC",
    "matched": 324,
    "implemented": 324,
@@ -6393,9 +6387,21 @@
    "matched": 2249,
    "implemented": 2273,
    "pct": 24.0149
+  },
+  {
+   "t": "2026-11-24 21:23:57 UTC",
+   "matched": 2250,
+   "implemented": 2274,
+   "pct": 24.0256
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-24T21:19:45",
+   "address": "0x008af490",
+   "name": "RBX::GuiMain::fireRightMouseClickBase",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-24T20:54:03",
    "address": "0x00a35440",
@@ -7109,13 +7115,7 @@
    "address": "0x008bd840",
    "name": "RBX::ClientAppSettings::ApplySettingFromFunc_5C",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T21:28:04",
-   "address": "0x00cf6269",
-   "name": "std::basic_altstringbuf::CheckedAdd",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 13.57
+ "match_rate_per_hour": 13.54
 }
