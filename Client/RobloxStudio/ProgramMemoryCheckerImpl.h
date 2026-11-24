@@ -436,6 +436,7 @@ public:
 	void init_dd98e0();
 	void init_dea870();
 	void init_dce410();
+	void init_d9ec90();
 	// AUTO-GENERATED METHODS
 };
 

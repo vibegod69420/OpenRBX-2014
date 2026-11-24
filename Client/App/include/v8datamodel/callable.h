@@ -22,6 +22,7 @@ public:
 	bool isDefaultVFunc7() const;
 	bool isDefaultVFunc8() const;
 	bool isDefaultVFunc9() const;
+	bool isDefaultVFunc10() const;
 	// AUTO-GENERATED METHODS
 };
 
