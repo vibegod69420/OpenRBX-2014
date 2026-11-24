@@ -140,6 +140,48 @@ int __cdecl http_status_error::check()
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00d008c0
+void __cdecl http_status_error::copy_block(const unsigned char* buf, unsigned int len, int header)
+{
+	flush();
+
+	if (header != 0)
+	{
+		unsigned char* out = *(unsigned char**)((char*)this + 8);
+		int idx = *(int*)((char*)this + 0x14);
+		out[idx] = (unsigned char)len;
+		++*(int*)((char*)this + 0x14);
+
+		idx = *(int*)((char*)this + 0x14);
+		out = *(unsigned char**)((char*)this + 8);
+		out[idx] = (unsigned char)(len >> 8);
+		++*(int*)((char*)this + 0x14);
+
+		idx = *(int*)((char*)this + 0x14);
+		out = *(unsigned char**)((char*)this + 8);
+		out[idx] = (unsigned char)(~len);
+		++*(int*)((char*)this + 0x14);
+
+		idx = *(int*)((char*)this + 0x14);
+		out = *(unsigned char**)((char*)this + 8);
+		out[idx] = (unsigned char)(~len >> 8);
+		++*(int*)((char*)this + 0x14);
+	}
+
+	if (len != 0)
+	{
+		do
+		{
+			int idx = *(int*)((char*)this + 0x14);
+			unsigned char* out = *(unsigned char**)((char*)this + 8);
+			out[idx] = *buf;
+			++buf;
+			++*(int*)((char*)this + 0x14);
+			--len;
+		} while (len != 0);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

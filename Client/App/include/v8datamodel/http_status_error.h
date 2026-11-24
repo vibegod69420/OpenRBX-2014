@@ -22,6 +22,7 @@ public:
 	void __cdecl transfer();
 	void __cdecl flush();
 	int __cdecl check();
+	void __cdecl copy_block(const unsigned char* buf, unsigned int len, int header);
 	// AUTO-GENERATED METHODS
 };
 
