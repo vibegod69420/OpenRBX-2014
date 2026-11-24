@@ -210,6 +210,38 @@ int Humanoid::func009d8860()
 	return 0;
 }
 
+void* __cdecl sub_532170();
+
+struct HumanoidCheckNode
+{
+	bool check(void* context);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x009d8360
+void* __cdecl Humanoid::func009d8360()
+{
+	char* self = reinterpret_cast<char*>(this);
+	if (self)
+	{
+		void* obj = *reinterpret_cast<void**>(self + 0x38);
+		if (obj)
+		{
+			char* p = reinterpret_cast<char*>(obj) + 0x1c;
+			if (p)
+			{
+				HumanoidCheckNode* node = *reinterpret_cast<HumanoidCheckNode**>(p + 0x0c);
+				if (node->check(sub_532170()))
+				{
+					char* result = p - 0x1c;
+					if (result)
+						return result;
+				}
+			}
+		}
+	}
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

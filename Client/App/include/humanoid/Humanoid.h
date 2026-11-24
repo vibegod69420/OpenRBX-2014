@@ -44,6 +44,7 @@ public:
 	float getField204XorFloat();
 	float getField1F8XorFloat();
 	int func009d8860();
+	void* __cdecl func009d8360();
 	// AUTO-GENERATED METHODS
 };
 

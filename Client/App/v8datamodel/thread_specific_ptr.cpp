@@ -282,6 +282,20 @@ thread_specific_ptr* __cdecl thread_specific_ptr::init(void* arg)
 	return this;
 }
 
+struct thread_specific_ptr_attach_helper
+{
+	void __thiscall run(void* arg);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x006baa00
+thread_specific_ptr* __cdecl thread_specific_ptr::attach(void* arg)
+{
+	volatile int local = 0;
+	_vtable_or_head = 0;
+	((thread_specific_ptr_attach_helper*)this)->run(arg);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

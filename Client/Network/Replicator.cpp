@@ -157,6 +157,21 @@ void __cdecl Replicator::writePendingPropertyId(void* bitStream)
 	((ReplicatorBitStream*)bitStream)->writeBits(&local[1], 6, 1);
 }
 
+struct ReplicatorIntConstruct
+{
+	void __thiscall construct(int value);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c6f000
+void __cdecl Replicator::sendRemovedProperty(const void* prop)
+{
+	int local;
+	((ReplicatorIntConstruct*)&local)->construct(0);
+	replicatorWritePropertyRef(prop, &local);
+	if (*((int*)this + 1) != 0)
+		((ReplicatorPacketSender*)this)->sendPropertyPacket(&local);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

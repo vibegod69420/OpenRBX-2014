@@ -24,6 +24,7 @@ public:
 	void cleanup();
 	void __cdecl format(char const* fmt, ...);
 	thread_specific_ptr* __cdecl init(void* arg);
+	thread_specific_ptr* __cdecl attach(void* arg);
 	// AUTO-GENERATED METHODS
 };
 
