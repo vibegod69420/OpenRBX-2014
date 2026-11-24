@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24 03:04:04 UTC",
+ "updated_at": "2026-11-24 03:16:15 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 23.0005,
- "implemented_total": 2178,
- "function_annotations": 2178,
+ "matchable_coverage_pct": 23.0112,
+ "implemented_total": 2179,
+ "function_annotations": 2179,
  "stub_annotations": 0,
- "perfect_100_count": 2154,
- "matched_real_functions": 2154,
+ "perfect_100_count": 2155,
+ "matched_real_functions": 2155,
  "average_match_pct": 99.58,
- "overall_function_coverage_pct": 5.3105,
- "overall_byte_coverage_pct": 1.627,
+ "overall_function_coverage_pct": 5.313,
+ "overall_byte_coverage_pct": 1.6284,
  "usage": {
-  "calls_24h": 3352,
+  "calls_24h": 3317,
   "failures_24h": 0,
-  "completion_tokens_24h": 38534677,
-  "reasoning_tokens_24h": 37713843,
-  "avg_latency_s": 187.9
+  "completion_tokens_24h": 38211553,
+  "reasoning_tokens_24h": 37391577,
+  "avg_latency_s": 188.4
  },
- "functions_total": 2178,
+ "functions_total": 2179,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -84,9 +84,9 @@
   },
   {
    "name": "Rendering/GfxRender",
-   "matched": 64,
-   "functions": 64,
-   "bytes": 2766
+   "matched": 65,
+   "functions": 65,
+   "bytes": 2898
   },
   {
    "name": "App/humanoid",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-18 18:59:24 UTC",
-   "matched": 140,
-   "implemented": 140,
-   "pct": 1.4949
-  },
-  {
    "t": "2026-11-18 19:00:00 UTC",
    "matched": 141,
    "implemented": 141,
@@ -6393,9 +6387,21 @@
    "matched": 2154,
    "implemented": 2178,
    "pct": 23.0005
+  },
+  {
+   "t": "2026-11-24 03:16:15 UTC",
+   "matched": 2155,
+   "implemented": 2179,
+   "pct": 23.0112
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-24T03:12:28",
+   "address": "0x0066d3d0",
+   "name": "RBX::Graphics::ObjectExporter::flush",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-24T03:00:25",
    "address": "0x00c5cef0",
@@ -7109,13 +7115,7 @@
    "address": "0x00c79280",
    "name": "std::chainbuf::write_float",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T04:46:12",
-   "address": "0x00b850c0",
-   "name": "RBX::Lua::WaitScriptSlot::executeGenericFunction",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 15.72
+ "match_rate_per_hour": 15.7
 }
