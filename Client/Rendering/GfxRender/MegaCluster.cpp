@@ -139,6 +139,28 @@ void MegaCluster::clearBuffer0()
 	}
 }
 
+bool __cdecl sub_663ff0(void* a, void* b, void* c);
+
+// FUNCTION: ROBLOXSTUDIO 0x00667ba0
+bool MegaCluster::isCellValid()
+{
+	void* p0 = *(void**)this;
+	unsigned char* p28 = *(unsigned char**)((char*)this + 0x28);
+	void* esiVal = *(void**)p0;
+	unsigned char b = *p28;
+
+	if (b != *(unsigned char*)0x012F8550)
+	{
+		unsigned char t = (unsigned char)((b >> 3) & 7);
+		if (t != 0)
+		{
+			if (t == 5 || sub_663ff0(esiVal, p28, (char*)this + 0x1E))
+				return true;
+		}
+	}
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

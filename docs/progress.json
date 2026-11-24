@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24 04:20:01 UTC",
+ "updated_at": "2026-11-24 04:29:23 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 23.1927,
- "implemented_total": 2196,
- "function_annotations": 2196,
+ "matchable_coverage_pct": 23.2248,
+ "implemented_total": 2199,
+ "function_annotations": 2199,
  "stub_annotations": 0,
- "perfect_100_count": 2172,
- "matched_real_functions": 2172,
+ "perfect_100_count": 2175,
+ "matched_real_functions": 2175,
  "average_match_pct": 99.58,
- "overall_function_coverage_pct": 5.3549,
- "overall_byte_coverage_pct": 1.6371,
+ "overall_function_coverage_pct": 5.3623,
+ "overall_byte_coverage_pct": 1.6385,
  "usage": {
-  "calls_24h": 3325,
+  "calls_24h": 3315,
   "failures_24h": 0,
-  "completion_tokens_24h": 38156179,
-  "reasoning_tokens_24h": 37339508,
-  "avg_latency_s": 186.9
+  "completion_tokens_24h": 38114478,
+  "reasoning_tokens_24h": 37299633,
+  "avg_latency_s": 187.4
  },
- "functions_total": 2196,
+ "functions_total": 2199,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 659,
-   "functions": 664,
-   "bytes": 34303
+   "matched": 660,
+   "functions": 665,
+   "bytes": 34332
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -60,9 +60,9 @@
   },
   {
    "name": "App/script",
-   "matched": 142,
-   "functions": 142,
-   "bytes": 10078
+   "matched": 143,
+   "functions": 143,
+   "bytes": 10125
   },
   {
    "name": "Rendering/g3d",
@@ -84,9 +84,9 @@
   },
   {
    "name": "Rendering/GfxRender",
-   "matched": 66,
-   "functions": 66,
-   "bytes": 2944
+   "matched": 67,
+   "functions": 67,
+   "bytes": 2999
   },
   {
    "name": "App/humanoid",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-18 19:06:49 UTC",
-   "matched": 150,
-   "implemented": 150,
-   "pct": 1.6017
-  },
-  {
    "t": "2026-11-18 19:11:22 UTC",
    "matched": 151,
    "implemented": 151,
@@ -6393,9 +6387,33 @@
    "matched": 2172,
    "implemented": 2196,
    "pct": 23.1927
+  },
+  {
+   "t": "2026-11-24 04:29:23 UTC",
+   "matched": 2175,
+   "implemented": 2199,
+   "pct": 23.2248
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-24T04:22:53",
+   "address": "0x008bda20",
+   "name": "RBX::ClientAppSettings::ApplySettingFromFunc_CC",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T04:22:01",
+   "address": "0x008dd900",
+   "name": "RBX::ScriptContext::reportError",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T04:20:44",
+   "address": "0x00667ba0",
+   "name": "RBX::Graphics::MegaCluster::isCellValid",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-24T04:14:30",
    "address": "0x00bc6d00",
@@ -7096,24 +7114,6 @@
    "ts": "2026-11-23T05:46:17",
    "address": "0x00695f20",
    "name": "RBX::Graphics::SSAO::clearBufferData",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T05:44:03",
-   "address": "0x0078c430",
-   "name": "RBX::ChangeHistoryService::create",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T05:36:04",
-   "address": "0x006d13e0",
-   "name": "RBX::CircleRadialNormal::getHalfCrossUpNormal",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T05:26:18",
-   "address": "0x00b81c20",
-   "name": "luaAllocatorSub_A35670",
    "pct": 100.0
   }
  ],

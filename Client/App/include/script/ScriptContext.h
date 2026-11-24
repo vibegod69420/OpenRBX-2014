@@ -67,6 +67,7 @@ public:
 	void __cdecl reportError(const bool* /*unused*/);
 	void __cdecl reportError(const void** /*unused*/);
 	void __cdecl reportError(void** /*unused*/);
+	void __cdecl reportError(char** /*unused*/);
 	// AUTO-GENERATED METHODS
 };
 

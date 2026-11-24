@@ -27,6 +27,7 @@ public:
 	int __cdecl getData(void* param, int index);
 	int __cdecl getDataByIndex(void* param, int index);
 	void clearBuffer0();
+	bool isCellValid();
 	// AUTO-GENERATED METHODS
 };
 
