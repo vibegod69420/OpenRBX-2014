@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24 15:30:32 UTC",
+ "updated_at": "2026-11-24 15:40:35 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 23.7266,
- "implemented_total": 2246,
- "function_annotations": 2246,
+ "matchable_coverage_pct": 23.7373,
+ "implemented_total": 2247,
+ "function_annotations": 2247,
  "stub_annotations": 0,
- "perfect_100_count": 2222,
- "matched_real_functions": 2222,
+ "perfect_100_count": 2223,
+ "matched_real_functions": 2223,
  "average_match_pct": 99.59,
- "overall_function_coverage_pct": 5.4782,
- "overall_byte_coverage_pct": 1.6706,
+ "overall_function_coverage_pct": 5.4806,
+ "overall_byte_coverage_pct": 1.6713,
  "usage": {
-  "calls_24h": 2652,
+  "calls_24h": 2635,
   "failures_24h": 0,
-  "completion_tokens_24h": 32270304,
-  "reasoning_tokens_24h": 31524622,
-  "avg_latency_s": 191.2
+  "completion_tokens_24h": 32206606,
+  "reasoning_tokens_24h": 31459730,
+  "avg_latency_s": 192.2
  },
- "functions_total": 2246,
+ "functions_total": 2247,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 679,
-   "functions": 684,
-   "bytes": 35133
+   "matched": 680,
+   "functions": 685,
+   "bytes": 35201
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-18 21:12:54 UTC",
-   "matched": 296,
-   "implemented": 296,
-   "pct": 3.1607
-  },
-  {
    "t": "2026-11-18 21:19:45 UTC",
    "matched": 299,
    "implemented": 299,
@@ -6393,9 +6387,21 @@
    "matched": 2222,
    "implemented": 2246,
    "pct": 23.7266
+  },
+  {
+   "t": "2026-11-24 15:40:35 UTC",
+   "matched": 2223,
+   "implemented": 2247,
+   "pct": 23.7373
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-24T15:35:28",
+   "address": "0x00ac7910",
+   "name": "RBX::GuiMain::GuiMain",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-24T15:23:28",
    "address": "0x00dce410",
@@ -7109,13 +7115,7 @@
    "address": "0x00894980",
    "name": "RBX::UnionOperation::sub_894980",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T15:04:55",
-   "address": "0x00ae1d00",
-   "name": "RBX::callable_slot::invoke",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 13.93
+ "match_rate_per_hour": 13.91
 }

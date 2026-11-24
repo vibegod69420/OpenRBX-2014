@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24 15:30:32 UTC",
+  "updated_at": "2026-11-24 15:40:35 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 23.7266,
-  "implemented_total": 2246,
-  "function_annotations": 2246,
+  "matchable_coverage_pct": 23.7373,
+  "implemented_total": 2247,
+  "function_annotations": 2247,
   "stub_annotations": 0,
-  "perfect_100_count": 2222,
-  "matched_real_functions": 2222,
+  "perfect_100_count": 2223,
+  "matched_real_functions": 2223,
   "average_match_pct": 99.59,
-  "overall_function_coverage_pct": 5.4782,
-  "overall_byte_coverage_pct": 1.6706,
+  "overall_function_coverage_pct": 5.4806,
+  "overall_byte_coverage_pct": 1.6713,
   "usage": {
-    "calls_24h": 2652,
+    "calls_24h": 2635,
     "failures_24h": 0,
-    "completion_tokens_24h": 32270304,
-    "reasoning_tokens_24h": 31524622,
-    "avg_latency_s": 191.2
+    "completion_tokens_24h": 32206606,
+    "reasoning_tokens_24h": 31459730,
+    "avg_latency_s": 192.2
   },
   "functions": [
     {
@@ -15045,6 +15045,17 @@
       "file": "Client/App/v8datamodel/MarketplaceService.cpp",
       "orig_size": 7,
       "recomp_size": 7,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00ac7910",
+      "kind": "FUNCTION",
+      "name": "RBX::GuiMain::GuiMain",
+      "mangled": "??0GuiMain@RBX@@QAE@XZ",
+      "file": "Client/App/v8datamodel/GuiMain.cpp",
+      "orig_size": 68,
+      "recomp_size": 68,
       "match_pct": 100.0,
       "matchable": true
     },

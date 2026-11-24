@@ -952,6 +952,25 @@ void __cdecl GuiMain::fireEvent(int mode)
 	GuiMain_FireScriptEvent_008b2870(this, mode, 0);
 }
 
+class GuiMainBase
+{
+public:
+	void ctor(const char* name);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00ac7910
+GuiMain::GuiMain()
+{
+	((GuiMainBase*)this)->ctor("GuiMain");
+	*(int*)((char*)this + 0x00) = 0x00EBB4E4;
+	*(int*)((char*)this + 0x04) = 0x00EBB580;
+	*(int*)((char*)this + 0x18) = 0x00EBB588;
+	*(int*)((char*)this + 0x1C) = 0x00EBB594;
+	*(int*)((char*)this + 0x64) = 0x00EBB5A4;
+	*(int*)((char*)this + 0x68) = 0x00EBB5AC;
+	*(int*)((char*)this + 0xDC) = 0x00EBB5E0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

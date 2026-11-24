@@ -42,6 +42,7 @@ public:
 	void* __cdecl fireMouseLeave(void* instance, void* source);
 	void __cdecl fireEvent(void* arg);
 	void __cdecl fireEvent(int mode);
+	GuiMain();
 	// AUTO-GENERATED METHODS
 };
 
