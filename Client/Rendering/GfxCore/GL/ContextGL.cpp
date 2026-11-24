@@ -5448,6 +5448,226 @@ bool ContextGL::initWindowPosMESA()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005fb570
+bool ContextGL::initVertexShaderEXT()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	unsigned char missing;
+	void* proc;
+
+	proc = getProc("glBeginVertexShaderEXT");
+	*(void**)0x012DAFD0 = proc;
+	missing = (proc == 0) ? 1 : 0;
+
+	proc = getProc("glBindLightParameterEXT");
+	*(void**)0x012DAFD4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glBindMaterialParameterEXT");
+	*(void**)0x012DAFE4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glBindParameterEXT");
+	*(void**)0x012DAFE8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glBindTexGenParameterEXT");
+	*(void**)0x012DAFF4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glBindTextureUnitParameterEXT");
+	*(void**)0x012DAFFC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glBindVertexShaderEXT");
+	*(void**)0x012DB004 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glDeleteVertexShaderEXT");
+	*(void**)0x012DB010 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glDisableVariantClientStateEXT");
+	*(void**)0x012DB018 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glEnableVariantClientStateEXT");
+	*(void**)0x012DB020 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glEndVertexShaderEXT");
+	*(void**)0x012DB028 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glExtractComponentEXT");
+	*(void**)0x012DB034 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGenSymbolsEXT");
+	*(void**)0x012DB03C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGenVertexShadersEXT");
+	*(void**)0x012DB040 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetInvariantBooleanvEXT");
+	*(void**)0x012DB04C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetInvariantFloatvEXT");
+	*(void**)0x012DB058 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetInvariantIntegervEXT");
+	*(void**)0x012DB060 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetLocalConstantBooleanvEXT");
+	*(void**)0x012DB064 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetLocalConstantFloatvEXT");
+	*(void**)0x012DB070 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetLocalConstantIntegervEXT");
+	*(void**)0x012DB078 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetVariantBooleanvEXT");
+	*(void**)0x012DB080 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetVariantFloatvEXT");
+	*(void**)0x012DB08C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetVariantIntegervEXT");
+	*(void**)0x012DB094 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glGetVariantPointervEXT");
+	*(void**)0x012DB0A0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glInsertComponentEXT");
+	*(void**)0x012DB0A4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glIsVariantEnabledEXT");
+	*(void**)0x012DB0B0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glSetInvariantEXT");
+	*(void**)0x012DB0BC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glSetLocalConstantEXT");
+	*(void**)0x012DB0C4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glShaderOp1EXT");
+	*(void**)0x012DB0C8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glShaderOp2EXT");
+	*(void**)0x012DB0D4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glShaderOp3EXT");
+	*(void**)0x012DB0DC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glSwizzleEXT");
+	*(void**)0x012DB0E4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVariantPointerEXT");
+	*(void**)0x012DB0F0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVariantbvEXT");
+	*(void**)0x012DB0FC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVariantdvEXT");
+	*(void**)0x012DB104 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVariantfvEXT");
+	*(void**)0x012DB108 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVariantivEXT");
+	*(void**)0x012DB114 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVariantsvEXT");
+	*(void**)0x012DB118 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVariantubvEXT");
+	*(void**)0x012DB124 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVariantusvEXT");
+	*(void**)0x012DB12C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glVariantuivEXT");
+	*(void**)0x012DB138 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWriteMaskEXT");
+	*(void**)0x012DB13C = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

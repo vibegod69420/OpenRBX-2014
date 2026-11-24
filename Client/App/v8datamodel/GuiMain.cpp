@@ -971,6 +971,32 @@ GuiMain::GuiMain()
 	*(int*)((char*)this + 0xDC) = 0x00EBB5E0;
 }
 
+extern void (__thiscall *GuiMainNodeDestroy_0xe10268)(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x008ae1d0
+void __cdecl GuiMain::clear(void* end)
+{
+	char* p = (char*)this;
+	char* e = (char*)end;
+
+	if (p == e)
+		return;
+
+	do
+	{
+		if (*(void**)p != 0)
+		{
+			GuiMainNodeDestroy_0xe10268(p);
+			::operator delete(*(void**)p);
+			*(void**)p = 0;
+			*(void**)(p + 4) = 0;
+			*(void**)(p + 8) = 0;
+		}
+
+		p += 0x0C;
+	} while (p != e);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

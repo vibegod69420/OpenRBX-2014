@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24 16:35:57 UTC",
+  "updated_at": "2026-11-24 16:45:59 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 23.748,
-  "implemented_total": 2248,
-  "function_annotations": 2248,
+  "matchable_coverage_pct": 23.78,
+  "implemented_total": 2251,
+  "function_annotations": 2251,
   "stub_annotations": 0,
-  "perfect_100_count": 2224,
-  "matched_real_functions": 2224,
+  "perfect_100_count": 2227,
+  "matched_real_functions": 2227,
   "average_match_pct": 99.59,
-  "overall_function_coverage_pct": 5.4831,
-  "overall_byte_coverage_pct": 1.6716,
+  "overall_function_coverage_pct": 5.4905,
+  "overall_byte_coverage_pct": 1.6827,
   "usage": {
-    "calls_24h": 2565,
+    "calls_24h": 2553,
     "failures_24h": 0,
-    "completion_tokens_24h": 31353221,
-    "reasoning_tokens_24h": 30601069,
-    "avg_latency_s": 192.4
+    "completion_tokens_24h": 31129708,
+    "reasoning_tokens_24h": 30380485,
+    "avg_latency_s": 191.6
   },
   "functions": [
     {
@@ -4111,6 +4111,17 @@
       "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
       "orig_size": 253,
       "recomp_size": 253,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x005fb570",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ContextGL::initVertexShaderEXT",
+      "mangled": "?initVertexShaderEXT@ContextGL@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/GL/ContextGL.cpp",
+      "orig_size": 935,
+      "recomp_size": 935,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -9479,6 +9490,17 @@
       "file": "Client/App/v8datamodel/UnionOperation.cpp",
       "orig_size": 12,
       "recomp_size": 12,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x008ae1d0",
+      "kind": "FUNCTION",
+      "name": "RBX::GuiMain::clear",
+      "mangled": "?clear@GuiMain@RBX@@QAAXPAX@Z",
+      "file": "Client/App/v8datamodel/GuiMain.cpp",
+      "orig_size": 70,
+      "recomp_size": 70,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -19005,6 +19027,17 @@
       "file": "Client/Network/Replicator.cpp",
       "orig_size": 41,
       "recomp_size": 41,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c702a0",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::Replicator::writeThreeUnsignedShorts",
+      "mangled": "?writeThreeUnsignedShorts@Replicator@Network@RBX@@QAAAAV123@PBX@Z",
+      "file": "Client/Network/Replicator.cpp",
+      "orig_size": 52,
+      "recomp_size": 52,
       "match_pct": 100.0,
       "matchable": true
     },

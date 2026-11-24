@@ -161,6 +161,7 @@ public:
 	bool initVertexProgramNV();
 	bool initProgramParametersEXT();
 	bool initWindowPosMESA();
+	bool initVertexShaderEXT();
 	// AUTO-GENERATED METHODS
 };
 

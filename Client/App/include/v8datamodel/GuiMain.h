@@ -43,6 +43,7 @@ public:
 	void __cdecl fireEvent(void* arg);
 	void __cdecl fireEvent(int mode);
 	GuiMain();
+	void __cdecl clear(void* end);
 	// AUTO-GENERATED METHODS
 };
 

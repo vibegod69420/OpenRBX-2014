@@ -172,6 +172,16 @@ void __cdecl Replicator::sendRemovedProperty(const void* prop)
 		((ReplicatorPacketSender*)this)->sendPropertyPacket(&local);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c702a0
+Replicator& __cdecl Replicator::writeThreeUnsignedShorts(const void* data)
+{
+	const unsigned short* ptr = static_cast<const unsigned short*>(data);
+	replicatorWriteUnsignedShort(this, ptr[0]);
+	replicatorWriteUnsignedShort(this, ptr[1]);
+	replicatorWriteUnsignedShort(this, ptr[2]);
+	return *this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

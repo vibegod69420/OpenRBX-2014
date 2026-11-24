@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24 16:35:57 UTC",
+ "updated_at": "2026-11-24 16:45:59 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,35 +16,35 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 23.748,
- "implemented_total": 2248,
- "function_annotations": 2248,
+ "matchable_coverage_pct": 23.78,
+ "implemented_total": 2251,
+ "function_annotations": 2251,
  "stub_annotations": 0,
- "perfect_100_count": 2224,
- "matched_real_functions": 2224,
+ "perfect_100_count": 2227,
+ "matched_real_functions": 2227,
  "average_match_pct": 99.59,
- "overall_function_coverage_pct": 5.4831,
- "overall_byte_coverage_pct": 1.6716,
+ "overall_function_coverage_pct": 5.4905,
+ "overall_byte_coverage_pct": 1.6827,
  "usage": {
-  "calls_24h": 2565,
+  "calls_24h": 2553,
   "failures_24h": 0,
-  "completion_tokens_24h": 31353221,
-  "reasoning_tokens_24h": 30601069,
-  "avg_latency_s": 192.4
+  "completion_tokens_24h": 31129708,
+  "reasoning_tokens_24h": 30380485,
+  "avg_latency_s": 191.6
  },
- "functions_total": 2248,
+ "functions_total": 2251,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
-   "matched": 280,
-   "functions": 280,
-   "bytes": 45028
+   "matched": 281,
+   "functions": 281,
+   "bytes": 45963
   },
   {
    "name": "App/v8datamodel",
-   "matched": 681,
-   "functions": 686,
-   "bytes": 35229
+   "matched": 682,
+   "functions": 687,
+   "bytes": 35299
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -125,6 +125,12 @@
    "bytes": 539
   },
   {
+   "name": "Network/Replicator.cpp",
+   "matched": 14,
+   "functions": 14,
+   "bytes": 520
+  },
+  {
    "name": "Network/ProfiledRakPeer.cpp",
    "matched": 9,
    "functions": 9,
@@ -135,12 +141,6 @@
    "matched": 1,
    "functions": 1,
    "bytes": 494
-  },
-  {
-   "name": "Network/Replicator.cpp",
-   "matched": 13,
-   "functions": 13,
-   "bytes": 468
   },
   {
    "name": "App/util",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-18 21:26:22 UTC",
-   "matched": 300,
-   "implemented": 300,
-   "pct": 3.2034
-  },
-  {
    "t": "2026-11-18 21:37:08 UTC",
    "matched": 301,
    "implemented": 301,
@@ -6393,9 +6387,33 @@
    "matched": 2224,
    "implemented": 2248,
    "pct": 23.748
+  },
+  {
+   "t": "2026-11-24 16:45:59 UTC",
+   "matched": 2227,
+   "implemented": 2251,
+   "pct": 23.78
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-24T16:39:48",
+   "address": "0x008ae1d0",
+   "name": "RBX::GuiMain::clear",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T16:38:37",
+   "address": "0x00c702a0",
+   "name": "RBX::Network::Replicator::writeThreeUnsignedShorts",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T16:36:02",
+   "address": "0x005fb570",
+   "name": "RBX::Graphics::ContextGL::initVertexShaderEXT",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-24T16:31:08",
    "address": "0x0044b1d0",
@@ -7097,25 +7115,7 @@
    "address": "0x0067aab0",
    "name": "RBX::TypedStatsItem::getOrCreateTypedChildItem",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T15:12:33",
-   "address": "0x008bde20",
-   "name": "RBX::ClientAppSettings::ApplySettingFromFunc_58",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T15:11:39",
-   "address": "0x00c6fe80",
-   "name": "RBX::Network::Replicator::writeProperty",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T15:11:32",
-   "address": "0x006106c0",
-   "name": "RBX::Graphics::ShaderProgram::func6106c0",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 13.83
+ "match_rate_per_hour": 13.84
 }
