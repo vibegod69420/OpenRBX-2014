@@ -78,6 +78,7 @@ public:
 	void __cdecl registerRBXScriptSignal(void* arg1, void* arg2);
 	void* __cdecl getFunction(void* arg);
 	void* __cdecl getString(void* arg);
+	void __cdecl pushGlobalValue();
 	// AUTO-GENERATED METHODS
 };
 

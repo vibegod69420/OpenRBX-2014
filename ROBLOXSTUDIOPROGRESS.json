@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24 08:37:13 UTC",
+  "updated_at": "2026-11-24 09:04:19 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 23.4917,
-  "implemented_total": 2224,
-  "function_annotations": 2224,
+  "matchable_coverage_pct": 23.5024,
+  "implemented_total": 2225,
+  "function_annotations": 2225,
   "stub_annotations": 0,
-  "perfect_100_count": 2200,
-  "matched_real_functions": 2200,
+  "perfect_100_count": 2201,
+  "matched_real_functions": 2201,
   "average_match_pct": 99.59,
-  "overall_function_coverage_pct": 5.4239,
-  "overall_byte_coverage_pct": 1.6552,
+  "overall_function_coverage_pct": 5.4264,
+  "overall_byte_coverage_pct": 1.6557,
   "usage": {
-    "calls_24h": 3042,
+    "calls_24h": 2969,
     "failures_24h": 0,
-    "completion_tokens_24h": 35240816,
-    "reasoning_tokens_24h": 34453111,
-    "avg_latency_s": 189.3
+    "completion_tokens_24h": 34783640,
+    "reasoning_tokens_24h": 34002037,
+    "avg_latency_s": 191.8
   },
   "functions": [
     {
@@ -14118,6 +14118,17 @@
       "kind": "FUNCTION",
       "name": "RBX::Lua::LuaArguments::pushGlobalYields",
       "mangled": "?pushGlobalYields@LuaArguments@Lua@RBX@@QAAXXZ",
+      "file": "Client/App/script/LuaArguments.cpp",
+      "orig_size": 48,
+      "recomp_size": 48,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00a41840",
+      "kind": "FUNCTION",
+      "name": "RBX::Lua::LuaArguments::pushGlobalValue",
+      "mangled": "?pushGlobalValue@LuaArguments@Lua@RBX@@QAAXXZ",
       "file": "Client/App/script/LuaArguments.cpp",
       "orig_size": 48,
       "recomp_size": 48,
