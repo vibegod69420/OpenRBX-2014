@@ -162,6 +162,7 @@ public:
 	bool initProgramParametersEXT();
 	bool initWindowPosMESA();
 	bool initVertexShaderEXT();
+	bool initHalfFloatNV();
 	// AUTO-GENERATED METHODS
 };
 
