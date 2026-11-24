@@ -744,6 +744,15 @@ int __cdecl TriangleMesh::func_B6FAA0()
 	return 1;
 }
 
+double __cdecl sub_CF68EC(double);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b71980
+int __cdecl TriangleMesh::func_B71980()
+{
+	sub_A356F0(this, sub_CF68EC(sub_A38810(this, 1)));
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

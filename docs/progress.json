@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24 18:14:03 UTC",
+ "updated_at": "2026-11-24 18:23:06 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 23.8334,
- "implemented_total": 2256,
- "function_annotations": 2256,
+ "matchable_coverage_pct": 23.8761,
+ "implemented_total": 2260,
+ "function_annotations": 2260,
  "stub_annotations": 0,
- "perfect_100_count": 2232,
- "matched_real_functions": 2232,
+ "perfect_100_count": 2236,
+ "matched_real_functions": 2236,
  "average_match_pct": 99.59,
- "overall_function_coverage_pct": 5.5028,
- "overall_byte_coverage_pct": 1.6954,
+ "overall_function_coverage_pct": 5.5127,
+ "overall_byte_coverage_pct": 1.698,
  "usage": {
-  "calls_24h": 2521,
+  "calls_24h": 2534,
   "failures_24h": 0,
-  "completion_tokens_24h": 30423622,
-  "reasoning_tokens_24h": 29682149,
-  "avg_latency_s": 192.9
+  "completion_tokens_24h": 30493973,
+  "reasoning_tokens_24h": 29749072,
+  "avg_latency_s": 193.4
  },
- "functions_total": 2256,
+ "functions_total": 2260,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 683,
-   "functions": 688,
-   "bytes": 35327
+   "matched": 686,
+   "functions": 691,
+   "bytes": 35534
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -54,9 +54,9 @@
   },
   {
    "name": "App/v8world",
-   "matched": 167,
-   "functions": 167,
-   "bytes": 11158
+   "matched": 168,
+   "functions": 168,
+   "bytes": 11200
   },
   {
    "name": "App/script",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-18 21:58:28 UTC",
-   "matched": 306,
-   "implemented": 306,
-   "pct": 3.2675
-  },
-  {
    "t": "2026-11-18 22:05:40 UTC",
    "matched": 307,
    "implemented": 307,
@@ -6393,9 +6387,39 @@
    "matched": 2232,
    "implemented": 2256,
    "pct": 23.8334
+  },
+  {
+   "t": "2026-11-24 18:23:06 UTC",
+   "matched": 2236,
+   "implemented": 2260,
+   "pct": 23.8761
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-24T18:17:38",
+   "address": "0x00b71980",
+   "name": "RBX::RBX::TriangleMesh::func_B71980",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T18:17:09",
+   "address": "0x007d6e40",
+   "name": "RBX::RBX::DataModel::callVtableSlot0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T18:14:41",
+   "address": "0x0044b430",
+   "name": "RBX::callable::isDefaultVFunc11",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T18:14:09",
+   "address": "0x0078b5c0",
+   "name": "RBX::ChangeHistoryService::clear",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-24T18:09:42",
    "address": "0x00da3270",
@@ -7091,31 +7115,7 @@
    "address": "0x00b8c920",
    "name": "RBX::RotatePJoint::inKernel",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T15:31:15",
-   "address": "0x008dfac0",
-   "name": "RBX::ScriptContext::lockMetatable",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T15:30:26",
-   "address": "0x0052e280",
-   "name": "modelInstance_clearElements",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T15:30:00",
-   "address": "0x004fa790",
-   "name": "call",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T15:25:41",
-   "address": "0x00ca35f0",
-   "name": "RBX::Network::ServerReplicator::popHead",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 13.73
+ "match_rate_per_hour": 13.75
 }

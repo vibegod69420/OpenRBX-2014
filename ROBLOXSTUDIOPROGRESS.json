@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24 18:14:03 UTC",
+  "updated_at": "2026-11-24 18:23:06 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 23.8334,
-  "implemented_total": 2256,
-  "function_annotations": 2256,
+  "matchable_coverage_pct": 23.8761,
+  "implemented_total": 2260,
+  "function_annotations": 2260,
   "stub_annotations": 0,
-  "perfect_100_count": 2232,
-  "matched_real_functions": 2232,
+  "perfect_100_count": 2236,
+  "matched_real_functions": 2236,
   "average_match_pct": 99.59,
-  "overall_function_coverage_pct": 5.5028,
-  "overall_byte_coverage_pct": 1.6954,
+  "overall_function_coverage_pct": 5.5127,
+  "overall_byte_coverage_pct": 1.698,
   "usage": {
-    "calls_24h": 2521,
+    "calls_24h": 2534,
     "failures_24h": 0,
-    "completion_tokens_24h": 30423622,
-    "reasoning_tokens_24h": 29682149,
-    "avg_latency_s": 192.9
+    "completion_tokens_24h": 30493973,
+    "reasoning_tokens_24h": 29749072,
+    "avg_latency_s": 193.4
   },
   "functions": [
     {
@@ -676,6 +676,17 @@
       "kind": "FUNCTION",
       "name": "RBX::callable::isDefaultVFunc10",
       "mangled": "?isDefaultVFunc10@callable@RBX@@QBE_NXZ",
+      "file": "Client/App/v8datamodel/callable.cpp",
+      "orig_size": 28,
+      "recomp_size": 28,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0044b430",
+      "kind": "FUNCTION",
+      "name": "RBX::callable::isDefaultVFunc11",
+      "mangled": "?isDefaultVFunc11@callable@RBX@@QBE_NXZ",
       "file": "Client/App/v8datamodel/callable.cpp",
       "orig_size": 28,
       "recomp_size": 28,
@@ -7943,6 +7954,17 @@
       "matchable": true
     },
     {
+      "address": "0x0078b5c0",
+      "kind": "FUNCTION",
+      "name": "RBX::ChangeHistoryService::clear",
+      "mangled": "?clear@ChangeHistoryService@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/ChangeHistoryService.cpp",
+      "orig_size": 165,
+      "recomp_size": 36,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0078c430",
       "kind": "FUNCTION",
       "name": "RBX::ChangeHistoryService::create",
@@ -8379,6 +8401,17 @@
       "file": "Client/App/script/Script.cpp",
       "orig_size": 62,
       "recomp_size": 62,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x007d6e40",
+      "kind": "FUNCTION",
+      "name": "RBX::RBX::DataModel::callVtableSlot0",
+      "mangled": "?callVtableSlot0@DataModel@RBX@@QAAXXZ",
+      "file": "Client/App/v8datamodel/DataModel.cpp",
+      "orig_size": 14,
+      "recomp_size": 14,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -16255,6 +16288,17 @@
       "file": "Client/App/v8world/TriangleMesh.cpp",
       "orig_size": 43,
       "recomp_size": 43,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b71980",
+      "kind": "FUNCTION",
+      "name": "RBX::RBX::TriangleMesh::func_B71980",
+      "mangled": "?func_B71980@TriangleMesh@RBX@@QAAHXZ",
+      "file": "Client/App/v8world/TriangleMesh.cpp",
+      "orig_size": 42,
+      "recomp_size": 42,
       "match_pct": 100.0,
       "matchable": true
     },

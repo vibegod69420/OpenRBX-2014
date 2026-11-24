@@ -170,6 +170,17 @@ void __cdecl DataModel::dispatchGetImplStringValue()
 		::operator delete(s.ptr);
 }
 
+struct DataModelVtableSlot0
+{
+	virtual void call(int);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x007d6e40
+void __cdecl DataModel::callVtableSlot0()
+{
+	reinterpret_cast<DataModelVtableSlot0*>(this)->call(0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

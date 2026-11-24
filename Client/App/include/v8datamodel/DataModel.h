@@ -28,6 +28,7 @@ public:
 	void __cdecl dispatchGetImpl();
 	void __cdecl dispatchGetImplString();
 	void __cdecl dispatchGetImplStringValue();
+	void __cdecl callVtableSlot0();
 	// AUTO-GENERATED METHODS
 };
 

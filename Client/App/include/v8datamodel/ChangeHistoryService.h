@@ -20,6 +20,7 @@ public:
 	int IsPlaying();
 	ChangeHistoryService*getChangeHistoryService();
 	void*create();
+	void clear();
 	// AUTO-GENERATED METHODS
 };
 

@@ -54,6 +54,16 @@ void* ChangeHistoryService::create()
 	return mem;
 }
 
+void __stdcall ChangeHistoryService_erase(void*, int, int);
+
+// FUNCTION: ROBLOXSTUDIO 0x0078b5c0
+void ChangeHistoryService::clear()
+{
+	int local;
+	ChangeHistoryService_erase(&local, *(int*)_vtable_or_head, _vtable_or_head);
+	::operator delete((void*)_vtable_or_head);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
