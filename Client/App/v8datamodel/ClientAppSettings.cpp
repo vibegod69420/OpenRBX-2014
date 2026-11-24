@@ -118,6 +118,12 @@ void __cdecl ClientAppSettings::ApplySettingFromFunc_DC()
 	*(int*)((char*)g_ClientAppSettingsInstance_12FC984 + 0xDC) = g_ClientAppSettingsFunc_E105F4(this);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008bdae0
+void __cdecl ClientAppSettings::ApplySettingFromFunc_E0()
+{
+	*(int*)((char*)g_ClientAppSettingsInstance_12FC984 + 0xE0) = g_ClientAppSettingsFunc_E105F4(this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
