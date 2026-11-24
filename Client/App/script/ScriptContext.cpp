@@ -738,6 +738,41 @@ int __cdecl ScriptContext::reportError(unsigned __int64 /*unused*/)
 	return 0;
 }
 
+extern unsigned char g_scriptContextProtoFastPath; // 0x012E0EB0
+
+struct ScriptContextProtoLookup
+{
+	void* __thiscall lookup(int idx); // 0x008D8600
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x008d8680
+void* __cdecl ScriptContext::getProto()
+{
+	void* arg = this;
+	void* base;
+	if (arg)
+		base = (void*)((char*)arg - 0x2C);
+	else
+		base = 0;
+
+	if (g_scriptContextProtoFastPath && ((*(unsigned char*)((char*)base + 0x18) & 0x1F) == 0))
+	{
+		void* state = *(void**)((char*)base + 0x0C);
+		void* global = *(void**)((char*)state + 4);
+		void* proto = *(void**)((char*)global + 0x70);
+		if (proto && (*(void**)((char*)proto + 0x10) == *(void**)((char*)arg + 0x10)))
+			return proto;
+		return *(void**)((char*)global + 0x6C);
+	}
+
+	{
+		void* state = *(void**)((char*)base + 0x0C);
+		ScriptContextProtoLookup* lookupObj = *(ScriptContextProtoLookup**)((char*)state + 4);
+		int idx = (*(int*)((char*)base + 0x18) << 27) >> 27;
+		return lookupObj->lookup(idx);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
