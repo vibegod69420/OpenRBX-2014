@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24 11:58:21 UTC",
+ "updated_at": "2026-11-24 12:08:29 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 23.6305,
- "implemented_total": 2237,
- "function_annotations": 2237,
+ "matchable_coverage_pct": 23.6412,
+ "implemented_total": 2238,
+ "function_annotations": 2238,
  "stub_annotations": 0,
- "perfect_100_count": 2213,
- "matched_real_functions": 2213,
+ "perfect_100_count": 2214,
+ "matched_real_functions": 2214,
  "average_match_pct": 99.59,
- "overall_function_coverage_pct": 5.456,
- "overall_byte_coverage_pct": 1.6607,
+ "overall_function_coverage_pct": 5.4584,
+ "overall_byte_coverage_pct": 1.6613,
  "usage": {
-  "calls_24h": 2751,
+  "calls_24h": 2734,
   "failures_24h": 0,
-  "completion_tokens_24h": 32839371,
-  "reasoning_tokens_24h": 32084601,
-  "avg_latency_s": 194.0
+  "completion_tokens_24h": 32747500,
+  "reasoning_tokens_24h": 31998090,
+  "avg_latency_s": 194.1
  },
- "functions_total": 2237,
+ "functions_total": 2238,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -90,9 +90,9 @@
   },
   {
    "name": "App/humanoid",
-   "matched": 43,
-   "functions": 43,
-   "bytes": 1813
+   "matched": 44,
+   "functions": 44,
+   "bytes": 1866
   },
   {
    "name": "RobloxStudio/SoundServiceStatsItem.cpp",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-18 20:30:07 UTC",
-   "matched": 265,
-   "implemented": 265,
-   "pct": 2.8297
-  },
-  {
    "t": "2026-11-18 20:36:15 UTC",
    "matched": 274,
    "implemented": 274,
@@ -6393,9 +6387,21 @@
    "matched": 2213,
    "implemented": 2237,
    "pct": 23.6305
+  },
+  {
+   "t": "2026-11-24 12:08:29 UTC",
+   "matched": 2214,
+   "implemented": 2238,
+   "pct": 23.6412
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-24T12:00:14",
+   "address": "0x009d8860",
+   "name": "RBX::Humanoid::func009d8860",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-24T11:53:27",
    "address": "0x0044ae80",
@@ -7109,13 +7115,7 @@
    "address": "0x00bd0ca0",
    "name": "RBX::BallPolyContact::allocate",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T11:08:38",
-   "address": "0x009a3d00",
-   "name": "RBX::FaceInstance::FaceInstance",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 14.38
+ "match_rate_per_hour": 14.31
 }

@@ -190,6 +190,26 @@ float Humanoid::getField1F8XorFloat()
 	return *reinterpret_cast<float*>(&value);
 }
 
+int __cdecl sub_99CF10(int, int, int);
+
+// FUNCTION: ROBLOXSTUDIO 0x009d8860
+int Humanoid::func009d8860()
+{
+	int v270 = field_0270;
+	int v298 = field_0298;
+
+	if (v270 && v298)
+	{
+		*reinterpret_cast<unsigned char*>(reinterpret_cast<char*>(this) + 0x265) = 1;
+		return sub_99CF10(
+			*reinterpret_cast<int*>(reinterpret_cast<char*>(v270) + 0xE0),
+			*reinterpret_cast<int*>(reinterpret_cast<char*>(v298) + 0xE0),
+			0);
+	}
+
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
