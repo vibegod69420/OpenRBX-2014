@@ -19,6 +19,7 @@ public:
 	void setSleepEligible();
 	void putInKernel();
 	Assembly*getRootAssembly();
+	Assembly*getParentAssembly();
 	// AUTO-GENERATED METHODS
 };
 
