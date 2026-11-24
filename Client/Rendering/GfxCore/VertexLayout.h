@@ -116,6 +116,7 @@ public:
 	bool initANGLEInstancedArrays();
 	bool initAppleObjectPurgeable();
 	bool initAppleElementArray();
+	bool initARBShaderObjects();
 	// AUTO-GENERATED METHODS
 };
 

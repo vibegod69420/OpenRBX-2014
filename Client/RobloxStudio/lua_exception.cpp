@@ -1121,6 +1121,23 @@ void* __cdecl lua_exception::touserdata(int index)
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a35440
+void* __cdecl index2adr(int state, int index);
+int __cdecl sub_BC9B40(lua_exception* L, void* t, void* key);
+
+void __cdecl lua_exception::getTable(int index)
+{
+	void* o = index2adr((int)this, index);
+	if (sub_BC9B40(this, *(void**)o, *(char**)((char*)this + 8) - 0x10))
+	{
+		*(char**)((char*)this + 8) += 16;
+	}
+	else
+	{
+		*(char**)((char*)this + 8) += -16;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

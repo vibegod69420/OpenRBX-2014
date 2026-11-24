@@ -6325,6 +6325,248 @@ bool VertexLayout::initAppleElementArray()
 	return false;
 }
 
+extern void* g_glAttachObjectARB;
+extern void* g_glCompileShaderARB;
+extern void* g_glCreateProgramObjectARB;
+extern void* g_glCreateShaderObjectARB;
+extern void* g_glDeleteObjectARB;
+extern void* g_glDetachObjectARB;
+extern void* g_glGetActiveUniformARB;
+extern void* g_glGetAttachedObjectsARB;
+extern void* g_glGetHandleARB;
+extern void* g_glGetInfoLogARB;
+extern void* g_glGetObjectParameterfvARB;
+extern void* g_glGetObjectParameterivARB;
+extern void* g_glGetShaderSourceARB;
+extern void* g_glGetUniformLocationARB;
+extern void* g_glGetUniformfvARB;
+extern void* g_glGetUniformivARB;
+extern void* g_glLinkProgramARB;
+extern void* g_glShaderSourceARB;
+extern void* g_glUniform1fARB;
+extern void* g_glUniform1fvARB;
+extern void* g_glUniform1iARB;
+extern void* g_glUniform1ivARB;
+extern void* g_glUniform2fARB;
+extern void* g_glUniform2fvARB;
+extern void* g_glUniform2iARB;
+extern void* g_glUniform2ivARB;
+extern void* g_glUniform3fARB;
+extern void* g_glUniform3fvARB;
+extern void* g_glUniform3iARB;
+extern void* g_glUniform3ivARB;
+extern void* g_glUniform4fARB;
+extern void* g_glUniform4fvARB;
+extern void* g_glUniform4iARB;
+extern void* g_glUniform4ivARB;
+extern void* g_glUniformMatrix2fvARB;
+extern void* g_glUniformMatrix3fvARB;
+extern void* g_glUniformMatrix4fvARB;
+extern void* g_glUseProgramObjectARB;
+extern void* g_glValidateProgramARB;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f68d0
+bool VertexLayout::initARBShaderObjects()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glAttachObjectARB");
+	g_glAttachObjectARB = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glCompileShaderARB");
+	g_glCompileShaderARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCreateProgramObjectARB");
+	g_glCreateProgramObjectARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glCreateShaderObjectARB");
+	g_glCreateShaderObjectARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glDeleteObjectARB");
+	g_glDeleteObjectARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glDetachObjectARB");
+	g_glDetachObjectARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetActiveUniformARB");
+	g_glGetActiveUniformARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetAttachedObjectsARB");
+	g_glGetAttachedObjectsARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetHandleARB");
+	g_glGetHandleARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetInfoLogARB");
+	g_glGetInfoLogARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetObjectParameterfvARB");
+	g_glGetObjectParameterfvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetObjectParameterivARB");
+	g_glGetObjectParameterivARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetShaderSourceARB");
+	g_glGetShaderSourceARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetUniformLocationARB");
+	g_glGetUniformLocationARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetUniformfvARB");
+	g_glGetUniformfvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glGetUniformivARB");
+	g_glGetUniformivARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glLinkProgramARB");
+	g_glLinkProgramARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glShaderSourceARB");
+	g_glShaderSourceARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform1fARB");
+	g_glUniform1fARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform1fvARB");
+	g_glUniform1fvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform1iARB");
+	g_glUniform1iARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform1ivARB");
+	g_glUniform1ivARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform2fARB");
+	g_glUniform2fARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform2fvARB");
+	g_glUniform2fvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform2iARB");
+	g_glUniform2iARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform2ivARB");
+	g_glUniform2ivARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform3fARB");
+	g_glUniform3fARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform3fvARB");
+	g_glUniform3fvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform3iARB");
+	g_glUniform3iARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform3ivARB");
+	g_glUniform3ivARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform4fARB");
+	g_glUniform4fARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform4fvARB");
+	g_glUniform4fvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform4iARB");
+	g_glUniform4iARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniform4ivARB");
+	g_glUniform4ivARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformMatrix2fvARB");
+	g_glUniformMatrix2fvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformMatrix3fvARB");
+	g_glUniformMatrix3fvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUniformMatrix4fvARB");
+	g_glUniformMatrix4fvARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glUseProgramObjectARB");
+	g_glUseProgramObjectARB = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glValidateProgramARB");
+	g_glValidateProgramARB = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
