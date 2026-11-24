@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24 02:33:53 UTC",
+ "updated_at": "2026-11-24 02:42:57 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 22.9685,
- "implemented_total": 2175,
- "function_annotations": 2175,
+ "matchable_coverage_pct": 22.9792,
+ "implemented_total": 2176,
+ "function_annotations": 2176,
  "stub_annotations": 0,
- "perfect_100_count": 2151,
- "matched_real_functions": 2151,
+ "perfect_100_count": 2152,
+ "matched_real_functions": 2152,
  "average_match_pct": 99.58,
- "overall_function_coverage_pct": 5.3031,
- "overall_byte_coverage_pct": 1.6226,
+ "overall_function_coverage_pct": 5.3056,
+ "overall_byte_coverage_pct": 1.6237,
  "usage": {
-  "calls_24h": 3429,
+  "calls_24h": 3401,
   "failures_24h": 0,
-  "completion_tokens_24h": 39080690,
-  "reasoning_tokens_24h": 38257117,
-  "avg_latency_s": 186.2
+  "completion_tokens_24h": 38879971,
+  "reasoning_tokens_24h": 38058039,
+  "avg_latency_s": 186.8
  },
- "functions_total": 2175,
+ "functions_total": 2176,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 648,
-   "functions": 653,
-   "bytes": 33593
+   "matched": 649,
+   "functions": 654,
+   "bytes": 33699
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-18 18:56:43 UTC",
-   "matched": 137,
-   "implemented": 137,
-   "pct": 1.4629
-  },
-  {
    "t": "2026-11-18 18:57:19 UTC",
    "matched": 138,
    "implemented": 138,
@@ -6393,9 +6387,21 @@
    "matched": 2151,
    "implemented": 2175,
    "pct": 22.9685
+  },
+  {
+   "t": "2026-11-24 02:42:57 UTC",
+   "matched": 2152,
+   "implemented": 2176,
+   "pct": 22.9792
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-24T02:33:59",
+   "address": "0x0040fbf0",
+   "name": "boost::lock_error::grab",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-24T02:27:32",
    "address": "0x0048c8b0",
@@ -7109,13 +7115,7 @@
    "address": "0x008bd880",
    "name": "StringToBool_D02EE0",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T04:42:48",
-   "address": "0x00cad9b0",
-   "name": "RBX::Network::ClientReplicator::addReplicationDataSizeForItem",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 15.78
+ "match_rate_per_hour": 15.76
 }
