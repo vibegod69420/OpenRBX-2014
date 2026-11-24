@@ -64,6 +64,7 @@ public:
 	void releaseState();
 	void __cdecl lockMetatable(int idx);
 	void __cdecl reportError(bool* /*unused*/);
+	void __cdecl reportError(const bool* /*unused*/);
 	// AUTO-GENERATED METHODS
 };
 

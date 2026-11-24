@@ -18,6 +18,7 @@ public:
 
 	http_status_error();
 	void destroy();
+	void __cdecl write16(unsigned int value);
 	// AUTO-GENERATED METHODS
 };
 

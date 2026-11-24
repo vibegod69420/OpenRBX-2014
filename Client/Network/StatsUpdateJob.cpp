@@ -88,6 +88,20 @@ StatsUpdateJob& __cdecl StatsUpdateJob::reservePair(unsigned int bits)
 	return *this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c6c770
+bool StatsUpdateJob::readBit()
+{
+	StatsUpdateJobLayout* self = reinterpret_cast<StatsUpdateJobLayout*>(this);
+	unsigned char* data = self->data;
+	unsigned int bitCount = self->field8;
+	int mask = 0x80 >> (bitCount & 7);
+	unsigned int byteIndex = bitCount >> 3;
+	unsigned int newBitCount = bitCount + 1;
+	bool result = (data[byteIndex] & mask) != 0;
+	self->field8 = newBitCount;
+	return result;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

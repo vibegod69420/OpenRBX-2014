@@ -23,6 +23,23 @@ void http_status_error::destroy()
 	HttpStatusError_Free2(*(void**)this, 0);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00cfdfc0
+void __cdecl http_status_error::write16(unsigned int value)
+{
+	unsigned char* buf;
+	int idx;
+
+	idx = *(int*)((char*)this + 0x14);
+	buf = *(unsigned char**)((char*)this + 8);
+	buf[idx] = (unsigned char)(value >> 8);
+	++*(int*)((char*)this + 0x14);
+
+	idx = *(int*)((char*)this + 0x14);
+	buf = *(unsigned char**)((char*)this + 8);
+	buf[idx] = (unsigned char)value;
+	++*(int*)((char*)this + 0x14);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

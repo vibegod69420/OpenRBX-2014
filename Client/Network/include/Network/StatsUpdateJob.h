@@ -23,6 +23,7 @@ public:
 	StatsUpdateJob& __cdecl writeField(const void* field);
 	StatsUpdateJob& __cdecl writeFieldValue(const void* field);
 	StatsUpdateJob& __cdecl reservePair(unsigned int bits);
+	bool readBit();
 	// AUTO-GENERATED METHODS
 };
 

@@ -112,6 +112,17 @@ int __cdecl MegaCluster::getData(void* param, int index)
 	return q.result;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00662f00
+int __cdecl MegaCluster::getDataByIndex(void* param, int index)
+{
+	MegaClusterTerrainQuery q;
+	q.f0 = index;
+	q.result = 0;
+	q.owner = this;
+	q.execute(param);
+	return q.result;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
