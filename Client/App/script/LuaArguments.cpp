@@ -1217,6 +1217,18 @@ void* __cdecl LuaArguments::getFunction(void* arg)
 	return reinterpret_cast<SubA389C0Fn>(sub_A389C0)(this, arg, *(void**)0x0124EB2C);
 }
 
+void* __cdecl sub_A35E70(void*, void*, int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a419c0
+void* __cdecl LuaArguments::getString(void* arg)
+{
+	void* result = sub_A35E70(this, arg, 0);
+	void* fallback = *(void**)0x0124EB34;
+	if (result)
+		fallback = result;
+	return fallback;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

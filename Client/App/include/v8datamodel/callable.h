@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	bool isDefaultVFunc4() const;
 	// AUTO-GENERATED METHODS
 };
 

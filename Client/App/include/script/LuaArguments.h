@@ -77,6 +77,7 @@ public:
 	void __cdecl registerUserdata(void* arg1, void* arg2);
 	void __cdecl registerRBXScriptSignal(void* arg1, void* arg2);
 	void* __cdecl getFunction(void* arg);
+	void* __cdecl getString(void* arg);
 	// AUTO-GENERATED METHODS
 };
 
