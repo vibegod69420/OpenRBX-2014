@@ -18,6 +18,7 @@ public:
 
 	bool isDefaultVFunc4() const;
 	bool isDefaultVFunc5() const;
+	bool isDefaultVFunc6() const;
 	// AUTO-GENERATED METHODS
 };
 
