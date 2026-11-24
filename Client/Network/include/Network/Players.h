@@ -21,6 +21,7 @@ public:
 	void func00c2cf10();
 	Players();
 	void func00c286f0();
+	void func00c282b0();
 	// AUTO-GENERATED METHODS
 };
 

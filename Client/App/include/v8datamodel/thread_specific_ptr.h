@@ -23,6 +23,7 @@ public:
 	void destroy();
 	void cleanup();
 	void __cdecl format(char const* fmt, ...);
+	thread_specific_ptr* __cdecl init(void* arg);
 	// AUTO-GENERATED METHODS
 };
 

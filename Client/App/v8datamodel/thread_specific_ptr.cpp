@@ -272,6 +272,16 @@ void __cdecl thread_specific_ptr::format(char const* fmt, ...)
 	((thread_specific_ptr_vformat_callee*)this)->vformat(fmt, (va_list)((char*)(&fmt) + sizeof(fmt)));
 }
 
+void __cdecl thread_specific_ptr_init_helper(thread_specific_ptr* self, void* arg);
+
+// FUNCTION: ROBLOXSTUDIO 0x00841b50
+thread_specific_ptr* __cdecl thread_specific_ptr::init(void* arg)
+{
+	volatile int local;
+	thread_specific_ptr_init_helper((local = 0, this), arg);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

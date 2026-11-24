@@ -17,6 +17,7 @@ public:
 	};
 
 	bool isDefaultVFunc4() const;
+	bool isDefaultVFunc5() const;
 	// AUTO-GENERATED METHODS
 };
 

@@ -129,6 +129,16 @@ void Players::func00c286f0()
 	((PlayersStringMember*)((char*)this + 0x04))->buf[0] = 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c282b0
+void Players::func00c282b0()
+{
+	void* it;
+	PlayersList* list = (PlayersList*)this;
+
+	list->unlinkRange(&it, list->head->next, list->head);
+	::operator delete(list->head);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network
