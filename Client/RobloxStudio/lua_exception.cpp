@@ -1106,6 +1106,21 @@ int __cdecl lua_exception::toboolean(int index)
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a360a0
+void* __cdecl lua_exception::touserdata(int index)
+{
+	void* o = index2adr((int)this, index);
+	switch (*(int*)((char*)o + 8))
+	{
+	case 2:
+		return *(void**)o;
+	case 7:
+		return (char*)*(void**)o + 0x18;
+	default:
+		return 0;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
