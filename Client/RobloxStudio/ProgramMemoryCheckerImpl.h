@@ -445,6 +445,7 @@ public:
 	void init_dc10c0();
 	void init_dc7670();
 	void init_dc8260();
+	void init_dd47d0();
 	// AUTO-GENERATED METHODS
 };
 
