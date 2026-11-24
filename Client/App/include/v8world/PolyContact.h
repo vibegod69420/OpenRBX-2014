@@ -32,6 +32,7 @@ public:
 	void __cdecl writeQuad(void* a, void* b, void* c, void* d);
 	void __cdecl writeTri(void* a, void* b, void* c, void* d);
 	void __cdecl initContact(void* contact);
+	void* __cdecl token2str(int token);
 	// AUTO-GENERATED METHODS
 };
 

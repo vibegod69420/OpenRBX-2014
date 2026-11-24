@@ -441,6 +441,21 @@ void __cdecl PolyContact::initContact(void* contact)
 	*(char**)((char*)obj34 + 8) += 0x10;
 }
 
+extern "C" __declspec(dllimport) int __cdecl iscntrl(int);
+extern "C" void* luaX_tokens[];
+
+// FUNCTION: ROBLOXSTUDIO 0x00bc8900
+void* __cdecl PolyContact::token2str(int token)
+{
+	if (token < 0x101)
+	{
+		if (iscntrl(token))
+			return sub_A457E0(*(void**)((char*)this + 0x34), "char(%d)", token);
+		return sub_A457E0(*(void**)((char*)this + 0x34), "%c", token);
+	}
+	return luaX_tokens[token];
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
