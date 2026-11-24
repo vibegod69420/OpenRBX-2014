@@ -95,6 +95,14 @@ Replicator& __cdecl Replicator::writeBool(bool value)
 	return *this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c70130
+Replicator& __cdecl Replicator::writeProperties(const void* data)
+{
+	replicatorWriteProperty(this, data);
+	replicatorWriteProperty(this, (const char*)data + 8);
+	return *this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

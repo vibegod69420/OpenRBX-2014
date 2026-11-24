@@ -24,6 +24,7 @@ public:
 	void __cdecl update(const unsigned char* data, unsigned int len);
 	void __cdecl addRequest(void* request);
 	void __cdecl init();
+	void __cdecl updateRequest(void* request, void* context);
 	// AUTO-GENERATED METHODS
 };
 

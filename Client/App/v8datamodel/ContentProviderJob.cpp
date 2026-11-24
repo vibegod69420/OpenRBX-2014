@@ -254,6 +254,27 @@ void __cdecl ContentProviderJob::init()
 	*((unsigned int *)this + 1) = 0;
 }
 
+void __cdecl ContentProviderJob_HandleRequest(void* data, void* request);
+
+// FUNCTION: ROBLOXSTUDIO 0x00bc6d00
+void __cdecl ContentProviderJob::updateRequest(void* request, void* context)
+{
+	char* data = *(char**)((char*)this + 0x10);
+	if (data[0x15] == 1)
+	{
+		ContentProviderJob_HandleRequest(data, context);
+		return;
+	}
+
+	char* req = (char*)request;
+	unsigned char cl = (unsigned char)data[0x14];
+	unsigned char al = (unsigned char)req[5];
+	cl &= 3;
+	al &= 0xF8;
+	cl |= al;
+	req[5] = (char)cl;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

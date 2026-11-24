@@ -24,6 +24,7 @@ public:
 	void __cdecl sendPendingReplication(void* writer);
 	Replicator& __cdecl writeProperty(const void* data, int flag);
 	Replicator& __cdecl writeBool(bool value);
+	Replicator& __cdecl writeProperties(const void* data);
 	// AUTO-GENERATED METHODS
 };
 
