@@ -1084,6 +1084,28 @@ int __cdecl lua_exception::sub_A38350(int a1, int a2, int a3)
 	return lua_imp_E10638(a1, a3);
 }
 
+void* __cdecl index2adr(int state, int index);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a35df0
+int __cdecl lua_exception::toboolean(int index)
+{
+	void* o = index2adr((int)this, index);
+	int t = *(int*)((char*)o + 8);
+	if (t != 0)
+	{
+		if (t == 1)
+		{
+			if (*(int*)o != 0)
+				return 1;
+		}
+		else
+		{
+			return 1;
+		}
+	}
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

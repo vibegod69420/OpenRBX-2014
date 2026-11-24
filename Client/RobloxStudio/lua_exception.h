@@ -77,6 +77,7 @@ public:
 	void __cdecl replace(int idx);
 	void __cdecl pushNil();
 	int __cdecl sub_A38350(int a1, int a2, int a3);
+	int __cdecl toboolean(int index);
 	// AUTO-GENERATED METHODS
 };
 
