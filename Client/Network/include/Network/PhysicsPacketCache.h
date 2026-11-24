@@ -20,6 +20,7 @@ public:
 	void acquire();
 	void release();
 	void releaseAll();
+	void releaseContention();
 	// AUTO-GENERATED METHODS
 };
 
