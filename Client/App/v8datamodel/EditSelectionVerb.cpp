@@ -44,6 +44,33 @@ EditSelectionVerb* __cdecl EditSelectionVerb::sub_006B98C0(int a2, int a3)
 	return this;
 }
 
+struct AtomicRefCount
+{
+	long compareExchange(long exchange, long comparand);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x006b9b30
+bool __cdecl EditSelectionVerb::sub_006B9B30()
+{
+	char* base;
+	if (this)
+		base = (char*)this - 5;
+	else
+		base = 0;
+
+	long count = *(long*)((char*)base - 8);
+	if (count != 0)
+	{
+		do
+		{
+			if (((AtomicRefCount*)((char*)base - 8))->compareExchange(count + 1, count) == count)
+				return true;
+			count = *(long*)((char*)base - 8);
+		} while (count != 0);
+	}
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

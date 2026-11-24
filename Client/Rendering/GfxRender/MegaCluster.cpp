@@ -123,6 +123,22 @@ int __cdecl MegaCluster::getDataByIndex(void* param, int index)
 	return q.result;
 }
 
+static void (__cdecl *megaClusterCleanupNoArg)() = 0;
+
+// FUNCTION: ROBLOXSTUDIO 0x00665970
+void MegaCluster::clearBuffer0()
+{
+	if (*(void**)this != 0)
+	{
+		megaClusterCleanupNoArg();
+		megaClusterFree(*(void**)this);
+
+		*(void**)this = 0;
+		*(void**)((char*)this + 4) = 0;
+		*(void**)((char*)this + 8) = 0;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
