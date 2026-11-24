@@ -160,6 +160,7 @@ public:
 	bool initPathRenderingNV();
 	bool initVertexProgramNV();
 	bool initProgramParametersEXT();
+	bool initWindowPosMESA();
 	// AUTO-GENERATED METHODS
 };
 

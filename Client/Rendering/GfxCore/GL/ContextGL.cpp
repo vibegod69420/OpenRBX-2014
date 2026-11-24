@@ -5318,6 +5318,136 @@ bool ContextGL::initProgramParametersEXT()
 	return (proc1 == 0) || (proc2 == 0);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005fbdf0
+bool ContextGL::initWindowPosMESA()
+{
+	typedef void* (__stdcall *GetProcFn)(const char*);
+	GetProcFn getProc = *(GetProcFn*)0x00E108B8;
+
+	unsigned char missing;
+	void* proc;
+
+	proc = getProc("glWindowPos2dMESA");
+	*(void**)0x012DB2F4 = proc;
+	missing = (proc == 0) ? 1 : 0;
+
+	proc = getProc("glWindowPos2dvMESA");
+	*(void**)0x012DB2FC = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos2fMESA");
+	*(void**)0x012DB300 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos2fvMESA");
+	*(void**)0x012DB30C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos2iMESA");
+	*(void**)0x012DB314 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos2ivMESA");
+	*(void**)0x012DB31C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos2sMESA");
+	*(void**)0x012DB328 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos2svMESA");
+	*(void**)0x012DB330 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos3dMESA");
+	*(void**)0x012DB338 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos3dvMESA");
+	*(void**)0x012DB340 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos3fMESA");
+	*(void**)0x012DB34C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos3fvMESA");
+	*(void**)0x012DB354 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos3iMESA");
+	*(void**)0x012DB360 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos3ivMESA");
+	*(void**)0x012DB364 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos3sMESA");
+	*(void**)0x012DB370 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos3svMESA");
+	*(void**)0x012DB374 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos4dMESA");
+	*(void**)0x012DB380 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos4dvMESA");
+	*(void**)0x012DB38C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos4fMESA");
+	*(void**)0x012DB390 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos4fvMESA");
+	*(void**)0x012DB39C = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos4iMESA");
+	*(void**)0x012DB3A8 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos4ivMESA");
+	*(void**)0x012DB3B0 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos4sMESA");
+	*(void**)0x012DB3B4 = proc;
+	if (proc == 0 || missing)
+		missing = 1;
+
+	proc = getProc("glWindowPos4svMESA");
+	*(void**)0x012DB3C0 = proc;
+	if (proc == 0 || missing)
+		return true;
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
