@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24 12:17:33 UTC",
+ "updated_at": "2026-11-24 13:20:07 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 23.6519,
- "implemented_total": 2239,
- "function_annotations": 2239,
+ "matchable_coverage_pct": 23.6626,
+ "implemented_total": 2240,
+ "function_annotations": 2240,
  "stub_annotations": 0,
- "perfect_100_count": 2215,
- "matched_real_functions": 2215,
+ "perfect_100_count": 2216,
+ "matched_real_functions": 2216,
  "average_match_pct": 99.59,
- "overall_function_coverage_pct": 5.4609,
- "overall_byte_coverage_pct": 1.6622,
+ "overall_function_coverage_pct": 5.4634,
+ "overall_byte_coverage_pct": 1.6625,
  "usage": {
-  "calls_24h": 2740,
+  "calls_24h": 2695,
   "failures_24h": 0,
-  "completion_tokens_24h": 32821830,
-  "reasoning_tokens_24h": 32073044,
-  "avg_latency_s": 193.9
+  "completion_tokens_24h": 32325793,
+  "reasoning_tokens_24h": 31595485,
+  "avg_latency_s": 190.8
  },
- "functions_total": 2239,
+ "functions_total": 2240,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 677,
-   "functions": 682,
-   "bytes": 35067
+   "matched": 678,
+   "functions": 683,
+   "bytes": 35095
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-18 20:46:42 UTC",
-   "matched": 277,
-   "implemented": 277,
-   "pct": 2.9578
-  },
-  {
    "t": "2026-11-18 20:53:09 UTC",
    "matched": 280,
    "implemented": 280,
@@ -6393,9 +6387,21 @@
    "matched": 2215,
    "implemented": 2239,
    "pct": 23.6519
+  },
+  {
+   "t": "2026-11-24 13:20:07 UTC",
+   "matched": 2216,
+   "implemented": 2240,
+   "pct": 23.6626
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-24T13:15:52",
+   "address": "0x0044af80",
+   "name": "RBX::callable::isDefaultVFunc8",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-24T12:11:23",
    "address": "0x008d8680",
@@ -7109,13 +7115,7 @@
    "address": "0x00a2b5a0",
    "name": "std::filtering_stream::sub_a2b5a0",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T11:16:42",
-   "address": "0x008bfc00",
-   "name": "RBX::TType::TType",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 14.3
+ "match_rate_per_hour": 14.19
 }
