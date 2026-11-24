@@ -116,6 +116,17 @@ Replicator& __cdecl Replicator::writePropertyId(const void* data)
 	return *this;
 }
 
+void __cdecl replicatorWriteUnsignedShort(Replicator* replicator, unsigned short value);
+
+// FUNCTION: ROBLOXSTUDIO 0x00c70230
+Replicator& __cdecl Replicator::writeUnsignedShorts(const void* data)
+{
+	const unsigned short* ptr = static_cast<const unsigned short*>(data);
+	replicatorWriteUnsignedShort(this, ptr[0]);
+	replicatorWriteUnsignedShort(this, ptr[1]);
+	return *this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

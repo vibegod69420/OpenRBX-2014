@@ -6287,6 +6287,44 @@ bool VertexLayout::initAppleObjectPurgeable()
 	return false;
 }
 
+extern void* g_glDrawElementArrayAPPLE;
+extern void* g_glDrawRangeElementArrayAPPLE;
+extern void* g_glElementPointerAPPLE;
+extern void* g_glMultiDrawElementArrayAPPLE;
+extern void* g_glMultiDrawRangeElementArrayAPPLE;
+
+// FUNCTION: ROBLOXSTUDIO 0x005f4730
+bool VertexLayout::initAppleElementArray()
+{
+	GetProcAddressFn proc = g_glGetProcAddress;
+
+	void* p = proc("glDrawElementArrayAPPLE");
+	g_glDrawElementArrayAPPLE = p;
+	unsigned char missing = (p == 0);
+
+	p = proc("glDrawRangeElementArrayAPPLE");
+	g_glDrawRangeElementArrayAPPLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glElementPointerAPPLE");
+	g_glElementPointerAPPLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiDrawElementArrayAPPLE");
+	g_glMultiDrawElementArrayAPPLE = p;
+	if (p == 0 || missing)
+		missing = 1;
+
+	p = proc("glMultiDrawRangeElementArrayAPPLE");
+	g_glMultiDrawRangeElementArrayAPPLE = p;
+	if (p == 0 || missing)
+		return true;
+
+	return false;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

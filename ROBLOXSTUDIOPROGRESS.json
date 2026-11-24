@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24 04:38:21 UTC",
+  "updated_at": "2026-11-24 04:47:28 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 23.2782,
-  "implemented_total": 2204,
-  "function_annotations": 2204,
+  "matchable_coverage_pct": 23.3209,
+  "implemented_total": 2208,
+  "function_annotations": 2208,
   "stub_annotations": 0,
-  "perfect_100_count": 2180,
-  "matched_real_functions": 2180,
+  "perfect_100_count": 2184,
+  "matched_real_functions": 2184,
   "average_match_pct": 99.58,
-  "overall_function_coverage_pct": 5.3746,
-  "overall_byte_coverage_pct": 1.6422,
+  "overall_function_coverage_pct": 5.3845,
+  "overall_byte_coverage_pct": 1.6447,
   "usage": {
-    "calls_24h": 3306,
+    "calls_24h": 3303,
     "failures_24h": 0,
-    "completion_tokens_24h": 38093865,
-    "reasoning_tokens_24h": 37280203,
-    "avg_latency_s": 188.0
+    "completion_tokens_24h": 38156082,
+    "reasoning_tokens_24h": 37340807,
+    "avg_latency_s": 188.3
   },
   "functions": [
     {
@@ -2835,6 +2835,17 @@
       "file": "Client/Rendering/GfxCore/VertexLayout.cpp",
       "orig_size": 278,
       "recomp_size": 253,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x005f4730",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::VertexLayout::initAppleElementArray",
+      "mangled": "?initAppleElementArray@VertexLayout@Graphics@RBX@@QAE_NXZ",
+      "file": "Client/Rendering/GfxCore/VertexLayout.cpp",
+      "orig_size": 121,
+      "recomp_size": 121,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -9703,6 +9714,17 @@
       "matchable": true
     },
     {
+      "address": "0x008bda60",
+      "kind": "FUNCTION",
+      "name": "RBX::ClientAppSettings::ApplySettingFromFunc_60",
+      "mangled": "?ApplySettingFromFunc_60@ClientAppSettings@RBX@@QAAXXZ",
+      "file": "Client/App/v8datamodel/ClientAppSettings.cpp",
+      "orig_size": 29,
+      "recomp_size": 29,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x008bdb00",
       "kind": "FUNCTION",
       "name": "int",
@@ -10122,6 +10144,17 @@
     },
     {
       "address": "0x008dd930",
+      "kind": "FUNCTION",
+      "name": "RBX::ScriptContext::reportError",
+      "mangled": "?reportError@ScriptContext@RBX@@QAAXXZ",
+      "file": "Client/App/script/ScriptContext.cpp",
+      "orig_size": 47,
+      "recomp_size": 47,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x008dd960",
       "kind": "FUNCTION",
       "name": "RBX::ScriptContext::reportError",
       "mangled": "?reportError@ScriptContext@RBX@@QAAXXZ",
@@ -18543,6 +18576,17 @@
       "file": "Client/Network/Replicator.cpp",
       "orig_size": 37,
       "recomp_size": 37,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c70230",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::Replicator::writeUnsignedShorts",
+      "mangled": "?writeUnsignedShorts@Replicator@Network@RBX@@QAAAAV123@PBX@Z",
+      "file": "Client/Network/Replicator.cpp",
+      "orig_size": 41,
+      "recomp_size": 41,
       "match_pct": 100.0,
       "matchable": true
     },

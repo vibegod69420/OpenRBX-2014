@@ -115,6 +115,7 @@ public:
 	bool initAMDNameGenDelete();
 	bool initANGLEInstancedArrays();
 	bool initAppleObjectPurgeable();
+	bool initAppleElementArray();
 	// AUTO-GENERATED METHODS
 };
 
