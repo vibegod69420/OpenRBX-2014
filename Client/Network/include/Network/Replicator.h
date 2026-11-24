@@ -25,6 +25,7 @@ public:
 	Replicator& __cdecl writeProperty(const void* data, int flag);
 	Replicator& __cdecl writeBool(bool value);
 	Replicator& __cdecl writeProperties(const void* data);
+	Replicator& __cdecl writePropertyId(const void* data);
 	// AUTO-GENERATED METHODS
 };
 

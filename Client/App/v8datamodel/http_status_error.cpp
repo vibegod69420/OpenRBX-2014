@@ -98,6 +98,48 @@ void __cdecl http_status_error::flush()
 	*(int*)((char*)this + 0x16bc) = 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00d00940
+int __cdecl http_status_error::check()
+{
+	unsigned int mask = 0xF3FFC07F;
+	int i = 0;
+	char* p = (char*)this + 0x94;
+
+	do
+	{
+		if (mask & 1)
+		{
+			if (*(unsigned short*)p != 0)
+				return 0;
+		}
+		++i;
+		p += 4;
+		mask >>= 1;
+	} while (i <= 31);
+
+	if (*(unsigned short*)((char*)this + 0xB8) != 0)
+		return 1;
+	if (*(unsigned short*)((char*)this + 0xBC) != 0)
+		return 1;
+	if (*(unsigned short*)((char*)this + 0xC8) != 0)
+		return 1;
+
+	{
+		int j = 0x20;
+		char* q = (char*)this + 0x114;
+
+		do
+		{
+			if (*(unsigned short*)q != 0)
+				return 1;
+			++j;
+			q += 4;
+		} while (j < 0x100);
+	}
+
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

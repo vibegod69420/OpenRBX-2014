@@ -94,6 +94,44 @@ void __cdecl FastCluster::pushHeapHole(int hole, int top, void** value)
 	arr[hole * 2 + 1] = value[1];
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00622800
+void __cdecl FastCluster::popHeap(int hole, int bottom, void** value, void* unused)
+{
+	void** arr = reinterpret_cast<void**>(this);
+	int child = hole * 2 + 2;
+	int original = hole;
+
+	if (child < bottom)
+	{
+		do
+		{
+			void* left = arr[child * 2 - 2];
+			unsigned int leftFlags = *(unsigned int*)((char*)left + 0x14) & 4;
+			void* right = arr[child * 2];
+			unsigned int rightFlags = *(unsigned int*)((char*)right + 0x14) & 4;
+
+			if (rightFlags > leftFlags)
+				--child;
+
+			arr[hole * 2] = arr[child * 2];
+			arr[hole * 2 + 1] = arr[child * 2 + 1];
+			hole = child;
+			child = child * 2 + 2;
+		}
+		while (child < bottom);
+	}
+
+	if (child == bottom)
+	{
+		arr[hole * 2] = arr[bottom * 2 - 2];
+		arr[hole * 2 + 1] = arr[bottom * 2 - 1];
+		hole = bottom - 1;
+	}
+
+	typedef void (__cdecl FastCluster::*PushHeapHole5)(int, int, void**, void*);
+	(this->*reinterpret_cast<PushHeapHole5>(&FastCluster::pushHeapHole))(hole, original, value, unused);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

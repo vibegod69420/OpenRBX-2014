@@ -21,6 +21,7 @@ public:
 	void __cdecl write16(unsigned int value);
 	void __cdecl transfer();
 	void __cdecl flush();
+	int __cdecl check();
 	// AUTO-GENERATED METHODS
 };
 

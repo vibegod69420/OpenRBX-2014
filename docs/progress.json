@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24 04:29:23 UTC",
+ "updated_at": "2026-11-24 04:38:21 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 23.2248,
- "implemented_total": 2199,
- "function_annotations": 2199,
+ "matchable_coverage_pct": 23.2782,
+ "implemented_total": 2204,
+ "function_annotations": 2204,
  "stub_annotations": 0,
- "perfect_100_count": 2175,
- "matched_real_functions": 2175,
+ "perfect_100_count": 2180,
+ "matched_real_functions": 2180,
  "average_match_pct": 99.58,
- "overall_function_coverage_pct": 5.3623,
- "overall_byte_coverage_pct": 1.6385,
+ "overall_function_coverage_pct": 5.3746,
+ "overall_byte_coverage_pct": 1.6422,
  "usage": {
-  "calls_24h": 3315,
+  "calls_24h": 3306,
   "failures_24h": 0,
-  "completion_tokens_24h": 38114478,
-  "reasoning_tokens_24h": 37299633,
-  "avg_latency_s": 187.4
+  "completion_tokens_24h": 38093865,
+  "reasoning_tokens_24h": 37280203,
+  "avg_latency_s": 188.0
  },
- "functions_total": 2199,
+ "functions_total": 2204,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 660,
-   "functions": 665,
-   "bytes": 34332
+   "matched": 662,
+   "functions": 667,
+   "bytes": 34474
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -60,9 +60,9 @@
   },
   {
    "name": "App/script",
-   "matched": 143,
-   "functions": 143,
-   "bytes": 10125
+   "matched": 144,
+   "functions": 144,
+   "bytes": 10172
   },
   {
    "name": "Rendering/g3d",
@@ -77,16 +77,16 @@
    "bytes": 3135
   },
   {
+   "name": "Rendering/GfxRender",
+   "matched": 68,
+   "functions": 68,
+   "bytes": 3127
+  },
+  {
    "name": "RobloxStudio/lua_exception.cpp",
    "matched": 53,
    "functions": 60,
    "bytes": 3089
-  },
-  {
-   "name": "Rendering/GfxRender",
-   "matched": 67,
-   "functions": 67,
-   "bytes": 2999
   },
   {
    "name": "App/humanoid",
@@ -161,6 +161,12 @@
    "bytes": 308
   },
   {
+   "name": "Network/Replicator.cpp",
+   "matched": 9,
+   "functions": 9,
+   "bytes": 280
+  },
+  {
    "name": "Network/Player.cpp",
    "matched": 5,
    "functions": 5,
@@ -183,12 +189,6 @@
    "matched": 5,
    "functions": 5,
    "bytes": 248
-  },
-  {
-   "name": "Network/Replicator.cpp",
-   "matched": 8,
-   "functions": 8,
-   "bytes": 242
   },
   {
    "name": "Network/Server.cpp",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-18 19:11:22 UTC",
-   "matched": 151,
-   "implemented": 151,
-   "pct": 1.6124
-  },
-  {
    "t": "2026-11-18 19:12:21 UTC",
    "matched": 152,
    "implemented": 152,
@@ -6393,9 +6387,45 @@
    "matched": 2175,
    "implemented": 2199,
    "pct": 23.2248
+  },
+  {
+   "t": "2026-11-24 04:38:21 UTC",
+   "matched": 2180,
+   "implemented": 2204,
+   "pct": 23.2782
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-24T04:33:03",
+   "address": "0x008bda40",
+   "name": "RBX::ClientAppSettings::ApplySettingFromFunc_D0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T04:31:55",
+   "address": "0x00d00940",
+   "name": "RBX::http_status_error::check",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T04:30:41",
+   "address": "0x008dd930",
+   "name": "RBX::ScriptContext::reportError",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T04:29:34",
+   "address": "0x00622800",
+   "name": "RBX::Graphics::FastCluster::popHeap",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T04:29:25",
+   "address": "0x00c6fe20",
+   "name": "RBX::Network::Replicator::writePropertyId",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-24T04:22:53",
    "address": "0x008bda20",
@@ -7085,37 +7115,7 @@
    "address": "0x0066da40",
    "name": "RBX::Graphics::ObjectExporter::clear",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T06:29:57",
-   "address": "0x00c10260",
-   "name": "RBX::JointStage::removeAll",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T06:05:42",
-   "address": "0x007944b0",
-   "name": "RBX::Reflection::EnumDescriptor::allEnums",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T06:01:55",
-   "address": "0x00403380",
-   "name": "RBX::AutoJointSurfacePair::c_str",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T05:47:33",
-   "address": "0x00aaf910",
-   "name": "TouchTransmitter_UpdateCheck",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T05:46:17",
-   "address": "0x00695f20",
-   "name": "RBX::Graphics::SSAO::clearBufferData",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 15.65
+ "match_rate_per_hour": 15.67
 }

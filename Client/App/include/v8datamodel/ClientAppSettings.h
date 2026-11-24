@@ -29,6 +29,7 @@ public:
 	void __cdecl ApplySettingFromFunc_50();
 	void __cdecl ApplySettingFromFunc_10();
 	void __cdecl ApplySettingFromFunc_CC();
+	void __cdecl ApplySettingFromFunc_D0();
 	// AUTO-GENERATED METHODS
 };
 

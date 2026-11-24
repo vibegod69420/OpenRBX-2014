@@ -103,6 +103,19 @@ Replicator& __cdecl Replicator::writeProperties(const void* data)
 	return *this;
 }
 
+struct ReplicatorPropertyDescriptor
+{
+	int __thiscall getId();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c6fe20
+Replicator& __cdecl Replicator::writePropertyId(const void* data)
+{
+	int id = ((ReplicatorPropertyDescriptor*)data)->getId();
+	((ReplicatorBitStream*)this)->writeBits(&id, 6, 1);
+	return *this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network
