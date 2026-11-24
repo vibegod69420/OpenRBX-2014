@@ -22,6 +22,7 @@ public:
 	void release();
 	void destroy();
 	void cleanup();
+	void __cdecl format(char const* fmt, ...);
 	// AUTO-GENERATED METHODS
 };
 

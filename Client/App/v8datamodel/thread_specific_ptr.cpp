@@ -259,6 +259,19 @@ void thread_specific_ptr::cleanup()
 	data->vtable = (void*)0x00E33A28;
 }
 
+#include <stdarg.h>
+
+struct thread_specific_ptr_vformat_callee
+{
+	void __thiscall vformat(char const* fmt, va_list ap);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0045f0e0
+void __cdecl thread_specific_ptr::format(char const* fmt, ...)
+{
+	((thread_specific_ptr_vformat_callee*)this)->vformat(fmt, (va_list)((char*)(&fmt) + sizeof(fmt)));
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

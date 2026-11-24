@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24 06:02:36 UTC",
+  "updated_at": "2026-11-24 06:12:35 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 23.3316,
-  "implemented_total": 2209,
-  "function_annotations": 2209,
+  "matchable_coverage_pct": 23.3636,
+  "implemented_total": 2212,
+  "function_annotations": 2212,
   "stub_annotations": 0,
-  "perfect_100_count": 2185,
-  "matched_real_functions": 2185,
+  "perfect_100_count": 2188,
+  "matched_real_functions": 2188,
   "average_match_pct": 99.58,
-  "overall_function_coverage_pct": 5.3869,
-  "overall_byte_coverage_pct": 1.645,
+  "overall_function_coverage_pct": 5.3943,
+  "overall_byte_coverage_pct": 1.6462,
   "usage": {
-    "calls_24h": 3033,
+    "calls_24h": 3043,
     "failures_24h": 0,
-    "completion_tokens_24h": 35593174,
-    "reasoning_tokens_24h": 34811717,
-    "avg_latency_s": 191.5
+    "completion_tokens_24h": 35608442,
+    "reasoning_tokens_24h": 34811480,
+    "avg_latency_s": 191.0
   },
   "functions": [
     {
@@ -723,6 +723,17 @@
       "file": "Client/RobloxStudio/ThreadLogManager.cpp",
       "orig_size": 6,
       "recomp_size": 6,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0045f0e0",
+      "kind": "FUNCTION",
+      "name": "RBX::thread_specific_ptr::format",
+      "mangled": "?format@thread_specific_ptr@RBX@@QAAXPBDZZ",
+      "file": "Client/App/v8datamodel/thread_specific_ptr.cpp",
+      "orig_size": 20,
+      "recomp_size": 20,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -2392,6 +2403,17 @@
       "kind": "FUNCTION",
       "name": "btConvexPolyhedron::initializeFaces",
       "mangled": "?initializeFaces@btConvexPolyhedron@@QAEPAXXZ",
+      "file": "Client/App/v8kernel/btConvexPolyhedron.cpp",
+      "orig_size": 50,
+      "recomp_size": 50,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x005d59a0",
+      "kind": "FUNCTION",
+      "name": "btConvexPolyhedron::initializeEdges",
+      "mangled": "?initializeEdges@btConvexPolyhedron@@QAEPAXXZ",
       "file": "Client/App/v8kernel/btConvexPolyhedron.cpp",
       "orig_size": 50,
       "recomp_size": 50,
@@ -10199,6 +10221,17 @@
     },
     {
       "address": "0x008dd9f0",
+      "kind": "FUNCTION",
+      "name": "RBX::ScriptContext::reportError",
+      "mangled": "?reportError@ScriptContext@RBX@@QAAXXZ",
+      "file": "Client/App/script/ScriptContext.cpp",
+      "orig_size": 47,
+      "recomp_size": 47,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x008dda50",
       "kind": "FUNCTION",
       "name": "RBX::ScriptContext::reportError",
       "mangled": "?reportError@ScriptContext@RBX@@QAAXXZ",

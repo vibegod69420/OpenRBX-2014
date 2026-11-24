@@ -52,6 +52,30 @@ void* btConvexPolyhedron::initializeFaces()
 	return p;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x005d59a0
+void* btConvexPolyhedron::initializeEdges()
+{
+	int i = 0;
+	int count = *(int*)((char*)this + 4);
+	void* p = *(void**)this;
+
+	if (count > 0)
+	{
+		do
+		{
+			++i;
+			*(void**)p = (i < count) ? (char*)p + 0x3c : 0;
+			count = *(int*)((char*)this + 4);
+			p = (char*)p + 0x3c;
+		}
+		while (i < count);
+
+		return *(void**)this;
+	}
+
+	return p;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
