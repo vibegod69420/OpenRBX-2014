@@ -439,6 +439,9 @@ public:
 	void init_d9ec90();
 	void init_da3270();
 	void init_da32f0();
+	void init_dadc10();
+	void init_dbd650();
+	void init_db6e80();
 	// AUTO-GENERATED METHODS
 };
 
