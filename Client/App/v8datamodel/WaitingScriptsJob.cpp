@@ -42,6 +42,24 @@ void* WaitingScriptsJob::allocate76()
 	return mem;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x008d1d60
+void* WaitingScriptsJob::allocate64()
+{
+	void* mem = ::operator new(0x40u);
+	if (!mem)
+		allocationFailure();
+
+	*(int*)mem = this->_vtable_or_head;
+
+	if ((int*)mem + 1)
+		*((int*)mem + 1) = this->_vtable_or_head;
+
+	if ((int*)mem + 2)
+		*((int*)mem + 2) = this->_vtable_or_head;
+
+	return mem;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

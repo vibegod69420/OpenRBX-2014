@@ -143,6 +143,20 @@ void __cdecl Replicator::sendChangedProperty(const void* prop)
 		((ReplicatorPacketSender*)this)->sendPropertyPacket(&id);
 }
 
+struct ReplicatorPropertyResolver
+{
+	ReplicatorPropertyDescriptor* __thiscall resolveProperty(void* out);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c6f3d0
+void __cdecl Replicator::writePendingPropertyId(void* bitStream)
+{
+	int local[2];
+	ReplicatorPropertyDescriptor* desc = ((ReplicatorPropertyResolver*)this)->resolveProperty(&local[0]);
+	local[1] = desc->getId();
+	((ReplicatorBitStream*)bitStream)->writeBits(&local[1], 6, 1);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

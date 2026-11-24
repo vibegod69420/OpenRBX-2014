@@ -18,6 +18,7 @@ public:
 
 	void*allocate();
 	void*allocate76();
+	void*allocate64();
 	// AUTO-GENERATED METHODS
 };
 

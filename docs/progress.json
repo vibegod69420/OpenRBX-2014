@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24 09:13:16 UTC",
+ "updated_at": "2026-11-24 09:22:12 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 23.5451,
- "implemented_total": 2229,
- "function_annotations": 2229,
+ "matchable_coverage_pct": 23.5771,
+ "implemented_total": 2232,
+ "function_annotations": 2232,
  "stub_annotations": 0,
- "perfect_100_count": 2205,
- "matched_real_functions": 2205,
+ "perfect_100_count": 2208,
+ "matched_real_functions": 2208,
  "average_match_pct": 99.59,
- "overall_function_coverage_pct": 5.4363,
- "overall_byte_coverage_pct": 1.657,
+ "overall_function_coverage_pct": 5.4437,
+ "overall_byte_coverage_pct": 1.6586,
  "usage": {
-  "calls_24h": 2948,
+  "calls_24h": 2939,
   "failures_24h": 0,
-  "completion_tokens_24h": 34561271,
-  "reasoning_tokens_24h": 33781952,
-  "avg_latency_s": 192.7
+  "completion_tokens_24h": 34613151,
+  "reasoning_tokens_24h": 33833919,
+  "avg_latency_s": 193.7
  },
- "functions_total": 2229,
+ "functions_total": 2232,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 673,
-   "functions": 678,
-   "bytes": 34927
+   "matched": 674,
+   "functions": 679,
+   "bytes": 34982
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -60,9 +60,9 @@
   },
   {
    "name": "App/script",
-   "matched": 148,
-   "functions": 148,
-   "bytes": 10348
+   "matched": 149,
+   "functions": 149,
+   "bytes": 10397
   },
   {
    "name": "Rendering/g3d",
@@ -143,16 +143,16 @@
    "bytes": 435
   },
   {
+   "name": "Network/Replicator.cpp",
+   "matched": 12,
+   "functions": 12,
+   "bytes": 417
+  },
+  {
    "name": "Network/StatsUpdateJob.cpp",
    "matched": 9,
    "functions": 9,
    "bytes": 373
-  },
-  {
-   "name": "Network/Replicator.cpp",
-   "matched": 11,
-   "functions": 11,
-   "bytes": 369
   },
   {
    "name": "Network/Players.cpp",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-18 19:51:48 UTC",
-   "matched": 191,
-   "implemented": 191,
-   "pct": 2.0395
-  },
-  {
    "t": "2026-11-18 19:58:20 UTC",
    "matched": 202,
    "implemented": 202,
@@ -6393,9 +6387,33 @@
    "matched": 2205,
    "implemented": 2229,
    "pct": 23.5451
+  },
+  {
+   "t": "2026-11-24 09:22:12 UTC",
+   "matched": 2208,
+   "implemented": 2232,
+   "pct": 23.5771
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-24T09:17:39",
+   "address": "0x00c6f3d0",
+   "name": "RBX::Network::Replicator::writePendingPropertyId",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T09:14:14",
+   "address": "0x008dde30",
+   "name": "RBX::ScriptContext::reportError",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T09:13:57",
+   "address": "0x008d1d60",
+   "name": "RBX::WaitingScriptsJob::allocate64",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-24T09:05:56",
    "address": "0x00c282b0",
@@ -7097,25 +7115,7 @@
    "address": "0x00533210",
    "name": "RobloxTaskScheduler::sub_533210",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T09:20:16",
-   "address": "0x0048ebe0",
-   "name": "",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T09:16:21",
-   "address": "0x004b6bf0",
-   "name": "fn",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T09:15:27",
-   "address": "0x0043fba0",
-   "name": "QDockWidget::init",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 15.1
+ "match_rate_per_hour": 15.04
 }
