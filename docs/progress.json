@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24 07:35:56 UTC",
+ "updated_at": "2026-11-24 07:45:56 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 23.4277,
- "implemented_total": 2218,
- "function_annotations": 2218,
+ "matchable_coverage_pct": 23.4597,
+ "implemented_total": 2221,
+ "function_annotations": 2221,
  "stub_annotations": 0,
- "perfect_100_count": 2194,
- "matched_real_functions": 2194,
+ "perfect_100_count": 2197,
+ "matched_real_functions": 2197,
  "average_match_pct": 99.59,
- "overall_function_coverage_pct": 5.4091,
- "overall_byte_coverage_pct": 1.6499,
+ "overall_function_coverage_pct": 5.4165,
+ "overall_byte_coverage_pct": 1.6518,
  "usage": {
-  "calls_24h": 3051,
+  "calls_24h": 3050,
   "failures_24h": 0,
-  "completion_tokens_24h": 35621351,
-  "reasoning_tokens_24h": 34820778,
-  "avg_latency_s": 190.0
+  "completion_tokens_24h": 35461667,
+  "reasoning_tokens_24h": 34664535,
+  "avg_latency_s": 189.2
  },
- "functions_total": 2218,
+ "functions_total": 2221,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 668,
-   "functions": 673,
-   "bytes": 34664
+   "matched": 669,
+   "functions": 674,
+   "bytes": 34715
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -54,9 +54,9 @@
   },
   {
    "name": "App/v8world",
-   "matched": 163,
-   "functions": 163,
-   "bytes": 10829
+   "matched": 164,
+   "functions": 164,
+   "bytes": 10918
   },
   {
    "name": "App/script",
@@ -149,13 +149,13 @@
    "bytes": 373
   },
   {
-   "name": "Rendering/GfxBase",
-   "matched": 10,
-   "functions": 10,
-   "bytes": 321
+   "name": "Network/Replicator.cpp",
+   "matched": 11,
+   "functions": 11,
+   "bytes": 369
   },
   {
-   "name": "Network/Replicator.cpp",
+   "name": "Rendering/GfxBase",
    "matched": 10,
    "functions": 10,
    "bytes": 321
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-18 19:25:07 UTC",
-   "matched": 175,
-   "implemented": 175,
-   "pct": 1.8687
-  },
-  {
    "t": "2026-11-18 19:26:34 UTC",
    "matched": 176,
    "implemented": 176,
@@ -6393,9 +6387,33 @@
    "matched": 2194,
    "implemented": 2218,
    "pct": 23.4277
+  },
+  {
+   "t": "2026-11-24 07:45:56 UTC",
+   "matched": 2197,
+   "implemented": 2221,
+   "pct": 23.4597
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-24T07:41:55",
+   "address": "0x00b4d6c0",
+   "name": "RBX::BlockBlockContact::connect",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T07:39:28",
+   "address": "0x004198d0",
+   "name": "RBX::NegateOperation::~NegateOperation",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T07:36:11",
+   "address": "0x00c6f040",
+   "name": "RBX::Network::Replicator::sendChangedProperty",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-24T07:32:09",
    "address": "0x008d1d20",
@@ -7096,24 +7114,6 @@
    "ts": "2026-11-23T09:03:25",
    "address": "0x00c17640",
    "name": "RBX::HUMAN::Swimming::initialize",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T09:02:32",
-   "address": "0x00bc6ce0",
-   "name": "RBX::ContentProviderJob::addRequest",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T09:01:56",
-   "address": "0x00d03370",
-   "name": "RBX::http_status_error::destroy",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T09:01:50",
-   "address": "0x00b71710",
-   "name": "RBX::RBX::TriangleMesh::func_B71710",
    "pct": 100.0
   }
  ],

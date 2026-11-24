@@ -127,6 +127,22 @@ Replicator& __cdecl Replicator::writeUnsignedShorts(const void* data)
 	return *this;
 }
 
+void __cdecl replicatorWritePropertyRef(const void* prop, int* id);
+
+struct ReplicatorPacketSender
+{
+	void __thiscall sendPropertyPacket(int* id);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c6f040
+void __cdecl Replicator::sendChangedProperty(const void* prop)
+{
+	int id = 0xC2;
+	replicatorWritePropertyRef(prop, &id);
+	if (*((int*)this + 1) != 0)
+		((ReplicatorPacketSender*)this)->sendPropertyPacket(&id);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

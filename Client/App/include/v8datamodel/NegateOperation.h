@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	~NegateOperation();
 	// AUTO-GENERATED METHODS
 };
 

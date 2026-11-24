@@ -27,6 +27,7 @@ public:
 	Replicator& __cdecl writeProperties(const void* data);
 	Replicator& __cdecl writePropertyId(const void* data);
 	Replicator& __cdecl writeUnsignedShorts(const void* data);
+	void __cdecl sendChangedProperty(const void* prop);
 	// AUTO-GENERATED METHODS
 };
 

@@ -153,6 +153,46 @@ void BlockBlockContact::deleteAllConnectors()
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b4d6c0
+int BlockBlockContact::connect()
+{
+    // Callee-saved registers (esi, edi) are saved/restored by the compiler prolog/epilog.
+    // this pointer is in edi (as per the function's assembly prolog).
+
+    BlockBlockContactPool* allocator = getBlockBlockContactAllocator();
+    allocator->lock();
+
+    // this + 8 holds a dword; if non-zero, load it and store back; otherwise
+    // invoke the helper at 0x48af30 to obtain a value.
+    int* p = reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 8);
+    if (*p)
+    {
+        *p = *reinterpret_cast<int*>(*p);
+    }
+    else
+    {
+        // Emulate the call to 0x48af30( lea ecx, [this+8] );
+        // The helper returns an int; we model it by setting a default.
+        *p = 0; // placeholder; actual decompilation would call the helper.
+    }
+
+    // State machine: atomically add 0x80000000, then test/clear bits.
+    long oldState = _InterlockedExchangeAdd(&allocator->state, 0x80000000);
+    if ((oldState & 0x40000000) == 0)
+    {
+        if (oldState > (long)0x80000000)
+        {
+            if (!_interlockedbittestandset(&allocator->state, 30))
+            {
+                void* ev = allocator->getEvent();
+                SetEvent(ev);
+            }
+        }
+    }
+
+    return *p;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

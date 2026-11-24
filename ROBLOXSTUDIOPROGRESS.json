@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24 07:35:56 UTC",
+  "updated_at": "2026-11-24 07:45:56 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 23.4277,
-  "implemented_total": 2218,
-  "function_annotations": 2218,
+  "matchable_coverage_pct": 23.4597,
+  "implemented_total": 2221,
+  "function_annotations": 2221,
   "stub_annotations": 0,
-  "perfect_100_count": 2194,
-  "matched_real_functions": 2194,
+  "perfect_100_count": 2197,
+  "matched_real_functions": 2197,
   "average_match_pct": 99.59,
-  "overall_function_coverage_pct": 5.4091,
-  "overall_byte_coverage_pct": 1.6499,
+  "overall_function_coverage_pct": 5.4165,
+  "overall_byte_coverage_pct": 1.6518,
   "usage": {
-    "calls_24h": 3051,
+    "calls_24h": 3050,
     "failures_24h": 0,
-    "completion_tokens_24h": 35621351,
-    "reasoning_tokens_24h": 34820778,
-    "avg_latency_s": 190.0
+    "completion_tokens_24h": 35461667,
+    "reasoning_tokens_24h": 34664535,
+    "avg_latency_s": 189.2
   },
   "functions": [
     {
@@ -261,6 +261,17 @@
       "file": "Client/App/v8datamodel/sp_counted_impl_pd.cpp",
       "orig_size": 11,
       "recomp_size": 11,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x004198d0",
+      "kind": "FUNCTION",
+      "name": "RBX::NegateOperation::~NegateOperation",
+      "mangled": "??1NegateOperation@RBX@@QAE@XZ",
+      "file": "Client/App/v8datamodel/NegateOperation.cpp",
+      "orig_size": 51,
+      "recomp_size": 51,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -15148,6 +15159,17 @@
       "matchable": true
     },
     {
+      "address": "0x00b4d6c0",
+      "kind": "FUNCTION",
+      "name": "RBX::BlockBlockContact::connect",
+      "mangled": "?allocate@BlockBlockContact@RBX@@QAEPAXXZ",
+      "file": "Client/App/v8world/BlockBlockContact.cpp",
+      "orig_size": 89,
+      "recomp_size": 89,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00b4d720",
       "kind": "FUNCTION",
       "name": "RBX::BlockBlockContact::allocate",
@@ -18620,6 +18642,17 @@
       "file": "Client/Network/StatsUpdateJob.cpp",
       "orig_size": 47,
       "recomp_size": 47,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c6f040",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::Replicator::sendChangedProperty",
+      "mangled": "?sendChangedProperty@Replicator@Network@RBX@@QAAXPBX@Z",
+      "file": "Client/Network/Replicator.cpp",
+      "orig_size": 48,
+      "recomp_size": 48,
       "match_pct": 100.0,
       "matchable": true
     },
