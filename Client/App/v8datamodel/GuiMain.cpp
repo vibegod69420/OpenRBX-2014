@@ -1031,6 +1031,52 @@ void __cdecl GuiMain::adjustHeap(int hole, int bottom, void* val, void* pred)
 	GuiMain_PushHeap_008aeea0(arr, hole, top, val, pred);
 }
 
+struct GuiMainScriptEventNoArg
+{
+	void* instance;
+	void* descriptor;
+	void fire();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x008af410
+void __cdecl GuiMain::fireTriggeredBase(void* source)
+{
+	GuiMainScriptEventNoArg local;
+	void* descriptor;
+
+	if (source)
+		descriptor = (char*)source + 0x1C;
+	else
+		descriptor = 0;
+
+	local.instance = this;
+	local.descriptor = descriptor;
+
+	if (g_RBXAssertEnabled)
+	{
+		if (descriptor)
+		{
+			if (((GuiMainInstance*)this)->isMemberOf(descriptor) == 0)
+			{
+				unsigned char (__cdecl* callback)(const char*, const char*, int) = g_RBXAssertCallback;
+
+				if (callback == 0 ||
+					callback(
+						"!instance || descriptor.isMemberOf(instance)",
+						"d:\\buildagent\\work\\trunk2012\\client\\app\\include\\reflection\\property.h",
+						0x100) == 0)
+				{
+					RBXAssert(
+						(int)g_RBXAssertEnabled,
+						"!instance || descriptor.isMemberOf(instance) file: d:\\buildagent\\work\\trunk2012\\client\\app\\include\\reflection\\property.h line: 256");
+				}
+			}
+		}
+	}
+
+	local.fire();
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
