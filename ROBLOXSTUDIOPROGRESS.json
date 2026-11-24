@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24 07:02:33 UTC",
+  "updated_at": "2026-11-24 07:26:20 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 23.3849,
-  "implemented_total": 2214,
-  "function_annotations": 2214,
+  "matchable_coverage_pct": 23.3956,
+  "implemented_total": 2215,
+  "function_annotations": 2215,
   "stub_annotations": 0,
-  "perfect_100_count": 2190,
-  "matched_real_functions": 2190,
+  "perfect_100_count": 2191,
+  "matched_real_functions": 2191,
   "average_match_pct": 99.58,
-  "overall_function_coverage_pct": 5.3993,
-  "overall_byte_coverage_pct": 1.6483,
+  "overall_function_coverage_pct": 5.4017,
+  "overall_byte_coverage_pct": 1.6486,
   "usage": {
-    "calls_24h": 3062,
+    "calls_24h": 3042,
     "failures_24h": 0,
-    "completion_tokens_24h": 35770027,
-    "reasoning_tokens_24h": 34968143,
-    "avg_latency_s": 190.9
+    "completion_tokens_24h": 35528342,
+    "reasoning_tokens_24h": 34728597,
+    "avg_latency_s": 190.3
   },
   "functions": [
     {
@@ -9751,6 +9751,17 @@
       "kind": "FUNCTION",
       "name": "RBX::ClientAppSettings::ApplySettingFromFunc_D4",
       "mangled": "?ApplySettingFromFunc_D4@ClientAppSettings@RBX@@QAAXXZ",
+      "file": "Client/App/v8datamodel/ClientAppSettings.cpp",
+      "orig_size": 29,
+      "recomp_size": 29,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x008bdaa0",
+      "kind": "FUNCTION",
+      "name": "RBX::ClientAppSettings::ApplySettingFromFunc_D8",
+      "mangled": "?ApplySettingFromFunc_D8@ClientAppSettings@RBX@@QAAXXZ",
       "file": "Client/App/v8datamodel/ClientAppSettings.cpp",
       "orig_size": 29,
       "recomp_size": 29,
