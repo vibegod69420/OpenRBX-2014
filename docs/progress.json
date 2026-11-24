@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24 03:52:12 UTC",
+ "updated_at": "2026-11-24 04:01:33 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 23.0753,
- "implemented_total": 2185,
- "function_annotations": 2185,
+ "matchable_coverage_pct": 23.1287,
+ "implemented_total": 2190,
+ "function_annotations": 2190,
  "stub_annotations": 0,
- "perfect_100_count": 2161,
- "matched_real_functions": 2161,
+ "perfect_100_count": 2166,
+ "matched_real_functions": 2166,
  "average_match_pct": 99.58,
- "overall_function_coverage_pct": 5.3278,
- "overall_byte_coverage_pct": 1.6317,
+ "overall_function_coverage_pct": 5.3401,
+ "overall_byte_coverage_pct": 1.6342,
  "usage": {
-  "calls_24h": 3299,
+  "calls_24h": 3300,
   "failures_24h": 0,
-  "completion_tokens_24h": 38061036,
-  "reasoning_tokens_24h": 37237290,
-  "avg_latency_s": 187.6
+  "completion_tokens_24h": 37959948,
+  "reasoning_tokens_24h": 37139766,
+  "avg_latency_s": 187.3
  },
- "functions_total": 2185,
+ "functions_total": 2190,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 653,
-   "functions": 658,
-   "bytes": 33999
+   "matched": 656,
+   "functions": 661,
+   "bytes": 34159
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -144,9 +144,9 @@
   },
   {
    "name": "Network/StatsUpdateJob.cpp",
-   "matched": 8,
-   "functions": 8,
-   "bytes": 326
+   "matched": 9,
+   "functions": 9,
+   "bytes": 373
   },
   {
    "name": "Rendering/GfxBase",
@@ -197,6 +197,12 @@
    "bytes": 216
   },
   {
+   "name": "Network/Replicator.cpp",
+   "matched": 7,
+   "functions": 7,
+   "bytes": 205
+  },
+  {
    "name": "Network/ServerReplicator.cpp",
    "matched": 7,
    "functions": 7,
@@ -207,12 +213,6 @@
    "matched": 8,
    "functions": 8,
    "bytes": 193
-  },
-  {
-   "name": "Network/Replicator.cpp",
-   "matched": 6,
-   "functions": 6,
-   "bytes": 170
   },
   {
    "name": "RobloxStudio/ToggleLocalSpaceVerb.cpp",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-18 19:04:06 UTC",
-   "matched": 145,
-   "implemented": 145,
-   "pct": 1.5483
-  },
-  {
    "t": "2026-11-18 19:05:20 UTC",
    "matched": 148,
    "implemented": 148,
@@ -6393,9 +6387,45 @@
    "matched": 2161,
    "implemented": 2185,
    "pct": 23.0753
+  },
+  {
+   "t": "2026-11-24 04:01:33 UTC",
+   "matched": 2166,
+   "implemented": 2190,
+   "pct": 23.1287
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-24T03:57:36",
+   "address": "0x00d00180",
+   "name": "RBX::http_status_error::flush",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T03:57:06",
+   "address": "0x00c6db00",
+   "name": "RBX::Network::StatsUpdateJob::writeFieldTriplet",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T03:55:27",
+   "address": "0x00c70570",
+   "name": "RBX::Network::Replicator::writeBool",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T03:53:38",
+   "address": "0x00893d40",
+   "name": "RBX::UnionOperation::sub_893D40",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-24T03:53:00",
+   "address": "0x008bdd40",
+   "name": "RBX::ClientAppSettings::ApplySettingFromFunc_50",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-24T03:44:44",
    "address": "0x005f48b0",
@@ -7084,36 +7114,6 @@
    "ts": "2026-11-23T05:08:38",
    "address": "0x00985e50",
    "name": "eraseRange",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T05:08:35",
-   "address": "0x008c27a0",
-   "name": "RBX::Lua::WeakThreadRef::create",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T05:04:33",
-   "address": "0x00478580",
-   "name": "QDoubleSpinBox::isMetaObjectMatch2",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T05:03:15",
-   "address": "0x00433b80",
-   "name": "QDebuggerClient::updateDebuggerState",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T05:02:34",
-   "address": "0x00a55c40",
-   "name": "RBX::CoreScript::CoreScript",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-23T04:59:20",
-   "address": "0x0094afd0",
-   "name": "RBX::Network::PersistentDataStore::sub_94afd0",
    "pct": 100.0
   }
  ],

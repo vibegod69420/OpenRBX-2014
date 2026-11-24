@@ -302,6 +302,22 @@ tail:
 	(*(UnionOpSlotDC_894980**)((char*)this + 0xDC))->sub_99E490((char*)this + 0xC);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00893d40
+bool UnionOperation::sub_893D40() const
+{
+	if (*(int*)((char*)this + 0xF0) >= 0)
+		goto ret_true;
+	if (*(int*)((char*)this + 0xF4) >= 0)
+		goto ret_true;
+	if (*(int*)((char*)this + 0xF8) >= 0)
+		goto ret_true;
+	if (*(int*)((char*)this + 0xFC) >= 0)
+		goto ret_true;
+	return false;
+ret_true:
+	return true;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

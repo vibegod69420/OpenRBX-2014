@@ -78,6 +78,23 @@ Replicator& __cdecl Replicator::writeProperty(const void* data, int flag)
     return *this;
 }
 
+struct ReplicatorBitBoolWriter
+{
+	void __thiscall writeBit1();
+	void __thiscall writeBit0();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c70570
+Replicator& __cdecl Replicator::writeBool(bool value)
+{
+	if (value)
+		((ReplicatorBitBoolWriter*)this)->writeBit1();
+	else
+		((ReplicatorBitBoolWriter*)this)->writeBit0();
+
+	return *this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

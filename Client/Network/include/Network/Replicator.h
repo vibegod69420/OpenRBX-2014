@@ -23,6 +23,7 @@ public:
 	Replicator& __cdecl writeByte(unsigned char value);
 	void __cdecl sendPendingReplication(void* writer);
 	Replicator& __cdecl writeProperty(const void* data, int flag);
+	Replicator& __cdecl writeBool(bool value);
 	// AUTO-GENERATED METHODS
 };
 

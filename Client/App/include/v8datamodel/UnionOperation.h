@@ -31,6 +31,7 @@ public:
 	void*sub_8942A0();
 	void sub_893910();
 	void sub_894980();
+	bool sub_893D40() const;
 	// AUTO-GENERATED METHODS
 };
 

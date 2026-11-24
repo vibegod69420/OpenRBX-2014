@@ -68,6 +68,36 @@ void __cdecl http_status_error::transfer()
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00d00180
+void __cdecl http_status_error::flush()
+{
+	int bits = *(int*)((char*)this + 0x16bc);
+	if (bits > 8)
+	{
+		int idx = *(int*)((char*)this + 0x14);
+		unsigned char byte0 = *(unsigned char*)((char*)this + 0x16b8);
+		unsigned char* buf = *(unsigned char**)((char*)this + 8);
+		buf[idx] = byte0;
+		++*(int*)((char*)this + 0x14);
+
+		idx = *(int*)((char*)this + 0x14);
+		buf = *(unsigned char**)((char*)this + 8);
+		unsigned char byte1 = *(unsigned char*)((char*)this + 0x16b9);
+		buf[idx] = byte1;
+		++*(int*)((char*)this + 0x14);
+	}
+	else if (bits > 0)
+	{
+		unsigned char* buf = *(unsigned char**)((char*)this + 8);
+		int idx = *(int*)((char*)this + 0x14);
+		buf[idx] = *(unsigned char*)((char*)this + 0x16b8);
+		++*(int*)((char*)this + 0x14);
+	}
+
+	*(unsigned short*)((char*)this + 0x16b8) = 0;
+	*(int*)((char*)this + 0x16bc) = 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
