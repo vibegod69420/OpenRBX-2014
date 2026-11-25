@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25 09:18:28 UTC",
+ "updated_at": "2026-11-25 09:27:12 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 24.2178,
- "implemented_total": 2295,
- "function_annotations": 2295,
+ "matchable_coverage_pct": 24.2285,
+ "implemented_total": 2296,
+ "function_annotations": 2296,
  "stub_annotations": 0,
- "perfect_100_count": 2268,
- "matched_real_functions": 2268,
- "average_match_pct": 99.5,
- "overall_function_coverage_pct": 5.5916,
- "overall_byte_coverage_pct": 1.7335,
+ "perfect_100_count": 2269,
+ "matched_real_functions": 2269,
+ "average_match_pct": 99.57,
+ "overall_function_coverage_pct": 5.594,
+ "overall_byte_coverage_pct": 1.7343,
  "usage": {
-  "calls_24h": 1888,
+  "calls_24h": 1885,
   "failures_24h": 0,
-  "completion_tokens_24h": 23201458,
-  "reasoning_tokens_24h": 22649823,
-  "avg_latency_s": 207.0
+  "completion_tokens_24h": 23204415,
+  "reasoning_tokens_24h": 22653091,
+  "avg_latency_s": 206.8
  },
- "functions_total": 2295,
+ "functions_total": 2296,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -77,16 +77,16 @@
    "bytes": 3254
   },
   {
+   "name": "RobloxStudio/lua_exception.cpp",
+   "matched": 56,
+   "functions": 66,
+   "bytes": 3199
+  },
+  {
    "name": "Rendering/GfxRender",
    "matched": 68,
    "functions": 68,
    "bytes": 3127
-  },
-  {
-   "name": "RobloxStudio/lua_exception.cpp",
-   "matched": 55,
-   "functions": 65,
-   "bytes": 3118
   },
   {
    "name": "App/humanoid",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-19 01:18:22 UTC",
-   "matched": 432,
-   "implemented": 432,
-   "pct": 4.6129
-  },
-  {
    "t": "2026-11-19 01:25:54 UTC",
    "matched": 453,
    "implemented": 453,
@@ -6393,9 +6387,21 @@
    "matched": 2268,
    "implemented": 2295,
    "pct": 24.2178
+  },
+  {
+   "t": "2026-11-25 09:27:12 UTC",
+   "matched": 2269,
+   "implemented": 2296,
+   "pct": 24.2285
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-25T09:18:49",
+   "address": "0x00a38960",
+   "name": "lua_exception::typeError",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-25T09:14:19",
    "address": "0x00b6ae60",
@@ -7109,13 +7115,7 @@
    "address": "0x007bc660",
    "name": "RBX::Camera::getCameraSubject",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T02:33:59",
-   "address": "0x0040fbf0",
-   "name": "boost::lock_error::grab",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 12.08
+ "match_rate_per_hour": 11.95
 }

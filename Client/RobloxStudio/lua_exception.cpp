@@ -1170,6 +1170,20 @@ void __cdecl lua_exception::sub_A35690(void* L, void* buf, int size)
 	*(char**)((char*)L + 8) += 16;
 }
 
+const char* __cdecl lua_typename(lua_exception* L, int t);
+const char* __cdecl lua_pushfstring(lua_exception* L, const char* fmt, ...);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a38960
+void __cdecl lua_exception::typeError(int narg, int t)
+{
+	if (lua_type(this, narg) != t)
+	{
+		const char* expected = lua_typename(this, t);
+		const char* got = lua_typename(this, lua_type(this, narg));
+		luaL_argerror(this, narg, lua_pushfstring(this, "%s expected, got %s", expected, got));
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

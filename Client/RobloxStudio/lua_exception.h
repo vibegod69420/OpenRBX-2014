@@ -81,6 +81,7 @@ public:
 	void* __cdecl touserdata(int index);
 	void __cdecl getTable(int index);
 	void __cdecl sub_A35690(void* L, void* buf, int size);
+	void __cdecl typeError(int narg, int t);
 	// AUTO-GENERATED METHODS
 };
 
