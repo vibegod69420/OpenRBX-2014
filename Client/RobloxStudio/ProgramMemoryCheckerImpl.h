@@ -449,6 +449,7 @@ public:
 	void init_da2550();
 	void init_da2610();
 	void init_da3550();
+	void init_da2850();
 	// AUTO-GENERATED METHODS
 };
 
