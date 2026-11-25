@@ -24,6 +24,7 @@ public:
 	int getField1E4() const;
 	void frontendProcessing();
 	void clearConnections();
+	void*getHandleTarget();
 	// AUTO-GENERATED METHODS
 };
 

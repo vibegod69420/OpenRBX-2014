@@ -162,6 +162,49 @@ void Player::clearConnections()
 	}
 }
 
+struct PlayerHandleResolved
+{
+	char pad[0xE0];
+	class PlayerHandleInner* inner;
+};
+
+PlayerHandleResolved* PlayerResolveHandle(void* handle);
+
+class PlayerHandleInner
+{
+public:
+	class PlayerHandleTarget* GetHandleTarget();
+};
+
+class PlayerHandleTarget
+{
+public:
+	void* DispatchHandleTarget();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c4a240
+void* Player::getHandleTarget()
+{
+	void* handle = *(void**)((char*)this + 0x64);
+	if (handle)
+	{
+		PlayerHandleResolved* resolved = PlayerResolveHandle(handle);
+		if (resolved)
+		{
+			PlayerHandleInner* inner = resolved->inner;
+			if (inner)
+			{
+				PlayerHandleTarget* target = inner->GetHandleTarget();
+				if (target)
+				{
+					return target->DispatchHandleTarget();
+				}
+			}
+		}
+	}
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network
