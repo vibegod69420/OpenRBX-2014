@@ -51,6 +51,27 @@ void __cdecl network_stream_exception::raise(const void* error)
 	}
 }
 
+struct network_stream_exception_writer
+{
+	void write(const void* data, int mode, int count);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c76aa0
+void __cdecl network_stream_exception::writeVarInt(unsigned int value)
+{
+	unsigned int v = value;
+	do
+	{
+		unsigned char b = (unsigned char)(v & 0xFu);
+		v >>= 4;
+		if (v != 0)
+		{
+			b = (unsigned char)(b | 0x10u);
+		}
+		reinterpret_cast<network_stream_exception_writer*>(this)->write(&b, 5, 1);
+	} while (v != 0);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
