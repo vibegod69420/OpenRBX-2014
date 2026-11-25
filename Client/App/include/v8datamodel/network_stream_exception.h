@@ -19,6 +19,7 @@ public:
 	const char* what() const;
 	void onDestroy();
 	static void destroyInstance(network_stream_exception* p);
+	void __cdecl raise(const void* error);
 	// AUTO-GENERATED METHODS
 };
 

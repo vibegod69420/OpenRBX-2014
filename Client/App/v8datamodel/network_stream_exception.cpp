@@ -24,6 +24,33 @@ void network_stream_exception::destroyInstance(network_stream_exception* p)
 	}
 }
 
+struct network_stream_exception_sink
+{
+	void dispatch(void* p);
+};
+
+static __declspec(noinline) void __cdecl network_stream_exception_copy(const void* src, void* dst)
+{
+	const int* s = static_cast<const int*>(src);
+	int* d = static_cast<int*>(dst);
+	d[0] = s[0];
+	d[1] = s[1];
+}
+
+// FUNCTION: ROBLOXSTUDIO 0x00c76100
+void __cdecl network_stream_exception::raise(const void* error)
+{
+	int local[2];
+	local[0] = 0;
+	local[1] = 0;
+	network_stream_exception_copy(error, local);
+
+	if (*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 4) != 0)
+	{
+		reinterpret_cast<network_stream_exception_sink*>(this)->dispatch(local);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
