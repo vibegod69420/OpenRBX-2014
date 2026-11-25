@@ -773,6 +773,25 @@ void* __cdecl ScriptContext::getProto()
 	}
 }
 
+void lua_createtable(lua_State* L, int narr, int nrec);
+void lua_pushlstring(lua_State* L, const char* s, unsigned int l);
+
+// FUNCTION: ROBLOXSTUDIO 0x008e32b0
+void __cdecl ScriptContext::setupLockedMetatable()
+{
+	lua_State* L = (lua_State*)this;
+
+	lua_createtable(L, 0, 0);
+	lua_createtable(L, 0, 0);
+	lua_pushstring(L, "The metatable is locked");
+	lua_setfield(L, -2, "__metatable");
+	lua_pushlstring(L, "__index", 7);
+	lua_gettable(L, -10002);
+	lua_remove(L, -3);
+	lua_setmetatable(L, -2);
+	lua_settable(L, -10002);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
