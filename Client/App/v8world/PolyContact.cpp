@@ -498,6 +498,34 @@ void __cdecl PolyContact::recfield(void* out)
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00bce2f0
+void __cdecl PolyContact_sub_C18CE0(void* obj, void* arg2, int arg3, int arg4);
+
+void __cdecl PolyContact::removeContactNode(void* arg2)
+{
+	char* node = (char*)arg2;
+	if (*(int*)(node + 0x24) == 0)
+		return;
+
+	int tag = *(int*)node;
+	if (tag == 0xD || tag == 0xE)
+	{
+		PolyContact_sub_C18DD0((char*)this, node, -1);
+		PolyContact_sub_C18CE0((char*)this, *(void**)((char*)*(void**)(node + 0x18) + 8), *(int*)(node + 0x20), -1);
+		--*(int*)(node + 0x20);
+	}
+	else
+	{
+		if (tag != 0)
+		{
+			PolyContact_sub_C183E0((char*)this, node);
+		}
+
+		void* inner = *(void**)(node + 0x18);
+		PolyContact_sub_C18CE0((char*)this, *(void**)((char*)inner + 8), *(int*)(node + 0x20), *(int*)(node + 0x24));
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
