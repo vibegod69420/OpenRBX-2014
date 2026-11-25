@@ -82,6 +82,7 @@ public:
 	void __cdecl pushUserdata(void* arg);
 	int __cdecl pushVector2int16Sub();
 	int __cdecl pushFunctionSub();
+	int __cdecl pushVector2();
 	// AUTO-GENERATED METHODS
 };
 

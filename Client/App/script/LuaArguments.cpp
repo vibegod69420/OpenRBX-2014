@@ -1313,6 +1313,27 @@ int __cdecl LuaArguments::pushFunctionSub()
 	return 1;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a40590
+int __cdecl LuaArguments::pushVector2()
+{
+	typedef void* (__cdecl *SubA389C0Fn)(void*, void*, void*);
+	void* src = reinterpret_cast<SubA389C0Fn>(sub_A389C0)(this, (void*)1, *(void**)0x0124EB20);
+
+	float x = -*(float*)src;
+	float y = -*(float*)((char*)src + 4);
+
+	void* p = sub_A353E0(this, 8);
+	if (p)
+	{
+		*(float*)p = x;
+		*(float*)((char*)p + 4) = y;
+	}
+
+	sub_A35060(this, -10000, *(void**)0x0124EB20);
+	sub_A35BF0(this, -2);
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua
