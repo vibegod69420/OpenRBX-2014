@@ -79,6 +79,7 @@ public:
 	void* __cdecl getFunction(void* arg);
 	void* __cdecl getString(void* arg);
 	void __cdecl pushGlobalValue();
+	void __cdecl pushUserdata(void* arg);
 	// AUTO-GENERATED METHODS
 };
 

@@ -1238,6 +1238,25 @@ void __cdecl LuaArguments::pushGlobalValue()
 	sub_A35D10(self, -2);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a40cb0
+void __cdecl LuaArguments::pushUserdata(void* arg)
+{
+	int v0 = *(int*)arg;
+	int v1 = *(int*)((char*)arg + 4);
+	int v2 = *(int*)((char*)arg + 8);
+
+	void* p = sub_A353E0(this, 12);
+	if (p)
+	{
+		*(int*)p = v0;
+		*(int*)((char*)p + 4) = v1;
+		*(int*)((char*)p + 8) = v2;
+	}
+
+	sub_A35060(this, -10000, *(void**)0x0124EB14);
+	sub_A35BF0(this, -2);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

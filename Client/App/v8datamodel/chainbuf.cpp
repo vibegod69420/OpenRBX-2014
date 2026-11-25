@@ -214,6 +214,19 @@ void __cdecl chainbuf::write_double(void* destination)
 	sub_C70440(destination, ((_chainbuf_write_double_helper_8AFD90*)this)->get());
 }
 
+void* __cdecl sub_44D240(void* p);
+void __cdecl sub_C70200(void* destination, void* value);
+
+// FUNCTION: ROBLOXSTUDIO 0x00c79780
+void __cdecl chainbuf::write_vec2(void* destination)
+{
+	void* p = sub_44D240((char*)this + 4);
+	float local[2];
+	local[0] = ((float*)p)[0];
+	local[1] = ((float*)p)[1];
+	sub_C70200(destination, local);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std
