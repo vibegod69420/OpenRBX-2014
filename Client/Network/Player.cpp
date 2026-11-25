@@ -112,6 +112,56 @@ void Player::frontendProcessing()
 	*(int*)((char*)this + 0x1D4) = pTime->high;
 }
 
+struct PlayerConnectionNode
+{
+	PlayerConnectionNode* next;
+	PlayerConnectionNode* prev;
+	void* callback;
+	int reserved;
+};
+
+typedef void (__cdecl *PlayerConnectionCallback)(void*, void*, int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00c452a0
+void Player::clearConnections()
+{
+	PlayerConnectionNode* head = *(PlayerConnectionNode**)this;
+	PlayerConnectionNode* node = head->next;
+	head->next = head;
+	head = *(PlayerConnectionNode**)this;
+	head->prev = head;
+	*(int*)((char*)this + 4) = 0;
+
+	if (node != *(PlayerConnectionNode**)this)
+	{
+		do
+		{
+			void* callback = node->callback;
+			PlayerConnectionNode* next = node->next;
+
+			if (callback)
+			{
+				if (((unsigned int)callback & 1) == 0)
+				{
+					unsigned int masked = (unsigned int)callback & ~1u;
+					char* arg = (char*)node + 0x10;
+					PlayerConnectionCallback fn = *(PlayerConnectionCallback*)masked;
+					if (fn)
+					{
+						fn(arg, arg, 2);
+					}
+				}
+
+				node->callback = 0;
+			}
+
+			::operator delete(node);
+			node = next;
+		}
+		while (node != *(PlayerConnectionNode**)this);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network
