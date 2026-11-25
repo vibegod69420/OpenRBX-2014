@@ -451,6 +451,7 @@ public:
 	void init_da3550();
 	void init_da2850();
 	void init_dadb00();
+	void init_dd2190();
 	// AUTO-GENERATED METHODS
 };
 
