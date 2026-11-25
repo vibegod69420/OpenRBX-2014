@@ -76,6 +76,7 @@ public:
 	void* __cdecl getProto();
 	void __cdecl setupLockedMetatable();
 	void __cdecl pushSharedPtr(void* object);
+	void __cdecl pushWeakSharedPtr(void* object);
 	// AUTO-GENERATED METHODS
 };
 
