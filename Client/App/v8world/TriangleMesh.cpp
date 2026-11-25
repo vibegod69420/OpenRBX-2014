@@ -817,6 +817,36 @@ int __cdecl TriangleMesh::func_B6E640()
 	return 2;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b707b0
+const char* __cdecl TriangleMesh::func_B707B0(const char* p)
+{
+	switch (*p++)
+	{
+	case '%':
+		if (*p == '\0')
+			sub_A38A50(*reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 8),
+				"malformed pattern (ends with '%%')");
+		return p + 1;
+
+	case '[':
+		if (*p == '^')
+			p++;
+		do
+		{
+			if (*p == '\0')
+				sub_A38A50(*reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 8),
+					"malformed pattern (missing ']')");
+			if (*p++ == '%' && *p != '\0')
+				p++;
+		}
+		while (*p != ']');
+		return p + 1;
+
+	default:
+		return p;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

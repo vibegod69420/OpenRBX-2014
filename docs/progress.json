@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25 09:52:11 UTC",
+ "updated_at": "2026-11-25 10:03:05 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 24.2499,
- "implemented_total": 2298,
- "function_annotations": 2298,
+ "matchable_coverage_pct": 24.2605,
+ "implemented_total": 2299,
+ "function_annotations": 2299,
  "stub_annotations": 0,
- "perfect_100_count": 2271,
- "matched_real_functions": 2271,
+ "perfect_100_count": 2272,
+ "matched_real_functions": 2272,
  "average_match_pct": 99.57,
- "overall_function_coverage_pct": 5.599,
- "overall_byte_coverage_pct": 1.7363,
+ "overall_function_coverage_pct": 5.6014,
+ "overall_byte_coverage_pct": 1.7375,
  "usage": {
-  "calls_24h": 1858,
+  "calls_24h": 1857,
   "failures_24h": 0,
-  "completion_tokens_24h": 22890654,
-  "reasoning_tokens_24h": 22345573,
-  "avg_latency_s": 206.7
+  "completion_tokens_24h": 22837191,
+  "reasoning_tokens_24h": 22293204,
+  "avg_latency_s": 206.4
  },
- "functions_total": 2298,
+ "functions_total": 2299,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -54,9 +54,9 @@
   },
   {
    "name": "App/v8world",
-   "matched": 172,
-   "functions": 172,
-   "bytes": 11540
+   "matched": 173,
+   "functions": 173,
+   "bytes": 11653
   },
   {
    "name": "App/script",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-19 01:41:09 UTC",
-   "matched": 472,
-   "implemented": 472,
-   "pct": 5.04
-  },
-  {
    "t": "2026-11-19 01:48:57 UTC",
    "matched": 486,
    "implemented": 486,
@@ -6393,9 +6387,21 @@
    "matched": 2271,
    "implemented": 2298,
    "pct": 24.2499
+  },
+  {
+   "t": "2026-11-25 10:03:05 UTC",
+   "matched": 2272,
+   "implemented": 2299,
+   "pct": 24.2605
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-25T09:59:29",
+   "address": "0x00b707b0",
+   "name": "RBX::RBX::TriangleMesh::func_B707B0",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-25T09:48:33",
    "address": "0x00b6e640",
@@ -7109,13 +7115,7 @@
    "address": "0x008bdc80",
    "name": "RBX::ClientAppSettings::ApplySettingFromFunc_54",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T03:12:28",
-   "address": "0x0066d3d0",
-   "name": "RBX::Graphics::ObjectExporter::flush",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 11.82
+ "match_rate_per_hour": 11.73
 }
