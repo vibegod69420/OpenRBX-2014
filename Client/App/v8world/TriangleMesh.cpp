@@ -800,6 +800,23 @@ void* __cdecl TriangleMesh::func_B6AE60()
 	return node;
 }
 
+int sub_A35310(void*, void*, int, const char*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00b6e640
+int __cdecl TriangleMesh::func_B6E640()
+{
+	const char* s = sub_A39080(this, 2, (int)(const char*)0x00ED10E8, 0);
+	sub_A38960(this, 1, 6);
+	sub_A35D10(this, 3);
+
+	if (sub_A35310(this, (void*)0x00B6EE60, 0, s) == 0)
+		return 1;
+
+	sub_A356D0(this);
+	sub_A351C0(this, -2);
+	return 2;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
