@@ -62,6 +62,7 @@ public:
 	int __cdecl openTable();
 	int __cdecl func_B6FAA0();
 	int __cdecl func_B71980();
+	int __cdecl func_B6E1D0();
 	// AUTO-GENERATED METHODS
 };
 
