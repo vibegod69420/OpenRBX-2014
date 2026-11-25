@@ -1184,6 +1184,19 @@ void __cdecl lua_exception::typeError(int narg, int t)
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a387b0
+const char* __cdecl lua_exception::luaL_checklstring(int narg, int* len)
+{
+	const char* s = tolstring(narg, len);
+	if (s == 0)
+	{
+		const char* expected = lua_typename(this, 4);
+		const char* got = lua_typename(this, lua_type(this, narg));
+		luaL_argerror(this, narg, lua_pushfstring(this, "%s expected, got %s", expected, got));
+	}
+	return s;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

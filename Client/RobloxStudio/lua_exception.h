@@ -82,6 +82,7 @@ public:
 	void __cdecl getTable(int index);
 	void __cdecl sub_A35690(void* L, void* buf, int size);
 	void __cdecl typeError(int narg, int t);
+	const char* __cdecl luaL_checklstring(int narg, int* len);
 	// AUTO-GENERATED METHODS
 };
 
