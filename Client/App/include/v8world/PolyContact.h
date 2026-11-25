@@ -36,6 +36,7 @@ public:
 	void __cdecl expect(void* out);
 	void __cdecl recfield(void* out);
 	void __cdecl removeContactNode(void* arg2);
+	void* __cdecl txtToken(int token);
 	// AUTO-GENERATED METHODS
 };
 

@@ -526,6 +526,27 @@ void __cdecl PolyContact::removeContactNode(void* arg2)
 	}
 }
 
+void __cdecl sub_BC90F0(void* arg1, int arg2);
+
+// FUNCTION: ROBLOXSTUDIO 0x00bc93a0
+void* __cdecl PolyContact::txtToken(int token)
+{
+	if ((unsigned int)(token - 0x11C) <= 2)
+	{
+		sub_BC90F0(this, 0);
+		return *(void**)(*(void**)((char*)this + 0x3C));
+	}
+
+	if (token < 0x101)
+	{
+		if (iscntrl(token))
+			return sub_A457E0(*(void**)((char*)this + 0x34), "char(%d)", token);
+		return sub_A457E0(*(void**)((char*)this + 0x34), "%c", token);
+	}
+
+	return luaX_tokens[token];
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

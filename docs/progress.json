@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25 21:41:23 UTC",
+ "updated_at": "2026-11-25 21:51:07 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 24.3994,
- "implemented_total": 2312,
- "function_annotations": 2312,
+ "matchable_coverage_pct": 24.41,
+ "implemented_total": 2313,
+ "function_annotations": 2313,
  "stub_annotations": 0,
- "perfect_100_count": 2285,
- "matched_real_functions": 2285,
+ "perfect_100_count": 2286,
+ "matched_real_functions": 2286,
  "average_match_pct": 99.57,
- "overall_function_coverage_pct": 5.6335,
- "overall_byte_coverage_pct": 1.7515,
+ "overall_function_coverage_pct": 5.636,
+ "overall_byte_coverage_pct": 1.7527,
  "usage": {
-  "calls_24h": 1184,
+  "calls_24h": 1165,
   "failures_24h": 0,
-  "completion_tokens_24h": 14712741,
-  "reasoning_tokens_24h": 14376388,
-  "avg_latency_s": 196.4
+  "completion_tokens_24h": 14438258,
+  "reasoning_tokens_24h": 14107512,
+  "avg_latency_s": 195.8
  },
- "functions_total": 2312,
+ "functions_total": 2313,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -54,9 +54,9 @@
   },
   {
    "name": "App/v8world",
-   "matched": 177,
-   "functions": 177,
-   "bytes": 12108
+   "matched": 178,
+   "functions": 178,
+   "bytes": 12222
   },
   {
    "name": "App/script",
@@ -3395,12 +3395,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-19 03:21:45 UTC",
-   "matched": 544,
-   "implemented": 544,
-   "pct": 5.8089
-  },
-  {
    "t": "2026-11-19 03:31:19 UTC",
    "matched": 545,
    "implemented": 545,
@@ -6393,9 +6387,21 @@
    "matched": 2285,
    "implemented": 2312,
    "pct": 24.3994
+  },
+  {
+   "t": "2026-11-25 21:51:07 UTC",
+   "matched": 2286,
+   "implemented": 2313,
+   "pct": 24.41
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-25T21:44:07",
+   "address": "0x00bc93a0",
+   "name": "RBX::PolyContact::txtToken",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-25T21:33:07",
    "address": "0x00bce2f0",
@@ -7108,12 +7114,6 @@
    "ts": "2026-11-24T04:11:09",
    "address": "0x008bde00",
    "name": "RBX::ClientAppSettings::ApplySettingFromFunc_10",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T04:04:42",
-   "address": "0x006b9b30",
-   "name": "RBX::EditSelectionVerb::sub_006B9B30",
    "pct": 100.0
   }
  ],
