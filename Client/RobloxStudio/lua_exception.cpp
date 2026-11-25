@@ -1197,6 +1197,27 @@ const char* __cdecl lua_exception::luaL_checklstring(int narg, int* len)
 	return s;
 }
 
+void __cdecl sub_A34E50(lua_exception* L, int narr, int nrec);
+void __cdecl sub_A35B70(lua_exception* L, int idx, int k);
+void __cdecl sub_A35D10(lua_exception* L, int n);
+void __cdecl sub_A357B0(lua_exception* L, int idx);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a38fc0
+int __cdecl lua_exception::luaL_newmetatable(const char* tname)
+{
+	sub_A35060(this, -10000, (int)tname);
+	if (lua_type(this, -1))
+	{
+		return 0;
+	}
+
+	sub_A35D10(this, -2);
+	sub_A34E50(this, 0, 0);
+	sub_A357B0(this, -1);
+	sub_A35B70(this, -10000, (int)tname);
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 
