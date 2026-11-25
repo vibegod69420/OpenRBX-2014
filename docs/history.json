@@ -1,11 +1,5 @@
 [
 {
-"t": "2026-11-19 00:55:47 UTC",
-"matched": 423,
-"implemented": 423,
-"pct": 4.5168
-},
-{
 "t": "2026-11-19 01:02:57 UTC",
 "matched": 428,
 "implemented": 428,
@@ -2998,5 +2992,11 @@
 "matched": 2265,
 "implemented": 2292,
 "pct": 24.1858
+},
+{
+"t": "2026-11-25 03:45:06 UTC",
+"matched": 2266,
+"implemented": 2293,
+"pct": 24.1965
 }
 ]
