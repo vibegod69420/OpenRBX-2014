@@ -33,6 +33,7 @@ public:
 	void __cdecl writeTri(void* a, void* b, void* c, void* d);
 	void __cdecl initContact(void* contact);
 	void* __cdecl token2str(int token);
+	void __cdecl expect(void* out);
 	// AUTO-GENERATED METHODS
 };
 

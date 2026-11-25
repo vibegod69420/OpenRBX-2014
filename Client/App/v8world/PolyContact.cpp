@@ -456,6 +456,28 @@ void* __cdecl PolyContact::token2str(int token)
 	return luaX_tokens[token];
 }
 
+void __cdecl sub_BC8800(void* arg);
+void __cdecl sub_BC88E0(void* arg1, void* arg2);
+void* __cdecl sub_BC8900(void* self, int token);
+
+// FUNCTION: ROBLOXSTUDIO 0x00bccf30
+void __cdecl PolyContact::expect(void* out)
+{
+	if (*(int*)((char*)this + 0x10) != 0x11d)
+	{
+		sub_BC88E0(this, sub_A457E0(*(void**)((char*)this + 0x34), "'%s' expected", sub_BC8900(this, 0x11d)));
+	}
+
+	void* old18 = *(void**)((char*)this + 0x18);
+	sub_BC8800(this);
+	void* result = PolyContact_sub_C18F70(*(void**)((char*)this + 0x30), old18);
+
+	*(int*)((char*)out + 0x10) = -1;
+	*(int*)((char*)out + 0x14) = -1;
+	*(int*)out = 4;
+	*(void**)((char*)out + 8) = result;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
