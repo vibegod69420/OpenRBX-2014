@@ -139,6 +139,32 @@ void Players::func00c282b0()
 	::operator delete(list->head);
 }
 
+void* func00497220();
+void func0084a7a0(void*);
+unsigned char func00c9e480(void*, int);
+void func0084a550(void*);
+void func00c97070(void*, void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00c2ff40
+void* __cdecl Players::func00c2ff40(void* arg)
+{
+	void* context = func00497220();
+	if (*((unsigned char*)context + 0xdc) == 0)
+	{
+		func0084a7a0(this);
+		return this;
+	}
+
+	if (func00c9e480(arg, 0))
+	{
+		func0084a550(this);
+		return this;
+	}
+
+	func00c97070(this, arg);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network
