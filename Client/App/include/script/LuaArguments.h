@@ -80,6 +80,7 @@ public:
 	void* __cdecl getString(void* arg);
 	void __cdecl pushGlobalValue();
 	void __cdecl pushUserdata(void* arg);
+	int __cdecl pushVector2int16Sub();
 	// AUTO-GENERATED METHODS
 };
 

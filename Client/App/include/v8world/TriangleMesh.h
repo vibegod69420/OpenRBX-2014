@@ -66,6 +66,7 @@ public:
 	void* __cdecl func_B6AE60();
 	int __cdecl func_B6E640();
 	const char* __cdecl func_B707B0(const char* p);
+	void __cdecl func_B713B0(int l, const char* s, const char* e);
 	// AUTO-GENERATED METHODS
 };
 

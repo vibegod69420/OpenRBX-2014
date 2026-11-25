@@ -1257,6 +1257,31 @@ void __cdecl LuaArguments::pushUserdata(void* arg)
 	sub_A35BF0(this, -2);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a3fe70
+int __cdecl LuaArguments::pushVector2int16Sub()
+{
+	typedef void* (__cdecl *SubA389C0Fn)(void*, void*, void*);
+	void* a = reinterpret_cast<SubA389C0Fn>(sub_A389C0)(this, (void*)1, *(void**)0x0124EB24);
+	void* b = reinterpret_cast<SubA389C0Fn>(sub_A389C0)(this, (void*)2, *(void**)0x0124EB24);
+
+	short x = *(short*)a - *(short*)b;
+	short y = *((short*)a + 1) - *((short*)b + 1);
+
+	int local;
+	*(short*)&local = x;
+	*((short*)&local + 1) = y;
+
+	void* p = sub_A353E0(this, 4);
+	if (p)
+	{
+		*(int*)p = local;
+	}
+
+	sub_A35060(this, -10000, *(void**)0x0124EB24);
+	sub_A35BF0(this, -2);
+	return 1;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

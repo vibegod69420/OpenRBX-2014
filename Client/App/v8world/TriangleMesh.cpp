@@ -847,6 +847,34 @@ const char* __cdecl TriangleMesh::func_B707B0(const char* p)
 	}
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b713b0
+void __cdecl TriangleMesh::func_B713B0(int l, const char* s, const char* e)
+{
+	if (l >= *reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x0C))
+	{
+		if (l == 0)
+		{
+			sub_A35690(*reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 8), s, (int)(e - s));
+		}
+		else
+		{
+			sub_A38A50(*reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 8), "invalid capture index");
+		}
+	}
+	else
+	{
+		int len = *reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0x14 + l * 8);
+		if (len == -1)
+			sub_A38A50(*reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 8), "unfinished capture");
+		if (len == -2)
+			sub_A35650(*reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 8),
+				(int)(*reinterpret_cast<const char**>(reinterpret_cast<char*>(this) + 0x10 + l * 8) - *reinterpret_cast<const char**>(reinterpret_cast<char*>(this))) + 1);
+		else
+			sub_A35690(*reinterpret_cast<void**>(reinterpret_cast<char*>(this) + 8),
+				*reinterpret_cast<const char**>(reinterpret_cast<char*>(this) + 0x10 + l * 8), len);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
