@@ -34,6 +34,7 @@ public:
 	void __cdecl initContact(void* contact);
 	void* __cdecl token2str(int token);
 	void __cdecl expect(void* out);
+	void __cdecl recfield(void* out);
 	// AUTO-GENERATED METHODS
 };
 

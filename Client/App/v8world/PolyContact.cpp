@@ -478,6 +478,26 @@ void __cdecl PolyContact::expect(void* out)
 	*(void**)((char*)out + 8) = result;
 }
 
+int __cdecl PolyContact_sub_BCF480(void* obj, void* arg2, void* out, int flag);
+
+// FUNCTION: ROBLOXSTUDIO 0x00bcf410
+void __cdecl PolyContact::recfield(void* out)
+{
+	if (*(int*)((char*)this + 0x10) != 0x11d)
+	{
+		sub_BC88E0(this, sub_A457E0(*(void**)((char*)this + 0x34), "'%s' expected", sub_BC8900(this, 0x11d)));
+	}
+
+	void* old18 = *(void**)((char*)this + 0x18);
+	sub_BC8800(this);
+	void* obj30 = *(void**)((char*)this + 0x30);
+
+	if (PolyContact_sub_BCF480(obj30, old18, out, 1) == 8)
+	{
+		*(void**)((char*)out + 8) = PolyContact_sub_C18F70(obj30, old18);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
