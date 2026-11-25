@@ -23,6 +23,7 @@ public:
 	void func00c286f0();
 	void func00c282b0();
 	void* __cdecl func00c2ff40(void* arg);
+	void func00c2ce90();
 	// AUTO-GENERATED METHODS
 };
 

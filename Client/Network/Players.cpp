@@ -165,6 +165,51 @@ void* __cdecl Players::func00c2ff40(void* arg)
 	return this;
 }
 
+struct PlayersClearNode
+{
+	PlayerListNode* next;
+	PlayerListNode* prev;
+	char pad[4];
+	PlayersStringMember str1;
+	PlayersStringMember str2;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c2ce90
+void Players::func00c2ce90()
+{
+	PlayersListLayout* list = (PlayersListLayout*)this;
+	PlayerListNode* node = list->head->next;
+	list->head->next = list->head;
+	list->head->prev = list->head;
+	list->size = 0;
+
+	if (node != list->head)
+	{
+		PlayerListNode* next;
+		do
+		{
+			PlayersClearNode* n = (PlayersClearNode*)node;
+			next = n->next;
+
+			if (n->str2.capacity >= 0x10)
+				::operator delete(n->str2.ptr);
+			n->str2.capacity = 0x0F;
+			n->str2.size = 0;
+			n->str2.buf[0] = 0;
+
+			if (n->str1.capacity >= 0x10)
+				::operator delete(n->str1.ptr);
+			n->str1.capacity = 0x0F;
+			n->str1.size = 0;
+			n->str1.buf[0] = 0;
+
+			::operator delete(node);
+			node = next;
+		}
+		while (next != list->head);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network
