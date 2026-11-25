@@ -770,6 +770,36 @@ int __cdecl TriangleMesh::func_B6E1D0()
 	return 1;
 }
 
+void* __cdecl sub_B6A500();
+
+// FUNCTION: ROBLOXSTUDIO 0x00b6ae60
+void* __cdecl TriangleMesh::func_B6AE60()
+{
+	void* pool = sub_B6A500();
+	sub_40ED30(pool);
+
+	void* node = *((void**)pool + 2);
+	if (node)
+	{
+		*((void**)pool + 2) = *(void**)node;
+	}
+	else
+	{
+		node = sub_48AF30((char*)pool + 8);
+	}
+
+	long old = _InterlockedExchangeAdd((long volatile*)pool, 0x80000000);
+	if ((old & 0x40000000) == 0 && old > (long)0x80000000)
+	{
+		if (_interlockedbittestandset((long volatile*)pool, 30) == 0)
+		{
+			dword_E10198(sub_40FB10(pool));
+		}
+	}
+
+	return node;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25 07:26:09 UTC",
+  "updated_at": "2026-11-25 09:18:28 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 24.2072,
-  "implemented_total": 2294,
-  "function_annotations": 2294,
+  "matchable_coverage_pct": 24.2178,
+  "implemented_total": 2295,
+  "function_annotations": 2295,
   "stub_annotations": 0,
-  "perfect_100_count": 2267,
-  "matched_real_functions": 2267,
+  "perfect_100_count": 2268,
+  "matched_real_functions": 2268,
   "average_match_pct": 99.5,
-  "overall_function_coverage_pct": 5.5891,
-  "overall_byte_coverage_pct": 1.7325,
+  "overall_function_coverage_pct": 5.5916,
+  "overall_byte_coverage_pct": 1.7335,
   "usage": {
-    "calls_24h": 2083,
+    "calls_24h": 1888,
     "failures_24h": 0,
-    "completion_tokens_24h": 25463045,
-    "reasoning_tokens_24h": 24868210,
-    "avg_latency_s": 206.5
+    "completion_tokens_24h": 23201458,
+    "reasoning_tokens_24h": 22649823,
+    "avg_latency_s": 207.0
   },
   "functions": [
     {
@@ -16024,6 +16024,17 @@
       "file": "Client/App/v8datamodel/BulletConvexDecomposition.cpp",
       "orig_size": 228,
       "recomp_size": 141,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00b6ae60",
+      "kind": "FUNCTION",
+      "name": "RBX::RBX::TriangleMesh::func_B6AE60",
+      "mangled": "?func_B6AE60@TriangleMesh@RBX@@QAAPAXXZ",
+      "file": "Client/App/v8world/TriangleMesh.cpp",
+      "orig_size": 89,
+      "recomp_size": 89,
       "match_pct": 100.0,
       "matchable": true
     },
