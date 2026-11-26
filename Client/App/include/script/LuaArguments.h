@@ -83,6 +83,7 @@ public:
 	int __cdecl pushVector2int16Sub();
 	int __cdecl pushFunctionSub();
 	int __cdecl pushVector2();
+	void __cdecl registerFunction(void* arg1, void* arg2);
 	// AUTO-GENERATED METHODS
 };
 
