@@ -38,6 +38,7 @@ public:
 	void __cdecl removeContactNode(void* arg2);
 	void* __cdecl txtToken(int token);
 	void __cdecl closeFunction();
+	void __cdecl registerLocalVar(void* arg2, int arg3);
 	// AUTO-GENERATED METHODS
 };
 

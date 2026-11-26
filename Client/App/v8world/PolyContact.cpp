@@ -590,6 +590,41 @@ void __cdecl PolyContact::closeFunction()
 	PolyContact_sub_C18860(obj30, *(void**)((char*)cur + 4));
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00bce690
+int __cdecl PolyContact_sub_BCEDB0(void* self, void* arg2);
+
+void __cdecl PolyContact::registerLocalVar(void* arg2, int arg3)
+{
+	void* obj = *(void**)((char*)this + 0x30);
+
+	if ((int)*(unsigned char*)((char*)obj + 0x32) + 1 + arg3 > 200)
+	{
+		int line = *(int*)(*(char**)obj + 0x3C);
+		void* msg;
+
+		if (line == 0)
+		{
+			msg = sub_A457E0(*(void**)((char*)obj + 0x10),
+				"main function has more than %d %s",
+				200, "local variables");
+		}
+		else
+		{
+			msg = sub_A457E0(*(void**)((char*)obj + 0x10),
+				"function at line %d has more than %d %s",
+				line, 200, "local variables");
+		}
+
+		sub_BC8720(*(void**)((char*)obj + 0x0C), msg, 0);
+	}
+
+	{
+		int reg = PolyContact_sub_BCEDB0(this, arg2);
+		unsigned char nactvar = *(unsigned char*)((char*)obj + 0x32);
+		*(unsigned short*)((char*)obj + ((int)nactvar + arg3) * 2 + 0xAC) = (unsigned short)reg;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
