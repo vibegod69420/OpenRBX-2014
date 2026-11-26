@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26 22:04:33 UTC",
+  "updated_at": "2026-11-26 22:14:16 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 25.2322,
-  "implemented_total": 2390,
-  "function_annotations": 2390,
+  "matchable_coverage_pct": 25.2429,
+  "implemented_total": 2391,
+  "function_annotations": 2391,
   "stub_annotations": 0,
-  "perfect_100_count": 2363,
-  "matched_real_functions": 2363,
+  "perfect_100_count": 2364,
+  "matched_real_functions": 2364,
   "average_match_pct": 99.59,
-  "overall_function_coverage_pct": 5.8258,
-  "overall_byte_coverage_pct": 1.7876,
+  "overall_function_coverage_pct": 5.8283,
+  "overall_byte_coverage_pct": 1.7882,
   "usage": {
-    "calls_24h": 2227,
+    "calls_24h": 2234,
     "failures_24h": 0,
-    "completion_tokens_24h": 28317417,
-    "reasoning_tokens_24h": 27862239,
-    "avg_latency_s": 204.9
+    "completion_tokens_24h": 28433116,
+    "reasoning_tokens_24h": 27976830,
+    "avg_latency_s": 205.2
   },
   "functions": [
     {
@@ -6883,6 +6883,17 @@
       "file": "Client/App/v8datamodel/Sky.cpp",
       "orig_size": 10,
       "recomp_size": 10,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00693f10",
+      "kind": "FUNCTION",
+      "name": "RBX::Sky::destroy",
+      "mangled": "?destroy@Sky@RBX@@QAEXXZ",
+      "file": "Client/App/v8datamodel/Sky.cpp",
+      "orig_size": 59,
+      "recomp_size": 59,
       "match_pct": 100.0,
       "matchable": true
     },

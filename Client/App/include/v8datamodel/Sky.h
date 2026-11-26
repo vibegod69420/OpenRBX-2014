@@ -18,6 +18,7 @@ public:
 
 	static int derefInt(const int* p);
 	static int derefInt_3730(const int* p);
+	void destroy();
 	// AUTO-GENERATED METHODS
 };
 
