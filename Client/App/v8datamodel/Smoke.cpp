@@ -89,6 +89,18 @@ Smoke* Smoke::sub_A08E50()
 	return this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a0a800
+int __cdecl Smoke::sub_A0A800()
+{
+	const short* arg1 = reinterpret_cast<const short*>(this);
+	int result = arg1[2];
+	int tmp = arg1[1];
+	result = (result << 5) + tmp;
+	tmp = arg1[0];
+	result = (result << 5) + tmp;
+	return result;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

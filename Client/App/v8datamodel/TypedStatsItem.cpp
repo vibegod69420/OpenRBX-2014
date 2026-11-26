@@ -166,6 +166,14 @@ TypedStatsItem* __cdecl TypedStatsItem::getOrCreateTypedChild(const char* name)
 	return this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0067aa50
+TypedStatsItem* __cdecl TypedStatsItem::getOrCreateItem(const char* name)
+{
+	volatile int local = 0;
+	reinterpret_cast<TypedStatsItemInitHelper*>(this)->init(name, 1);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

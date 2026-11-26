@@ -17,6 +17,16 @@ int ShaderProgramGL::getField64() const
 	return field_0064;
 }
 
+extern "C" __declspec(dllimport) void __stdcall glGetProgramiv(unsigned int program, unsigned int pname, int* params);
+
+// FUNCTION: ROBLOXSTUDIO 0x0060bfc0
+int __cdecl ShaderProgramGL::getProgramiv(unsigned int pname)
+{
+	int params;
+	glGetProgramiv((unsigned int)this, pname, &params);
+	return params;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

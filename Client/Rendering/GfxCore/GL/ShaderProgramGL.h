@@ -21,6 +21,7 @@ public:
 
 	int getField60() const;
 	int getField64() const;
+	int __cdecl getProgramiv(unsigned int pname);
 	// AUTO-GENERATED METHODS
 };
 

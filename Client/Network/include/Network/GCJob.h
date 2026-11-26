@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	int __cdecl isHigherPriority(GCJob* b);
 	// AUTO-GENERATED METHODS
 };
 

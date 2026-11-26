@@ -19,6 +19,7 @@ public:
 	int hasParticles() const;
 	void __cdecl sub_A08E00(void* arg1, void* arg2);
 	Smoke*sub_A08E50();
+	int __cdecl sub_A0A800();
 	// AUTO-GENERATED METHODS
 };
 
