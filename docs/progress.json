@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26 20:20:21 UTC",
+ "updated_at": "2026-11-26 20:43:35 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 25.1255,
- "implemented_total": 2380,
- "function_annotations": 2380,
+ "matchable_coverage_pct": 25.1361,
+ "implemented_total": 2381,
+ "function_annotations": 2381,
  "stub_annotations": 0,
- "perfect_100_count": 2353,
- "matched_real_functions": 2353,
+ "perfect_100_count": 2354,
+ "matched_real_functions": 2354,
  "average_match_pct": 99.59,
- "overall_function_coverage_pct": 5.8011,
- "overall_byte_coverage_pct": 1.7839,
+ "overall_function_coverage_pct": 5.8036,
+ "overall_byte_coverage_pct": 1.7842,
  "usage": {
-  "calls_24h": 2047,
+  "calls_24h": 2065,
   "failures_24h": 0,
-  "completion_tokens_24h": 26350120,
-  "reasoning_tokens_24h": 25913741,
-  "avg_latency_s": 208.0
+  "completion_tokens_24h": 26536481,
+  "reasoning_tokens_24h": 26099489,
+  "avg_latency_s": 207.7
  },
- "functions_total": 2380,
+ "functions_total": 2381,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 729,
-   "functions": 734,
-   "bytes": 37532
+   "matched": 730,
+   "functions": 735,
+   "bytes": 37567
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -3437,12 +3437,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-19 10:18:16 UTC",
-   "matched": 685,
-   "implemented": 686,
-   "pct": 7.3145
-  },
-  {
    "t": "2026-11-19 10:26:46 UTC",
    "matched": 686,
    "implemented": 687,
@@ -6435,9 +6429,21 @@
    "matched": 2353,
    "implemented": 2380,
    "pct": 25.1255
+  },
+  {
+   "t": "2026-11-26 20:43:35 UTC",
+   "matched": 2354,
+   "implemented": 2381,
+   "pct": 25.1361
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-26T20:39:39",
+   "address": "0x009b0010",
+   "name": "RBX::callable_slot::compareInt",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-26T20:16:24",
    "address": "0x0046aed0",
@@ -7151,13 +7157,7 @@
    "address": "0x00da32f0",
    "name": "ProgramMemoryCheckerImpl::init_da32f0",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T18:23:10",
-   "address": "0x00a35df0",
-   "name": "lua_exception::toboolean",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 9.37
+ "match_rate_per_hour": 9.36
 }

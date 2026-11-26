@@ -44,6 +44,7 @@ public:
 	void invokeBound();
 	void __cdecl invoke(unsigned short a1, unsigned short a2, unsigned short a3, unsigned short a4);
 	void __cdecl invokeSlot();
+	int __cdecl compareInt(int* arg);
 	// AUTO-GENERATED METHODS
 };
 

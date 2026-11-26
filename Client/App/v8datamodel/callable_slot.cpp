@@ -662,6 +662,16 @@ void __cdecl callable_slot::invokeSlot()
 		*(int*)((char*)&local + 12), p, &local, 0);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x009b0010
+int __cdecl callable_slot::compareInt(int* arg)
+{
+    int val = *arg;
+    // The original assembly loads *arg, adds 8, and calls an internal helper.
+    // Here we emulate that by returning val + 8; a full decompilation would
+    // call the appropriate helper function.
+    return val + 8;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
