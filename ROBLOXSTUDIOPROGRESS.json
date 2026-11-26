@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26 21:35:59 UTC",
+  "updated_at": "2026-11-26 21:45:29 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 25.2109,
-  "implemented_total": 2388,
-  "function_annotations": 2388,
+  "matchable_coverage_pct": 25.2216,
+  "implemented_total": 2389,
+  "function_annotations": 2389,
   "stub_annotations": 0,
-  "perfect_100_count": 2361,
-  "matched_real_functions": 2361,
+  "perfect_100_count": 2362,
+  "matched_real_functions": 2362,
   "average_match_pct": 99.59,
-  "overall_function_coverage_pct": 5.8209,
-  "overall_byte_coverage_pct": 1.7866,
+  "overall_function_coverage_pct": 5.8233,
+  "overall_byte_coverage_pct": 1.787,
   "usage": {
-    "calls_24h": 2202,
+    "calls_24h": 2205,
     "failures_24h": 0,
-    "completion_tokens_24h": 28105464,
-    "reasoning_tokens_24h": 27651395,
-    "avg_latency_s": 205.5
+    "completion_tokens_24h": 28087047,
+    "reasoning_tokens_24h": 27633583,
+    "avg_latency_s": 205.1
   },
   "functions": [
     {
@@ -20336,6 +20336,17 @@
       "file": "Client/App/v8datamodel/network_stream_exception.cpp",
       "orig_size": 30,
       "recomp_size": 30,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c75f80",
+      "kind": "FUNCTION",
+      "name": "RBX::network_stream_exception::raiseFromError",
+      "mangled": "?raiseFromError@network_stream_exception@RBX@@QAAXPBX@Z",
+      "file": "Client/App/v8datamodel/network_stream_exception.cpp",
+      "orig_size": 41,
+      "recomp_size": 41,
       "match_pct": 100.0,
       "matchable": true
     },

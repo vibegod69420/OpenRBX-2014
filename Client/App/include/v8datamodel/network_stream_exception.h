@@ -23,6 +23,7 @@ public:
 	void __cdecl writeVarInt(unsigned int value);
 	void __cdecl init(const void* error);
 	network_stream_exception* __cdecl initEndpoint(void* endpoint);
+	void __cdecl raiseFromError(const void* error);
 	// AUTO-GENERATED METHODS
 };
 

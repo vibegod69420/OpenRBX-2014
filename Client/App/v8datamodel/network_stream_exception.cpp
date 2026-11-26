@@ -109,6 +109,18 @@ network_stream_exception* __cdecl network_stream_exception::initEndpoint(void* e
 	return this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c75f80
+void __cdecl network_stream_exception::raiseFromError(const void* error)
+{
+	int local;
+	network_stream_exception_copy(error, &local);
+
+	if (*reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 4) != 0)
+	{
+		reinterpret_cast<network_stream_exception_sink*>(this)->dispatch(&local);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
