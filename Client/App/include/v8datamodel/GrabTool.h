@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	GrabTool* __fastcall init(void* arg);
 	// AUTO-GENERATED METHODS
 };
 

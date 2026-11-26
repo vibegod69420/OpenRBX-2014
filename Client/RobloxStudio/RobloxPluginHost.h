@@ -17,6 +17,7 @@ public:
 	};
 
 	RobloxPluginHost();
+	RobloxPluginHost*sub_57A250();
 	// AUTO-GENERATED METHODS
 };
 
