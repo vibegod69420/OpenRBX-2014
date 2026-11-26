@@ -25,6 +25,28 @@ void __cdecl CSGMesh::setGlobalMesh()
 	g_csgMeshGlobal = this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00985e80
+__declspec(dllimport) __declspec(noreturn) void __cdecl csgMeshAllocFail();
+
+void* CSGMesh::buyNode()
+{
+	void* node = ::operator new(0x28u);
+	if (node == NULL)
+		csgMeshAllocFail();
+
+	void* head = *(void**)this;
+	void** p1 = (void**)((char*)node + 4);
+	*(void**)node = head;
+	if (p1)
+		*p1 = *(void**)this;
+
+	void** p2 = (void**)((char*)node + 8);
+	if (p2)
+		*p2 = *(void**)this;
+
+	return node;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

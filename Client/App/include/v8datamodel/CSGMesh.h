@@ -5,6 +5,9 @@
 
 namespace RBX {
 
+#ifndef NULL
+#define NULL 0
+#endif
 // AUTO-GENERATED HELPERS
 
 class CSGMesh
@@ -18,6 +21,7 @@ public:
 
 	void clear();
 	void __cdecl setGlobalMesh();
+	void*buyNode();
 	// AUTO-GENERATED METHODS
 };
 
