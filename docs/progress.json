@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26 11:05:44 UTC",
+ "updated_at": "2026-11-26 11:14:52 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 24.5809,
- "implemented_total": 2329,
- "function_annotations": 2329,
+ "matchable_coverage_pct": 24.5916,
+ "implemented_total": 2330,
+ "function_annotations": 2330,
  "stub_annotations": 0,
- "perfect_100_count": 2302,
- "matched_real_functions": 2302,
+ "perfect_100_count": 2303,
+ "matched_real_functions": 2303,
  "average_match_pct": 99.58,
- "overall_function_coverage_pct": 5.6754,
- "overall_byte_coverage_pct": 1.7627,
+ "overall_function_coverage_pct": 5.6779,
+ "overall_byte_coverage_pct": 1.7629,
  "usage": {
-  "calls_24h": 1176,
+  "calls_24h": 1214,
   "failures_24h": 0,
-  "completion_tokens_24h": 14933437,
-  "reasoning_tokens_24h": 14625986,
-  "avg_latency_s": 196.8
+  "completion_tokens_24h": 15262513,
+  "reasoning_tokens_24h": 14951740,
+  "avg_latency_s": 194.5
  },
- "functions_total": 2329,
+ "functions_total": 2330,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 700,
-   "functions": 705,
-   "bytes": 36340
+   "matched": 701,
+   "functions": 706,
+   "bytes": 36365
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -3407,12 +3407,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-19 05:13:04 UTC",
-   "matched": 617,
-   "implemented": 618,
-   "pct": 6.5884
-  },
-  {
    "t": "2026-11-19 05:24:12 UTC",
    "matched": 618,
    "implemented": 619,
@@ -6405,9 +6399,21 @@
    "matched": 2302,
    "implemented": 2329,
    "pct": 24.5809
+  },
+  {
+   "t": "2026-11-26 11:14:52 UTC",
+   "matched": 2303,
+   "implemented": 2330,
+   "pct": 24.5916
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-26T11:10:41",
+   "address": "0x008bd820",
+   "name": "RBX::ClientAppSettings::ApplySettingFromFunc_0C",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-26T10:59:42",
    "address": "0x0045a700",
@@ -7120,12 +7126,6 @@
    "ts": "2026-11-24T06:07:03",
    "address": "0x005d59a0",
    "name": "btConvexPolyhedron::initializeEdges",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T06:02:56",
-   "address": "0x0045f0e0",
-   "name": "RBX::thread_specific_ptr::format",
    "pct": 100.0
   }
  ],
