@@ -37,6 +37,7 @@ public:
 	void __cdecl recfield(void* out);
 	void __cdecl removeContactNode(void* arg2);
 	void* __cdecl txtToken(int token);
+	void __cdecl closeFunction();
 	// AUTO-GENERATED METHODS
 };
 

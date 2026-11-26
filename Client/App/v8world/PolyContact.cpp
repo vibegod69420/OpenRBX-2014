@@ -547,6 +547,49 @@ void* __cdecl PolyContact::txtToken(int token)
 	return luaX_tokens[token];
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00bccbf0
+void __cdecl PolyContact_sub_BCCFA0(void* self);
+void __cdecl PolyContact_sub_BCEE60(void* obj, int idx);
+void __cdecl PolyContact_sub_C18860(void* obj, void* arg);
+
+struct PolyContact_BCCBF0_Node
+{
+	void* next;
+	int field4;
+	unsigned char field8;
+	unsigned char field9;
+	unsigned char fieldA;
+	unsigned char _pad;
+};
+
+void __cdecl PolyContact::closeFunction()
+{
+	char* obj30 = *(char**)((char*)this + 0x30);
+	PolyContact_BCCBF0_Node node;
+
+	node.field4 = -1;
+	node.fieldA = 0;
+	node.field8 = *(unsigned char*)(obj30 + 0x32);
+	node.field9 = 0;
+	node.next = *(void**)(obj30 + 0x14);
+
+	*(void**)(obj30 + 0x14) = &node;
+	PolyContact_sub_BCCFA0(this);
+
+	PolyContact_BCCBF0_Node* cur = *(PolyContact_BCCBF0_Node**)(obj30 + 0x14);
+	*(void**)(obj30 + 0x14) = cur->next;
+
+	PolyContact_sub_BCEE60(*(void**)(obj30 + 0x0C), (unsigned char)cur->field8);
+
+	if (cur->field9 != 0)
+	{
+		PolyContact_sub_C180D0(obj30, (void*)0x23, (void*)(int)(unsigned char)cur->field8, 0, (void*)0);
+	}
+
+	*(int*)(obj30 + 0x24) = (unsigned char)*(unsigned char*)(obj30 + 0x32);
+	PolyContact_sub_C18860(obj30, *(void**)((char*)cur + 4));
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
