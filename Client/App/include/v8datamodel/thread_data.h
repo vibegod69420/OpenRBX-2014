@@ -28,6 +28,7 @@ public:
 	thread_data();
 	thread_data*construct();
 	void __cdecl run_entry();
+	void run_detail();
 	// AUTO-GENERATED METHODS
 };
 

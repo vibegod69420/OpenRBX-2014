@@ -160,6 +160,21 @@ void __cdecl thread_data::run_entry()
 	(p->obj->*p->fn)(&p->pad, p->arg20, p->arg24);
 }
 
+#pragma optimize("", off)
+
+struct thread_data_bind_c37ba0
+{
+	void operator()();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c37ba0
+void thread_data::run_detail()
+{
+	(*reinterpret_cast<thread_data_bind_c37ba0*>(reinterpret_cast<char*>(this) + 0x3c))();
+}
+
+#pragma optimize("", on)
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace boost
