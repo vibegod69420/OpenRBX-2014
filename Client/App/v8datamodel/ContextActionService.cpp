@@ -119,6 +119,98 @@ void ContextActionService::clearAllBoundActions()
 	*reinterpret_cast<void**>(this) = reinterpret_cast<void*>(0x00E33A28);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b330b0
+struct CAS_Node38
+{
+	CAS_Node38* climb();
+};
+
+struct CAS_Check
+{
+	unsigned char check(void* arg);
+};
+
+struct CAS_ResultObj
+{
+	CAS_ResultObj* getResult();
+};
+
+struct CAS_Target64
+{
+	void* getTarget();
+};
+
+void* CAS_getSingleton();
+
+void* ContextActionService::getActionContext()
+{
+	void* result;
+
+	if (!this)
+		goto L_fail;
+
+	{
+		CAS_Node38* node = *(CAS_Node38**)((char*)this + 0x38);
+		CAS_Node38* found;
+
+		if (node)
+		{
+			CAS_Node38* inner = *(CAS_Node38**)((char*)node + 0x38);
+			if (inner)
+				found = inner->climb();
+			else
+				found = node;
+		}
+		else
+		{
+			found = (CAS_Node38*)this;
+		}
+
+		if (!found)
+			goto L_fail;
+
+		{
+			char* ediPtr = (char*)found + 0x1c;
+			if (!ediPtr)
+				goto L_fail;
+
+			{
+				CAS_Check* esiPtr = *(CAS_Check**)(ediPtr + 0x0C);
+				if (!esiPtr->check(CAS_getSingleton()))
+					goto L_fail;
+			}
+
+			{
+				CAS_ResultObj* obj = (CAS_ResultObj*)(ediPtr - 0x1c);
+				if (!obj)
+					goto L_fail;
+				result = obj->getResult();
+				goto L_tail;
+			}
+		}
+	}
+
+L_fail:
+	result = 0;
+
+L_tail:
+	{
+		CAS_ResultObj* p = *(CAS_ResultObj**)((char*)result + 0x178);
+		if (p)
+		{
+			CAS_Target64* target = *(CAS_Target64**)((char*)p + 0x64);
+			if (target)
+			{
+				void* r = target->getTarget();
+				if (r)
+					return r;
+			}
+		}
+	}
+
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
