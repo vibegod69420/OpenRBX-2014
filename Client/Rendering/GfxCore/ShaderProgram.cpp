@@ -58,6 +58,13 @@ ShaderProgram* __cdecl ShaderProgram::func690700(void* a2, int a3)
 	return this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006106b0
+unsigned char __cdecl ShaderProgram::func6106b0()
+{
+	unsigned int index = (unsigned int)this;
+	return ((unsigned char*)0x00E32AB9)[index + index * 2];
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics
