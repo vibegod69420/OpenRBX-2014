@@ -17,6 +17,7 @@ public:
 	};
 
 	void*clone() const;
+	void __cdecl handle(int arg);
 	// AUTO-GENERATED METHODS
 };
 

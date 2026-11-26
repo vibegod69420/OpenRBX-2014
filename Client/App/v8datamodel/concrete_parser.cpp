@@ -19,6 +19,36 @@ void* concrete_parser::clone() const
 	return 0;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00786d90
+typedef void (__thiscall *ConcreteParserThiscallVoidInt)(void*, int);
+typedef unsigned char (__thiscall *ConcreteParserThiscallUCharVoid)(void*);
+typedef void (__thiscall *ConcreteParserThiscallVoidIntInt)(void*, int, int);
+
+extern ConcreteParserThiscallVoidInt _concreteParser_fn_e10468;
+extern ConcreteParserThiscallUCharVoid _concreteParser_fn_e1039c;
+extern ConcreteParserThiscallVoidIntInt _concreteParser_fn_e10398;
+extern ConcreteParserThiscallVoidInt _concreteParser_fn_e10454;
+extern ConcreteParserThiscallUCharVoid _concreteParser_fn_e1044c;
+extern ConcreteParserThiscallVoidInt _concreteParser_fn_e10464;
+extern int _concreteParser_g_e10470;
+
+void __cdecl concrete_parser::handle(int arg)
+{
+	_concreteParser_fn_e10468(this, arg);
+
+	if (_concreteParser_fn_e1039c((void*)((char*)this + *(int*)((char*)*(void**)this + 4))))
+	{
+		_concreteParser_fn_e10398((void*)((char*)this + *(int*)((char*)*(void**)this + 4)), 0, 0);
+		_concreteParser_fn_e10454((void*)((char*)this + *(int*)((char*)*(void**)this + 4)), 0x4000);
+		_concreteParser_fn_e10468(this, arg);
+	}
+
+	if (!_concreteParser_fn_e1044c((void*)((char*)this + *(int*)((char*)*(void**)this + 4))))
+	{
+		_concreteParser_fn_e10464(this, _concreteParser_g_e10470);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std
