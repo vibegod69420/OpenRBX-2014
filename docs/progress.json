@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26 15:25:14 UTC",
+ "updated_at": "2026-11-26 15:34:24 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 25.0294,
- "implemented_total": 2371,
- "function_annotations": 2371,
+ "matchable_coverage_pct": 25.04,
+ "implemented_total": 2372,
+ "function_annotations": 2372,
  "stub_annotations": 0,
- "perfect_100_count": 2344,
- "matched_real_functions": 2344,
+ "perfect_100_count": 2345,
+ "matched_real_functions": 2345,
  "average_match_pct": 99.58,
- "overall_function_coverage_pct": 5.779,
- "overall_byte_coverage_pct": 1.7763,
+ "overall_function_coverage_pct": 5.7814,
+ "overall_byte_coverage_pct": 1.7768,
  "usage": {
-  "calls_24h": 1642,
+  "calls_24h": 1657,
   "failures_24h": 0,
-  "completion_tokens_24h": 20124832,
-  "reasoning_tokens_24h": 19768836,
+  "completion_tokens_24h": 20306439,
+  "reasoning_tokens_24h": 19949237,
   "avg_latency_s": 193.4
  },
- "functions_total": 2371,
+ "functions_total": 2372,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -477,6 +477,12 @@
    "matched": 5,
    "functions": 5,
    "bytes": 49
+  },
+  {
+   "name": "RobloxStudio/InsertServiceDialog.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 45
   },
   {
    "name": "RobloxStudio/QSpinBox.cpp",
@@ -3424,12 +3430,6 @@
   }
  ],
  "history": [
-  {
-   "t": "2026-11-19 08:12:07 UTC",
-   "matched": 673,
-   "implemented": 674,
-   "pct": 7.1863
-  },
   {
    "t": "2026-11-19 08:20:17 UTC",
    "matched": 676,
@@ -6423,9 +6423,21 @@
    "matched": 2344,
    "implemented": 2371,
    "pct": 25.0294
+  },
+  {
+   "t": "2026-11-26 15:34:24 UTC",
+   "matched": 2345,
+   "implemented": 2372,
+   "pct": 25.04
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-26T15:25:23",
+   "address": "0x004625f0",
+   "name": "InsertServiceDialog::redrawDialog",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-26T15:18:16",
    "address": "0x00512ab0",
@@ -7139,13 +7151,7 @@
    "address": "0x00d9ec90",
    "name": "ProgramMemoryCheckerImpl::init_d9ec90",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T17:29:23",
-   "address": "0x005fc9a0",
-   "name": "RBX::Graphics::ContextGL::initHalfFloatNV",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 9.54
+ "match_rate_per_hour": 9.52
 }
