@@ -123,6 +123,15 @@ StatsUpdateJob& __cdecl StatsUpdateJob::writeFieldTriplet(const void* field)
 	return *this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c6df70
+StatsUpdateJob& __cdecl StatsUpdateJob::writeFieldPair(const void* field)
+{
+	const char* p = reinterpret_cast<const char*>(field);
+	sub_c6d640(this, p);
+	sub_c6d640(this, p + 4);
+	return *this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

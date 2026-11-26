@@ -84,6 +84,7 @@ public:
 	int __cdecl pushFunctionSub();
 	int __cdecl pushVector2();
 	void __cdecl registerFunction(void* arg1, void* arg2);
+	bool isRBXScriptSignal();
 	// AUTO-GENERATED METHODS
 };
 

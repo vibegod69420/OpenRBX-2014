@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26 11:47:38 UTC",
+  "updated_at": "2026-11-26 11:57:06 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 24.6983,
-  "implemented_total": 2340,
-  "function_annotations": 2340,
+  "matchable_coverage_pct": 24.7197,
+  "implemented_total": 2342,
+  "function_annotations": 2342,
   "stub_annotations": 0,
-  "perfect_100_count": 2313,
-  "matched_real_functions": 2313,
+  "perfect_100_count": 2315,
+  "matched_real_functions": 2315,
   "average_match_pct": 99.58,
-  "overall_function_coverage_pct": 5.7025,
-  "overall_byte_coverage_pct": 1.766,
+  "overall_function_coverage_pct": 5.7075,
+  "overall_byte_coverage_pct": 1.7666,
   "usage": {
-    "calls_24h": 1317,
+    "calls_24h": 1338,
     "failures_24h": 0,
-    "completion_tokens_24h": 16419497,
-    "reasoning_tokens_24h": 16098869,
-    "avg_latency_s": 193.8
+    "completion_tokens_24h": 16675981,
+    "reasoning_tokens_24h": 16353036,
+    "avg_latency_s": 193.7
   },
   "functions": [
     {
@@ -15126,6 +15126,17 @@
       "matchable": true
     },
     {
+      "address": "0x00a43480",
+      "kind": "FUNCTION",
+      "name": "RBX::Lua::LuaArguments::isRBXScriptSignal",
+      "mangled": "?isRBXScriptSignal@LuaArguments@Lua@RBX@@QAE_NXZ",
+      "file": "Client/App/script/LuaArguments.cpp",
+      "orig_size": 28,
+      "recomp_size": 28,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00a455e0",
       "kind": "FUNCTION",
       "name": "RBX::sp_counted_impl_pd::get_deleter",
@@ -19621,6 +19632,17 @@
       "file": "Client/Network/StatsUpdateJob.cpp",
       "orig_size": 45,
       "recomp_size": 45,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c6df70",
+      "kind": "FUNCTION",
+      "name": "RBX::Network::StatsUpdateJob::writeFieldPair",
+      "mangled": "?writeFieldPair@StatsUpdateJob@Network@RBX@@QAAAAV123@PBX@Z",
+      "file": "Client/Network/StatsUpdateJob.cpp",
+      "orig_size": 37,
+      "recomp_size": 37,
       "match_pct": 100.0,
       "matchable": true
     },

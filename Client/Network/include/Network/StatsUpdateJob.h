@@ -26,6 +26,7 @@ public:
 	bool readBit();
 	StatsUpdateJob& __cdecl writeFieldEntry(const void* field);
 	StatsUpdateJob& __cdecl writeFieldTriplet(const void* field);
+	StatsUpdateJob& __cdecl writeFieldPair(const void* field);
 	// AUTO-GENERATED METHODS
 };
 

@@ -1378,6 +1378,20 @@ void __cdecl LuaArguments::registerFunction(void* arg1, void* arg2)
 	sub_A35D10(self, -2);
 }
 
+struct LuaArguments_IsADesc
+{
+	__declspec(dllimport) bool __thiscall isA(const void* desc) const;
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00a43480
+bool LuaArguments::isRBXScriptSignal()
+{
+	void* desc = (*(void***)this)[4];
+	if (desc == (void*)0x011EFD20)
+		return true;
+	return ((LuaArguments_IsADesc*)0x011EFD20)->isA(desc);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

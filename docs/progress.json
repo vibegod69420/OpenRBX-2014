@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26 11:47:38 UTC",
+ "updated_at": "2026-11-26 11:57:06 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 24.6983,
- "implemented_total": 2340,
- "function_annotations": 2340,
+ "matchable_coverage_pct": 24.7197,
+ "implemented_total": 2342,
+ "function_annotations": 2342,
  "stub_annotations": 0,
- "perfect_100_count": 2313,
- "matched_real_functions": 2313,
+ "perfect_100_count": 2315,
+ "matched_real_functions": 2315,
  "average_match_pct": 99.58,
- "overall_function_coverage_pct": 5.7025,
- "overall_byte_coverage_pct": 1.766,
+ "overall_function_coverage_pct": 5.7075,
+ "overall_byte_coverage_pct": 1.7666,
  "usage": {
-  "calls_24h": 1317,
+  "calls_24h": 1338,
   "failures_24h": 0,
-  "completion_tokens_24h": 16419497,
-  "reasoning_tokens_24h": 16098869,
-  "avg_latency_s": 193.8
+  "completion_tokens_24h": 16675981,
+  "reasoning_tokens_24h": 16353036,
+  "avg_latency_s": 193.7
  },
- "functions_total": 2340,
+ "functions_total": 2342,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -60,9 +60,9 @@
   },
   {
    "name": "App/script",
-   "matched": 160,
-   "functions": 160,
-   "bytes": 11913
+   "matched": 161,
+   "functions": 161,
+   "bytes": 11941
   },
   {
    "name": "Rendering/g3d",
@@ -162,9 +162,9 @@
   },
   {
    "name": "Network/StatsUpdateJob.cpp",
-   "matched": 9,
-   "functions": 9,
-   "bytes": 373
+   "matched": 10,
+   "functions": 10,
+   "bytes": 410
   },
   {
    "name": "Rendering/GfxBase",
@@ -3413,12 +3413,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-19 06:03:17 UTC",
-   "matched": 624,
-   "implemented": 625,
-   "pct": 6.6631
-  },
-  {
    "t": "2026-11-19 06:11:06 UTC",
    "matched": 626,
    "implemented": 627,
@@ -6411,9 +6405,27 @@
    "matched": 2313,
    "implemented": 2340,
    "pct": 24.6983
+  },
+  {
+   "t": "2026-11-26 11:57:06 UTC",
+   "matched": 2315,
+   "implemented": 2342,
+   "pct": 24.7197
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-26T11:48:29",
+   "address": "0x00c6df70",
+   "name": "RBX::Network::StatsUpdateJob::writeFieldPair",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-26T11:47:44",
+   "address": "0x00a43480",
+   "name": "RBX::Lua::LuaArguments::isRBXScriptSignal",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-26T11:43:34",
    "address": "0x00b84270",
@@ -7120,18 +7132,6 @@
    "ts": "2026-11-24T08:23:33",
    "address": "0x00b5c730",
    "name": "RBX::Mechanism::notifyMoved",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T08:11:53",
-   "address": "0x0099daf0",
-   "name": "RBX::Ball::allocateFromPool",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T07:41:55",
-   "address": "0x00b4d6c0",
-   "name": "RBX::BlockBlockContact::connect",
    "pct": 100.0
   }
  ],
