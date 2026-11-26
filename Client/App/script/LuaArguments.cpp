@@ -1392,6 +1392,15 @@ bool LuaArguments::isRBXScriptSignal()
 	return ((LuaArguments_IsADesc*)0x011EFD20)->isA(desc);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a434a0
+bool LuaArguments::isType()
+{
+	void* desc = (*(void***)this)[4];
+	if (desc == (void*)0x011E6648)
+		return true;
+	return ((LuaArguments_IsADesc*)0x011E6648)->isA(desc);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua

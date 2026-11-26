@@ -23,6 +23,7 @@ public:
 	void sub_a2cb90();
 	filtering_stream*sub_a2b5a0();
 	filtering_stream* __cdecl sub_a29d30(int mode);
+	filtering_stream* __cdecl sub_a29d50(int mode);
 	// AUTO-GENERATED METHODS
 };
 

@@ -19,6 +19,7 @@ public:
 
 	void onDestroy();
 	static void destroyInstance(TextureCompositor* p);
+	bool isUpToDate() const;
 	// AUTO-GENERATED METHODS
 };
 
