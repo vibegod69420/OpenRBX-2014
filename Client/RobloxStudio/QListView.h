@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	QListView* __cdecl copyConstruct(QListView const& other);
 	// AUTO-GENERATED METHODS
 };
 
