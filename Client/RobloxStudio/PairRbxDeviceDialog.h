@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void __cdecl qt_metacall(int _c, int _id, void **_a);
 	// AUTO-GENERATED METHODS
 };
 
