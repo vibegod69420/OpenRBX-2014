@@ -48,6 +48,7 @@ public:
 	void __cdecl fireTriggeredBase(void* source);
 	void __cdecl fireRightMouseClickBase(void* source);
 	void __cdecl fireMouseButton1ClickBase(void* source);
+	void* __cdecl fireEventHelper(void* arg);
 	// AUTO-GENERATED METHODS
 };
 

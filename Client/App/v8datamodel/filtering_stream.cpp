@@ -150,6 +150,20 @@ filtering_stream* filtering_stream::sub_a2b5a0()
 	return this;
 }
 
+class filtering_stream_a2a4f0
+{
+public:
+	void sub_a2a4f0(int);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00a29d30
+filtering_stream* __cdecl filtering_stream::sub_a29d30(int mode)
+{
+	volatile int local = 0;
+	((filtering_stream_a2a4f0*)this)->sub_a2a4f0(mode);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace std

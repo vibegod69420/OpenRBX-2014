@@ -18,6 +18,7 @@ public:
 
 	void step();
 	void notifyMoved();
+	void*getAssembly();
 	// AUTO-GENERATED METHODS
 };
 

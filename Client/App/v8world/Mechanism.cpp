@@ -65,6 +65,18 @@ done:
 		world->fn();
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00b5c8e0
+void* Mechanism::getAssembly()
+{
+	char* link = *(char**)((char*)this + 0x28);
+	char* obj = link ? link - 8 : 0;
+	char* a = *(char**)(obj + 0x28);
+	char* b = *(char**)(a + 0x20);
+	if (b)
+		return b - 8;
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

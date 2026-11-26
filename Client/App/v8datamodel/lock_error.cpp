@@ -68,6 +68,19 @@ void __cdecl lock_error::grab()
 	}
 }
 
+struct lock_error_helper
+{
+	void __thiscall method(int, int);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x0040ff60
+lock_error* __cdecl lock_error::forward(int arg)
+{
+	volatile int local = 0;
+	((lock_error_helper*)this)->method(arg, 1);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace boost

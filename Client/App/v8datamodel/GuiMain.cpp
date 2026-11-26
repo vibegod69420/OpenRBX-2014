@@ -1155,6 +1155,16 @@ void __cdecl GuiMain::fireMouseButton1ClickBase(void* source)
 	local.fire();
 }
 
+void* __cdecl GuiMain_FireEventInit_008b1630(void* arg1, void* arg2);
+
+// FUNCTION: ROBLOXSTUDIO 0x008b1610
+void* __cdecl GuiMain::fireEventHelper(void* arg)
+{
+	volatile int local = 0;
+	GuiMain_FireEventInit_008b1630(this, arg);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

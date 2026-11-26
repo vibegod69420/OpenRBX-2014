@@ -19,6 +19,7 @@ public:
 	void __cdecl dispatch(int arg1, int arg2);
 	lock_error();
 	void __cdecl grab();
+	lock_error* __cdecl forward(int arg);
 	// AUTO-GENERATED METHODS
 };
 
