@@ -84,6 +84,7 @@ public:
 	void __cdecl typeError(int narg, int t);
 	const char* __cdecl luaL_checklstring(int narg, int* len);
 	int __cdecl luaL_newmetatable(const char* tname);
+	void __cdecl sub_A35BD0(void* dest);
 	// AUTO-GENERATED METHODS
 };
 

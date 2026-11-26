@@ -1218,6 +1218,12 @@ int __cdecl lua_exception::luaL_newmetatable(const char* tname)
 	return 1;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a35bd0
+void __cdecl lua_exception::sub_A35BD0(void* dest)
+{
+	*(unsigned short*)((char*)dest + 0x34) = *(unsigned short*)((char*)this + 0x34);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

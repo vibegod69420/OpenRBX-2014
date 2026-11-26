@@ -23,6 +23,7 @@ public:
 	void __cdecl flush();
 	int __cdecl check();
 	void __cdecl copy_block(const unsigned char* buf, unsigned int len, int header);
+	void __cdecl update(unsigned int value);
 	// AUTO-GENERATED METHODS
 };
 

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26 10:47:24 UTC",
+ "updated_at": "2026-11-26 10:56:36 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 24.5275,
- "implemented_total": 2324,
- "function_annotations": 2324,
+ "matchable_coverage_pct": 24.5595,
+ "implemented_total": 2327,
+ "function_annotations": 2327,
  "stub_annotations": 0,
- "perfect_100_count": 2297,
- "matched_real_functions": 2297,
+ "perfect_100_count": 2300,
+ "matched_real_functions": 2300,
  "average_match_pct": 99.58,
- "overall_function_coverage_pct": 5.6631,
- "overall_byte_coverage_pct": 1.7617,
+ "overall_function_coverage_pct": 5.6705,
+ "overall_byte_coverage_pct": 1.7622,
  "usage": {
-  "calls_24h": 1134,
+  "calls_24h": 1152,
   "failures_24h": 0,
-  "completion_tokens_24h": 14592199,
-  "reasoning_tokens_24h": 14283571,
-  "avg_latency_s": 198.7
+  "completion_tokens_24h": 14724411,
+  "reasoning_tokens_24h": 14417026,
+  "avg_latency_s": 197.5
  },
- "functions_total": 2324,
+ "functions_total": 2327,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 699,
-   "functions": 704,
-   "bytes": 36323
+   "matched": 700,
+   "functions": 705,
+   "bytes": 36340
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -54,9 +54,9 @@
   },
   {
    "name": "App/v8world",
-   "matched": 180,
-   "functions": 180,
-   "bytes": 12478
+   "matched": 181,
+   "functions": 181,
+   "bytes": 12496
   },
   {
    "name": "App/script",
@@ -72,9 +72,9 @@
   },
   {
    "name": "RobloxStudio/lua_exception.cpp",
-   "matched": 58,
-   "functions": 68,
-   "bytes": 3380
+   "matched": 59,
+   "functions": 69,
+   "bytes": 3399
   },
   {
    "name": "App/v8kernel",
@@ -3401,12 +3401,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-19 04:56:50 UTC",
-   "matched": 613,
-   "implemented": 614,
-   "pct": 6.5456
-  },
-  {
    "t": "2026-11-19 05:04:56 UTC",
    "matched": 616,
    "implemented": 617,
@@ -6399,9 +6393,33 @@
    "matched": 2297,
    "implemented": 2324,
    "pct": 24.5275
+  },
+  {
+   "t": "2026-11-26 10:56:36 UTC",
+   "matched": 2300,
+   "implemented": 2327,
+   "pct": 24.5595
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-26T10:52:40",
+   "address": "0x00a35bd0",
+   "name": "lua_exception::sub_A35BD0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-26T10:51:21",
+   "address": "0x00b59fd0",
+   "name": "RBX::Clump::Clump",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-26T10:49:20",
+   "address": "0x00cffce0",
+   "name": "RBX::http_status_error::update",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-26T10:41:29",
    "address": "0x00985280",
@@ -7102,24 +7120,6 @@
    "ts": "2026-11-24T04:40:53",
    "address": "0x008dd960",
    "name": "RBX::ScriptContext::reportError",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T04:39:38",
-   "address": "0x008bda60",
-   "name": "RBX::ClientAppSettings::ApplySettingFromFunc_60",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T04:39:23",
-   "address": "0x005f4730",
-   "name": "RBX::Graphics::VertexLayout::initAppleElementArray",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T04:38:27",
-   "address": "0x00c70230",
-   "name": "RBX::Network::Replicator::writeUnsignedShorts",
    "pct": 100.0
   }
  ],

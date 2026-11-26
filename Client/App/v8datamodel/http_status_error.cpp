@@ -182,6 +182,14 @@ void __cdecl http_status_error::copy_block(const unsigned char* buf, unsigned in
 	}
 }
 
+extern "C" __declspec(dllimport) void __cdecl HttpStatusError_0x00E104F4(unsigned int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00cffce0
+void __cdecl http_status_error::update(unsigned int value)
+{
+	HttpStatusError_0x00E104F4(value);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

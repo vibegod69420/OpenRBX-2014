@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	Clump();
 	// AUTO-GENERATED METHODS
 };
 
