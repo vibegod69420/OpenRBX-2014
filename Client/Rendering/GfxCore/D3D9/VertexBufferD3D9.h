@@ -19,6 +19,7 @@ public:
 
 	void upload();
 	void release();
+	void unlock();
 	// AUTO-GENERATED METHODS
 };
 
