@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	SurfaceSelection();
 	// AUTO-GENERATED METHODS
 };
 
