@@ -17,6 +17,7 @@ public:
 	};
 
 	const char*c_str();
+	int __cdecl getIndex();
 	// AUTO-GENERATED METHODS
 };
 

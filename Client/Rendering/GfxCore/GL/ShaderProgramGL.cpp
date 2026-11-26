@@ -27,6 +27,14 @@ int __cdecl ShaderProgramGL::getProgramiv(unsigned int pname)
 	return params;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0060bfe0
+int __cdecl ShaderProgramGL::getProgramiv(unsigned int program, unsigned int pname)
+{
+	int params;
+	glGetProgramiv(program, pname, &params);
+	return params;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

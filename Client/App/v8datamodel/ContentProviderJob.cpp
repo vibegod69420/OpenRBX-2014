@@ -275,6 +275,15 @@ void __cdecl ContentProviderJob::updateRequest(void* request, void* context)
 	req[5] = (char)cl;
 }
 
+int __cdecl ContentProviderJob_ReportError(void* job, const char* fmt, ...);
+
+// FUNCTION: ROBLOXSTUDIO 0x00bc6450
+int __cdecl ContentProviderJob::reportAllocationError()
+{
+	ContentProviderJob_ReportError(this, "memory allocation error: block too big");
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

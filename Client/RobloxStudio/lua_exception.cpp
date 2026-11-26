@@ -1224,6 +1224,16 @@ void __cdecl lua_exception::sub_A35BD0(void* dest)
 	*(unsigned short*)((char*)dest + 0x34) = *(unsigned short*)((char*)this + 0x34);
 }
 
+// Forward declaration for callee at 0x00a389c0
+void* __cdecl sub_A389C0(lua_exception* L, int ud, const char* tname);
+
+// FUNCTION: ROBLOXSTUDIO 0x00a3cd60
+int __cdecl lua_exception::sub_A3CD60()
+{
+	sub_A389C0(this, 1, *(const char**)0x0124EB30);
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

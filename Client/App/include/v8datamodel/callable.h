@@ -27,6 +27,7 @@ public:
 	bool isDefaultVFunc12() const;
 	bool isDefaultVFunc13() const;
 	callable* __fastcall init(const callable& other);
+	callable* __fastcall initDefault(void* arg);
 	// AUTO-GENERATED METHODS
 };
 

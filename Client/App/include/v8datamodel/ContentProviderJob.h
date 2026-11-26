@@ -25,6 +25,7 @@ public:
 	void __cdecl addRequest(void* request);
 	void __cdecl init();
 	void __cdecl updateRequest(void* request, void* context);
+	int __cdecl reportAllocationError();
 	// AUTO-GENERATED METHODS
 };
 

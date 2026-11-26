@@ -21,6 +21,12 @@ const char* MD5HasherImpl::c_str()
 	return result;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00a10940
+int __cdecl MD5HasherImpl::getIndex()
+{
+	return ((int)(unsigned)this + 3) % 6;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

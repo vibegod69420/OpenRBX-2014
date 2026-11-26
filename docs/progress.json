@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26 14:27:38 UTC",
+ "updated_at": "2026-11-26 14:37:04 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,35 +16,35 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 24.7944,
- "implemented_total": 2349,
- "function_annotations": 2349,
+ "matchable_coverage_pct": 24.8692,
+ "implemented_total": 2356,
+ "function_annotations": 2356,
  "stub_annotations": 0,
- "perfect_100_count": 2322,
- "matched_real_functions": 2322,
+ "perfect_100_count": 2329,
+ "matched_real_functions": 2329,
  "average_match_pct": 99.58,
- "overall_function_coverage_pct": 5.7247,
- "overall_byte_coverage_pct": 1.7692,
+ "overall_function_coverage_pct": 5.742,
+ "overall_byte_coverage_pct": 1.7709,
  "usage": {
-  "calls_24h": 1545,
+  "calls_24h": 1576,
   "failures_24h": 0,
-  "completion_tokens_24h": 19167954,
-  "reasoning_tokens_24h": 18817001,
-  "avg_latency_s": 194.4
+  "completion_tokens_24h": 19480858,
+  "reasoning_tokens_24h": 19125158,
+  "avg_latency_s": 194.1
  },
- "functions_total": 2349,
+ "functions_total": 2356,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
-   "matched": 286,
-   "functions": 286,
-   "bytes": 47940
+   "matched": 287,
+   "functions": 287,
+   "bytes": 47967
   },
   {
    "name": "App/v8datamodel",
-   "matched": 712,
-   "functions": 717,
-   "bytes": 36720
+   "matched": 716,
+   "functions": 721,
+   "bytes": 36808
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -72,9 +72,9 @@
   },
   {
    "name": "RobloxStudio/lua_exception.cpp",
-   "matched": 59,
-   "functions": 69,
-   "bytes": 3399
+   "matched": 60,
+   "functions": 70,
+   "bytes": 3425
   },
   {
    "name": "App/v8kernel",
@@ -585,6 +585,12 @@
    "matched": 2,
    "functions": 2,
    "bytes": 25
+  },
+  {
+   "name": "RobloxStudio/MainLogManager.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 23
   },
   {
    "name": "RobloxStudio/ToggleAxisWidgetVerb.cpp",
@@ -3412,12 +3418,6 @@
   }
  ],
  "history": [
-  {
-   "t": "2026-11-19 07:20:29 UTC",
-   "matched": 634,
-   "implemented": 635,
-   "pct": 6.7699
-  },
   {
    "t": "2026-11-19 07:28:59 UTC",
    "matched": 650,
@@ -6411,9 +6411,57 @@
    "matched": 2322,
    "implemented": 2349,
    "pct": 24.7944
+  },
+  {
+   "t": "2026-11-26 14:37:04 UTC",
+   "matched": 2329,
+   "implemented": 2356,
+   "pct": 24.8692
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-26T14:33:22",
+   "address": "0x0044a420",
+   "name": "sub_44CCD0",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-26T14:29:52",
+   "address": "0x00a3cd60",
+   "name": "lua_exception::sub_A3CD60",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-26T14:29:08",
+   "address": "0x00bc6450",
+   "name": "RBX::ContentProviderJob::reportAllocationError",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-26T14:28:39",
+   "address": "0x0060bfe0",
+   "name": "RBX::Graphics::ShaderProgramGL::getProgramiv",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-26T14:27:54",
+   "address": "0x0045f760",
+   "name": "GetProcAddress",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-26T14:27:47",
+   "address": "0x00a10940",
+   "name": "RBX::MD5HasherImpl::getIndex",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-26T14:27:45",
+   "address": "0x0096c1b0",
+   "name": "RBX::AdvArrowTool::func_0096c1b0",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-26T14:22:40",
    "address": "0x00cffcc0",
@@ -7091,49 +7139,7 @@
    "address": "0x0044ae80",
    "name": "RBX::callable::isDefaultVFunc7",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T10:48:10",
-   "address": "0x005d5420",
-   "name": "btConvexPolyhedron::destroy",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T10:44:37",
-   "address": "0x008ddf30",
-   "name": "RBX::ScriptContext::reportError",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T10:34:44",
-   "address": "0x008bdae0",
-   "name": "RBX::ClientAppSettings::ApplySettingFromFunc_E0",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T10:29:20",
-   "address": "0x0044ad30",
-   "name": "RBX::callable::isDefaultVFunc6",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T09:17:39",
-   "address": "0x00c6f3d0",
-   "name": "RBX::Network::Replicator::writePendingPropertyId",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T09:14:14",
-   "address": "0x008dde30",
-   "name": "RBX::ScriptContext::reportError",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T09:13:57",
-   "address": "0x008d1d60",
-   "name": "RBX::WaitingScriptsJob::allocate64",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 9.64
+ "match_rate_per_hour": 9.59
 }

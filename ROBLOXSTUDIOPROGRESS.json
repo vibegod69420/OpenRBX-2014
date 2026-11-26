@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26 14:27:38 UTC",
+  "updated_at": "2026-11-26 14:37:04 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 24.7944,
-  "implemented_total": 2349,
-  "function_annotations": 2349,
+  "matchable_coverage_pct": 24.8692,
+  "implemented_total": 2356,
+  "function_annotations": 2356,
   "stub_annotations": 0,
-  "perfect_100_count": 2322,
-  "matched_real_functions": 2322,
+  "perfect_100_count": 2329,
+  "matched_real_functions": 2329,
   "average_match_pct": 99.58,
-  "overall_function_coverage_pct": 5.7247,
-  "overall_byte_coverage_pct": 1.7692,
+  "overall_function_coverage_pct": 5.742,
+  "overall_byte_coverage_pct": 1.7709,
   "usage": {
-    "calls_24h": 1545,
+    "calls_24h": 1576,
     "failures_24h": 0,
-    "completion_tokens_24h": 19167954,
-    "reasoning_tokens_24h": 18817001,
-    "avg_latency_s": 194.4
+    "completion_tokens_24h": 19480858,
+    "reasoning_tokens_24h": 19125158,
+    "avg_latency_s": 194.1
   },
   "functions": [
     {
@@ -650,6 +650,17 @@
       "matchable": true
     },
     {
+      "address": "0x0044a420",
+      "kind": "FUNCTION",
+      "name": "sub_44CCD0",
+      "mangled": "?initDefault@callable@RBX@@QAIPAV12@PAX@Z",
+      "file": "Client/App/v8datamodel/callable.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x0044aa90",
       "kind": "FUNCTION",
       "name": "callable_defaultVFunc4",
@@ -921,6 +932,17 @@
       "file": "Client/App/v8datamodel/sp_counted_impl_pd.cpp",
       "orig_size": 30,
       "recomp_size": 30,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0045f760",
+      "kind": "FUNCTION",
+      "name": "GetProcAddress",
+      "mangled": "?FreeLoadedModule@MainLogManager@@QAAXXZ",
+      "file": "Client/RobloxStudio/MainLogManager.cpp",
+      "orig_size": 23,
+      "recomp_size": 23,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -5722,6 +5744,17 @@
     },
     {
       "address": "0x0060bfc0",
+      "kind": "FUNCTION",
+      "name": "RBX::Graphics::ShaderProgramGL::getProgramiv",
+      "mangled": "?getProgramiv@ShaderProgramGL@Graphics@RBX@@QAAHI@Z",
+      "file": "Client/Rendering/GfxCore/GL/ShaderProgramGL.cpp",
+      "orig_size": 27,
+      "recomp_size": 27,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0060bfe0",
       "kind": "FUNCTION",
       "name": "RBX::Graphics::ShaderProgramGL::getProgramiv",
       "mangled": "?getProgramiv@ShaderProgramGL@Graphics@RBX@@QAAHI@Z",
@@ -12321,6 +12354,17 @@
       "matchable": true
     },
     {
+      "address": "0x0096c1b0",
+      "kind": "FUNCTION",
+      "name": "RBX::AdvArrowTool::func_0096c1b0",
+      "mangled": "?func_0096c1b0@AdvArrowTool@RBX@@QAAXXZ",
+      "file": "Client/App/v8datamodel/AdvArrowTool.cpp",
+      "orig_size": 18,
+      "recomp_size": 18,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00975020",
       "kind": "FUNCTION",
       "name": "RBX::UserInputService::destructorHelper",
@@ -13296,6 +13340,17 @@
       "file": "Client/App/v8datamodel/MD5HasherImpl.cpp",
       "orig_size": 27,
       "recomp_size": 27,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00a10940",
+      "kind": "FUNCTION",
+      "name": "RBX::MD5HasherImpl::getIndex",
+      "mangled": "?getIndex@MD5HasherImpl@RBX@@QAAHXZ",
+      "file": "Client/App/v8datamodel/MD5HasherImpl.cpp",
+      "orig_size": 21,
+      "recomp_size": 21,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -14503,6 +14558,17 @@
       "kind": "FUNCTION",
       "name": "lua_exception::dispatchGlobal",
       "mangled": "?dispatchGlobal@lua_exception@@QAAHXZ",
+      "file": "Client/RobloxStudio/lua_exception.cpp",
+      "orig_size": 26,
+      "recomp_size": 26,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00a3cd60",
+      "kind": "FUNCTION",
+      "name": "lua_exception::sub_A3CD60",
+      "mangled": "?sub_A3CD60@lua_exception@@QAAHXZ",
       "file": "Client/RobloxStudio/lua_exception.cpp",
       "orig_size": 26,
       "recomp_size": 26,
@@ -18279,6 +18345,17 @@
       "file": "Client/App/v8datamodel/ContentProviderJob.cpp",
       "orig_size": 69,
       "recomp_size": 69,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00bc6450",
+      "kind": "FUNCTION",
+      "name": "RBX::ContentProviderJob::reportAllocationError",
+      "mangled": "?reportAllocationError@ContentProviderJob@RBX@@QAAHXZ",
+      "file": "Client/App/v8datamodel/ContentProviderJob.cpp",
+      "orig_size": 23,
+      "recomp_size": 23,
       "match_pct": 100.0,
       "matchable": true
     },

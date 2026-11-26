@@ -106,6 +106,16 @@ callable* __fastcall callable::init(const callable& other)
 	return this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0044a420
+extern "C" callable* __fastcall sub_44CCD0(callable* self, void* arg);
+
+callable* __fastcall callable::initDefault(void* arg)
+{
+	volatile int local = 0;
+	sub_44CCD0(this, arg);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
