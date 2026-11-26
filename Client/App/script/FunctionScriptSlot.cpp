@@ -22,6 +22,22 @@ void FunctionScriptSlot::dispose()
 	}
 }
 
+struct FunctionScriptSlotHelper
+{
+	void invoke();
+};
+
+extern "C" void* __cdecl sub_a389c0(void*, int, void*);
+extern void* g_128e204;
+
+// FUNCTION: ROBLOXSTUDIO 0x00b84270
+int __cdecl FunctionScriptSlot::call()
+{
+	void* obj = sub_a389c0(this, 1, g_128e204);
+	reinterpret_cast<FunctionScriptSlotHelper*>(obj)->invoke();
+	return 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Lua
