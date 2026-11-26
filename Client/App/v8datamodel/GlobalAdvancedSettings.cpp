@@ -39,6 +39,17 @@ GlobalAdvancedSettings* __cdecl GlobalAdvancedSettings::initSingleton()
 	return this;
 }
 
+void __cdecl rbxs_init_007C5C70(GlobalAdvancedSettings*);
+
+// FUNCTION: ROBLOXSTUDIO 0x007c6b40
+GlobalAdvancedSettings* __cdecl GlobalAdvancedSettings::initializeSingleton()
+{
+	volatile int state = 0;
+	rbxs_init_004115F0((void*)0x012E36A8, (void*)0x007C6540);
+	rbxs_init_007C5C70(this);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

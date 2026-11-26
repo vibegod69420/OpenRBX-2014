@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26 15:14:24 UTC",
+ "updated_at": "2026-11-26 15:25:14 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 25.008,
- "implemented_total": 2369,
- "function_annotations": 2369,
+ "matchable_coverage_pct": 25.0294,
+ "implemented_total": 2371,
+ "function_annotations": 2371,
  "stub_annotations": 0,
- "perfect_100_count": 2342,
- "matched_real_functions": 2342,
+ "perfect_100_count": 2344,
+ "matched_real_functions": 2344,
  "average_match_pct": 99.58,
- "overall_function_coverage_pct": 5.774,
- "overall_byte_coverage_pct": 1.7755,
+ "overall_function_coverage_pct": 5.779,
+ "overall_byte_coverage_pct": 1.7763,
  "usage": {
-  "calls_24h": 1631,
+  "calls_24h": 1642,
   "failures_24h": 0,
-  "completion_tokens_24h": 19918071,
-  "reasoning_tokens_24h": 19562802,
-  "avg_latency_s": 192.5
+  "completion_tokens_24h": 20124832,
+  "reasoning_tokens_24h": 19768836,
+  "avg_latency_s": 193.4
  },
- "functions_total": 2369,
+ "functions_total": 2371,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 722,
-   "functions": 727,
-   "bytes": 37013
+   "matched": 723,
+   "functions": 728,
+   "bytes": 37057
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -513,6 +513,12 @@
    "matched": 1,
    "functions": 1,
    "bytes": 38
+  },
+  {
+   "name": "RobloxStudio/RobloxScriptReview.cpp",
+   "matched": 1,
+   "functions": 1,
+   "bytes": 37
   },
   {
    "name": "RobloxStudio/QDebuggerClient.cpp",
@@ -3418,12 +3424,6 @@
   }
  ],
  "history": [
-  {
-   "t": "2026-11-19 08:03:45 UTC",
-   "matched": 670,
-   "implemented": 671,
-   "pct": 7.1543
-  },
   {
    "t": "2026-11-19 08:12:07 UTC",
    "matched": 673,
@@ -6417,9 +6417,27 @@
    "matched": 2342,
    "implemented": 2369,
    "pct": 25.008
+  },
+  {
+   "t": "2026-11-26 15:25:14 UTC",
+   "matched": 2344,
+   "implemented": 2371,
+   "pct": 25.0294
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-26T15:18:16",
+   "address": "0x00512ab0",
+   "name": "RobloxScriptReview::clear",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-26T15:16:04",
+   "address": "0x007c6b40",
+   "name": "RBX::GlobalAdvancedSettings::initializeSingleton",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-26T15:05:17",
    "address": "0x0057a250",
@@ -7126,18 +7144,6 @@
    "ts": "2026-11-24T17:29:23",
    "address": "0x005fc9a0",
    "name": "RBX::Graphics::ContextGL::initHalfFloatNV",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T16:39:48",
-   "address": "0x008ae1d0",
-   "name": "RBX::GuiMain::clear",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T16:38:37",
-   "address": "0x00c702a0",
-   "name": "RBX::Network::Replicator::writeThreeUnsignedShorts",
    "pct": 100.0
   }
  ],

@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void clear();
 	// AUTO-GENERATED METHODS
 };
 
