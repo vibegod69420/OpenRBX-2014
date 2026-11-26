@@ -21,6 +21,7 @@ public:
 	static void destroyInstance(network_stream_exception* p);
 	void __cdecl raise(const void* error);
 	void __cdecl writeVarInt(unsigned int value);
+	void __cdecl init(const void* error);
 	// AUTO-GENERATED METHODS
 };
 
