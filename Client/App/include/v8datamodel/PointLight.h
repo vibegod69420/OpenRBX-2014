@@ -17,6 +17,7 @@ public:
 	};
 
 	PointLight();
+	PointLight*initialize();
 	// AUTO-GENERATED METHODS
 };
 

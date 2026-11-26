@@ -23,6 +23,19 @@ PointLight::PointLight()
 	*(int*)((char*)this + 0x84) = 5;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00939ad0
+PointLight* PointLight::initialize()
+{
+	((PointLightInit*)this)->init("PointLight");
+	*(int*)((char*)this + 0) = 0xe825dc;
+	*(int*)((char*)this + 4) = 0xe82654;
+	*(int*)((char*)this + 0x18) = 0xe8265c;
+	*(int*)((char*)this + 0x1c) = 0xe82668;
+	*(int*)((char*)this + 0x64) = 0xe82678;
+	*(int*)((char*)this + 0x7c) = 0x41000000;
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

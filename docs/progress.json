@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26 12:24:58 UTC",
+ "updated_at": "2026-11-26 12:34:40 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 24.7517,
- "implemented_total": 2345,
- "function_annotations": 2345,
+ "matchable_coverage_pct": 24.7624,
+ "implemented_total": 2346,
+ "function_annotations": 2346,
  "stub_annotations": 0,
- "perfect_100_count": 2318,
- "matched_real_functions": 2318,
+ "perfect_100_count": 2319,
+ "matched_real_functions": 2319,
  "average_match_pct": 99.58,
- "overall_function_coverage_pct": 5.7148,
- "overall_byte_coverage_pct": 1.768,
+ "overall_function_coverage_pct": 5.7173,
+ "overall_byte_coverage_pct": 1.7686,
  "usage": {
-  "calls_24h": 1421,
+  "calls_24h": 1445,
   "failures_24h": 0,
-  "completion_tokens_24h": 17751020,
-  "reasoning_tokens_24h": 17416252,
-  "avg_latency_s": 194.4
+  "completion_tokens_24h": 18118134,
+  "reasoning_tokens_24h": 17779267,
+  "avg_latency_s": 195.2
  },
- "functions_total": 2345,
+ "functions_total": 2346,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 709,
-   "functions": 714,
-   "bytes": 36618
+   "matched": 710,
+   "functions": 715,
+   "bytes": 36676
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -3413,12 +3413,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-19 06:27:18 UTC",
-   "matched": 629,
-   "implemented": 630,
-   "pct": 6.7165
-  },
-  {
    "t": "2026-11-19 06:35:51 UTC",
    "matched": 631,
    "implemented": 632,
@@ -6411,9 +6405,21 @@
    "matched": 2318,
    "implemented": 2345,
    "pct": 24.7517
+  },
+  {
+   "t": "2026-11-26 12:34:40 UTC",
+   "matched": 2319,
+   "implemented": 2346,
+   "pct": 24.7624
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-26T12:28:20",
+   "address": "0x00939ad0",
+   "name": "RBX::PointLight::initialize",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-26T12:20:58",
    "address": "0x005b2ec0",
@@ -7127,13 +7133,7 @@
    "address": "0x008bdac0",
    "name": "RBX::ClientAppSettings::ApplySettingFromFunc_DC",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T09:04:22",
-   "address": "0x0044ac00",
-   "name": "RBX::callable::isDefaultVFunc5",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 9.71
+ "match_rate_per_hour": 9.7
 }
