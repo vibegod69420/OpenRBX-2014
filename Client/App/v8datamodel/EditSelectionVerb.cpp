@@ -71,6 +71,12 @@ bool __cdecl EditSelectionVerb::sub_006B9B30()
 	return false;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x006b9730
+void __cdecl EditSelectionVerb::sub_006B9730()
+{
+	g_activeEditSelectionVerb = this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -22,6 +22,7 @@ public:
 	void setVtableOrHead(int value);
 	EditSelectionVerb* __cdecl sub_006B98C0(int a2, int a3);
 	bool __cdecl sub_006B9B30();
+	void __cdecl sub_006B9730();
 	// AUTO-GENERATED METHODS
 };
 
