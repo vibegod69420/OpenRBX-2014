@@ -24,6 +24,7 @@ public:
 	int __cdecl check();
 	void __cdecl copy_block(const unsigned char* buf, unsigned int len, int header);
 	void __cdecl update(unsigned int value);
+	void __cdecl alloc(unsigned int count, unsigned int size);
 	// AUTO-GENERATED METHODS
 };
 

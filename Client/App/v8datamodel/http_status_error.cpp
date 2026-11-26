@@ -190,6 +190,14 @@ void __cdecl http_status_error::update(unsigned int value)
 	HttpStatusError_0x00E104F4(value);
 }
 
+extern "C" __declspec(dllimport) void __cdecl HttpStatusError_0x00E10530(unsigned int);
+
+// FUNCTION: ROBLOXSTUDIO 0x00cffcc0
+void __cdecl http_status_error::alloc(unsigned int count, unsigned int size)
+{
+	HttpStatusError_0x00E10530(count * size);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
