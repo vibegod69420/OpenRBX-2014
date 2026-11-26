@@ -19,6 +19,7 @@ public:
 	int getConst15005704() const;
 	void onDestroy();
 	static void destroyInstance(parser_error* p);
+	parser_error* __cdecl init(void* token);
 	// AUTO-GENERATED METHODS
 };
 
