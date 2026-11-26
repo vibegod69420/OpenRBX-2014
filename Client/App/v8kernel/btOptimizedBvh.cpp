@@ -29,6 +29,26 @@ btOptimizedBvh** btOptimizedBvh::createStaticInstance()
 	return (btOptimizedBvh**)&btOptimizedBvh_s_instance;
 }
 
+extern "C" __declspec(dllimport) void __cdecl btOptimizedBvh_operatorDelete(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x005b2ec0
+void btOptimizedBvh::destroyNode()
+{
+	btOptimizedBvh* node = *(btOptimizedBvh**)((char*)this + 0x18);
+	if (node)
+	{
+		node->destroyNode();
+		btOptimizedBvh_operatorDelete(node);
+	}
+
+	node = *(btOptimizedBvh**)((char*)this + 0x1c);
+	if (node)
+	{
+		node->destroyNode();
+		btOptimizedBvh_operatorDelete(node);
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

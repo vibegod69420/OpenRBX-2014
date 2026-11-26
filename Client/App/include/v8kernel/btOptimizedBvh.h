@@ -18,6 +18,7 @@ public:
 
 	int getConst84() const;
 	btOptimizedBvh**createStaticInstance();
+	void destroyNode();
 	// AUTO-GENERATED METHODS
 };
 
