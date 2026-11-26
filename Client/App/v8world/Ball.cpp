@@ -66,6 +66,15 @@ void* Ball::allocateFromPool()
 	return node;
 }
 
+void ballKernelPairHelper(Ball*, Ball*);
+
+// FUNCTION: ROBLOXSTUDIO 0x0099de10
+void __cdecl Ball::ballKernelPair(Ball* b)
+{
+	ballKernelPairHelper(this, b);
+	ballKernelPairHelper(b, this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

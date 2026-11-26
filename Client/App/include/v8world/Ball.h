@@ -20,6 +20,7 @@ public:
 	float getGridVolume() const;
 	Primitive*getPrimitive() const;
 	void*allocateFromPool();
+	void __cdecl ballKernelPair(Ball* b);
 	// AUTO-GENERATED METHODS
 };
 

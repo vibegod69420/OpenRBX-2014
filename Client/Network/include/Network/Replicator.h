@@ -31,6 +31,7 @@ public:
 	void __cdecl writePendingPropertyId(void* bitStream);
 	void __cdecl sendRemovedProperty(const void* prop);
 	Replicator& __cdecl writeThreeUnsignedShorts(const void* data);
+	void __cdecl writePendingProperty(void* bitStream);
 	// AUTO-GENERATED METHODS
 };
 

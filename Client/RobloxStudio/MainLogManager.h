@@ -17,6 +17,7 @@ public:
 	};
 
 	void __cdecl FreeLoadedModule();
+	MainLogManager* __cdecl sub_45F880(int a1);
 	// AUTO-GENERATED METHODS
 };
 

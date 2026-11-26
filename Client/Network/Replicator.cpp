@@ -182,6 +182,16 @@ Replicator& __cdecl Replicator::writeThreeUnsignedShorts(const void* data)
 	return *this;
 }
 
+void __cdecl replicatorWritePropertyValue(void* bitStream, void* propDesc);
+
+// FUNCTION: ROBLOXSTUDIO 0x00c6f510
+void __cdecl Replicator::writePendingProperty(void* bitStream)
+{
+	int local[2];
+	void* propDesc = ((ReplicatorPropertyResolver*)this)->resolveProperty(&local[0]);
+	replicatorWritePropertyValue(bitStream, propDesc);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network
