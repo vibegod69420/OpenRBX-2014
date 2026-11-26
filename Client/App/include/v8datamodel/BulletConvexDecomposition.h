@@ -17,6 +17,7 @@ public:
 	};
 
 	BulletConvexDecomposition();
+	int __cdecl bufferMatch(const void* str);
 	// AUTO-GENERATED METHODS
 };
 

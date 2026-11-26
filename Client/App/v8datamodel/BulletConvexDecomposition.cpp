@@ -32,6 +32,32 @@ BulletConvexDecomposition::BulletConvexDecomposition()
 	*(int*)((char*)this + 0x4C) = 0;
 }
 
+struct BulletConvexDecomposition_sub_402FD0
+{
+	int fn(int, int, const char*, unsigned int);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00403040
+int __cdecl BulletConvexDecomposition::bufferMatch(const void* str)
+{
+	const char* p = (const char*)str;
+	unsigned int len;
+	const char* data = p;
+	if (*(unsigned int*)(p + 0x14) < 0x10)
+	{
+		len = *(unsigned int*)(p + 0x10);
+	}
+	else
+	{
+		len = *(unsigned int*)(p + 0x10);
+		data = *(const char**)p;
+	}
+
+	int result = ((BulletConvexDecomposition_sub_402FD0*)this)->fn(
+		0, *(int*)((char*)this + 0x10), data, len);
+	return result == 0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

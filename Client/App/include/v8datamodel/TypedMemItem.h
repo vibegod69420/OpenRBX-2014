@@ -17,6 +17,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	TypedMemItem* __cdecl init(int a, int b, int c, int d);
 	// AUTO-GENERATED METHODS
 };
 
