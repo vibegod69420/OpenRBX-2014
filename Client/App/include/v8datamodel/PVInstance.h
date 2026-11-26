@@ -5,6 +5,9 @@
 
 namespace RBX {
 
+#ifndef NULL
+#define NULL 0
+#endif
 // AUTO-GENERATED HELPERS
 
 class PVInstance
@@ -21,6 +24,7 @@ public:
 	PVInstance* __cdecl getTopLevelPVInstanceEx(void* arg);
 	PVInstance* __cdecl getTopLevelPVInstance2(void* arg);
 	PVInstance* __cdecl getTopLevelPVInstance3(void* arg);
+	void __cdecl destroy();
 	// AUTO-GENERATED METHODS
 };
 

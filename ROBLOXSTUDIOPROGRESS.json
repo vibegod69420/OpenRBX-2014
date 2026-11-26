@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26 14:55:44 UTC",
+  "updated_at": "2026-11-26 15:05:09 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 24.9333,
-  "implemented_total": 2362,
-  "function_annotations": 2362,
+  "matchable_coverage_pct": 24.9867,
+  "implemented_total": 2367,
+  "function_annotations": 2367,
   "stub_annotations": 0,
-  "perfect_100_count": 2335,
-  "matched_real_functions": 2335,
+  "perfect_100_count": 2340,
+  "matched_real_functions": 2340,
   "average_match_pct": 99.58,
-  "overall_function_coverage_pct": 5.7568,
-  "overall_byte_coverage_pct": 1.7728,
+  "overall_function_coverage_pct": 5.7691,
+  "overall_byte_coverage_pct": 1.7747,
   "usage": {
-    "calls_24h": 1603,
+    "calls_24h": 1614,
     "failures_24h": 0,
-    "completion_tokens_24h": 19771345,
-    "reasoning_tokens_24h": 19416680,
-    "avg_latency_s": 193.7
+    "completion_tokens_24h": 19816148,
+    "reasoning_tokens_24h": 19462011,
+    "avg_latency_s": 193.2
   },
   "functions": [
     {
@@ -1724,6 +1724,17 @@
       "file": "Client/RobloxStudio/RobloxObjectBrowserDoc.cpp",
       "orig_size": 11,
       "recomp_size": 11,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x004fa730",
+      "kind": "FUNCTION",
+      "name": "call",
+      "mangled": "?firePropertyChange@PropertyTreeWidget@@QAEXXZ",
+      "file": "Client/App/reflection/PropertyTreeWidget.cpp",
+      "orig_size": 37,
+      "recomp_size": 37,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -8907,6 +8918,17 @@
       "file": "Client/App/v8datamodel/ToggleViewMode.cpp",
       "orig_size": 22,
       "recomp_size": 22,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00835d60",
+      "kind": "FUNCTION",
+      "name": "RBX::PVInstance::destroy",
+      "mangled": "?destroy@PVInstance@RBX@@QAAXXZ",
+      "file": "Client/App/v8datamodel/PVInstance.cpp",
+      "orig_size": 38,
+      "recomp_size": 38,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -16446,6 +16468,17 @@
       "matchable": true
     },
     {
+      "address": "0x00b60040",
+      "kind": "FUNCTION",
+      "name": "terrainPartitionBitUnlink",
+      "mangled": "?destroy@TerrainPartitionBit@RBX@@QAAXXZ",
+      "file": "Client/App/v8datamodel/TerrainPartitionBit.cpp",
+      "orig_size": 32,
+      "recomp_size": 32,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00b613f0",
       "kind": "FUNCTION",
       "name": "RBX::POLY::MegaClusterMesh::dispose",
@@ -19834,6 +19867,17 @@
       "matchable": true
     },
     {
+      "address": "0x00c6dec0",
+      "kind": "FUNCTION",
+      "name": "sub_c6d500",
+      "mangled": "?writeFieldWithSize@StatsUpdateJob@Network@RBX@@QAAAAV123@PBX@Z",
+      "file": "Client/Network/StatsUpdateJob.cpp",
+      "orig_size": 38,
+      "recomp_size": 38,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
       "address": "0x00c6df40",
       "kind": "FUNCTION",
       "name": "RBX::Network::StatsUpdateJob::writeFieldEntry",
@@ -20039,6 +20083,17 @@
       "file": "Client/App/v8datamodel/network_stream_exception.cpp",
       "orig_size": 12,
       "recomp_size": 12,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00c72ac0",
+      "kind": "FUNCTION",
+      "name": "RBX::network_stream_exception::initEndpoint",
+      "mangled": "?initEndpoint@network_stream_exception@RBX@@QAAPAV12@PAX@Z",
+      "file": "Client/App/v8datamodel/network_stream_exception.cpp",
+      "orig_size": 37,
+      "recomp_size": 37,
       "match_pct": 100.0,
       "matchable": true
     },

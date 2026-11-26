@@ -92,6 +92,23 @@ void __cdecl network_stream_exception::init(const void* error)
 		reinterpret_cast<char*>(this) + 4)->init(local);
 }
 
+struct network_stream_exception_endpoint
+{
+	unsigned short getPort();
+	unsigned int getAddress();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00c72ac0
+network_stream_exception* __cdecl network_stream_exception::initEndpoint(void* endpoint)
+{
+	network_stream_exception_endpoint* ep = static_cast<network_stream_exception_endpoint*>(endpoint);
+	unsigned short port = ep->getPort();
+	unsigned int address = ep->getAddress();
+	*reinterpret_cast<unsigned int*>(this) = address;
+	*reinterpret_cast<unsigned short*>(reinterpret_cast<char*>(this) + 4) = port;
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

@@ -18,6 +18,7 @@ public:
 
 	void firePropertyChange();
 	void firePropertyChange2();
+	void firePropertyChange3();
 	// AUTO-GENERATED METHODS
 };
 

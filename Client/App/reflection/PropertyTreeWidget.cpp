@@ -34,6 +34,20 @@ void PropertyTreeWidget::firePropertyChange2()
 	PropertyTreeWidget_IndirectE10508(*(void**)this);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x004fa730
+struct PropertyTreeWidget_Callee49BB20
+{
+	void __thiscall call(void* out, void* arg2, void* arg3);
+};
+
+void PropertyTreeWidget::firePropertyChange3()
+{
+	int local;
+	void* p = *(void**)this;
+	((PropertyTreeWidget_Callee49BB20*)this)->call(&local, *(void**)p, p);
+	PropertyTreeWidget_IndirectE10508(*(void**)this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

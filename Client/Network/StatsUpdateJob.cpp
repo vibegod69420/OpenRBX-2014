@@ -132,6 +132,22 @@ StatsUpdateJob& __cdecl StatsUpdateJob::writeFieldPair(const void* field)
 	return *this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00c6dec0
+void __cdecl sub_c6d500(StatsUpdateJob* job, const void* field);
+
+struct StatsUpdateJobSubC6BF20Thunk
+{
+	void __thiscall call(const void* field);
+};
+
+StatsUpdateJob& __cdecl StatsUpdateJob::writeFieldWithSize(const void* field)
+{
+	sub_c6d500(this, field);
+	reinterpret_cast<StatsUpdateJobSubC6BF20Thunk*>(this)->call(
+		reinterpret_cast<const char*>(field) + 4);
+	return *this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Network

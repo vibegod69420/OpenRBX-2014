@@ -82,6 +82,23 @@ PVInstance* __cdecl PVInstance::getTopLevelPVInstance3(void* arg)
 	return this;
 }
 
+class PVInstanceHelper0x6BC9A0
+{
+public:
+	void fn();
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00835d60
+void __cdecl PVInstance::destroy()
+{
+	if (this == NULL)
+		return;
+
+	((PVInstanceHelper0x6BC9A0*)((char*)this + 4))->fn();
+	((PVInstanceHelper0x6BC9A0*)this)->fn();
+	::operator delete(this);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
