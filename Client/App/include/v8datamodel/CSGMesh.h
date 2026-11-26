@@ -17,6 +17,7 @@ public:
 	};
 
 	void clear();
+	void __cdecl setGlobalMesh();
 	// AUTO-GENERATED METHODS
 };
 

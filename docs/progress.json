@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26 10:37:38 UTC",
+ "updated_at": "2026-11-26 10:47:24 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 24.5061,
- "implemented_total": 2322,
- "function_annotations": 2322,
+ "matchable_coverage_pct": 24.5275,
+ "implemented_total": 2324,
+ "function_annotations": 2324,
  "stub_annotations": 0,
- "perfect_100_count": 2295,
- "matched_real_functions": 2295,
+ "perfect_100_count": 2297,
+ "matched_real_functions": 2297,
  "average_match_pct": 99.58,
- "overall_function_coverage_pct": 5.6581,
- "overall_byte_coverage_pct": 1.7614,
+ "overall_function_coverage_pct": 5.6631,
+ "overall_byte_coverage_pct": 1.7617,
  "usage": {
-  "calls_24h": 1131,
+  "calls_24h": 1134,
   "failures_24h": 0,
-  "completion_tokens_24h": 14630165,
-  "reasoning_tokens_24h": 14319025,
-  "avg_latency_s": 199.6
+  "completion_tokens_24h": 14592199,
+  "reasoning_tokens_24h": 14283571,
+  "avg_latency_s": 198.7
  },
- "functions_total": 2322,
+ "functions_total": 2324,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -42,9 +42,9 @@
   },
   {
    "name": "App/v8datamodel",
-   "matched": 697,
-   "functions": 702,
-   "bytes": 36298
+   "matched": 699,
+   "functions": 704,
+   "bytes": 36323
   },
   {
    "name": "RobloxStudio/ProgramMemoryCheckerImpl.cpp",
@@ -3401,12 +3401,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-19 04:49:03 UTC",
-   "matched": 606,
-   "implemented": 607,
-   "pct": 6.4709
-  },
-  {
    "t": "2026-11-19 04:56:50 UTC",
    "matched": 613,
    "implemented": 614,
@@ -6399,9 +6393,27 @@
    "matched": 2295,
    "implemented": 2322,
    "pct": 24.5061
+  },
+  {
+   "t": "2026-11-26 10:47:24 UTC",
+   "matched": 2297,
+   "implemented": 2324,
+   "pct": 24.5275
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-26T10:41:29",
+   "address": "0x00985280",
+   "name": "RBX::CSGMesh::setGlobalMesh",
+   "pct": 100.0
+  },
+  {
+   "ts": "2026-11-26T10:37:42",
+   "address": "0x0043d5d0",
+   "name": "RBX::callable::init",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-26T10:32:56",
    "address": "0x006b9730",
@@ -7109,19 +7121,7 @@
    "address": "0x00c70230",
    "name": "RBX::Network::Replicator::writeUnsignedShorts",
    "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T04:33:03",
-   "address": "0x008bda40",
-   "name": "RBX::ClientAppSettings::ApplySettingFromFunc_D0",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T04:31:55",
-   "address": "0x00d00940",
-   "name": "RBX::http_status_error::check",
-   "pct": 100.0
   }
  ],
- "match_rate_per_hour": 9.72
+ "match_rate_per_hour": 9.69
 }

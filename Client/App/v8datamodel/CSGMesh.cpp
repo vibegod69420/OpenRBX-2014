@@ -17,6 +17,14 @@ void CSGMesh::clear()
 	operator delete(*(void**)this);
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x00985280
+static CSGMesh* g_csgMeshGlobal;
+
+void __cdecl CSGMesh::setGlobalMesh()
+{
+	g_csgMeshGlobal = this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

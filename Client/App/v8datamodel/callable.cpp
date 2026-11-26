@@ -97,6 +97,15 @@ bool callable::isDefaultVFunc13() const
 	return callable_checkVFunc4((void*)0x012C32A4, vfunc);
 }
 
+extern "C" void __fastcall sub_43DE20(callable* dst, const callable* src);
+
+// FUNCTION: ROBLOXSTUDIO 0x0043d5d0
+callable* __fastcall callable::init(const callable& other)
+{
+	sub_43DE20(this, &other);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

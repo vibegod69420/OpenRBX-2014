@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26 10:37:38 UTC",
+  "updated_at": "2026-11-26 10:47:24 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 24.5061,
-  "implemented_total": 2322,
-  "function_annotations": 2322,
+  "matchable_coverage_pct": 24.5275,
+  "implemented_total": 2324,
+  "function_annotations": 2324,
   "stub_annotations": 0,
-  "perfect_100_count": 2295,
-  "matched_real_functions": 2295,
+  "perfect_100_count": 2297,
+  "matched_real_functions": 2297,
   "average_match_pct": 99.58,
-  "overall_function_coverage_pct": 5.6581,
-  "overall_byte_coverage_pct": 1.7614,
+  "overall_function_coverage_pct": 5.6631,
+  "overall_byte_coverage_pct": 1.7617,
   "usage": {
-    "calls_24h": 1131,
+    "calls_24h": 1134,
     "failures_24h": 0,
-    "completion_tokens_24h": 14630165,
-    "reasoning_tokens_24h": 14319025,
-    "avg_latency_s": 199.6
+    "completion_tokens_24h": 14592199,
+    "reasoning_tokens_24h": 14283571,
+    "avg_latency_s": 198.7
   },
   "functions": [
     {
@@ -514,6 +514,17 @@
       "file": "Client/App/script/ScriptDebugger.cpp",
       "orig_size": 13,
       "recomp_size": 13,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0043d5d0",
+      "kind": "FUNCTION",
+      "name": "RBX::callable::init",
+      "mangled": "?init@callable@RBX@@QAIPAV12@ABV12@@Z",
+      "file": "Client/App/v8datamodel/callable.cpp",
+      "orig_size": 12,
+      "recomp_size": 12,
       "match_pct": 100.0,
       "matchable": true
     },
@@ -12207,6 +12218,17 @@
       "file": "Client/App/v8datamodel/CSGMeshFactory.cpp",
       "orig_size": 84,
       "recomp_size": 84,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00985280",
+      "kind": "FUNCTION",
+      "name": "RBX::CSGMesh::setGlobalMesh",
+      "mangled": "?setGlobalMesh@CSGMesh@RBX@@QAAXXZ",
+      "file": "Client/App/v8datamodel/CSGMesh.cpp",
+      "orig_size": 13,
+      "recomp_size": 13,
       "match_pct": 100.0,
       "matchable": true
     },
