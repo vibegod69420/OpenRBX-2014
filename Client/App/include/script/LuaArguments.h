@@ -86,6 +86,7 @@ public:
 	void __cdecl registerFunction(void* arg1, void* arg2);
 	bool isRBXScriptSignal();
 	bool isType();
+	bool isEnum();
 	// AUTO-GENERATED METHODS
 };
 
