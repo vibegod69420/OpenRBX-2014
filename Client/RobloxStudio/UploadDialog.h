@@ -18,6 +18,7 @@ public:
 	};
 
 	int getField28() const;
+	void OnCancel();
 	// AUTO-GENERATED METHODS
 };
 
