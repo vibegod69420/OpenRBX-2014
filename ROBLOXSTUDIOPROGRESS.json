@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26 06:23:26 UTC",
+  "updated_at": "2026-11-26 07:23:22 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 24.4741,
-  "implemented_total": 2319,
-  "function_annotations": 2319,
+  "matchable_coverage_pct": 24.4848,
+  "implemented_total": 2320,
+  "function_annotations": 2320,
   "stub_annotations": 0,
-  "perfect_100_count": 2292,
-  "matched_real_functions": 2292,
+  "perfect_100_count": 2293,
+  "matched_real_functions": 2293,
   "average_match_pct": 99.58,
-  "overall_function_coverage_pct": 5.6507,
-  "overall_byte_coverage_pct": 1.7596,
+  "overall_function_coverage_pct": 5.6532,
+  "overall_byte_coverage_pct": 1.7605,
   "usage": {
-    "calls_24h": 907,
+    "calls_24h": 1015,
     "failures_24h": 0,
-    "completion_tokens_24h": 11239510,
-    "reasoning_tokens_24h": 10988043,
-    "avg_latency_s": 191.1
+    "completion_tokens_24h": 12861672,
+    "reasoning_tokens_24h": 12596241,
+    "avg_latency_s": 194.9
   },
   "functions": [
     {
@@ -919,6 +919,17 @@
       "name": "?metaObject@BreakpointsWidget@@QBEPBVQMetaObject@@XZ",
       "mangled": "?metaObject@BreakpointsWidget@@QBEPBVQMetaObject@@XZ",
       "file": "Client/RobloxStudio/BreakpointsWidget.cpp",
+      "orig_size": 79,
+      "recomp_size": 79,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0046b570",
+      "kind": "FUNCTION",
+      "name": "RobloxDocManager::GetView",
+      "mangled": "?GetView@RobloxDocManager@@QAEPAXXZ",
+      "file": "Client/RobloxStudio/RobloxDocManager.cpp",
       "orig_size": 79,
       "recomp_size": 79,
       "match_pct": 100.0,
