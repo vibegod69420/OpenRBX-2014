@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26 07:23:22 UTC",
+  "updated_at": "2026-11-26 07:45:01 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 24.4848,
-  "implemented_total": 2320,
-  "function_annotations": 2320,
+  "matchable_coverage_pct": 24.4955,
+  "implemented_total": 2321,
+  "function_annotations": 2321,
   "stub_annotations": 0,
-  "perfect_100_count": 2293,
-  "matched_real_functions": 2293,
+  "perfect_100_count": 2294,
+  "matched_real_functions": 2294,
   "average_match_pct": 99.58,
-  "overall_function_coverage_pct": 5.6532,
-  "overall_byte_coverage_pct": 1.7605,
+  "overall_function_coverage_pct": 5.6557,
+  "overall_byte_coverage_pct": 1.7613,
   "usage": {
-    "calls_24h": 1015,
+    "calls_24h": 1048,
     "failures_24h": 0,
-    "completion_tokens_24h": 12861672,
-    "reasoning_tokens_24h": 12596241,
-    "avg_latency_s": 194.9
+    "completion_tokens_24h": 13267345,
+    "reasoning_tokens_24h": 12993204,
+    "avg_latency_s": 194.5
   },
   "functions": [
     {
@@ -2043,6 +2043,17 @@
       "file": "Client/App/v8datamodel/GetSetImpl.cpp",
       "orig_size": 18,
       "recomp_size": 18,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x00585720",
+      "kind": "FUNCTION",
+      "name": "FindAllDialog::getTarget",
+      "mangled": "?getTarget@FindAllDialog@@QAEPAXXZ",
+      "file": "Client/RobloxStudio/FindAllDialog.cpp",
+      "orig_size": 79,
+      "recomp_size": 79,
       "match_pct": 100.0,
       "matchable": true
     },
