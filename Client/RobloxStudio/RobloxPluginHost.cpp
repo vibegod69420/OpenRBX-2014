@@ -30,6 +30,15 @@ RobloxPluginHost* RobloxPluginHost::sub_57A250()
 	return this;
 }
 
+// FUNCTION: ROBLOXSTUDIO 0x0057a280
+RobloxPluginHost* RobloxPluginHost::sub_57A280()
+{
+	volatile int state = 0;
+	void* ret = rbxs_sub_4140A0(this);
+	g_rbxsPluginHostUnkE1106C((char*)ret + 0x84);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 

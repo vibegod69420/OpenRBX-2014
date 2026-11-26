@@ -18,6 +18,7 @@ public:
 
 	RobloxPluginHost();
 	RobloxPluginHost*sub_57A250();
+	RobloxPluginHost*sub_57A280();
 	// AUTO-GENERATED METHODS
 };
 

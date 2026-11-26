@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26 21:26:21 UTC",
+  "updated_at": "2026-11-26 21:35:59 UTC",
   "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
   "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
   "compiler_version": "17.00.50727.1",
@@ -16,21 +16,21 @@
   "fragment_entries": 21305,
   "compiler_thunk_entries": 2184,
   "seh_scaffold_entries": 7707,
-  "matchable_coverage_pct": 25.2002,
-  "implemented_total": 2387,
-  "function_annotations": 2387,
+  "matchable_coverage_pct": 25.2109,
+  "implemented_total": 2388,
+  "function_annotations": 2388,
   "stub_annotations": 0,
-  "perfect_100_count": 2360,
-  "matched_real_functions": 2360,
+  "perfect_100_count": 2361,
+  "matched_real_functions": 2361,
   "average_match_pct": 99.59,
-  "overall_function_coverage_pct": 5.8184,
-  "overall_byte_coverage_pct": 1.7862,
+  "overall_function_coverage_pct": 5.8209,
+  "overall_byte_coverage_pct": 1.7866,
   "usage": {
-    "calls_24h": 2180,
+    "calls_24h": 2202,
     "failures_24h": 0,
-    "completion_tokens_24h": 27868895,
-    "reasoning_tokens_24h": 27416273,
-    "avg_latency_s": 205.7
+    "completion_tokens_24h": 28105464,
+    "reasoning_tokens_24h": 27651395,
+    "avg_latency_s": 205.5
   },
   "functions": [
     {
@@ -2238,6 +2238,17 @@
       "kind": "FUNCTION",
       "name": "RobloxPluginHost::sub_57A250",
       "mangled": "?sub_57A250@RobloxPluginHost@@QAEPAV1@XZ",
+      "file": "Client/RobloxStudio/RobloxPluginHost.cpp",
+      "orig_size": 39,
+      "recomp_size": 39,
+      "match_pct": 100.0,
+      "matchable": true
+    },
+    {
+      "address": "0x0057a280",
+      "kind": "FUNCTION",
+      "name": "RobloxPluginHost::sub_57A280",
+      "mangled": "?sub_57A280@RobloxPluginHost@@QAEPAV1@XZ",
       "file": "Client/RobloxStudio/RobloxPluginHost.cpp",
       "orig_size": 39,
       "recomp_size": 39,
