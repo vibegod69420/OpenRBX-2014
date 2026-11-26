@@ -86,6 +86,19 @@ void* __cdecl ClassDescriptor::createOnceEvent(unsigned long value)
 	return CreateEventA(0, 1, 0, reinterpret_cast<const char*>(this));
 }
 
+struct ClassDescriptor_4119D0
+{
+	void __thiscall call(void* descriptor, int flag);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00411ad0
+ClassDescriptor* __cdecl ClassDescriptor::addDescriptor(void* descriptor)
+{
+	volatile int local = 0;
+	((ClassDescriptor_4119D0*)this)->call(descriptor, 1);
+	return this;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Reflection

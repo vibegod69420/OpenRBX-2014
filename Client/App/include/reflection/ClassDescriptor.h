@@ -21,6 +21,7 @@ public:
 	void* __cdecl ensureOnceEvent(unsigned long value);
 	void clear();
 	void* __cdecl createOnceEvent(unsigned long value);
+	ClassDescriptor* __cdecl addDescriptor(void* descriptor);
 	// AUTO-GENERATED METHODS
 };
 

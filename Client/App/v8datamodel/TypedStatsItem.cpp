@@ -174,6 +174,23 @@ TypedStatsItem* __cdecl TypedStatsItem::getOrCreateItem(const char* name)
 	return this;
 }
 
+struct TypedStatsItemDispatch6743B0
+{
+	void dispatch(int type);
+};
+
+struct TypedStatsItemInit6801F0
+{
+	static void __cdecl init(TypedStatsItem* self, void* child, int flags);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x006802c0
+void __cdecl TypedStatsItem::initChildWithType(void* child, int type, int flags)
+{
+	reinterpret_cast<TypedStatsItemDispatch6743B0*>(child)->dispatch(type);
+	TypedStatsItemInit6801F0::init(this, child, flags);
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

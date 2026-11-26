@@ -17,6 +17,7 @@ public:
 	};
 
 	int getJointType() const;
+	RigidJoint();
 	// AUTO-GENERATED METHODS
 };
 

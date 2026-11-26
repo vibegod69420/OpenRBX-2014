@@ -27,6 +27,20 @@ done:
 	return 13;
 }
 
+class Joint
+{
+public:
+	void JointCtor(int);
+};
+
+// FUNCTION: ROBLOXSTUDIO 0x00b8e060
+RigidJoint::RigidJoint()
+{
+	((Joint*)this)->JointCtor(2);
+	*(int*)this = 0x00ED4BA4;
+	*(int*)((char*)this + 0x1C) = 0x00ED4BF0;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX
