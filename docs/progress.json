@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26 16:54:24 UTC",
+ "updated_at": "2026-11-26 17:04:01 UTC",
  "target": "ROBLOXSTUDIO (RobloxStudioBeta.exe 0.164.0.50577 - Aug 20, 2014)",
  "compiler": "cl 17.00.50727.1 (MSVC 11.0 / VS2012)",
  "compiler_version": "17.00.50727.1",
@@ -16,23 +16,23 @@
  "fragment_entries": 21305,
  "compiler_thunk_entries": 2184,
  "seh_scaffold_entries": 7707,
- "matchable_coverage_pct": 25.0828,
- "implemented_total": 2376,
- "function_annotations": 2376,
+ "matchable_coverage_pct": 25.0934,
+ "implemented_total": 2377,
+ "function_annotations": 2377,
  "stub_annotations": 0,
- "perfect_100_count": 2349,
- "matched_real_functions": 2349,
+ "perfect_100_count": 2350,
+ "matched_real_functions": 2350,
  "average_match_pct": 99.59,
- "overall_function_coverage_pct": 5.7913,
- "overall_byte_coverage_pct": 1.7794,
+ "overall_function_coverage_pct": 5.7937,
+ "overall_byte_coverage_pct": 1.7802,
  "usage": {
-  "calls_24h": 1792,
+  "calls_24h": 1811,
   "failures_24h": 0,
-  "completion_tokens_24h": 22306736,
-  "reasoning_tokens_24h": 21931651,
-  "avg_latency_s": 199.0
+  "completion_tokens_24h": 22537797,
+  "reasoning_tokens_24h": 22158632,
+  "avg_latency_s": 199.1
  },
- "functions_total": 2376,
+ "functions_total": 2377,
  "subsystems": [
   {
    "name": "Rendering/GfxCore",
@@ -173,6 +173,12 @@
    "bytes": 321
   },
   {
+   "name": "App/v8tree",
+   "matched": 9,
+   "functions": 9,
+   "bytes": 272
+  },
+  {
    "name": "RobloxStudio/RobloxObjectBrowserDoc.cpp",
    "matched": 4,
    "functions": 4,
@@ -213,12 +219,6 @@
    "matched": 7,
    "functions": 7,
    "bytes": 194
-  },
-  {
-   "name": "App/v8tree",
-   "matched": 8,
-   "functions": 8,
-   "bytes": 193
   },
   {
    "name": "RobloxStudio/ToggleLocalSpaceVerb.cpp",
@@ -3431,12 +3431,6 @@
  ],
  "history": [
   {
-   "t": "2026-11-19 09:39:53 UTC",
-   "matched": 680,
-   "implemented": 681,
-   "pct": 7.2611
-  },
-  {
    "t": "2026-11-19 09:48:11 UTC",
    "matched": 681,
    "implemented": 682,
@@ -6429,9 +6423,21 @@
    "matched": 2349,
    "implemented": 2376,
    "pct": 25.0828
+  },
+  {
+   "t": "2026-11-26 17:04:01 UTC",
+   "matched": 2350,
+   "implemented": 2377,
+   "pct": 25.0934
   }
  ],
  "activity": [
+  {
+   "ts": "2026-11-26T16:54:26",
+   "address": "0x00426f50",
+   "name": "RBX::Instance::destroySlotBuffer",
+   "pct": 100.0
+  },
   {
    "ts": "2026-11-26T16:49:55",
    "address": "0x00814510",
@@ -7144,12 +7150,6 @@
    "ts": "2026-11-24T18:14:41",
    "address": "0x0044b430",
    "name": "RBX::callable::isDefaultVFunc11",
-   "pct": 100.0
-  },
-  {
-   "ts": "2026-11-24T18:14:09",
-   "address": "0x0078b5c0",
-   "name": "RBX::ChangeHistoryService::clear",
    "pct": 100.0
   }
  ],

@@ -82,6 +82,31 @@ void* __cdecl Instance::sub_6B7370(void** in)
 	return this;
 }
 
+__declspec(dllimport) void __cdecl sub_E10508(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00426f50
+void Instance::destroySlotBuffer()
+{
+	char* it = *(char**)this;
+	if (it)
+	{
+		char* end = *(char**)((char*)this + 4);
+		for (; it != end; it += 0x44)
+		{
+			void* obj = *(void**)(it + 4);
+			if (obj)
+			{
+				void (__cdecl *fn)(void*) = *(void (__cdecl**)(void*))((char*)obj + 4);
+				fn(it + 8);
+			}
+		}
+		sub_E10508(*(void**)this);
+		*(void**)this = 0;
+		*(void**)((char*)this + 4) = 0;
+		*(void**)((char*)this + 8) = 0;
+	}
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace RBX

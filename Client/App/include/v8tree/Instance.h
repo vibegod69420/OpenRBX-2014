@@ -26,6 +26,7 @@ public:
 	void fetchContextId();
 	void*getStaticSingleton();
 	void* __cdecl sub_6B7370(void** in);
+	void destroySlotBuffer();
 	// AUTO-GENERATED METHODS
 };
 
