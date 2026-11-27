@@ -18,6 +18,7 @@ public:
 
 	void* getCompleteObject();
 	int hasSelection();
+	int getSelectionIndex();
 	// AUTO-GENERATED METHODS
 };
 
