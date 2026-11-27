@@ -17,6 +17,7 @@ public:
 	};
 
 	Pages();
+	void clear();
 	// AUTO-GENERATED METHODS
 };
 
