@@ -16,6 +16,7 @@ public:
 		// AUTO-GENERATED FIELDS
 	};
 
+	void __cdecl processEdges(int a2, int a3);
 	// AUTO-GENERATED METHODS
 };
 
