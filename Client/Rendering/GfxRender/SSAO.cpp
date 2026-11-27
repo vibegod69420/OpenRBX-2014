@@ -133,6 +133,58 @@ void SSAO::clearBufferData()
 	while (i < 4);
 }
 
+#pragma intrinsic(_InterlockedExchangeAdd, _interlockedbittestandset)
+
+extern "C" long __cdecl _InterlockedExchangeAdd(long volatile* Addend, long Value);
+extern "C" unsigned char __cdecl _interlockedbittestandset(long volatile* Addend, long Bit);
+
+struct SSAO_FreeList
+{
+	void* head;
+	void* alloc();
+};
+
+struct SSAO_PoolBlock
+{
+	volatile long lockWord;
+	int unk4;
+	SSAO_FreeList freeList;
+	void lock();
+	void* release();
+};
+
+extern "C" SSAO_PoolBlock* __cdecl SSAO_getPoolBlock();
+extern "C" __declspec(dllimport) void __stdcall SSAO_ReleaseHandle(void*);
+
+// FUNCTION: ROBLOXSTUDIO 0x00695180
+void* SSAO::acquirePoolNode()
+{
+	SSAO_PoolBlock* block = SSAO_getPoolBlock();
+	block->lock();
+
+	void* node = block->freeList.head;
+	if (node)
+	{
+		block->freeList.head = *(void**)node;
+	}
+	else
+	{
+		node = block->freeList.alloc();
+	}
+
+	long old = _InterlockedExchangeAdd(&block->lockWord, (long)0x80000000);
+	if ((old & 0x40000000L) == 0 && old > (long)0x80000000)
+	{
+		if (!_interlockedbittestandset(&block->lockWord, 0x1e))
+		{
+			void* h = block->release();
+			SSAO_ReleaseHandle(h);
+		}
+	}
+
+	return node;
+}
+
 // AUTO-GENERATED IMPLEMENTATIONS
 
 } // namespace Graphics

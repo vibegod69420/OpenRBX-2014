@@ -24,6 +24,7 @@ public:
 	int getUnk3C_74c0();
 	int getUnk3C_74d0();
 	void clearBufferData();
+	void*acquirePoolNode();
 	// AUTO-GENERATED METHODS
 };
 
